@@ -1,0 +1,24 @@
+---
+import { getSongs } from "../../db/songs";
+import type { GetStaticPathsOptions } from "astro";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const songs = await getSongs();
+
+    return paginate(songs, { pageSize: 50 });
+}
+
+const { page } = Astro.props;
+---
+
+<h1>Page {page.currentPage}</h1>
+
+<ul>
+    {
+        page.data.map((entry: { id: number; artist: string; song: string }) => (
+            <li>
+                {entry.id} - {entry.artist} - {entry.song}
+            </li>
+        ))
+    }
+</ul>
