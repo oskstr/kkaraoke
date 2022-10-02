@@ -7,3 +7,6 @@ export function getSongs() {
         orderBy: { artist: "asc" },
     });
 }
+
+type Songs = typeof getSongs extends () => Promise<infer T> ? T : never;
+export type Song = Songs[number];

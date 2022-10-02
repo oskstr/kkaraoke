@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getSongs, Song } from "../db/songs";
+import type { GetStaticPathsOptions } from "astro";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const songs = await getSongs();
+
+    return paginate(songs, { pageSize: 50 });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="KKaraoke">
+    <main class="m-auto p-6">
+        <h1>Welcome to <span class="text-gradient">KKaraoke</span></h1>
+        <h1>Page {page.currentPage}</h1>
+        <div class="flex justify-end gap-2">
+            {page.url.prev && <a href={page.url.prev}>Prev</a>}
+            {page.url.next && <a href={page.url.next}>Next</a>}
+        </div>
+
+        <div class="flex justify-center">
+            <table>
+                <thead class="border-b">
+                    <tr>
+                        <th class="px-6 py-4">ID</th>
+                        <th class="px-6 py-4">Artist</th>
+                        <th class="px-6 py-4">Titel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        page.data.map((song: Song) => (
+                            <tr class="border-b">
+                                <td class="px-6 py-4">{song.id}</td>
+                                <td class="px-6 py-4">{song.artist}</td>
+                                <td class="px-6 py-4">{song.song}</td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+    </main>
+</Layout>
+<style>
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 0;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+</style>
