@@ -13,6 +13,7 @@
     "dependencies": {
         "@astrojs/react": "^1.1.4",
         "@astrojs/tailwind": "^2.0.2",
+        "@astrojs/vercel": "^2.1.0",
         "@prisma/client": "4.4.0",
         "astro": "^1.4.2",
         "react": "^18.0.0",
