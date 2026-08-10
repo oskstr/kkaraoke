@@ -189,7 +189,8 @@ The title casing is not a scattering of typos but a transformation applied to th
 titles are a 5900-lookup job and not a cleanup pass.
 
 The 34 duplicate pairs need a product decision rather than a lookup: either show one row carrying both numbers,
-or keep both rows, since either number works at the machine.
+or keep both rows, since either number works at the machine. **Deferred to the UI rework**, where we can see how
+each option actually reads on the page.
 
 ## Cost and rate limits
 
@@ -201,6 +202,26 @@ Roughly 2080 artist searches plus two or three corroborations for each multi-son
 per song: on the order of 10000 requests, so about five hours of wall clock. That is an unattended background
 job, and with responses cached, re-runs and prompt changes cost nothing. Caching keyed by song content also
 means a re-scrape only re-resolves what actually changed.
+
+### Concurrency cannot make this faster
+
+The limit is measured **per source IP address**, and exceeding it does not shed the excess — it rejects
+everything:
+
+> if your requests are coming in at 4 requests per second, we don't honour 25% of them and decline the other
+> 75% — we decline 100% of them, until the rate drops to 1 per second or lower
+
+So splitting the walk across several workers on one machine makes it strictly slower, and the documented
+consequence of pushing it is having the IP blocked from the API entirely. Five hours is a floor set by
+MusicBrainz, not by us.
+
+What concurrency does help with is everything that is not a request. Keep one fetcher that owns the entire
+request budget and writes to the cache, and let any number of workers reason over what it has already fetched.
+That split is worth having anyway: it is what makes the job resumable, and what makes re-running the judgement
+step against different prompts free.
+
+If the wall clock ever genuinely matters, the answer is a local mirror of the MusicBrainz database rather than
+more workers, which removes the limit but costs a large database to import and keep current.
 
 ## Order of work
 
