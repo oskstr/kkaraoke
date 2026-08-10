@@ -1,0 +1,9 @@
+# pnpm blocks dependency build scripts by default. These are the only three that
+# ask to run one, and all are needed: @prisma/engines fetches the schema engine
+# that `prisma db pull` and `prisma migrate` rely on, and esbuild verifies its
+# platform binary. Set any of them to `false` to trade those commands for a
+# leaner install.
+allowBuilds:
+    "@prisma/engines": true
+    esbuild: true
+    prisma: true
