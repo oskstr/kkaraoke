@@ -75,6 +75,29 @@ type Rewrite = (typeof REWRITES)[number];
 /** Trailing parentheses are the venue annotating, or MusicBrainz marking a version. */
 const withoutAnnotation = (title: string): string => title.replace(/\s*[([][^()[\]]*[)\]]\s*$/, "").trim();
 
+/**
+ * Words that make a trailing bracket a marker for one particular master rather than part of
+ * the song's name. The distinction matters twice over: `Lady Marmalade (Thunderpuss club mix)`
+ * is the wrong title to show for a karaoke track, and dating that recording dates the remix.
+ * Anything else in brackets is left alone, because `Exhale (Shoop Shoop)` and `The Ketchup
+ * Song (Aserejé)` really are called that.
+ */
+const VERSION_MARKER =
+    /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single)\b/i;
+
+/**
+ * The title to publish, which is MusicBrainz's exact recording title unless that title only
+ * differs by naming a master we did not ask about.
+ */
+function titleToUse(recording: string): string {
+    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
+    if (bracket?.[1] === undefined || !VERSION_MARKER.test(bracket[1])) {
+        return recording;
+    }
+    const base = withoutAnnotation(recording);
+    return base.length > 0 ? base : recording;
+}
+
 const LEADING_ARTICLE = /^(the|a|an)\s+/i;
 
 interface Form {
@@ -557,6 +580,9 @@ async function main(): Promise<void> {
         // A bracketed name is one of MusicBrainz's placeholder entities, such as
         // [Disney] or [traditional]. It matches, and it means nothing.
         const placeholder = /^\[.*\]$/.test(match.artistCredit);
+        // `recording` stays MusicBrainz's own title; `title` is the one to publish and to
+        // date, which differs only where the match landed on a particular master.
+        const title = titleToUse(match.recording);
         return {
             postId: song.postId,
             id: song.id,
@@ -564,6 +590,7 @@ async function main(): Promise<void> {
             song: song.song,
             matched: true as const,
             ...rest,
+            title,
             ...(placeholder ? { placeholder: true as const, trusted: false } : {}),
         };
     });

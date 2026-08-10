@@ -85,6 +85,7 @@ async function main(): Promise<void> {
             matched: boolean;
             trusted?: boolean;
             recording?: string;
+            title?: string;
             recordingMbid?: string;
             artistMbids?: string[];
         }[];
@@ -98,7 +99,10 @@ async function main(): Promise<void> {
     for (const song of matches.songs) {
         if (!song.matched || song.trusted !== true) continue;
         const [artistMbid] = song.artistMbids ?? [];
-        const { recording, recordingMbid } = song;
+        // The published title, not the matched master's: searching for the club mix by name
+        // dates the club mix, which is the error this whole script exists to avoid.
+        const recording = song.title ?? song.recording;
+        const { recordingMbid } = song;
         if (artistMbid === undefined || recording === undefined || recordingMbid === undefined) continue;
         if (pairs.has(recordingMbid)) continue;
         const titleKey = combinedLookup(recording);

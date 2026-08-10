@@ -28,10 +28,13 @@ interface MatchRecord {
     trusted?: boolean;
     placeholder?: boolean;
     how?: string;
-    variant?: string;
+    rewrites?: string[];
     artistCredit?: string;
     artistMbids?: string[];
+    /** MusicBrainz's own recording title, master markers and all. */
     recording?: string;
+    /** The same title with a master marker dropped, which is the one to publish. */
+    title?: string;
     recordingMbid?: string;
 }
 
@@ -279,8 +282,11 @@ async function main(): Promise<void> {
         if (!anonymous && lead?.sortName !== undefined) {
             resolved.sortAs = lead.sortName;
         }
-        if (match.recording !== undefined && match.recording !== match.song) {
-            resolved.title = match.recording;
+        // `title` rather than `recording`: the matcher has already dropped a trailing marker
+        // that named one master, so a karaoke track is not published as a club mix.
+        const canonicalTitle = match.title ?? match.recording;
+        if (canonicalTitle !== undefined && canonicalTitle !== match.song) {
+            resolved.title = canonicalTitle;
             titleFixes++;
         }
         if (mbids.length > 0) resolved.artistMbids = mbids;
