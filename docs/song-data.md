@@ -198,10 +198,15 @@ MusicBrainz allows **one request per second**, needs no API key, and requires a 
 free for non-commercial use. _Tested:_ 503s occur even at that rate, so the client needs retry with backoff and
 should pace itself slightly slower than the limit.
 
-Roughly 2080 artist searches plus two or three corroborations for each multi-song artist, then one scoped lookup
-per song: on the order of 10000 requests, so about five hours of wall clock. That is an unattended background
-job, and with responses cached, re-runs and prompt changes cost nothing. Caching keyed by song content also
-means a re-scrape only re-resolves what actually changed.
+_Measured on the pilot:_ an artist costs **11 requests** and a request takes **about four seconds** end to end —
+the 1.2 s we wait between requests plus one to three seconds of search latency, which is the larger half. So the
+artist pass over 2080 strings is on the order of 23000 requests and **around 25 hours**, not the five hours
+estimated before anything was measured. The song pass adds roughly one scoped lookup each.
+
+Two things bring that down. Title-only search is only collected when nothing else corroborates, which removes
+three of the eleven requests for most artists. And the 1278 single-song artists need fewer corroborations than
+the ones with a dozen titles. It stays an unattended background job either way, and because every response is
+cached, re-runs and prompt changes cost nothing.
 
 ### Concurrency cannot make this faster
 
@@ -222,6 +227,48 @@ step against different prompts free.
 
 If the wall clock ever genuinely matters, the answer is a local mirror of the MusicBrainz database rather than
 more workers, which removes the limit but costs a large database to import and keep current.
+
+## What the pilot showed
+
+Rather than start on 2080 artists, the approach was tried on 50 — `data/pilot/artists.txt`, covering 432 songs,
+weighted towards the cases known to be hard, with unambiguous controls mixed in so that false positives would be
+visible and not just misses. `data/pilot/expectations.json` records what I thought the answers were, written from
+the evidence before any model saw it, and `pnpm score:verdicts` checks a run against them. The expectations are my
+judgement, not ground truth, and the cases where I do not think there is one defensible answer are marked
+observe-only.
+
+Collecting the evidence took 557 requests. Grok 4.5 then judged it with no network access of its own and **passed
+all 89 scored assertions**: it left all seven acts whose names merely contain a separator intact, split all five
+real collaborations, converged all five case-variant pairs on a single entity, and refused all six strings that
+are not artists. It resolved `Chicago` to the band rather than the musical, which only the song titles can settle,
+and stripped the annotation from `Enya (fellowship Of The Ring Soundtrack)`. On the observe-only cases it found
+the trio entity behind `Kikki, Bettan och Lotta` and `Rosie & the Originals`, and called the singer-versus-band
+slash cases ambiguous instead of picking one.
+
+So the design works, and the expensive part is the fetching rather than the judging.
+
+**It was also confidently wrong about something.** Asked to critique the evidence, it reported that the title-only
+search was empty for essentially every entry. It was populated for 49 of 50. Everything else it raised checked
+out, which is the point worth keeping: a model can be right about the substance of every case and still make a
+firm, false claim about its own input. Spot-checking a sample of `resolved` records is not optional.
+
+Its accurate criticisms were three ways the evidence could mislead, each confirmed against the data and now fixed
+in the collector:
+
+| Trap                                                                                        | Evidence                                                                                                     | Now                                        |
+| :------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------- |
+| The recording search matches supersets of a title, so a hit is not proof                    | `Please don't go` returns `Baby Please Don’t Go`, appearing to corroborate The E Street Band. 3 of 117 hits. | marked `looseMatch`                        |
+| Tribute and covers acts have recorded the same songs                                        | `AC/DC UK` matches all three AC/DC titles                                                                    | 11 candidates carry `likelyTributeOrCover` |
+| MusicBrainz placeholder entities score 100 against exactly the strings that are not artists | `[Disney]` matches two Disney titles                                                                         | 4 candidates carry `specialPurpose`        |
+
+The last two matter because they defeat the corroboration trick that the rest of this document leans on. Grok
+avoided all three unprompted, but on 2080 artists nobody will be reading each case, so the signal belongs in the
+evidence rather than in a model's care.
+
+One mechanical result is worth more than the model comparison. Asking only whether _any_ candidate that is neither
+a placeholder nor a tribute act cleanly has the venue's songs identified **exactly the six strings that are not
+artists**, with no false positives and no misses. That is a cheap arithmetic test over data we already fetch, and
+it means judgement is only needed for a remainder, not for the catalogue.
 
 ## Order of work
 
