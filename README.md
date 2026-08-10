@@ -23,13 +23,18 @@ from a file in the repository, so builds need no database, no credentials and no
 ```
 /
 ├── data/
-│   └── songs.json          # scraped catalogue, the site's only data source
+│   ├── songs.json          # scraped catalogue, the site's only data source
+│   └── pilot/              # a 50-artist trial of the resolution design
 ├── docs/
 │   └── song-data.md        # design for correcting and enriching the catalogue
 ├── public/
 │   └── favicon.svg
 ├── scripts/
-│   └── fetch-songs.ts      # scrapes the catalogue from kkaraoke.se
+│   ├── fetch-songs.ts      # scrapes the catalogue from kkaraoke.se
+│   ├── collect-artist-evidence.ts
+│   ├── score-artist-verdicts.ts
+│   └── lib/
+│       └── musicbrainz.ts  # cached, rate-limited API client
 ├── src/
 │   ├── lib/
 │   │   └── songs.ts        # loads and orders the catalogue
@@ -58,6 +63,14 @@ All commands are run from the root of the project:
 | `pnpm format`      | Formats the project with Prettier                |
 | `pnpm astro`       | Runs CLI commands like `astro add`, `astro sync` |
 | `pnpm fetch:songs` | Re-scrapes `data/songs.json` from kkaraoke.se    |
+
+Two more, used for the catalogue clean-up described in
+[`docs/song-data.md`](docs/song-data.md) rather than for building the site:
+
+| Command                 | Action                                                         |
+| :---------------------- | :------------------------------------------------------------- |
+| `pnpm collect:evidence` | Gathers MusicBrainz evidence for a list of artist strings      |
+| `pnpm score:verdicts`   | Scores a resolution run against `data/pilot/expectations.json` |
 
 TypeScript is held at 6.x on purpose. `astro check` goes through the Astro language server, which needs TypeScript's
 programmatic compiler API, and the native compiler shipped in 7.0 does not expose it yet. Upgrading TypeScript to 7
