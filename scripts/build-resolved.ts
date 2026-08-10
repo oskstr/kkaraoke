@@ -31,6 +31,7 @@ interface MatchRecord {
     rewrites?: string[];
     /** Set where the dump confirmed a proposal, holding the proposer's reasoning. */
     proposed?: string;
+    from?: string;
     artistCredit?: string;
     artistMbids?: string[];
     /** MusicBrainz's own recording title, master markers and all. */
@@ -51,6 +52,11 @@ interface Resolved {
     artistMbids?: string[];
     /** The credited artists individually, for a page that wants to link each of them. */
     artists?: { mbid: string; name: string }[];
+    /**
+     * The show or film the song is from, where the venue put that in the artist column. Kept
+     * apart from the artist: `Grease` is what people search for and is not a performer.
+     */
+    from?: string;
     recordingMbid?: string;
     genres?: string[];
     /** Earliest release of this title by this artist, which is not the same as the master's date. */
@@ -281,6 +287,7 @@ async function main(): Promise<void> {
         }
 
         const resolved: Resolved = { postId: match.postId };
+        if (match.from !== undefined) resolved.from = match.from;
         if (!anonymous && canonical !== undefined && canonical !== match.artist) {
             resolved.artist = canonical;
             artistFixes++;

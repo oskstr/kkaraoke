@@ -266,6 +266,7 @@ interface Wanted {
     rewrites: Rewrite[];
     /** Set when the key came from a proposal rather than from the catalogue's own strings. */
     proposed?: string;
+    from?: string;
 }
 
 interface Match extends Row {
@@ -274,6 +275,8 @@ interface Match extends Row {
     rewrites: Rewrite[];
     /** The proposer's reasoning, where the dump confirmed a proposal rather than a scrape. */
     proposed?: string;
+    /** The show or film the song comes from, as the proposal gave it. */
+    from?: string;
     trusted: boolean;
 }
 
@@ -397,6 +400,12 @@ interface Proposal {
     postId: number;
     artist?: string;
     title?: string;
+    /**
+     * The show or film the song is from, where that is what the venue put in the artist
+     * column. Its own field rather than an artist, because `Grease` is not a performer and
+     * `John Travolta` is not what anyone searches for.
+     */
+    from?: string;
     /** Why the proposer thinks so, kept for whoever reads the match later. */
     why: string;
 }
@@ -444,7 +453,13 @@ async function main(): Promise<void> {
         if (proposal !== undefined) {
             const keys = keysFor(proposal.artist ?? song.artist, proposal.title ?? song.song);
             for (const { key, rewrites } of keys) {
-                add(key, { postId: song.postId, rank: PROPOSED_RANK, rewrites, proposed: proposal.why });
+                add(key, {
+                    postId: song.postId,
+                    rank: PROPOSED_RANK,
+                    rewrites,
+                    proposed: proposal.why,
+                    ...(proposal.from === undefined ? {} : { from: proposal.from }),
+                });
             }
         }
     }
@@ -468,6 +483,7 @@ async function main(): Promise<void> {
             how,
             rewrites: entry.rewrites,
             ...(entry.proposed === undefined ? {} : { proposed: entry.proposed }),
+            ...(entry.from === undefined ? {} : { from: entry.from }),
             rank,
             trusted: TRUSTED.includes(how),
         });
