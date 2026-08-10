@@ -242,8 +242,8 @@ async function main(): Promise<void> {
     if (!Number.isFinite(delayMs) || delayMs < 0) {
         throw new Error(`--delay must be a non-negative number of milliseconds, got ${values.delay}`);
     }
-    if (pageLimit < 1) {
-        throw new Error(`--pages must be at least 1, got ${values.pages}`);
+    if (values.pages !== undefined && (!Number.isInteger(pageLimit) || pageLimit < 1)) {
+        throw new Error(`--pages must be a whole number of at least 1, got ${values.pages}`);
     }
 
     const songs: Song[] = [];
@@ -270,8 +270,10 @@ async function main(): Promise<void> {
             console.log(`${totalPages} pages of up to ${perPage} songs to fetch`);
         }
 
-        // Paging past the end quietly re-serves an earlier page rather than 404ing, so
-        // treat already-seen rows as the end of the catalogue instead of duplicating them.
+        // The walk takes minutes and the source sorts by artist, so a catalogue edit
+        // midway through can shift rows across page boundaries and serve some of them
+        // twice. Deduplicating on the WordPress post id keeps that out of the output,
+        // and a page carrying nothing new means paging has stopped making progress.
         const fresh = rows.filter((song) => !seenPostIds.has(song.postId));
         for (const song of fresh) {
             seenPostIds.add(song.postId);
