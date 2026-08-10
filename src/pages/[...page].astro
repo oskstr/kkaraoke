@@ -16,7 +16,7 @@ const { page } = Astro.props;
 ---
 
 <Layout title="KKaraoke">
-    <main class="m-auto p-6">
+    <main class="m-auto p-3 sm:p-6">
         <h1>Welcome to <span class="text-gradient">KKaraoke</span></h1>
         <h1>Page {page.currentPage}</h1>
         <div class="flex justify-end gap-2">
@@ -24,26 +24,35 @@ const { page } = Astro.props;
             {page.url.next && <a href={page.url.next}>Next</a>}
         </div>
 
-        <div class="flex justify-center">
-            <table>
+        <!--
+            Scrollable rather than centred: a flex-centred child that outgrows its parent
+            overflows to the left as well as the right, and there is no scrolling back to
+            reach it, which is how the ID column disappeared on a phone in portrait.
+        -->
+        <div class="w-full overflow-x-auto">
+            <table class="mx-auto">
                 <thead class="border-b border-gray-200">
                     <tr>
-                        <th class="px-6 py-4">ID</th>
-                        <th class="px-6 py-4">Artist</th>
-                        <th class="px-6 py-4">Titel</th>
-                        <th class="px-6 py-4">År</th>
-                        <th class="px-6 py-4">Genre</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Artist</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Titel</th>
+                        <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">År</th>
+                        <th class="hidden px-3 py-2 text-left md:table-cell md:px-6 md:py-4">Genre</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         page.data.map((song) => (
                             <tr class="border-b border-gray-200">
-                                <td class="px-6 py-4">{song.id}</td>
-                                <td class="px-6 py-4">{song.artist}</td>
-                                <td class="px-6 py-4">{song.song}</td>
-                                <td class="px-6 py-4 tabular-nums">{song.year}</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">{song.genres?.join(", ")}</td>
+                                {/* The number people actually punch into the machine, so it
+                                    stays on one line and never gets dropped for space. */}
+                                <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">{song.id}</td>
+                                <td class="px-3 py-2 sm:px-6 sm:py-4">{song.artist}</td>
+                                <td class="px-3 py-2 sm:px-6 sm:py-4">{song.song}</td>
+                                <td class="hidden px-3 py-2 tabular-nums sm:table-cell sm:px-6 sm:py-4">{song.year}</td>
+                                <td class="hidden px-3 py-2 text-sm text-gray-500 md:table-cell md:px-6 md:py-4">
+                                    {song.genres?.join(", ")}
+                                </td>
                             </tr>
                         ))
                     }
