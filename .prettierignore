@@ -1,2 +1,6 @@
 # Generated lockfile, owned by pnpm.
 pnpm-lock.yaml
+
+# Scraped catalogue. Written one song per line by `pnpm fetch:songs` to keep
+# refreshes reviewable; Prettier would spread every song over six lines.
+data/songs.json

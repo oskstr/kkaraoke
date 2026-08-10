@@ -15,7 +15,8 @@
         "preview": "astro preview",
         "astro": "astro",
         "check": "astro check",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "fetch:songs": "node --experimental-strip-types scripts/fetch-songs.ts"
     },
     "dependencies": {
         "@astrojs/react": "^6.0.2",
