@@ -15,6 +15,10 @@ data/canonical-matches.json
 # The machine-resolved layer, written by `pnpm build:resolved`.
 data/resolved.json
 
+# The review queue, written by `pnpm build:resolved`. Generated already-formatted; letting
+# Prettier realign its tables would only make every regeneration a diff.
+data/review.md
+
 # Artist lookups, written by `pnpm fetch:artists`.
 data/artists.json
 

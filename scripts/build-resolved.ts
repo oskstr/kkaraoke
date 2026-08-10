@@ -133,6 +133,7 @@ async function main(): Promise<void> {
             artists: { type: "string", default: "data/artists.json" },
             recordings: { type: "string", default: "data/recordings.json" },
             out: { type: "string", default: "data/resolved.json" },
+            queue: { type: "string", default: "data/review.md" },
         },
     });
 
@@ -198,14 +199,7 @@ async function main(): Promise<void> {
     }
 
     const songs: Resolved[] = [];
-    const review: {
-        postId: number;
-        id: number;
-        artist: string;
-        song: string;
-        reason: string;
-        suggestion?: string;
-    }[] = [];
+    const review: ReviewEntry[] = [];
 
     let titleFixes = 0;
     let artistFixes = 0;
@@ -258,7 +252,8 @@ async function main(): Promise<void> {
         if (match.trusted !== true) {
             review.push({
                 ...pick(match),
-                reason: match.placeholder === true ? "matched a placeholder entity" : `weak match (${match.how})`,
+                reason: match.placeholder === true ? "matched a placeholder entity" : "weak match",
+                ...(match.placeholder === true ? {} : { detail: `matched by ${match.how}` }),
                 ...(match.recording === undefined ? {} : { suggestion: `${match.artistCredit} – ${match.recording}` }),
             });
             artistOnlyCorrection(match);
@@ -283,7 +278,8 @@ async function main(): Promise<void> {
         ) {
             review.push({
                 ...pick(match),
-                reason: `credited to ${found?.name ?? "another artist"}${
+                reason: "credited to a namesake, not to this artist",
+                detail: `MusicBrainz says ${found?.name ?? "another artist"}${
                     found?.disambiguation === undefined ? "" : ` (${found.disambiguation})`
                 }, but this artist's other songs are by ${artists.get(dominant)?.name ?? "someone else"}`,
                 ...(match.recording === undefined ? {} : { suggestion: `${match.artistCredit} – ${match.recording}` }),
@@ -310,7 +306,11 @@ async function main(): Promise<void> {
         // venue's own string is the better one to show and to sort under.
         const anonymous = canonical !== undefined && /^\[.*\]$/.test(canonical);
         if (anonymous) {
-            review.push({ ...pick(match), reason: `MusicBrainz files this under ${canonical}, a placeholder` });
+            review.push({
+                ...pick(match),
+                reason: "matched a placeholder entity",
+                detail: `MusicBrainz files this under ${canonical}, which is an id but not a performer`,
+            });
         }
 
         // Scoping a search to the lead can land on the lead's solo recording, so `Ashanti & Ja
@@ -319,7 +319,7 @@ async function main(): Promise<void> {
         if (match.how === "lead-scoped" && credited.length < match.artist.split(JOIN).length) {
             review.push({
                 ...pick(match),
-                reason: "matched through the lead artist, and the credit names fewer artists than the venue did",
+                reason: "matched through the lead artist, which named fewer artists than the venue did",
                 suggestion: `${canonical ?? ""} – ${match.title ?? ""}`,
             });
         }
@@ -387,7 +387,6 @@ async function main(): Promise<void> {
                 generatedAt: new Date().toISOString(),
                 note: "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
                 songs,
-                review,
             },
             null,
             2,
@@ -395,6 +394,83 @@ async function main(): Promise<void> {
         "utf8",
     );
     console.log(`Wrote ${values.out}`);
+    await writeFile(values.queue, reviewQueue(review), "utf8");
+    console.log(`Wrote ${values.queue}`);
+}
+
+interface ReviewEntry {
+    postId: number;
+    id: number;
+    artist: string;
+    song: string;
+    /** The category, kept identical across entries so that the queue groups by it. */
+    reason: string;
+    /** What is specific to this song, which must stay out of `reason` or every group is one. */
+    detail?: string;
+    suggestion?: string;
+}
+
+/**
+ * The queue as something a person can actually work through, which the JSON was not: it began
+ * on line 117,799 of a generated file, after every song that had already been resolved.
+ *
+ * Grouped by what is wrong, because the groups are different jobs, and within that by the
+ * venue's artist string, largest first, because one decision about `Finsk musik` settles
+ * thirty-nine songs and one about `Rozallo` settles one. `postId` is what a proposal is keyed
+ * by; `id` is the number on the wall.
+ */
+function reviewQueue(review: ReviewEntry[]): string {
+    const byReason = new Map<string, ReviewEntry[]>();
+    for (const entry of review) {
+        byReason.set(entry.reason, [...(byReason.get(entry.reason) ?? []), entry]);
+    }
+
+    const lines = [
+        "# Songs still to review",
+        "",
+        `${review.length} songs, written by \`pnpm build:resolved\`. Regenerable, so do not edit it.`,
+        "",
+        "A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only",
+        "adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at",
+        "all if it does not — a wrong guess is cheap. Anything the dump cannot confirm belongs in",
+        "`data/overrides.json` instead.",
+        "",
+        "## Contents",
+        "",
+    ];
+    const sections = [...byReason].sort((a, b) => b[1].length - a[1].length);
+    for (const [reason, entries] of sections) {
+        lines.push(`- ${reason} — **${entries.length}**`);
+    }
+
+    for (const [reason, entries] of sections) {
+        lines.push("", `## ${reason} (${entries.length})`, "");
+        const byArtist = new Map<string, ReviewEntry[]>();
+        for (const entry of entries) {
+            byArtist.set(entry.artist, [...(byArtist.get(entry.artist) ?? []), entry]);
+        }
+        const groups = [...byArtist].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "sv"));
+        for (const [artist, songs] of groups) {
+            lines.push(`### ${artist} — ${songs.length}`, "");
+            const found = (song: ReviewEntry): string =>
+                [song.suggestion, song.detail].filter((part) => part !== undefined).join(" — ");
+            const explained = songs.some((song) => found(song).length > 0);
+            lines.push(
+                explained
+                    ? "| id | the venue's title | what we found | postId |"
+                    : "| id | the venue's title | postId |",
+            );
+            lines.push(explained ? "| -: | --- | --- | -: |" : "| -: | --- | -: |");
+            for (const song of [...songs].sort((a, b) => a.id - b.id)) {
+                const cells = explained
+                    ? [song.id, song.song, found(song), song.postId]
+                    : [song.id, song.song, song.postId];
+                lines.push(`| ${cells.join(" | ")} |`);
+            }
+            lines.push("");
+        }
+    }
+    return `${lines.join("\n").trimEnd()}\n`;
 }
 
 function pick(match: MatchRecord): { postId: number; id: number; artist: string; song: string } {
