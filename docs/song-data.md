@@ -560,13 +560,24 @@ made Julie Andrews a trusted credit for that artist string, and the artist-scope
 found `Edelweiss` under her without being asked. Naming an artist once pays for their whole
 catalogue.
 
+### A show is a fact about the song, not its artist
+
+The first version of this resolved `Grease – Summer nights` to `John Travolta & Olivia
+Newton-John` and stopped there, which is right about the performers and wrong about the
+catalogue: it deleted the only word anyone would search for. The venue put a show in the artist
+column because it had nowhere else to put one.
+
+So a proposal can name the show as its own field, travelling beside the artist rather than
+competing with it. Where the venue only said `Disney`, the proposal names the film, so three
+songs are now from Mary Poppins, Mulan and Pocahontas rather than from a studio. Twenty songs
+across seven shows.
+
+That leaves the venue's original label useful for exactly what it was doing — being searched
+for — while the artist column says who sings. It also generalises: a category is a fact about a
+song, and `Julsång` wants the same treatment rather than an invented performer.
+
 ### What is still not an agent's decision
 
-Three things, and none of them is about accuracy:
-
-- **Whether a show should become its cast at all.** `Grease – Summer nights` is now
-  `John Travolta & Olivia Newton-John`, which is factually right and loses the word people would
-  search for. That is a product question about the browsing UI, not a data question.
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
 - **The traditional repertoire.** `Julsång` (19 songs) and `Italian` (15) are mostly carols and
@@ -575,6 +586,34 @@ Three things, and none of them is about accuracy:
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
 `data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
+
+## A collaboration is its artists, not a band with a long name
+
+The dump gives one flattened credit line per recording — whatever the matched release printed —
+and using it as the artist makes two people look like a group. It also makes them look like a
+differently-named group on each song: Nicole Kidman and Ewan McGregor arrive as `Nicole Kidman
+and Ewan McGregor` on `Come What May` and `Nicole Kidman & Ewan McGregor` on `Elephant Love
+Medley`, with the same two ids behind both. One release manages `Hall& Oates`.
+
+Where the line is nothing but the credited artists' own names joined by a neutral conjunction,
+it can be rebuilt from those names and read the same way every time. A shortened name counts as
+accounting for its artist, which is what makes all three Hall & Oates songs agree on `Daryl Hall
+& John Oates`.
+
+Where the line says anything else it is left alone, because the something else is usually the
+part that carries the meaning:
+
+| Kept verbatim                                 | Why                                         |
+| --------------------------------------------- | ------------------------------------------- |
+| `Timbaland feat. OneRepublic`                 | `feat.` marks a guest, not an equal billing |
+| `Kenny G duet with Michael Bolton`            | A duet, which matters for karaoke           |
+| `Bob Marley vs. Funkstar De Luxe`             | A remix, not a collaboration                |
+| `Benny Anderssons orkester med Helen Sjöholm` | Swedish, and none of our business           |
+
+None of this is the real fix, which is that the page should link each artist separately;
+`data/resolved.json` has carried them individually, with their ids, since the resolver started
+emitting them. Until something renders that, the credit line is what there is, and it may as
+well be consistent.
 
 ## The published title is not always the matched one
 
