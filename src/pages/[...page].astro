@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getSongs } from "../db/songs";
-import type { Song } from "../db/songs";
+import { getSongs } from "../lib/songs";
+import type { Song } from "../lib/songs";
 import type { GetStaticPathsOptions, Page } from "astro";
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-    const songs = await getSongs();
-
-    return paginate(songs, { pageSize: 50 });
+export function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    return paginate(getSongs(), { pageSize: 50 });
 }
 
 interface Props {
