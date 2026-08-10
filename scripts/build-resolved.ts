@@ -122,15 +122,25 @@ async function main(): Promise<void> {
         // the dump's credit is whatever the matched release printed. A collaboration keeps
         // the release's credit line, which reads better than joining names and preserves
         // the "feat." that tells a guest apart from a duet.
-        const artist = mbids.length === 1 && lead !== undefined ? lead.name : match.artistCredit;
+        const canonical = mbids.length === 1 && lead !== undefined ? lead.name : match.artistCredit;
+
+        // MusicBrainz files songs with no identifiable performer under placeholder
+        // entities named in brackets, such as [Disney] and [traditional]. The id is real
+        // and the title behind it is usually right, but it does not name an artist, so the
+        // venue's own string is the better one to show and to sort under.
+        const anonymous = canonical !== undefined && /^\[.*\]$/.test(canonical);
+        if (anonymous) {
+            review.push({ ...pick(match), reason: `MusicBrainz files this under ${canonical}, a placeholder` });
+        }
+
         const resolved: Resolved = { postId: match.postId };
-        if (artist !== undefined && artist !== match.artist) {
-            resolved.artist = artist;
+        if (!anonymous && canonical !== undefined && canonical !== match.artist) {
+            resolved.artist = canonical;
             artistFixes++;
         }
         // Sorting follows the lead artist so that a collaboration files under whoever is
         // credited first rather than under the whole credit line.
-        if (lead?.sortName !== undefined) {
+        if (!anonymous && lead?.sortName !== undefined) {
             resolved.sortAs = lead.sortName;
         }
         if (match.recording !== undefined && match.recording !== match.song) {

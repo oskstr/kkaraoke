@@ -20,6 +20,8 @@ const USER_AGENT = "kkaraoke-resolver/0.1 ( https://github.com/oskstr/kkaraoke )
 
 /** Slightly slower than the documented limit, since 503s show up even at exactly 1/s. */
 const MIN_INTERVAL_MS = 1200;
+/** A ceiling on the adaptive backoff, past which the run is not worth waiting for. */
+const MAX_INTERVAL_MS = 10_000;
 const MAX_ATTEMPTS = 5;
 const REQUEST_TIMEOUT_MS = 30_000;
 
@@ -27,6 +29,9 @@ let queue: Promise<unknown> = Promise.resolve();
 let lastRequestAt = 0;
 let served = 0;
 let fetched = 0;
+let retried = 0;
+let interval = MIN_INTERVAL_MS;
+let sinceThrottled = 0;
 
 const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -42,8 +47,46 @@ async function readCache(path: string): Promise<unknown | undefined> {
     }
 }
 
+/** A 404 means the entity is gone, and asking four more times will not bring it back. */
+class Permanent extends Error {}
+
+async function attemptOnce(path: string): Promise<unknown> {
+    const response = await fetch(`${BASE}/${path}${path.includes("?") ? "&" : "?"}fmt=json`, {
+        headers: { "user-agent": USER_AGENT, accept: "application/json" },
+        signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
+    // 503 is how the rate limiter and a busy server both answer, so back off rather than
+    // treating it as a failure.
+    if (response.status === 503 || response.status === 429) {
+        const after = Number(response.headers.get("retry-after"));
+        throw new Throttled(`HTTP ${response.status}`, Number.isFinite(after) && after > 0 ? after * 1000 : undefined);
+    }
+    if (response.status === 404 || response.status === 400) {
+        throw new Permanent(`HTTP ${response.status} ${response.statusText}`);
+    }
+    if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    }
+    fetched++;
+    return await response.json();
+}
+
+/**
+ * Declared as a field rather than a constructor parameter property: Node's type stripping
+ * removes types without rewriting code, so a parameter property is a syntax error there
+ * even though it typechecks.
+ */
+class Throttled extends Error {
+    retryAfterMs: number | undefined;
+
+    constructor(message: string, retryAfterMs?: number) {
+        super(message);
+        this.retryAfterMs = retryAfterMs;
+    }
+}
+
 async function request(path: string): Promise<unknown> {
-    const wait = MIN_INTERVAL_MS - (Date.now() - lastRequestAt);
+    const wait = interval - (Date.now() - lastRequestAt);
     if (wait > 0) {
         await sleep(wait);
     }
@@ -51,25 +94,38 @@ async function request(path: string): Promise<unknown> {
     for (let attempt = 1; ; attempt++) {
         lastRequestAt = Date.now();
         try {
-            const response = await fetch(`${BASE}/${path}${path.includes("?") ? "&" : "?"}fmt=json`, {
-                headers: { "user-agent": USER_AGENT, accept: "application/json" },
-                signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-            });
-            // 503 is how the rate limiter and a busy server both answer, so back off
-            // rather than treating it as a failure.
-            if (response.status === 503 || response.status === 429) {
-                throw new Error(`HTTP ${response.status} (throttled)`);
+            const body = await attemptOnce(path);
+            // Ease back towards the documented rate once the server stops complaining,
+            // so that one bad patch does not slow the whole run down permanently.
+            if (++sinceThrottled >= 20 && interval > MIN_INTERVAL_MS) {
+                interval = Math.max(MIN_INTERVAL_MS, Math.round(interval * 0.8));
+                sinceThrottled = 0;
+                console.warn(`    easing back to ${interval}ms between requests`);
             }
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status} ${response.statusText}`);
-            }
-            fetched++;
-            return await response.json();
+            return body;
         } catch (error) {
+            if (error instanceof Throttled) {
+                // A 503 is the only evidence we get about what rate is actually
+                // sustainable, and it is worth acting on: the limit is per IP, and on a
+                // shared address the documented one request per second is not ours alone.
+                sinceThrottled = 0;
+                interval = Math.min(MAX_INTERVAL_MS, Math.round(interval * 1.5));
+            }
+            if (error instanceof Permanent) {
+                throw error;
+            }
             if (attempt === MAX_ATTEMPTS) {
                 throw new Error(`Giving up on ${path} after ${MAX_ATTEMPTS} attempts`, { cause: error });
             }
-            const backoff = 2 ** attempt * 1000;
+            const backoff = error instanceof Throttled ? (error.retryAfterMs ?? interval) : 2 ** attempt * 1000;
+            retried++;
+            // Logged because a silent retry is indistinguishable from a slow server, and
+            // the difference decides whether a run of thousands is worth starting.
+            console.warn(
+                `    retrying ${path} in ${backoff}ms (attempt ${attempt}: ${
+                    error instanceof Error ? error.message : String(error)
+                })`,
+            );
             await sleep(backoff);
         }
     }
@@ -94,8 +150,8 @@ export async function mbGet<T>(path: string): Promise<T> {
     return body as T;
 }
 
-export function requestStats(): { fetched: number; served: number } {
-    return { fetched, served };
+export function requestStats(): { fetched: number; served: number; retried: number } {
+    return { fetched, served, retried };
 }
 
 export interface ArtistHit {
