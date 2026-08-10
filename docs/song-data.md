@@ -456,6 +456,69 @@ Coverage is the argument for the wide-then-narrow order. The wide pass at five p
 recordings for 1041 requests; a narrow pass at two pairs over just the gaps took that to **97%** for 660 more.
 Neither would have been a good way to do the whole job on its own.
 
+## Naming an artist does not require matching their song
+
+Correcting song by song produced a result worse than leaving the data alone, in one specific way: an artist could
+end up under two spellings at once. Thirty-one of ABBA's songs matched and said `ABBA`; `Winner takes it all` did
+not match and said `Abba`, four rows away. A-teens split three ways across three songs.
+
+The mistake was tying identity to the title. Who an artist is does not depend on any one of their songs matching,
+so the artist string itself is the unit to resolve: take the artist from that string's other songs and apply it to
+all of them. That fixes the inconsistency and improves 121 songs whose titles we still cannot place.
+
+It has to read from the string's **solo** matches only. A collaboration says nothing about who the string names on
+its own — the venue files duets under one member, so `Celine Dion` credits Frank Sinatra on one song — and a
+string that is _only_ ever a collaboration must be left alone, since resolving it to its lead would silently drop
+a collaborator.
+
+### One string, several solo artists, and one of them is wrong
+
+Falling out of that grouping is the best wrong-match detector we have. MusicBrainz is full of different acts
+sharing a name, and when a string resolves to more than one of them, the minority is usually the error:
+
+| The venue said   | It matched                                  | It meant |
+| ---------------- | ------------------------------------------- | -------- |
+| `Pink – So what` | Pink, a German electronic netlabel musician | P!nk     |
+| `Mika – Relax`   | Mika, an Austrian house duo                 | MIKA     |
+
+Both are exact combined-key matches, so no amount of string scoring would have caught them; only the artist's
+other eighteen and six songs do. The majority act wins and the minority goes to review. A tie is left alone,
+because `Emilia` splits one song each between two entities that are the same woman before and after a change of
+name.
+
+A band and its own frontman have to be exempt, or the rule fires on Bob Marley & The Wailers, which is if anything
+the better credit for `No woman no cry`. Their names give them away: one begins with the other, which two
+unrelated people called Pink never do.
+
+## The venue drops leading articles from titles too, not just artists
+
+The article rule earned for artists — the catalogue files The Beatles and The Kinks without it — applies just as
+well to titles, and nobody thought to try it there. `Winner takes it all`, `Little time`, `Zephyr song`, `Glory of
+love`, `Dark end of the street`: 25 songs, recovered by generating the same variants on both halves of the key
+rather than only on the left.
+
+Below seven characters a title gets no edit budget at all, because at that length a single substitution is
+usually a different song — `Stay` is one edit from `Say`. A **transposition** is not like that. Swapping two
+adjacent characters is a slip of the fingers, and no real title is the swap of another, so it is safe exactly
+where a substitution is not. Inside an artist's own catalogue it finds Madonna's `Vouge` and nothing else.
+
+## What is left, and why matching cannot fix most of it
+
+584 songs remain for review, and only a minority of them are string problems:
+
+| Songs | What it is                                                                                                                                                                                                                                                                                   |
+| ----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   444 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15), `Sound of Music`, `Grease`, `Moulin Rouge`, `Disney` — categories and shows, used where a performer should be.                                                                                       |
+|    98 | The artist is known and has no such title, which usually means the venue credited the wrong performer: `Nothing's gonna change my love for you` under George Harrison, `Natural woman` under Céline Dion, `She's a river` under Elton John, nine solo Spice Girls singles under Spice Girls. |
+|    27 | A prefix match too weak to apply.                                                                                                                                                                                                                                                            |
+|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                                                                                                                     |
+|     2 | Credited to a namesake, as above.                                                                                                                                                                                                                                                            |
+
+The 98 are the interesting group and the reason the review reasons distinguish them. No better string matching
+reaches them, because the string is not wrong — the attribution is. Fixing one means looking the song up by title
+alone, which is the ambiguous case, and then overruling the venue. That is human work, and the queue exists to
+make it possible rather than to pretend otherwise.
+
 ## Order of work
 
 Done, and live on the site:
@@ -464,19 +527,26 @@ Done, and live on the site:
    seconds, no requests. Prefix matches are graded by what the canonical title has that the venue's does not — a
    bracketed version marker, two stray characters, or something else — and only the first two are applied.
    Bracketed placeholder entities are excluded by their own name.
-2. **A second pass scoped to the artists the first pass identified**, matching on title alone. This is where the
-   venue's typos live: `Sugarbabes`, `Rozallo` and `Pink` for `P!nk` never match a combined key, but their other
-   songs did.
-3. **Enrich by id, in batches**: canonical names, sort names, aliases and genres for 1670 artists in 39 requests.
+2. **A second pass scoped to the artists the first pass identified**, matching on title alone, then a third
+   allowing a bounded edit or a transposition. This is where the venue's typos live: `Sugarbabes`, `Rozallo` and
+   `Pink` for `P!nk` never match a combined key, but their other songs did.
+3. **Enrich by id, in batches**: canonical names, sort names, aliases and genres for 1672 artists in 39 requests.
 4. **Date the songs** by earliest exact-title release per artist.
+5. **Resolve each artist string once**, from its solo matches, and apply the result to that string's songs whether
+   or not they matched individually. This is what keeps one act under one spelling, and what turns a namesake into
+   a flag instead of a correction.
+
+That places 5453 of 5915 songs: 3995 corrected titles, 1143 corrected artist names, 4651 with genres, 5269 dated.
 
 Still to do:
 
-5. **Resolve the residue** — the 637 songs the dump cannot place — through the web service with alias search and
-   title corroboration, judged from evidence. This is where the remaining typos and the category labels live.
-6. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`.
-7. Works and composers, for the songs where the writer matters more than the performer.
-8. Artist pages, which are the reason for all of the above.
+6. **Resolve the residue** through the web service with alias search and title corroboration, judged from
+   evidence. Worth doing for the 98 misattributed songs and the category labels; the dump has nothing more to give.
+7. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`.
+8. Works and composers, for the songs where the writer matters more than the performer.
+9. Artist pages, which are the reason for all of the above. `data/resolved.json` already carries each
+   collaboration's artists separately, with their ids, so the page has what it needs to link them one by one; the
+   `artist` field beside it is the release's credit line, kept because `feat.` tells a guest apart from a duet.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.

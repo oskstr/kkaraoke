@@ -202,7 +202,17 @@ async function main(): Promise<void> {
 
     for (const match of matches.songs) {
         if (!match.matched) {
-            review.push({ ...pick(match), reason: "no match in the canonical dump" });
+            // Worth separating, because only one of these is a matching problem. Knowing the
+            // artist but not the title usually means the venue credited the wrong performer —
+            // `Nothing's gonna change my love for you` is filed under George Harrison — while
+            // not knowing the artist usually means the string is not an artist at all, but a
+            // category such as `Julsång`, `Finsk musik` or a show name.
+            review.push({
+                ...pick(match),
+                reason: soleArtist.has(match.artist)
+                    ? "this artist has no such title; the venue may have credited the wrong one"
+                    : "no match, and this artist string is unknown to MusicBrainz",
+            });
             artistOnlyCorrection(match);
             continue;
         }
