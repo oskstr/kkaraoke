@@ -68,6 +68,7 @@ const REWRITES = [
     "title-article-added",
     "title-article-dropped",
     "annotation-stripped",
+    "ampersand-spelled-out",
 ] as const;
 type Rewrite = (typeof REWRITES)[number];
 
@@ -81,12 +82,30 @@ interface Form {
     rewrites: Rewrite[];
 }
 
+/**
+ * The key strips `&` rather than reading it, so a venue `&` and a MusicBrainz `and` fold to
+ * different keys and never meet: `Belle & Sebastian` cannot reach `Belle and Sebastian`.
+ * Spelling it out is the missing form. Only ever adds keys, and only for strings that have
+ * an ampersand to spell.
+ */
+function spelledOut(forms: Form[]): Form[] {
+    return [
+        ...forms,
+        ...forms
+            .filter((form) => form.value.includes("&"))
+            .map((form) => ({
+                value: form.value.replaceAll("&", " and "),
+                rewrites: [...form.rewrites, "ampersand-spelled-out" as Rewrite],
+            })),
+    ];
+}
+
 function artistForms(artist: string): Form[] {
     const forms: Form[] = [{ value: artist, rewrites: [] }];
     if (!LEADING_ARTICLE.test(artist)) {
         forms.push({ value: `The ${artist}`, rewrites: ["artist-article-added"] });
     }
-    return forms;
+    return spelledOut(forms);
 }
 
 function titleForms(title: string): Form[] {
@@ -113,7 +132,7 @@ function titleForms(title: string): Form[] {
             }
         }
     }
-    return forms;
+    return spelledOut(forms);
 }
 
 /**
