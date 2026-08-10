@@ -504,19 +504,21 @@ where a substitution is not. Inside an artist's own catalogue it finds Madonna's
 
 ## What is left, and why matching cannot fix most of it
 
-532 songs remain for review after the proposal pilot, and only a minority of them are string problems:
+460 songs remain for review, and only a minority of them are string problems:
 
-| Songs | What it is                                                                                                                                                                                                                                                                                                        |
-| ----: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   406 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15) — categories used where a performer should be. The shows among them, `Grease`, `Sound of Music`, `Moulin Rouge`, `Frozen II`, `My Fair Lady`, `Jesus Christ Superstar`, have now been resolved to their casts by proposal. |
-|    83 | The artist is known and has no such title, which usually means the venue credited the wrong performer. Fifteen have been fixed by proposal, including `Nothing's gonna change my love for you` under George Harrison and eight solo Spice Girls singles filed under Spice Girls.                                  |
-|    27 | A prefix match too weak to apply.                                                                                                                                                                                                                                                                                 |
-|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                                                                                                                                          |
-|     3 | Credited to a namesake, as above.                                                                                                                                                                                                                                                                                 |
+| Songs | What it is                                                                                                                                                                              |
+| ----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   308 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15) — categories used where a performer should be, which want the same treatment as the shows below. |
+|    83 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                                                  |
+|    27 | A prefix match too weak to apply.                                                                                                                                                       |
+|    26 | Matched through the lead artist, with a collaborator dropped.                                                                                                                           |
+|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                |
+|     3 | Credited to a namesake.                                                                                                                                                                 |
 
-The 83 are the interesting group and the reason the review reasons distinguish them. No amount of better string
-matching reaches them, because the strings are not wrong — the attribution is. Fixing one means identifying the
-song some other way and then overruling the venue, which is what the proposal layer below is for.
+The 83 are the interesting group and the reason the review reasons distinguish them. No amount of
+better string matching reaches them, because the strings are not wrong — the attribution is.
+Fixing one means identifying the song some other way and then overruling the venue, which is what
+the proposal layer below is for.
 
 ## Who works the review queue
 
@@ -589,31 +591,59 @@ So the division is: the agent proposes and the dump adjudicates, the venue rules
 
 ## A collaboration is its artists, not a band with a long name
 
-The dump gives one flattened credit line per recording — whatever the matched release printed —
-and using it as the artist makes two people look like a group. It also makes them look like a
-differently-named group on each song: Nicole Kidman and Ewan McGregor arrive as `Nicole Kidman
-and Ewan McGregor` on `Come What May` and `Nicole Kidman & Ewan McGregor` on `Elephant Love
-Medley`, with the same two ids behind both. One release manages `Hall& Oates`.
+The artist column is a list of distinct artists, comma separated, each of which should become
+its own link. That is not what a credit line is. The dump gives one flattened string per
+recording — whatever the matched release printed — and using it as the artist went wrong in
+three ways at once: two people read as a band with a long name, the same pair was spelled
+differently from one song to the next (`Nicole Kidman and Ewan McGregor` on `Come What May`,
+`Nicole Kidman & Ewan McGregor` on `Elephant Love Medley`, identical ids behind both), and the
+page was handed a string to parse instead of artists to link.
 
-Where the line is nothing but the credited artists' own names joined by a neutral conjunction,
-it can be rebuilt from those names and read the same way every time. A shortened name counts as
-accounting for its artist, which is what makes all three Hall & Oates songs agree on `Daryl Hall
-& John Oates`.
+So the column is built from the credited artists' own canonical names. Song 4096 reads `2Pac,
+K-Ci & JoJo`, where the ampersand belongs to one duo's name rather than joining two artists —
+which is the whole reason the join has to come from the id list and not from punctuation. Every
+matched song carries its artists individually now, not only the collaborations.
 
-Where the line says anything else it is left alone, because the something else is usually the
-part that carries the meaning:
+Canonical names inside a collaboration come free with it: the venue's `Christina Aguilera, Lil
+Kim, Mya & Pink` are Lil' Kim, Mýa and P!nk.
 
-| Kept verbatim                                 | Why                                         |
-| --------------------------------------------- | ------------------------------------------- |
-| `Timbaland feat. OneRepublic`                 | `feat.` marks a guest, not an equal billing |
-| `Kenny G duet with Michael Bolton`            | A duet, which matters for karaoke           |
-| `Bob Marley vs. Funkstar De Luxe`             | A remix, not a collaboration                |
-| `Benny Anderssons orkester med Helen Sjöholm` | Swedish, and none of our business           |
+### The credit line is kept as data
 
-None of this is the real fix, which is that the page should link each artist separately;
-`data/resolved.json` has carried them individually, with their ids, since the resolver started
-emitting them. Until something renders that, the credit line is what there is, and it may as
-well be consistent.
+MusicBrainz does distinguish a guest from an equal billing, and the dump flattens that
+distinction into the credit line — `feat.`, `duet with`, `vs.`, and Swedish `med`. That is worth
+keeping and not worth guessing at from punctuation, so the line is stored beside the artists and
+never displayed. Recovering the distinction properly means asking the web service for artist
+credits, which returns each artist with its join phrase; that is a later enrichment pass, not a
+parsing problem.
+
+### A name has to be typeable
+
+MusicBrainz's canonical name is the artist's own preferred one, which for `Άννα Βίσση` and
+`鄭秀文` is written in a script nobody in the room can type. Where the canonical name has no
+Latin letters at all, a Latin alias is the usable name, and MusicBrainz lists Anna Vissi and
+Sammi Cheng among them. A symbol is not a script, so `98°`, `A★Teens` and `Florence + the
+Machine` keep theirs.
+
+## Reaching a collaboration through its lead
+
+A collaboration the venue wrote as one string is nobody: `2 Pac feat. KC & Jo Jo` matches no key
+and has no other songs to be identified from. Its lead does. 177 of the 489 remaining misses had
+a collaboration-shaped artist string and 111 had a lead already identified elsewhere, so
+splitting on the first join word and scoping the title search to the lead places 95 of them.
+
+Because the credit then comes from MusicBrainz rather than from the venue, it also corrects what
+the venue got wrong inside the collaboration: `Wyclef Sean` is Wyclef Jean, `Clive Griffith` is
+Clive Griffin, `Regina Bell` is Regina Belle, and DJ Sammy's guest is Do rather than Fido.
+
+Two guards make it safe to trust:
+
+- **The lead must be the lead**, not merely present in the credit. Six matches were wrong that
+  way, and the instructive one is `Peabo Bryson & Regina Bell – A whole new world`, which landed
+  on a Koda Kumi cover that features him. With the guard it finds the recording it means.
+- **A dropped collaborator is reported.** Scoping to the lead can land on the lead's solo
+  recording, so `Ashanti & Ja Rule – Happy` becomes Ashanti alone. The canonical names, year and
+  genres still beat the venue's string, so those 26 are applied and listed for review rather
+  than withheld.
 
 ## The published title is not always the matched one
 
@@ -646,10 +676,11 @@ Done, and live on the site:
    or not they matched individually. This is what keeps one act under one spelling, and what turns a namesake into
    a flag instead of a correction.
 
-6. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
+6. **Reach a collaboration through its lead**, where the venue wrote several artists into one string. 95 songs.
+7. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
    confirmed and applied; the 6 that were not changed nothing.
 
-That places 5491 of 5915 songs: 4028 corrected titles, 1193 corrected artist names, 4663 with genres, 5333 dated.
+That places 5589 of 5915 songs: 4098 corrected titles, 1383 corrected artist names, 4757 with genres, 5436 dated.
 
 Still to do: 7. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`. 8. Works and composers, for the songs where the writer matters more than the performer. 9. Artist pages, which are the reason for all of the above. `data/resolved.json` already carries each
 collaboration's artists separately, with their ids, so the page has what it needs to link them one by one; the
