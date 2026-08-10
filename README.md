@@ -17,11 +17,14 @@ Install dependencies:
 pnpm install
 ```
 
-Point `DATABASE_URL` at your database in a `.env` file:
+Point `DATABASE_URL` at your database:
 
+```shell
+export DATABASE_URL="postgresql://user:password@localhost:5432/kkaraoke?schema=public"
 ```
-DATABASE_URL="postgresql://user:password@localhost:5432/kkaraoke?schema=public"
-```
+
+A `.env` file works too for `pnpm dev` and `pnpm build`, because Astro loads one automatically. Prisma CLI commands that
+open a connection, such as `prisma db pull`, read only the real environment.
 
 Then start the dev server:
 
@@ -86,8 +89,7 @@ by hand after editing `prisma/schema.prisma`.
 The connection URL lives in two places for two different consumers. The application reads `DATABASE_URL` directly and
 passes it to the `@prisma/adapter-pg` driver adapter, which Prisma 7 requires in place of the old Rust query engine.
 `prisma.config.ts` supplies the same URL to the Prisma CLI, because Prisma 7 no longer accepts `url` in the datasource
-block of `schema.prisma`. It reads `.env` with Node's built-in `process.loadEnvFile()`, since Prisma 7 does not load
-`.env` on its own.
+block of `schema.prisma`. Both read `process.env` directly, so nothing in the project loads an env file of its own.
 
 ## Styling
 
