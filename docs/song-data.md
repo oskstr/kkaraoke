@@ -504,7 +504,12 @@ where a substitution is not. Inside an artist's own catalogue it finds Madonna's
 
 ## What is left, and why matching cannot fix most of it
 
-460 songs remain for review, and only a minority of them are string problems:
+The queue is [`data/review.md`](../data/review.md), generated with everything else. It is grouped by what is
+wrong, because those are different jobs, and within that by the venue's artist string, largest group first, since
+one decision about `Finsk musik` settles thirty-nine songs and one about `Rozallo` settles one. Each row carries
+the `postId` a proposal is keyed by and the `id` on the wall.
+
+460 songs remain, and only a minority of them are string problems:
 
 | Songs | What it is                                                                                                                                                                              |
 | ----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
