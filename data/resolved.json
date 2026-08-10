@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T18:04:42.867Z",
+  "generatedAt": "2026-08-10T18:49:30.947Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -446,6 +446,7 @@
     },
     {
       "postId": 50269,
+      "from": "Grease",
       "artist": "John Travolta & Olivia Newton‐John",
       "sortAs": "Travolta, John",
       "title": "Summer Nights",
@@ -8101,7 +8102,7 @@
     },
     {
       "postId": 48181,
-      "artist": "Barbra Streisand and Bryan Adams",
+      "artist": "Barbra Streisand & Bryan Adams",
       "sortAs": "Streisand, Barbra",
       "title": "I Finally Found Someone",
       "artistMbids": [
@@ -13084,6 +13085,7 @@
     },
     {
       "postId": 50341,
+      "artist": "Ann-Louise Hanson, Towa Carson & Siw Malmkvist",
       "sortAs": "Hanson, Ann-Louise",
       "artistMbids": [
         "cda648a7-44c6-4e1a-8f1d-2953db08751b",
@@ -14188,7 +14190,6 @@
     },
     {
       "postId": 51148,
-      "artist": "Lasse Stefanz, Christina Lindberg",
       "sortAs": "Lasse Stefanz",
       "artistMbids": [
         "433e715e-1eac-47e6-815f-93797cfab7aa",
@@ -16855,6 +16856,7 @@
     },
     {
       "postId": 50661,
+      "from": "Jesus Christ Superstar",
       "artist": "Yvonne Elliman",
       "sortAs": "Elliman, Yvonne",
       "title": "I Don’t Know How to Love Him",
@@ -20508,6 +20510,7 @@
     },
     {
       "postId": 50270,
+      "from": "Grease",
       "artist": "John Travolta & Olivia Newton‐John",
       "sortAs": "Travolta, John",
       "title": "You’re the One That I Want",
@@ -27070,6 +27073,7 @@
     },
     {
       "postId": 51771,
+      "from": "My Fair Lady",
       "artist": "Stanley Holloway",
       "sortAs": "Holloway, Stanley",
       "title": "Get Me to the Church on Time",
@@ -27947,7 +27951,7 @@
     },
     {
       "postId": 50286,
-      "artist": "U2 and Green Day",
+      "artist": "U2 & Green Day",
       "sortAs": "U2",
       "title": "The Saints Are Coming",
       "artistMbids": [
@@ -29221,7 +29225,8 @@
     },
     {
       "postId": 51749,
-      "artist": "Nicole Kidman and Ewan McGregor",
+      "from": "Moulin Rouge!",
+      "artist": "Nicole Kidman & Ewan McGregor",
       "sortAs": "Kidman, Nicole",
       "title": "Come What May",
       "artistMbids": [
@@ -29244,6 +29249,7 @@
     },
     {
       "postId": 51750,
+      "from": "Moulin Rouge!",
       "artist": "Ewan McGregor",
       "sortAs": "McGregor, Ewan",
       "title": "Your Song",
@@ -31589,6 +31595,7 @@
     },
     {
       "postId": 50271,
+      "from": "Grease",
       "artist": "John Travolta",
       "sortAs": "Travolta, John",
       "title": "Greased Lightnin'",
@@ -37971,6 +37978,7 @@
     },
     {
       "postId": 52853,
+      "from": "The Sound of Music",
       "artist": "Julie Andrews",
       "sortAs": "Andrews, Julie",
       "title": "My Favorite Things",
@@ -38702,6 +38710,7 @@
     },
     {
       "postId": 52854,
+      "from": "The Sound of Music",
       "artist": "Julie Andrews",
       "sortAs": "Andrews, Julie",
       "title": "So Long, Farewell",
@@ -39167,6 +39176,7 @@
     },
     {
       "postId": 52855,
+      "from": "The Sound of Music",
       "artist": "Julie Andrews",
       "sortAs": "Andrews, Julie",
       "title": "The Sound of Music",
@@ -39861,7 +39871,6 @@
     },
     {
       "postId": 53266,
-      "artist": "Toby Keith and Willie Nelson",
       "sortAs": "Keith, Toby",
       "title": "Beer for My Horses",
       "artistMbids": [
@@ -50796,6 +50805,7 @@
     },
     {
       "postId": 51772,
+      "from": "My Fair Lady",
       "artist": "Vic Damone",
       "sortAs": "Damone, Vic",
       "title": "On the Street Where You Live",
@@ -55559,7 +55569,6 @@
     },
     {
       "postId": 52451,
-      "artist": "Rihanna, Drake",
       "sortAs": "Rihanna",
       "title": "What’s My Name?",
       "artistMbids": [
@@ -68809,6 +68818,7 @@
     },
     {
       "postId": 51751,
+      "from": "Moulin Rouge!",
       "artist": "Nicole Kidman & Ewan McGregor",
       "sortAs": "Kidman, Nicole",
       "title": "Elephant Love Medley",
@@ -69483,7 +69493,7 @@
     },
     {
       "postId": 52235,
-      "artist": "Prince and The New Power Generation",
+      "artist": "Prince & The New Power Generation",
       "sortAs": "Prince",
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e",
@@ -69510,7 +69520,7 @@
     },
     {
       "postId": 52236,
-      "artist": "Prince and The Revolution",
+      "artist": "Prince & The Revolution",
       "sortAs": "Prince",
       "title": "Raspberry Beret",
       "artistMbids": [
@@ -71734,7 +71744,7 @@
     },
     {
       "postId": 47745,
-      "artist": "50 Cent, Eminem",
+      "artist": "50 Cent & Eminem",
       "sortAs": "50 Cent",
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
@@ -72883,7 +72893,7 @@
     },
     {
       "postId": 50115,
-      "artist": "Freddie Mercury and Montserrat Caballé",
+      "artist": "Freddie Mercury & Montserrat Caballé",
       "sortAs": "Mercury, Freddie",
       "artistMbids": [
         "022589ac-7177-460d-a178-9976cf70e29f",
@@ -72948,7 +72958,7 @@
     },
     {
       "postId": 50189,
-      "artist": "George Michael and Aretha Franklin",
+      "artist": "George Michael & Aretha Franklin",
       "sortAs": "Michael, George",
       "title": "I Knew You Were Waiting (for Me)",
       "artistMbids": [
@@ -73402,6 +73412,7 @@
     },
     {
       "postId": 50662,
+      "from": "Jesus Christ Superstar",
       "artist": "Murray Head",
       "sortAs": "Head, Murray",
       "artistMbids": [
@@ -76139,6 +76150,7 @@
     },
     {
       "postId": 49412,
+      "from": "Mulan",
       "artist": "Donny Osmond",
       "sortAs": "Osmond, Donny",
       "title": "I’ll Make a Man out of You",
@@ -78043,6 +78055,7 @@
     },
     {
       "postId": 49422,
+      "from": "Mary Poppins",
       "artist": "Julie Andrews",
       "sortAs": "Andrews, Julie",
       "title": "A Spoonful of Sugar",
@@ -78071,7 +78084,6 @@
     },
     {
       "postId": 50329,
-      "artist": "Hall& Oates",
       "sortAs": "Hall, Daryl & Oates, John",
       "title": "You Make My Dreams",
       "artistMbids": [
@@ -81829,6 +81841,7 @@
     },
     {
       "postId": 50127,
+      "from": "Frozen II",
       "artist": "Evan Rachel Wood",
       "sortAs": "Wood, Evan Rachel",
       "title": "All Is Found",
@@ -81952,6 +81965,7 @@
     },
     {
       "postId": 50128,
+      "from": "Frozen II",
       "artist": "Josh Gad",
       "sortAs": "Gad, Josh",
       "title": "When I Am Older",
@@ -81996,6 +82010,7 @@
     },
     {
       "postId": 50129,
+      "from": "Frozen II",
       "artist": "Kristen Bell",
       "sortAs": "Bell, Kristen",
       "title": "The Next Right Thing",

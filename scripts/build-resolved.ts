@@ -88,6 +88,40 @@ function related(a: Artist | undefined, b: Artist | undefined): boolean {
     return left !== right && (left.startsWith(right) || right.startsWith(left));
 }
 
+/**
+ * How a collaboration should read. The dump gives only the flattened credit line the matched
+ * release happened to print, so the same two people arrive as `Nicole Kidman and Ewan
+ * McGregor` on one song and `Nicole Kidman & Ewan McGregor` on the next, and one release
+ * managed `Hall& Oates`. They are two artists either way, each with their own id.
+ *
+ * Where the line is nothing but the credited artists' own names joined by a neutral
+ * conjunction, it can be rebuilt from those names and read the same way every time. Where it
+ * says anything else it is left alone, because the something else is usually the part that
+ * matters: `feat.` marks a guest, `duet with` marks a duet, `vs.` marks a remix.
+ */
+function readAsCredit(credit: string, credited: Artist[]): string {
+    const tidy = credit.replace(/\s*&\s*/g, " & ").trim();
+    if (credited.length < 2) {
+        return tidy;
+    }
+    const neutral = tidy.split(/\s*(?:&|,|\band\b)\s*/).filter((part) => part.length > 0);
+    const names = credited.map((artist) => artist.name);
+    // A part accounts for an artist when it is their name, or the end of it: one release
+    // credits Daryl Hall and John Oates as `Hall& Oates`, which is the same two men shortened,
+    // and rebuilding it is what stops their three songs reading two different ways.
+    const accounts = (part: string, name: string): boolean => {
+        const [left, right] = [nameKey(part), nameKey(name)];
+        return left === right || (left.length >= 3 && right.endsWith(left));
+    };
+    const accounted =
+        neutral.length === names.length && neutral.every((part, index) => accounts(part, names[index] ?? ""));
+    if (!accounted) {
+        return tidy;
+    }
+    // Oxford-free: `A & B`, and `A, B & C` for three or more.
+    return [names.slice(0, -1).join(", "), names.at(-1)].join(" & ");
+}
+
 function pickGenres(artist: Artist | undefined): string[] {
     return (artist?.genres ?? [])
         .filter((genre) => genre.count >= MIN_GENRE_VOTES)
@@ -271,11 +305,15 @@ async function main(): Promise<void> {
         const credited = mbids.map((mbid) => artists.get(mbid)).filter((artist) => artist !== undefined);
         const lead = credited[0];
 
-        // A single credited artist gets the canonical name from its own lookup, because
-        // the dump's credit is whatever the matched release printed. A collaboration keeps
-        // the release's credit line, which reads better than joining names and preserves
-        // the "feat." that tells a guest apart from a duet.
-        const canonical = mbids.length === 1 && lead !== undefined ? lead.name : match.artistCredit;
+        // A single credited artist gets the canonical name from its own lookup, because the
+        // dump's credit is whatever the matched release printed. A collaboration is rebuilt
+        // from the same names where the line is only names, and kept verbatim where it is not.
+        const canonical =
+            mbids.length === 1 && lead !== undefined
+                ? lead.name
+                : match.artistCredit === undefined
+                  ? undefined
+                  : readAsCredit(match.artistCredit, credited);
 
         // MusicBrainz files songs with no identifiable performer under placeholder
         // entities named in brackets, such as [Disney] and [traditional]. The id is real

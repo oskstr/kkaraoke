@@ -610,6 +610,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the duet from Grease",
+      "from": "Grease",
       "trusted": true,
       "title": "Summer Nights"
     },
@@ -22769,6 +22770,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Mary Magdalene on the 1970 album",
+      "from": "Jesus Christ Superstar",
       "trusted": true,
       "title": "I Don’t Know How to Love Him"
     },
@@ -27420,6 +27422,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the duet from Grease",
+      "from": "Grease",
       "trusted": true,
       "title": "You’re the One That I Want"
     },
@@ -36125,6 +36128,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Doolittle's number",
+      "from": "My Fair Lady",
       "trusted": true,
       "title": "Get Me to the Church on Time"
     },
@@ -39104,6 +39108,7 @@
         "ampersand-spelled-out"
       ],
       "proposed": "the duet",
+      "from": "Moulin Rouge!",
       "trusted": true,
       "title": "Come What May"
     },
@@ -39124,6 +39129,7 @@
       "how": "version",
       "rewrites": [],
       "proposed": "McGregor sings it in the film",
+      "from": "Moulin Rouge!",
       "trusted": true,
       "title": "Your Song"
     },
@@ -42104,6 +42110,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Travolta's number; the title is elided",
+      "from": "Grease",
       "trusted": true,
       "title": "Greased Lightnin'"
     },
@@ -50151,6 +50158,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "American spelling",
+      "from": "The Sound of Music",
       "trusted": true,
       "title": "My Favorite Things"
     },
@@ -51070,6 +51078,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the children's number, led by Andrews on the soundtrack",
+      "from": "The Sound of Music",
       "trusted": true,
       "title": "So Long, Farewell"
     },
@@ -51680,6 +51689,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the title number",
+      "from": "The Sound of Music",
       "trusted": true,
       "title": "The Sound of Music"
     },
@@ -66141,6 +66151,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Damone's hit version",
+      "from": "My Fair Lady",
       "trusted": true,
       "title": "On the Street Where You Live"
     },
@@ -88596,6 +88607,7 @@
       "how": "version",
       "rewrites": [],
       "proposed": "the duet",
+      "from": "Moulin Rouge!",
       "trusted": true,
       "title": "Elephant Love Medley"
     },
@@ -94125,6 +94137,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Judas on the 1970 album",
+      "from": "Jesus Christ Superstar",
       "trusted": true,
       "title": "Superstar"
     },
@@ -97469,6 +97482,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Osmond is Shang's singing voice in Mulan",
+      "from": "Mulan",
       "trusted": true,
       "title": "I’ll Make a Man out of You"
     },
@@ -100055,6 +100069,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Mary Poppins; spoonful is one word",
+      "from": "Mary Poppins",
       "trusted": true,
       "title": "A Spoonful of Sugar"
     },
@@ -104889,6 +104904,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Queen Iduna's lullaby",
+      "from": "Frozen II",
       "trusted": true,
       "title": "All Is Found"
     },
@@ -105032,6 +105048,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Olaf's number",
+      "from": "Frozen II",
       "trusted": true,
       "title": "When I Am Older"
     },
@@ -105097,6 +105114,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Anna's number",
+      "from": "Frozen II",
       "trusted": true,
       "title": "The Next Right Thing"
     },
