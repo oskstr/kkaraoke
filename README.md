@@ -32,6 +32,7 @@ from a file in the repository, so builds need no database, no credentials and no
 ├── scripts/
 │   ├── fetch-songs.ts      # scrapes the catalogue from kkaraoke.se
 │   ├── collect-artist-evidence.ts
+│   ├── match-canonical.ts  # offline match against the MusicBrainz dump
 │   ├── score-artist-verdicts.ts
 │   └── lib/
 │       └── musicbrainz.ts  # cached, rate-limited API client
@@ -67,10 +68,11 @@ All commands are run from the root of the project:
 Two more, used for the catalogue clean-up described in
 [`docs/song-data.md`](docs/song-data.md) rather than for building the site:
 
-| Command                 | Action                                                         |
-| :---------------------- | :------------------------------------------------------------- |
-| `pnpm collect:evidence` | Gathers MusicBrainz evidence for a list of artist strings      |
-| `pnpm score:verdicts`   | Scores a resolution run against `data/pilot/expectations.json` |
+| Command                 | Action                                                           |
+| :---------------------- | :--------------------------------------------------------------- |
+| `pnpm collect:evidence` | Gathers MusicBrainz evidence for a list of artist strings        |
+| `pnpm score:verdicts`   | Scores a resolution run against `data/pilot/expectations.json`   |
+| `pnpm match:canonical`  | Matches the catalogue against a local MusicBrainz canonical dump |
 
 TypeScript is held at 6.x on purpose. `astro check` goes through the Astro language server, which needs TypeScript's
 programmatic compiler API, and the native compiler shipped in 7.0 does not expose it yet. Upgrading TypeScript to 7

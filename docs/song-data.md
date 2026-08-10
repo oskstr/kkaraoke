@@ -192,6 +192,86 @@ The 34 duplicate pairs need a product decision rather than a lookup: either show
 or keep both rows, since either number works at the machine. **Deferred to the UI rework**, where we can see how
 each option actually reads on the page.
 
+## Matching offline, which changes the plan
+
+Everything above assumes the web service is the only way in. It is not, and the alternative is better enough to
+restructure around.
+
+MusicBrainz publishes a [canonical metadata dump](https://musicbrainz.org/doc/Canonical_MusicBrainz_data) built for
+exactly our problem: turning an (artist string, title string) pair into MBIDs. Its `combined_lookup` column is the
+artist and recording names concatenated with punctuation and whitespace removed and diacritics folded to ASCII, so
+the venue's own deviations stop mattering. CC0, 2.3 GB compressed, refreshed twice a month, no API key.
+
+`pnpm match:canonical` streams it once. **5220 of 5915 songs matched in 45 seconds with no requests at all**, each
+carrying artist MBIDs, a recording MBID and the canonical title. For comparison, the same work through the web
+service is hours of crawling and would still have missed several of these:
+
+- `Lou Bega` + `Mambo No5` matches `Mambo No. 5` exactly, because the key ignores the punctuation the venue dropped
+- `Loa Falkman` + `Symfoni` reaches `Symfonin` by prefix
+- the casing problem solves itself: `Losing my religion` comes back `Losing My Religion`, `Back in the USSR` comes
+  back `Back in the U.S.S.R.`, apostrophes and dashes included. That was supposed to be a 5900-lookup song pass.
+
+Two rewrites of the venue's strings earn their keep, and each match records which one found it:
+
+| Rewrite                        |  Recovers | Why                                                                                                                                        |
+| :----------------------------- | --------: | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| prepend the article            | 176 songs | the catalogue files `Beatles`, `Kinks`, `Housemartins` without it, and folding punctuation cannot fix a missing word at the front of a key |
+| strip a trailing parenthetical |  33 songs | `Un-break my heart (original)`, `Country roads (remix)`                                                                                    |
+
+**What the dump cannot do is enrich.** It carries no works, composers, release dates, aliases or genres. Its chosen
+release is frequently a karaoke compilation — 33 matches land on things like `Svenska Karaokeklassiker Vol. 3` — so
+a year must never be read from it. Its artist credit is release-specific too: `Hall & Oates` stays `Hall & Oates`,
+but the MBID behind it resolves to `Daryl Hall & John Oates`, so canonical names have to come from the id and not
+the string. Nine songs match `[Disney]`, so bracketed placeholder credits still need discarding, and the 90 prefix
+matches need review — one reached Madonna's `Secret (Some Bizarre mix)` from `Secrets` by coincidence.
+
+### So the shape of the work changes
+
+| Stage                          | Cost                             | Produces                                                                                                                                                   |
+| :----------------------------- | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| offline match against the dump | 45 seconds, no requests          | identity and canonical titles for 88% of the catalogue                                                                                                     |
+| web service for the residue    | **506 artist strings**, not 2080 | the typos and abbreviations the dump cannot fold: `Rozallo`, `Zuchero`, `Sugabab`/`Sugarbabes`, `Pink` for `P!nk`, `Lena PH`, `Paul Simon & Art Garfunkel` |
+| enrichment by MBID             | 1644 artists plus works          | years, works, composers, languages, genres                                                                                                                 |
+
+That removes about three quarters of the crawling, and the enrichment that remains is direct lookups by id rather
+than searches, which are both faster and exact. It also means the evidence-and-judgement pipeline above is aimed at
+506 hard strings instead of the whole catalogue, which is where it was always going to be worth the most.
+
+## Is another database worth using?
+
+Asked whether MusicBrainz's limitations argue for a different source, I tested the plausible ones against cases
+where I already knew the answer. The short version: **MusicBrainz stays primary, and its own dump fixes the
+limitation that actually hurt.** But two other sources are worth adding for specific fields.
+
+_Tested_ on the 10 Nordic tail entries MusicBrainz had resolved:
+
+| Source                        |    Found | Notes                                                                          |
+| :---------------------------- | -------: | :----------------------------------------------------------------------------- |
+| MusicBrainz                   |    10/10 | plus works, composers, first-release dates, aliases, languages; CC0 with dumps |
+| iTunes Search                 |     8/10 | no key needed, always returns a genre and a year, tolerant of messy titles     |
+| Deezer                        |     6/10 | no key needed, thinner on older Swedish material                               |
+| ListenBrainz canonical mapper | untested | the hosted version of the dump lookup, but it now answers 401 without a token  |
+
+So the alternatives are not better sources, they are differently shaped ones, and two of their properties are
+actively dangerous for us. iTunes' top hit for `Hanna Hedlund – Anropar försvunnen` was **a karaoke cover** by
+`Pop Music Workshop`, which is the pollution this document warns about, arriving via the source meant to fix it.
+And its years are the year of whatever release it has, so `Lill-Babs – Leva livet` comes back 2000 for a 1960s
+recording, where MusicBrainz's first-release date is the thing we actually want. Its genres are coarse and
+sometimes just wrong — `German Pop` for Lill-Babs, `Worldwide` for Kalle Moraeus.
+
+Where another source would genuinely add something MusicBrainz lacks:
+
+- **Genre.** Discogs is the strongest candidate: 151 M tracks against MusicBrainz's 51 M, a curated genre and style
+  taxonomy rather than user tags, CC0, with its own dumps. This is the one gap the alternatives clearly win.
+- **Translated titles and original-versus-cover.** SecondHandSongs is purpose-built for it, which is what would let
+  someone find `Stilla natt` by typing `Silent Night`. MusicBrainz works cover some of this.
+- **Composer credits.** The CISAC-affiliated repertory searches (Sweden's STIM, ASCAP's ACE) are the authoritative
+  registries and carry alternate titles per distribution channel.
+- **Duet still has no source.** Nothing on that list records who sings which part. It stays a human-curated flag.
+
+Neither Rate Your Music (no API, scraping prohibited) nor AllMusic (no API) is usable. Streaming catalogues would
+mean OAuth credentials for a worse answer.
+
 ## Cost and rate limits
 
 MusicBrainz allows **one request per second**, needs no API key, and requires a meaningful User-Agent. It is
@@ -282,8 +362,9 @@ none of them is an artist-identification failure:
 
 - `Little Mermaid` and `Fiddler on the roof` are a film and a musical. Not artists, which is the right answer.
 - `Loa Falkman` and `Lou Bega` are both the top candidate at score 100 with an exact name match. What failed was
-  the title: MusicBrainz appears not to have Falkman's recording of `Symfoni` at all, and the venue writes
-  `Mambo No5` where the canonical title is `Mambo No. 5`, which a phrase search will not match.
+  the title: the venue writes `Mambo No5` where the canonical title is `Mambo No. 5`, and `Symfoni` where Falkman's
+  Melodifestivalen entry is `Symfonin`. Neither survives a phrase search. **Both records were in MusicBrainz all
+  along** — see below — so this was our query, not their data.
 
 So the tail's weakness is **titles, not artists**, and the artist pass can be trusted across the whole catalogue.
 That relocates the remaining risk onto the song pass, which is both the larger job — 5915 lookups against 2080 —
@@ -307,14 +388,21 @@ useful and the work is banked as it goes:
 | 403 with 2-3               |     3200 |  2 h |               78% |
 | 1278 with 1                |     7200 |  5 h |              100% |
 
+The table above is what the artist pass costs through the web service, and it is now the fallback rather than the
+plan. The offline match does the same work for 88% of the catalogue in 45 seconds, so these figures apply only to
+the 506 strings it cannot fold — roughly a quarter of the crawl, and the quarter that most needs judgement.
+
 ## Order of work
 
-1. Resolve artists, with alias search and title corroboration. Produces artist identity, the case fixes, the
-   dropped articles and the collaboration splits.
-2. Resolve songs, scoped to the artist ids from step 1. Produces canonical titles, years, works and composers.
-3. Work the flag queue, biggest blast radius first, into `data/overrides.json`.
-4. Enrich with language and genre, which are cheap once identity exists.
-5. Artist pages, which are the reason for all of the above.
+1. **Match offline** against the canonical dump. Produces identity and canonical titles for 88% of the catalogue in
+   under a minute, with no requests. Discard bracketed placeholder credits, and mark the prefix matches for review.
+2. **Resolve the residue** — 506 artist strings — through the web service with alias search and title corroboration,
+   judged from evidence. This is where the venue's typos and abbreviations live.
+3. **Enrich by MBID** rather than by search: 1644 artists plus their works, for first-release year, work,
+   composer and language. Direct lookups, so no search ambiguity.
+4. Work the flag queue, biggest blast radius first, into `data/overrides.json`.
+5. Add genre, from Discogs rather than MusicBrainz tags.
+6. Artist pages, which are the reason for all of the above.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.
