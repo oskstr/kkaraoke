@@ -97,11 +97,48 @@ function keysFor(artist: string, title: string): { key: string; variant: Variant
  * variant, and anything else may be a coincidence — `Secrets` reaches Madonna's
  * `Secret (Some Bizarre mix)` that way.
  */
-const HOWS = ["exact", "version", "spelling", "artist-scoped", "loose"] as const;
+const HOWS = ["exact", "version", "spelling", "artist-scoped", "near", "loose"] as const;
 type How = (typeof HOWS)[number];
 
-/** Only the first three are trustworthy enough to show without someone looking first. */
-const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped"];
+/** All but `loose`, which is the bucket for matches that could be coincidence. */
+const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "near"];
+
+/**
+ * Whether two keys are within `limit` edits of each other, abandoning the calculation as
+ * soon as they are not. Bounded rather than exact because the answer is only ever compared
+ * against a small threshold.
+ */
+function within(a: string, b: string, limit: number): boolean {
+    if (Math.abs(a.length - b.length) > limit) {
+        return false;
+    }
+    let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+    for (let i = 1; i <= a.length; i++) {
+        const row = [i];
+        let best = i;
+        for (let j = 1; j <= b.length; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            const value = Math.min((previous[j] ?? 0) + 1, (row[j - 1] ?? 0) + 1, (previous[j - 1] ?? 0) + cost);
+            row.push(value);
+            if (value < best) best = value;
+        }
+        if (best > limit) {
+            return false;
+        }
+        previous = row;
+    }
+    return (previous[b.length] ?? limit + 1) <= limit;
+}
+
+/**
+ * How far a key of this length may stray. A typo in a long title is still recognisably that
+ * title; one character in a short one is a different song, and `Stay` is a single edit from
+ * `Say`.
+ */
+function tolerance(key: string): number {
+    if (key.length >= 12) return 2;
+    return key.length >= 7 ? 1 : 0;
+}
 
 interface Row {
     artistCredit: string;
@@ -344,6 +381,74 @@ async function main(): Promise<void> {
             }
         });
         console.log(`  recovered ${best.size - afterFirst} more songs`);
+    }
+
+    // A third pass, for the songs whose artist we can reach but whose title we cannot. The
+    // venue misspells titles as well as artists — `Wannabee`, `Fleetwod mac` — and a typo
+    // is invisible to a key comparison however the key is built. Scoped to the artist's own
+    // recordings and bounded by how far a key of that length may stray, a near match is
+    // safe in a way that a global fuzzy search would not be.
+    const beforeThird = best.size;
+    const creditsByArtistKey = new Map<string, { credits: Set<string>; mbids: Set<string> }>();
+    for (const song of catalogue.songs) {
+        const match = best.get(song.postId);
+        if (match === undefined || !match.trusted) continue;
+        const key = combinedLookup(song.artist);
+        const entry = creditsByArtistKey.get(key) ?? { credits: new Set<string>(), mbids: new Set<string>() };
+        entry.credits.add(combinedLookup(match.artistCredit));
+        for (const mbid of match.artistMbids) entry.mbids.add(mbid);
+        creditsByArtistKey.set(key, entry);
+    }
+
+    const nearWanted = new Map<string, { postId: number; titleKey: string; mbids: Set<string> }[]>();
+    for (const song of catalogue.songs) {
+        if (best.has(song.postId)) continue;
+        const artistKey = combinedLookup(song.artist);
+        // The artist string may itself be misspelled, so reach for the trusted spellings
+        // that are within an edit or two of it as well as for an exact match.
+        const spelled = creditsByArtistKey.get(artistKey);
+        const slack = tolerance(artistKey);
+        const reachable =
+            spelled !== undefined
+                ? [spelled]
+                : slack === 0
+                  ? []
+                  : [...creditsByArtistKey.entries()]
+                        .filter(([key]) => within(key, artistKey, slack))
+                        .map(([, entry]) => entry);
+        const titleKey = combinedLookup(withoutAnnotation(song.song));
+        if (titleKey.length === 0 || tolerance(titleKey) === 0) continue;
+        for (const entry of reachable) {
+            for (const credit of entry.credits) {
+                const bucket = nearWanted.get(credit);
+                const wantedEntry = { postId: song.postId, titleKey, mbids: entry.mbids };
+                if (bucket === undefined) nearWanted.set(credit, [wantedEntry]);
+                else bucket.push(wantedEntry);
+            }
+        }
+    }
+
+    if (nearWanted.size > 0) {
+        const songsReached = new Set([...nearWanted.values()].flat().map((entry) => entry.postId)).size;
+        console.log(`pass 3: ${songsReached} songs whose artist we know but whose title did not match`);
+        const credits = affixIndex(nearWanted.keys(), "head");
+        await scan(values.csv, (key, line) => {
+            for (const credit of credits(key)) {
+                const entries = nearWanted.get(credit);
+                if (entries === undefined) continue;
+                const rest = key.slice(credit.length);
+                if (rest.length === 0) continue;
+                let row: Row | undefined;
+                for (const entry of entries) {
+                    if (!within(rest, entry.titleKey, tolerance(entry.titleKey))) continue;
+                    row ??= toRow(line);
+                    if (row === undefined) return;
+                    if (!row.artistMbids.some((mbid) => entry.mbids.has(mbid))) continue;
+                    consider(entry.postId, 0, "near", row);
+                }
+            }
+        });
+        console.log(`  recovered ${best.size - beforeThird} more songs`);
     }
 
     const results = catalogue.songs.map((song) => {

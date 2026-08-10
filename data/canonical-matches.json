@@ -2124,7 +2124,18 @@
       "id": 125,
       "artist": "Christina Millian",
       "song": "When you look at me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Christina Milian",
+      "artistMbids": [
+        "78e98e0e-f873-4e5e-b4b7-88b7293fd713"
+      ],
+      "recording": "When You Look at Me",
+      "recordingMbid": "c612ca88-6790-40ce-86e3-b32abb8c0d3d",
+      "release": "Christina Milian",
+      "score": 282611,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52640,
@@ -3973,7 +3984,18 @@
       "id": 233,
       "artist": "Elvis Presley",
       "song": "Ruberneckin'",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Elvis Presley",
+      "artistMbids": [
+        "01809552-4f87-45b0-afff-2c6f0730a3be"
+      ],
+      "recording": "Rubberneckin’",
+      "recordingMbid": "1166e2d2-7954-461f-ac8c-3609692cdfe9",
+      "release": "From Elvis in Memphis",
+      "score": 554930,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52139,
@@ -4797,7 +4819,18 @@
       "id": 281,
       "artist": "Billy Ocean",
       "song": "Get outta my dream, get into my car",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Billy Ocean",
+      "artistMbids": [
+        "0e422e91-a42a-4b4d-8413-9baff67350f2"
+      ],
+      "recording": "Get Outta My Dreams, Get Into My Car",
+      "recordingMbid": "351ea29e-3f02-49b2-be70-d809822d3bc3",
+      "release": "Tear Down These Walls",
+      "score": 22184,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51622,
@@ -5367,7 +5400,18 @@
       "id": 315,
       "artist": "Cliff Richards",
       "song": "Ocean deep",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cliff Richard",
+      "artistMbids": [
+        "b5c2fdfc-d037-45b8-84f9-09ebb7ff8aa1"
+      ],
+      "recording": "Ocean Deep",
+      "recordingMbid": "63c01912-7315-4cd0-b5df-54da6cc3096e",
+      "release": "Silver",
+      "score": 329263,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51752,
@@ -5807,7 +5851,18 @@
       "id": 343,
       "artist": "Rod Stewart",
       "song": "A reason to believe",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rod Stewart",
+      "artistMbids": [
+        "a35237a0-4f47-40a6-b6f3-1e786db23402"
+      ],
+      "recording": "Reason to Believe",
+      "recordingMbid": "f0c5dbc1-6cbb-4eb7-805e-ed48664a141a",
+      "release": "Every Picture Tells a Story",
+      "score": 3227,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48768,
@@ -11052,7 +11107,18 @@
       "id": 653,
       "artist": "Jimmy Jansson",
       "song": "Godmorron världen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jimmy Jansson",
+      "artistMbids": [
+        "8bf3747d-9491-4289-9d65-58c3e69e9318"
+      ],
+      "recording": "Godmorgon världen",
+      "recordingMbid": "2b5bead6-0399-467d-b008-f9a7ad1e50b4",
+      "release": "Flickan från det blå",
+      "score": 365153,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48717,
@@ -11192,7 +11258,18 @@
       "id": 662,
       "artist": "Sofie",
       "song": "Superduperkillen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sofie",
+      "artistMbids": [
+        "1d5bd155-c956-4e72-8db1-34fc4c31ef5c"
+      ],
+      "recording": "Superduperkille",
+      "recordingMbid": "38ec90d0-7425-4aab-bd72-16091bc70bdb",
+      "release": "Superduper",
+      "score": 322759,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49798,
@@ -13072,7 +13149,18 @@
       "id": 773,
       "artist": "Ole Ivars",
       "song": "Spelmannsblod",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ole Ivars",
+      "artistMbids": [
+        "ef942b47-baed-4f58-8cd0-af28cefb3692"
+      ],
+      "recording": "Spellemannsblod",
+      "recordingMbid": "64434515-cb56-47fc-98be-929ac0d6e2e3",
+      "release": "Spellemannsblod",
+      "score": 1006894,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52587,
@@ -13115,7 +13203,18 @@
       "id": 776,
       "artist": "Tor Endresen",
       "song": "Ingen er så nydelig som du",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tor Endresen",
+      "artistMbids": [
+        "e8ee82f6-df01-4814-91f4-b35e66e52b46"
+      ],
+      "recording": "Igen er så nydelig som du",
+      "recordingMbid": "06f535a6-c418-451c-b16e-29ac72fb963e",
+      "release": "Lollipop (Den ultimate lollipop samling)",
+      "score": 4885663,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52912,
@@ -14090,7 +14189,18 @@
       "id": 835,
       "artist": "Depeche Mode",
       "song": "I just can't get enough",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Depeche Mode",
+      "artistMbids": [
+        "8538e728-ca0b-4321-b7e5-cff6565dd4c0"
+      ],
+      "recording": "Just Can’t Get Enough",
+      "recordingMbid": "7977f60b-726e-4c8a-9c97-95e9d2e7faa5",
+      "release": "Speak & Spell",
+      "score": 2778,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50468,
@@ -16793,7 +16903,18 @@
       "id": 994,
       "artist": "Ted Gärdestad",
       "song": "Vilken härlig dag",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ted Gärdestad",
+      "artistMbids": [
+        "22dfb355-7b66-4fbf-adcb-8b8fa6440839"
+      ],
+      "recording": "Oh, Vilken Härlig Dag",
+      "recordingMbid": "2c73e02b-05c1-4831-bd56-9ea23428ef27",
+      "release": "Rätt Låt Vann - Melodifestivalen 40 År - Favoriterna",
+      "score": 5412087,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 47993,
@@ -18576,7 +18697,18 @@
       "id": 1104,
       "artist": "Abba",
       "song": "Angels eyes",
-      "matched": false
+      "matched": true,
+      "artistCredit": "ABBA",
+      "artistMbids": [
+        "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
+      ],
+      "recording": "Angeleyes",
+      "recordingMbid": "1f21bf40-19a0-45a0-a35e-adb2c7f9912a",
+      "release": "Voulez‐vous",
+      "score": 2810,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 47772,
@@ -20040,7 +20172,18 @@
       "id": 1189,
       "artist": "Neil Diamond",
       "song": "Brother love's travellin' salvation show",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Neil Diamond",
+      "artistMbids": [
+        "a42d3fd5-55de-4206-86c3-4fbb5404018f"
+      ],
+      "recording": "Brother Love’s Traveling Salvation Show",
+      "recordingMbid": "3abb5153-f300-4edb-b07a-b8a961a959ee",
+      "release": "Sweet Caroline",
+      "score": 45738,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49721,
@@ -21850,7 +21993,18 @@
       "id": 1293,
       "artist": "Jennifer Lopez",
       "song": "My love don't cost a thing",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jennifer Lopez",
+      "artistMbids": [
+        "f0602f55-1770-483d-89bd-4bae0d0ac086"
+      ],
+      "recording": "Love Don’t Cost a Thing",
+      "recordingMbid": "12e73e39-c206-493a-946b-aecacd268125",
+      "release": "J.Lo",
+      "score": 274156,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50425,
@@ -23504,7 +23658,18 @@
       "id": 1389,
       "artist": "Olivia Newton-John",
       "song": "Hopelesly devoted to you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Olivia Newton‐John",
+      "artistMbids": [
+        "10ccb5d8-f9d5-4954-9441-3419b522a214"
+      ],
+      "recording": "Hopelessly Devoted to You",
+      "recordingMbid": "91278fb3-9a3c-42d9-8770-0dfac36089fd",
+      "release": "Physical",
+      "score": 842463,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49484,
@@ -24018,7 +24183,18 @@
       "id": 1420,
       "artist": "Dean Martin",
       "song": "Little old wine drinker",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dean Martin",
+      "artistMbids": [
+        "5e6c760b-42e0-4df4-a221-0269355da00a"
+      ],
+      "recording": "Little Ole Winedrinker",
+      "recordingMbid": "c9a5c869-db80-46ef-a2c3-f0b941fbe1d2",
+      "release": "The Best of Dean Martin 1962-1968",
+      "score": 4726664,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52420,
@@ -24802,7 +24978,18 @@
       "id": 1466,
       "artist": "Cliff Richards",
       "song": "Summer holiday",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cliff Richard",
+      "artistMbids": [
+        "b5c2fdfc-d037-45b8-84f9-09ebb7ff8aa1"
+      ],
+      "recording": "Summer Holiday",
+      "recordingMbid": "0a7dee32-3c77-4040-a623-ee5deb323f93",
+      "release": "Best Now",
+      "score": 50247,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49727,
@@ -25597,7 +25784,18 @@
       "id": 1512,
       "artist": "Tomas Ledin",
       "song": "Lång väg tillsammans",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tomas Ledin",
+      "artistMbids": [
+        "a3534292-7820-48df-8a9c-6b363aff43ed"
+      ],
+      "recording": "En lång väg tillsammans",
+      "recordingMbid": "49f9e789-bbe8-4304-991b-ba350a437ad0",
+      "release": "Hela vägen",
+      "score": 306335,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53304,
@@ -28155,7 +28353,18 @@
       "id": 1657,
       "artist": "JoJo",
       "song": "Not that kind of girl",
-      "matched": false
+      "matched": true,
+      "artistCredit": "JoJo",
+      "artistMbids": [
+        "ed29398b-bbf3-42a0-8eff-8631509c271d"
+      ],
+      "recording": "Not That Kinda Girl",
+      "recordingMbid": "cc0e1b46-4a87-4ab9-97b9-edf2022cbd7d",
+      "release": "JoJo",
+      "score": 367076,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49235,
@@ -28572,7 +28781,18 @@
       "id": 1682,
       "artist": "Johnnie Ray",
       "song": "Somebody stole my girl",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Johnnie Ray",
+      "artistMbids": [
+        "a74dcc96-ed1b-4b0c-8492-cc5345d629d8"
+      ],
+      "recording": "Somebody Stole My Gal",
+      "recordingMbid": "2c438563-a8d5-4fe0-b7d2-70016dcd484a",
+      "release": "I Cry For You",
+      "score": 1894466,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48343,
@@ -29489,14 +29709,36 @@
       "id": 1736,
       "artist": "Shirley Bassey",
       "song": "Climb every mountain",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shirley Bassey",
+      "artistMbids": [
+        "05ec70a5-3858-4346-a649-fda0a297b8c1"
+      ],
+      "recording": "Climb Ev'ry Mountain",
+      "recordingMbid": "2d41ac12-78ef-4e8f-ac97-212126cbcb76",
+      "release": "The Ultimate Shirley Bassey",
+      "score": 4777375,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49029,
       "id": 1737,
       "artist": "Cliff Richards",
       "song": "Constantly",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cliff Richard",
+      "artistMbids": [
+        "b5c2fdfc-d037-45b8-84f9-09ebb7ff8aa1"
+      ],
+      "recording": "Constantly",
+      "recordingMbid": "30da935a-af61-49d4-8be4-7b22536803b6",
+      "release": "Love… The Album",
+      "score": 482082,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49567,
@@ -34779,7 +35021,18 @@
       "id": 2065,
       "artist": "Shania Twain",
       "song": "Who's bed have your boot been under",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shania Twain",
+      "artistMbids": [
+        "faabb55d-3c9e-4c23-8779-732ac2ee2c0d"
+      ],
+      "recording": "Whose Bed Have Your Boots Been Under?",
+      "recordingMbid": "4627e8db-d439-4359-a3e6-c4c21511988e",
+      "release": "The Woman in Me",
+      "score": 127460,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52727,
@@ -41026,7 +41279,18 @@
       "id": 2453,
       "artist": "Beautiful South",
       "song": "Little time",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Beautiful South",
+      "artistMbids": [
+        "eec43ebc-815a-4105-b1cb-205b8f57b4fa"
+      ],
+      "recording": "A Little Time",
+      "recordingMbid": "44612124-bad8-4060-a272-0aecb7f99b4f",
+      "release": "Choke",
+      "score": 45902,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48275,
@@ -43153,7 +43417,18 @@
       "id": 2577,
       "artist": "Dionne Warwick",
       "song": "I say a little prayer '97 (remix)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dionne Warwick",
+      "artistMbids": [
+        "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
+      ],
+      "recording": "I Say a Little Prayer",
+      "recordingMbid": "5edc46fc-31aa-4a27-b9d6-305e0d113505",
+      "release": "An Evening With Dionne Warwick",
+      "score": 391007,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49342,
@@ -48126,7 +48401,18 @@
       "id": 2869,
       "artist": "Slipknot",
       "song": "Vermillion",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Slipknot",
+      "artistMbids": [
+        "a466c2a2-6517-42fb-a160-1087c3bafd9f"
+      ],
+      "recording": "Vermilion",
+      "recordingMbid": "cd56a9dd-2f70-4014-b2fe-2c9e552fd7f9",
+      "release": "Vol. 3: (The Subliminal Verses)",
+      "score": 365671,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51329,
@@ -49472,7 +49758,18 @@
       "id": 2948,
       "artist": "Wheatus",
       "song": "Wannabe gangster",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Wheatus",
+      "artistMbids": [
+        "741a2892-1c5d-402f-a769-2096356c77d7"
+      ],
+      "recording": "Wannabe Gangstar",
+      "recordingMbid": "e93c2d36-efa0-475a-ac33-737e94ea6da9",
+      "release": "Wheatus",
+      "score": 253307,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53260,
@@ -51154,7 +51451,18 @@
       "id": 3045,
       "artist": "Backstreet Boys",
       "song": "I just want you to know",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Backstreet Boys",
+      "artistMbids": [
+        "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
+      ],
+      "recording": "Just Want You to Know",
+      "recordingMbid": "47b830a6-624d-431d-a573-8cfff6a598d8",
+      "release": "Never Gone",
+      "score": 399406,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48850,
@@ -52232,7 +52540,18 @@
       "id": 3106,
       "artist": "A-teens",
       "song": "Promised myself",
-      "matched": false
+      "matched": true,
+      "artistCredit": "A★Teens",
+      "artistMbids": [
+        "69d9cb53-5b8f-41b0-ac84-49eabea535b2"
+      ],
+      "recording": "I Promised Myself",
+      "recordingMbid": "c677b9dd-42d2-42a6-ba77-81106f995a54",
+      "release": "I Promised Myself",
+      "score": 2326280,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48143,
@@ -53467,7 +53786,18 @@
       "id": 3177,
       "artist": "Alicia Keys",
       "song": "Empire state of mind (part 2) Broken down",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alicia Keys",
+      "artistMbids": [
+        "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
+      ],
+      "recording": "Empire State of Mind, Part II (Broken Down)",
+      "recordingMbid": "4eb24aaf-95ca-4848-bdc0-bb5bcf98f341",
+      "release": "The Element of Freedom",
+      "score": 559722,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48756,
@@ -54933,7 +55263,18 @@
       "id": 3262,
       "artist": "Linda Bengtzing",
       "song": "E det fel på mig",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Linda Bengtzing",
+      "artistMbids": [
+        "dd6838c8-f96c-473d-ba5a-e9b7b13c1c64"
+      ],
+      "recording": "E Det Fel På Mej",
+      "recordingMbid": "1181f1c4-9d80-4703-aa5e-e025b244d5ff",
+      "release": "Min Karusell: En Samling",
+      "score": 5325490,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51864,
@@ -55801,7 +56142,18 @@
       "id": 3312,
       "artist": "Limp Bizkit",
       "song": "Head for the barracade",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Limp Bizkit",
+      "artistMbids": [
+        "8f9d6bb2-dba4-4cca-9967-cc02b9f4820c"
+      ],
+      "recording": "Head for the Barricade",
+      "recordingMbid": "eb3f9763-cd57-46bb-81e3-6961e151df97",
+      "release": "Results May Vary",
+      "score": 335446,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51277,
@@ -59785,7 +60137,18 @@
       "id": 3544,
       "artist": "Barry White",
       "song": "I'm gonna love you just a little bit more babe",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Barry White",
+      "artistMbids": [
+        "b904d624-9e05-4398-8f4f-88fbcf022f79"
+      ],
+      "recording": "I’m Gonna Love You Just a Little Bit More Baby",
+      "recordingMbid": "233070ee-c062-4f9a-851b-1d4c679bbd7d",
+      "release": "Barry White Gold",
+      "score": 4866173,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48208,
@@ -62358,7 +62721,18 @@
       "id": 3703,
       "artist": "The Judds",
       "song": "A girl's night out",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Judds",
+      "artistMbids": [
+        "ae2d4af4-6b37-42f9-80d3-052ee958515b"
+      ],
+      "recording": "Girls Night Out",
+      "recordingMbid": "62b4add5-a723-41c4-8c5f-b1e55e3350a8",
+      "release": "Why Not Me",
+      "score": 4728,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53152,
@@ -64005,7 +64379,18 @@
       "id": 3798,
       "artist": "Weezer",
       "song": "Islands in the sun",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Weezer",
+      "artistMbids": [
+        "6fe07aa5-fec0-4eca-a456-f29bff451b04"
+      ],
+      "recording": "Island in the Sun",
+      "recordingMbid": "58044028-9a7e-4da6-9ca8-e5322a25d9a2",
+      "release": "Weezer",
+      "score": 277337,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53480,
@@ -66777,7 +67162,18 @@
       "id": 3959,
       "artist": "Taylor Swift",
       "song": "Today was a fairytail",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Taylor Swift",
+      "artistMbids": [
+        "20244d07-534f-4eff-b4d4-930878889970"
+      ],
+      "recording": "Today Was a Fairytale",
+      "recordingMbid": "bdc3a14b-d210-4db9-a3b5-71750219fcc6",
+      "release": "Greatest Hits",
+      "score": 4842076,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53431,
@@ -67114,7 +67510,18 @@
       "id": 3980,
       "artist": "Pink",
       "song": "Fucking perfect",
-      "matched": false
+      "matched": true,
+      "artistCredit": "P!nk",
+      "artistMbids": [
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
+      ],
+      "recording": "Fuckin’ Perfect",
+      "recordingMbid": "5f11e9aa-626f-421c-9238-dbb5abb0c558",
+      "release": "Fuckin’ Perfect",
+      "score": 2365095,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52829,
@@ -72172,7 +72579,18 @@
       "id": 4273,
       "artist": "En Vogue",
       "song": "My loving",
-      "matched": false
+      "matched": true,
+      "artistCredit": "En Vogue",
+      "artistMbids": [
+        "9a883a69-436b-4d17-9ffd-122a9bf4419a"
+      ],
+      "recording": "My Lovin'",
+      "recordingMbid": "539a09e3-6a3d-43cf-a858-97fc8c587613",
+      "release": "Opération R’n’B (New School vs Old School)",
+      "score": 4768464,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51296,
@@ -75590,7 +76008,18 @@
       "id": 4472,
       "artist": "Coldplay",
       "song": "Rush of blood to the head",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Coldplay",
+      "artistMbids": [
+        "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
+      ],
+      "recording": "A Rush of Blood to the Head",
+      "recordingMbid": "53479dbd-bc21-4374-a4ba-e0b683324b88",
+      "release": "A Rush of Blood to the Head",
+      "score": 308450,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49049,
@@ -75759,7 +76188,18 @@
       "id": 4482,
       "artist": "Conway Twitty",
       "song": "Happy birthday darling",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Conway Twitty",
+      "artistMbids": [
+        "a3c60d26-90d6-4788-ba9b-a89693fc396d"
+      ],
+      "recording": "Happy Birthday Darlin’",
+      "recordingMbid": "2e303799-1944-4d34-9a08-5ea8e9161501",
+      "release": "Number Ones",
+      "score": 944,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49073,
@@ -77317,7 +77757,18 @@
       "id": 4569,
       "artist": "Dolly Parton",
       "song": "My blue ridge mountin boy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dolly Parton",
+      "artistMbids": [
+        "1d543e07-d0d2-4834-a8db-d65c50c2a856"
+      ],
+      "recording": "My Blue Ridge Mountain Boy",
+      "recordingMbid": "2c3d516b-83f2-4353-afb1-51fa74909296",
+      "release": "Heartbreak Express",
+      "score": 1146241,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49456,
@@ -78420,7 +78871,18 @@
       "id": 4635,
       "artist": "Flogging Molly",
       "song": "What is left of the flag",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Flogging Molly",
+      "artistMbids": [
+        "c3694ddc-f7e5-40dd-9fad-90d11a2c50fa"
+      ],
+      "recording": "What’s Left of the Flag",
+      "recordingMbid": "27394bc6-eb56-4d71-ace3-ba7a99ac4f5e",
+      "release": "Drunken Lullabies",
+      "score": 303565,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50030,
@@ -79072,7 +79534,18 @@
       "id": 4673,
       "artist": "George Strait",
       "song": "I gotta get to you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "George Strait",
+      "artistMbids": [
+        "5ab2cf34-517e-48eb-b3a5-34e1cbcd600a"
+      ],
+      "recording": "Gotta Get to You",
+      "recordingMbid": "c1351984-a10a-43ee-913d-021e1eb67485",
+      "release": "Twang",
+      "score": 550943,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50196,
@@ -80520,7 +80993,18 @@
       "id": 4758,
       "artist": "Justin Timberlake",
       "song": "I'm loving it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Timberlake",
+      "artistMbids": [
+        "596ffa74-3d08-44ef-b113-765d43d12738"
+      ],
+      "recording": "I’m Lovin’ It",
+      "recordingMbid": "0d8cbf52-004e-479c-8328-2a3181238564",
+      "release": "I'm Lovin' It",
+      "score": 2322455,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50888,
@@ -88134,7 +88618,18 @@
       "id": 5195,
       "artist": "Lilly Allen",
       "song": "Hard Out Here",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lily Allen",
+      "artistMbids": [
+        "6e0c7c0e-cba5-4c2c-a652-38f71ef5785d"
+      ],
+      "recording": "Hard Out Here",
+      "recordingMbid": "2bdc4a1e-2ac9-4984-9300-5e1d95430795",
+      "release": "Sheezus",
+      "score": 701417,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51244,
@@ -90125,7 +90620,18 @@
       "id": 5310,
       "artist": "The Weekend",
       "song": "I Can't Feel My Face",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Weeknd",
+      "artistMbids": [
+        "c8b03190-306c-4120-bb0b-6f2ebfc06ea9"
+      ],
+      "recording": "Can’t Feel My Face",
+      "recordingMbid": "06879155-b9ce-4777-bdc0-f83cd6162760",
+      "release": "Beauty Behind The Madness",
+      "score": 730972,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53228,
@@ -90293,7 +90799,19 @@
       "id": 5321,
       "artist": "Wiz Khalifa Ft. Charlie Puth",
       "song": "See You Again",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Wiz Khalifa feat. Charlie Puth",
+      "artistMbids": [
+        "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+        "525f1f1c-03f0-4bc8-8dfd-e7521f87631b"
+      ],
+      "recording": "See You Again",
+      "recordingMbid": "c6cf4924-75b7-40b3-8d66-f50ff8aec30e",
+      "release": "Nine Track Mind",
+      "score": 744190,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53465,
@@ -91220,7 +91738,18 @@
       "id": 5376,
       "artist": "Hillary Duff",
       "song": "Reach Out",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Hilary Duff",
+      "artistMbids": [
+        "bfaf9b70-d1fd-4d3e-b730-3e67e6f8f9bb"
+      ],
+      "recording": "Reach Out",
+      "recordingMbid": "b4e304a9-aac7-4135-a69c-5b22c73a2fd8",
+      "release": "Reach Out",
+      "score": 2343592,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50405,
@@ -93095,7 +93624,19 @@
       "id": 5488,
       "artist": "Disney",
       "song": "Bibbidi bobidi boo",
-      "matched": false
+      "matched": true,
+      "artistCredit": "[Disney]",
+      "artistMbids": [
+        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+      ],
+      "recording": "Bibbidi‐Bobbidi‐Boo",
+      "recordingMbid": "a412a1f8-6218-4745-b8ec-91c023918844",
+      "release": "Disney Sing‐Along: Disney Princess",
+      "score": 4842470,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": false,
+      "placeholder": true
     },
     {
       "postId": 49418,
@@ -93906,7 +94447,18 @@
       "id": 5541,
       "artist": "Eminem",
       "song": "Just loose it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eminem",
+      "artistMbids": [
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
+      ],
+      "recording": "Just Lose It",
+      "recordingMbid": "79e94ad4-c99e-45f6-a2b6-1ea15d61574d",
+      "release": "Encore",
+      "score": 373732,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48987,
@@ -95178,7 +95730,18 @@
       "id": 5619,
       "artist": "Harry Styles",
       "song": "Light up",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Harry Styles",
+      "artistMbids": [
+        "7eb1ce54-a355-41f9-8d68-e018b096d427"
+      ],
+      "recording": "Lights Up",
+      "recordingMbid": "57f71d30-f9c5-4778-8ec1-fd9132203929",
+      "release": "Fine Line",
+      "score": 817672,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50347,
@@ -95239,7 +95802,18 @@
       "id": 5623,
       "artist": "Ariana Grande",
       "song": "Dangeroous Woman",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ariana Grande",
+      "artistMbids": [
+        "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387"
+      ],
+      "recording": "Dangerous Woman",
+      "recordingMbid": "e8433d2d-4c9f-4cd4-a4cf-f4a02d85a438",
+      "release": "Dangerous Woman",
+      "score": 749634,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48048,
@@ -95440,14 +96014,36 @@
       "id": 5636,
       "artist": "Selena Gomes",
       "song": "Lose you to love me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Selena Gomez",
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3"
+      ],
+      "recording": "Lose You to Love Me",
+      "recordingMbid": "87370e5e-be85-4708-94dd-389a2b471ada",
+      "release": "Rare",
+      "score": 821635,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52685,
       "id": 5637,
       "artist": "Selena Gomes",
       "song": "Slow down",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Selena Gomez",
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3"
+      ],
+      "recording": "Slow Down",
+      "recordingMbid": "717d61b9-17da-4df5-8593-58b089eecba4",
+      "release": "Stars Dance",
+      "score": 678448,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53164,
@@ -96042,7 +96638,18 @@
       "id": 5674,
       "artist": "Jill Johnsson",
       "song": "Kärleken är",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jill Johnson",
+      "artistMbids": [
+        "b67a59df-3977-4fb2-91e9-84a6f15751fd"
+      ],
+      "recording": "Kärleken är",
+      "recordingMbid": "4b25e049-8410-4266-a8c0-aa30408848e3",
+      "release": "När hela världen ser på",
+      "score": 199224,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 51521,
@@ -96401,7 +97008,18 @@
       "id": 5697,
       "artist": "Jay-Z",
       "song": "Hard knoock life",
-      "matched": false
+      "matched": true,
+      "artistCredit": "JAY Z",
+      "artistMbids": [
+        "f82bcf78-5b69-4622-a5ef-73800768d9ac"
+      ],
+      "recording": "Hard Knock Life",
+      "recordingMbid": "7ca6a650-3bb4-465f-9a7d-f5b541564a80",
+      "release": "Jay-Z Sings the Blues “The Forgotten Stories”",
+      "score": 4451701,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50272,
@@ -96440,7 +97058,18 @@
       "id": 5701,
       "artist": "Marvi Gaye",
       "song": "It takes two",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Marvin Gaye",
+      "artistMbids": [
+        "afdb7919-059d-43c1-b668-ba1d265e7e42"
+      ],
+      "recording": "It Takes Two",
+      "recordingMbid": "18fac533-9277-458c-b2f1-1aa52cd179c8",
+      "release": "Greatest Hits Live in ’76",
+      "score": 4573710,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52429,
@@ -96483,14 +97112,36 @@
       "id": 5704,
       "artist": "Roy Orbinson",
       "song": "A love so beautiful",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Roy Orbison",
+      "artistMbids": [
+        "0bbbc496-c7b5-4b3f-bb6d-bd312827d6e5"
+      ],
+      "recording": "A Love So Beautiful",
+      "recordingMbid": "076fa928-2926-49e9-9c39-570f103b966e",
+      "release": "Mystery Girl",
+      "score": 24418,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52577,
       "id": 5705,
       "artist": "Roy Orbinson",
       "song": "Dream baby",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Roy Orbison",
+      "artistMbids": [
+        "0bbbc496-c7b5-4b3f-bb6d-bd312827d6e5"
+      ],
+      "recording": "Dream Baby",
+      "recordingMbid": "e47c9346-cf11-4257-aa02-897a9b9b958e",
+      "release": "In Dreams: The Greatest Hits",
+      "score": 16013,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52708,
@@ -96691,7 +97342,18 @@
       "id": 5718,
       "artist": "PSY",
       "song": "Gentlemen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "PSY",
+      "artistMbids": [
+        "f99b7d67-4e63-4678-aa66-4c6ac0f7d24a"
+      ],
+      "recording": "Gentleman",
+      "recordingMbid": "4705c099-23ec-4d01-aef6-dc32abfc4188",
+      "release": "Gentleman",
+      "score": 2374287,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 49861,
@@ -96909,21 +97571,54 @@
       "id": 5734,
       "artist": "Fleetwod mac",
       "song": "As long as you follow",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Fleetwood Mac",
+      "artistMbids": [
+        "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+      ],
+      "recording": "As Long as You Follow",
+      "recordingMbid": "0a9d4655-10dc-4443-93af-64c34b9ffca1",
+      "release": "As Long as You Follow",
+      "score": 2247783,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50008,
       "id": 5735,
       "artist": "Fleetwod mac",
       "song": "Over my head",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Fleetwood Mac",
+      "artistMbids": [
+        "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+      ],
+      "recording": "Over My Head",
+      "recordingMbid": "223560d5-c613-4bb2-b66c-22607d47fcd0",
+      "release": "Fleetwood Mac",
+      "score": 2648,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50009,
       "id": 5736,
       "artist": "Fleetwod mac",
       "song": "Rhiannon",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Fleetwood Mac",
+      "artistMbids": [
+        "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+      ],
+      "recording": "Rhiannon",
+      "recordingMbid": "8d99aab3-a64c-4bfa-9bdf-1dc72a9e9fb1",
+      "release": "Fleetwood Mac",
+      "score": 2648,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50010,
@@ -97715,7 +98410,18 @@
       "id": 5787,
       "artist": "Justin Bieber",
       "song": "Anyonoe",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Bieber",
+      "artistMbids": [
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "recording": "Anyone",
+      "recordingMbid": "8079d38b-efcf-401e-817c-cb4f293c2e89",
+      "release": "Justice",
+      "score": 836620,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50878,
@@ -97906,7 +98612,18 @@
       "id": 5803,
       "artist": "Ramones",
       "song": "Blietzkrieg Bop",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ramones",
+      "artistMbids": [
+        "d6ed7887-a401-47a8-893c-34b967444d26"
+      ],
+      "recording": "Blitzkrieg Bop",
+      "recordingMbid": "59b14ce2-7b0a-4924-9e23-7418f2fad01c",
+      "release": "Ramones",
+      "score": 15742,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52332,
@@ -98104,14 +98821,36 @@
       "id": 5817,
       "artist": "Foo Fighters",
       "song": "Waiting on war",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Foo Fighters",
+      "artistMbids": [
+        "67f66c07-6e61-4026-ade5-7e782fad3a5d"
+      ],
+      "recording": "Waiting on a War",
+      "recordingMbid": "4d0adc14-56ec-44ae-9e94-381c2b9e8417",
+      "release": "Medicine at Midnight",
+      "score": 835473,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48341,
       "id": 5818,
       "artist": "Billie Eillish",
       "song": "Lost cause",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Billie Eilish",
+      "artistMbids": [
+        "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+      ],
+      "recording": "Lost Cause",
+      "recordingMbid": "6bd56e4a-2abd-435d-9eac-bc834e30d1c0",
+      "release": "Happier Than Ever",
+      "score": 840099,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52304,
@@ -98265,7 +99004,18 @@
       "id": 5829,
       "artist": "Rick Springfield",
       "song": "Speak to tge sky",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rick Springfield",
+      "artistMbids": [
+        "88543892-2eef-4a6a-a84c-5b8502b80421"
+      ],
+      "recording": "Speak to the Sky",
+      "recordingMbid": "db015f8b-f410-4371-a429-b38035591786",
+      "release": "Mission Magic",
+      "score": 685887,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 52513,
@@ -98305,7 +99055,18 @@
       "id": 5833,
       "artist": "Sum 41",
       "song": "Cayching fire",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sum 41",
+      "artistMbids": [
+        "f2eef649-a6d5-4114-afba-e50ab26254d2"
+      ],
+      "recording": "Catching Fire",
+      "recordingMbid": "59da7c8f-929f-4ec1-a61c-4219ab86dcae",
+      "release": "Order in Decline",
+      "score": 812105,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53157,
@@ -98384,7 +99145,18 @@
       "id": 5838,
       "artist": "The who",
       "song": "Were ot going to take it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Who",
+      "artistMbids": [
+        "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
+      ],
+      "recording": "We’re Not Going to Take It",
+      "recordingMbid": "66a80022-c9ed-4b84-98ed-bb1ab2d9b950",
+      "release": "Last Stand With Keith Moon",
+      "score": 4522853,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53207,
@@ -98614,7 +99386,18 @@
       "id": 5852,
       "artist": "Bill Joel",
       "song": "Piano man",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Billy Joel",
+      "artistMbids": [
+        "64b94289-9474-4d43-8c93-918ccc1920d1"
+      ],
+      "recording": "Piano Man",
+      "recordingMbid": "92ac918a-07f6-4f5e-b356-5897723310ca",
+      "release": "Piano Man",
+      "score": 6118,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 48368,
@@ -99082,7 +99865,18 @@
       "id": 5881,
       "artist": "Kesha",
       "song": "We R who whe R",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kesha",
+      "artistMbids": [
+        "fab34286-b8e1-4879-bce3-194e1358fbd2"
+      ],
+      "recording": "We R Who We R",
+      "recordingMbid": "2ca8f1f0-b4ce-46d3-8b9b-80dee5b1201b",
+      "release": "The Video Year Mix 2011",
+      "score": 5205518,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 50992,
@@ -99627,7 +100421,18 @@
       "id": 5913,
       "artist": "Tracy Chapman",
       "song": "Talkin' bout revolution",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tracy Chapman",
+      "artistMbids": [
+        "1129817c-488a-4096-80c1-77fc1b107c93"
+      ],
+      "recording": "Talkin’ Bout a Revolution",
+      "recordingMbid": "fd3158d6-a604-4726-93aa-5faad140907b",
+      "release": "Tracy Chapman",
+      "score": 22271,
+      "how": "near",
+      "variant": "as-written",
+      "trusted": true
     },
     {
       "postId": 53184,
