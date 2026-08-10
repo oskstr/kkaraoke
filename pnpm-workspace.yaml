@@ -1,0 +1,17 @@
+# `packages` is required even though this is a single-package repo: pnpm 9 treats
+# the presence of this file as a workspace declaration and fails with "packages
+# field missing or empty" without it. Vercel selects pnpm 9 for this project, so
+# omitting it breaks deploys while working fine locally on pnpm 11.
+packages:
+    - "."
+
+# pnpm blocks dependency build scripts by default, and pnpm 11 makes an
+# undeclared one a hard error rather than a warning. These are the only three
+# that ask to run one, and all are allowed: @prisma/engines fetches the schema
+# engine that `prisma db pull` and `prisma migrate` rely on, and esbuild verifies
+# its platform binary. Set any of them to `false` to trade those commands for a
+# leaner install.
+allowBuilds:
+    "@prisma/engines": true
+    esbuild: true
+    prisma: true
