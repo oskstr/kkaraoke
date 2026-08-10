@@ -8,3 +8,6 @@ data/songs.json
 # Collected API evidence, written by `pnpm collect:evidence`.
 data/pilot/artist-evidence.json
 data/pilot/tail-evidence.json
+
+# Offline match against the MusicBrainz canonical dump, written by `pnpm match:canonical`.
+data/canonical-matches.json
