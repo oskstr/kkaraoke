@@ -1,6 +1,11 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "../generated/prisma/client.ts";
+import type { kkaraoke } from "../generated/prisma/client.ts";
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({
+    connectionString: process.env["DATABASE_URL"],
+});
+const prisma = new PrismaClient({ adapter });
 
 export function getSongs() {
     return prisma.kkaraoke.findMany({
@@ -8,5 +13,4 @@ export function getSongs() {
     });
 }
 
-type Songs = typeof getSongs extends () => Promise<infer T> ? T : never;
-export type Song = Songs[number];
+export type Song = kkaraoke;
