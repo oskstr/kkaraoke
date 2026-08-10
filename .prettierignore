@@ -4,3 +4,6 @@ pnpm-lock.yaml
 # Scraped catalogue. Written one song per line by `pnpm fetch:songs` to keep
 # refreshes reviewable; Prettier would spread every song over six lines.
 data/songs.json
+
+# Collected API evidence, written by `pnpm collect:evidence`.
+data/pilot/artist-evidence.json

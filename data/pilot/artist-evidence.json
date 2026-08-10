@@ -48,14 +48,14 @@
               "found": true,
               "canonicalTitle": "Maneater",
               "score": 100,
-              "firstReleaseDate": "2008-11-25"
+              "firstReleaseDate": "1997"
             },
             {
               "title": "Rich Girl",
               "found": true,
               "canonicalTitle": "Rich Girl",
               "score": 100,
-              "firstReleaseDate": "2001"
+              "firstReleaseDate": "1994"
             },
             {
               "title": "You make my dreams",
@@ -110,113 +110,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Maneater",
-          "hits": [
-            {
-              "title": "Maneater",
-              "artists": "Nelly Furtado",
-              "firstReleaseDate": "2006-10-23",
-              "score": 100
-            },
-            {
-              "title": "Maneater",
-              "artists": "University of California Berkeley Men's Octet",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "Maneater",
-              "artists": "DJ BRN",
-              "firstReleaseDate": "2006-10-12",
-              "score": 100
-            },
-            {
-              "title": "Maneater",
-              "artists": "Ugly Hurons",
-              "firstReleaseDate": "2010-06-25",
-              "score": 100
-            },
-            {
-              "title": "Maneater",
-              "artists": "The Leisure Kings",
-              "firstReleaseDate": "2006",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Rich Girl",
-          "hits": [
-            {
-              "title": "Rich Girl",
-              "artists": "Selwyn",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Rich Girl",
-              "artists": "Bad Luck Charms",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Rich Girl",
-              "artists": "Fashion Allstars",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Rich Girl",
-              "artists": "Huck",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Rich Girl$",
-              "artists": "Down With Webster",
-              "firstReleaseDate": "2009-01-01",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "You make my dreams",
-          "hits": [
-            {
-              "title": "You Make My Dreams",
-              "artists": "Angel Beats, DJ Merlin",
-              "firstReleaseDate": "2004-09-27",
-              "score": 100
-            },
-            {
-              "title": "You Make My Dreams",
-              "artists": "Angel Beats",
-              "firstReleaseDate": "2004-06-01",
-              "score": 100
-            },
-            {
-              "title": "You Make My Dreams",
-              "artists": "Graham Blvd",
-              "firstReleaseDate": "2021-08-30",
-              "score": 100
-            },
-            {
-              "title": "You Make My Dreams",
-              "artists": "Daniel Seavey",
-              "firstReleaseDate": "2015-03-26",
-              "score": 100
-            },
-            {
-              "title": "You Make My Dreams",
-              "artists": "Pomplamoose",
-              "firstReleaseDate": "2018-02-15",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Hall",
@@ -239,6 +132,15 @@
                 "Daryl Hall & John Oats",
                 "Hall and Oates",
                 "Daryl Hall John Oates"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Maneater",
+                  "found": true,
+                  "canonicalTitle": "Maneater",
+                  "score": 100,
+                  "firstReleaseDate": "1997"
+                }
               ]
             },
             {
@@ -251,18 +153,12 @@
               "began": "1930-12-04",
               "aliases": [
                 "James Stanley Hall"
-              ]
-            },
-            {
-              "mbid": "8d8e3514-06fc-4801-bd4b-8c6ccae223b3",
-              "name": "Tom T. Hall",
-              "score": 94,
-              "type": "Person",
-              "country": "US",
-              "began": "1936-05-25",
-              "aliases": [
-                "Thomas Hall",
-                "Tom T Hall"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Maneater",
+                  "found": false
+                }
               ]
             }
           ]
@@ -277,7 +173,13 @@
               "type": "Person",
               "disambiguation": "Author, Writer",
               "country": "US",
-              "began": "1938-06-16"
+              "began": "1938-06-16",
+              "titleChecks": [
+                {
+                  "title": "Maneater",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "debabff3-2559-46e5-862d-ef2a906d7010",
@@ -297,12 +199,16 @@
                 "Daryl Hall & John Oats",
                 "Hall and Oates",
                 "Daryl Hall John Oates"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Maneater",
+                  "found": true,
+                  "canonicalTitle": "Maneater",
+                  "score": 100,
+                  "firstReleaseDate": "1997"
+                }
               ]
-            },
-            {
-              "mbid": "86f28029-ae7a-42d9-8a80-ad603ef52df1",
-              "name": "Oates",
-              "score": 92
             }
           ]
         }
@@ -366,14 +272,15 @@
               "title": "Everybody hurts",
               "found": true,
               "canonicalTitle": "Everybody Hurts",
-              "score": 100
+              "score": 100,
+              "firstReleaseDate": "1993"
             },
             {
               "title": "Losing my religion",
               "found": true,
               "canonicalTitle": "Losing My Religion",
               "score": 100,
-              "firstReleaseDate": "2004-03-16"
+              "firstReleaseDate": "2002-06-10"
             },
             {
               "title": "Shiny happy people",
@@ -426,110 +333,6 @@
             {
               "title": "Shiny happy people",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Everybody hurts",
-          "hits": [
-            {
-              "title": "Everybody Hurts",
-              "artists": "Tina Arena",
-              "firstReleaseDate": "2007-12-01",
-              "score": 100
-            },
-            {
-              "title": "Everybody Hurts",
-              "artists": "Bodies of Water",
-              "firstReleaseDate": "2007-10",
-              "score": 100
-            },
-            {
-              "title": "Everybody Hurts",
-              "artists": "G4",
-              "firstReleaseDate": "2005-02-28",
-              "score": 100
-            },
-            {
-              "title": "Everybody Hurts",
-              "artists": "R.E.M.",
-              "firstReleaseDate": "2004-03-16",
-              "score": 100
-            },
-            {
-              "title": "Everybody Hurts",
-              "artists": "R.E.M.",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Losing my religion",
-          "hits": [
-            {
-              "title": "Losing My Religion",
-              "artists": "Anouk",
-              "score": 100
-            },
-            {
-              "title": "Losing My Religion",
-              "artists": "R.E.M.",
-              "firstReleaseDate": "2002-06-10",
-              "score": 100
-            },
-            {
-              "title": "Losing My Religion",
-              "artists": "Tori Amos",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Losing My Religion",
-              "artists": "R.E.M.",
-              "score": 100
-            },
-            {
-              "title": "\"Losing My Religion\"",
-              "artists": "Bob Schneider",
-              "firstReleaseDate": "2007",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Shiny happy people",
-          "hits": [
-            {
-              "title": "Shiny Happy People",
-              "artists": "Mitch Easter",
-              "firstReleaseDate": "1992",
-              "score": 100
-            },
-            {
-              "title": "Shiny Happy People",
-              "artists": "The Piano Tribute Players",
-              "firstReleaseDate": "2011-04-05",
-              "score": 100
-            },
-            {
-              "title": "Shiny Happy People",
-              "artists": "Lolita KompleX",
-              "firstReleaseDate": "2022-05-27",
-              "score": 100
-            },
-            {
-              "title": "Shiny Happy People",
-              "artists": "Lollobrigida",
-              "firstReleaseDate": "2012",
-              "score": 100
-            },
-            {
-              "title": "Shiny Happy People",
-              "artists": "Magic Lunch Double Crunch",
-              "firstReleaseDate": "2013-07-20",
-              "score": 100
             }
           ]
         }
@@ -697,21 +500,21 @@
               "title": "I've been waiting for you",
               "found": true,
               "canonicalTitle": "I’ve Been Waiting for You",
-              "score": 100,
-              "firstReleaseDate": "1982-06-21"
+              "score": 100
             },
             {
               "title": "Knowing me knowing you",
               "found": true,
-              "canonicalTitle": "Knowing Me, Knowing You",
-              "score": 100
+              "canonicalTitle": "Knowing Me Knowing You",
+              "score": 100,
+              "firstReleaseDate": "1997"
             },
             {
               "title": "Ring ring",
               "found": true,
-              "canonicalTitle": "Ring, ring",
+              "canonicalTitle": "Ring ring",
               "score": 100,
-              "firstReleaseDate": "1993"
+              "firstReleaseDate": "2002"
             }
           ]
         },
@@ -748,6 +551,7 @@
           "aliases": [
             "ABBAesque"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "I've been waiting for you",
@@ -763,108 +567,6 @@
             {
               "title": "Ring ring",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "I've been waiting for you",
-          "hits": [
-            {
-              "title": "I've Been Waiting for You",
-              "artists": "Tony Evans Dancebeat Studio Band",
-              "firstReleaseDate": "2011",
-              "score": 100
-            },
-            {
-              "title": "I've Been Waiting for You",
-              "artists": "Mamma Mia’s",
-              "firstReleaseDate": "2010-12-30",
-              "score": 100
-            },
-            {
-              "title": "I’ve Been Waiting for You",
-              "artists": "Atli Örvarsson",
-              "firstReleaseDate": "2013-07-23",
-              "score": 100
-            },
-            {
-              "title": "I’ve Been Waiting for You",
-              "artists": "Neil Young, Crazy Horse",
-              "score": 100
-            },
-            {
-              "title": "I’ve Been Waiting for You",
-              "artists": "Neil Young, Crazy Horse",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Knowing me knowing you",
-          "hits": [
-            {
-              "title": "Knowing Me, Knowing You",
-              "artists": "Hilton McRae",
-              "firstReleaseDate": "1999-10-17",
-              "score": 100
-            },
-            {
-              "title": "Knowing Me, Knowing You",
-              "artists": "The Musicworkers Gang",
-              "score": 100
-            },
-            {
-              "title": "Knowing Me, Knowing You",
-              "artists": "Dinu Bomha",
-              "score": 100
-            },
-            {
-              "title": "Knowing Me, Knowing You",
-              "artists": "London Pops and FABBA GIRLS",
-              "firstReleaseDate": "2001-10-09",
-              "score": 100
-            },
-            {
-              "title": "Knowing Me, Knowing You",
-              "artists": "BNB",
-              "firstReleaseDate": "2007",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Ring ring",
-          "hits": [
-            {
-              "title": "Ring Ring Ring Ring Ring",
-              "artists": "RiN",
-              "firstReleaseDate": "2023-12-25",
-              "score": 100
-            },
-            {
-              "title": "Ring Ring Ring Ring Ring",
-              "artists": "Alejandra Burgos",
-              "firstReleaseDate": "2014",
-              "score": 100
-            },
-            {
-              "title": "Ring Ring Ring Ring",
-              "artists": "pngsequence",
-              "score": 96
-            },
-            {
-              "title": "Ring Ring Ring Ring",
-              "artists": "The Funky Fellows",
-              "firstReleaseDate": "1993",
-              "score": 96
-            },
-            {
-              "title": "Ring, Ring, Ring",
-              "artists": "Brian Setzer",
-              "firstReleaseDate": "2003-08-20",
-              "score": 90
             }
           ]
         }
@@ -1096,14 +798,14 @@
               "found": true,
               "canonicalTitle": "Hey Jude",
               "score": 100,
-              "firstReleaseDate": "2007"
+              "firstReleaseDate": "2025"
             },
             {
               "title": "And I love her",
               "found": true,
               "canonicalTitle": "And I Love Her",
               "score": 100,
-              "firstReleaseDate": "1964-06-26"
+              "firstReleaseDate": "2003"
             }
           ]
         },
@@ -1146,20 +848,21 @@
               "found": true,
               "canonicalTitle": "Yesterday",
               "score": 100,
-              "firstReleaseDate": "1989"
+              "firstReleaseDate": "1998-03"
             },
             {
               "title": "Hey Jude",
               "found": true,
               "canonicalTitle": "Hey Jude",
               "score": 100,
-              "firstReleaseDate": "2009"
+              "firstReleaseDate": "2004"
             },
             {
               "title": "And I love her",
               "found": true,
               "canonicalTitle": "And I Love Her",
-              "score": 100
+              "score": 100,
+              "firstReleaseDate": "2019"
             }
           ]
         },
@@ -1198,7 +901,7 @@
               "found": true,
               "canonicalTitle": "Yesterday",
               "score": 100,
-              "firstReleaseDate": "1995"
+              "firstReleaseDate": "2024-05-29"
             },
             {
               "title": "Hey Jude",
@@ -1211,113 +914,7 @@
               "found": true,
               "canonicalTitle": "And I Love Her",
               "score": 100,
-              "firstReleaseDate": "2019"
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Yesterday",
-          "hits": [
-            {
-              "title": "Yesterday Yesterday",
-              "artists": "Bobby Long",
-              "firstReleaseDate": "2013-02-19",
-              "score": 100
-            },
-            {
-              "title": "Yesterday’s Yesterday",
-              "artists": "Joe Satriani",
-              "firstReleaseDate": "2020-04-10",
-              "score": 100
-            },
-            {
-              "title": "Yesterday Yesterday",
-              "artists": "Donor Lens",
-              "firstReleaseDate": "2025-10-24",
-              "score": 100
-            },
-            {
-              "title": "Yesterday Was Yesterday",
-              "artists": "Ron Benoit",
-              "firstReleaseDate": "2001-06-29",
-              "score": 91
-            },
-            {
-              "title": "Yesterday Was Yesterday",
-              "artists": "Dominoe",
-              "firstReleaseDate": "2008-08-15",
-              "score": 91
-            }
-          ]
-        },
-        {
-          "title": "Hey Jude",
-          "hits": [
-            {
-              "title": "Hey Jude (Hey Jude)",
-              "artists": "Zezé Di Camargo & Luciano",
-              "firstReleaseDate": "2009",
-              "score": 100
-            },
-            {
-              "title": "Hey Jude (Hey Jude)",
-              "artists": "Zezé Di Camargo & Luciano",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "Hey Jude (Hey Jude)",
-              "artists": "The Beatles Revival Band",
-              "firstReleaseDate": "1978",
-              "score": 100
-            },
-            {
-              "title": "Hey Jude (Hey Jude)",
-              "artists": "The Fevers",
-              "firstReleaseDate": "2004",
-              "score": 100
-            },
-            {
-              "title": "Hey Jude",
-              "artists": "Enoch Light",
-              "score": 91
-            }
-          ]
-        },
-        {
-          "title": "And I love her",
-          "hits": [
-            {
-              "title": "And I Love Her",
-              "artists": "The Holmes Brothers",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "And I Love Her",
-              "artists": "Fausto Papetti",
-              "firstReleaseDate": "2004",
-              "score": 100
-            },
-            {
-              "title": "And I Love Her",
-              "artists": "Jacinta",
-              "firstReleaseDate": "2009",
-              "score": 100
-            },
-            {
-              "title": "And I Love Her",
-              "artists": "Ricky King",
-              "firstReleaseDate": "2009-09-11",
-              "score": 100
-            },
-            {
-              "title": "And I Love Her",
-              "artists": "青木カレン",
-              "firstReleaseDate": "2009-11-18",
-              "score": 100
+              "firstReleaseDate": "2008"
             }
           ]
         }
@@ -1445,21 +1042,21 @@
               "title": "For those about to rock",
               "found": true,
               "canonicalTitle": "For Those About to Rock",
-              "score": 100,
-              "firstReleaseDate": "2007-10-16"
+              "score": 100
             },
             {
               "title": "Highway to hell",
               "found": true,
               "canonicalTitle": "Highway to Hell",
               "score": 100,
-              "firstReleaseDate": "2003-11-11"
+              "firstReleaseDate": "2002"
             },
             {
               "title": "Back in black",
               "found": true,
               "canonicalTitle": "Back in Black",
-              "score": 100
+              "score": 100,
+              "firstReleaseDate": "2004"
             }
           ]
         },
@@ -1475,6 +1072,7 @@
             "AcDc Uk",
             "Ac Dc Uk"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "For those about to rock",
@@ -1523,111 +1121,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "For those about to rock",
-          "hits": [
-            {
-              "title": "For Those About to Rock",
-              "artists": "AC/DC",
-              "score": 100
-            },
-            {
-              "title": "For Those About to Rock",
-              "artists": "Wing",
-              "firstReleaseDate": "2007",
-              "score": 100
-            },
-            {
-              "title": "For Those About to Rock",
-              "artists": "The Twang",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "For those about to rock",
-              "artists": "Sweet Little Band",
-              "firstReleaseDate": "2009-02-01",
-              "score": 100
-            },
-            {
-              "title": "For Those About to Rock",
-              "artists": "AC/DC",
-              "firstReleaseDate": "1992",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Highway to hell",
-          "hits": [
-            {
-              "title": "Highway to Hell",
-              "artists": "Hayseed Dixie",
-              "firstReleaseDate": "2001-04-24",
-              "score": 100
-            },
-            {
-              "title": "Highway to Hell",
-              "artists": "AC/DC",
-              "firstReleaseDate": "1991",
-              "score": 100
-            },
-            {
-              "title": "Highway to Hell",
-              "artists": "AC/DC",
-              "firstReleaseDate": "1996",
-              "score": 100
-            },
-            {
-              "title": "Highway to Hell",
-              "artists": "AC/DC",
-              "firstReleaseDate": "1993",
-              "score": 100
-            },
-            {
-              "title": "Highway to Hell",
-              "artists": "AC/DC",
-              "firstReleaseDate": "2001",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Back in black",
-          "hits": [
-            {
-              "title": "Back in Black",
-              "artists": "AC/DC",
-              "score": 100
-            },
-            {
-              "title": "Back in Black",
-              "artists": "Blackhouse",
-              "firstReleaseDate": "1995",
-              "score": 100
-            },
-            {
-              "title": "Back in Black",
-              "artists": "Hayseed Dixie",
-              "firstReleaseDate": "2001-04-24",
-              "score": 100
-            },
-            {
-              "title": "Back in Black",
-              "artists": "The Recliners",
-              "firstReleaseDate": "1998-01-06",
-              "score": 100
-            },
-            {
-              "title": "Back in Black",
-              "artists": "Pigface, Sheep on Drugs",
-              "firstReleaseDate": "1996-10-22",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Ac",
@@ -1653,6 +1146,14 @@
                 "AC?DC",
                 "AC\\DC",
                 "AC DC"
+              ],
+              "titleChecks": [
+                {
+                  "title": "For those about to rock",
+                  "found": true,
+                  "canonicalTitle": "For Those About to Rock",
+                  "score": 100
+                }
               ]
             },
             {
@@ -1667,19 +1168,12 @@
                 "A.C",
                 "A.C.",
                 "AxCx"
-              ]
-            },
-            {
-              "mbid": "778bbd1a-d8a2-4ef8-a0ef-6ab234f4ce61",
-              "name": "AC",
-              "score": 79,
-              "type": "Person",
-              "began": "1996-03-04",
-              "aliases": [
-                "Anthony Carroll",
-                "A.C",
-                "A.C.",
-                "AceTheGreat"
+              ],
+              "titleChecks": [
+                {
+                  "title": "For those about to rock",
+                  "found": false
+                }
               ]
             }
           ]
@@ -1708,6 +1202,14 @@
                 "AC?DC",
                 "AC\\DC",
                 "AC DC"
+              ],
+              "titleChecks": [
+                {
+                  "title": "For those about to rock",
+                  "found": true,
+                  "canonicalTitle": "For Those About to Rock",
+                  "score": 100
+                }
               ]
             },
             {
@@ -1720,15 +1222,13 @@
               "aliases": [
                 "DC Talk",
                 "dcTalk"
+              ],
+              "titleChecks": [
+                {
+                  "title": "For those about to rock",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "fd87acc7-e0a0-4a45-bc2a-d2ab5c10be68",
-              "name": "Fontaines D.C.",
-              "score": 77,
-              "type": "Group",
-              "country": "IE",
-              "began": "2014"
             }
           ]
         }
@@ -1765,7 +1265,7 @@
               "found": true,
               "canonicalTitle": "Need You Tonight",
               "score": 100,
-              "firstReleaseDate": "2005"
+              "firstReleaseDate": "1994"
             }
           ]
         },
@@ -1785,47 +1285,11 @@
           "name": "INXS Xperience",
           "score": 68,
           "disambiguation": "European tribute to Inxs",
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Need you tonight",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Need you tonight",
-          "hits": [
-            {
-              "title": "Need You Tonight",
-              "artists": "Lostprophets",
-              "firstReleaseDate": "2002-03-11",
-              "score": 100
-            },
-            {
-              "title": "Need You Tonight",
-              "artists": "Husky",
-              "firstReleaseDate": "2012-10-12",
-              "score": 100
-            },
-            {
-              "title": "Need You Tonight",
-              "artists": "SW14",
-              "firstReleaseDate": "2012",
-              "score": 100
-            },
-            {
-              "title": "Need You Tonight",
-              "artists": "Telafonica",
-              "firstReleaseDate": "2011-02-14",
-              "score": 100
-            },
-            {
-              "title": "Need You Tonight",
-              "artists": "Drøbak Blues Band",
-              "firstReleaseDate": "2002",
-              "score": 100
             }
           ]
         }
@@ -1918,21 +1382,21 @@
               "found": true,
               "canonicalTitle": "Rock and Roll All Nite",
               "score": 100,
-              "firstReleaseDate": "1996-03-02"
+              "firstReleaseDate": "2003-07-22"
             },
             {
               "title": "I was made for lovin' you",
               "found": true,
               "canonicalTitle": "I Was Made for Lovin’ You",
               "score": 100,
-              "firstReleaseDate": "2004-06-11"
+              "firstReleaseDate": "2008-05-27"
             },
             {
               "title": "Detroit rock city",
               "found": true,
               "canonicalTitle": "Detroit Rock City",
               "score": 100,
-              "firstReleaseDate": "1997"
+              "firstReleaseDate": "1989"
             }
           ]
         },
@@ -1978,110 +1442,6 @@
             {
               "title": "Detroit rock city",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Rock and roll all nite",
-          "hits": [
-            {
-              "title": "Rock and Roll All Nite",
-              "artists": "KISS",
-              "firstReleaseDate": "1996-03-02",
-              "score": 100
-            },
-            {
-              "title": "Rock and Roll All Nite",
-              "artists": "SKAndalous All-Stars",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "Rock and Roll All Nite",
-              "artists": "Getaway Car",
-              "score": 100
-            },
-            {
-              "title": "Rock and Roll All Nite",
-              "artists": "Toad the Wet Sprocket",
-              "firstReleaseDate": "1994-06-07",
-              "score": 100
-            },
-            {
-              "title": "Rock and Roll All Nite",
-              "artists": "KISS",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "I was made for lovin' you",
-          "hits": [
-            {
-              "title": "I Was Made for Lovin’ You",
-              "artists": "KISS",
-              "firstReleaseDate": "2008-05-27",
-              "score": 100
-            },
-            {
-              "title": "I Was Made for Lovin’ You",
-              "artists": "野宮真貴, Dimitri From Paris",
-              "firstReleaseDate": "1998-02-25",
-              "score": 100
-            },
-            {
-              "title": "I Was Made for Lovin’ You",
-              "artists": "KISS",
-              "firstReleaseDate": "2010-06-24",
-              "score": 100
-            },
-            {
-              "title": "I Was Made For Lovin' You",
-              "artists": "Gebroeders Ko",
-              "firstReleaseDate": "2008",
-              "score": 100
-            },
-            {
-              "title": "I Was Made for Lovin’ You",
-              "artists": "KISS",
-              "firstReleaseDate": "2010-02-28",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Detroit rock city",
-          "hits": [
-            {
-              "title": "Detroit Rock City",
-              "artists": "KISS",
-              "firstReleaseDate": "1988-11-14",
-              "score": 100
-            },
-            {
-              "title": "Detroit Rock City",
-              "artists": "KISS",
-              "firstReleaseDate": "1993-03-18",
-              "score": 100
-            },
-            {
-              "title": "Detroit Rock City",
-              "artists": "KISS",
-              "firstReleaseDate": "1986-11-01",
-              "score": 100
-            },
-            {
-              "title": "Detroit Rock City",
-              "artists": "KISS",
-              "firstReleaseDate": "2004-06-11",
-              "score": 100
-            },
-            {
-              "title": "Detroit Rock City",
-              "artists": "KISS",
-              "score": 100
             }
           ]
         }
@@ -2141,7 +1501,7 @@
               "found": true,
               "canonicalTitle": "Dream a Little Dream of Me",
               "score": 100,
-              "firstReleaseDate": "1995"
+              "firstReleaseDate": "1988"
             }
           ]
         },
@@ -2186,76 +1546,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "California dreaming",
-          "hits": [
-            {
-              "title": "California Dreaming",
-              "artists": "José Feliciano",
-              "firstReleaseDate": "2001-04-26",
-              "score": 100
-            },
-            {
-              "title": "California Dreaming",
-              "artists": "Bobby Womack",
-              "firstReleaseDate": "1970",
-              "score": 100
-            },
-            {
-              "title": "California Dreaming",
-              "artists": "Svatý Pluk",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "California Dreaming",
-              "artists": "Novika",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "California Dreaming",
-              "artists": "Gee Gee & Soluna",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Dream a little dream of me",
-          "hits": [
-            {
-              "title": "Dream a Little Dream of Me",
-              "artists": "Karen Akers",
-              "firstReleaseDate": "1991-06",
-              "score": 100
-            },
-            {
-              "title": "Dream a Little Dream of Me",
-              "artists": "Kate Ceberano, The Moovin' & Groovin' Orchestra",
-              "firstReleaseDate": "1995-10-23",
-              "score": 100
-            },
-            {
-              "title": "Dream a Little Dream of Me",
-              "artists": "Henry Mancini",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Dream a Little Dream of Me",
-              "artists": "Louis Armstrong",
-              "score": 100
-            },
-            {
-              "title": "Dream a Little Dream of Me",
-              "artists": "Louis Armstrong, Ella Fitzgerald, Sy Oliver’s Orchestra",
-              "firstReleaseDate": "1993",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Mamas",
@@ -2266,12 +1556,18 @@
               "score": 100,
               "type": "Group",
               "disambiguation": "London based soul/ funk band",
-              "country": "GB"
+              "country": "GB",
+              "titleChecks": [
+                {
+                  "title": "California dreaming",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "ff294730-0315-440d-a543-54005779c15b",
               "name": "The Mamas & the Papas",
-              "score": 98,
+              "score": 97,
               "type": "Group",
               "disambiguation": "American folk rock vocal group",
               "country": "US",
@@ -2290,17 +1586,15 @@
                 "Mammas & Pappas",
                 "Mamas & Papas",
                 "Mamas and Papas"
-              ]
-            },
-            {
-              "mbid": "4c31f622-ed51-4c34-82e0-130f2ef1aaa5",
-              "name": "Mama’s Boys",
-              "score": 97,
-              "type": "Group",
-              "country": "GB",
-              "began": "1980",
-              "aliases": [
-                "Mamas Boys"
+              ],
+              "titleChecks": [
+                {
+                  "title": "California dreaming",
+                  "found": true,
+                  "canonicalTitle": "California Dreaming",
+                  "score": 100,
+                  "firstReleaseDate": "2011"
+                }
               ]
             }
           ]
@@ -2330,6 +1624,15 @@
                 "Mammas & Pappas",
                 "Mamas & Papas",
                 "Mamas and Papas"
+              ],
+              "titleChecks": [
+                {
+                  "title": "California dreaming",
+                  "found": true,
+                  "canonicalTitle": "California Dreaming",
+                  "score": 100,
+                  "firstReleaseDate": "2011"
+                }
               ]
             },
             {
@@ -2338,18 +1641,12 @@
               "score": 75,
               "type": "Group",
               "country": "US",
-              "began": "1982"
-            },
-            {
-              "mbid": "1333db0b-41d1-42fa-8e7e-526b4cc70d64",
-              "name": "John Phillips",
-              "score": 67,
-              "type": "Person",
-              "disambiguation": "The Mamas & The Papas",
-              "country": "US",
-              "began": "1935-08-30",
-              "aliases": [
-                "John Edmund Andrew Phillips"
+              "began": "1982",
+              "titleChecks": [
+                {
+                  "title": "California dreaming",
+                  "found": false
+                }
               ]
             }
           ]
@@ -2392,14 +1689,14 @@
               "found": true,
               "canonicalTitle": "Ant Music",
               "score": 100,
-              "firstReleaseDate": "1981"
+              "firstReleaseDate": "2000"
             },
             {
               "title": "Kings of the wild frontier",
               "found": true,
               "canonicalTitle": "Kings of the Wild Frontier",
               "score": 100,
-              "firstReleaseDate": "2017"
+              "firstReleaseDate": "2006"
             }
           ]
         },
@@ -2444,77 +1741,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Ant music",
-          "hits": [
-            {
-              "title": "Ant Music",
-              "artists": "Adam and the Ants",
-              "firstReleaseDate": "1981",
-              "score": 100
-            },
-            {
-              "title": "Ant Music",
-              "artists": "Hyper, Leeroy Thornhill",
-              "firstReleaseDate": "2006-05-08",
-              "score": 100
-            },
-            {
-              "title": "Ant Music",
-              "artists": "Hyper, Leeroy Thornhill",
-              "firstReleaseDate": "2006-05-08",
-              "score": 100
-            },
-            {
-              "title": "Ant Music",
-              "artists": "Adam and the Ants",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "Ant Music",
-              "artists": "Adam and the Ants",
-              "firstReleaseDate": "2001",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Kings of the wild frontier",
-          "hits": [
-            {
-              "title": "Kings of the Wild Frontier",
-              "artists": "Adam and the Ants",
-              "firstReleaseDate": "2017",
-              "score": 100
-            },
-            {
-              "title": "Kings of the Wild Frontier",
-              "artists": "Adam Ant",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Kings of the Wild Frontier",
-              "artists": "Howl in the Typewriter",
-              "firstReleaseDate": "2021-10-01",
-              "score": 100
-            },
-            {
-              "title": "Kings of the Wild Frontier",
-              "artists": "Adam Ant",
-              "score": 100
-            },
-            {
-              "title": "Kings of the Wild Frontier",
-              "artists": "Adam and the Ants",
-              "firstReleaseDate": "2006",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Adam",
@@ -2525,7 +1751,13 @@
               "score": 100,
               "type": "Person",
               "disambiguation": "UK guitarist",
-              "country": "GB"
+              "country": "GB",
+              "titleChecks": [
+                {
+                  "title": "Ant music",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "ece590a3-ae0e-4311-bcf3-ee07cfb7b4f0",
@@ -2544,13 +1776,13 @@
                 "アダン",
                 "A.Adams",
                 "A. Adam"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Ant music",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "ca8dd3bd-401f-454d-a9fc-e3dfa39db67e",
-              "name": "Adam Routh",
-              "score": 98,
-              "type": "Person"
             }
           ]
         },
@@ -2568,6 +1800,15 @@
               "aliases": [
                 "Adam and the Ants",
                 "Adam & the Ants"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Ant music",
+                  "found": true,
+                  "canonicalTitle": "Ant Music",
+                  "score": 100,
+                  "firstReleaseDate": "2000"
+                }
               ]
             },
             {
@@ -2577,14 +1818,13 @@
               "type": "Group",
               "disambiguation": "indie rock",
               "country": "US",
-              "began": "2001"
-            },
-            {
-              "mbid": "1e0913af-f939-499b-a738-3d994e8c6f0a",
-              "name": "The Ants",
-              "score": 97,
-              "disambiguation": "Myanmar punk",
-              "country": "MM"
+              "began": "2001",
+              "titleChecks": [
+                {
+                  "title": "Ant music",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -2626,7 +1866,7 @@
               "found": true,
               "canonicalTitle": "I Am a Rock",
               "score": 100,
-              "firstReleaseDate": "2024-08-21"
+              "firstReleaseDate": "1997-08-28"
             }
           ]
         },
@@ -2659,42 +1899,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "I am a rock",
-          "hits": [
-            {
-              "title": "I Am a Rock",
-              "artists": "Eternal Flesh",
-              "firstReleaseDate": "1993",
-              "score": 100
-            },
-            {
-              "title": "I Am a Rock",
-              "artists": "London Synphonic Orchestra",
-              "firstReleaseDate": "1995-09-26",
-              "score": 100
-            },
-            {
-              "title": "I AM A ROCK",
-              "artists": "Simon & Garfunkel Tribute",
-              "score": 100
-            },
-            {
-              "title": "I Am A Rock",
-              "artists": "The Apostles",
-              "firstReleaseDate": "1983",
-              "score": 100
-            },
-            {
-              "title": "I Am a Rock",
-              "artists": "Buck Owens, His Buckaroos",
-              "firstReleaseDate": "1971",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Simon",
@@ -2706,7 +1910,13 @@
               "type": "Person",
               "disambiguation": "German voice actor",
               "country": "DE",
-              "began": "1972-03-16"
+              "began": "1972-03-16",
+              "titleChecks": [
+                {
+                  "title": "I am a rock",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "c4df30f5-5487-4806-9189-b69c9f27532c",
@@ -2717,21 +1927,12 @@
               "began": "1943-06-25",
               "aliases": [
                 "Carly Elisabeth Simon"
-              ]
-            },
-            {
-              "mbid": "05517043-ff78-4988-9c22-88c68588ebb9",
-              "name": "Paul Simon",
-              "score": 92,
-              "type": "Person",
-              "disambiguation": "of Simon & Garfunkel",
-              "country": "US",
-              "began": "1941-10-13",
-              "aliases": [
-                "Paul Simon",
-                "Paul Kane",
-                "ポール・サイモン",
-                "Paul Frederic Simon"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I am a rock",
+                  "found": false
+                }
               ]
             }
           ]
@@ -2755,6 +1956,15 @@
                 "Paul Simon and Art Garfunkle",
                 "Simon and Garfunkel",
                 "Paul Simon and Art Garfunkel"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I am a rock",
+                  "found": true,
+                  "canonicalTitle": "I Am a Rock",
+                  "score": 100,
+                  "firstReleaseDate": "1997-08-28"
+                }
               ]
             },
             {
@@ -2770,13 +1980,13 @@
                 "アート ガーファンクル",
                 "Garfunkel Art",
                 "Arthur Ira Garfunkel"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I am a rock",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "f7e39239-6a13-4e0a-9872-f2f566dbc587",
-              "name": "James Garfunkel",
-              "score": 79,
-              "type": "Person"
             }
           ]
         }
@@ -2836,14 +2046,14 @@
               "found": true,
               "canonicalTitle": "I’m Your Boogie Man",
               "score": 100,
-              "firstReleaseDate": "2004-09-03"
+              "firstReleaseDate": "1977"
             },
             {
               "title": "Please don't go",
               "found": true,
               "canonicalTitle": "Please Don’t Go",
               "score": 100,
-              "firstReleaseDate": "2004"
+              "firstReleaseDate": "1994-12"
             }
           ]
         },
@@ -2902,112 +2112,8 @@
               "found": true,
               "canonicalTitle": "Baby Please Don’t Go",
               "score": 100,
-              "firstReleaseDate": "1977-04-22"
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "That's the way I like it",
-          "hits": [
-            {
-              "title": "That's the Way I Like It",
-              "artists": "Poison",
-              "firstReleaseDate": "2000-01-01",
-              "score": 100
-            },
-            {
-              "title": "That's the Way (I Like It)",
-              "artists": "KC and the Sunshine Band",
-              "firstReleaseDate": "1998-09-15",
-              "score": 100
-            },
-            {
-              "title": "That’s the Way I Like It",
-              "artists": "The Hit Crew",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "That's the Way (I Like It)",
-              "artists": "Look Twice",
-              "firstReleaseDate": "1995-02-24",
-              "score": 100
-            },
-            {
-              "title": "That’s the Way (I Like It)",
-              "artists": "Clock",
-              "firstReleaseDate": "1998",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "I'm your boogie man",
-          "hits": [
-            {
-              "title": "I’m Your Boogie Man",
-              "artists": "KC and the Sunshine Band",
-              "firstReleaseDate": "1977",
-              "score": 100
-            },
-            {
-              "title": "I’m Your Boogie Man",
-              "artists": "KC and the Sunshine Band",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "I’m Your Boogie Man",
-              "artists": "Boogie Knights",
-              "firstReleaseDate": "1997-01-01",
-              "score": 100
-            },
-            {
-              "title": "I’m Your Boogie Man",
-              "artists": "Goree Carter",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "I'm Your Boogie Man",
-              "artists": "Ken Tamplin",
-              "firstReleaseDate": "2012-07-31",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Please don't go",
-          "hits": [
-            {
-              "title": "Please Don't Go",
-              "artists": "Rydia",
-              "score": 100
-            },
-            {
-              "title": "Please Don't Go",
-              "artists": "Mehrzad Marashi",
-              "firstReleaseDate": "2010-06-11",
-              "score": 100
-            },
-            {
-              "title": "Please Don’t Go",
-              "artists": "Mike Posner",
-              "score": 100
-            },
-            {
-              "title": "Please Don't Go",
-              "artists": "Touch of Joy",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "Please Don't Go",
-              "artists": "Family Fun",
-              "firstReleaseDate": "1981",
-              "score": 100
+              "firstReleaseDate": "1977-04-22",
+              "looseMatch": true
             }
           ]
         }
@@ -3026,6 +2132,12 @@
               "began": "1988-01-26",
               "aliases": [
                 "Hüseyin Kökseçen"
+              ],
+              "titleChecks": [
+                {
+                  "title": "That's the way I like it",
+                  "found": false
+                }
               ]
             },
             {
@@ -3037,17 +2149,12 @@
               "country": "NL",
               "aliases": [
                 "Kees Koenders"
-              ]
-            },
-            {
-              "mbid": "7d02fca6-e7ac-4a87-83fd-ad2cab8a0a6e",
-              "name": "KC",
-              "score": 98,
-              "type": "Person",
-              "disambiguation": "Harry Wayne Casey of the Sunshine Band",
-              "aliases": [
-                "K.C.",
-                "Harry Wayne Casey"
+              ],
+              "titleChecks": [
+                {
+                  "title": "That's the way I like it",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3072,19 +2179,28 @@
                 "K.C. and the Sunshine Band",
                 "K.C. & the Sunshine Band",
                 "KC, the Sunshine Band"
+              ],
+              "titleChecks": [
+                {
+                  "title": "That's the way I like it",
+                  "found": true,
+                  "canonicalTitle": "That's the Way (I Like It)",
+                  "score": 100,
+                  "firstReleaseDate": "1989"
+                }
               ]
             },
             {
               "mbid": "de2bc177-e2fa-4b1f-97c7-d3924c9440b7",
               "name": "Sand & The Sunshine Band",
               "score": 70,
-              "type": "Group"
-            },
-            {
-              "mbid": "0e4ce321-93ec-4920-b3b1-476e511c701a",
-              "name": "Gary Man & The Sunshine Band",
-              "score": 64,
-              "type": "Group"
+              "type": "Group",
+              "titleChecks": [
+                {
+                  "title": "That's the way I like it",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -3172,43 +2288,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Young folks",
-          "hits": [
-            {
-              "title": "Young Folks",
-              "artists": "Peter Bjorn and John",
-              "firstReleaseDate": "2010",
-              "score": 100
-            },
-            {
-              "title": "Young Folks",
-              "artists": "Peter Bjorn and John",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "Young Folks",
-              "artists": "The Kooks",
-              "firstReleaseDate": "2008-02-27",
-              "score": 100
-            },
-            {
-              "title": "Young Folks",
-              "artists": "Peter Bjorn and John, Victoria Bergsman",
-              "firstReleaseDate": "2010-05-17",
-              "score": 100
-            },
-            {
-              "title": "young folks",
-              "artists": "Weirddough",
-              "firstReleaseDate": "2016-09-01",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Peter",
@@ -3227,6 +2306,12 @@
                 "Peter Gabriel / Me",
                 "Peter Grabriel",
                 "Gabriel, Peter"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             },
             {
@@ -3241,18 +2326,12 @@
                 "Alexander Neuenhauser",
                 "Peter Alexander Ferdinand Maximilian Neumayer",
                 "Peter Alexander Neumayer"
-              ]
-            },
-            {
-              "mbid": "b4ce8f8f-72f9-48f0-92be-606095d4b6e0",
-              "name": "Peter Maffay",
-              "score": 94,
-              "type": "Person",
-              "country": "DE",
-              "began": "1949-08-30",
-              "aliases": [
-                "Peter",
-                "Peter Alexander Makkay"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3274,6 +2353,12 @@
                 "Bjorn Ulvaeus",
                 "Björn Kristian Ulvaeus",
                 "Bjoern K. K. Ulvaeus"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             },
             {
@@ -3287,25 +2372,12 @@
               "aliases": [
                 "Bjørn Afzelius",
                 "Bjôrn Afzelius"
-              ]
-            },
-            {
-              "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
-              "name": "ABBA",
-              "score": 97,
-              "type": "Group",
-              "disambiguation": "Swedish pop group",
-              "country": "SE",
-              "began": "1972-09",
-              "aliases": [
-                "아바",
-                "Björn Benny & Agnetha Frida",
-                "Björn + Benny + Anna + Frieda",
-                "АББА",
-                "Björn Benny Agnetha & Anni-Frid",
-                "Abba",
-                "ᗅᗺᗷᗅ",
-                "アバ"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3338,6 +2410,12 @@
                 "John Towner Williams",
                 "Towner Williams",
                 "John Williems"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             },
             {
@@ -3364,40 +2442,12 @@
                 "Elton Jphn",
                 "Sir Elton Hercules John",
                 "John Elton"
-              ]
-            },
-            {
-              "mbid": "4d5447d7-c61c-4120-ba1b-d7f471d385b9",
-              "name": "John Lennon",
-              "score": 97,
-              "type": "Person",
-              "disambiguation": "The Beatles",
-              "country": "GB",
-              "began": "1940-10-09",
-              "aliases": [
-                "Winston Leg-Thigh",
-                "John Winston Lennon",
-                "Джон Леннон",
-                "Dž.Lenons",
-                "Booker Table and The Maitre D's",
-                "Lennon",
-                "Джон",
-                "Mel Torment",
-                "Dwarf McDougal",
-                "J. Lennon",
-                "Dad",
-                "John Winston Ono Lennon",
-                "Dr. Dream",
-                "John O'Cean",
-                "Hon. John St. John Johnson",
-                "Dr. Winston O'Boogie",
-                "Lhennj Ono",
-                "Joel Nohnn",
-                "Kaptain Kundalini",
-                "Rev. Fred Ghurkin",
-                "Musketeer Gripweed & The Third Troop",
-                "ジョン・レノン",
-                "John Lennon"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Young folks",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3441,14 +2491,14 @@
               "found": true,
               "canonicalTitle": "Puff (The Magic Dragon)",
               "score": 100,
-              "firstReleaseDate": "1995"
+              "firstReleaseDate": "1993"
             },
             {
               "title": "Leaving on a jet plane",
               "found": true,
-              "canonicalTitle": "Leaving On A Jet Plane",
+              "canonicalTitle": "Leaving on a Jet Plane",
               "score": 100,
-              "firstReleaseDate": "2011-07-26"
+              "firstReleaseDate": "2010"
             }
           ]
         },
@@ -3498,77 +2548,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Puff the magic dragon",
-          "hits": [
-            {
-              "title": "Puff (The Magic Dragon)",
-              "artists": "The Chipmunks",
-              "firstReleaseDate": "1965-01-01",
-              "score": 100
-            },
-            {
-              "title": "Puff the magic dragon",
-              "artists": "SUPER JUNIOR",
-              "firstReleaseDate": "2009-12-10",
-              "score": 100
-            },
-            {
-              "title": "Puff the Magic Dragon",
-              "artists": "Neva Eder",
-              "firstReleaseDate": "2012",
-              "score": 100
-            },
-            {
-              "title": "Puff the Magic Dragon",
-              "artists": "The Teddybears",
-              "firstReleaseDate": "2008-03-10",
-              "score": 100
-            },
-            {
-              "title": "Puff the Magic Dragon",
-              "artists": "The Teddybears",
-              "firstReleaseDate": "2008-03-10",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Leaving on a jet plane",
-          "hits": [
-            {
-              "title": "Leaving on a Jet Plane",
-              "artists": "Tarnation, Joe Gore",
-              "firstReleaseDate": "2000-04-18",
-              "score": 100
-            },
-            {
-              "title": "Leaving on a Jet Plane",
-              "artists": "Bobby Bare",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Leaving on a Jet Plane",
-              "artists": "Drivin' N' Cryin'",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "Leaving on a Jet Plane",
-              "artists": "C. L. DelMastro",
-              "score": 100
-            },
-            {
-              "title": "Leaving on a Jet Plane",
-              "artists": "Anne E. DeChant",
-              "firstReleaseDate": "2001-12-08",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Peter",
@@ -3587,6 +2566,12 @@
                 "Peter Gabriel / Me",
                 "Peter Grabriel",
                 "Gabriel, Peter"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": false
+                }
               ]
             },
             {
@@ -3601,18 +2586,12 @@
                 "Alexander Neuenhauser",
                 "Peter Alexander Ferdinand Maximilian Neumayer",
                 "Peter Alexander Neumayer"
-              ]
-            },
-            {
-              "mbid": "b4ce8f8f-72f9-48f0-92be-606095d4b6e0",
-              "name": "Peter Maffay",
-              "score": 94,
-              "type": "Person",
-              "country": "DE",
-              "began": "1949-08-30",
-              "aliases": [
-                "Peter",
-                "Peter Alexander Makkay"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3648,6 +2627,12 @@
                 "Sir James Paul McCartney",
                 "Paul McCartney",
                 "James Paul McCartney"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": false
+                }
               ]
             },
             {
@@ -3662,22 +2647,12 @@
                 "Paul Birol Dinletir",
                 "P Dinletir",
                 "Paul Dinletir"
-              ]
-            },
-            {
-              "mbid": "87496c04-c857-4bd5-b86b-345129a1be63",
-              "name": "Paul Mauriat",
-              "score": 93,
-              "type": "Person",
-              "country": "FR",
-              "began": "1925-03-04",
-              "aliases": [
-                "Paul Mauria",
-                "Paul Maurial",
-                "Paul Mauriat Plus",
-                "Mauriat",
-                "Del Roma",
-                "Поль Мориа"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": false
+                }
               ]
             }
           ]
@@ -3695,6 +2670,12 @@
               "began": "1998",
               "aliases": [
                 "MaryMary"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": false
+                }
               ]
             },
             {
@@ -3712,18 +2693,16 @@
                 "Marry Roos",
                 "Rosi",
                 "Topsi"
-              ]
-            },
-            {
-              "mbid": "43fe7a49-2a63-48f1-871c-12450d21eeb1",
-              "name": "Mary Wells",
-              "score": 96,
-              "type": "Person",
-              "disambiguation": "Motown singer",
-              "country": "US",
-              "began": "1943-05-13",
-              "aliases": [
-                "May Wells"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Puff the magic dragon",
+                  "found": true,
+                  "canonicalTitle": "Paff Der Zauberdrachen (Puff, The Magic Dragon)",
+                  "score": 100,
+                  "firstReleaseDate": "2001",
+                  "looseMatch": true
+                }
               ]
             }
           ]
@@ -3770,14 +2749,14 @@
               "found": true,
               "canonicalTitle": "Karn Evil 9",
               "score": 100,
-              "firstReleaseDate": "2007-09-10"
+              "firstReleaseDate": "2020-01-17"
             },
             {
               "title": "From the beginning",
               "found": true,
               "canonicalTitle": "From the Beginning",
               "score": 100,
-              "firstReleaseDate": "1998-11-02"
+              "firstReleaseDate": "1997"
             }
           ]
         },
@@ -3788,6 +2767,7 @@
           "type": "Group",
           "disambiguation": "New York based tribute band to ELP",
           "began": "2017",
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Karn evil #9",
@@ -3806,6 +2786,7 @@
           "type": "Group",
           "disambiguation": "Emerson Lake and Palmer Tribute",
           "country": "IT",
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Karn evil #9",
@@ -3814,76 +2795,6 @@
             {
               "title": "From the beginning",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Karn evil #9",
-          "hits": [
-            {
-              "title": "Karn Evil 9",
-              "artists": "Emerson, Lake & Palmer",
-              "score": 100
-            },
-            {
-              "title": "Karn Evil 9",
-              "artists": "Emerson, Lake & Palmer",
-              "firstReleaseDate": "1988",
-              "score": 100
-            },
-            {
-              "title": "Karn Evil 9",
-              "artists": "Emerson, Lake & Palmer",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Karn Evil 9",
-              "artists": "Emerson, Lake & Palmer",
-              "firstReleaseDate": "1998",
-              "score": 100
-            },
-            {
-              "title": "Karn Evil 9",
-              "artists": "WVU Mountaineer Marching Band",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "From the beginning",
-          "hits": [
-            {
-              "title": "From the Beginning",
-              "artists": "Margie Adam",
-              "firstReleaseDate": "1980",
-              "score": 100
-            },
-            {
-              "title": "From the Beginning",
-              "artists": "Ghost",
-              "firstReleaseDate": "2009-06-15",
-              "score": 100
-            },
-            {
-              "title": "From the Beginning",
-              "artists": "La Cantina, Boztown",
-              "firstReleaseDate": "2022-09-23",
-              "score": 100
-            },
-            {
-              "title": "From the Beginning",
-              "artists": "The Bluesmasters",
-              "firstReleaseDate": "2021-07-09",
-              "score": 100
-            },
-            {
-              "title": "From the Beginning",
-              "artists": "Adriano Arena",
-              "firstReleaseDate": "2018-12-01",
-              "score": 100
             }
           ]
         }
@@ -3901,6 +2812,12 @@
               "began": "1944-11-02",
               "aliases": [
                 "Emerson"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": false
+                }
               ]
             },
             {
@@ -3918,18 +2835,15 @@
                 "Emerson, Lake, & Palmer",
                 "Emerson Lake & Palmer",
                 "Emmerson, Lake & Palmer"
-              ]
-            },
-            {
-              "mbid": "d9aed7fc-db89-4e8b-b839-ec03b9c4c85d",
-              "name": "Jared Emerson-Johnson",
-              "score": 93,
-              "type": "Person",
-              "disambiguation": "US video game composer and voice actor",
-              "country": "US",
-              "began": "1981-10-13",
-              "aliases": [
-                "Jared Nathaniel Emerson-Johnson"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": true,
+                  "canonicalTitle": "Karn Evil 9",
+                  "score": 100,
+                  "firstReleaseDate": "2020-01-17"
+                }
               ]
             }
           ]
@@ -3952,6 +2866,15 @@
                 "Emerson, Lake, & Palmer",
                 "Emerson Lake & Palmer",
                 "Emmerson, Lake & Palmer"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": true,
+                  "canonicalTitle": "Karn Evil 9",
+                  "score": 100,
+                  "firstReleaseDate": "2020-01-17"
+                }
               ]
             },
             {
@@ -3966,16 +2889,13 @@
                 "Christopher Lake",
                 "Chis Lake",
                 "Christopher Daniel Lake"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "9047f806-7a49-44f4-975d-fadca298cc18",
-              "name": "Lake",
-              "score": 95,
-              "type": "Group",
-              "disambiguation": "70s/80s German rock band",
-              "country": "DE",
-              "began": "1973"
             }
           ]
         },
@@ -3994,6 +2914,12 @@
                 "Robert Allen Palmer",
                 "Palmer, Robert",
                 "Robert Plamer"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": false
+                }
               ]
             },
             {
@@ -4011,20 +2937,15 @@
                 "Emerson, Lake, & Palmer",
                 "Emerson Lake & Palmer",
                 "Emmerson, Lake & Palmer"
-              ]
-            },
-            {
-              "mbid": "3c0eb318-d2ba-45aa-9077-b83746cc56da",
-              "name": "Amanda Palmer",
-              "score": 93,
-              "type": "Person",
-              "country": "US",
-              "began": "1976-04-30",
-              "aliases": [
-                "Amanda MacKinnon Palmer",
-                "Amanda Fucking Palmer",
-                "Amanda MacKinnon Gaiman Palmer",
-                "AFP"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Karn evil #9",
+                  "found": true,
+                  "canonicalTitle": "Karn Evil 9",
+                  "score": 100,
+                  "firstReleaseDate": "2020-01-17"
+                }
               ]
             }
           ]
@@ -4068,7 +2989,7 @@
               "found": true,
               "canonicalTitle": "What the Water Gave Me",
               "score": 100,
-              "firstReleaseDate": "2012-04-05"
+              "firstReleaseDate": "2011-08-23"
             },
             {
               "title": "Shake It Out",
@@ -4107,7 +3028,7 @@
         {
           "mbid": "5193ce6b-a315-4c50-ae49-54e69ffbc988",
           "name": "Soft Machine",
-          "score": 51,
+          "score": 52,
           "type": "Group",
           "disambiguation": "British rock band",
           "country": "GB",
@@ -4128,78 +3049,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "What The Water Gave Me",
-          "hits": [
-            {
-              "title": "What the Water Gave Me",
-              "artists": "cub",
-              "firstReleaseDate": "1992-10-16",
-              "score": 100
-            },
-            {
-              "title": "What the Water Gave Me",
-              "artists": "Quiet Company",
-              "firstReleaseDate": "2014-05-06",
-              "score": 100
-            },
-            {
-              "title": "What the Water Gave Me",
-              "artists": "Florence + the Machine",
-              "firstReleaseDate": "2012-04-10",
-              "score": 100
-            },
-            {
-              "title": "What the Water Gave Me",
-              "artists": "The SoCal VoCals",
-              "firstReleaseDate": "2013",
-              "score": 100
-            },
-            {
-              "title": "What the Water Gave Me",
-              "artists": "Come the Dawn",
-              "firstReleaseDate": "2014-05-13",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Shake It Out",
-          "hits": [
-            {
-              "title": "Shake It Out",
-              "artists": "Manchester Orchestra",
-              "firstReleaseDate": "2021-04-16",
-              "score": 100
-            },
-            {
-              "title": "Shake It Out",
-              "artists": "Glee Cast",
-              "firstReleaseDate": "2012-05-01",
-              "score": 100
-            },
-            {
-              "title": "Shake It Out",
-              "artists": "Florence + the Machine",
-              "firstReleaseDate": "2011-12-26",
-              "score": 100
-            },
-            {
-              "title": "Shake It Out",
-              "artists": "Florence + the Machine",
-              "firstReleaseDate": "2012",
-              "score": 100
-            },
-            {
-              "title": "Shake It Out",
-              "artists": "Starpoint",
-              "firstReleaseDate": "1981",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Florence",
@@ -4216,6 +3065,15 @@
                 "Florence and the Machine",
                 "Florence & the Machine",
                 "フローレンス・アンド・ザ・マシーン"
+              ],
+              "titleChecks": [
+                {
+                  "title": "What The Water Gave Me",
+                  "found": true,
+                  "canonicalTitle": "What the Water Gave Me",
+                  "score": 100,
+                  "firstReleaseDate": "2011-08-23"
+                }
               ]
             },
             {
@@ -4225,15 +3083,13 @@
               "type": "Person",
               "disambiguation": "Dutch techno DJ/producer Stefan Robbers",
               "country": "NL",
-              "began": "1968-02-23"
-            },
-            {
-              "mbid": "745f30fa-e9f5-4b02-b7dd-08a5093d7f10",
-              "name": "FLORENCE",
-              "score": 96,
-              "type": "Person",
-              "disambiguation": "Japanese artist",
-              "country": "JP"
+              "began": "1968-02-23",
+              "titleChecks": [
+                {
+                  "title": "What The Water Gave Me",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -4244,7 +3100,13 @@
               "mbid": "a4be8dd4-a4bc-4a0c-b4c0-d255e4c4764c",
               "name": "The Machine",
               "score": 100,
-              "disambiguation": "alias of Tewi Inaba"
+              "disambiguation": "alias of Tewi Inaba",
+              "titleChecks": [
+                {
+                  "title": "What The Water Gave Me",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "0585df2c-f905-45e7-b772-0f3057bcf3d9",
@@ -4253,18 +3115,12 @@
               "type": "Group",
               "disambiguation": "stoner rock band from Netherlands, founded 2006",
               "country": "NL",
-              "began": "2006-09-01"
-            },
-            {
-              "mbid": "f3de4447-1e03-498d-a1ce-68a75b3cd101",
-              "name": "The Machine",
-              "score": 97,
-              "type": "Person",
-              "disambiguation": "Lithuanian hardstyle DJ Ramunas Vabolis",
-              "country": "LT",
-              "began": "1988-10-24",
-              "aliases": [
-                "Th3 M4ch1n3"
+              "began": "2006-09-01",
+              "titleChecks": [
+                {
+                  "title": "What The Water Gave Me",
+                  "found": false
+                }
               ]
             }
           ]
@@ -4312,8 +3168,7 @@
               "title": "Lady Marmalade",
               "found": true,
               "canonicalTitle": "Lady Marmalade",
-              "score": 100,
-              "firstReleaseDate": "2004-11-15"
+              "score": 100
             }
           ]
         },
@@ -4363,41 +3218,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Lady Marmalade",
-          "hits": [
-            {
-              "title": "Lady Marmalade",
-              "artists": "Lords of Acid",
-              "firstReleaseDate": "1999-07-27",
-              "score": 100
-            },
-            {
-              "title": "Lady Marmalade",
-              "artists": "Stanford University Harmonics",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Lady Marmalade",
-              "artists": "Sheila E.",
-              "score": 100
-            },
-            {
-              "title": "Lady Marmalade",
-              "artists": "All Saints",
-              "firstReleaseDate": "1998",
-              "score": 100
-            },
-            {
-              "title": "Lady Marmalade",
-              "artists": "Pennsylvania State University Pennharmonics",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Christina Aguilera",
@@ -4424,6 +3244,14 @@
                 "Christina Auguilera",
                 "Chrsitna Aguilera",
                 "Christina Augilera"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": true,
+                  "canonicalTitle": "Lady Marmalade",
+                  "score": 100
+                }
               ]
             },
             {
@@ -4434,16 +3262,13 @@
               "disambiguation": "parody soundalike of Christina Aguilera",
               "aliases": [
                 "Christina Aguilera diss"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "3b0d37bb-c994-4e5d-b5a9-585a762fd023",
-              "name": "Team Christina",
-              "score": 53,
-              "type": "Group",
-              "disambiguation": "Christina Aguilera's team on the Voice",
-              "country": "US",
-              "began": "2011"
             }
           ]
         },
@@ -4463,6 +3288,14 @@
                 "lil kim",
                 "Lil'Kim",
                 "Lil' Kim"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": true,
+                  "canonicalTitle": "Lady Marmalade",
+                  "score": 100
+                }
               ]
             },
             {
@@ -4471,17 +3304,12 @@
               "score": 77,
               "type": "Person",
               "disambiguation": "The Flob",
-              "country": "VN"
-            },
-            {
-              "mbid": "e0a673bc-79c3-4984-8e33-91686e5ba928",
-              "name": "Hillary Weston",
-              "score": 60,
-              "type": "Person",
-              "disambiguation": "Lil’ Kim’s manager",
-              "country": "US",
-              "aliases": [
-                "Big Hill"
+              "country": "VN",
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": false
+                }
               ]
             }
           ]
@@ -4500,6 +3328,15 @@
               "aliases": [
                 "Mya",
                 "Mýa Marie Harrison"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": true,
+                  "canonicalTitle": "Lady Marmalade",
+                  "score": 100,
+                  "firstReleaseDate": "2001"
+                }
               ]
             },
             {
@@ -4509,14 +3346,13 @@
               "type": "Group",
               "disambiguation": "Argentine duo (Maxi y Agus)",
               "country": "AR",
-              "began": "2017"
-            },
-            {
-              "mbid": "937c14e4-9205-4c53-8440-8a5af86e2685",
-              "name": "mya",
-              "score": 88,
-              "type": "Person",
-              "disambiguation": "Artcore"
+              "began": "2017",
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -4537,6 +3373,12 @@
                 "핑크 플로이드",
                 "Pink Floyd",
                 "ピンク・フロイド"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": false
+                }
               ]
             },
             {
@@ -4554,18 +3396,15 @@
                 "Alecia Beth Moore",
                 "Alecia B. Moore",
                 "P.nk"
-              ]
-            },
-            {
-              "mbid": "38f0dd4f-bcbb-4e7a-afae-a41a2bbf9d74",
-              "name": "The Legendary Pink Dots",
-              "score": 84,
-              "type": "Group",
-              "country": "GB",
-              "began": "1980-08",
-              "aliases": [
-                "Legendary Pink Dots",
-                "Legendary Pink Dots, The"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Lady Marmalade",
+                  "found": true,
+                  "canonicalTitle": "Lady Marmalade",
+                  "score": 100,
+                  "firstReleaseDate": "2006-05-22"
+                }
               ]
             }
           ]
@@ -4602,9 +3441,8 @@
             {
               "title": "Endless love",
               "found": true,
-              "canonicalTitle": "Endless Love (from Endless Love)",
-              "score": 100,
-              "firstReleaseDate": "2022-09-30"
+              "canonicalTitle": "Endless Love (from ‘Endless Love’)",
+              "score": 100
             }
           ]
         },
@@ -4660,41 +3498,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Endless love",
-          "hits": [
-            {
-              "title": "Endless Love (Endless Love)",
-              "artists": "The Ray Hamilton Orchestra & Singers",
-              "firstReleaseDate": "2009",
-              "score": 100
-            },
-            {
-              "title": "Endless Love (Endless Love)",
-              "artists": "Kenny Rogers",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "Endless Love (Endless Love)",
-              "artists": "The Hollywood Band",
-              "score": 100
-            },
-            {
-              "title": "Endless Love - Endless Love",
-              "artists": "The London Starlight Orchestra and Singers",
-              "score": 92
-            },
-            {
-              "title": "Endless Love (From \"Endless Love\")",
-              "artists": "Jazz at the Movies Band",
-              "firstReleaseDate": "1995-01-17",
-              "score": 92
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Lionel Richie",
@@ -4711,12 +3514,20 @@
                 "Lionel Brockman Richie, Jr.",
                 "Lionel Ritchie",
                 "Lionel Riche"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Endless love",
+                  "found": true,
+                  "canonicalTitle": "Endless Love (from ‘Endless Love’)",
+                  "score": 100
+                }
               ]
             },
             {
               "mbid": "900ab237-327b-44e2-87e4-73250bbe025a",
               "name": "Commodores",
-              "score": 79,
+              "score": 78,
               "type": "Group",
               "disambiguation": "US funk/soul band with Lionel Richie",
               "country": "US",
@@ -4725,16 +3536,15 @@
                 "Lionel Richie & the Commodores",
                 "Commodores & Lionel Richie",
                 "The Commodores"
-              ]
-            },
-            {
-              "mbid": "fe6420b0-71d3-420b-aa39-7257b819e158",
-              "name": "西部ライオネル・リッチー",
-              "score": 76,
-              "type": "Group",
-              "country": "JP",
-              "aliases": [
-                "Seibu Lionel Richie"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Endless love",
+                  "found": true,
+                  "canonicalTitle": "Endless Love",
+                  "score": 100,
+                  "firstReleaseDate": "2006-07-24"
+                }
               ]
             }
           ]
@@ -4754,6 +3564,14 @@
                 "Dianna Ross",
                 "Diane Earle",
                 "ダイアナ・ロス"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Endless love",
+                  "found": true,
+                  "canonicalTitle": "Endless Love (from ‘Endless Love’)",
+                  "score": 100
+                }
               ]
             },
             {
@@ -4774,15 +3592,16 @@
                 "The Surpremes",
                 "Supremes",
                 "Diana Ross & Supremes"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Endless love",
+                  "found": true,
+                  "canonicalTitle": "Endless Love",
+                  "score": 100,
+                  "firstReleaseDate": "2004-08-25"
+                }
               ]
-            },
-            {
-              "mbid": "9650eef7-244e-4acc-bbd7-440656dfe670",
-              "name": "Diana Gabaldon",
-              "score": 53,
-              "type": "Person",
-              "country": "US",
-              "began": "1952-01-11"
             }
           ]
         }
@@ -4817,14 +3636,14 @@
               "found": true,
               "canonicalTitle": "The Days",
               "score": 100,
-              "firstReleaseDate": "2015-04-20"
+              "firstReleaseDate": "2015"
             }
           ]
         },
         {
           "mbid": "db4624cf-0e44-481e-a9dc-2142b833ec2f",
           "name": "Robbie Williams",
-          "score": 96,
+          "score": 95,
           "type": "Person",
           "country": "GB",
           "began": "1974-02-13",
@@ -4845,14 +3664,14 @@
               "found": true,
               "canonicalTitle": "The Days",
               "score": 100,
-              "firstReleaseDate": "2014-11-25"
+              "firstReleaseDate": "2015-04-20"
             }
           ]
         },
         {
           "mbid": "53b106e7-0cc6-42cc-ac95-ed8d30a3a98e",
           "name": "John Williams",
-          "score": 76,
+          "score": 75,
           "type": "Person",
           "disambiguation": "American score composer and conductor",
           "country": "US",
@@ -4886,42 +3705,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "The Days",
-          "hits": [
-            {
-              "title": "The Days",
-              "artists": "Eliot Lipp",
-              "firstReleaseDate": "2006-07-26",
-              "score": 100
-            },
-            {
-              "title": "The Days",
-              "artists": "Lisa Hsieh",
-              "score": 100
-            },
-            {
-              "title": "The Days",
-              "artists": "Omar Khairat",
-              "firstReleaseDate": "1986",
-              "score": 100
-            },
-            {
-              "title": "The Days",
-              "artists": "Steve Thompson",
-              "firstReleaseDate": "2012-08-13",
-              "score": 100
-            },
-            {
-              "title": "The Days",
-              "artists": "Omar Khairat",
-              "firstReleaseDate": "1993",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Avicii",
@@ -4935,6 +3718,15 @@
               "began": "1989-09-08",
               "aliases": [
                 "Avicci"
+              ],
+              "titleChecks": [
+                {
+                  "title": "The Days",
+                  "found": true,
+                  "canonicalTitle": "The Days",
+                  "score": 100,
+                  "firstReleaseDate": "2015"
+                }
               ]
             },
             {
@@ -4944,14 +3736,13 @@
               "type": "Person",
               "disambiguation": "Tim Bergling (Avicii)",
               "country": "SE",
-              "began": "1989-09-08"
-            },
-            {
-              "mbid": "ab5947b8-e534-4726-9bc2-b1c23ecd9a1d",
-              "name": "Peter Dyer",
-              "score": 40,
-              "type": "Person",
-              "disambiguation": "keyboardist & writer Avicii and Cam"
+              "began": "1989-09-08",
+              "titleChecks": [
+                {
+                  "title": "The Days",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -4975,22 +3766,28 @@
                 "Williams, Robbie",
                 "Robbie Willams",
                 "Robert Peter Williams"
+              ],
+              "titleChecks": [
+                {
+                  "title": "The Days",
+                  "found": true,
+                  "canonicalTitle": "The Days",
+                  "score": 100,
+                  "firstReleaseDate": "2015-04-20"
+                }
               ]
             },
             {
               "mbid": "7857e8b5-9617-4a79-8f59-287f9d430356",
               "name": "JK as Robbie Williams",
               "score": 65,
-              "type": "Person"
-            },
-            {
-              "mbid": "0c7d2bbb-2830-4036-821f-6c46daf8ad96",
-              "name": "The Robbie Experience",
-              "score": 57,
-              "type": "Group",
-              "disambiguation": "Robbie Williams tribute band",
-              "country": "DE",
-              "began": "2017"
+              "type": "Person",
+              "titleChecks": [
+                {
+                  "title": "The Days",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -5026,7 +3823,7 @@
               "found": true,
               "canonicalTitle": "I Need Your Love",
               "score": 100,
-              "firstReleaseDate": "2013-10-17"
+              "firstReleaseDate": "2013-11-08"
             }
           ]
         },
@@ -5043,7 +3840,7 @@
               "found": true,
               "canonicalTitle": "I Need Your Love",
               "score": 100,
-              "firstReleaseDate": "2017-11-25"
+              "firstReleaseDate": "2013-11-08"
             }
           ]
         },
@@ -5062,43 +3859,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "I Need Your Love",
-          "hits": [
-            {
-              "title": "I Need Your Love",
-              "artists": "Ella Woods",
-              "firstReleaseDate": "1993",
-              "score": 100
-            },
-            {
-              "title": "I Need Your Love",
-              "artists": "Microwave Prince",
-              "firstReleaseDate": "1996-11-11",
-              "score": 100
-            },
-            {
-              "title": "I Need Your Love",
-              "artists": "Neon Cross",
-              "firstReleaseDate": "2019",
-              "score": 100
-            },
-            {
-              "title": "I Need Your Love",
-              "artists": "Chris Norman",
-              "firstReleaseDate": "1993",
-              "score": 100
-            },
-            {
-              "title": "I Need Your Love",
-              "artists": "Milla Alftan",
-              "firstReleaseDate": "2000",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Calvin Harris",
@@ -5109,7 +3869,16 @@
               "score": 100,
               "type": "Person",
               "disambiguation": "Scottish DJ and producer",
-              "began": "1984-01-17"
+              "began": "1984-01-17",
+              "titleChecks": [
+                {
+                  "title": "I Need Your Love",
+                  "found": true,
+                  "canonicalTitle": "I Need Your Love",
+                  "score": 100,
+                  "firstReleaseDate": "2013-11-08"
+                }
+              ]
             },
             {
               "mbid": "d4caad3c-c5c4-44a4-b90c-900650965ba8",
@@ -5117,13 +3886,13 @@
               "score": 87,
               "type": "Person",
               "disambiguation": "American soul singer",
-              "country": "US"
-            },
-            {
-              "mbid": "6428a204-8558-49b2-a7e9-02c3dd7ea460",
-              "name": "Calvin Harris",
-              "score": 87,
-              "disambiguation": "Guitarist"
+              "country": "US",
+              "titleChecks": [
+                {
+                  "title": "I Need Your Love",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -5140,6 +3909,15 @@
               "aliases": [
                 "艾丽·高登",
                 "Elena Jane Goulding"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I Need Your Love",
+                  "found": true,
+                  "canonicalTitle": "I Need Your Love",
+                  "score": 100,
+                  "firstReleaseDate": "2013-11-08"
+                }
               ]
             },
             {
@@ -5147,19 +3925,12 @@
               "name": "Ellie Kidd",
               "score": 39,
               "type": "Person",
-              "country": "GB"
-            },
-            {
-              "mbid": "ea81223e-cf85-45c3-80e0-3c6fd8200a83",
-              "name": "Steve Goulding",
-              "score": 38,
-              "type": "Person",
-              "disambiguation": "English drummer for the Rumour, Mekons, etc.",
               "country": "GB",
-              "began": "1954",
-              "aliases": [
-                "Goulding",
-                "Stephen Goulding"
+              "titleChecks": [
+                {
+                  "title": "I Need Your Love",
+                  "found": false
+                }
               ]
             }
           ]
@@ -5198,7 +3969,7 @@
         {
           "mbid": "8f2a69ac-7250-438d-b099-4280e54fd42e",
           "name": "Svenne & Lotta",
-          "score": 75,
+          "score": 76,
           "type": "Group",
           "disambiguation": "Swedish pop duo",
           "country": "SE",
@@ -5217,7 +3988,7 @@
         {
           "mbid": "3b15f4f3-e933-4797-be9e-4e8f0c869927",
           "name": "Bettan",
-          "score": 72,
+          "score": 73,
           "type": "Person",
           "disambiguation": "Swedish hip hop",
           "country": "SE",
@@ -5225,18 +3996,6 @@
             {
               "title": "Vem e det du vill ha",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Vem e det du vill ha",
-          "hits": [
-            {
-              "title": "Vem e det du vill ha",
-              "artists": "Kikki, Bettan & Lotta",
-              "score": 100
             }
           ]
         }
@@ -5255,6 +4014,12 @@
               "aliases": [
                 "Ann-Kristin Danielsson",
                 "Kicki Danielsson"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
               ]
             },
             {
@@ -5263,16 +4028,13 @@
               "score": 86,
               "type": "Person",
               "disambiguation": "Belgian singer, 1980s",
-              "country": "BE"
-            },
-            {
-              "mbid": "362d72f9-b3bc-4395-a1c4-7ab45f139335",
-              "name": "Kikki Stormo",
-              "score": 86,
-              "type": "Person",
-              "disambiguation": "Norsk skuespillerinne",
-              "country": "NO",
-              "began": "1974-01-13"
+              "country": "BE",
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -5285,28 +4047,24 @@
               "score": 100,
               "type": "Person",
               "disambiguation": "Swedish hip hop",
-              "country": "SE"
+              "country": "SE",
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "c5351ade-1d9a-4c0f-90bd-75e6bf5f2af4",
               "name": "Bettan Söderberg",
               "score": 86,
-              "type": "Person"
-            },
-            {
-              "mbid": "75606893-454b-419f-8493-8b61d536ba71",
-              "name": "נועם בתן",
-              "score": 78,
               "type": "Person",
-              "disambiguation": "Israeli singer",
-              "country": "IL",
-              "began": "1998-03-05",
-              "aliases": [
-                "ノアム・ベッタン",
-                "Νόαμ Μπετάν",
-                "Noam Bettan",
-                "Ноам Беттан",
-                "נועם בֶתן"
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
               ]
             }
           ]
@@ -5324,6 +4082,12 @@
               "began": "2004",
               "aliases": [
                 "Lotta & the Band"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
               ]
             },
             {
@@ -5333,15 +4097,13 @@
               "type": "Person",
               "disambiguation": "Norwegian singer Charlotte Kristiansen",
               "country": "NO",
-              "began": "1997-06-28"
-            },
-            {
-              "mbid": "432155c0-2661-4d68-a9c4-52606ab8c71b",
-              "name": "Lotta",
-              "score": 96,
-              "type": "Person",
-              "disambiguation": "Finnish artist Lotta Eriksson",
-              "country": "FI"
+              "began": "1997-06-28",
+              "titleChecks": [
+                {
+                  "title": "Vem e det du vill ha",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -5426,43 +4188,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Prayer In C",
-          "hits": [
-            {
-              "title": "Prayer in C",
-              "artists": "Lilly Wood & The Prick",
-              "firstReleaseDate": "2010-05-31",
-              "score": 100
-            },
-            {
-              "title": "Prayer in C",
-              "artists": "Symphoniacs",
-              "firstReleaseDate": "2016-10-21",
-              "score": 100
-            },
-            {
-              "title": "Prayer In C",
-              "artists": "BLAZEXVI",
-              "firstReleaseDate": "2021-12-16",
-              "score": 100
-            },
-            {
-              "title": "Prayer in C",
-              "artists": "Dimitri Vegas & Like Mike",
-              "firstReleaseDate": "2015-05-08",
-              "score": 100
-            },
-            {
-              "title": "Prayer in C",
-              "artists": "Lilly Wood & The Prick",
-              "firstReleaseDate": "2014-10-20",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Lilly Wood",
@@ -5479,21 +4204,28 @@
                 "Lily Wood & The Prick",
                 "Lilly Wood",
                 "Lily wood"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": true,
+                  "canonicalTitle": "Prayer in C",
+                  "score": 100
+                }
               ]
             },
             {
               "mbid": "031c3e8b-8299-4e70-9f48-26e06f6e9b49",
               "name": "Lilly Winwood",
-              "score": 59,
+              "score": 60,
               "type": "Person",
-              "country": "GB"
-            },
-            {
-              "mbid": "74d21e0d-f09e-4534-ab55-d82ae9214190",
-              "name": "Lilly",
-              "score": 58,
-              "type": "Group",
-              "disambiguation": "Industrial project of dr.Feitnathoroth & Scum"
+              "country": "GB",
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -5512,6 +4244,14 @@
                 "Lily Wood & The Prick",
                 "Lilly Wood",
                 "Lily wood"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": true,
+                  "canonicalTitle": "Prayer in C",
+                  "score": 100
+                }
               ]
             },
             {
@@ -5521,14 +4261,13 @@
               "type": "Group",
               "disambiguation": "American industrial rock band",
               "country": "US",
-              "began": "1992"
-            },
-            {
-              "mbid": "ac4e7527-d12a-4e13-b586-2e7065747e97",
-              "name": "Prick",
-              "score": 77,
-              "type": "Group",
-              "disambiguation": "90s US melodic punk band"
+              "began": "1992",
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -5546,6 +4285,15 @@
                 "Robin Alexander Schulz",
                 "Robin Schultz",
                 "Robin Shulz"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": true,
+                  "canonicalTitle": "Prayer in C",
+                  "score": 100,
+                  "firstReleaseDate": "2017-06-30"
+                }
               ]
             },
             {
@@ -5563,17 +4311,12 @@
                 "Markus Schultz",
                 "Markus Shultz",
                 "Markus \"The Slice\" Schulz"
-              ]
-            },
-            {
-              "mbid": "1a8f5bb2-a289-4d7b-bbe3-2dc285ff872b",
-              "name": "HEYHEY",
-              "score": 46,
-              "type": "Person",
-              "disambiguation": "DJ releasing together with Robin Schulz",
-              "country": "DE",
-              "aliases": [
-                "Felix Brauers"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Prayer In C",
+                  "found": false
+                }
               ]
             }
           ]
@@ -5610,7 +4353,7 @@
               "found": true,
               "canonicalTitle": "Hooked on a Feeling",
               "score": 100,
-              "firstReleaseDate": "2024-11-29"
+              "firstReleaseDate": "1995-09"
             }
           ]
         },
@@ -5649,41 +4392,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Hooked on a feeling",
-          "hits": [
-            {
-              "title": "Hooked on a Feeling",
-              "artists": "Chorus Lin - Linköpings blandade studentkör",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Hooked on a Feeling",
-              "artists": "Bill Deal & the Rhondels",
-              "score": 100
-            },
-            {
-              "title": "Hooked on a Feeling",
-              "artists": "Silenzi",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Hooked on a Feeling",
-              "artists": "Silenzi",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Hooked on a Feeling",
-              "artists": "Lava and the Hot Rocks",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Björn Skifs",
@@ -5697,34 +4405,36 @@
               "began": "1947-04-20",
               "aliases": [
                 "Björn Nils Olof Skifs"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hooked on a feeling",
+                  "found": true,
+                  "canonicalTitle": "Hooked on a Feeling",
+                  "score": 100,
+                  "firstReleaseDate": "2014"
+                }
               ]
             },
             {
               "mbid": "f98a61b4-394d-4e1f-a5f3-f747b9494e5a",
               "name": "Blue Swede",
-              "score": 63,
+              "score": 62,
               "type": "Group",
               "country": "SE",
               "began": "1973",
               "aliases": [
                 "Björn Skifs & Blåblus",
                 "Blue Suede"
-              ]
-            },
-            {
-              "mbid": "ffb77292-9712-4d03-94aa-bdb1d4771d38",
-              "name": "Björn Ulvaeus",
-              "score": 38,
-              "type": "Person",
-              "country": "SE",
-              "began": "1945-04-25",
-              "aliases": [
-                "Bjoern K. Ulvaeus",
-                "B. Ulvaeus",
-                "Б. Ульвеус",
-                "Bjorn Ulvaeus",
-                "Björn Kristian Ulvaeus",
-                "Bjoern K. K. Ulvaeus"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hooked on a feeling",
+                  "found": true,
+                  "canonicalTitle": "Hooked on a Feeling",
+                  "score": 100,
+                  "firstReleaseDate": "1995-09"
+                }
               ]
             }
           ]
@@ -5742,6 +4452,15 @@
               "aliases": [
                 "Björn Skifs & Blåblus",
                 "Blue Suede"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hooked on a feeling",
+                  "found": true,
+                  "canonicalTitle": "Hooked on a Feeling",
+                  "score": 100,
+                  "firstReleaseDate": "1995-09"
+                }
               ]
             },
             {
@@ -5750,12 +4469,13 @@
               "score": 49,
               "type": "Group",
               "disambiguation": "Teenage power pop band from Milton Keynes. England.",
-              "began": "2016-09-01"
-            },
-            {
-              "mbid": "ee997ef3-d74c-4bde-9fa1-be34d763c067",
-              "name": "Swede",
-              "score": 49
+              "began": "2016-09-01",
+              "titleChecks": [
+                {
+                  "title": "Hooked on a feeling",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -5792,7 +4512,7 @@
               "found": true,
               "canonicalTitle": "Smalltown Boy",
               "score": 100,
-              "firstReleaseDate": "2002-07-22"
+              "firstReleaseDate": "1994"
             }
           ]
         },
@@ -5836,43 +4556,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Smalltown boy",
-          "hits": [
-            {
-              "title": "Smalltown Boy",
-              "artists": "Bronski Beat",
-              "firstReleaseDate": "2001",
-              "score": 100
-            },
-            {
-              "title": "Smalltown Boy",
-              "artists": "Bronski Beat",
-              "firstReleaseDate": "1993-08-23",
-              "score": 100
-            },
-            {
-              "title": "Smalltown Boy",
-              "artists": "Bronski Beat",
-              "firstReleaseDate": "2005-03-07",
-              "score": 100
-            },
-            {
-              "title": "Smalltown Boy",
-              "artists": "André Herman Düne",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Smalltown Boy",
-              "artists": "Louis Jordan and His Tympany Five",
-              "firstReleaseDate": "1994",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Jimmy Somerville",
@@ -5889,18 +4572,27 @@
                 "AM SOMERVILLE JAMES WILLI",
                 "Jimmy Sommerville",
                 "Summerville"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Smalltown boy",
+                  "found": true,
+                  "canonicalTitle": "Smalltown Boy",
+                  "score": 100,
+                  "firstReleaseDate": "2016-07-29"
+                }
               ]
             },
             {
               "mbid": "107274ee-1d83-4c28-8f93-90ff18deb0a3",
               "name": "Jimmy Somerville’s Jazz Rebels",
-              "score": 69
-            },
-            {
-              "mbid": "aee0ca2e-cea4-46c9-b342-8ab8cfdcca67",
-              "name": "Somerville",
-              "score": 45,
-              "type": "Group"
+              "score": 69,
+              "titleChecks": [
+                {
+                  "title": "Smalltown boy",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -5918,6 +4610,15 @@
                 "Branski Beat",
                 "Bronskie Beat",
                 "Bronsky Beat"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Smalltown boy",
+                  "found": true,
+                  "canonicalTitle": "Smalltown Boy",
+                  "score": 100,
+                  "firstReleaseDate": "1994"
+                }
               ]
             },
             {
@@ -5925,16 +4626,12 @@
               "name": "John Foster",
               "score": 46,
               "type": "Person",
-              "disambiguation": "John Jøn, Bronski Beat"
-            },
-            {
-              "mbid": "995cc26d-aba9-4511-95b7-45aaf90e19f6",
-              "name": "Bronski",
-              "score": 44,
-              "type": "Person",
-              "disambiguation": "german DnB producer; David Braun",
-              "aliases": [
-                "David Braun"
+              "disambiguation": "John Jøn, Bronski Beat",
+              "titleChecks": [
+                {
+                  "title": "Smalltown boy",
+                  "found": false
+                }
               ]
             }
           ]
@@ -5987,14 +4684,14 @@
               "found": true,
               "canonicalTitle": "Closer",
               "score": 100,
-              "firstReleaseDate": "2007"
+              "firstReleaseDate": "2012"
             }
           ]
         },
         {
           "mbid": "2c05faf7-5cc8-4476-9daa-d177ad75cd34",
           "name": "Jim Reeves",
-          "score": 87,
+          "score": 86,
           "type": "Person",
           "disambiguation": "US country & pop singer",
           "country": "US",
@@ -6008,44 +4705,8 @@
               "title": "Closer",
               "found": true,
               "canonicalTitle": "Put Your Sweet Lips Closer to the Phone",
-              "score": 100
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Closer",
-          "hits": [
-            {
-              "title": "Closer, Closer, Closer",
-              "artists": "The Cochran Brothers",
-              "firstReleaseDate": "1991",
-              "score": 100
-            },
-            {
-              "title": "Closer, Closer, Closer",
-              "artists": "Darrel Higham, Tim Whitnam",
-              "firstReleaseDate": "1998",
-              "score": 100
-            },
-            {
-              "title": "Closer, Closer, Closer",
-              "artists": "Jerry Capehart, Cochran Brothers",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "Closer, Closer",
-              "artists": "Celi Bee & the Buzzy Bunch",
-              "firstReleaseDate": "1977",
-              "score": 96
-            },
-            {
-              "title": "Closer Closer",
-              "artists": "lowsunday",
-              "firstReleaseDate": "2001-04-03",
-              "score": 96
+              "score": 100,
+              "looseMatch": true
             }
           ]
         }
@@ -6063,6 +4724,15 @@
               "began": "1990",
               "aliases": [
                 "トラヴィス"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Closer",
+                  "found": true,
+                  "canonicalTitle": "Closer",
+                  "score": 100,
+                  "firstReleaseDate": "2012"
+                }
               ]
             },
             {
@@ -6076,17 +4746,15 @@
               "aliases": [
                 "James Travis Reeves",
                 "Jim Reevers"
-              ]
-            },
-            {
-              "mbid": "09b697e3-a849-4670-ae49-e0b821a6271a",
-              "name": "Randy Travis",
-              "score": 89,
-              "type": "Person",
-              "country": "US",
-              "began": "1959-05-04",
-              "aliases": [
-                "Randy Bruce Traywick"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Closer",
+                  "found": true,
+                  "canonicalTitle": "Put Your Sweet Lips Closer to the Phone",
+                  "score": 100,
+                  "looseMatch": true
+                }
               ]
             }
           ]
@@ -6103,6 +4771,12 @@
               "aliases": [
                 "Francis Healy",
                 "Francis \"Fran\" Healey"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Closer",
+                  "found": false
+                }
               ]
             },
             {
@@ -6116,14 +4790,13 @@
                 "Jeff Heale",
                 "Norman Jeffrey Healey",
                 "Jeff Healey & The Jazz Wizards"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Closer",
+                  "found": false
+                }
               ]
-            },
-            {
-              "mbid": "e07c0fe3-f31b-4361-b2d9-e6e77ed0529c",
-              "name": "Healey",
-              "score": 54,
-              "type": "Person",
-              "disambiguation": "London indie musician"
             }
           ]
         }
@@ -6157,8 +4830,7 @@
               "title": "Angel baby",
               "found": true,
               "canonicalTitle": "Angel Baby",
-              "score": 100,
-              "firstReleaseDate": "1987"
+              "score": 100
             }
           ]
         },
@@ -6191,42 +4863,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Angel baby",
-          "hits": [
-            {
-              "title": "Angel Baby",
-              "artists": "Rosie & the Originals",
-              "score": 100
-            },
-            {
-              "title": "Angel Baby",
-              "artists": "Tiffany",
-              "firstReleaseDate": "2005-09-16",
-              "score": 100
-            },
-            {
-              "title": "Angel Baby",
-              "artists": "Rosie & the Originals",
-              "firstReleaseDate": "1960",
-              "score": 100
-            },
-            {
-              "title": "Angel Baby",
-              "artists": "Horizontal Ladies Club",
-              "firstReleaseDate": "1996",
-              "score": 100
-            },
-            {
-              "title": "Angel Baby",
-              "artists": "Down to the Bone",
-              "firstReleaseDate": "2005-06-21",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Rosie",
@@ -6240,6 +4876,12 @@
               "began": "2003",
               "aliases": [
                 "Coco Rosie"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Angel baby",
+                  "found": false
+                }
               ]
             },
             {
@@ -6248,17 +4890,12 @@
               "score": 97,
               "type": "Group",
               "disambiguation": "soul/pop/disco trio",
-              "country": "US"
-            },
-            {
-              "mbid": "fde0e548-aeac-47b6-b4c8-7c0beeea9f68",
-              "name": "Rosie Gaines",
-              "score": 97,
-              "type": "Person",
               "country": "US",
-              "began": "1960-06-26",
-              "aliases": [
-                "Rose Mary Gaines"
+              "titleChecks": [
+                {
+                  "title": "Angel baby",
+                  "found": false
+                }
               ]
             }
           ]
@@ -6271,7 +4908,13 @@
               "name": "Originals",
               "score": 100,
               "type": "Group",
-              "country": "US"
+              "country": "US",
+              "titleChecks": [
+                {
+                  "title": "Angel baby",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "e4ff8b11-dbe9-446d-8e9e-40813a8c4985",
@@ -6280,15 +4923,13 @@
               "type": "Group",
               "disambiguation": "Motown group",
               "country": "US",
-              "began": "1966"
-            },
-            {
-              "mbid": "cb5b71fc-4a35-4187-a883-5ea8f23a11e2",
-              "name": "Originals",
-              "score": 99,
-              "type": "Group",
-              "disambiguation": "Progressive psychedelic trance duo project from Israel",
-              "country": "IL"
+              "began": "1966",
+              "titleChecks": [
+                {
+                  "title": "Angel baby",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -6342,22 +4983,23 @@
             {
               "title": "Living in danger",
               "found": true,
-              "canonicalTitle": "Living In Danger",
+              "canonicalTitle": "Living in Danger",
               "score": 100,
-              "firstReleaseDate": "2012-04-23"
+              "firstReleaseDate": "1998-01-19"
             },
             {
               "title": "The sign",
               "found": true,
               "canonicalTitle": "The Sign",
               "score": 100,
-              "firstReleaseDate": "1993-06"
+              "firstReleaseDate": "1994"
             },
             {
               "title": "All that she wants",
               "found": true,
               "canonicalTitle": "All That She Wants",
-              "score": 100
+              "score": 100,
+              "firstReleaseDate": "1992-10"
             }
           ]
         },
@@ -6404,112 +5046,6 @@
             {
               "title": "All that she wants",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Living in danger",
-          "hits": [
-            {
-              "title": "Living in Danger",
-              "artists": "Reggae People Dance",
-              "firstReleaseDate": "1995",
-              "score": 100
-            },
-            {
-              "title": "Living in Danger",
-              "artists": "Ace of Base",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Living in Danger",
-              "artists": "Ace of Base",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Living In Danger",
-              "artists": "Ace of Base",
-              "firstReleaseDate": "1993-11-23",
-              "score": 100
-            },
-            {
-              "title": "Living in Danger",
-              "artists": "Box of Laces",
-              "firstReleaseDate": "1995",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "The sign",
-          "hits": [
-            {
-              "title": "The Sign",
-              "artists": "Divinefire",
-              "firstReleaseDate": "2005",
-              "score": 100
-            },
-            {
-              "title": "The Sign",
-              "artists": "Box of Laces",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "The Sign",
-              "artists": "이삭N지연",
-              "firstReleaseDate": "2002-09-14",
-              "score": 100
-            },
-            {
-              "title": "The Sign",
-              "artists": "The Mountain Goats",
-              "score": 100
-            },
-            {
-              "title": "The Sign",
-              "artists": "lisahall",
-              "firstReleaseDate": "1998",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "All that she wants",
-          "hits": [
-            {
-              "title": "All That She Wants",
-              "artists": "The Axel Boys Quartet",
-              "firstReleaseDate": "1996-09-25",
-              "score": 100
-            },
-            {
-              "title": "All That She Wants",
-              "artists": "Karel Vavra & Jiri Sedlak",
-              "firstReleaseDate": "2011-07",
-              "score": 100
-            },
-            {
-              "title": "All That She Wants",
-              "artists": "Lu & Those Six Idiots",
-              "firstReleaseDate": "2009",
-              "score": 100
-            },
-            {
-              "title": "All That She Wants",
-              "artists": "Jetstream Lovers",
-              "firstReleaseDate": "2007-02-12",
-              "score": 100
-            },
-            {
-              "title": "All That She Wants",
-              "artists": "Knorkator",
-              "firstReleaseDate": "2012",
-              "score": 100
             }
           ]
         }
@@ -6547,7 +5083,7 @@
               "found": true,
               "canonicalTitle": "Don’t Turn Around",
               "score": 100,
-              "firstReleaseDate": "1993"
+              "firstReleaseDate": "2007"
             }
           ]
         },
@@ -6578,42 +5114,6 @@
             {
               "title": "Don't turn around",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Don't turn around",
-          "hits": [
-            {
-              "title": "Don't Turn Around",
-              "artists": "Roots Radics",
-              "firstReleaseDate": "1989",
-              "score": 100
-            },
-            {
-              "title": "Don't Turn Around",
-              "artists": "Zaida Alfaro",
-              "score": 100
-            },
-            {
-              "title": "Don't Turn Around",
-              "artists": "Lonnie Gordon",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "Don’t Turn Around",
-              "artists": "Aswad",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Don’t Turn Around",
-              "artists": "Titanic",
-              "firstReleaseDate": "2000-08-01",
-              "score": 100
             }
           ]
         }
@@ -6667,14 +5167,14 @@
               "found": true,
               "canonicalTitle": "Back Door Man",
               "score": 100,
-              "firstReleaseDate": "2001-10-01"
+              "firstReleaseDate": "1990"
             },
             {
               "title": "Riders on the storm",
               "found": true,
               "canonicalTitle": "Riders on the Storm",
               "score": 100,
-              "firstReleaseDate": "1995-04-04"
+              "firstReleaseDate": "2005"
             },
             {
               "title": "LA woman",
@@ -6688,13 +5188,14 @@
         {
           "mbid": "95996d9f-a57e-47d7-b688-98e4b6217f8e",
           "name": "The Doors Alive",
-          "score": 75,
+          "score": 74,
           "type": "Group",
           "disambiguation": "UK The Doors tribute band",
           "country": "GB",
           "aliases": [
             "doors alive"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Back door man",
@@ -6734,109 +5235,6 @@
             {
               "title": "LA woman",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Back door man",
-          "hits": [
-            {
-              "title": "Back Door Man",
-              "artists": "Chris Ardoin and Double Clutchin'",
-              "firstReleaseDate": "1998-08-20",
-              "score": 100
-            },
-            {
-              "title": "Back Door Man",
-              "artists": "The Doors",
-              "firstReleaseDate": "1990",
-              "score": 100
-            },
-            {
-              "title": "Back Door Man",
-              "artists": "The Doors",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Back Door Man",
-              "artists": "The Doors",
-              "score": 100
-            },
-            {
-              "title": "Back Door Man",
-              "artists": "The Doors",
-              "firstReleaseDate": "1993",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Riders on the storm",
-          "hits": [
-            {
-              "title": "Riders on the Storm",
-              "artists": "The Jolly Boys",
-              "firstReleaseDate": "2010-09-13",
-              "score": 100
-            },
-            {
-              "title": "Riders on the Storm",
-              "artists": "Santana, Chester Bennington, Ray Manzarek",
-              "firstReleaseDate": "2010-09-17",
-              "score": 100
-            },
-            {
-              "title": "Riders on the Storm",
-              "artists": "Ahn Trio",
-              "firstReleaseDate": "2004",
-              "score": 100
-            },
-            {
-              "title": "Riders on the Storm",
-              "artists": "Raffunk, Gushi",
-              "firstReleaseDate": "2010",
-              "score": 100
-            },
-            {
-              "title": "Riders on the Storm",
-              "artists": "The Legendary Stardust Cowboy",
-              "firstReleaseDate": "2011-11-21",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "LA woman",
-          "hits": [
-            {
-              "title": "L.A. Woman",
-              "artists": "The Doors",
-              "score": 100
-            },
-            {
-              "title": "L.A. Woman",
-              "artists": "The Jim Zeller Band",
-              "score": 100
-            },
-            {
-              "title": "L.A. Woman",
-              "artists": "The Doors",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "L.A. Woman",
-              "artists": "The Doors",
-              "score": 100
-            },
-            {
-              "title": "L.A. Woman",
-              "artists": "Eating Crow",
-              "firstReleaseDate": "2000-02-29",
-              "score": 100
             }
           ]
         }
@@ -6902,13 +5300,14 @@
         {
           "mbid": "95996d9f-a57e-47d7-b688-98e4b6217f8e",
           "name": "The Doors Alive",
-          "score": 74,
+          "score": 75,
           "type": "Group",
           "disambiguation": "UK The Doors tribute band",
           "country": "GB",
           "aliases": [
             "doors alive"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Crystal Ship",
@@ -6948,111 +5347,6 @@
               "canonicalTitle": "Touch Me (live TV)",
               "score": 100,
               "firstReleaseDate": "2026-02-10"
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Crystal Ship",
-          "hits": [
-            {
-              "title": "Crystal Ship",
-              "artists": "Out of Phase",
-              "firstReleaseDate": "2001",
-              "score": 100
-            },
-            {
-              "title": "Crystal Ship",
-              "artists": "Global Infantilists",
-              "firstReleaseDate": "1983",
-              "score": 100
-            },
-            {
-              "title": "Crystal Ship",
-              "artists": "Nicole Atkins",
-              "firstReleaseDate": "2008-09-26",
-              "score": 100
-            },
-            {
-              "title": "Crystal Ship",
-              "artists": "Joe Perry",
-              "firstReleaseDate": "2005-05-03",
-              "score": 100
-            },
-            {
-              "title": "CRYSTAL SHIP",
-              "artists": "大江慎也",
-              "firstReleaseDate": "1994-09-25",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Love her madly",
-          "hits": [
-            {
-              "title": "Love Her Madly",
-              "artists": "Wailing Souls",
-              "firstReleaseDate": "1998-09-15",
-              "score": 100
-            },
-            {
-              "title": "Love Her Madly",
-              "artists": "The Doors",
-              "firstReleaseDate": "2000",
-              "score": 100
-            },
-            {
-              "title": "Love Her Madly",
-              "artists": "The Doors",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Love Her Madly",
-              "artists": "Sweet Little Band",
-              "firstReleaseDate": "2008-01-01",
-              "score": 100
-            },
-            {
-              "title": "Love Her Madly",
-              "artists": "The Doors",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Touch me",
-          "hits": [
-            {
-              "title": "Touch Me Touch Me",
-              "artists": "Dave Dee, Dozy, Beaky, Mick & Tich",
-              "firstReleaseDate": "2008-09-08",
-              "score": 100
-            },
-            {
-              "title": "Touch Me Touch Me",
-              "artists": "Norma Sheffield",
-              "firstReleaseDate": "1994-06-22",
-              "score": 100
-            },
-            {
-              "title": "Touch Me Touch Me",
-              "artists": "Dave Dee, Dozy, Beaky, Mick & Tich",
-              "firstReleaseDate": "1992",
-              "score": 100
-            },
-            {
-              "title": "Touch Me Touch Me",
-              "artists": "Dave Dee, Dozy, Beaky, Mick & Tich",
-              "score": 100
-            },
-            {
-              "title": "Touch Me, Touch Me",
-              "artists": "Dave Dee, Dozy, Beaky, Mick & Tich",
-              "firstReleaseDate": "1995-10-20",
-              "score": 100
             }
           ]
         }
@@ -7125,21 +5419,21 @@
               "found": true,
               "canonicalTitle": "Everywhere",
               "score": 100,
-              "firstReleaseDate": "1998-11-06"
+              "firstReleaseDate": "1991"
             },
             {
               "title": "Dreams",
               "found": true,
               "canonicalTitle": "Dreams",
               "score": 100,
-              "firstReleaseDate": "2009"
+              "firstReleaseDate": "2022-06-28"
             },
             {
               "title": "Save me",
               "found": true,
               "canonicalTitle": "Save Me",
               "score": 100,
-              "firstReleaseDate": "1996"
+              "firstReleaseDate": "1990-03-01"
             }
           ]
         },
@@ -7153,6 +5447,7 @@
           "aliases": [
             "Rumors-Fleetwood Mac Tribute"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Everywhere",
@@ -7186,113 +5481,6 @@
             {
               "title": "Save me",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Everywhere",
-          "hits": [
-            {
-              "title": "Everywhere, Everywhere",
-              "artists": "Peder Mannerfelt",
-              "firstReleaseDate": "2020-01-31",
-              "score": 100
-            },
-            {
-              "title": "Everywhere, Everywhere",
-              "artists": "Pray for Sound",
-              "firstReleaseDate": "2016-09-23",
-              "score": 100
-            },
-            {
-              "title": "Everywhere",
-              "artists": "The Heart Beats",
-              "firstReleaseDate": "1998-04-07",
-              "score": 90
-            },
-            {
-              "title": "Everywhere",
-              "artists": "Bran Van 3000",
-              "firstReleaseDate": "1998-10-06",
-              "score": 90
-            },
-            {
-              "title": "Everywhere",
-              "artists": "Indigo",
-              "firstReleaseDate": "2004-05-31",
-              "score": 90
-            }
-          ]
-        },
-        {
-          "title": "Dreams",
-          "hits": [
-            {
-              "title": "dreams, dreams, dreams...",
-              "artists": "Dan Wilson",
-              "firstReleaseDate": "2001",
-              "score": 100
-            },
-            {
-              "title": "Dreams, Dreams, Dreams",
-              "artists": "Messer Chups",
-              "firstReleaseDate": "2004-07",
-              "score": 100
-            },
-            {
-              "title": "Dreams, Dreams, Dreams",
-              "artists": "Len Sander",
-              "firstReleaseDate": "2018-01-26",
-              "score": 100
-            },
-            {
-              "title": "Dreams, Dreams, Dreams",
-              "artists": "Anna Oxygen",
-              "firstReleaseDate": "2009-05-01",
-              "score": 100
-            },
-            {
-              "title": "DREAMS DREAMS DREAMS",
-              "artists": "Winter Sleep",
-              "firstReleaseDate": "2013-09-10",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Save me",
-          "hits": [
-            {
-              "title": "Save Me, Save Me",
-              "artists": "Rare Earth",
-              "firstReleaseDate": "1978",
-              "score": 100
-            },
-            {
-              "title": "Save Me, Save Me",
-              "artists": "The Soul Explosion",
-              "firstReleaseDate": "2015-10-15",
-              "score": 100
-            },
-            {
-              "title": "Save Me, Save Me",
-              "artists": "Sylvia McNeill",
-              "firstReleaseDate": "2017",
-              "score": 100
-            },
-            {
-              "title": "Save Me, Save Me",
-              "artists": "Network",
-              "firstReleaseDate": "1977",
-              "score": 100
-            },
-            {
-              "title": "Save Me, Save Me",
-              "artists": "Frankie Valli",
-              "firstReleaseDate": "2023-06-02",
-              "score": 100
             }
           ]
         }
@@ -7336,27 +5524,28 @@
               "found": true,
               "canonicalTitle": "Oh Daddy",
               "score": 100,
-              "firstReleaseDate": "2019"
+              "firstReleaseDate": "2024-10-31"
             },
             {
               "title": "Don't stop",
               "found": true,
               "canonicalTitle": "Don’t Stop",
               "score": 100,
-              "firstReleaseDate": "2013-08-12"
+              "firstReleaseDate": "2010"
             }
           ]
         },
         {
           "mbid": "25658c94-4a08-4c1f-8d59-c5c554bdcc50",
           "name": "Rumours",
-          "score": 68,
+          "score": 69,
           "type": "Group",
           "disambiguation": "Fleetwood Mac tribute band from Atlanta, Georgia",
           "began": "2014-06",
           "aliases": [
             "Rumors-Fleetwood Mac Tribute"
           ],
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Oh Daddy",
@@ -7382,78 +5571,6 @@
             {
               "title": "Don't stop",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Oh Daddy",
-          "hits": [
-            {
-              "title": "Oh, Daddy! (Oh, Daddy Blues)",
-              "artists": "Hana Hegerová",
-              "firstReleaseDate": "2016-10-07",
-              "score": 100
-            },
-            {
-              "title": "Oh Daddy",
-              "artists": "Ethel Waters",
-              "firstReleaseDate": "1922",
-              "score": 98
-            },
-            {
-              "title": "Oh Daddy",
-              "artists": "Natalie Cole",
-              "firstReleaseDate": "1996",
-              "score": 98
-            },
-            {
-              "title": "Oh Daddy",
-              "artists": "Queen Majeeda",
-              "firstReleaseDate": "1993",
-              "score": 98
-            },
-            {
-              "title": "Oh Daddy",
-              "artists": "Pamela Isaacs, Kevin Ramsey",
-              "firstReleaseDate": "1997-06-03",
-              "score": 98
-            }
-          ]
-        },
-        {
-          "title": "Don't stop",
-          "hits": [
-            {
-              "title": "Don't Stop Don't Stop",
-              "artists": "The Rock-Its",
-              "firstReleaseDate": "1996",
-              "score": 100
-            },
-            {
-              "title": "Don't Stop Don't Stop",
-              "artists": "TERROR TODDLER, Lynn Drumm",
-              "firstReleaseDate": "2020-02-11",
-              "score": 100
-            },
-            {
-              "title": "Don’t Stop, Don’t Stop",
-              "artists": "Ralph Robbins and the Rock‐It’s",
-              "firstReleaseDate": "2011",
-              "score": 100
-            },
-            {
-              "title": "Don't Stop",
-              "artists": "One 2 One",
-              "firstReleaseDate": "2003-12-29",
-              "score": 91
-            },
-            {
-              "title": "Don't Stop",
-              "artists": "DJ Dean",
-              "firstReleaseDate": "2002-06-10",
-              "score": 91
             }
           ]
         }
@@ -7490,14 +5607,14 @@
               "found": true,
               "canonicalTitle": "Whatcha Say",
               "score": 100,
-              "firstReleaseDate": "2009-05-05"
+              "firstReleaseDate": "2010-06-04"
             }
           ]
         },
         {
           "mbid": "48438777-4e19-4a4f-ad20-2827f4123bef",
           "name": "Gabe",
-          "score": 46,
+          "score": 47,
           "disambiguation": "Jason Derulo featuring artist",
           "titleChecks": [
             {
@@ -7509,7 +5626,7 @@
         {
           "mbid": "a30f141f-5128-48a6-9c8c-13456214170f",
           "name": "Frank Harris",
-          "score": 40,
+          "score": 41,
           "type": "Person",
           "disambiguation": "producer & manager of Jason Derulo",
           "aliases": [
@@ -7519,43 +5636,6 @@
             {
               "title": "Whatcha say",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Whatcha say",
-          "hits": [
-            {
-              "title": "Whatcha Say",
-              "artists": "G.G.",
-              "firstReleaseDate": "2009-12-28",
-              "score": 100
-            },
-            {
-              "title": "Whatcha Say",
-              "artists": "Kidz Bop",
-              "firstReleaseDate": "2021-10-08",
-              "score": 100
-            },
-            {
-              "title": "Whatcha Say",
-              "artists": "J. Holiday",
-              "firstReleaseDate": "2020-11-13",
-              "score": 100
-            },
-            {
-              "title": "Whatcha Say",
-              "artists": "Jason Derulo",
-              "firstReleaseDate": "2010-02-24",
-              "score": 100
-            },
-            {
-              "title": "Whatcha Say",
-              "artists": "Critical",
-              "firstReleaseDate": "2008-10-24",
-              "score": 100
             }
           ]
         }
@@ -7610,27 +5690,28 @@
               "found": true,
               "canonicalTitle": "Trumpets",
               "score": 100,
-              "firstReleaseDate": "2022"
+              "firstReleaseDate": "2014-03-26"
             },
             {
               "title": "Want To Want Me",
               "found": true,
               "canonicalTitle": "Want to Want Me",
-              "score": 100
+              "score": 100,
+              "firstReleaseDate": "2015-08-14"
             },
             {
               "title": "Swalla",
               "found": true,
               "canonicalTitle": "Swalla",
               "score": 100,
-              "firstReleaseDate": "2017-06-16"
+              "firstReleaseDate": "2017-07-07"
             }
           ]
         },
         {
           "mbid": "48438777-4e19-4a4f-ad20-2827f4123bef",
           "name": "Gabe",
-          "score": 46,
+          "score": 47,
           "disambiguation": "Jason Derulo featuring artist",
           "titleChecks": [
             {
@@ -7650,7 +5731,7 @@
         {
           "mbid": "a30f141f-5128-48a6-9c8c-13456214170f",
           "name": "Frank Harris",
-          "score": 40,
+          "score": 41,
           "type": "Person",
           "disambiguation": "producer & manager of Jason Derulo",
           "aliases": [
@@ -7668,112 +5749,6 @@
             {
               "title": "Swalla",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Trumpets",
-          "hits": [
-            {
-              "title": "Trumpets",
-              "artists": "S’Express",
-              "firstReleaseDate": "1991",
-              "score": 100
-            },
-            {
-              "title": "Trumpets",
-              "artists": "David Judson Clemmons & The Fullbliss",
-              "firstReleaseDate": "2007-01-26",
-              "score": 100
-            },
-            {
-              "title": "Trumpets",
-              "artists": "Jason Derulo",
-              "firstReleaseDate": "2014-03-26",
-              "score": 100
-            },
-            {
-              "title": "Trumpets",
-              "artists": "Sak Noel, Salvi, Sean Paul",
-              "firstReleaseDate": "2016-09-23",
-              "score": 100
-            },
-            {
-              "title": "Trumpets",
-              "artists": "Sak Noel, Salvi, Sean Paul",
-              "firstReleaseDate": "2016-09-30",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Want To Want Me",
-          "hits": [
-            {
-              "title": "Want to Want Me",
-              "artists": "Rayvon Owen",
-              "firstReleaseDate": "2015-05-05",
-              "score": 100
-            },
-            {
-              "title": "Want to Want Me",
-              "artists": "Jason Derulo",
-              "score": 100
-            },
-            {
-              "title": "Want to Want Me",
-              "artists": "Boyce Avenue",
-              "firstReleaseDate": "2017-12-19",
-              "score": 100
-            },
-            {
-              "title": "Want To Want Me",
-              "artists": "Nicole Cross",
-              "firstReleaseDate": "2015-05-22",
-              "score": 100
-            },
-            {
-              "title": "Want to Want Me",
-              "artists": "Fame on Fire",
-              "firstReleaseDate": "2015-05-18",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Swalla",
-          "hits": [
-            {
-              "title": "Swalla",
-              "artists": "Jason Derulo, Nicki Minaj, Ty Dolla $ign",
-              "firstReleaseDate": "2017-06-16",
-              "score": 100
-            },
-            {
-              "title": "Swalla",
-              "artists": "Jason Derulo, Nicki Minaj, Ty Dolla $ign",
-              "firstReleaseDate": "2017-02-24",
-              "score": 100
-            },
-            {
-              "title": "Swalla",
-              "artists": "Jason Derulo, Nicki Minaj, Ty Dolla $ign",
-              "firstReleaseDate": "2017-06-23",
-              "score": 100
-            },
-            {
-              "title": "Swalla",
-              "artists": "Jason Derulo, Nicki Minaj, Ty Dolla $ign",
-              "firstReleaseDate": "2017-04-28",
-              "score": 100
-            },
-            {
-              "title": "Swalla",
-              "artists": "Jason Derulo, Nicki Minaj, Ty Dolla $ign",
-              "firstReleaseDate": "2017-05-19",
-              "score": 100
             }
           ]
         }
@@ -7822,21 +5797,21 @@
               "found": true,
               "canonicalTitle": "Long Hot Summer",
               "score": 100,
-              "firstReleaseDate": "2002-11-22"
+              "firstReleaseDate": "2004-10-25"
             },
             {
               "title": "My ever changing moods",
               "found": true,
               "canonicalTitle": "My Ever Changing Moods",
               "score": 100,
-              "firstReleaseDate": "2002"
+              "firstReleaseDate": "1994"
             },
             {
               "title": "Shout to the top",
               "found": true,
               "canonicalTitle": "Shout to the Top",
               "score": 100,
-              "firstReleaseDate": "1995"
+              "firstReleaseDate": "1992-07-20"
             }
           ]
         },
@@ -7886,112 +5861,6 @@
             {
               "title": "Shout to the top",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Long hot summer",
-          "hits": [
-            {
-              "title": "Long Hot Summer",
-              "artists": "Huxton Creepers",
-              "firstReleaseDate": "1986",
-              "score": 100
-            },
-            {
-              "title": "Long Hot Summer",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1986",
-              "score": 100
-            },
-            {
-              "title": "Long Hot Summer",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1999-12-28",
-              "score": 100
-            },
-            {
-              "title": "Long Hot Summer",
-              "artists": "Paris",
-              "firstReleaseDate": "1992-11-23",
-              "score": 100
-            },
-            {
-              "title": "Long Hot Summer",
-              "artists": "Street Reportas",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "My ever changing moods",
-          "hits": [
-            {
-              "title": "My Ever Changing Moods",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "My Ever Changing Moods",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2026-05-15",
-              "score": 100
-            },
-            {
-              "title": "My Ever Changing Moods",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2026-05-15",
-              "score": 100
-            },
-            {
-              "title": "My Ever Changing Moods",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1989",
-              "score": 100
-            },
-            {
-              "title": "My Ever Changing Moods",
-              "artists": "Paul Weller",
-              "firstReleaseDate": "2008-11-03",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Shout to the top",
-          "hits": [
-            {
-              "title": "Shout to the Top",
-              "artists": "Fire Island, Loleatta Holloway",
-              "firstReleaseDate": "1998",
-              "score": 100
-            },
-            {
-              "title": "Shout to the Top",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1995",
-              "score": 100
-            },
-            {
-              "title": "Shout to the Top",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2005-10-26",
-              "score": 100
-            },
-            {
-              "title": "Shout to the Top",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Shout to the Top",
-              "artists": "Style Council",
-              "firstReleaseDate": "1998",
-              "score": 100
             }
           ]
         }
@@ -8031,14 +5900,14 @@
               "found": true,
               "canonicalTitle": "Walls Come Tumbling Down",
               "score": 100,
-              "firstReleaseDate": "1985"
+              "firstReleaseDate": "2003"
             },
             {
               "title": "You're the best thing",
               "found": true,
-              "canonicalTitle": "You're the Best Thing",
+              "canonicalTitle": "You’re the Best Thing",
               "score": 100,
-              "firstReleaseDate": "2003-06-16"
+              "firstReleaseDate": "1994"
             }
           ]
         },
@@ -8080,77 +5949,6 @@
             {
               "title": "You're the best thing",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Walls come tumbling down",
-          "hits": [
-            {
-              "title": "Walls Come Tumbling Down",
-              "artists": "Time Bomb",
-              "score": 100
-            },
-            {
-              "title": "Walls Come Tumbling Down",
-              "artists": "Barry Hay",
-              "firstReleaseDate": "2008",
-              "score": 100
-            },
-            {
-              "title": "Walls Come Tumbling Down",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Walls Come Tumbling Down",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1985-05",
-              "score": 100
-            },
-            {
-              "title": "Walls Come Tumbling Down",
-              "artists": "Style Council",
-              "firstReleaseDate": "1985",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "You're the best thing",
-          "hits": [
-            {
-              "title": "You're the Best Thing",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2002-01-28",
-              "score": 100
-            },
-            {
-              "title": "You’re the Best Thing",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1993",
-              "score": 100
-            },
-            {
-              "title": "You’re the Best Thing",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1998-12-23",
-              "score": 100
-            },
-            {
-              "title": "You’re the Best Thing",
-              "artists": "The Style Council",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "You’re the Best Thing",
-              "artists": "The Style Council",
-              "firstReleaseDate": "1985-09",
-              "score": 100
             }
           ]
         }
@@ -8753,6 +6551,7 @@
             "[unknown]",
             "[unbekannt]"
           ],
+          "specialPurpose": true,
           "titleChecks": [
             {
               "title": "Myrskyn jälkeen",
@@ -8821,32 +6620,32 @@
           "hits": [
             {
               "title": "Myrskyn jälkeen",
+              "artists": "Valamonks",
+              "firstReleaseDate": "2001",
+              "score": 100
+            },
+            {
+              "title": "Myrskyn jälkeen",
               "artists": "Iku-Turso",
-              "firstReleaseDate": "2019-09-15",
-              "score": 100
-            },
-            {
-              "title": "Myrskyn jälkeen",
-              "artists": "Eeppi Ursin",
-              "firstReleaseDate": "2023-01-27",
-              "score": 100
-            },
-            {
-              "title": "Myrskyn jälkeen",
-              "artists": "Rajaton, Kari Tapio",
-              "firstReleaseDate": "2017",
+              "firstReleaseDate": "2019-08-08",
               "score": 100
             },
             {
               "title": "Myrskyn Jälkeen",
               "artists": "Kari Tapio",
-              "firstReleaseDate": "2012",
+              "firstReleaseDate": "2008",
               "score": 100
             },
             {
               "title": "Myrskyn jälkeen",
-              "artists": "Valamonks",
-              "firstReleaseDate": "2001",
+              "artists": "Kari Tapio",
+              "firstReleaseDate": "1995",
+              "score": 100
+            },
+            {
+              "title": "Myrskyn jälkeen",
+              "artists": "Lasse Pihlajamaa",
+              "firstReleaseDate": "1996",
               "score": 100
             }
           ]
@@ -8857,19 +6656,19 @@
             {
               "title": "Kaduilla tuulee",
               "artists": "Jari Sillanpää",
-              "firstReleaseDate": "2000",
+              "firstReleaseDate": "2012-05-16",
               "score": 100
             },
             {
               "title": "Kaduilla tuulee",
-              "artists": "Jani Koskinen",
-              "firstReleaseDate": "2012-06-13",
+              "artists": "Jari Sillanpää",
+              "firstReleaseDate": "1997",
               "score": 100
             },
             {
-              "title": "Kaduilla Tuulee",
-              "artists": "o'Ou",
-              "firstReleaseDate": "1997",
+              "title": "Kaduilla tuulee",
+              "artists": "Cheek",
+              "firstReleaseDate": "2012-11-16",
               "score": 100
             },
             {
@@ -9010,32 +6809,31 @@
           "hits": [
             {
               "title": "Bjällerklang",
-              "artists": "Anders Lundin",
-              "firstReleaseDate": "2011",
+              "artists": "Rally",
+              "firstReleaseDate": "1997-12-02",
               "score": 100
             },
             {
               "title": "Bjällerklang",
-              "artists": "Marcus Österdahls orkester, Nackabarnen",
-              "firstReleaseDate": "2002",
+              "artists": "Agnetha, Linda",
               "score": 100
             },
             {
               "title": "Bjällerklang",
-              "artists": "Vikingarna",
-              "firstReleaseDate": "1988",
+              "artists": "Agnetha, Linda",
+              "firstReleaseDate": "1981-10",
               "score": 100
             },
             {
               "title": "Bjällerklang",
-              "artists": "Sten & Stanley",
-              "firstReleaseDate": "1991",
+              "artists": "Cat Rapes Dog",
+              "firstReleaseDate": "1992-12-20",
               "score": 100
             },
             {
               "title": "Bjällerklang",
-              "artists": "Roland Cedermark",
-              "firstReleaseDate": "1985",
+              "artists": "Simone Moreno, Saga Brodersen, Signe Brodersen",
+              "firstReleaseDate": "2005-12-01",
               "score": 100
             }
           ]
@@ -9079,31 +6877,31 @@
           "hits": [
             {
               "title": "Hej mitt vinterland",
-              "artists": "Vikingarna",
-              "firstReleaseDate": "2002-11-18",
+              "artists": "Lotta Engberg",
+              "firstReleaseDate": "2014",
               "score": 100
             },
             {
               "title": "Hej mitt vinterland",
-              "artists": "Carola",
-              "firstReleaseDate": "2007",
-              "score": 100
-            },
-            {
-              "title": "Hej mitt vinterland",
-              "artists": "Family Four",
-              "firstReleaseDate": "2012",
+              "artists": "Tomas Blank",
+              "firstReleaseDate": "2012-11-23",
               "score": 100
             },
             {
               "title": "Hej, mitt vinterland",
-              "artists": "Mats Bergström",
-              "firstReleaseDate": "2012",
+              "artists": "Carola",
+              "firstReleaseDate": "1994",
               "score": 100
             },
             {
               "title": "Hej mitt vinterland",
-              "artists": "Carola",
+              "artists": "Arne Alligator & Djungeltrumman",
+              "firstReleaseDate": "2011-12-14",
+              "score": 100
+            },
+            {
+              "title": "Hej mitt vinterland",
+              "artists": "Magnus Johansson",
               "score": 100
             }
           ]
@@ -9233,13 +7031,14 @@
             "Walt Disney World",
             "Elena of Avalor Cast"
           ],
+          "specialPurpose": true,
           "titleChecks": [
             {
               "title": "I Just Can't Wait To Be King",
               "found": true,
-              "canonicalTitle": "I Just Can’t Wait to Be King",
+              "canonicalTitle": "I Just Can't Wait to Be King",
               "score": 100,
-              "firstReleaseDate": "2004"
+              "firstReleaseDate": "2015"
             },
             {
               "title": "I Wanna Be Like You",
@@ -9307,33 +7106,32 @@
           "title": "I Just Can't Wait To Be King",
           "hits": [
             {
+              "title": "I Just Can't Wait to Be King",
+              "artists": "The Jungle Band & the Safari Singers",
+              "firstReleaseDate": "1996-12-17",
+              "score": 100
+            },
+            {
+              "title": "I Just Can't Wait To Be King",
+              "artists": "University of Illinois Xtension Chords",
+              "score": 100
+            },
+            {
               "title": "I Just Can’t Wait to Be King",
               "artists": "The West End Orchestra & Singers",
               "firstReleaseDate": "2002-05-27",
               "score": 100
             },
             {
-              "title": "I Just Can’t Wait to Be King",
-              "artists": "The London Theatre Ensemble, The London Pops Orchestra",
-              "firstReleaseDate": "1997",
-              "score": 100
-            },
-            {
-              "title": "I Just Can't Wait To Be King",
-              "artists": "Kingston Symphony",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "I Just Can’t Wait to Be King",
-              "artists": "Halocene",
-              "firstReleaseDate": "2019",
-              "score": 100
-            },
-            {
               "title": "I Just Can't Wait to Be King",
-              "artists": "NateWantsToBattle",
-              "firstReleaseDate": "2015-06-04",
+              "artists": "The African Spirit Society",
+              "firstReleaseDate": "2010",
+              "score": 100
+            },
+            {
+              "title": "I Just Can’t Wait to Be King",
+              "artists": "Ziyi He, Shuyuan Pan, Qiming Zhang",
+              "firstReleaseDate": "2019-07-11",
               "score": 100
             }
           ]
@@ -9343,30 +7141,31 @@
           "hits": [
             {
               "title": "I Wanna Be Like You",
-              "artists": "The Dandys",
-              "firstReleaseDate": "1998-06-15",
-              "score": 100
-            },
-            {
-              "title": "I Wanna Be Like You",
-              "artists": "Allies",
-              "score": 100
-            },
-            {
-              "title": "I Wanna Be Like You",
-              "artists": "Rolf Harris",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "I Wanna Be Like You",
-              "artists": "Sweet Emma and the Mood Swingers",
-              "firstReleaseDate": "2006",
+              "artists": "The Brown Derbies",
+              "firstReleaseDate": "2000",
               "score": 100
             },
             {
               "title": "I Wanna Be Like You",
               "artists": "The Dandys",
+              "firstReleaseDate": "2002-04-08",
+              "score": 100
+            },
+            {
+              "title": "I Wanna Be Like You",
+              "artists": "Big Bad Voodoo Daddy",
+              "firstReleaseDate": "1996-10-22",
+              "score": 100
+            },
+            {
+              "title": "I Wanna Be Like You",
+              "artists": "The Brown Derbies",
+              "firstReleaseDate": "1999",
+              "score": 100
+            },
+            {
+              "title": "I Wanna Be Like You",
+              "artists": "Turnpike Cruisers",
               "firstReleaseDate": "1997",
               "score": 100
             }
@@ -9400,8 +7199,8 @@
             },
             {
               "title": "I'll Make a Man Out of You",
-              "artists": "Jonathan Young",
-              "firstReleaseDate": "2014-12-01",
+              "artists": "Our Last Night",
+              "firstReleaseDate": "2022-11-15",
               "score": 100
             }
           ]
@@ -9463,16 +7262,15 @@
             {
               "title": "Hard to say I'm sorry",
               "found": true,
-              "canonicalTitle": "Hard To Say I'm Sorry",
-              "score": 100,
-              "firstReleaseDate": "1998"
+              "canonicalTitle": "Hard to Say I’m Sorry",
+              "score": 100
             },
             {
               "title": "You're the inspiration",
               "found": true,
               "canonicalTitle": "You’re the Inspiration",
               "score": 100,
-              "firstReleaseDate": "2009-05-05"
+              "firstReleaseDate": "1984-05-01"
             }
           ]
         },
@@ -9526,111 +7324,6 @@
             {
               "title": "You're the inspiration",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "I don't wanna live without your love",
-          "hits": [
-            {
-              "title": "I Don’t Wanna Live Without Your Love",
-              "artists": "Albert Hammond",
-              "firstReleaseDate": "2013-11-01",
-              "score": 100
-            },
-            {
-              "title": "I Don't Wanna Live Without Your Love",
-              "artists": "Chicago",
-              "firstReleaseDate": "1988-12",
-              "score": 100
-            },
-            {
-              "title": "I Don’t Wanna Live Without Your Love",
-              "artists": "Chicago",
-              "firstReleaseDate": "1997-06-25",
-              "score": 100
-            },
-            {
-              "title": "I Don't Wanna Live Without Your Love",
-              "artists": "Toto Sorioso",
-              "firstReleaseDate": "2012",
-              "score": 100
-            },
-            {
-              "title": "I Don’t Wanna Live Without Your Love",
-              "artists": "Chicago",
-              "firstReleaseDate": "2007-10-10",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Hard to say I'm sorry",
-          "hits": [
-            {
-              "title": "Hard to Say I’m Sorry",
-              "artists": "Aquagen",
-              "firstReleaseDate": "2002-12-02",
-              "score": 100
-            },
-            {
-              "title": "Hard to Say I'm Sorry",
-              "artists": "Auscultate",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Hard to Say I'm Sorry",
-              "artists": "Aquagen",
-              "firstReleaseDate": "2002-10-08",
-              "score": 100
-            },
-            {
-              "title": "“Hard to Say I’m Sorry”",
-              "artists": "Az Yet",
-              "score": 100
-            },
-            {
-              "title": "Hard to Say I'm Sorry",
-              "artists": "e-ject",
-              "firstReleaseDate": "2002",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "You're the inspiration",
-          "hits": [
-            {
-              "title": "You’re the Inspiration",
-              "artists": "Peter Cetera",
-              "firstReleaseDate": "2004-12-14",
-              "score": 100
-            },
-            {
-              "title": "You’re the Inspiration",
-              "artists": "Dianne Elise",
-              "firstReleaseDate": "2007",
-              "score": 100
-            },
-            {
-              "title": "You're the Inspiration",
-              "artists": "Peter Cetera",
-              "firstReleaseDate": "1998",
-              "score": 100
-            },
-            {
-              "title": "You're the Inspiration",
-              "artists": "Julian Miranda",
-              "firstReleaseDate": "2006-11-06",
-              "score": 100
-            },
-            {
-              "title": "You're the inspiration",
-              "artists": "Teiva LC",
-              "score": 100
             }
           ]
         }
@@ -9801,32 +7494,32 @@
           "hits": [
             {
               "title": "So Long, Farewell",
-              "artists": "The West End Orchestra & Singers",
-              "firstReleaseDate": "2008",
+              "artists": "Freddie McKay",
+              "firstReleaseDate": "2002",
               "score": 100
             },
             {
               "title": "So Long, Farewell",
-              "artists": "Ariane Rinehart, Michael Nigro, Ella Watts‐Gorman, Joe West, Sophia Caruso, Grace Rundhaug, Peyton Ella",
-              "firstReleaseDate": "2013",
-              "score": 100
-            },
-            {
-              "title": "So Long, Farewell",
-              "artists": "Johnny Cashpoint",
-              "firstReleaseDate": "2005-03",
+              "artists": "Charmian Carr, Heather Menzies, Nicholas Hammond, Duane Chase, Angela Cartwright, Debbie Turner, Kym Karath",
+              "firstReleaseDate": "2000-08-21",
               "score": 100
             },
             {
               "title": "So Long Farewell",
-              "artists": "Laurie Levine",
-              "firstReleaseDate": "2012",
+              "artists": "Freddie McKay",
+              "firstReleaseDate": "1971",
               "score": 100
             },
             {
               "title": "So Long, Farewell",
-              "artists": "BRO Brooklyn Rundfunk Orkestrata",
-              "firstReleaseDate": "2011",
+              "artists": "Rusty Truck",
+              "firstReleaseDate": "2008-07-29",
+              "score": 100
+            },
+            {
+              "title": "So Long, Farewell",
+              "artists": "Starbag",
+              "firstReleaseDate": "2003",
               "score": 100
             }
           ]
@@ -10066,13 +7759,15 @@
             "[traditionel]",
             "Traditionnel"
           ],
+          "specialPurpose": true,
           "titleChecks": [
             {
               "title": "Wild rover",
               "found": true,
               "canonicalTitle": "I've Been a Wild Rover",
               "score": 100,
-              "firstReleaseDate": "2007"
+              "firstReleaseDate": "2007",
+              "looseMatch": true
             }
           ]
         },
@@ -10393,7 +8088,7 @@
               "found": true,
               "canonicalTitle": "May It Be",
               "score": 100,
-              "firstReleaseDate": "2006"
+              "firstReleaseDate": "2005"
             }
           ]
         },
@@ -10419,7 +8114,7 @@
         {
           "mbid": "70248960-cb53-4ea4-943a-edb18f7d336f",
           "name": "Bruce Springsteen",
-          "score": 83,
+          "score": 82,
           "type": "Person",
           "country": "US",
           "began": "1949-09-23",
@@ -10434,43 +8129,6 @@
             {
               "title": "May It Be",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "May It Be",
-          "hits": [
-            {
-              "title": "May It Be",
-              "artists": "The Taliesin Orchestra",
-              "firstReleaseDate": "2006",
-              "score": 100
-            },
-            {
-              "title": "May It Be",
-              "artists": "Angelis",
-              "firstReleaseDate": "2006-11-04",
-              "score": 100
-            },
-            {
-              "title": "May It Be",
-              "artists": "M. Short",
-              "firstReleaseDate": "2003-09-18",
-              "score": 100
-            },
-            {
-              "title": "May It Be",
-              "artists": "Róisín",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "May It Be",
-              "artists": "Mary McDowell",
-              "firstReleaseDate": "2003",
-              "score": 100
             }
           ]
         }
@@ -10529,12 +8187,6 @@
               "found": false
             }
           ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Bella Notte (english)",
-          "hits": []
         }
       ],
       "splitFragments": [
@@ -10617,6 +8269,12 @@
                 "Stefanija Džoana Andželina Germanota",
                 "Lady Ga Ga",
                 "レディー・ガガ"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Bella Notte (english)",
+                  "found": false
+                }
               ]
             },
             {
@@ -10637,19 +8295,12 @@
                 "First Lady of Song",
                 "Queen of Jazz",
                 "Lady Ella"
-              ]
-            },
-            {
-              "mbid": "b7d7530d-1102-4c76-b179-cbe091c34fa0",
-              "name": "ピンク・レディー",
-              "score": 92,
-              "type": "Group",
-              "country": "JP",
-              "began": "1976",
-              "aliases": [
-                "Pink Lady",
-                "ピンクレディー",
-                "ピンク・レディー"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Bella Notte (english)",
+                  "found": false
+                }
               ]
             }
           ]
@@ -10660,7 +8311,13 @@
             {
               "mbid": "6b010253-153c-446b-9f9e-735ee31b7f9e",
               "name": "The Tramp",
-              "score": 100
+              "score": 100,
+              "titleChecks": [
+                {
+                  "title": "Bella Notte (english)",
+                  "found": false
+                }
+              ]
             },
             {
               "mbid": "42c5dd12-4e4c-4af0-8c41-89f47aa82cd1",
@@ -10668,21 +8325,21 @@
               "score": 87,
               "type": "Group",
               "disambiguation": "Possibly a stage band put together for the movie Stormy Weather",
-              "country": "US"
-            },
-            {
-              "mbid": "abdda9cf-6d53-4235-8adf-cee782cec63f",
-              "name": "Terry the Tramp",
-              "score": 87,
-              "type": "Person",
-              "disambiguation": "Hells Angels member John Terence Tracy",
               "country": "US",
-              "began": "1939-12-21",
-              "aliases": [
-                "John Terence Tracy"
+              "titleChecks": [
+                {
+                  "title": "Bella Notte (english)",
+                  "found": false
+                }
               ]
             }
           ]
+        }
+      ],
+      "titleOnly": [
+        {
+          "title": "Bella Notte (english)",
+          "hits": []
         }
       ]
     },
@@ -10916,7 +8573,7 @@
               "found": true,
               "canonicalTitle": "Only One Road",
               "score": 100,
-              "firstReleaseDate": "2023"
+              "firstReleaseDate": "1993-11-09"
             },
             {
               "title": "Sil suffisait d'aimer",
@@ -10925,9 +8582,9 @@
             {
               "title": "Let's talk about love",
               "found": true,
-              "canonicalTitle": "Let’s Talk About Love",
+              "canonicalTitle": "Let's Talk About Love",
               "score": 100,
-              "firstReleaseDate": "1997-11-14"
+              "firstReleaseDate": "2000"
             }
           ]
         },
@@ -10982,79 +8639,6 @@
             {
               "title": "Let's talk about love",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Only one road",
-          "hits": [
-            {
-              "title": "Only One Road",
-              "artists": "Emily Druce",
-              "score": 100
-            },
-            {
-              "title": "Only One Road",
-              "artists": "Céline Dion",
-              "firstReleaseDate": "2023",
-              "score": 100
-            },
-            {
-              "title": "Only One Road",
-              "artists": "CDG Karaoke",
-              "firstReleaseDate": "2001-08-01",
-              "score": 100
-            },
-            {
-              "title": "Only One Road",
-              "artists": "Carl Doy",
-              "score": 100
-            },
-            {
-              "title": "Only One Road",
-              "artists": "Highlander",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Sil suffisait d'aimer",
-          "hits": []
-        },
-        {
-          "title": "Let's talk about love",
-          "hits": [
-            {
-              "title": "Let's Talk About Love",
-              "artists": "Karen Jo Fields",
-              "firstReleaseDate": "2003",
-              "score": 100
-            },
-            {
-              "title": "Let’s Talk About Love",
-              "artists": "Bryan Adams",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Let’s Talk About Love",
-              "artists": "The Jaggerz",
-              "firstReleaseDate": "1970",
-              "score": 100
-            },
-            {
-              "title": "Let's Talk About Love",
-              "artists": "Crowell Sisters",
-              "firstReleaseDate": "1996-03-21",
-              "score": 100
-            },
-            {
-              "title": "Let’s Talk About Love",
-              "artists": "The Angry String Orchestra",
-              "firstReleaseDate": "2004",
-              "score": 100
             }
           ]
         }
@@ -11289,14 +8873,14 @@
               "found": true,
               "canonicalTitle": "I Love Rock ’n’ Roll",
               "score": 100,
-              "firstReleaseDate": "2001-10-31"
+              "firstReleaseDate": "2002-01-22"
             },
             {
               "title": "Anticipating",
               "found": true,
               "canonicalTitle": "Anticipating",
               "score": 100,
-              "firstReleaseDate": "2022-03-26"
+              "firstReleaseDate": "2002-01-22"
             }
           ]
         },
@@ -11306,6 +8890,7 @@
           "score": 42,
           "type": "Group",
           "disambiguation": "UK Britney Spears metal tribute band",
+          "likelyTributeOrCover": true,
           "titleChecks": [
             {
               "title": "Boys",
@@ -11349,111 +8934,6 @@
             {
               "title": "Anticipating",
               "found": false
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Boys",
-          "hits": [
-            {
-              "title": "Boys Boys Boys",
-              "artists": "Les Anges",
-              "firstReleaseDate": "2007",
-              "score": 100
-            },
-            {
-              "title": "Boys, Boys, Boys",
-              "artists": "Ensd",
-              "firstReleaseDate": "2023-07-21",
-              "score": 100
-            },
-            {
-              "title": "Boys, Boys, Boys",
-              "artists": "Silhouette",
-              "firstReleaseDate": "1983",
-              "score": 100
-            },
-            {
-              "title": "Boys Boys Boys",
-              "artists": "Bad Pussy",
-              "firstReleaseDate": "1998-08-22",
-              "score": 100
-            },
-            {
-              "title": "Boys, Boys, Boys",
-              "artists": "Betty",
-              "firstReleaseDate": "2001",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "I love rock 'n roll",
-          "hits": [
-            {
-              "title": "I Love Rock 'n' Roll",
-              "artists": "Black Rainbows",
-              "firstReleaseDate": "2011-05-12",
-              "score": 100
-            },
-            {
-              "title": "I Love Rock 'n' Roll",
-              "artists": "Eddie Bo",
-              "firstReleaseDate": "2008",
-              "score": 100
-            },
-            {
-              "title": "I Love Rock 'n' Roll",
-              "artists": "The Ratmen",
-              "firstReleaseDate": "1988",
-              "score": 100
-            },
-            {
-              "title": "I Love Rock 'n' Roll",
-              "artists": "Zombina and the Skeletones",
-              "firstReleaseDate": "2008",
-              "score": 100
-            },
-            {
-              "title": "I Love Rock 'n' Roll",
-              "artists": "Horsch Emohl",
-              "firstReleaseDate": "1994-08-20",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Anticipating",
-          "hits": [
-            {
-              "title": "Anticipating",
-              "artists": "American Paint",
-              "score": 100
-            },
-            {
-              "title": "Anticipating",
-              "artists": "Frank Klepacki",
-              "firstReleaseDate": "2007-12-21",
-              "score": 100
-            },
-            {
-              "title": "Anticipating",
-              "artists": "Gary Burnette, Eric Darken",
-              "score": 100
-            },
-            {
-              "title": "Anticipating",
-              "artists": "The Motels",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Anticipating",
-              "artists": "perkXsoundlabs",
-              "firstReleaseDate": "2013-08-30",
-              "score": 100
             }
           ]
         }
@@ -11586,7 +9066,7 @@
               "found": true,
               "canonicalTitle": "In My Place",
               "score": 100,
-              "firstReleaseDate": "2004-06-07"
+              "firstReleaseDate": "2002-11-26"
             },
             {
               "title": "The scientist",
@@ -11598,38 +9078,14 @@
               "title": "Clocks",
               "found": true,
               "canonicalTitle": "Clocks",
-              "score": 100,
-              "firstReleaseDate": "2007-06-18"
-            }
-          ]
-        },
-        {
-          "mbid": "62c54a75-265f-4e13-ad0a-0fb001559a2e",
-          "name": "Viva La Coldplay",
-          "score": 59,
-          "type": "Group",
-          "disambiguation": "Coldplay tribute band from the UK",
-          "country": "GB",
-          "began": "2006",
-          "titleChecks": [
-            {
-              "title": "In my place",
-              "found": false
-            },
-            {
-              "title": "The scientist",
-              "found": false
-            },
-            {
-              "title": "Clocks",
-              "found": false
+              "score": 100
             }
           ]
         },
         {
           "mbid": "a7331511-edcf-4e1f-b2b4-46f3b30f7f32",
           "name": "冷玩妹",
-          "score": 59,
+          "score": 60,
           "type": "Person",
           "country": "TW",
           "aliases": [
@@ -11649,103 +9105,28 @@
               "found": false
             }
           ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "In my place",
-          "hits": [
-            {
-              "title": "In My Place",
-              "artists": "Robert Mitchum",
-              "firstReleaseDate": "1995-07-05",
-              "score": 100
-            },
-            {
-              "title": "In My Place",
-              "artists": "Coldplay",
-              "firstReleaseDate": "2004-06-07",
-              "score": 100
-            },
-            {
-              "title": "In My Place",
-              "artists": "Coldplay",
-              "score": 100
-            },
-            {
-              "title": "In My Place",
-              "artists": "Coldplay",
-              "score": 100
-            },
-            {
-              "title": "In My Place",
-              "artists": "Coldplay",
-              "score": 100
-            }
-          ]
         },
         {
-          "title": "The scientist",
-          "hits": [
+          "mbid": "62c54a75-265f-4e13-ad0a-0fb001559a2e",
+          "name": "Viva La Coldplay",
+          "score": 59,
+          "type": "Group",
+          "disambiguation": "Coldplay tribute band from the UK",
+          "country": "GB",
+          "began": "2006",
+          "likelyTributeOrCover": true,
+          "titleChecks": [
             {
-              "title": "The Scientist",
-              "artists": "Horse",
-              "score": 100
+              "title": "In my place",
+              "found": false
             },
             {
-              "title": "The Scientist",
-              "artists": "Coldplay",
-              "score": 100
-            },
-            {
-              "title": "The Scientist",
-              "artists": "Coldplay",
-              "score": 100
-            },
-            {
-              "title": "The Scientist",
-              "artists": "FlameMan",
-              "score": 100
-            },
-            {
-              "title": "The Scientist",
-              "artists": "楊乃文",
-              "firstReleaseDate": "2009-04-10",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Clocks",
-          "hits": [
-            {
-              "title": "Clocks, clocks, clocks",
-              "artists": "DeNica Fairman, Nigel Greaves, John Hasler, Rachael Miller, John Green",
-              "score": 100
-            },
-            {
-              "title": "Clocks and Clocks and Clocks",
-              "artists": "Wax Futures",
-              "firstReleaseDate": "2014-03",
-              "score": 88
-            },
-            {
-              "title": "Clocks and Clocks and Clocks",
-              "artists": "Wax Futures",
-              "firstReleaseDate": "2015-01-01",
-              "score": 88
+              "title": "The scientist",
+              "found": false
             },
             {
               "title": "Clocks",
-              "artists": "Vitamin String Quartet",
-              "firstReleaseDate": "2002-11-26",
-              "score": 87
-            },
-            {
-              "title": "Clocks",
-              "artists": "Coldplay",
-              "firstReleaseDate": "2007-06-18",
-              "score": 87
+              "found": false
             }
           ]
         }
@@ -11984,7 +9365,7 @@
               "found": true,
               "canonicalTitle": "Devil in Disguise",
               "score": 100,
-              "firstReleaseDate": "2019"
+              "firstReleaseDate": "1988"
             },
             {
               "title": "In the ghetto",
@@ -12039,82 +9420,6 @@
             }
           ]
         }
-      ],
-      "titleOnly": [
-        {
-          "title": "Ruberneckin'",
-          "hits": []
-        },
-        {
-          "title": "Devil in disguise",
-          "hits": [
-            {
-              "title": "Devil in Disguise",
-              "artists": "Donald Dark",
-              "firstReleaseDate": "1996",
-              "score": 100
-            },
-            {
-              "title": "Devil in Disguise",
-              "artists": "Shattered Realm",
-              "firstReleaseDate": "2005",
-              "score": 100
-            },
-            {
-              "title": "Devil in Disguise",
-              "artists": "The Lost Lyrics",
-              "firstReleaseDate": "1995",
-              "score": 100
-            },
-            {
-              "title": "Devil in Disguise",
-              "artists": "Loyko and Darlene",
-              "firstReleaseDate": "1998-08-16",
-              "score": 100
-            },
-            {
-              "title": "Devil in Disguise",
-              "artists": "Loyko and Darlene",
-              "firstReleaseDate": "1998-08-16",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "In the ghetto",
-          "hits": [
-            {
-              "title": "In the Ghetto (In the Ghetto)",
-              "artists": "Will Tura",
-              "firstReleaseDate": "2018-09-07",
-              "score": 100
-            },
-            {
-              "title": "In the Ghetto",
-              "artists": "Martyn Joseph",
-              "firstReleaseDate": "1992-06-08",
-              "score": 92
-            },
-            {
-              "title": "In the Ghetto",
-              "artists": "Leatherface",
-              "firstReleaseDate": "1990",
-              "score": 92
-            },
-            {
-              "title": "In the Ghetto",
-              "artists": "Ghetto People, L-Viz",
-              "firstReleaseDate": "1997",
-              "score": 92
-            },
-            {
-              "title": "In The Ghetto",
-              "artists": "Eilert Pilarm",
-              "firstReleaseDate": "2006",
-              "score": 92
-            }
-          ]
-        }
       ]
     },
     {
@@ -12162,42 +9467,6 @@
             }
           ]
         }
-      ],
-      "titleOnly": [
-        {
-          "title": "Livet är en fest",
-          "hits": [
-            {
-              "title": "Livet är en fest",
-              "artists": "Nationalteatern",
-              "firstReleaseDate": "1991",
-              "score": 100
-            },
-            {
-              "title": "Livet är en fest",
-              "artists": "Nationalteatern",
-              "firstReleaseDate": "2002-06-10",
-              "score": 100
-            },
-            {
-              "title": "Livet är en fest",
-              "artists": "Nationalteatern",
-              "firstReleaseDate": "2010-11-24",
-              "score": 100
-            },
-            {
-              "title": "Livet är en fest",
-              "artists": "Nationalteatern",
-              "score": 100
-            },
-            {
-              "title": "Livet är en fest",
-              "artists": "Slobobans undergång",
-              "firstReleaseDate": "2010-06-03",
-              "score": 100
-            }
-          ]
-        }
       ]
     },
     {
@@ -12234,14 +9503,14 @@
               "found": true,
               "canonicalTitle": "Hon kommer med solsken",
               "score": 100,
-              "firstReleaseDate": "2002-08-01"
+              "firstReleaseDate": "2002"
             },
             {
               "title": "Maria",
               "found": true,
               "canonicalTitle": "Maria",
               "score": 100,
-              "firstReleaseDate": "2003-03-24"
+              "firstReleaseDate": "2003"
             }
           ]
         },
@@ -12298,77 +9567,6 @@
           ]
         }
       ],
-      "titleOnly": [
-        {
-          "title": "Hon kommer med solsken",
-          "hits": [
-            {
-              "title": "Hon kommer med solsken",
-              "artists": "Östen med Resten",
-              "firstReleaseDate": "2002-02-26",
-              "score": 100
-            },
-            {
-              "title": "Hon Kommer Med Solsken",
-              "artists": "Östen med Resten",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Hon kommer med solsken",
-              "artists": "Östen med Resten",
-              "firstReleaseDate": "2002-08-01",
-              "score": 100
-            },
-            {
-              "title": "Hon kommer med solsken",
-              "artists": "Östen med Resten",
-              "firstReleaseDate": "2002",
-              "score": 100
-            },
-            {
-              "title": "Hon kommer med solsken",
-              "artists": "Östen med Resten",
-              "score": 100
-            }
-          ]
-        },
-        {
-          "title": "Maria",
-          "hits": [
-            {
-              "title": "Maria Maria Maria",
-              "artists": "Stephin Merritt",
-              "firstReleaseDate": "2002-01-22",
-              "score": 100
-            },
-            {
-              "title": "Maria, Maria, Maria",
-              "artists": "Pierre Kartner",
-              "firstReleaseDate": "1994",
-              "score": 100
-            },
-            {
-              "title": "Maria, Maria, Maria",
-              "artists": "Esko Rahkonen",
-              "firstReleaseDate": "1999",
-              "score": 100
-            },
-            {
-              "title": "Maria Maria Maria",
-              "artists": "Martin Eden",
-              "firstReleaseDate": "1989",
-              "score": 100
-            },
-            {
-              "title": "Maria, Maria, Maria",
-              "artists": "Vader Abraham",
-              "firstReleaseDate": "1987",
-              "score": 100
-            }
-          ]
-        }
-      ],
       "splitFragments": [
         {
           "fragment": "Östen",
@@ -12384,21 +9582,25 @@
                 "Östen med rösten",
                 "Jan Östen Hartvig Warnerbring",
                 "Östen Warnebring"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hon kommer med solsken",
+                  "found": false
+                }
               ]
             },
             {
               "mbid": "d7398f0a-eb82-44ce-b653-73e21f9453ba",
               "name": "Østen",
               "score": 94,
-              "type": "Person"
-            },
-            {
-              "mbid": "adb671ed-719d-4192-9b6a-6f015cacc978",
-              "name": "Östen Hedenbratt",
-              "score": 93,
               "type": "Person",
-              "country": "SE",
-              "began": "1926-01-31"
+              "titleChecks": [
+                {
+                  "title": "Hon kommer med solsken",
+                  "found": false
+                }
+              ]
             }
           ]
         },
@@ -12414,6 +9616,15 @@
               "began": "1985",
               "aliases": [
                 "Östen mä Resten"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hon kommer med solsken",
+                  "found": true,
+                  "canonicalTitle": "Hon kommer med solsken",
+                  "score": 100,
+                  "firstReleaseDate": "2002"
+                }
               ]
             },
             {
@@ -12423,15 +9634,13 @@
               "type": "Person",
               "disambiguation": "Danish jazz drummer",
               "country": "DK",
-              "began": "1976-12-07"
-            },
-            {
-              "mbid": "f47da783-49ed-40cd-9bda-5cc3bddb65af",
-              "name": "Kresten Korsbæk",
-              "score": 62,
-              "type": "Person",
-              "disambiguation": "Danish physician and guitarist",
-              "country": "DK"
+              "began": "1976-12-07",
+              "titleChecks": [
+                {
+                  "title": "Hon kommer med solsken",
+                  "found": false
+                }
+              ]
             }
           ]
         }
@@ -12463,7 +9672,7 @@
               "found": true,
               "canonicalTitle": "Rosalita",
               "score": 100,
-              "firstReleaseDate": "1989"
+              "firstReleaseDate": "2005"
             }
           ]
         },
@@ -12910,6 +10119,7 @@
             "[unknown]",
             "[unbekannt]"
           ],
+          "specialPurpose": true,
           "titleChecks": [
             {
               "title": "Rosalita",
@@ -12917,43 +10127,6 @@
               "canonicalTitle": "Rosalita",
               "score": 100,
               "firstReleaseDate": "2000"
-            }
-          ]
-        }
-      ],
-      "titleOnly": [
-        {
-          "title": "Rosalita",
-          "hits": [
-            {
-              "title": "Rosalita",
-              "artists": "Anne E. DeChant",
-              "firstReleaseDate": "2004-05-22",
-              "score": 100
-            },
-            {
-              "title": "Rosalita",
-              "artists": "Åge Aleksandersen, Sambandet",
-              "firstReleaseDate": "2005",
-              "score": 100
-            },
-            {
-              "title": "Rosalita",
-              "artists": "Mari Boine",
-              "firstReleaseDate": "2011-03",
-              "score": 100
-            },
-            {
-              "title": "Rosalita",
-              "artists": "Åge Aleksandersen",
-              "firstReleaseDate": "1990",
-              "score": 100
-            },
-            {
-              "title": "Rosalita",
-              "artists": "Grotescólandia",
-              "firstReleaseDate": "2013",
-              "score": 100
             }
           ]
         }

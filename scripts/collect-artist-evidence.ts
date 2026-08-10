@@ -22,6 +22,12 @@ interface TitleCheck {
     canonicalTitle?: string;
     score?: number;
     firstReleaseDate?: string;
+    /**
+     * The search matches supersets of the title, so a hit is not proof: asking for
+     * "Please don't go" returns "Baby Please Don’t Go", which would otherwise look
+     * like corroboration of a completely unrelated artist.
+     */
+    looseMatch?: boolean;
 }
 
 interface Candidate {
@@ -33,6 +39,17 @@ interface Candidate {
     country?: string;
     began?: string;
     aliases?: string[];
+    /**
+     * MusicBrainz placeholder entities such as `[Disney]` and `[traditional]`. They
+     * score 100 against the strings that are category labels and even collect title
+     * hits, so resolving to one would look like success while meaning nothing.
+     */
+    specialPurpose?: boolean;
+    /**
+     * Tribute and covers acts have recorded the same songs, so title checks alone do
+     * not separate them from the original — `AC/DC UK` matches all three AC/DC titles.
+     */
+    likelyTributeOrCover?: boolean;
     /** Does this candidate actually have the songs the venue files under this name? */
     titleChecks: TitleCheck[];
 }
@@ -57,9 +74,14 @@ interface ArtistEvidence {
      * band. It is here so that whatever judges this evidence has ids available if the
      * string really is a collaboration, not as a suggestion that it is one.
      */
-    splitFragments?: { fragment: string; candidates: Omit<Candidate, "titleChecks">[] }[];
-    /** Fallback for strings that are category labels, where there is no artist to scope by. */
-    titleOnly: { title: string; hits: TitleOnlyHit[] }[];
+    splitFragments?: { fragment: string; candidates: Candidate[] }[];
+    /**
+     * Fallback for strings that are category labels, where there is no artist to scope
+     * by. Collected only when no candidate cleanly has the venue's songs: once one
+     * does, this adds nothing but a list of other people who covered them, and it is
+     * three of the eleven requests an artist costs.
+     */
+    titleOnly?: { title: string; hits: TitleOnlyHit[] }[];
 }
 
 /** Deliberately greedy: over-splitting is harmless here, missing a real split is not. */
@@ -76,6 +98,27 @@ function fragmentsOf(artist: string): string[] {
 const credited = (hit: RecordingHit): string =>
     (hit["artist-credit"] ?? []).map((credit) => credit.name).join(", ") || "(uncredited)";
 
+/** Punctuation and case only, so that "LA woman" and "L.A. Woman" count as the same title. */
+const compare = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+function isLooseMatch(asked: string, got: string): boolean {
+    const [a, b] = [compare(asked), compare(got)];
+    return a !== b && !b.startsWith(a);
+}
+
+async function checkTitle(title: string, arid: string): Promise<TitleCheck> {
+    const top = ((await searchRecordingForArtist(title, arid)).recordings ?? [])[0];
+    const check: TitleCheck = { title, found: top !== undefined };
+    if (top) {
+        check.canonicalTitle = top.title;
+        if (top.score !== undefined) check.score = top.score;
+        const date = top["first-release-date"];
+        if (date !== undefined) check.firstReleaseDate = date;
+        if (isLooseMatch(title, top.title)) check.looseMatch = true;
+    }
+    return check;
+}
+
 function toCandidate(hit: ArtistHit): Omit<Candidate, "titleChecks"> {
     const candidate: Omit<Candidate, "titleChecks"> = { mbid: hit.id, name: hit.name };
     if (hit.score !== undefined) candidate.score = hit.score;
@@ -86,6 +129,10 @@ function toCandidate(hit: ArtistHit): Omit<Candidate, "titleChecks"> {
     if (began !== undefined) candidate.began = began;
     const aliases = (hit.aliases ?? []).map((alias) => alias.name);
     if (aliases.length > 0) candidate.aliases = [...new Set(aliases)];
+    if (/^\[.*\]$/.test(hit.name)) candidate.specialPurpose = true;
+    if (/\b(tribute|cover band|covers band|karaoke)\b/i.test(hit.disambiguation ?? "")) {
+        candidate.likelyTributeOrCover = true;
+    }
     return candidate;
 }
 
@@ -105,44 +152,57 @@ async function collect(artist: string, maxCandidates: number, maxTitles: number)
     for (const hit of hits.slice(0, maxCandidates)) {
         const titleChecks: TitleCheck[] = [];
         for (const title of sampledTitles) {
-            const top = ((await searchRecordingForArtist(title, hit.id)).recordings ?? [])[0];
-            const check: TitleCheck = { title, found: top !== undefined };
-            if (top) {
-                check.canonicalTitle = top.title;
-                if (top.score !== undefined) check.score = top.score;
-                const date = top["first-release-date"];
-                if (date !== undefined) check.firstReleaseDate = date;
-            }
-            titleChecks.push(check);
+            titleChecks.push(await checkTitle(title, hit.id));
         }
         candidates.push({ ...toCandidate(hit), titleChecks });
     }
 
-    const fragments = fragmentsOf(artist);
     const splitFragments: NonNullable<ArtistEvidence["splitFragments"]> = [];
-    for (const fragment of fragments) {
+    for (const fragment of fragmentsOf(artist)) {
         const found = (await searchArtists(fragment, 3)).artists ?? [];
-        splitFragments.push({ fragment, candidates: found.map(toCandidate) });
+        const fragmentCandidates: Candidate[] = [];
+        for (const hit of found.slice(0, 2)) {
+            // One title is enough here: everyone credited on a collaboration should have
+            // the song, and a fragment that has none is a sign the string was not a
+            // collaboration in the first place.
+            const first = sampledTitles[0];
+            const titleChecks = first === undefined ? [] : [await checkTitle(first, hit.id)];
+            fragmentCandidates.push({ ...toCandidate(hit), titleChecks });
+        }
+        splitFragments.push({ fragment, candidates: fragmentCandidates });
     }
 
-    const titleOnly: ArtistEvidence["titleOnly"] = [];
-    for (const title of sampledTitles) {
-        const found = (await searchRecordings(title, 5)).recordings ?? [];
-        titleOnly.push({
-            title,
-            hits: found.map((hit) => {
-                const entry: TitleOnlyHit = { title: hit.title, artists: credited(hit) };
-                const date = hit["first-release-date"];
-                if (date !== undefined) entry.firstReleaseDate = date;
-                if (hit.score !== undefined) entry.score = hit.score;
-                return entry;
-            }),
-        });
-    }
+    // A placeholder entity or a tribute act having the songs proves nothing about who
+    // the venue meant, so neither counts as corroboration and neither may suppress the
+    // title-only fallback — `[Disney]` matches two Disney titles and is not an artist.
+    const corroborated = candidates.some(
+        (candidate) =>
+            candidate.specialPurpose !== true &&
+            candidate.likelyTributeOrCover !== true &&
+            candidate.titleChecks.some((check) => check.found && check.looseMatch !== true),
+    );
 
-    const evidence: ArtistEvidence = { artist, songCount: songs.length, songs, sampledTitles, candidates, titleOnly };
+    const evidence: ArtistEvidence = { artist, songCount: songs.length, songs, sampledTitles, candidates };
     if (splitFragments.length > 0) {
         evidence.splitFragments = splitFragments;
+    }
+
+    if (!corroborated) {
+        const titleOnly: NonNullable<ArtistEvidence["titleOnly"]> = [];
+        for (const title of sampledTitles) {
+            const found = (await searchRecordings(title, 5)).recordings ?? [];
+            titleOnly.push({
+                title,
+                hits: found.map((hit) => {
+                    const entry: TitleOnlyHit = { title: hit.title, artists: credited(hit) };
+                    const date = hit["first-release-date"];
+                    if (date !== undefined) entry.firstReleaseDate = date;
+                    if (hit.score !== undefined) entry.score = hit.score;
+                    return entry;
+                }),
+            });
+        }
+        evidence.titleOnly = titleOnly;
     }
     return evidence;
 }
