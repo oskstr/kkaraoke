@@ -504,20 +504,91 @@ where a substitution is not. Inside an artist's own catalogue it finds Madonna's
 
 ## What is left, and why matching cannot fix most of it
 
-584 songs remain for review, and only a minority of them are string problems:
+532 songs remain for review after the proposal pilot, and only a minority of them are string problems:
 
-| Songs | What it is                                                                                                                                                                                                                                                                                   |
-| ----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   444 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15), `Sound of Music`, `Grease`, `Moulin Rouge`, `Disney` — categories and shows, used where a performer should be.                                                                                       |
-|    98 | The artist is known and has no such title, which usually means the venue credited the wrong performer: `Nothing's gonna change my love for you` under George Harrison, `Natural woman` under Céline Dion, `She's a river` under Elton John, nine solo Spice Girls singles under Spice Girls. |
-|    27 | A prefix match too weak to apply.                                                                                                                                                                                                                                                            |
-|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                                                                                                                     |
-|     2 | Credited to a namesake, as above.                                                                                                                                                                                                                                                            |
+| Songs | What it is                                                                                                                                                                                                                                                                                                        |
+| ----: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   406 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15) — categories used where a performer should be. The shows among them, `Grease`, `Sound of Music`, `Moulin Rouge`, `Frozen II`, `My Fair Lady`, `Jesus Christ Superstar`, have now been resolved to their casts by proposal. |
+|    83 | The artist is known and has no such title, which usually means the venue credited the wrong performer. Fifteen have been fixed by proposal, including `Nothing's gonna change my love for you` under George Harrison and eight solo Spice Girls singles filed under Spice Girls.                                  |
+|    27 | A prefix match too weak to apply.                                                                                                                                                                                                                                                                                 |
+|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                                                                                                                                          |
+|     3 | Credited to a namesake, as above.                                                                                                                                                                                                                                                                                 |
 
-The 98 are the interesting group and the reason the review reasons distinguish them. No better string matching
-reaches them, because the string is not wrong — the attribution is. Fixing one means looking the song up by title
-alone, which is the ambiguous case, and then overruling the venue. That is human work, and the queue exists to
-make it possible rather than to pretend otherwise.
+The 83 are the interesting group and the reason the review reasons distinguish them. No amount of better string
+matching reaches them, because the strings are not wrong — the attribution is. Fixing one means identifying the
+song some other way and then overruling the venue, which is what the proposal layer below is for.
+
+## Who works the review queue
+
+An agent can do most of it, and the reason is not that it guesses well. It is that a guess and a
+correction can be kept separate: `data/proposals.json` holds hypotheses, and a proposal does
+nothing but add keys for the matcher to look for. It takes effect if and only if MusicBrainz
+turns out to hold that artist with that recording. A wrong guess finds nothing and changes
+nothing, which is what makes it safe to let something fallible write that file. Proposals are
+also ranked below every rewriting, so one can never overrule the catalogue's own strings.
+
+What an agent is genuinely good at here is generating the hypothesis, because the failures are
+not string problems and world knowledge is the only thing that reaches them:
+
+| The venue said                                             | What it is                         | Why matching cannot get there                                                                        |
+| ---------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `Lena PH`                                                  | Lena Philipsson                    | An abbreviation. No edit distance spans it.                                                          |
+| `Goo Goo's`                                                | The Go-Go's                        | String distance prefers Goo Goo Dolls. The _songs_ decide: `Our Lips Are Sealed`, `We Got the Beat`. |
+| `Chris Daughtry`                                           | Daughtry                           | The frontman's name for the band's.                                                                  |
+| `Grease`                                                   | John Travolta & Olivia Newton-John | The label is a film, and the cast is not in the string.                                              |
+| `George Harrison – Nothing's gonna change my love for you` | Glenn Medeiros                     | Both strings are spelled correctly. The attribution is wrong.                                        |
+
+`Goo Goo's` is the one to keep in mind: fuzzy matching would confidently reach the wrong band,
+and the only thing that says otherwise is knowing whose songs those are.
+
+### What a pilot of 54 proposals did
+
+48 were confirmed by the dump and applied; 6 found nothing and cost nothing. The failures are
+honest about where the method is weak — all three Finnish guesses were wrong, which is exactly
+the repertoire the venue's own staff know and an English-language model does not:
+
+| Proposed                                     | Outcome                                                   |
+| -------------------------------------------- | --------------------------------------------------------- |
+| `Kaduilla tuulee` → Eppu Normaali            | Not found. Finnish repertoire is the weakest area by far. |
+| `Myrskyn jälkeen`, `Viidestoista yö` → Dingo | Not found.                                                |
+| `Listen with Your Heart` → Linda Hunt        | Not found; the credited performer is someone else.        |
+| `What is youth` → Glen Weston                | Not found.                                                |
+| `Edelweiss` → Christopher Plummer            | Not found — but the song matched anyway, see below.       |
+
+One effect was not designed and is worth keeping. Confirming three `Sound of Music` proposals
+made Julie Andrews a trusted credit for that artist string, and the artist-scoped pass then
+found `Edelweiss` under her without being asked. Naming an artist once pays for their whole
+catalogue.
+
+### What is still not an agent's decision
+
+Three things, and none of them is about accuracy:
+
+- **Whether a show should become its cast at all.** `Grease – Summer nights` is now
+  `John Travolta & Olivia Newton-John`, which is factually right and loses the word people would
+  search for. That is a product question about the browsing UI, not a data question.
+- **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
+  but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
+- **The traditional repertoire.** `Julsång` (19 songs) and `Italian` (15) are mostly carols and
+  Neapolitan standards with no single performer to find. Inventing one would be worse than
+  leaving the label alone; these want a category, not an artist.
+
+So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
+`data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
+
+## The published title is not always the matched one
+
+A prefix match onto a bracketed suffix was applying that suffix as the title, so the site read
+`Lady Marmalade (Thunderpuss club mix)`, `Stronger (instrumental)` and `’74-’75 (acoustic)`. It
+was also dating those songs from the remix, which is the very error the dating pass exists to
+avoid.
+
+The suffix cannot simply be dropped, because plenty of them are the title: `Exhale (Shoop
+Shoop)`, `The Ketchup Song (Aserejé)`, `Ain't Goin' Down ('til the Sun Comes Up)`. What
+separates them is whether the bracket names a master — mix, remix, instrumental, acoustic, live,
+karaoke, backing track, reprise and so on — so that is the test, and it is applied once in the
+matcher so that the title shown and the title dated cannot drift apart. 52 titles lose a marker;
+the genuine subtitles keep theirs.
 
 ## Order of work
 
@@ -536,17 +607,14 @@ Done, and live on the site:
    or not they matched individually. This is what keeps one act under one spelling, and what turns a namesake into
    a flag instead of a correction.
 
-That places 5453 of 5915 songs: 3995 corrected titles, 1143 corrected artist names, 4651 with genres, 5269 dated.
+6. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
+   confirmed and applied; the 6 that were not changed nothing.
 
-Still to do:
+That places 5491 of 5915 songs: 4028 corrected titles, 1193 corrected artist names, 4663 with genres, 5333 dated.
 
-6. **Resolve the residue** through the web service with alias search and title corroboration, judged from
-   evidence. Worth doing for the 98 misattributed songs and the category labels; the dump has nothing more to give.
-7. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`.
-8. Works and composers, for the songs where the writer matters more than the performer.
-9. Artist pages, which are the reason for all of the above. `data/resolved.json` already carries each
-   collaboration's artists separately, with their ids, so the page has what it needs to link them one by one; the
-   `artist` field beside it is the release's credit line, kept because `feat.` tells a guest apart from a duet.
+Still to do: 7. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`. 8. Works and composers, for the songs where the writer matters more than the performer. 9. Artist pages, which are the reason for all of the above. `data/resolved.json` already carries each
+collaboration's artists separately, with their ids, so the page has what it needs to link them one by one; the
+`artist` field beside it is the release's credit line, kept because `feat.` tells a guest apart from a duet.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.

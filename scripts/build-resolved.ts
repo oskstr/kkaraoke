@@ -29,6 +29,8 @@ interface MatchRecord {
     placeholder?: boolean;
     how?: string;
     rewrites?: string[];
+    /** Set where the dump confirmed a proposal, holding the proposer's reasoning. */
+    proposed?: string;
     artistCredit?: string;
     artistMbids?: string[];
     /** MusicBrainz's own recording title, master markers and all. */
@@ -137,6 +139,10 @@ async function main(): Promise<void> {
     const solo = new Map<string, Map<string, number>>();
     for (const match of matches.songs) {
         if (!match.matched || match.trusted !== true) continue;
+        // A confirmed proposal says this string was the wrong credit for this song, so it is
+        // no evidence about what the string means: Geri Halliwell must not become one of the
+        // things `Spice Girls` denotes.
+        if (match.proposed !== undefined) continue;
         const mbids = match.artistMbids ?? [];
         const only = mbids.length === 1 ? mbids[0] : undefined;
         if (only === undefined) continue;
@@ -235,7 +241,9 @@ async function main(): Promise<void> {
         // different person who happens to share a name. The title it found is usually right —
         // P!nk has a So What too — but the recording is not hers, so the year would be wrong,
         // and nothing here is worth applying on the strength of a namesake.
-        const dominant = soleArtist.get(match.artist);
+        // A proposal is exempt, because disagreeing with the artist string is the whole point
+        // of making one: nine of the venue's `Spice Girls` songs are solo singles.
+        const dominant = match.proposed === undefined ? soleArtist.get(match.artist) : undefined;
         const found = artists.get(mbids[0] ?? "");
         if (
             mbids.length === 1 &&

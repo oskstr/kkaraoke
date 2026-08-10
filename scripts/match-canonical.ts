@@ -20,7 +20,7 @@
  */
 
 import { createReadStream } from "node:fs";
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
@@ -264,12 +264,16 @@ interface Wanted {
     /** How much rewriting the key took, so a literal match always wins. */
     rank: number;
     rewrites: Rewrite[];
+    /** Set when the key came from a proposal rather than from the catalogue's own strings. */
+    proposed?: string;
 }
 
 interface Match extends Row {
     how: How;
     /** Which rewritings of the venue's strings it took to get here, if any. */
     rewrites: Rewrite[];
+    /** The proposer's reasoning, where the dump confirmed a proposal rather than a scrape. */
+    proposed?: string;
     trusted: boolean;
 }
 
@@ -382,26 +386,66 @@ function gradePrefix(ourKey: string, recording: string, credit: string): How {
     return full.length - ourKey.length <= 2 ? "spelling" : "loose";
 }
 
+/**
+ * A guess at what a song the dump cannot place actually is. Written by whoever is working the
+ * review queue, by hand or by an agent, and deliberately not authoritative: a proposal only
+ * ever adds keys to look for, so it takes effect if and only if MusicBrainz turns out to hold
+ * that artist with that recording. A wrong guess finds nothing and changes nothing, which is
+ * what makes it safe to let something fallible write this file.
+ */
+interface Proposal {
+    postId: number;
+    artist?: string;
+    title?: string;
+    /** Why the proposer thinks so, kept for whoever reads the match later. */
+    why: string;
+}
+
+/**
+ * Worse than any rewriting, so that a proposal can only win where nothing else matched at
+ * all. Guessing must never be able to overrule the catalogue's own strings.
+ */
+const PROPOSED_RANK = 99;
+
 async function main(): Promise<void> {
     const { values } = parseArgs({
         options: {
             csv: { type: "string" },
             out: { type: "string", default: "data/canonical-matches.json" },
+            proposals: { type: "string", default: "data/proposals.json" },
         },
     });
     if (values.csv === undefined) {
         throw new Error("--csv <canonical_musicbrainz_data.csv> is required.");
     }
 
+    const proposals = new Map<number, Proposal>();
+    if (values.proposals !== undefined) {
+        // Absent is fine: proposals are an optional layer, and the file may not exist yet.
+        const raw = await readFile(values.proposals, "utf8").catch(() => undefined);
+        const file = raw === undefined ? undefined : (JSON.parse(raw) as { proposals: Proposal[] });
+        for (const proposal of file?.proposals ?? []) proposals.set(proposal.postId, proposal);
+        if (proposals.size > 0) console.log(`${proposals.size} proposals to put to the dump`);
+    }
+
     // Several songs can share a key: the catalogue lists some songs twice under different
     // punch-in numbers.
     const wanted = new Map<string, Wanted[]>();
+    const add = (key: string, entry: Wanted): void => {
+        const existing = wanted.get(key);
+        if (existing === undefined) wanted.set(key, [entry]);
+        else existing.push(entry);
+    };
     for (const song of catalogue.songs) {
         for (const { key, rewrites } of keysFor(song.artist, song.song)) {
-            const entry = { postId: song.postId, rank: rewrites.length, rewrites };
-            const existing = wanted.get(key);
-            if (existing === undefined) wanted.set(key, [entry]);
-            else existing.push(entry);
+            add(key, { postId: song.postId, rank: rewrites.length, rewrites });
+        }
+        const proposal = proposals.get(song.postId);
+        if (proposal !== undefined) {
+            const keys = keysFor(proposal.artist ?? song.artist, proposal.title ?? song.song);
+            for (const { key, rewrites } of keys) {
+                add(key, { postId: song.postId, rank: PROPOSED_RANK, rewrites, proposed: proposal.why });
+            }
         }
     }
 
@@ -423,6 +467,7 @@ async function main(): Promise<void> {
             ...row,
             how,
             rewrites: entry.rewrites,
+            ...(entry.proposed === undefined ? {} : { proposed: entry.proposed }),
             rank,
             trusted: TRUSTED.includes(how),
         });
