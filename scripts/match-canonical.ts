@@ -182,6 +182,31 @@ function tolerance(key: string): number {
     return key.length >= 7 ? 1 : 0;
 }
 
+/**
+ * Whether one key is the other with two neighbouring characters swapped, which is what makes
+ * `Vouge` out of `Vogue`. Short titles get this and nothing else: a transposition is a slip
+ * of the fingers rather than a different word, so it stays safe at lengths where a single
+ * substitution would not be.
+ */
+function transposed(a: string, b: string): boolean {
+    if (a.length !== b.length) {
+        return false;
+    }
+    const differing = [...a].flatMap((char, index) => (char === b[index] ? [] : [index]));
+    const [first, second] = differing;
+    return (
+        differing.length === 2 &&
+        first !== undefined &&
+        second === first + 1 &&
+        a[first] === b[second] &&
+        a[second] === b[first]
+    );
+}
+
+/** Close enough to be the same title, given how much room a key of this length has. */
+const nearlySame = (candidate: string, key: string): boolean =>
+    tolerance(key) === 0 ? transposed(candidate, key) : within(candidate, key, tolerance(key));
+
 interface Row {
     artistCredit: string;
     artistMbids: string[];
@@ -469,7 +494,8 @@ async function main(): Promise<void> {
                         .filter(([key]) => within(key, artistKey, slack))
                         .map(([, entry]) => entry);
         const titleKey = combinedLookup(withoutAnnotation(song.song));
-        if (titleKey.length === 0 || tolerance(titleKey) === 0) continue;
+        // A key too short for an edit is still worth reaching for on a transposition alone.
+        if (titleKey.length < 4) continue;
         for (const entry of reachable) {
             for (const credit of entry.credits) {
                 const bucket = nearWanted.get(credit);
@@ -492,7 +518,7 @@ async function main(): Promise<void> {
                 if (rest.length === 0) continue;
                 let row: Row | undefined;
                 for (const entry of entries) {
-                    if (!within(rest, entry.titleKey, tolerance(entry.titleKey))) continue;
+                    if (!nearlySame(rest, entry.titleKey)) continue;
                     row ??= toRow(line);
                     if (row === undefined) return;
                     if (!row.artistMbids.some((mbid) => entry.mbids.has(mbid))) continue;

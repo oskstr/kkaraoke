@@ -57464,7 +57464,18 @@
       "id": 3360,
       "artist": "Madonna",
       "song": "Vouge",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Madonna",
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "recording": "Vogue",
+      "recordingMbid": "99d4b12e-183b-4a49-9a26-38d15912b257",
+      "release": "Boy Toy",
+      "score": 88102,
+      "how": "near",
+      "rewrites": [],
+      "trusted": true
     },
     {
       "postId": 51212,

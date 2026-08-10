@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T17:26:29.156Z",
+  "generatedAt": "2026-08-10T17:39:18.046Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -15,6 +15,7 @@
         "euro house",
         "pop"
       ],
+      "year": 1993,
       "how": "exact"
     },
     {
@@ -604,6 +605,7 @@
         "dance-pop",
         "teen pop"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -5923,6 +5925,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -11953,6 +11956,7 @@
         "new wave",
         "post-punk"
       ],
+      "year": 1985,
       "how": "exact"
     },
     {
@@ -16611,6 +16615,7 @@
         "country",
         "country folk"
       ],
+      "year": 1974,
       "how": "exact"
     },
     {
@@ -16812,6 +16817,7 @@
         "country pop",
         "pop"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -17957,6 +17963,7 @@
         "rock and roll",
         "blues"
       ],
+      "year": 1959,
       "how": "exact"
     },
     {
@@ -19079,6 +19086,7 @@
         "02db9e84-a750-4d22-b5b1-c769e698dc6c"
       ],
       "recordingMbid": "a3e3e340-8a08-4fa6-926d-009c8aa191e2",
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -20040,6 +20048,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1963,
       "how": "exact"
     },
     {
@@ -20673,6 +20682,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -27072,6 +27082,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -27198,6 +27209,7 @@
         "heartland rock",
         "americana"
       ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -35235,6 +35247,7 @@
         "alternative rock",
         "rock"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -39780,6 +39793,7 @@
         "country",
         "contemporary country"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -41570,6 +41584,7 @@
         "heartland rock",
         "americana"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -46393,15 +46408,18 @@
     },
     {
       "postId": 51426,
+      "sortAs": "Madonna",
+      "title": "Vogue",
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
-      "sortAs": "Madonna",
+      "recordingMbid": "99d4b12e-183b-4a49-9a26-38d15912b257",
       "genres": [
         "pop",
         "dance-pop",
         "art pop"
-      ]
+      ],
+      "how": "near"
     },
     {
       "postId": 51212,
@@ -50146,6 +50164,7 @@
         "pop",
         "rockabilly"
       ],
+      "year": 1958,
       "how": "exact"
     },
     {
@@ -52034,6 +52053,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -52081,6 +52101,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -52342,6 +52363,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -70576,6 +70598,7 @@
         "art pop",
         "pop rock"
       ],
+      "year": 1984,
       "how": "exact"
     },
     {
@@ -73725,6 +73748,7 @@
         "943e3724-27e7-4e23-9b1c-cc5d46b5bcc7"
       ],
       "recordingMbid": "c3f8ac07-1b9f-4b65-ae0b-3c9fa35e65e2",
+      "year": 2014,
       "how": "exact"
     },
     {
@@ -74000,6 +74024,7 @@
         "pop rock",
         "progressive rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -78429,6 +78454,7 @@
         "pop",
         "sunshine pop"
       ],
+      "year": 1964,
       "how": "exact"
     },
     {
@@ -78952,6 +78978,7 @@
         "943e3724-27e7-4e23-9b1c-cc5d46b5bcc7"
       ],
       "recordingMbid": "c3f8ac07-1b9f-4b65-ae0b-3c9fa35e65e2",
+      "year": 2014,
       "how": "exact"
     },
     {
@@ -85371,13 +85398,6 @@
       "id": 3270,
       "artist": "Oscar Linnros",
       "song": "Från och med du",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 51426,
-      "id": 3360,
-      "artist": "Madonna",
-      "song": "Vouge",
       "reason": "no match in the canonical dump"
     },
     {
