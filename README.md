@@ -24,6 +24,8 @@ from a file in the repository, so builds need no database, no credentials and no
 /
 ├── data/
 │   └── songs.json          # scraped catalogue, the site's only data source
+├── docs/
+│   └── song-data.md        # design for correcting and enriching the catalogue
 ├── public/
 │   └── favicon.svg
 ├── scripts/
@@ -94,6 +96,9 @@ and aborts rather than writing a partial or empty catalogue if the page changes 
 a quick check, and `--delay <ms>` (1 second by default) spaces out the requests.
 
 A refresh is therefore a data change like any other: re-run the script, read the diff, and deploy it.
+
+The catalogue is the venue's data verbatim, typos and all, so `Ace of Base` and `Ace of base` are currently two
+different artists. [docs/song-data.md](docs/song-data.md) is the design for correcting and enriching it.
 
 ## Styling
 
