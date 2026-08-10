@@ -80,7 +80,8 @@ by hand after editing `prisma/schema.prisma`.
 The connection URL lives in two places for two different consumers. The application reads `DATABASE_URL` directly and
 passes it to the `@prisma/adapter-pg` driver adapter, which Prisma 7 requires in place of the old Rust query engine.
 `prisma.config.ts` supplies the same URL to the Prisma CLI, because Prisma 7 no longer accepts `url` in the datasource
-block of `schema.prisma`.
+block of `schema.prisma`. It reads `.env` with Node's built-in `process.loadEnvFile()`, since Prisma 7 does not load
+`.env` on its own.
 
 ## Styling
 
