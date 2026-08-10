@@ -444,13 +444,17 @@ MusicBrainz also holds as a genuine later recording, the year follows the later 
 `Girls Just Want to Have Fun`. The title is right, the artist is right, and the year is twelve years late.
 
 The measured rate of that, and of the related case where the earliest _dated_ release of a title is a reissue, is
-about 8%: of the 957 dated songs whose artist has an end date, 74 carry a year after it. Some of those are the
+about 7%: of the 1341 dated songs whose artist has an end date, 94 carry a year after it. Some of those are the
 error and some are the test misfiring — a compilation can legitimately postdate a band's dissolution, and
 MusicBrainz has more than one artist called Chicago — but it is the right order of magnitude to quote. A year
 before the artist existed is rejected outright, since that one is impossible rather than merely suspicious.
 
 The distribution is a good sanity check in its own right. It peaks in the 1990s and 2000s, tails off through the
-1970s and 60s, and has 35 songs before 1960, which is what a karaoke catalogue should look like.
+1970s and 60s, and has 58 songs before 1960, which is what a karaoke catalogue should look like.
+
+Coverage is the argument for the wide-then-narrow order. The wide pass at five pairs to a query dated 76% of the
+recordings for 1041 requests; a narrow pass at two pairs over just the gaps took that to **97%** for 660 more.
+Neither would have been a good way to do the whole job on its own.
 
 ## Order of work
 
