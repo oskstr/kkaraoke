@@ -1,0 +1,592 @@
+{
+    "verdicts": [
+        {
+            "artist": "Hall & Oates",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Daryl Hall & John Oates",
+                    "mbid": "debabff3-2559-46e5-862d-ef2a906d7010"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Top candidate Daryl Hall & John Oates aliases include Hall & Oates and hits all three sampled titles; tribute/chorus candidates have no title hits."
+        },
+        {
+            "artist": "Rem",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "R.E.M.",
+                    "mbid": "ea4dfa26-f633-4da6-a52a-f49ea4897b58"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "R.E.M. hits Everybody Hurts, Losing My Religion and Shiny Happy People; same-spelling Malaysian/Japanese persons have no title hits."
+        },
+        {
+            "artist": "Abba",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "ABBA",
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Swedish pop group ABBA hits all three sampled titles; the Parisian choir and tribute band do not (tribute only hits one)."
+        },
+        {
+            "artist": "Beatles",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Beatles",
+                    "mbid": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "The Beatles is the score-100 match for the band name and hits all sampled titles; Lennon/McCartney also hit titles but the string names the group, not members."
+        },
+        {
+            "artist": "Ac/Dc",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "AC/DC",
+                    "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Australian AC/DC hits all three titles at score 100; AC/DC UK is an explicit tribute band despite also having title hits."
+        },
+        {
+            "artist": "Inxs",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "INXS",
+                    "mbid": "481bf5f9-2e7c-4c44-b08a-05b32bc7c00d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "INXS has Need You Tonight; tribute-style candidates have no title hit."
+        },
+        {
+            "artist": "Kiss",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "KISS",
+                    "mbid": "e1f1e33e-2e4c-4d43-b91b-7064068d3283"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "US rock band KISS hits all three sampled titles; other Kiss* groups have none."
+        },
+        {
+            "artist": "Mamas & The Papas",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Mamas & the Papas",
+                    "mbid": "ff294730-0315-440d-a543-54005779c15b"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Single group candidate hits both titles; split fragments are not needed because the whole-string match already accounts for the band name."
+        },
+        {
+            "artist": "Adam & The Ants",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Adam and the Ants",
+                    "mbid": "75d4f194-969c-4538-b789-742f3eb3d02c"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Adam and the Ants hits both titles as one band; fragment splits into Adam / The Ants are false separators."
+        },
+        {
+            "artist": "Simon & Garfunkel",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Simon & Garfunkel",
+                    "mbid": "5d02f264-e225-41ff-83f7-d9b1f0b1874a"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Canonical duo entity hits I Am a Rock; revival/tribute acts are weaker and one lacks the title."
+        },
+        {
+            "artist": "KC & The Sunshine Band",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "KC and the Sunshine Band",
+                    "mbid": "76a5a114-ed6a-4eb6-8a81-ad5768d4b41c"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "KC and the Sunshine Band hits all three disco titles; other candidates do not meaningfully match."
+        },
+        {
+            "artist": "Peter, Björn & John",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Peter Bjorn and John",
+                    "mbid": "32a83250-7e26-422d-b9ac-f4564343e9ce"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Peter Bjorn and John hits Young Folks as one group; comma splits yield unrelated Peters/Björns/Johns."
+        },
+        {
+            "artist": "Peter, Paul & Mary",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Peter, Paul and Mary",
+                    "mbid": "3d621c94-2356-4532-ad52-79e0ef73e20c"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Folk trio entity hits both sampled titles; Les Paul & Mary Ford is a different act with no hits."
+        },
+        {
+            "artist": "Emerson, Lake & Palmer",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Emerson, Lake & Palmer",
+                    "mbid": "ad996aef-cc1c-42ac-af5c-619c370f4b8a"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "ELP hits both titles as one group; tribute candidates have no hits."
+        },
+        {
+            "artist": "Florence & The Machine",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Florence + the Machine",
+                    "mbid": "5fee3020-513b-48c2-b1f7-4681b01db0c6"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Florence + the Machine aliases include Florence & the Machine and hits both titles; not a two-artist split."
+        },
+        {
+            "artist": "Christina Aguilera, Lil Kim, Mya & Pink",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Christina Aguilera",
+                    "mbid": "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
+                },
+                {
+                    "name": "Lil’ Kim",
+                    "mbid": "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e"
+                },
+                {
+                    "name": "Mýa",
+                    "mbid": "7c5e39c3-7645-4e37-968d-a4e45cd38c5d"
+                },
+                {
+                    "name": "P!nk",
+                    "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
+                }
+            ],
+            "isCollaboration": true,
+            "reason": "No single artist accounts for the full credit; Christina Aguilera and Lil’ Kim both have Lady Marmalade, Pink Floyd does not so fragment P!nk is the Pink, and fragment Mýa is the US R&B artist."
+        },
+        {
+            "artist": "Lionel Richie & Diana Ross",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Lionel Richie",
+                    "mbid": "3cb25fb2-5547-4b05-adec-1a5e37830d46"
+                },
+                {
+                    "name": "Diana Ross",
+                    "mbid": "60d41417-feda-4734-bbbf-7dcc30e08a83"
+                }
+            ],
+            "isCollaboration": true,
+            "reason": "No joint entity; both Lionel Richie and Diana Ross hit Endless Love as distinct people named in the string (The Supremes is an extra hit, not named)."
+        },
+        {
+            "artist": "Avicii Ft. Robbie Williams",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Avicii",
+                    "mbid": "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5"
+                },
+                {
+                    "name": "Robbie Williams",
+                    "mbid": "db4624cf-0e44-481e-a9dc-2142b833ec2f"
+                }
+            ],
+            "isCollaboration": true,
+            "reason": "Feat. credit: Avicii and Robbie Williams both hit The Days; John Williams only matches a different canonical title (The Days Between)."
+        },
+        {
+            "artist": "Calvin Harris Feat. Ellie Goulding",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Calvin Harris",
+                    "mbid": "8dd98bdc-80ec-4e93-8509-2f46bafc09a7"
+                },
+                {
+                    "name": "Ellie Goulding",
+                    "mbid": "33ca19f4-18c8-4411-98df-ac23890ce9f5"
+                }
+            ],
+            "isCollaboration": true,
+            "reason": "Scottish DJ Calvin Harris and Ellie Goulding both hit I Need Your Love; the American soul Calvin Harris has no title hit."
+        },
+        {
+            "artist": "Kikki, Bettan och Lotta",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Kikki, Bettan & Lotta",
+                    "mbid": "4e141e3c-8d8c-4797-bc7e-ee57ad16a830"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Whole-string group Kikki, Bettan & Lotta hits Vem e det du vill ha; fragment persons are other people and lack the title."
+        },
+        {
+            "artist": "Lilly Wood & The Prick And Robin Schulz",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Lilly Wood and The Prick",
+                    "mbid": "1b72331b-3a97-4981-a81c-eeee9c275d28"
+                },
+                {
+                    "name": "Robin Schulz",
+                    "mbid": "163218c2-9e0f-4d2d-aecb-ebbdef6aab70"
+                }
+            ],
+            "isCollaboration": true,
+            "reason": "Band Lilly Wood and The Prick plus Robin Schulz both hit Prayer in C; the trailing And names a second distinct artist after the band."
+        },
+        {
+            "artist": "Björn Skifs/Blue Swede",
+            "status": "ambiguous",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Both Björn Skifs and Blue Swede hit Hooked on a Feeling; slash joins a singer and his band for the same recording, so evidence cannot choose person, group, or dual credit."
+        },
+        {
+            "artist": "Jimmy Somerville/Bronski Beat",
+            "status": "ambiguous",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Both Jimmy Somerville and Bronski Beat hit Smalltown Boy; slash joins frontman and group for the same song without deciding which credit the venue meant."
+        },
+        {
+            "artist": "Travis/Fran Healey",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Travis",
+                    "mbid": "22a40b75-affc-4e69-8884-266d087e4751"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Scottish Travis hits Closer; Fran Healy has no Closer recording in the evidence, so the slash looks like a singer annotation rather than a second credit."
+        },
+        {
+            "artist": "Rosie/Originals",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Rosie & the Originals",
+                    "mbid": "93935784-781a-4aaa-b1a9-fdee862e36bd"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Whole-string candidate Rosie & the Originals hits Angel Baby; Motown Originals fragments do not, so the slash is mangled band punctuation."
+        },
+        {
+            "artist": "Ace of Base",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Ace of Base",
+                    "mbid": "d4a1404d-e00c-4bac-b3ba-e3557f6468d6"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Ace of Base hits all three sampled titles; related session people do not."
+        },
+        {
+            "artist": "Ace of base",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Ace of Base",
+                    "mbid": "d4a1404d-e00c-4bac-b3ba-e3557f6468d6"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Same Ace of Base entity hits Don’t Turn Around despite the lowercased venue string."
+        },
+        {
+            "artist": "The Doors",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Doors",
+                    "mbid": "9efff43b-3b29-4082-824e-bc82f646f93d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "The Doors hits all three titles; tribute Doors Alive has none and Doors Jr is incomplete/weaker."
+        },
+        {
+            "artist": "The doors",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Doors",
+                    "mbid": "9efff43b-3b29-4082-824e-bc82f646f93d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "The Doors hits Crystal Ship, Love Her Madly and Touch Me; casing difference only."
+        },
+        {
+            "artist": "Fleetwood Mac",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Fleetwood Mac",
+                    "mbid": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Fleetwood Mac hits all three sampled titles; tribute acts named Rumours have none."
+        },
+        {
+            "artist": "Fleetwood mac",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Fleetwood Mac",
+                    "mbid": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Same Fleetwood Mac entity hits Oh Daddy and Don’t Stop."
+        },
+        {
+            "artist": "Jason DeRulo",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Jason Derulo",
+                    "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Jason Derulo hits Whatcha Say; related non-artists in the candidate list do not."
+        },
+        {
+            "artist": "Jason Derulo",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Jason Derulo",
+                    "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Jason Derulo hits Trumpets, Want to Want Me and Swalla."
+        },
+        {
+            "artist": "Style council",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Style Council",
+                    "mbid": "34e56f20-ddda-48c9-a4bb-6bb12df57de0"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "The Style Council (alias Style Council) hits all three sampled titles."
+        },
+        {
+            "artist": "Style Council",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "The Style Council",
+                    "mbid": "34e56f20-ddda-48c9-a4bb-6bb12df57de0"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "The Style Council hits both sampled titles."
+        },
+        {
+            "artist": "Finsk musik",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Swedish for Finnish music: a language/category bucket, not an artist; candidates are unrelated and have no title hits, and title-only returns nothing."
+        },
+        {
+            "artist": "Julsång",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Swedish for Christmas song: a holiday grouping with no MusicBrainz artist candidates at all."
+        },
+        {
+            "artist": "Disney",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Studio/brand label for songs from many films and casts, not a single performing artist; [Disney] is only a MusicBrainz special-purpose artist."
+        },
+        {
+            "artist": "Chicago",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Chicago",
+                    "mbid": "3f5be744-e867-42fb-8913-5fd69e4099b5"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "American band Chicago hits all three sampled ballads; orchestra/other Chicago matches have none."
+        },
+        {
+            "artist": "Sound of Music",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Musical/film title (Edelweiss, My Favourite Things, etc.); same-named artist candidates have zero title hits."
+        },
+        {
+            "artist": "Irish traditional song",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Genre/category label for a folk song, not a named performer; [traditional] is a special-purpose artist, not what the venue string denotes."
+        },
+        {
+            "artist": "Enya (fellowship Of The Ring Soundtrack)",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Enya",
+                    "mbid": "4967c0a1-b9f3-465e-8440-4598fd9fc33c"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Parenthetical is soundtrack context only; Enya hits May It Be and other candidates do not."
+        },
+        {
+            "artist": "Lady & The Tramp",
+            "status": "not-applicable",
+            "artists": [],
+            "isCollaboration": false,
+            "reason": "Disney film title used as a bucket for Bella Notte; no candidate has a title hit, including the studio choir."
+        },
+        {
+            "artist": "Celine Dion",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Céline Dion",
+                    "mbid": "847e8a0c-cc20-4213-9e16-975515c2a926"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Céline Dion hits Only One Road and Let’s Talk About Love (French title miss likely due to missing S’il apostrophe); other Celinese do not."
+        },
+        {
+            "artist": "Britney Spears",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Britney Spears",
+                    "mbid": "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Britney Spears hits all three sampled titles; tribute/similar names do not."
+        },
+        {
+            "artist": "Coldplay",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Coldplay",
+                    "mbid": "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Coldplay hits all three sampled titles; tribute act does not."
+        },
+        {
+            "artist": "Elvis Presley",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Elvis Presley",
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Elvis Presley hits Devil in Disguise and In the Ghetto; Ruberneckin’ misspelling explains the one miss; impersonator candidates have no hits."
+        },
+        {
+            "artist": "Nationalteatern",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Nationalteatern",
+                    "mbid": "7d144ee5-7f90-468c-8c83-c25fa17ef25d"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Nationalteatern hits Livet är en fest; related member candidate does not."
+        },
+        {
+            "artist": "Östen med Resten",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Östen med Resten",
+                    "mbid": "2844b5b7-284b-4fc3-8bd4-0b3297938ee4"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Group Östen med Resten hits both titles; Östen Warnerbring is a different artist (only Maria) and med is part of the band name."
+        },
+        {
+            "artist": "Åge Alexandersen",
+            "status": "resolved",
+            "artists": [
+                {
+                    "name": "Åge Aleksandersen",
+                    "mbid": "012c856b-d7d6-4eca-b6c7-e81586dc164c"
+                }
+            ],
+            "isCollaboration": false,
+            "reason": "Åge Aleksandersen (venue misspelling) hits Rosalita; [unknown] also matching Rosalita is a special-purpose artist and not preferred."
+        }
+    ]
+}
