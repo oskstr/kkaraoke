@@ -6,6 +6,9 @@ dist/
 # generated types
 .astro/
 
+# cached API responses, regenerable and large
+.cache/
+
 # dependencies
 node_modules/
 
