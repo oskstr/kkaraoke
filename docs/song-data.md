@@ -270,6 +270,43 @@ a placeholder nor a tribute act cleanly has the venue's songs identified **exact
 artists**, with no false positives and no misses. That is a cheap arithmetic test over data we already fetch, and
 it means judgement is only needed for a remainder, not for the catalogue.
 
+### And on a sample nobody curated
+
+The 50 were chosen by me, so passing them partly measures which cases I thought of. 1278 of the 2080 artist
+strings have exactly one song, which is the population where corroboration is weakest — one title either hits or
+it does not, with none of the 3-of-3 against 0-of-3 contrast that settles the multi-song cases. So
+`data/pilot/tail-artists.txt` takes 60 of them chosen by hashing the name, which is reproducible and not curated.
+
+**56 of the 60 corroborated cleanly, with no judgement involved.** The four that did not are the useful part, and
+none of them is an artist-identification failure:
+
+- `Little Mermaid` and `Fiddler on the roof` are a film and a musical. Not artists, which is the right answer.
+- `Loa Falkman` and `Lou Bega` are both the top candidate at score 100 with an exact name match. What failed was
+  the title: MusicBrainz appears not to have Falkman's recording of `Symfoni` at all, and the venue writes
+  `Mambo No5` where the canonical title is `Mambo No. 5`, which a phrase search will not match.
+
+So the tail's weakness is **titles, not artists**, and the artist pass can be trusted across the whole catalogue.
+That relocates the remaining risk onto the song pass, which is both the larger job — 5915 lookups against 2080 —
+and the one where the venue's own formatting fights us: 84% of multi-word titles are sentence-cased, and the
+sample also turned up parenthetical annotations (`Part of your world (Disney)`, `Bella Notte (english)`) and lost
+punctuation (`Mambo No5`). `Part of your world (Disney)` returned nothing at all, not even a wrong answer. Title
+normalisation therefore has to happen before the song pass, not after it.
+
+### Revised cost, measured per bucket
+
+A single-song artist costs 5.6 requests, not the 11 the adversarial set averaged, and the tail ran at 2.45 s per
+request. The artist pass is therefore about **14800 requests and 10 to 12 hours**, not 25.
+
+It also does not have to be one job. Ordered by how many songs an artist covers, each chunk is independently
+useful and the work is banked as it goes:
+
+| Chunk                      | Requests | Time | Catalogue covered |
+| :------------------------- | -------: | ---: | ----------------: |
+| 128 artists with 10+ songs |     1400 |  1 h |               37% |
+| 271 with 4-9               |     3000 |  2 h |               63% |
+| 403 with 2-3               |     3200 |  2 h |               78% |
+| 1278 with 1                |     7200 |  5 h |              100% |
+
 ## Order of work
 
 1. Resolve artists, with alias search and title corroboration. Produces artist identity, the case fixes, the
