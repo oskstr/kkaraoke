@@ -57,35 +57,77 @@ export function combinedLookup(...parts: string[]): string {
 }
 
 /**
- * The venue's own systematic deviations, in the order we would rather match. The dropped
- * article is the big one: the catalogue files The Beatles, The Kinks, The Killers and The
- * Cranberries without their article, which no amount of punctuation folding will fix
- * because the missing word is at the front of the key.
+ * The rewritings the venue's strings need before they line up with MusicBrainz's. The
+ * dropped leading article is the big one, and it happens at both ends: the catalogue files
+ * The Beatles, The Kinks and The Cranberries without their article, and does the same to
+ * titles — `Winner takes it all`, `Little Time`, `Rush of blood to the head`. No amount of
+ * punctuation folding fixes that, because the missing word is at the front of the key.
  */
-const VARIANTS = ["as-written", "article-added", "annotation-stripped", "article-added-annotation-stripped"] as const;
-type Variant = (typeof VARIANTS)[number];
+const REWRITES = [
+    "artist-article-added",
+    "title-article-added",
+    "title-article-dropped",
+    "annotation-stripped",
+] as const;
+type Rewrite = (typeof REWRITES)[number];
 
 /** Trailing parentheses are the venue annotating, or MusicBrainz marking a version. */
 const withoutAnnotation = (title: string): string => title.replace(/\s*[([][^()[\]]*[)\]]\s*$/, "").trim();
 
-function keysFor(artist: string, title: string): { key: string; variant: Variant }[] {
-    const bare = withoutAnnotation(title);
-    const candidates: { key: string; variant: Variant }[] = [
-        { key: combinedLookup(artist, title), variant: "as-written" },
-    ];
-    const articled = /^the\s/i.test(artist) ? undefined : `The ${artist}`;
-    if (articled !== undefined) {
-        candidates.push({ key: combinedLookup(articled, title), variant: "article-added" });
+const LEADING_ARTICLE = /^(the|a|an)\s+/i;
+
+interface Form {
+    value: string;
+    rewrites: Rewrite[];
+}
+
+function artistForms(artist: string): Form[] {
+    const forms: Form[] = [{ value: artist, rewrites: [] }];
+    if (!LEADING_ARTICLE.test(artist)) {
+        forms.push({ value: `The ${artist}`, rewrites: ["artist-article-added"] });
     }
+    return forms;
+}
+
+function titleForms(title: string): Form[] {
+    const forms: Form[] = [{ value: title, rewrites: [] }];
+    const bare = withoutAnnotation(title);
     if (bare !== title && bare.length > 0) {
-        candidates.push({ key: combinedLookup(artist, bare), variant: "annotation-stripped" });
-        if (articled !== undefined) {
-            candidates.push({
-                key: combinedLookup(articled, bare),
-                variant: "article-added-annotation-stripped",
+        forms.push({ value: bare, rewrites: ["annotation-stripped"] });
+    }
+    // Both directions, since the venue drops articles far more often than it adds them but
+    // does both. Applied to the annotation-stripped form too, so `Winner takes it all
+    // (duett)` can lose the annotation and gain the article in one go.
+    for (const form of [...forms]) {
+        if (LEADING_ARTICLE.test(form.value)) {
+            forms.push({
+                value: form.value.replace(LEADING_ARTICLE, ""),
+                rewrites: [...form.rewrites, "title-article-dropped"],
             });
+        } else {
+            for (const article of ["The", "A", "An"]) {
+                forms.push({
+                    value: `${article} ${form.value}`,
+                    rewrites: [...form.rewrites, "title-article-added"],
+                });
+            }
         }
     }
+    return forms;
+}
+
+/**
+ * Every key the song could reasonably be filed under, least-rewritten first. Ranking by how
+ * much rewriting a key took is what keeps a rewritten match from beating a literal one.
+ */
+function keysFor(artist: string, title: string): { key: string; rewrites: Rewrite[] }[] {
+    const candidates = artistForms(artist).flatMap((left) =>
+        titleForms(title).map((right) => ({
+            key: combinedLookup(left.value, right.value),
+            rewrites: [...left.rewrites, ...right.rewrites],
+        })),
+    );
+    candidates.sort((a, b) => a.rewrites.length - b.rewrites.length);
     const seen = new Set<string>();
     return candidates.filter((candidate) => !seen.has(candidate.key) && seen.add(candidate.key));
 }
@@ -149,9 +191,18 @@ interface Row {
     score: number;
 }
 
+/** A song asking to be matched under one particular key. */
+interface Wanted {
+    postId: number;
+    /** How much rewriting the key took, so a literal match always wins. */
+    rank: number;
+    rewrites: Rewrite[];
+}
+
 interface Match extends Row {
     how: How;
-    variant: Variant;
+    /** Which rewritings of the venue's strings it took to get here, if any. */
+    rewrites: Rewrite[];
     trusted: boolean;
 }
 
@@ -277,10 +328,10 @@ async function main(): Promise<void> {
 
     // Several songs can share a key: the catalogue lists some songs twice under different
     // punch-in numbers.
-    const wanted = new Map<string, { postId: number; rank: number }[]>();
+    const wanted = new Map<string, Wanted[]>();
     for (const song of catalogue.songs) {
-        for (const { key, variant } of keysFor(song.artist, song.song)) {
-            const entry = { postId: song.postId, rank: VARIANTS.indexOf(variant) };
+        for (const { key, rewrites } of keysFor(song.artist, song.song)) {
+            const entry = { postId: song.postId, rank: rewrites.length, rewrites };
             const existing = wanted.get(key);
             if (existing === undefined) wanted.set(key, [entry]);
             else existing.push(entry);
@@ -290,7 +341,8 @@ async function main(): Promise<void> {
     const best = new Map<number, Match & { rank: number }>();
     const heads = affixIndex(wanted.keys(), "head");
 
-    const consider = (postId: number, rank: number, how: How, row: Row): void => {
+    const consider = (entry: Wanted, how: How, row: Row): void => {
+        const { postId, rank } = entry;
         const existing = best.get(postId);
         if (existing !== undefined) {
             if (rank > existing.rank) return;
@@ -303,7 +355,7 @@ async function main(): Promise<void> {
         best.set(postId, {
             ...row,
             how,
-            variant: VARIANTS[rank] ?? "as-written",
+            rewrites: entry.rewrites,
             rank,
             trusted: TRUSTED.includes(how),
         });
@@ -326,7 +378,7 @@ async function main(): Promise<void> {
         }
         const how: How = asked === key ? "exact" : gradePrefix(asked, row.recording, row.artistCredit);
         for (const entry of entries) {
-            consider(entry.postId, entry.rank, how, row);
+            consider(entry, how, row);
         }
     });
 
@@ -376,7 +428,7 @@ async function main(): Promise<void> {
                     // it, or `Stay` would match everything ending in that word.
                     if (combinedLookup(row.recording) !== titleKey) continue;
                     if (!row.artistMbids.some((mbid) => entry.mbids.has(mbid))) continue;
-                    consider(entry.postId, 0, "artist-scoped", row);
+                    consider({ postId: entry.postId, rank: 0, rewrites: [] }, "artist-scoped", row);
                 }
             }
         });
@@ -444,7 +496,7 @@ async function main(): Promise<void> {
                     row ??= toRow(line);
                     if (row === undefined) return;
                     if (!row.artistMbids.some((mbid) => entry.mbids.has(mbid))) continue;
-                    consider(entry.postId, 0, "near", row);
+                    consider({ postId: entry.postId, rank: 0, rewrites: [] }, "near", row);
                 }
             }
         });
@@ -478,9 +530,9 @@ async function main(): Promise<void> {
         const n = matched.filter((r) => r.how === how).length;
         if (n > 0) console.log(`  ${how}: ${n}`);
     }
-    for (const variant of VARIANTS) {
-        const n = matched.filter((r) => r.variant === variant).length;
-        if (n > 0) console.log(`  via ${variant}: ${n}`);
+    for (const rewrite of REWRITES) {
+        const n = matched.filter((r) => (r.rewrites ?? []).includes(rewrite)).length;
+        if (n > 0) console.log(`  needed ${rewrite}: ${n}`);
     }
     console.log(`  placeholder credits discarded: ${matched.filter((r) => "placeholder" in r).length}`);
 

@@ -32,6 +32,12 @@ interface Correction {
     title?: string;
     genres?: string[];
     year?: number;
+    /**
+     * Present on collaborations only. `artist` above is the release's credit line, which
+     * reads properly but is a single string; this is the same artists individually, with the
+     * ids a page would need to link each of them separately. Nothing renders it yet.
+     */
+    artists?: { mbid: string; name: string }[];
 }
 
 /** Swedish collation, so å, ä and ö sort after z rather than beside a, a and o. */

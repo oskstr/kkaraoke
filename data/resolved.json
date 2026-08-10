@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T16:50:02.015Z",
+  "generatedAt": "2026-08-10T17:26:29.156Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -112,6 +112,18 @@
       "how": "exact"
     },
     {
+      "postId": 51393,
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "sortAs": "Madonna",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "art pop"
+      ]
+    },
+    {
       "postId": 48529,
       "sortAs": "Bon Jovi",
       "artistMbids": [
@@ -212,6 +224,18 @@
       "recordingMbid": "68b32dbc-9601-41bb-a49e-b8361b1a3146",
       "year": 1994,
       "how": "exact"
+    },
+    {
+      "postId": 49679,
+      "artistMbids": [
+        "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
+      ],
+      "sortAs": "John, Elton",
+      "genres": [
+        "pop",
+        "piano rock",
+        "pop rock"
+      ]
     },
     {
       "postId": 48530,
@@ -517,6 +541,7 @@
         "disco",
         "rock"
       ],
+      "year": 1979,
       "how": "exact"
     },
     {
@@ -680,6 +705,7 @@
         "hard rock",
         "glam metal"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -867,6 +893,16 @@
         "ef9df4c9-0e76-451b-b174-2244bcc31f0c",
         "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e"
       ],
+      "artists": [
+        {
+          "mbid": "ef9df4c9-0e76-451b-b174-2244bcc31f0c",
+          "name": "All‐4‐One"
+        },
+        {
+          "mbid": "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e",
+          "name": "鄭秀文"
+        }
+      ],
       "recordingMbid": "dbe18b53-24be-4bf8-994d-1c84d3cf1ef2",
       "genres": [
         "contemporary r&b",
@@ -915,6 +951,16 @@
       "artistMbids": [
         "29e26734-788a-44aa-8d86-a452bc4232a6",
         "57edfe13-c21a-4e94-9f60-67d865f02db2"
+      ],
+      "artists": [
+        {
+          "mbid": "29e26734-788a-44aa-8d86-a452bc4232a6",
+          "name": "Sash!"
+        },
+        {
+          "mbid": "57edfe13-c21a-4e94-9f60-67d865f02db2",
+          "name": "Tina Cousins"
+        }
       ],
       "recordingMbid": "b13abe16-093c-430f-aeab-0e0cc66073cd",
       "genres": [
@@ -1111,6 +1157,16 @@
         "fce5eb9a-95a7-4a54-b9e4-fe1b036fbe57",
         "acf6c776-d0f6-4239-b5a2-a45a613ffa52"
       ],
+      "artists": [
+        {
+          "mbid": "fce5eb9a-95a7-4a54-b9e4-fe1b036fbe57",
+          "name": "The Chieftains"
+        },
+        {
+          "mbid": "acf6c776-d0f6-4239-b5a2-a45a613ffa52",
+          "name": "The Corrs"
+        }
+      ],
       "recordingMbid": "45795976-d6a0-4d68-b062-0e99a316f923",
       "genres": [
         "folk",
@@ -1158,6 +1214,24 @@
         "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e",
         "7c5e39c3-7645-4e37-968d-a4e45cd38c5d",
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
+      ],
+      "artists": [
+        {
+          "mbid": "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
+          "name": "Christina Aguilera"
+        },
+        {
+          "mbid": "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e",
+          "name": "Lil’ Kim"
+        },
+        {
+          "mbid": "7c5e39c3-7645-4e37-968d-a4e45cd38c5d",
+          "name": "Mýa"
+        },
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        }
       ],
       "recordingMbid": "7dd46246-1f40-4bfa-94ee-f63d85cbdf62",
       "genres": [
@@ -1291,6 +1365,16 @@
         "faabb55d-3c9e-4c23-8779-732ac2ee2c0d",
         "e03c5f07-71e9-4e3c-a9fd-2a90e61d2f2e"
       ],
+      "artists": [
+        {
+          "mbid": "faabb55d-3c9e-4c23-8779-732ac2ee2c0d",
+          "name": "Shania Twain"
+        },
+        {
+          "mbid": "e03c5f07-71e9-4e3c-a9fd-2a90e61d2f2e",
+          "name": "Bryan White"
+        }
+      ],
       "recordingMbid": "a5f005ff-d6fb-4834-9773-9742a1bd970a",
       "genres": [
         "country",
@@ -1339,6 +1423,17 @@
         "alternative rock"
       ],
       "year": 2001,
+      "how": "exact"
+    },
+    {
+      "postId": 48091,
+      "sortAs": "Aurora",
+      "title": "The Day It Rained Forever",
+      "artistMbids": [
+        "923e649b-21d3-4b45-b109-50e4978002b6"
+      ],
+      "recordingMbid": "2d6cfc8a-9edf-411a-99d0-4f18f668b2fd",
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -1432,6 +1527,7 @@
         "britpop",
         "pop rock"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -1656,6 +1752,16 @@
         "f0602f55-1770-483d-89bd-4bae0d0ac086",
         "cfbc0924-0035-4d6c-8197-f024653af823"
       ],
+      "artists": [
+        {
+          "mbid": "f0602f55-1770-483d-89bd-4bae0d0ac086",
+          "name": "Jennifer Lopez"
+        },
+        {
+          "mbid": "cfbc0924-0035-4d6c-8197-f024653af823",
+          "name": "Nas"
+        }
+      ],
       "recordingMbid": "5ab304e2-8f37-4c06-ba23-ebfbdb687823",
       "genres": [
         "pop",
@@ -1710,6 +1816,16 @@
       "artistMbids": [
         "54d86cc6-2c30-47b4-bb68-cf5d82560e5c",
         "4147c29e-dd36-412f-815f-3d55867df192"
+      ],
+      "artists": [
+        {
+          "mbid": "54d86cc6-2c30-47b4-bb68-cf5d82560e5c",
+          "name": "Tim Deluxe"
+        },
+        {
+          "mbid": "4147c29e-dd36-412f-815f-3d55867df192",
+          "name": "Sam Obernik"
+        }
       ],
       "recordingMbid": "80732e4f-4858-48d3-bbbe-3eb8b7213392",
       "year": 2002,
@@ -1928,6 +2044,16 @@
         "811900b2-68fc-4d41-8bad-69b7a1f4d628",
         "31bea673-d23a-4889-8da1-7cb040863268"
       ],
+      "artists": [
+        {
+          "mbid": "811900b2-68fc-4d41-8bad-69b7a1f4d628",
+          "name": "Nelly"
+        },
+        {
+          "mbid": "31bea673-d23a-4889-8da1-7cb040863268",
+          "name": "Kelly Rowland"
+        }
+      ],
       "recordingMbid": "799ae640-2717-45ac-9fde-b3852af86709",
       "genres": [
         "hip hop",
@@ -2046,6 +2172,16 @@
       "artistMbids": [
         "7240a9e1-01d1-4322-b34a-ad573703f108",
         "32b81271-e4e7-4ee0-a095-63c7bdac69b8"
+      ],
+      "artists": [
+        {
+          "mbid": "7240a9e1-01d1-4322-b34a-ad573703f108",
+          "name": "Will Young"
+        },
+        {
+          "mbid": "32b81271-e4e7-4ee0-a095-63c7bdac69b8",
+          "name": "Gareth Gates"
+        }
       ],
       "recordingMbid": "f681becc-ef5a-424b-ad32-0db8e7ae9e4b",
       "genres": [
@@ -2316,6 +2452,14 @@
       ],
       "year": 2001,
       "how": "exact"
+    },
+    {
+      "postId": 49007,
+      "artistMbids": [
+        "78e98e0e-f873-4e5e-b4b7-88b7293fd713"
+      ],
+      "artist": "Christina Milian",
+      "sortAs": "Milian, Christina"
     },
     {
       "postId": 49570,
@@ -2600,6 +2744,23 @@
       "how": "exact"
     },
     {
+      "postId": 52360,
+      "artist": "Red Hot Chili Peppers",
+      "sortAs": "Red Hot Chili Peppers",
+      "title": "The Zephyr Song",
+      "artistMbids": [
+        "8bfac288-ccc5-448d-9573-c33ea2aa5c30"
+      ],
+      "recordingMbid": "579c4ad8-f486-4b03-bf67-d07d5c9f9fd6",
+      "genres": [
+        "funk rock",
+        "alternative rock",
+        "rock"
+      ],
+      "year": 2002,
+      "how": "exact"
+    },
+    {
       "postId": 53494,
       "sortAs": "Westlife",
       "title": "Miss You Nights",
@@ -2625,6 +2786,7 @@
         "britpop",
         "pop rock"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -2888,6 +3050,16 @@
       "artistMbids": [
         "ca2b5bce-01cb-4847-bea6-52a9fee31033",
         "4725b170-1021-44d1-ac2a-4212f93e516c"
+      ],
+      "artists": [
+        {
+          "mbid": "ca2b5bce-01cb-4847-bea6-52a9fee31033",
+          "name": "Room 5"
+        },
+        {
+          "mbid": "4725b170-1021-44d1-ac2a-4212f93e516c",
+          "name": "Oliver Cheatham"
+        }
       ],
       "recordingMbid": "8a7b8855-a44a-4d65-8d07-3a0344492988",
       "year": 2001,
@@ -3170,6 +3342,16 @@
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
         "a7412cd0-e0b8-4fa1-8d24-75bb92a84946"
       ],
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        },
+        {
+          "mbid": "a7412cd0-e0b8-4fa1-8d24-75bb92a84946",
+          "name": "William Orbit"
+        }
+      ],
       "recordingMbid": "4f0d06a0-13a5-4c72-8605-8578b52c9c2d",
       "genres": [
         "pop",
@@ -3202,6 +3384,16 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8",
         "c3da3346-2643-48a7-93cd-011f6834b3d7"
+      ],
+      "artists": [
+        {
+          "mbid": "859d0860-d480-4efd-970c-c05d5f1776b8",
+          "name": "Beyoncé"
+        },
+        {
+          "mbid": "c3da3346-2643-48a7-93cd-011f6834b3d7",
+          "name": "Sean Paul"
+        }
       ],
       "recordingMbid": "f53e4d2e-b7b5-4404-9a50-e981892774bf",
       "genres": [
@@ -3248,6 +3440,16 @@
       "artistMbids": [
         "f28cabfc-3cf5-4886-b832-36ab708fbb0a",
         "c3da3346-2643-48a7-93cd-011f6834b3d7"
+      ],
+      "artists": [
+        {
+          "mbid": "f28cabfc-3cf5-4886-b832-36ab708fbb0a",
+          "name": "Blu Cantrell"
+        },
+        {
+          "mbid": "c3da3346-2643-48a7-93cd-011f6834b3d7",
+          "name": "Sean Paul"
+        }
       ],
       "recordingMbid": "1742a8d2-0ee8-4e88-adcb-0aea7f752d78",
       "year": 2002,
@@ -3535,6 +3737,20 @@
       "how": "exact"
     },
     {
+      "postId": 50633,
+      "sortAs": "Warnes, Jennifer",
+      "title": "The Time of My Life",
+      "artistMbids": [
+        "2f140aa6-b99b-4f79-ae33-96018af87fa3"
+      ],
+      "recordingMbid": "c9ff0afe-24e0-45d7-b6d0-b007d638478f",
+      "genres": [
+        "pop"
+      ],
+      "year": 1989,
+      "how": "exact"
+    },
+    {
       "postId": 51636,
       "sortAs": "Cretu, Michael",
       "title": "Moonlight Flower",
@@ -3715,6 +3931,16 @@
         "757e0383-39e2-4345-b406-d6403ab99f9e",
         "5d8a6a6f-44ae-4421-865f-470600f4db65"
       ],
+      "artists": [
+        {
+          "mbid": "757e0383-39e2-4345-b406-d6403ab99f9e",
+          "name": "Mike Reno"
+        },
+        {
+          "mbid": "5d8a6a6f-44ae-4421-865f-470600f4db65",
+          "name": "Ann Wilson"
+        }
+      ],
       "recordingMbid": "c0fa2c9a-4dee-460a-a891-e2814c1caa62",
       "year": 1984,
       "how": "exact"
@@ -3799,6 +4025,16 @@
       "artistMbids": [
         "4cd556a5-db82-43f6-8d55-99598b42da8f",
         "e8bee5d1-a3a5-4c1a-ada4-f1ca22101e84"
+      ],
+      "artists": [
+        {
+          "mbid": "4cd556a5-db82-43f6-8d55-99598b42da8f",
+          "name": "Kenny G"
+        },
+        {
+          "mbid": "e8bee5d1-a3a5-4c1a-ada4-f1ca22101e84",
+          "name": "Michael Bolton"
+        }
       ],
       "recordingMbid": "6cf558f6-3c12-4fe9-865d-4fc48cc50d8e",
       "genres": [
@@ -3940,6 +4176,16 @@
         "3be4099e-f180-4038-af84-ae18a09eab02",
         "668fd73c-bf54-4310-a139-305517f05311"
       ],
+      "artists": [
+        {
+          "mbid": "3be4099e-f180-4038-af84-ae18a09eab02",
+          "name": "Julio Iglesias"
+        },
+        {
+          "mbid": "668fd73c-bf54-4310-a139-305517f05311",
+          "name": "Willie Nelson"
+        }
+      ],
       "recordingMbid": "aab83161-f70b-4538-b747-5de4c6042a62",
       "genres": [
         "canción melódica"
@@ -4037,6 +4283,18 @@
       "recordingMbid": "2ac48a61-b66d-487e-bed7-d710e949f870",
       "year": 1971,
       "how": "exact"
+    },
+    {
+      "postId": 52558,
+      "artistMbids": [
+        "d3b2711f-2baa-441a-be95-14945ca7e6ea"
+      ],
+      "sortAs": "Roxette",
+      "genres": [
+        "pop",
+        "rock",
+        "pop rock"
+      ]
     },
     {
       "postId": 48370,
@@ -4342,6 +4600,16 @@
         "fbe054ec-a143-4101-9e9e-64abc5ff5ac9",
         "eb45032c-80da-469c-be20-1d09f08ef37f"
       ],
+      "artists": [
+        {
+          "mbid": "fbe054ec-a143-4101-9e9e-64abc5ff5ac9",
+          "name": "Nat King Cole"
+        },
+        {
+          "mbid": "eb45032c-80da-469c-be20-1d09f08ef37f",
+          "name": "Natalie Cole"
+        }
+      ],
       "recordingMbid": "529e835a-70f7-4ce0-a6d3-46df12b19284",
       "genres": [
         "jazz",
@@ -4350,6 +4618,18 @@
       ],
       "year": 1961,
       "how": "exact"
+    },
+    {
+      "postId": 52055,
+      "artistMbids": [
+        "967002b0-58ef-4b22-a58c-fbc631ff695c"
+      ],
+      "sortAs": "Young, Paul",
+      "genres": [
+        "blue-eyed soul",
+        "pop",
+        "soft rock"
+      ]
     },
     {
       "postId": 51150,
@@ -4484,6 +4764,19 @@
       "how": "exact"
     },
     {
+      "postId": 51778,
+      "artistMbids": [
+        "603ba565-3967-4be1-931e-9cb945394e86"
+      ],
+      "artist": "*NSYNC",
+      "sortAs": "NSYNC",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "teen pop"
+      ]
+    },
+    {
       "postId": 53220,
       "sortAs": "Tiffany",
       "title": "Here in My Heart",
@@ -4505,6 +4798,16 @@
       "artistMbids": [
         "2fddb92d-24b2-46a5-bf28-3aed46f4684c",
         "e2f73100-bd6d-4891-9e1d-5de68a76e484"
+      ],
+      "artists": [
+        {
+          "mbid": "2fddb92d-24b2-46a5-bf28-3aed46f4684c",
+          "name": "Kylie Minogue"
+        },
+        {
+          "mbid": "e2f73100-bd6d-4891-9e1d-5de68a76e484",
+          "name": "Jason Donovan"
+        }
       ],
       "recordingMbid": "0b02cefc-f1ab-40dd-8114-359e7061507b",
       "genres": [
@@ -4594,7 +4897,7 @@
         "pop rock"
       ],
       "year": 1971,
-      "how": "near"
+      "how": "exact"
     },
     {
       "postId": 48768,
@@ -5468,6 +5771,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1966,
       "how": "exact"
     },
     {
@@ -5836,6 +6140,16 @@
         "498f2581-be21-4eef-8756-fbb89d79b1c0",
         "1c9d555e-d20a-46d9-93a3-bf7e0d263ece"
       ],
+      "artists": [
+        {
+          "mbid": "498f2581-be21-4eef-8756-fbb89d79b1c0",
+          "name": "Linda Ronstadt"
+        },
+        {
+          "mbid": "1c9d555e-d20a-46d9-93a3-bf7e0d263ece",
+          "name": "James Ingram"
+        }
+      ],
       "recordingMbid": "bc50340d-9162-4398-a8f2-19d1472262d4",
       "year": 1986,
       "how": "exact"
@@ -5879,6 +6193,16 @@
       "artistMbids": [
         "5298bbcb-7330-49bf-a780-2d757f10a20a",
         "b8170690-3a95-42e4-adef-afc9576ed90c"
+      ],
+      "artists": [
+        {
+          "mbid": "5298bbcb-7330-49bf-a780-2d757f10a20a",
+          "name": "Roberta Flack"
+        },
+        {
+          "mbid": "b8170690-3a95-42e4-adef-afc9576ed90c",
+          "name": "Peabo Bryson"
+        }
       ],
       "recordingMbid": "3b664bd7-53bc-47c9-8897-1f6583fccc7d",
       "genres": [
@@ -6131,6 +6455,17 @@
       "recordingMbid": "28b0af7d-45e9-43dc-a7fa-066c891bc569",
       "year": 1986,
       "how": "exact"
+    },
+    {
+      "postId": 50174,
+      "artistMbids": [
+        "42a8f507-8412-4611-854f-926571049fa0"
+      ],
+      "sortAs": "Harrison, George",
+      "genres": [
+        "rock",
+        "electronic"
+      ]
     },
     {
       "postId": 52579,
@@ -6485,6 +6820,16 @@
         "3cb25fb2-5547-4b05-adec-1a5e37830d46",
         "60d41417-feda-4734-bbbf-7dcc30e08a83"
       ],
+      "artists": [
+        {
+          "mbid": "3cb25fb2-5547-4b05-adec-1a5e37830d46",
+          "name": "Lionel Richie"
+        },
+        {
+          "mbid": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+          "name": "Diana Ross"
+        }
+      ],
       "recordingMbid": "05957231-09ef-4e86-a05b-0656ff81ce9f",
       "genres": [
         "soul",
@@ -6685,6 +7030,16 @@
       "artistMbids": [
         "70ea63ea-70dc-4b63-951a-2c249d2b3b0a",
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
+      ],
+      "artists": [
+        {
+          "mbid": "70ea63ea-70dc-4b63-951a-2c249d2b3b0a",
+          "name": "Ricky Martin"
+        },
+        {
+          "mbid": "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
+          "name": "Christina Aguilera"
+        }
       ],
       "recordingMbid": "37f33847-9580-4a4c-bc83-cb362abf8881",
       "genres": [
@@ -7147,6 +7502,18 @@
       "how": "exact"
     },
     {
+      "postId": 48833,
+      "artistMbids": [
+        "847e8a0c-cc20-4213-9e16-975515c2a926"
+      ],
+      "artist": "Céline Dion",
+      "sortAs": "Dion, Céline",
+      "genres": [
+        "pop",
+        "soft rock"
+      ]
+    },
+    {
       "postId": 48834,
       "artist": "Céline Dion",
       "sortAs": "Dion, Céline",
@@ -7227,6 +7594,18 @@
       "how": "exact"
     },
     {
+      "postId": 52128,
+      "artistMbids": [
+        "401c3991-b76b-499d-8082-9f2df958ef78"
+      ],
+      "sortAs": "Collins, Phil",
+      "genres": [
+        "soft rock",
+        "pop",
+        "pop rock"
+      ]
+    },
+    {
       "postId": 50179,
       "sortAs": "Michael, George",
       "title": "Fastlove",
@@ -7289,6 +7668,18 @@
       ],
       "year": 1984,
       "how": "exact"
+    },
+    {
+      "postId": 50182,
+      "artistMbids": [
+        "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c"
+      ],
+      "sortAs": "Michael, George",
+      "genres": [
+        "pop",
+        "blue-eyed soul",
+        "pop rock"
+      ]
     },
     {
       "postId": 51624,
@@ -7565,6 +7956,42 @@
       "how": "exact"
     },
     {
+      "postId": 51408,
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "sortAs": "Madonna",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "art pop"
+      ]
+    },
+    {
+      "postId": 51409,
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "sortAs": "Madonna",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "art pop"
+      ]
+    },
+    {
+      "postId": 51410,
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "sortAs": "Madonna",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "art pop"
+      ]
+    },
+    {
       "postId": 48178,
       "sortAs": "Streisand, Barbra",
       "title": "Some Good Things Never Last",
@@ -7619,6 +8046,16 @@
       "artistMbids": [
         "56cd15a1-0d74-438b-8244-c96ffe1cae03",
         "4dbf5678-7a31-406a-abbe-232f8ac2cd63"
+      ],
+      "artists": [
+        {
+          "mbid": "56cd15a1-0d74-438b-8244-c96ffe1cae03",
+          "name": "Barbra Streisand"
+        },
+        {
+          "mbid": "4dbf5678-7a31-406a-abbe-232f8ac2cd63",
+          "name": "Bryan Adams"
+        }
       ],
       "recordingMbid": "8f72b0df-9c7c-4468-aa91-2f615dfb11bb",
       "genres": [
@@ -7823,6 +8260,16 @@
         "0307edfc-437c-4b48-8700-80680e66a228",
         "5a5d32e1-f3d2-4fde-8b41-24a78e696b83"
       ],
+      "artists": [
+        {
+          "mbid": "0307edfc-437c-4b48-8700-80680e66a228",
+          "name": "Whitney Houston"
+        },
+        {
+          "mbid": "5a5d32e1-f3d2-4fde-8b41-24a78e696b83",
+          "name": "CeCe Winans"
+        }
+      ],
       "recordingMbid": "c425b523-9cf0-4bd1-a9f7-e0d23d06f57b",
       "genres": [
         "contemporary r&b",
@@ -8012,6 +8459,17 @@
       "how": "exact"
     },
     {
+      "postId": 52398,
+      "artistMbids": [
+        "e33c460f-011a-469a-b934-08932a3729c4"
+      ],
+      "sortAs": "Marx, Richard",
+      "genres": [
+        "pop",
+        "soft rock"
+      ]
+    },
+    {
       "postId": 52399,
       "sortAs": "Marx, Richard",
       "title": "Until I Find You Again",
@@ -8170,6 +8628,18 @@
       "how": "exact"
     },
     {
+      "postId": 49688,
+      "artistMbids": [
+        "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
+      ],
+      "sortAs": "John, Elton",
+      "genres": [
+        "pop",
+        "piano rock",
+        "pop rock"
+      ]
+    },
+    {
       "postId": 51465,
       "sortAs": "Carey, Mariah",
       "title": "Always Be My Baby",
@@ -8278,6 +8748,18 @@
       ],
       "year": 1990,
       "how": "exact"
+    },
+    {
+      "postId": 51472,
+      "artistMbids": [
+        "494e8d09-f85b-4543-892f-a5096aed1cd4"
+      ],
+      "sortAs": "Carey, Mariah",
+      "genres": [
+        "pop",
+        "contemporary r&b",
+        "dance-pop"
+      ]
     },
     {
       "postId": 48277,
@@ -9282,6 +9764,16 @@
         "d519aa4b-1294-4705-a73b-9d71220acc1f",
         "51352d3c-404c-440d-8ca3-52ca8e4b34db"
       ],
+      "artists": [
+        {
+          "mbid": "d519aa4b-1294-4705-a73b-9d71220acc1f",
+          "name": "Luca"
+        },
+        {
+          "mbid": "51352d3c-404c-440d-8ca3-52ca8e4b34db",
+          "name": "Deejay Jay"
+        }
+      ],
       "recordingMbid": "3a8cce06-d408-4eb9-84cc-d0d9c5892474",
       "year": 2005,
       "how": "exact"
@@ -9617,6 +10109,16 @@
         "d7ee911a-df72-4b85-881a-54618ecf2c0b",
         "dd6838c8-f96c-473d-ba5a-e9b7b13c1c64"
       ],
+      "artists": [
+        {
+          "mbid": "d7ee911a-df72-4b85-881a-54618ecf2c0b",
+          "name": "Markoolio"
+        },
+        {
+          "mbid": "dd6838c8-f96c-473d-ba5a-e9b7b13c1c64",
+          "name": "Linda Bengtzing"
+        }
+      ],
       "recordingMbid": "9588c378-455f-41c6-a93d-a48d1331d7d2",
       "year": 2007,
       "how": "exact"
@@ -9661,6 +10163,20 @@
       "recordingMbid": "4d7f90b1-64f3-43f3-8ff6-bd0c9530db56",
       "year": 2007,
       "how": "exact"
+    },
+    {
+      "postId": 51956,
+      "artistMbids": [
+        "ba68d8ed-3058-4875-84fc-d2605de6d820"
+      ],
+      "sortAs": "Svensson, Ola"
+    },
+    {
+      "postId": 51957,
+      "artistMbids": [
+        "ba68d8ed-3058-4875-84fc-d2605de6d820"
+      ],
+      "sortAs": "Svensson, Ola"
     },
     {
       "postId": 52083,
@@ -9759,14 +10275,16 @@
     },
     {
       "postId": 52140,
-      "sortAs": "Pink",
-      "title": "So What",
       "artistMbids": [
-        "8d53ba6e-968c-4f72-9571-4a4f3ed4b3f0"
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
-      "recordingMbid": "85121de2-33f7-4881-a55d-e069ce31cd53",
-      "year": 2010,
-      "how": "exact"
+      "artist": "P!nk",
+      "sortAs": "Pink",
+      "genres": [
+        "pop",
+        "pop rock",
+        "dance-pop"
+      ]
     },
     {
       "postId": 53039,
@@ -9786,6 +10304,16 @@
       "artistMbids": [
         "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
         "c33c2065-b1c3-4406-b066-d33a9e2ea71a"
+      ],
+      "artists": [
+        {
+          "mbid": "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
+          "name": "Timbaland"
+        },
+        {
+          "mbid": "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+          "name": "OneRepublic"
+        }
       ],
       "recordingMbid": "3c44fba8-01fc-4eb3-8587-1a7f5e9603ae",
       "genres": [
@@ -10398,6 +10926,16 @@
       "artistMbids": [
         "34e3047b-f35d-4a12-8d21-a87bcc6d178a",
         "3f77eb40-5ff5-4e3a-bca8-749734cb1246"
+      ],
+      "artists": [
+        {
+          "mbid": "34e3047b-f35d-4a12-8d21-a87bcc6d178a",
+          "name": "Pernilla Wahlgren"
+        },
+        {
+          "mbid": "3f77eb40-5ff5-4e3a-bca8-749734cb1246",
+          "name": "Jan Johansen"
+        }
       ],
       "recordingMbid": "48eb9b2c-727e-461e-b838-674370942cde",
       "genres": [
@@ -11085,6 +11623,7 @@
         "pop",
         "contemporary r&b"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -11166,6 +11705,18 @@
       ],
       "year": 2006,
       "how": "exact"
+    },
+    {
+      "postId": 52433,
+      "artistMbids": [
+        "73e5e69d-3554-40d8-8516-00cb38737a1c"
+      ],
+      "sortAs": "Rihanna",
+      "genres": [
+        "pop",
+        "r&b",
+        "contemporary r&b"
+      ]
     },
     {
       "postId": 52593,
@@ -11417,6 +11968,7 @@
         "new wave",
         "post-punk"
       ],
+      "year": 1987,
       "how": "exact"
     },
     {
@@ -11833,6 +12385,13 @@
       "how": "exact"
     },
     {
+      "postId": 52638,
+      "artistMbids": [
+        "c24216ce-6762-4974-94cd-48024377d543"
+      ],
+      "sortAs": "Dawn Finer, Sarah"
+    },
+    {
       "postId": 47845,
       "sortAs": "Agnes",
       "title": "Love Love Love",
@@ -11886,6 +12445,16 @@
       "artistMbids": [
         "4f3ddae3-6fa1-4dee-a40d-e4b56d158aaa",
         "8aec45d9-61d5-44ca-9e5e-ce923d023228"
+      ],
+      "artists": [
+        {
+          "mbid": "4f3ddae3-6fa1-4dee-a40d-e4b56d158aaa",
+          "name": "Tingeling"
+        },
+        {
+          "mbid": "8aec45d9-61d5-44ca-9e5e-ce923d023228",
+          "name": "Rolf Pihlman"
+        }
       ],
       "recordingMbid": "870dc250-d379-4d7e-bc28-92e3e592194a",
       "year": 2009,
@@ -12013,6 +12582,16 @@
         "e95db429-06c3-410e-b381-2a86c5d5903e",
         "14bc6572-4f59-49c8-8211-f93c67b0f238"
       ],
+      "artists": [
+        {
+          "mbid": "e95db429-06c3-410e-b381-2a86c5d5903e",
+          "name": "Frida"
+        },
+        {
+          "mbid": "14bc6572-4f59-49c8-8211-f93c67b0f238",
+          "name": "Headline"
+        }
+      ],
       "recordingMbid": "f5472009-16dc-4cb6-b3f5-405099aeaaff",
       "year": 2008,
       "how": "exact"
@@ -12039,6 +12618,13 @@
       "recordingMbid": "3b55f166-6bfd-4ac8-bc33-af03a9bdceca",
       "year": 2008,
       "how": "exact"
+    },
+    {
+      "postId": 51958,
+      "artistMbids": [
+        "ba68d8ed-3058-4875-84fc-d2605de6d820"
+      ],
+      "sortAs": "Svensson, Ola"
     },
     {
       "postId": 53104,
@@ -12111,6 +12697,25 @@
       "recordingMbid": "0fd1b988-da85-405f-9061-1d3753a8aeb1",
       "year": 2007,
       "how": "exact"
+    },
+    {
+      "postId": 52681,
+      "artistMbids": [
+        "52c0151f-87ae-455b-94e2-b1a66c0169aa"
+      ],
+      "artist": "Sebastian Karlsson",
+      "sortAs": "Karlsson, Sebastian"
+    },
+    {
+      "postId": 52623,
+      "artistMbids": [
+        "cc253e41-2b61-4853-aea2-cf5633645205"
+      ],
+      "sortAs": "Nielsen, Sanna",
+      "genres": [
+        "pop",
+        "schlager"
+      ]
     },
     {
       "postId": 47995,
@@ -12246,6 +12851,17 @@
       "how": "exact"
     },
     {
+      "postId": 50999,
+      "artistMbids": [
+        "52d0c873-11b8-4868-8771-09c44bcc1933"
+      ],
+      "sortAs": "Danielsson, Kikki",
+      "genres": [
+        "pop",
+        "schlager"
+      ]
+    },
+    {
       "postId": 51546,
       "sortAs": "Stenmarck, Martin",
       "artistMbids": [
@@ -12319,6 +12935,16 @@
         "163cbfa4-de5a-4415-bbed-0d71c770604c",
         "cc253e41-2b61-4853-aea2-cf5633645205"
       ],
+      "artists": [
+        {
+          "mbid": "163cbfa4-de5a-4415-bbed-0d71c770604c",
+          "name": "Fredrik Kempe"
+        },
+        {
+          "mbid": "cc253e41-2b61-4853-aea2-cf5633645205",
+          "name": "Sanna Nielsen"
+        }
+      ],
       "recordingMbid": "007824ab-0d16-44d9-9ace-bda392527477",
       "year": 2005,
       "how": "exact"
@@ -12353,6 +12979,20 @@
         "cda648a7-44c6-4e1a-8f1d-2953db08751b",
         "ecdf78e8-629f-4a27-b6cb-c406f14a2fdf",
         "a5be578c-864a-4de8-be45-c2cb6891c051"
+      ],
+      "artists": [
+        {
+          "mbid": "cda648a7-44c6-4e1a-8f1d-2953db08751b",
+          "name": "Ann-Louise Hanson"
+        },
+        {
+          "mbid": "ecdf78e8-629f-4a27-b6cb-c406f14a2fdf",
+          "name": "Towa Carson"
+        },
+        {
+          "mbid": "a5be578c-864a-4de8-be45-c2cb6891c051",
+          "name": "Siw Malmkvist"
+        }
       ],
       "recordingMbid": "d0316a79-23bd-4b18-acf4-675eeca5b064",
       "year": 2004,
@@ -12641,6 +13281,16 @@
       "artistMbids": [
         "a6e39adc-2553-4ca5-807e-cb5ac037ffca",
         "7de38172-2c22-4ff2-bf11-c3c62fb058e6"
+      ],
+      "artists": [
+        {
+          "mbid": "a6e39adc-2553-4ca5-807e-cb5ac037ffca",
+          "name": "Marie Bergman"
+        },
+        {
+          "mbid": "7de38172-2c22-4ff2-bf11-c3c62fb058e6",
+          "name": "Roger Pontare"
+        }
       ],
       "recordingMbid": "76bd86dd-ca54-46ba-a6cb-964f1c0eb2bc",
       "year": 1995,
@@ -13243,6 +13893,13 @@
       "how": "exact"
     },
     {
+      "postId": 47985,
+      "artistMbids": [
+        "cd051179-9c8d-473b-9166-5dc2a2994fe5"
+      ],
+      "sortAs": "Angels"
+    },
+    {
       "postId": 52560,
       "sortAs": "Roxette",
       "title": "Spending My Time",
@@ -13381,6 +14038,16 @@
       "artistMbids": [
         "433e715e-1eac-47e6-815f-93797cfab7aa",
         "143d2aa1-9112-4af2-8a37-403f3c84729f"
+      ],
+      "artists": [
+        {
+          "mbid": "433e715e-1eac-47e6-815f-93797cfab7aa",
+          "name": "Lasse Stefanz"
+        },
+        {
+          "mbid": "143d2aa1-9112-4af2-8a37-403f3c84729f",
+          "name": "Christina Lindberg"
+        }
       ],
       "recordingMbid": "4463660d-d05c-4312-aebb-74bf02d6ebc8",
       "genres": [
@@ -13685,6 +14352,19 @@
       "how": "exact"
     },
     {
+      "postId": 47761,
+      "artistMbids": [
+        "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
+      ],
+      "artist": "ABBA",
+      "sortAs": "ABBA",
+      "genres": [
+        "pop",
+        "disco",
+        "europop"
+      ]
+    },
+    {
       "postId": 47762,
       "artist": "ABBA",
       "sortAs": "ABBA",
@@ -13987,6 +14667,23 @@
         "europop"
       ],
       "year": 1981,
+      "how": "exact"
+    },
+    {
+      "postId": 47780,
+      "artist": "ABBA",
+      "sortAs": "ABBA",
+      "title": "The Winner Takes It All",
+      "artistMbids": [
+        "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
+      ],
+      "recordingMbid": "e097e9bc-8263-4e24-a6e6-8fa326b506c3",
+      "genres": [
+        "pop",
+        "disco",
+        "europop"
+      ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -14349,6 +15046,13 @@
       ],
       "year": 1980,
       "how": "exact"
+    },
+    {
+      "postId": 50325,
+      "artistMbids": [
+        "133aee13-0a4a-48df-9a74-a1bea889a0e0"
+      ],
+      "sortAs": "Hair"
     },
     {
       "postId": 49298,
@@ -14982,6 +15686,18 @@
       "how": "exact"
     },
     {
+      "postId": 48393,
+      "artistMbids": [
+        "5182c1d9-c7d2-4dad-afa0-ccfeada921a8"
+      ],
+      "sortAs": "Black Sabbath",
+      "genres": [
+        "heavy metal",
+        "hard rock",
+        "traditional doom metal"
+      ]
+    },
+    {
       "postId": 51880,
       "sortAs": "Nightwish",
       "artistMbids": [
@@ -15342,6 +16058,7 @@
         "swing",
         "traditional pop"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -15505,6 +16222,7 @@
         "38931c3d-5e87-461b-8982-84428d8a5a5d"
       ],
       "recordingMbid": "e75a6586-0d0d-4a90-be34-1e9f93a6d044",
+      "year": 1960,
       "how": "exact"
     },
     {
@@ -15537,6 +16255,7 @@
         "merseybeat",
         "pop"
       ],
+      "year": 1963,
       "how": "exact"
     },
     {
@@ -15582,6 +16301,7 @@
         "country pop",
         "country rock"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -16247,6 +16967,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -17060,6 +17781,7 @@
         "a9399880-5587-457c-bc87-8c81fcf57cb1"
       ],
       "recordingMbid": "4d4ebf49-ebf1-4aae-a2e2-f36dc2cf65b7",
+      "year": 1963,
       "how": "exact"
     },
     {
@@ -17526,6 +18248,16 @@
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "ccb4d559-44f9-4927-9cf3-cd1530cc5bcc"
       ],
+      "artists": [
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        },
+        {
+          "mbid": "ccb4d559-44f9-4927-9cf3-cd1530cc5bcc",
+          "name": "Kiki Dee"
+        }
+      ],
       "recordingMbid": "2f04f204-384b-4b9f-ba0a-276f2fd72fd4",
       "genres": [
         "pop",
@@ -17542,6 +18274,16 @@
       "artistMbids": [
         "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
+      ],
+      "artists": [
+        {
+          "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+          "name": "George Michael"
+        },
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        }
       ],
       "recordingMbid": "e7ecddd8-e0eb-4831-92ce-ea8f4fca48e4",
       "genres": [
@@ -17588,6 +18330,16 @@
       "artistMbids": [
         "ba550d0e-adac-4864-b88b-407cab5e76af",
         "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e"
+      ],
+      "artists": [
+        {
+          "mbid": "ba550d0e-adac-4864-b88b-407cab5e76af",
+          "name": "Paul McCartney"
+        },
+        {
+          "mbid": "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e",
+          "name": "Stevie Wonder"
+        }
       ],
       "recordingMbid": "16910202-6b1a-4625-a500-462d8fdea617",
       "genres": [
@@ -18253,6 +19005,7 @@
       "genres": [
         "country"
       ],
+      "year": 1959,
       "how": "exact"
     },
     {
@@ -18538,6 +19291,18 @@
       ],
       "year": 2002,
       "how": "version"
+    },
+    {
+      "postId": 52225,
+      "artistMbids": [
+        "070d193a-845c-479f-980e-bef15710653e"
+      ],
+      "sortAs": "Prince",
+      "genres": [
+        "funk",
+        "pop",
+        "contemporary r&b"
+      ]
     },
     {
       "postId": 51377,
@@ -18958,6 +19723,7 @@
       "genres": [
         "soul"
       ],
+      "year": 1966,
       "how": "exact"
     },
     {
@@ -19499,6 +20265,7 @@
         "funk",
         "disco"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -19675,6 +20442,16 @@
         "f55a12e7-84dc-4294-8cbc-4b7faed1df06",
         "54b87024-8b4e-4bb8-a92e-c565bc54b68f"
       ],
+      "artists": [
+        {
+          "mbid": "f55a12e7-84dc-4294-8cbc-4b7faed1df06",
+          "name": "Tone Norum"
+        },
+        {
+          "mbid": "54b87024-8b4e-4bb8-a92e-c565bc54b68f",
+          "name": "Tommy Nilsson"
+        }
+      ],
       "recordingMbid": "6e1bb0d7-23a0-4e34-b86c-2712b91757b0",
       "year": 1987,
       "how": "exact"
@@ -19773,6 +20550,16 @@
       "artistMbids": [
         "8800f070-1b45-42d8-8b67-d9e8d74ef20e",
         "7a38053e-efab-410d-8ea7-d606ebba60c4"
+      ],
+      "artists": [
+        {
+          "mbid": "8800f070-1b45-42d8-8b67-d9e8d74ef20e",
+          "name": "Susanne Alfvengren"
+        },
+        {
+          "mbid": "7a38053e-efab-410d-8ea7-d606ebba60c4",
+          "name": "Mikael Rickfors"
+        }
       ],
       "recordingMbid": "e21761e2-8df7-4e66-af49-dcf9d8177d57",
       "year": 1992,
@@ -20185,6 +20972,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1976,
       "how": "exact"
     },
     {
@@ -20900,6 +21688,13 @@
       "how": "exact"
     },
     {
+      "postId": 49647,
+      "artistMbids": [
+        "dbb6fec3-8111-4c9e-8486-f0fef535e229"
+      ],
+      "sortAs": "Grant, Eddie"
+    },
+    {
       "postId": 49245,
       "sortAs": "Bowie, David",
       "title": "Space Oddity",
@@ -21029,6 +21824,16 @@
       "artistMbids": [
         "c5a0a216-c33c-42dc-92b8-4b60236f8dad",
         "847e8a0c-cc20-4213-9e16-975515c2a926"
+      ],
+      "artists": [
+        {
+          "mbid": "c5a0a216-c33c-42dc-92b8-4b60236f8dad",
+          "name": "Andrea Bocelli"
+        },
+        {
+          "mbid": "847e8a0c-cc20-4213-9e16-975515c2a926",
+          "name": "Céline Dion"
+        }
       ],
       "recordingMbid": "1bbaf5b8-c06f-46d5-aed2-bda577ffd91d",
       "genres": [
@@ -21501,6 +22306,16 @@
       "how": "exact"
     },
     {
+      "postId": 49999,
+      "artistMbids": [
+        "88d6db37-0d87-4e84-a949-9cf8e8879505"
+      ],
+      "sortAs": "Five",
+      "genres": [
+        "pop"
+      ]
+    },
+    {
       "postId": 50215,
       "sortAs": "Girls Aloud",
       "title": "I’ll Stand by You",
@@ -21792,6 +22607,18 @@
       ],
       "year": 2004,
       "how": "exact"
+    },
+    {
+      "postId": 51896,
+      "artistMbids": [
+        "fbd2a255-1d57-4d31-ac11-65b671c19958"
+      ],
+      "sortAs": "No Doubt",
+      "genres": [
+        "ska punk",
+        "pop rock",
+        "alternative rock"
+      ]
     },
     {
       "postId": 53452,
@@ -22597,6 +23424,22 @@
       "how": "exact"
     },
     {
+      "postId": 48223,
+      "sortAs": "Bay City Rollers",
+      "title": "The Bump",
+      "artistMbids": [
+        "28cc1f98-add6-49d5-820a-ce973ee2954b"
+      ],
+      "recordingMbid": "b4cc16ca-edae-4c95-af9f-197b26d590b2",
+      "genres": [
+        "pop",
+        "bubblegum pop",
+        "power pop"
+      ],
+      "year": 1974,
+      "how": "exact"
+    },
+    {
       "postId": 52703,
       "sortAs": "Sex Pistols",
       "title": "Anarchy in the U.K.",
@@ -23175,6 +24018,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1976,
       "how": "exact"
     },
     {
@@ -23259,6 +24103,13 @@
       "recordingMbid": "9ac14d15-2aa6-45e6-935f-d8743f108fac",
       "year": 1979,
       "how": "exact"
+    },
+    {
+      "postId": 48898,
+      "artistMbids": [
+        "9c3f6f67-ad64-475b-9e4a-c5e9d24297d3"
+      ],
+      "sortAs": "Chas & Dave"
     },
     {
       "postId": 50913,
@@ -23430,6 +24281,16 @@
         "2ce02909-598b-44ef-a456-151ba0a3bd70",
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
+      "artists": [
+        {
+          "mbid": "2ce02909-598b-44ef-a456-151ba0a3bd70",
+          "name": "Ray Charles"
+        },
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        }
+      ],
       "recordingMbid": "491e4bb6-46f1-420f-bfbf-6a109cced2a4",
       "genres": [
         "jazz",
@@ -23484,6 +24345,18 @@
       "how": "exact"
     },
     {
+      "postId": 51817,
+      "artistMbids": [
+        "a42d3fd5-55de-4206-86c3-4fbb5404018f"
+      ],
+      "sortAs": "Diamond, Neil",
+      "genres": [
+        "singer-songwriter",
+        "pop",
+        "pop rock"
+      ]
+    },
+    {
       "postId": 52091,
       "sortAs": "Como, Perry",
       "artistMbids": [
@@ -23508,6 +24381,13 @@
       "recordingMbid": "98d3709d-2987-489a-8078-d7673bcbc14d",
       "year": 1980,
       "how": "exact"
+    },
+    {
+      "postId": 48521,
+      "artistMbids": [
+        "97ebb1b4-1d9c-4303-bb60-074c993e2d53"
+      ],
+      "sortAs": "Vee, Bobby"
     },
     {
       "postId": 51571,
@@ -23571,6 +24451,16 @@
       "artistMbids": [
         "60d41417-feda-4734-bbbf-7dcc30e08a83",
         "afdb7919-059d-43c1-b668-ba1d265e7e42"
+      ],
+      "artists": [
+        {
+          "mbid": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+          "name": "Diana Ross"
+        },
+        {
+          "mbid": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+          "name": "Marvin Gaye"
+        }
       ],
       "recordingMbid": "98823905-8ee5-4d6f-a409-39c433d9f35a",
       "genres": [
@@ -23920,6 +24810,16 @@
         "494e8d09-f85b-4543-892f-a5096aed1cd4",
         "0307edfc-437c-4b48-8700-80680e66a228"
       ],
+      "artists": [
+        {
+          "mbid": "494e8d09-f85b-4543-892f-a5096aed1cd4",
+          "name": "Mariah Carey"
+        },
+        {
+          "mbid": "0307edfc-437c-4b48-8700-80680e66a228",
+          "name": "Whitney Houston"
+        }
+      ],
       "recordingMbid": "fca5f8c4-dac5-47a2-9658-cf2409bad4f6",
       "genres": [
         "pop",
@@ -23991,6 +24891,30 @@
       ],
       "year": 2000,
       "how": "exact"
+    },
+    {
+      "postId": 48618,
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "sortAs": "Spears, Britney",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
+    },
+    {
+      "postId": 48619,
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "sortAs": "Spears, Britney",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
     },
     {
       "postId": 48620,
@@ -24118,6 +25042,13 @@
       ],
       "year": 2000,
       "how": "exact"
+    },
+    {
+      "postId": 52615,
+      "artistMbids": [
+        "7d137f81-27a6-4c65-bf78-186116368860"
+      ],
+      "sortAs": "Mumba, Samantha"
     },
     {
       "postId": 52616,
@@ -24430,6 +25361,114 @@
       "how": "exact"
     },
     {
+      "postId": 52873,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52874,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52875,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52876,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52877,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52878,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52879,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52880,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
+      "postId": 52881,
+      "artistMbids": [
+        "bf0caafc-2b20-4e07-ab85-87e14ff430ce"
+      ],
+      "sortAs": "Spice Girls",
+      "genres": [
+        "dance-pop",
+        "pop",
+        "teen pop"
+      ]
+    },
+    {
       "postId": 51331,
       "sortAs": "Armstrong, Louis",
       "title": "What a Wonderful World",
@@ -24489,6 +25528,7 @@
         "dixieland",
         "swing"
       ],
+      "year": 1962,
       "how": "exact"
     },
     {
@@ -24520,6 +25560,18 @@
         "swing"
       ],
       "how": "exact"
+    },
+    {
+      "postId": 51337,
+      "artistMbids": [
+        "eea8a864-fcda-4602-9569-38ab446decd6"
+      ],
+      "sortAs": "Armstrong, Louis",
+      "genres": [
+        "jazz",
+        "dixieland",
+        "swing"
+      ]
     },
     {
       "postId": 50683,
@@ -24708,6 +25760,16 @@
       "how": "exact"
     },
     {
+      "postId": 49814,
+      "artistMbids": [
+        "62c28bc0-f696-4c50-8e54-5f8e9120bdb8"
+      ],
+      "sortAs": "Humperdinck, Engelbert",
+      "genres": [
+        "pop"
+      ]
+    },
+    {
       "postId": 49815,
       "sortAs": "Humperdinck, Engelbert",
       "title": "When I Say Goodnight",
@@ -24852,6 +25914,7 @@
         "glam metal",
         "heavy metal"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -25248,6 +26311,18 @@
       "how": "exact"
     },
     {
+      "postId": 48538,
+      "artistMbids": [
+        "5dcdb5eb-cb72-4e6e-9e63-b7bace604965"
+      ],
+      "sortAs": "Bon Jovi",
+      "genres": [
+        "rock",
+        "hard rock",
+        "glam metal"
+      ]
+    },
+    {
       "postId": 48539,
       "sortAs": "Bon Jovi",
       "title": "Keep the Faith",
@@ -25372,6 +26447,7 @@
         "hard rock",
         "glam metal"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -25672,6 +26748,16 @@
       ],
       "year": 1991,
       "how": "exact"
+    },
+    {
+      "postId": 49480,
+      "artistMbids": [
+        "741bd697-e595-4e47-a97d-688b4b9e0df2"
+      ],
+      "sortAs": "Williams, Don",
+      "genres": [
+        "country"
+      ]
     },
     {
       "postId": 50184,
@@ -26604,6 +27690,16 @@
         "a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432",
         "084308bd-1654-436f-ba03-df6697104e19"
       ],
+      "artists": [
+        {
+          "mbid": "a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432",
+          "name": "U2"
+        },
+        {
+          "mbid": "084308bd-1654-436f-ba03-df6697104e19",
+          "name": "Green Day"
+        }
+      ],
       "recordingMbid": "c38d1010-a945-4df2-828b-47bf93dda713",
       "genres": [
         "alternative rock",
@@ -26620,6 +27716,16 @@
       "artistMbids": [
         "1d543e07-d0d2-4834-a8db-d65c50c2a856",
         "c3d14b41-a48d-488f-bfed-ce0597bb0b1f"
+      ],
+      "artists": [
+        {
+          "mbid": "1d543e07-d0d2-4834-a8db-d65c50c2a856",
+          "name": "Dolly Parton"
+        },
+        {
+          "mbid": "c3d14b41-a48d-488f-bfed-ce0597bb0b1f",
+          "name": "Kenny Rogers"
+        }
       ],
       "recordingMbid": "43392fc0-bf1d-452e-845b-f698a3a89bcf",
       "genres": [
@@ -26783,12 +27889,23 @@
         "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
         "4ee75011-678b-46e0-b8e1-8ef47e5b7379"
       ],
+      "artists": [
+        {
+          "mbid": "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
+          "name": "Johnny Cash"
+        },
+        {
+          "mbid": "4ee75011-678b-46e0-b8e1-8ef47e5b7379",
+          "name": "June Carter Cash"
+        }
+      ],
       "recordingMbid": "98ecfda8-a1fa-4cf9-99ab-0dfd731384bc",
       "genres": [
         "country",
         "rockabilly",
         "folk"
       ],
+      "year": 1968,
       "how": "exact"
     },
     {
@@ -26849,6 +27966,19 @@
       ],
       "year": 1997,
       "how": "exact"
+    },
+    {
+      "postId": 48288,
+      "artistMbids": [
+        "252b5d32-5bd5-4cae-9d48-6aafa2145c33"
+      ],
+      "artist": "The Bellamy Brothers",
+      "sortAs": "Bellamy Brothers, The",
+      "genres": [
+        "country",
+        "country pop",
+        "country rock"
+      ]
     },
     {
       "postId": 47927,
@@ -26953,6 +28083,18 @@
       "how": "exact"
     },
     {
+      "postId": 53383,
+      "artistMbids": [
+        "7113aab7-628f-4050-ae49-dbecac110ca8"
+      ],
+      "sortAs": "UB40",
+      "genres": [
+        "reggae",
+        "dub",
+        "pop"
+      ]
+    },
+    {
       "postId": 48502,
       "sortAs": "Marley, Bob",
       "title": "Lively Up Yourself",
@@ -27047,6 +28189,18 @@
       ],
       "year": 1983,
       "how": "exact"
+    },
+    {
+      "postId": 48128,
+      "artistMbids": [
+        "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
+      ],
+      "sortAs": "Backstreet Boys",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
     },
     {
       "postId": 53547,
@@ -27329,6 +28483,17 @@
       "how": "exact"
     },
     {
+      "postId": 48301,
+      "sortAs": "Midler, Bette",
+      "title": "The Glory of Love",
+      "artistMbids": [
+        "ed333e8b-d18a-49fc-b361-4ec9731dfdba"
+      ],
+      "recordingMbid": "a705a331-1ccb-4ba4-8b91-335510e49855",
+      "year": 1988,
+      "how": "exact"
+    },
+    {
       "postId": 52883,
       "sortAs": "Spice Girls",
       "title": "Love Thing",
@@ -27508,6 +28673,20 @@
         "164f0d73-1234-4e2c-8743-d77bf2191051",
         "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7"
       ],
+      "artists": [
+        {
+          "mbid": "b76c616a-ec0d-4f0c-b986-f249c4a04d77",
+          "name": "Keri Hilson"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        },
+        {
+          "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
+          "name": "Ne‐Yo"
+        }
+      ],
       "recordingMbid": "4dab0d4f-2992-4140-8d08-1a364a6d4957",
       "genres": [
         "pop"
@@ -27631,6 +28810,20 @@
       ],
       "recordingMbid": "2113a5cb-82dd-47bd-89de-371cdaf3e52e",
       "year": 2003,
+      "how": "exact"
+    },
+    {
+      "postId": 49249,
+      "sortAs": "Cook, David",
+      "title": "The Time of My Life",
+      "artistMbids": [
+        "966e1095-b172-415c-bae5-53f8041fd050"
+      ],
+      "recordingMbid": "a9d8d1ad-c5eb-413b-a46a-ae38c2e48374",
+      "genres": [
+        "rock"
+      ],
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -27949,6 +29142,16 @@
         "4593d49a-7f67-46ba-9ec0-126bd676286f",
         "fab34286-b8e1-4879-bce3-194e1358fbd2"
       ],
+      "artists": [
+        {
+          "mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+          "name": "Flo Rida"
+        },
+        {
+          "mbid": "fab34286-b8e1-4879-bce3-194e1358fbd2",
+          "name": "Kesha"
+        }
+      ],
       "recordingMbid": "6b8a70c3-3e94-45d1-9c00-806490516129",
       "genres": [
         "pop rap",
@@ -28055,6 +29258,7 @@
         "folk rock",
         "soft rock"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -28143,6 +29347,16 @@
         "e0e1db18-f7ba-4dee-95ff-7ae8cf545460",
         "ff711332-b409-44dd-ad1d-f7714f8906db"
       ],
+      "artists": [
+        {
+          "mbid": "e0e1db18-f7ba-4dee-95ff-7ae8cf545460",
+          "name": "Kid Cudi"
+        },
+        {
+          "mbid": "ff711332-b409-44dd-ad1d-f7714f8906db",
+          "name": "Crookers"
+        }
+      ],
       "recordingMbid": "1f94eec7-c5b5-4206-af57-f2be5ab7a11b",
       "genres": [
         "alternative hip hop",
@@ -28216,6 +29430,16 @@
       "artistMbids": [
         "afdb7919-059d-43c1-b668-ba1d265e7e42",
         "ce4582b6-aee7-4da1-b841-3c619d4fb5a5"
+      ],
+      "artists": [
+        {
+          "mbid": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+          "name": "Marvin Gaye"
+        },
+        {
+          "mbid": "ce4582b6-aee7-4da1-b841-3c619d4fb5a5",
+          "name": "Tammi Terrell"
+        }
       ],
       "recordingMbid": "b04b5028-da5b-4f05-bfe3-4f8f80396d98",
       "genres": [
@@ -28878,6 +30102,7 @@
         "soul",
         "disco"
       ],
+      "year": 1978,
       "how": "exact"
     },
     {
@@ -28938,6 +30163,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 1991,
       "how": "exact"
     },
     {
@@ -29106,6 +30332,16 @@
         "32f2d6bd-c22b-42cf-a7bc-0c4b48cd2bcb",
         "2f140aa6-b99b-4f79-ae33-96018af87fa3"
       ],
+      "artists": [
+        {
+          "mbid": "32f2d6bd-c22b-42cf-a7bc-0c4b48cd2bcb",
+          "name": "Joe Cocker"
+        },
+        {
+          "mbid": "2f140aa6-b99b-4f79-ae33-96018af87fa3",
+          "name": "Jennifer Warnes"
+        }
+      ],
       "recordingMbid": "b6e69503-35dd-4071-853f-fd33e9c72204",
       "genres": [
         "rock"
@@ -29214,6 +30450,16 @@
       "how": "exact"
     },
     {
+      "postId": 50147,
+      "artistMbids": [
+        "b76645c5-78b0-4e4c-8f95-003f40013a45"
+      ],
+      "sortAs": "Brooks, Garth",
+      "genres": [
+        "country"
+      ]
+    },
+    {
       "postId": 50334,
       "sortAs": "Williams, Hank",
       "title": "Family Tradition",
@@ -29243,6 +30489,18 @@
       ],
       "year": 1980,
       "how": "exact"
+    },
+    {
+      "postId": 47831,
+      "artistMbids": [
+        "3d2b98e5-556f-4451-a3ff-c50ea18d57cb"
+      ],
+      "sortAs": "Aerosmith",
+      "genres": [
+        "hard rock",
+        "blues rock",
+        "rock"
+      ]
     },
     {
       "postId": 48374,
@@ -29405,6 +30663,19 @@
       "how": "exact"
     },
     {
+      "postId": 51443,
+      "artistMbids": [
+        "83e9c775-84ea-4cf6-abdf-b9ffa8c3d060"
+      ],
+      "artist": "Manfred Mann’s Earth Band",
+      "sortAs": "Mann, Manfred, Earth Band",
+      "genres": [
+        "rock",
+        "progressive pop",
+        "progressive rock"
+      ]
+    },
+    {
       "postId": 49756,
       "sortAs": "Presley, Elvis",
       "title": "Teddy Bear",
@@ -29529,6 +30800,16 @@
       "artistMbids": [
         "48896dee-a985-424d-9849-84802f7e79c9",
         "f28dc56d-0bd4-485f-92a2-5c3e0e9b57cd"
+      ],
+      "artists": [
+        {
+          "mbid": "48896dee-a985-424d-9849-84802f7e79c9",
+          "name": "Johnny Mathis"
+        },
+        {
+          "mbid": "f28dc56d-0bd4-485f-92a2-5c3e0e9b57cd",
+          "name": "Deniece Williams"
+        }
       ],
       "recordingMbid": "2bf57c36-2e32-4cc6-b8f8-f23da5ea0c55",
       "genres": [
@@ -29701,6 +30982,7 @@
         "dance-pop",
         "disco"
       ],
+      "year": 1987,
       "how": "exact"
     },
     {
@@ -29727,6 +31009,7 @@
         "f3ed56fe-a434-4cae-8539-82158e89d071"
       ],
       "recordingMbid": "58a621a0-a9bb-4fe2-af53-21f058b0c5d9",
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -29803,6 +31086,7 @@
         "pop rock",
         "jazz rock"
       ],
+      "year": 1968,
       "how": "exact"
     },
     {
@@ -29812,6 +31096,16 @@
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "15257a48-d9f6-4fd1-b30e-323576b15aca"
+      ],
+      "artists": [
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        },
+        {
+          "mbid": "15257a48-d9f6-4fd1-b30e-323576b15aca",
+          "name": "RuPaul"
+        }
       ],
       "recordingMbid": "895ca240-6afd-4ceb-91f3-0f402e60b64a",
       "genres": [
@@ -29836,6 +31130,13 @@
       ],
       "year": 1981,
       "how": "exact"
+    },
+    {
+      "postId": 50782,
+      "artistMbids": [
+        "0efaa6e3-3ef1-4481-bc01-aa3d5901dbdc"
+      ],
+      "sortAs": "Nash, Johnny"
     },
     {
       "postId": 51312,
@@ -30218,6 +31519,18 @@
       ],
       "year": 1993,
       "how": "exact"
+    },
+    {
+      "postId": 51160,
+      "artistMbids": [
+        "9092d8e1-9b38-4372-a96d-000b8561a8bc"
+      ],
+      "sortAs": "Rimes, LeAnn",
+      "genres": [
+        "country",
+        "pop",
+        "contemporary country"
+      ]
     },
     {
       "postId": 52169,
@@ -31036,6 +32349,16 @@
         "cf15719f-51f9-4db8-a15d-5eed9664ce69",
         "dfc6e55b-a31e-4dd7-aa38-784ca1415e84"
       ],
+      "artists": [
+        {
+          "mbid": "cf15719f-51f9-4db8-a15d-5eed9664ce69",
+          "name": "Lupe Fiasco"
+        },
+        {
+          "mbid": "dfc6e55b-a31e-4dd7-aa38-784ca1415e84",
+          "name": "Matthew Santos"
+        }
+      ],
       "recordingMbid": "2926754e-72ed-494c-9148-d9bb10edaa62",
       "genres": [
         "hip hop",
@@ -31222,6 +32545,16 @@
       "artistMbids": [
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "f59c5520-5f46-4d2c-b2c4-822eabf53419"
+      ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+          "name": "Linkin Park"
+        }
       ],
       "recordingMbid": "daccb724-8023-432a-854c-e0accb6c8678",
       "genres": [
@@ -31592,12 +32925,34 @@
       "how": "exact"
     },
     {
+      "postId": 49057,
+      "artist": "The Commitments",
+      "sortAs": "Commitments, The",
+      "title": "The Dark End of the Street",
+      "artistMbids": [
+        "4e8d6561-5821-45d7-9d7e-ca4d9b35b1a8"
+      ],
+      "recordingMbid": "51be5092-8b44-475d-b429-0f5c7268996a",
+      "year": 1991,
+      "how": "exact"
+    },
+    {
       "postId": 50357,
       "artist": "Benny Anderssons orkester med Helen Sjöholm",
       "sortAs": "Anderssons, Benny, Orkester",
       "artistMbids": [
         "d60cdee3-fdf2-4b66-bea9-c6be2c302e70",
         "053cfc8d-cdec-4be8-a099-3e6305e15066"
+      ],
+      "artists": [
+        {
+          "mbid": "d60cdee3-fdf2-4b66-bea9-c6be2c302e70",
+          "name": "Benny Anderssons orkester"
+        },
+        {
+          "mbid": "053cfc8d-cdec-4be8-a099-3e6305e15066",
+          "name": "Helen Sjöholm"
+        }
       ],
       "recordingMbid": "b9c17400-5082-4ca7-a2a0-733ecb07fb82",
       "year": 2004,
@@ -31618,7 +32973,7 @@
         "chamber pop"
       ],
       "year": 1990,
-      "how": "near"
+      "how": "exact"
     },
     {
       "postId": 48275,
@@ -31812,6 +33167,13 @@
       "how": "exact"
     },
     {
+      "postId": 51959,
+      "artistMbids": [
+        "ba68d8ed-3058-4875-84fc-d2605de6d820"
+      ],
+      "sortAs": "Svensson, Ola"
+    },
+    {
       "postId": 52088,
       "sortAs": "Wahlgren, Pernilla",
       "artistMbids": [
@@ -31888,6 +33250,16 @@
       "artistMbids": [
         "7137cdc7-5152-4ba9-8343-d9f6611a3a1f",
         "7d1075af-82c9-4963-b553-6c59907bd7a8"
+      ],
+      "artists": [
+        {
+          "mbid": "7137cdc7-5152-4ba9-8343-d9f6611a3a1f",
+          "name": "Andra generationen"
+        },
+        {
+          "mbid": "7d1075af-82c9-4963-b553-6c59907bd7a8",
+          "name": "Dogge Doggelito"
+        }
       ],
       "recordingMbid": "cb1b637d-adef-4d77-9e59-6d2a1ada5b2a",
       "year": 2010,
@@ -32021,6 +33393,16 @@
         "bdde932a-1a0c-4dc1-be0b-9140769eedfe",
         "526ac48e-0357-47b6-a646-3ad31be2ff1d"
       ],
+      "artists": [
+        {
+          "mbid": "bdde932a-1a0c-4dc1-be0b-9140769eedfe",
+          "name": "Kalle Moraeus"
+        },
+        {
+          "mbid": "526ac48e-0357-47b6-a646-3ad31be2ff1d",
+          "name": "Orsa spelmän"
+        }
+      ],
       "recordingMbid": "94fd42bb-086c-4145-9fd9-32ef16703dcc",
       "year": 2010,
       "how": "exact"
@@ -32078,6 +33460,16 @@
       "artistMbids": [
         "c21caeea-6083-4915-9614-75310384bb5f",
         "2a2b3084-f32f-4267-a759-379f4f67b0bd"
+      ],
+      "artists": [
+        {
+          "mbid": "c21caeea-6083-4915-9614-75310384bb5f",
+          "name": "Highlights"
+        },
+        {
+          "mbid": "2a2b3084-f32f-4267-a759-379f4f67b0bd",
+          "name": "MiSt"
+        }
       ],
       "recordingMbid": "36942230-9e67-4f91-9b57-8b5fc7eb1c19",
       "year": 2010,
@@ -32325,6 +33717,16 @@
         "197450cd-0124-4164-b723-3c22dd16494d",
         "c2e36518-9c3b-4dcb-82ad-a3fc7fe99c67"
       ],
+      "artists": [
+        {
+          "mbid": "197450cd-0124-4164-b723-3c22dd16494d",
+          "name": "Frank Sinatra"
+        },
+        {
+          "mbid": "c2e36518-9c3b-4dcb-82ad-a3fc7fe99c67",
+          "name": "Nancy Sinatra"
+        }
+      ],
       "recordingMbid": "9f5c1367-b219-4304-935e-c8c6453890e7",
       "genres": [
         "jazz",
@@ -32380,6 +33782,16 @@
       ],
       "year": 2008,
       "how": "exact"
+    },
+    {
+      "postId": 50623,
+      "artistMbids": [
+        "95b5d5b5-46c4-4c3e-89d5-ffe9236427ac"
+      ],
+      "sortAs": "Hudson, Jennifer",
+      "genres": [
+        "r&b"
+      ]
     },
     {
       "postId": 50940,
@@ -32659,6 +34071,16 @@
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
       ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "8ef1df30-ae4f-4dbd-9351-1a32b208a01e",
+          "name": "Alicia Keys"
+        }
+      ],
       "recordingMbid": "4a9818ba-5963-4761-864f-7d96841053d2",
       "genres": [
         "pop rap",
@@ -32696,6 +34118,7 @@
         "contemporary r&b",
         "r&b"
       ],
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -33346,6 +34769,19 @@
       "how": "exact"
     },
     {
+      "postId": 48314,
+      "artistMbids": [
+        "859d0860-d480-4efd-970c-c05d5f1776b8"
+      ],
+      "artist": "Beyoncé",
+      "sortAs": "Beyoncé",
+      "genres": [
+        "pop",
+        "r&b",
+        "contemporary r&b"
+      ]
+    },
+    {
       "postId": 49344,
       "artist": "Destiny’s Child",
       "sortAs": "Destiny’s Child",
@@ -33460,6 +34896,23 @@
       "how": "exact"
     },
     {
+      "postId": 48226,
+      "artist": "The B‐52s",
+      "sortAs": "B‐52s, The",
+      "title": "The Flintstones",
+      "artistMbids": [
+        "127f591a-7e27-4435-92db-0780f219f3a1"
+      ],
+      "recordingMbid": "427491b8-5606-417b-b382-1fa458481a10",
+      "genres": [
+        "pop rock",
+        "dance-pop",
+        "new wave"
+      ],
+      "year": 1995,
+      "how": "exact"
+    },
+    {
       "postId": 49385,
       "sortAs": "Warwick, Dionne",
       "title": "Valley of the Dolls",
@@ -33534,6 +34987,19 @@
       ],
       "year": 2004,
       "how": "exact"
+    },
+    {
+      "postId": 49347,
+      "artistMbids": [
+        "a796b92e-c137-4895-9c89-10f900617a4f"
+      ],
+      "artist": "Destiny’s Child",
+      "sortAs": "Destiny’s Child",
+      "genres": [
+        "pop",
+        "contemporary r&b",
+        "dance-pop"
+      ]
     },
     {
       "postId": 47960,
@@ -33841,6 +35307,16 @@
         "4c7a5854-6b75-4623-a684-6a3d785d9015",
         "164f0d73-1234-4e2c-8743-d77bf2191051"
       ],
+      "artists": [
+        {
+          "mbid": "4c7a5854-6b75-4623-a684-6a3d785d9015",
+          "name": "Estelle"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        }
+      ],
       "recordingMbid": "b729ca25-4e03-48bc-9240-fd600604bd77",
       "genres": [
         "contemporary r&b",
@@ -34052,6 +35528,33 @@
       "how": "exact"
     },
     {
+      "postId": 50577,
+      "sortAs": "Jackson, Janet",
+      "title": "The Best Things in Life Are Free",
+      "artistMbids": [
+        "6be2828f-6c0d-4059-99d4-fa18acf1a296",
+        "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe"
+      ],
+      "artists": [
+        {
+          "mbid": "6be2828f-6c0d-4059-99d4-fa18acf1a296",
+          "name": "Janet Jackson"
+        },
+        {
+          "mbid": "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe",
+          "name": "Luther Vandross"
+        }
+      ],
+      "recordingMbid": "665d240b-52bb-465a-a13d-49b76689c6a4",
+      "genres": [
+        "pop",
+        "dance",
+        "contemporary r&b"
+      ],
+      "year": 1992,
+      "how": "exact"
+    },
+    {
       "postId": 50238,
       "sortAs": "Goo Goo Dolls",
       "title": "Better Days",
@@ -34222,6 +35725,7 @@
         "indie rock",
         "pop rock"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -34282,6 +35786,18 @@
       "how": "exact"
     },
     {
+      "postId": 50241,
+      "artistMbids": [
+        "e2c00c56-8365-4160-9f40-a64682917633"
+      ],
+      "sortAs": "Goo Goo Dolls",
+      "genres": [
+        "alternative rock",
+        "pop punk",
+        "acoustic rock"
+      ]
+    },
+    {
       "postId": 52318,
       "artist": "Rage Against the Machine",
       "sortAs": "Rage Against the Machine",
@@ -34313,6 +35829,19 @@
       ],
       "year": 1994,
       "how": "exact"
+    },
+    {
+      "postId": 52290,
+      "artistMbids": [
+        "c2d25856-a09a-4d15-b404-77dd19c19e63"
+      ],
+      "artist": "R. Kelly",
+      "sortAs": "Kelly, R.",
+      "genres": [
+        "contemporary r&b",
+        "new jack swing",
+        "pop"
+      ]
     },
     {
       "postId": 50554,
@@ -34529,6 +36058,18 @@
       ],
       "year": 2007,
       "how": "exact"
+    },
+    {
+      "postId": 51164,
+      "artistMbids": [
+        "678d88b2-87b0-403b-b63d-5da7465aecc3"
+      ],
+      "sortAs": "Led Zeppelin",
+      "genres": [
+        "hard rock",
+        "rock",
+        "blues rock"
+      ]
     },
     {
       "postId": 52572,
@@ -34859,6 +36400,16 @@
         "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe",
         "494e8d09-f85b-4543-892f-a5096aed1cd4"
       ],
+      "artists": [
+        {
+          "mbid": "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe",
+          "name": "Luther Vandross"
+        },
+        {
+          "mbid": "494e8d09-f85b-4543-892f-a5096aed1cd4",
+          "name": "Mariah Carey"
+        }
+      ],
       "recordingMbid": "3233c35b-ca41-47d5-bb6e-6e615a5c3fdc",
       "genres": [
         "soul",
@@ -34879,6 +36430,7 @@
         "neue deutsche härte",
         "metal"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -34972,6 +36524,7 @@
         "dance-pop",
         "electropop"
       ],
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -35029,6 +36582,18 @@
       "recordingMbid": "9179dbbb-045d-46bf-adb2-f204e773690c",
       "year": 1987,
       "how": "exact"
+    },
+    {
+      "postId": 50815,
+      "artistMbids": [
+        "abd506e1-6f2b-4d6f-b937-92c267f6f88b"
+      ],
+      "sortAs": "Journey",
+      "genres": [
+        "rock",
+        "aor",
+        "arena rock"
+      ]
     },
     {
       "postId": 51165,
@@ -35450,6 +37015,17 @@
       "how": "exact"
     },
     {
+      "postId": 51363,
+      "artistMbids": [
+        "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe"
+      ],
+      "sortAs": "Vandross, Luther",
+      "genres": [
+        "soul",
+        "r&b"
+      ]
+    },
+    {
       "postId": 51364,
       "sortAs": "Vandross, Luther",
       "title": "If Only for One Night",
@@ -35724,6 +37300,7 @@
         "aor",
         "arena rock"
       ],
+      "year": 1978,
       "how": "exact"
     },
     {
@@ -36403,13 +37980,15 @@
     },
     {
       "postId": 51686,
-      "sortAs": "Mika",
       "artistMbids": [
-        "e11051f9-0098-41aa-9edb-8dacd8f1c6b5"
+        "8a9ac1cb-faae-434e-8d60-b139a3707dfc"
       ],
-      "recordingMbid": "eda5e9e7-f769-41a8-af43-77858e650ec1",
-      "year": 2011,
-      "how": "exact"
+      "artist": "MIKA",
+      "sortAs": "MIKA",
+      "genres": [
+        "pop",
+        "dance-pop"
+      ]
     },
     {
       "postId": 52320,
@@ -36503,6 +38082,7 @@
         "acid jazz",
         "funk"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -36597,6 +38177,18 @@
       "how": "exact"
     },
     {
+      "postId": 52229,
+      "artistMbids": [
+        "070d193a-845c-479f-980e-bef15710653e"
+      ],
+      "sortAs": "Prince",
+      "genres": [
+        "funk",
+        "pop",
+        "contemporary r&b"
+      ]
+    },
+    {
       "postId": 52067,
       "sortAs": "Peaches & Herb",
       "title": "Shake Your Groove Thing",
@@ -36648,6 +38240,19 @@
       ],
       "year": 2007,
       "how": "exact"
+    },
+    {
+      "postId": 52051,
+      "artistMbids": [
+        "5d02f264-e225-41ff-83f7-d9b1f0b1874a"
+      ],
+      "artist": "Simon & Garfunkel",
+      "sortAs": "Simon & Garfunkel",
+      "genres": [
+        "folk rock",
+        "folk",
+        "folk pop"
+      ]
     },
     {
       "postId": 49510,
@@ -37150,6 +38755,18 @@
       "how": "exact"
     },
     {
+      "postId": 52574,
+      "artistMbids": [
+        "331ce348-1b08-40b9-8ed7-0763b92bd003"
+      ],
+      "sortAs": "Roxy Music",
+      "genres": [
+        "art rock",
+        "glam rock",
+        "art pop"
+      ]
+    },
+    {
       "postId": 50475,
       "sortAs": "Iron Maiden",
       "title": "The Trooper",
@@ -37430,6 +39047,7 @@
         "rap metal",
         "funk metal"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -37685,6 +39303,7 @@
         "acoustic rock",
         "blues"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -37701,6 +39320,16 @@
       ],
       "year": 1960,
       "how": "exact"
+    },
+    {
+      "postId": 50946,
+      "artistMbids": [
+        "f45da029-7b00-4bf3-962c-0eeb20309cc4"
+      ],
+      "sortAs": "Urban, Keith",
+      "genres": [
+        "country"
+      ]
     },
     {
       "postId": 52047,
@@ -37869,6 +39498,17 @@
       ],
       "year": 2004,
       "how": "exact"
+    },
+    {
+      "postId": 53254,
+      "artistMbids": [
+        "2f951906-5629-4fef-a260-5033151c162a"
+      ],
+      "sortAs": "Keith, Toby",
+      "genres": [
+        "country",
+        "contemporary country"
+      ]
     },
     {
       "postId": 53339,
@@ -38079,6 +39719,16 @@
       "artistMbids": [
         "9072df14-b61e-42e2-b4f4-6bbb7fdb5586",
         "4dbf5678-7a31-406a-abbe-232f8ac2cd63"
+      ],
+      "artists": [
+        {
+          "mbid": "9072df14-b61e-42e2-b4f4-6bbb7fdb5586",
+          "name": "Tina Turner"
+        },
+        {
+          "mbid": "4dbf5678-7a31-406a-abbe-232f8ac2cd63",
+          "name": "Bryan Adams"
+        }
       ],
       "recordingMbid": "19ba8d63-c34b-403c-a330-fca8061dc1ca",
       "genres": [
@@ -38416,6 +40066,7 @@
         "hard rock",
         "post-grunge"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -38794,6 +40445,16 @@
         "847e8a0c-cc20-4213-9e16-975515c2a926",
         "197450cd-0124-4164-b723-3c22dd16494d"
       ],
+      "artists": [
+        {
+          "mbid": "847e8a0c-cc20-4213-9e16-975515c2a926",
+          "name": "Céline Dion"
+        },
+        {
+          "mbid": "197450cd-0124-4164-b723-3c22dd16494d",
+          "name": "Frank Sinatra"
+        }
+      ],
       "recordingMbid": "01b301c1-80c3-48a1-b6b9-29c2399f41f0",
       "genres": [
         "pop",
@@ -38847,6 +40508,18 @@
       ],
       "year": 2008,
       "how": "exact"
+    },
+    {
+      "postId": 48423,
+      "artistMbids": [
+        "b2dbfc09-b332-408b-a235-1850e41971c5"
+      ],
+      "sortAs": "Bloodhound Gang",
+      "genres": [
+        "alternative rock",
+        "comedy rock",
+        "rock"
+      ]
     },
     {
       "postId": 48841,
@@ -38941,6 +40614,22 @@
         "americana"
       ],
       "year": 1975,
+      "how": "exact"
+    },
+    {
+      "postId": 48424,
+      "sortAs": "Bloodhound Gang",
+      "title": "The Bad Touch",
+      "artistMbids": [
+        "b2dbfc09-b332-408b-a235-1850e41971c5"
+      ],
+      "recordingMbid": "a1a4e180-a602-4104-afed-b5fcc1c06271",
+      "genres": [
+        "alternative rock",
+        "comedy rock",
+        "rock"
+      ],
+      "year": 1999,
       "how": "exact"
     },
     {
@@ -39052,6 +40741,31 @@
       ],
       "year": 1973,
       "how": "exact"
+    },
+    {
+      "postId": 48917,
+      "artistMbids": [
+        "bfcc6d75-a6a5-4bc6-8282-47aec8531818"
+      ],
+      "sortAs": "Cher",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "disco"
+      ]
+    },
+    {
+      "postId": 47753,
+      "artistMbids": [
+        "69d9cb53-5b8f-41b0-ac84-49eabea535b2"
+      ],
+      "artist": "A★Teens",
+      "sortAs": "A‐Teens",
+      "genres": [
+        "teen pop",
+        "europop",
+        "pop"
+      ]
     },
     {
       "postId": 48132,
@@ -39322,6 +41036,13 @@
       "how": "exact"
     },
     {
+      "postId": 48782,
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "sortAs": "Carola"
+    },
+    {
       "postId": 47912,
       "sortAs": "Keys, Alicia",
       "artistMbids": [
@@ -39564,6 +41285,16 @@
         "c234fa42-e6a6-443e-937e-2f4b073538a3",
         "ac9a487a-d9d2-4f27-bb23-0f4686488345"
       ],
+      "artists": [
+        {
+          "mbid": "c234fa42-e6a6-443e-937e-2f4b073538a3",
+          "name": "Chris Brown"
+        },
+        {
+          "mbid": "ac9a487a-d9d2-4f27-bb23-0f4686488345",
+          "name": "Lil Wayne"
+        }
+      ],
       "recordingMbid": "dd84ec54-c90f-4ca2-b754-c036dc11cd8f",
       "genres": [
         "pop",
@@ -39732,6 +41463,18 @@
       ],
       "year": 1979,
       "how": "exact"
+    },
+    {
+      "postId": 49586,
+      "artistMbids": [
+        "f46bd570-5768-462e-b84c-c7c993bbf47e"
+      ],
+      "sortAs": "Eagles",
+      "genres": [
+        "rock",
+        "country rock",
+        "classic rock"
+      ]
     },
     {
       "postId": 47797,
@@ -39924,6 +41667,18 @@
       ],
       "year": 2000,
       "how": "version"
+    },
+    {
+      "postId": 48139,
+      "artistMbids": [
+        "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
+      ],
+      "sortAs": "Backstreet Boys",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
     },
     {
       "postId": 48851,
@@ -40180,6 +41935,7 @@
         "rock",
         "blues rock"
       ],
+      "year": 1977,
       "how": "exact"
     },
     {
@@ -40508,6 +42264,16 @@
         "3414d446-735a-443c-931f-10634f57e5b9",
         "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
       ],
+      "artists": [
+        {
+          "mbid": "3414d446-735a-443c-931f-10634f57e5b9",
+          "name": "Usher"
+        },
+        {
+          "mbid": "8ef1df30-ae4f-4dbd-9351-1a32b208a01e",
+          "name": "Alicia Keys"
+        }
+      ],
       "recordingMbid": "6c40bc5d-0b21-47ae-9db1-c1a8a461e980",
       "genres": [
         "contemporary r&b",
@@ -40605,6 +42371,16 @@
       "artistMbids": [
         "5508631d-697f-4839-a669-06637e5bcb90",
         "c234fa42-e6a6-443e-937e-2f4b073538a3"
+      ],
+      "artists": [
+        {
+          "mbid": "5508631d-697f-4839-a669-06637e5bcb90",
+          "name": "Jordin Sparks"
+        },
+        {
+          "mbid": "c234fa42-e6a6-443e-937e-2f4b073538a3",
+          "name": "Chris Brown"
+        }
       ],
       "recordingMbid": "8c84090c-36b3-4fa2-a613-478bf59a7265",
       "genres": [
@@ -41532,6 +43308,16 @@
         "54e93235-2034-478d-b47b-a985828193b7",
         "b3c8a465-9081-41ef-b845-43fbf24e15e0"
       ],
+      "artists": [
+        {
+          "mbid": "54e93235-2034-478d-b47b-a985828193b7",
+          "name": "Agnes"
+        },
+        {
+          "mbid": "b3c8a465-9081-41ef-b845-43fbf24e15e0",
+          "name": "Björn Skifs"
+        }
+      ],
       "recordingMbid": "ebd5b490-dab0-4c9f-8f2a-c22826eff17b",
       "genres": [
         "pop",
@@ -41620,6 +43406,18 @@
       ],
       "year": 2002,
       "how": "exact"
+    },
+    {
+      "postId": 48954,
+      "artistMbids": [
+        "c234fa42-e6a6-443e-937e-2f4b073538a3"
+      ],
+      "sortAs": "Brown, Chris",
+      "genres": [
+        "pop",
+        "contemporary r&b",
+        "r&b"
+      ]
     },
     {
       "postId": 47921,
@@ -42214,6 +44012,7 @@
       "genres": [
         "pop"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -42332,6 +44131,16 @@
       "artistMbids": [
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
         "73e5e69d-3554-40d8-8516-00cb38737a1c"
+      ],
+      "artists": [
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        },
+        {
+          "mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+          "name": "Rihanna"
+        }
       ],
       "recordingMbid": "29d6a30b-b911-475c-808c-8b289844ca75",
       "genres": [
@@ -42765,6 +44574,16 @@
       "artistMbids": [
         "257891db-1f69-4660-894d-075e355431a8",
         "2cb3ebf3-09fb-45fe-8267-9a45d15796df"
+      ],
+      "artists": [
+        {
+          "mbid": "257891db-1f69-4660-894d-075e355431a8",
+          "name": "Edward Maya"
+        },
+        {
+          "mbid": "2cb3ebf3-09fb-45fe-8267-9a45d15796df",
+          "name": "Vika Jigulina"
+        }
       ],
       "recordingMbid": "d5c37fb3-62da-416d-b84e-046cff169288",
       "year": 2009,
@@ -43545,6 +45364,16 @@
         "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
         "94204786-d86d-40ab-ba91-ef8e6c640e07"
       ],
+      "artists": [
+        {
+          "mbid": "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
+          "name": "Lisa Loeb"
+        },
+        {
+          "mbid": "94204786-d86d-40ab-ba91-ef8e6c640e07",
+          "name": "Nine Stories"
+        }
+      ],
       "recordingMbid": "c77ba367-7ab8-4ee9-9a96-533c09fc4a0e",
       "genres": [
         "rock"
@@ -44306,6 +46135,16 @@
         "ba550d0e-adac-4864-b88b-407cab5e76af",
         "f27ec8db-af05-4f36-916e-3d57f91ecf5e"
       ],
+      "artists": [
+        {
+          "mbid": "ba550d0e-adac-4864-b88b-407cab5e76af",
+          "name": "Paul McCartney"
+        },
+        {
+          "mbid": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+          "name": "Michael Jackson"
+        }
+      ],
       "recordingMbid": "28171955-6da5-47cf-a9a8-6b338263736d",
       "genres": [
         "pop",
@@ -44399,6 +46238,16 @@
         "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
         "94204786-d86d-40ab-ba91-ef8e6c640e07"
       ],
+      "artists": [
+        {
+          "mbid": "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
+          "name": "Lisa Loeb"
+        },
+        {
+          "mbid": "94204786-d86d-40ab-ba91-ef8e6c640e07",
+          "name": "Nine Stories"
+        }
+      ],
       "recordingMbid": "cf4f2106-63f0-4504-bc55-5a1543ff70f7",
       "genres": [
         "rock"
@@ -44429,6 +46278,16 @@
       "artistMbids": [
         "650e7db6-b795-4eb5-a702-5ea2fc46c848",
         "859d0860-d480-4efd-970c-c05d5f1776b8"
+      ],
+      "artists": [
+        {
+          "mbid": "650e7db6-b795-4eb5-a702-5ea2fc46c848",
+          "name": "Lady Gaga"
+        },
+        {
+          "mbid": "859d0860-d480-4efd-970c-c05d5f1776b8",
+          "name": "Beyoncé"
+        }
       ],
       "recordingMbid": "d53ca007-46f5-4136-98a6-da7971efdc15",
       "genres": [
@@ -44531,6 +46390,18 @@
       ],
       "year": 2003,
       "how": "exact"
+    },
+    {
+      "postId": 51426,
+      "artistMbids": [
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "sortAs": "Madonna",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "art pop"
+      ]
     },
     {
       "postId": 51212,
@@ -45294,6 +47165,16 @@
         "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "5441c29d-3602-4898-b1a1-b77fa23b8e50"
       ],
+      "artists": [
+        {
+          "mbid": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+          "name": "Queen"
+        },
+        {
+          "mbid": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+          "name": "David Bowie"
+        }
+      ],
       "recordingMbid": "32c7e292-14f1-4080-bddf-ef852e0a4c59",
       "genres": [
         "rock",
@@ -45572,6 +47453,16 @@
         "a35237a0-4f47-40a6-b6f3-1e786db23402",
         "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e"
       ],
+      "artists": [
+        {
+          "mbid": "a35237a0-4f47-40a6-b6f3-1e786db23402",
+          "name": "Rod Stewart"
+        },
+        {
+          "mbid": "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e",
+          "name": "Stevie Wonder"
+        }
+      ],
       "recordingMbid": "cbadb9de-0931-423d-ac2b-12ccd97f4ec5",
       "genres": [
         "rock",
@@ -45647,6 +47538,13 @@
       "recordingMbid": "4039e558-5e8e-4036-b4f3-968f76ae6966",
       "year": 1990,
       "how": "exact"
+    },
+    {
+      "postId": 48305,
+      "artistMbids": [
+        "ed333e8b-d18a-49fc-b361-4ec9731dfdba"
+      ],
+      "sortAs": "Midler, Bette"
     },
     {
       "postId": 48769,
@@ -45834,6 +47732,21 @@
       "how": "exact"
     },
     {
+      "postId": 51345,
+      "sortAs": "Loverboy",
+      "title": "The Kid Is Hot Tonight",
+      "artistMbids": [
+        "c11ba128-03b1-404d-ae88-452524b7ecc3"
+      ],
+      "recordingMbid": "f8f1faf9-5520-4562-a4b7-862ee286f1c2",
+      "genres": [
+        "rock",
+        "hard rock"
+      ],
+      "year": 2001,
+      "how": "exact"
+    },
+    {
       "postId": 52158,
       "sortAs": "Pink Floyd",
       "artistMbids": [
@@ -45945,6 +47858,7 @@
         "21840e91-fe96-44ee-886f-bdb6a1a563c3"
       ],
       "recordingMbid": "f1e863da-919c-45c6-9566-de993375560a",
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -46222,6 +48136,18 @@
       "how": "exact"
     },
     {
+      "postId": 50168,
+      "artistMbids": [
+        "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e"
+      ],
+      "sortAs": "Genesis",
+      "genres": [
+        "progressive rock",
+        "symphonic prog",
+        "progressive pop"
+      ]
+    },
+    {
       "postId": 50920,
       "artist": "Katrina and the Waves",
       "sortAs": "Katrina and the Waves",
@@ -46467,6 +48393,18 @@
       "recordingMbid": "fd7bc4fd-db57-4dde-a52c-fe2417d5caa7",
       "year": 2008,
       "how": "exact"
+    },
+    {
+      "postId": 52729,
+      "artistMbids": [
+        "faabb55d-3c9e-4c23-8779-732ac2ee2c0d"
+      ],
+      "sortAs": "Twain, Shania",
+      "genres": [
+        "country",
+        "country pop",
+        "pop"
+      ]
     },
     {
       "postId": 52730,
@@ -46850,6 +48788,16 @@
         "54799c0e-eb45-4eea-996d-c4d71a63c499",
         "eea8a864-fcda-4602-9569-38ab446decd6"
       ],
+      "artists": [
+        {
+          "mbid": "54799c0e-eb45-4eea-996d-c4d71a63c499",
+          "name": "Ella Fitzgerald"
+        },
+        {
+          "mbid": "eea8a864-fcda-4602-9569-38ab446decd6",
+          "name": "Louis Armstrong"
+        }
+      ],
       "recordingMbid": "9e16894f-02e3-4175-8abf-87e022e7a9ac",
       "genres": [
         "jazz",
@@ -47129,6 +49077,18 @@
       ],
       "year": 1999,
       "how": "exact"
+    },
+    {
+      "postId": 48214,
+      "artistMbids": [
+        "b904d624-9e05-4398-8f4f-88fbcf022f79"
+      ],
+      "sortAs": "White, Barry",
+      "genres": [
+        "soul",
+        "disco",
+        "funk"
+      ]
     },
     {
       "postId": 48215,
@@ -47670,6 +49630,16 @@
         "9960700d-2017-40bd-b2d4-1d365d668c81",
         "702d2b90-eef0-4354-b2c4-6366eba92b7f"
       ],
+      "artists": [
+        {
+          "mbid": "9960700d-2017-40bd-b2d4-1d365d668c81",
+          "name": "Brett Dennen"
+        },
+        {
+          "mbid": "702d2b90-eef0-4354-b2c4-6366eba92b7f",
+          "name": "Femi Kuti"
+        }
+      ],
       "recordingMbid": "c6db34fc-830e-43a3-996c-a6e81aee2b08",
       "genres": [
         "folk"
@@ -47695,6 +49665,16 @@
       "artistMbids": [
         "e573ad8c-d829-4c68-a9be-0d4460cca073",
         "750c4640-d8aa-4bb7-a9d5-6ebbc84a6406"
+      ],
+      "artists": [
+        {
+          "mbid": "e573ad8c-d829-4c68-a9be-0d4460cca073",
+          "name": "Jim Brickman"
+        },
+        {
+          "mbid": "750c4640-d8aa-4bb7-a9d5-6ebbc84a6406",
+          "name": "Rush of Fools"
+        }
       ],
       "recordingMbid": "be297bb7-85f4-4fad-ac15-cf9760fbd338",
       "genres": [
@@ -47755,6 +49735,16 @@
       "artistMbids": [
         "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
         "c234fa42-e6a6-443e-937e-2f4b073538a3"
+      ],
+      "artists": [
+        {
+          "mbid": "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
+          "name": "T‐Pain"
+        },
+        {
+          "mbid": "c234fa42-e6a6-443e-937e-2f4b073538a3",
+          "name": "Chris Brown"
+        }
       ],
       "recordingMbid": "90e41457-debc-42d0-9ab1-881c5a15df20",
       "genres": [
@@ -48092,6 +50082,7 @@
         "pop",
         "rockabilly"
       ],
+      "year": 1959,
       "how": "exact"
     },
     {
@@ -48182,6 +50173,7 @@
         "hard rock",
         "aor"
       ],
+      "year": 1974,
       "how": "exact"
     },
     {
@@ -48302,6 +50294,20 @@
         "6cfd7ffc-824f-4219-8e27-4b9417700f44",
         "a54d9cd2-1359-4ea3-98a1-fe068fc66814"
       ],
+      "artists": [
+        {
+          "mbid": "a406a684-7c88-442b-836d-3b9b67bbc91d",
+          "name": "William Shatner"
+        },
+        {
+          "mbid": "6cfd7ffc-824f-4219-8e27-4b9417700f44",
+          "name": "Brad Paisley"
+        },
+        {
+          "mbid": "a54d9cd2-1359-4ea3-98a1-fe068fc66814",
+          "name": "Steve Miller"
+        }
+      ],
       "recordingMbid": "fb25f600-b463-4b48-9f57-9c45ba8f9c8c",
       "year": 2011,
       "how": "artist-scoped"
@@ -48316,6 +50322,17 @@
       "recordingMbid": "2632252b-5f9f-4b67-b4d4-7ba5add8d259",
       "year": 1982,
       "how": "exact"
+    },
+    {
+      "postId": 48005,
+      "artistMbids": [
+        "2a9ea5bf-fc08-4fbc-ab73-17afa7906a52"
+      ],
+      "sortAs": "Annie",
+      "genres": [
+        "electronic",
+        "pop"
+      ]
     },
     {
       "postId": 48306,
@@ -48351,6 +50368,16 @@
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "9092d8e1-9b38-4372-a96d-000b8561a8bc"
       ],
+      "artists": [
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        },
+        {
+          "mbid": "9092d8e1-9b38-4372-a96d-000b8561a8bc",
+          "name": "LeAnn Rimes"
+        }
+      ],
       "recordingMbid": "ecdaf107-ce7f-4abf-b77d-ca2f0594bd55",
       "genres": [
         "pop",
@@ -48385,6 +50412,16 @@
         "e8414012-4a1c-4ad4-be5e-fc55294e28cc",
         "b66771cc-45fa-4a32-b14f-5337d7223d7a"
       ],
+      "artists": [
+        {
+          "mbid": "e8414012-4a1c-4ad4-be5e-fc55294e28cc",
+          "name": "Ms. Lauryn Hill"
+        },
+        {
+          "mbid": "b66771cc-45fa-4a32-b14f-5337d7223d7a",
+          "name": "D’Angelo"
+        }
+      ],
       "recordingMbid": "a13a1ca6-98cf-4303-811c-bebe7d243f6f",
       "genres": [
         "hip hop",
@@ -48392,6 +50429,20 @@
       ],
       "year": 1998,
       "how": "artist-scoped"
+    },
+    {
+      "postId": 52645,
+      "sortAs": "Savage Garden",
+      "title": "The Animal Song",
+      "artistMbids": [
+        "a871fd87-50f7-4032-b06d-da56779edcce"
+      ],
+      "recordingMbid": "277fc5e8-6dcf-4c0d-a0ea-9f9e28a477c6",
+      "genres": [
+        "pop"
+      ],
+      "year": 1999,
+      "how": "exact"
     },
     {
       "postId": 53052,
@@ -48566,6 +50617,7 @@
         "alternative rock",
         "rock"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -48807,6 +50859,16 @@
         "e573ad8c-d829-4c68-a9be-0d4460cca073",
         "b0a55bd8-60c7-45c1-b78e-f20e4c8adba1"
       ],
+      "artists": [
+        {
+          "mbid": "e573ad8c-d829-4c68-a9be-0d4460cca073",
+          "name": "Jim Brickman"
+        },
+        {
+          "mbid": "b0a55bd8-60c7-45c1-b78e-f20e4c8adba1",
+          "name": "Martina McBride"
+        }
+      ],
       "recordingMbid": "e8679b2f-e206-475f-9450-87c5250ee1f5",
       "genres": [
         "new age"
@@ -49031,7 +51093,7 @@
         "country"
       ],
       "year": 1984,
-      "how": "near"
+      "how": "exact"
     },
     {
       "postId": 53152,
@@ -49379,6 +51441,16 @@
       "artistMbids": [
         "becd8cc6-a453-4183-af88-dedaaec859a6",
         "72b3b981-92b7-4b5c-8a83-35717358b76e"
+      ],
+      "artists": [
+        {
+          "mbid": "becd8cc6-a453-4183-af88-dedaaec859a6",
+          "name": "Gloria Estefan"
+        },
+        {
+          "mbid": "72b3b981-92b7-4b5c-8a83-35717358b76e",
+          "name": "Miami Sound Machine"
+        }
       ],
       "recordingMbid": "241ab926-7097-4ac8-9542-c8c1a96cbe80",
       "genres": [
@@ -49841,6 +51913,16 @@
         "b134d1bf-c7c7-4427-93ac-9fdbc2b59ef1",
         "35c5203e-8e88-4f36-9e13-1ede9e059e43"
       ],
+      "artists": [
+        {
+          "mbid": "b134d1bf-c7c7-4427-93ac-9fdbc2b59ef1",
+          "name": "Meat Loaf"
+        },
+        {
+          "mbid": "35c5203e-8e88-4f36-9e13-1ede9e059e43",
+          "name": "Marion Raven"
+        }
+      ],
       "recordingMbid": "69d1a724-8580-401c-839c-5b871a2cb5b5",
       "genres": [
         "hard rock",
@@ -50186,6 +52268,16 @@
         "2c16cb3f-e85f-4158-889f-ffc038f5792d",
         "197889a0-15b6-40bc-89b1-8859137bf823"
       ],
+      "artists": [
+        {
+          "mbid": "2c16cb3f-e85f-4158-889f-ffc038f5792d",
+          "name": "Suzi Quatro"
+        },
+        {
+          "mbid": "197889a0-15b6-40bc-89b1-8859137bf823",
+          "name": "Chris Norman"
+        }
+      ],
       "recordingMbid": "a9a4af51-a2f4-4d40-aa2a-31a68ced8e15",
       "genres": [
         "rock"
@@ -50350,6 +52442,17 @@
       "how": "exact"
     },
     {
+      "postId": 52611,
+      "artistMbids": [
+        "ffdb2b8f-ecbf-427a-abc7-c47f4ebc8ae3"
+      ],
+      "sortAs": "Fox, Samantha",
+      "genres": [
+        "dance-pop",
+        "pop"
+      ]
+    },
+    {
       "postId": 52612,
       "sortAs": "Fox, Samantha",
       "title": "I Only Want to Be With You",
@@ -50425,6 +52528,18 @@
       ],
       "year": 1967,
       "how": "exact"
+    },
+    {
+      "postId": 52424,
+      "artistMbids": [
+        "70ea63ea-70dc-4b63-951a-2c249d2b3b0a"
+      ],
+      "sortAs": "Martin, Ricky",
+      "genres": [
+        "latin pop",
+        "dance-pop",
+        "electro latino"
+      ]
     },
     {
       "postId": 52132,
@@ -50727,6 +52842,19 @@
       ],
       "year": 1993,
       "how": "exact"
+    },
+    {
+      "postId": 52052,
+      "artistMbids": [
+        "5d02f264-e225-41ff-83f7-d9b1f0b1874a"
+      ],
+      "artist": "Simon & Garfunkel",
+      "sortAs": "Simon & Garfunkel",
+      "genres": [
+        "folk rock",
+        "folk",
+        "folk pop"
+      ]
     },
     {
       "postId": 52097,
@@ -51076,6 +53204,16 @@
       "artistMbids": [
         "01e60eba-52df-4694-8f09-39f43abe54e9",
         "af84073d-3b6d-4390-9d3f-bf65a91c824f"
+      ],
+      "artists": [
+        {
+          "mbid": "01e60eba-52df-4694-8f09-39f43abe54e9",
+          "name": "Brandy"
+        },
+        {
+          "mbid": "af84073d-3b6d-4390-9d3f-bf65a91c824f",
+          "name": "Monica"
+        }
       ],
       "recordingMbid": "2b0145cc-a787-4057-b18e-cf523c6e6207",
       "genres": [
@@ -51440,6 +53578,22 @@
       "how": "exact"
     },
     {
+      "postId": 48082,
+      "sortAs": "Audioslave",
+      "title": "The Last Remaining Light",
+      "artistMbids": [
+        "020bfbb4-05c3-4c86-b372-17825c262094"
+      ],
+      "recordingMbid": "3a111a7b-814d-40be-bc91-1d0d79d848c8",
+      "genres": [
+        "alternative rock",
+        "hard rock",
+        "post-grunge"
+      ],
+      "year": 2002,
+      "how": "exact"
+    },
+    {
       "postId": 48083,
       "sortAs": "Audioslave",
       "title": "Shadow on the Sun",
@@ -51576,6 +53730,16 @@
         "5f6ab597-f57a-40da-be9e-adad48708203",
         "f90e8b26-9e52-4669-a5c9-e28529c47894"
       ],
+      "artists": [
+        {
+          "mbid": "5f6ab597-f57a-40da-be9e-adad48708203",
+          "name": "Dr. Dre"
+        },
+        {
+          "mbid": "f90e8b26-9e52-4669-a5c9-e28529c47894",
+          "name": "Snoop Dogg"
+        }
+      ],
       "recordingMbid": "2d620616-85a9-4cbf-8010-a73f1c8cdb94",
       "genres": [
         "hip hop",
@@ -51679,6 +53843,19 @@
       "how": "exact"
     },
     {
+      "postId": 52144,
+      "artistMbids": [
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
+      ],
+      "artist": "P!nk",
+      "sortAs": "Pink",
+      "genres": [
+        "pop",
+        "pop rock",
+        "dance-pop"
+      ]
+    },
+    {
       "postId": 50109,
       "artist": "The Fratellis",
       "sortAs": "Fratellis, The",
@@ -51767,6 +53944,16 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8",
         "bf24ca37-25f4-4e34-9aec-460b94364cfc"
+      ],
+      "artists": [
+        {
+          "mbid": "859d0860-d480-4efd-970c-c05d5f1776b8",
+          "name": "Beyoncé"
+        },
+        {
+          "mbid": "bf24ca37-25f4-4e34-9aec-460b94364cfc",
+          "name": "Shakira"
+        }
       ],
       "recordingMbid": "b2b284ac-b8c8-469b-aaa0-23240490ef72",
       "genres": [
@@ -52012,6 +54199,16 @@
         "f9ab44f1-7b19-4ecb-830c-403abcf36cd1",
         "2b7a678b-24f7-4759-a6c4-e6cfa7c71613"
       ],
+      "artists": [
+        {
+          "mbid": "f9ab44f1-7b19-4ecb-830c-403abcf36cd1",
+          "name": "Bob Sinclar"
+        },
+        {
+          "mbid": "2b7a678b-24f7-4759-a6c4-e6cfa7c71613",
+          "name": "Steve Edwards"
+        }
+      ],
       "recordingMbid": "ecd72925-a2ff-48fd-bb44-4d8dab91e37c",
       "genres": [
         "electro house",
@@ -52031,6 +54228,16 @@
       "recordingMbid": "8b235b48-5e44-4849-ad72-f8f78dfa75b7",
       "year": 2006,
       "how": "exact"
+    },
+    {
+      "postId": 53345,
+      "artistMbids": [
+        "3dc9c919-508f-4255-b05e-0eed6a28137d"
+      ],
+      "sortAs": "Adkins, Trace",
+      "genres": [
+        "country"
+      ]
     },
     {
       "postId": 52022,
@@ -52493,6 +54700,16 @@
         "302bd7b9-d012-4360-897a-93b00c855680",
         "1138a764-2212-4d0a-b02d-0dc14df91e08"
       ],
+      "artists": [
+        {
+          "mbid": "302bd7b9-d012-4360-897a-93b00c855680",
+          "name": "David Guetta"
+        },
+        {
+          "mbid": "1138a764-2212-4d0a-b02d-0dc14df91e08",
+          "name": "Akon"
+        }
+      ],
       "recordingMbid": "4fea7418-a579-484f-831b-16909c8307d5",
       "genres": [
         "house",
@@ -52550,6 +54767,16 @@
       "artistMbids": [
         "d6e65033-b56a-49df-8744-6fc3ffd75edd",
         "20244d07-534f-4eff-b4d4-930878889970"
+      ],
+      "artists": [
+        {
+          "mbid": "d6e65033-b56a-49df-8744-6fc3ffd75edd",
+          "name": "Boys Like Girls"
+        },
+        {
+          "mbid": "20244d07-534f-4eff-b4d4-930878889970",
+          "name": "Taylor Swift"
+        }
       ],
       "recordingMbid": "081d4a2c-87af-4640-b572-0b169e5cadfd",
       "genres": [
@@ -52688,6 +54915,16 @@
         "99075985-0d80-4692-a15e-b16f78831792",
         "253bfe58-d68a-4f96-9b7a-70d977cbf66d"
       ],
+      "artists": [
+        {
+          "mbid": "99075985-0d80-4692-a15e-b16f78831792",
+          "name": "Swedish House Mafia"
+        },
+        {
+          "mbid": "253bfe58-d68a-4f96-9b7a-70d977cbf66d",
+          "name": "The Neptunes"
+        }
+      ],
       "recordingMbid": "2cc07f8f-2d56-4c3d-8404-d55bf12ab0fd",
       "genres": [
         "house",
@@ -52703,6 +54940,16 @@
       "artistMbids": [
         "db4624cf-0e44-481e-a9dc-2142b833ec2f",
         "c999fc02-ab9a-4f4c-a0e7-98ff8325ffb5"
+      ],
+      "artists": [
+        {
+          "mbid": "db4624cf-0e44-481e-a9dc-2142b833ec2f",
+          "name": "Robbie Williams"
+        },
+        {
+          "mbid": "c999fc02-ab9a-4f4c-a0e7-98ff8325ffb5",
+          "name": "Gary Barlow"
+        }
       ],
       "recordingMbid": "63686b45-7055-4222-a866-e3fa1fadc106",
       "genres": [
@@ -52843,6 +55090,16 @@
       "artistMbids": [
         "73e5e69d-3554-40d8-8516-00cb38737a1c",
         "9fff2f8a-21e6-47de-a2b8-7f449929d43f"
+      ],
+      "artists": [
+        {
+          "mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+          "name": "Rihanna"
+        },
+        {
+          "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+          "name": "Drake"
+        }
       ],
       "recordingMbid": "daa6ec03-ea1b-48e1-be35-d8694b7403a7",
       "genres": [
@@ -53009,6 +55266,18 @@
       "recordingMbid": "b7ca31da-ab99-4088-b172-1393e38e940e",
       "year": 2011,
       "how": "exact"
+    },
+    {
+      "postId": 53063,
+      "artistMbids": [
+        "20244d07-534f-4eff-b4d4-930878889970"
+      ],
+      "sortAs": "Swift, Taylor",
+      "genres": [
+        "pop",
+        "country",
+        "country pop"
+      ]
     },
     {
       "postId": 53513,
@@ -53344,6 +55613,17 @@
       "how": "exact"
     },
     {
+      "postId": 52210,
+      "artistMbids": [
+        "1fd87f72-5fbf-4cad-bd9d-f2fec1359cfc"
+      ],
+      "sortAs": "Prefab Sprout",
+      "genres": [
+        "pop",
+        "sophisti-pop"
+      ]
+    },
+    {
       "postId": 47950,
       "sortAs": "Stewart, Amii",
       "title": "Knock on Wood",
@@ -53394,6 +55674,7 @@
         "r&b",
         "contemporary r&b"
       ],
+      "year": 2003,
       "how": "exact"
     },
     {
@@ -53924,6 +56205,16 @@
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
         "00c49f40-d715-4b79-b223-432048602cce"
       ],
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        },
+        {
+          "mbid": "00c49f40-d715-4b79-b223-432048602cce",
+          "name": "Indigo Girls"
+        }
+      ],
       "recordingMbid": "d7911102-0b5e-443c-bca7-98d531149340",
       "genres": [
         "pop",
@@ -53932,6 +56223,18 @@
       ],
       "year": 2006,
       "how": "artist-scoped"
+    },
+    {
+      "postId": 53488,
+      "artistMbids": [
+        "6fe07aa5-fec0-4eca-a456-f29bff451b04"
+      ],
+      "sortAs": "Weezer",
+      "genres": [
+        "alternative rock",
+        "power pop",
+        "rock"
+      ]
     },
     {
       "postId": 52054,
@@ -54017,6 +56320,16 @@
         "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
+      "artists": [
+        {
+          "mbid": "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
+          "name": "Timbaland"
+        },
+        {
+          "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+          "name": "Justin Timberlake"
+        }
+      ],
       "recordingMbid": "1d12a617-e4c9-46a9-a51f-80a07dd010d7",
       "genres": [
         "contemporary r&b",
@@ -54064,12 +56377,23 @@
         "94c338ff-1985-4429-9dc8-997b61bb5932",
         "b4b5b5a7-feff-47d0-9458-83d0d135a692"
       ],
+      "artists": [
+        {
+          "mbid": "94c338ff-1985-4429-9dc8-997b61bb5932",
+          "name": "B.o.B"
+        },
+        {
+          "mbid": "b4b5b5a7-feff-47d0-9458-83d0d135a692",
+          "name": "Hayley Williams"
+        }
+      ],
       "recordingMbid": "bec75d89-9342-410a-8d12-3726b11d3e19",
       "genres": [
         "hip hop",
         "pop rap",
         "southern hip hop"
       ],
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -54199,6 +56523,18 @@
       ],
       "year": 2010,
       "how": "exact"
+    },
+    {
+      "postId": 48024,
+      "artistMbids": [
+        "a1ed5e33-22ff-4e7d-a457-42f4309e135f"
+      ],
+      "sortAs": "Aqua",
+      "genres": [
+        "europop",
+        "bubblegum dance",
+        "eurodance"
+      ]
     },
     {
       "postId": 47826,
@@ -54394,6 +56730,18 @@
       "how": "exact"
     },
     {
+      "postId": 52329,
+      "artistMbids": [
+        "b2d122f9-eadb-4930-a196-8f221eeb0c66"
+      ],
+      "sortAs": "Rammstein",
+      "genres": [
+        "industrial metal",
+        "neue deutsche härte",
+        "metal"
+      ]
+    },
+    {
       "postId": 53620,
       "sortAs": "ZZ Top",
       "title": "Jesus Just Left Chicago",
@@ -54425,6 +56773,18 @@
       "how": "exact"
     },
     {
+      "postId": 48697,
+      "artistMbids": [
+        "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
+      ],
+      "sortAs": "Mars, Bruno",
+      "genres": [
+        "pop",
+        "funk",
+        "r&b"
+      ]
+    },
+    {
       "postId": 47720,
       "artist": "2Pac feat. Dr Dre",
       "sortAs": "2Pac",
@@ -54432,6 +56792,16 @@
       "artistMbids": [
         "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
         "5f6ab597-f57a-40da-be9e-adad48708203"
+      ],
+      "artists": [
+        {
+          "mbid": "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+          "name": "2Pac"
+        },
+        {
+          "mbid": "5f6ab597-f57a-40da-be9e-adad48708203",
+          "name": "Dr. Dre"
+        }
       ],
       "recordingMbid": "b75272f6-744a-4801-bc43-a0b946b16115",
       "genres": [
@@ -54616,6 +56986,7 @@
         "dance-pop",
         "pop"
       ],
+      "year": 1991,
       "how": "exact"
     },
     {
@@ -54782,6 +57153,7 @@
         "soft rock",
         "blues rock"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -54966,6 +57338,16 @@
         "a0b8cb9e-7532-45fe-a74c-30e7c4009a39",
         "f545eed4-cd4c-40a3-89c0-edf4d195e52e"
       ],
+      "artists": [
+        {
+          "mbid": "a0b8cb9e-7532-45fe-a74c-30e7c4009a39",
+          "name": "Missy Elliott"
+        },
+        {
+          "mbid": "f545eed4-cd4c-40a3-89c0-edf4d195e52e",
+          "name": "Da Brat"
+        }
+      ],
       "recordingMbid": "45348572-68fc-4d20-9377-94547ec9116a",
       "genres": [
         "hip hop",
@@ -55025,6 +57407,16 @@
       "artistMbids": [
         "2d7d0a67-ae5d-4ac0-93aa-aa52ef3a976a",
         "1f1f6737-b930-46fc-8d25-110bb99f7490"
+      ],
+      "artists": [
+        {
+          "mbid": "2d7d0a67-ae5d-4ac0-93aa-aa52ef3a976a",
+          "name": "Dru Hill"
+        },
+        {
+          "mbid": "1f1f6737-b930-46fc-8d25-110bb99f7490",
+          "name": "Redman"
+        }
       ],
       "recordingMbid": "05c2aef3-1732-472e-a8a7-56620051ed0e",
       "year": 1998,
@@ -55090,6 +57482,16 @@
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228",
         "35f866dc-c061-48ba-8157-cf2e0eac4857"
+      ],
+      "artists": [
+        {
+          "mbid": "0307edfc-437c-4b48-8700-80680e66a228",
+          "name": "Whitney Houston"
+        },
+        {
+          "mbid": "35f866dc-c061-48ba-8157-cf2e0eac4857",
+          "name": "Enrique Iglesias"
+        }
       ],
       "recordingMbid": "f13e515d-06fe-45ad-a03c-23bb02207337",
       "genres": [
@@ -55247,6 +57649,22 @@
       "how": "exact"
     },
     {
+      "postId": 51714,
+      "sortAs": "Elliott, Missy",
+      "title": "The Rain (Supa Dupa Fly)",
+      "artistMbids": [
+        "a0b8cb9e-7532-45fe-a74c-30e7c4009a39"
+      ],
+      "recordingMbid": "10ae5950-36b5-445c-9273-6eaf40561183",
+      "genres": [
+        "hip hop",
+        "pop rap",
+        "southern hip hop"
+      ],
+      "year": 1997,
+      "how": "exact"
+    },
+    {
       "postId": 50754,
       "sortAs": "Mayer, John",
       "title": "Come Back to Bed",
@@ -55360,6 +57778,16 @@
       "artistMbids": [
         "5f6ab597-f57a-40da-be9e-adad48708203",
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
+      ],
+      "artists": [
+        {
+          "mbid": "5f6ab597-f57a-40da-be9e-adad48708203",
+          "name": "Dr. Dre"
+        },
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        }
       ],
       "recordingMbid": "40aba30c-d352-4a04-ab1e-36e327575808",
       "genres": [
@@ -55849,6 +58277,16 @@
         "d24fb461-dee8-41fc-bb15-2f13bb2644a6",
         "94c338ff-1985-4429-9dc8-997b61bb5932"
       ],
+      "artists": [
+        {
+          "mbid": "d24fb461-dee8-41fc-bb15-2f13bb2644a6",
+          "name": "Jessie J"
+        },
+        {
+          "mbid": "94c338ff-1985-4429-9dc8-997b61bb5932",
+          "name": "B.o.B"
+        }
+      ],
       "recordingMbid": "09903db0-8627-432c-89f2-673873ea829c",
       "genres": [
         "pop",
@@ -55869,6 +58307,24 @@
         "a3ee920f-4e7f-4993-8aca-4b8538cfaa4a",
         "276d7d13-c0c4-4e67-a165-8e3764e4a2f3"
       ],
+      "artists": [
+        {
+          "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+          "name": "Pitbull"
+        },
+        {
+          "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
+          "name": "Ne‐Yo"
+        },
+        {
+          "mbid": "a3ee920f-4e7f-4993-8aca-4b8538cfaa4a",
+          "name": "Afrojack"
+        },
+        {
+          "mbid": "276d7d13-c0c4-4e67-a165-8e3764e4a2f3",
+          "name": "Nayer"
+        }
+      ],
       "recordingMbid": "748b6681-c103-4a6f-bb8f-769e620d2121",
       "genres": [
         "dance-pop",
@@ -55885,6 +58341,16 @@
       "artistMbids": [
         "3cce3d37-d44f-46a2-b1e3-cd7247d5015c",
         "f5dfa020-ad69-41cd-b3d4-fd7af0414e94"
+      ],
+      "artists": [
+        {
+          "mbid": "3cce3d37-d44f-46a2-b1e3-cd7247d5015c",
+          "name": "Tinie Tempah"
+        },
+        {
+          "mbid": "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+          "name": "Wiz Khalifa"
+        }
       ],
       "recordingMbid": "6fd15b36-ef27-4b6a-b124-5a3f92cccb31",
       "year": 2010,
@@ -55923,6 +58389,16 @@
       "artistMbids": [
         "e0140a67-e4d1-4f13-8a01-364355bee46e",
         "b42eca0f-9381-43db-badb-1cba080a7dc2"
+      ],
+      "artists": [
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        },
+        {
+          "mbid": "b42eca0f-9381-43db-badb-1cba080a7dc2",
+          "name": "Boyz II Men"
+        }
       ],
       "recordingMbid": "2d48f7b0-878d-4994-ac34-219d02c082d1",
       "genres": [
@@ -56669,6 +59145,7 @@
         "dance-pop",
         "pop"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -56774,6 +59251,16 @@
       "artistMbids": [
         "172e1f1a-504d-4488-b053-6344ba63e6d0",
         "2fddb92d-24b2-46a5-bf28-3aed46f4684c"
+      ],
+      "artists": [
+        {
+          "mbid": "172e1f1a-504d-4488-b053-6344ba63e6d0",
+          "name": "Nick Cave & the Bad Seeds"
+        },
+        {
+          "mbid": "2fddb92d-24b2-46a5-bf28-3aed46f4684c",
+          "name": "Kylie Minogue"
+        }
       ],
       "recordingMbid": "8f9dc0f3-b592-4b28-a7af-4358e7df30e8",
       "genres": [
@@ -57166,6 +59653,13 @@
       ],
       "year": 1983,
       "how": "exact"
+    },
+    {
+      "postId": 50358,
+      "artistMbids": [
+        "053cfc8d-cdec-4be8-a099-3e6305e15066"
+      ],
+      "sortAs": "Sjöholm, Helen"
     },
     {
       "postId": 51725,
@@ -58813,6 +61307,18 @@
       "how": "exact"
     },
     {
+      "postId": 48637,
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "sortAs": "Spears, Britney",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
+    },
+    {
       "postId": 48638,
       "sortAs": "Spears, Britney",
       "title": "Someday (I Will Understand)",
@@ -59003,6 +61509,18 @@
       "how": "exact"
     },
     {
+      "postId": 48650,
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "sortAs": "Spears, Britney",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ]
+    },
+    {
       "postId": 48651,
       "sortAs": "Spears, Britney",
       "artistMbids": [
@@ -59072,6 +61590,16 @@
       "artistMbids": [
         "2882ffa3-dec9-4055-a842-a950728bcb02",
         "8a338e06-d182-46f2-bd16-30a09bc840ba"
+      ],
+      "artists": [
+        {
+          "mbid": "2882ffa3-dec9-4055-a842-a950728bcb02",
+          "name": "Burt Bacharach"
+        },
+        {
+          "mbid": "8a338e06-d182-46f2-bd16-30a09bc840ba",
+          "name": "Elvis Costello"
+        }
       ],
       "recordingMbid": "38e1b563-b5b1-4616-81fd-8098aa3b5b29",
       "genres": [
@@ -59752,7 +62280,7 @@
         "pop rock"
       ],
       "year": 2002,
-      "how": "near"
+      "how": "exact"
     },
     {
       "postId": 49049,
@@ -60053,6 +62581,16 @@
         "a3c60d26-90d6-4788-ba9b-a89693fc396d",
         "613260c3-d620-4645-94cd-33cd55f29b1e"
       ],
+      "artists": [
+        {
+          "mbid": "a3c60d26-90d6-4788-ba9b-a89693fc396d",
+          "name": "Conway Twitty"
+        },
+        {
+          "mbid": "613260c3-d620-4645-94cd-33cd55f29b1e",
+          "name": "Loretta Lynn"
+        }
+      ],
       "recordingMbid": "6067753b-d0b4-4d08-91e9-058b0e698519",
       "genres": [
         "country"
@@ -60068,6 +62606,16 @@
         "a3c60d26-90d6-4788-ba9b-a89693fc396d",
         "613260c3-d620-4645-94cd-33cd55f29b1e"
       ],
+      "artists": [
+        {
+          "mbid": "a3c60d26-90d6-4788-ba9b-a89693fc396d",
+          "name": "Conway Twitty"
+        },
+        {
+          "mbid": "613260c3-d620-4645-94cd-33cd55f29b1e",
+          "name": "Loretta Lynn"
+        }
+      ],
       "recordingMbid": "44cbcc40-9e19-42b7-a413-93c95491e3ed",
       "genres": [
         "country"
@@ -60082,6 +62630,16 @@
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d",
         "613260c3-d620-4645-94cd-33cd55f29b1e"
+      ],
+      "artists": [
+        {
+          "mbid": "a3c60d26-90d6-4788-ba9b-a89693fc396d",
+          "name": "Conway Twitty"
+        },
+        {
+          "mbid": "613260c3-d620-4645-94cd-33cd55f29b1e",
+          "name": "Loretta Lynn"
+        }
       ],
       "recordingMbid": "51032ef0-87a4-48c5-80d7-208f5ce251f5",
       "genres": [
@@ -60820,6 +63378,7 @@
         "synth-pop",
         "new wave"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -60963,6 +63522,18 @@
       ],
       "year": 1989,
       "how": "exact"
+    },
+    {
+      "postId": 49323,
+      "artistMbids": [
+        "8538e728-ca0b-4321-b7e5-cff6565dd4c0"
+      ],
+      "sortAs": "Depeche Mode",
+      "genres": [
+        "electronic",
+        "synth-pop",
+        "new wave"
+      ]
     },
     {
       "postId": 49324,
@@ -61664,6 +64235,16 @@
       "how": "exact"
     },
     {
+      "postId": 49554,
+      "artistMbids": [
+        "2c4dae8c-e591-49e0-9c5a-62b310a15788"
+      ],
+      "sortAs": "Duffy",
+      "genres": [
+        "soul"
+      ]
+    },
+    {
       "postId": 49555,
       "sortAs": "Duffy",
       "title": "I’m Scared",
@@ -61960,6 +64541,16 @@
         "8a338e06-d182-46f2-bd16-30a09bc840ba",
         "2882ffa3-dec9-4055-a842-a950728bcb02"
       ],
+      "artists": [
+        {
+          "mbid": "8a338e06-d182-46f2-bd16-30a09bc840ba",
+          "name": "Elvis Costello"
+        },
+        {
+          "mbid": "2882ffa3-dec9-4055-a842-a950728bcb02",
+          "name": "Burt Bacharach"
+        }
+      ],
       "recordingMbid": "71c65033-87ef-4a6a-b157-3783b14903b8",
       "genres": [
         "new wave",
@@ -61994,6 +64585,20 @@
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
         "5f6ab597-f57a-40da-be9e-adad48708203",
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
+      ],
+      "artists": [
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        },
+        {
+          "mbid": "5f6ab597-f57a-40da-be9e-adad48708203",
+          "name": "Dr. Dre"
+        },
+        {
+          "mbid": "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
+          "name": "50 Cent"
+        }
       ],
       "recordingMbid": "532e6f4d-0e2a-4b9d-80b6-aca99e50abec",
       "genres": [
@@ -62147,6 +64752,21 @@
         "folk punk"
       ],
       "year": 1997,
+      "how": "exact"
+    },
+    {
+      "postId": 50032,
+      "sortAs": "Flogging Molly",
+      "title": "The Worst Day Since Yesterday",
+      "artistMbids": [
+        "c3694ddc-f7e5-40dd-9fad-90d11a2c50fa"
+      ],
+      "recordingMbid": "12ca3070-5967-4089-8158-42f8687b163c",
+      "genres": [
+        "celtic punk",
+        "folk punk"
+      ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -62500,6 +65120,18 @@
       "how": "exact"
     },
     {
+      "postId": 50065,
+      "artistMbids": [
+        "67f66c07-6e61-4026-ade5-7e782fad3a5d"
+      ],
+      "sortAs": "Foo Fighters",
+      "genres": [
+        "rock",
+        "alternative rock",
+        "post-grunge"
+      ]
+    },
+    {
       "postId": 50076,
       "sortAs": "Four Tops",
       "title": "I Can’t Help Myself",
@@ -62614,6 +65246,16 @@
         "a8806b5c-3ee0-4277-94d3-1a5427a7707c",
         "6af15841-1d62-495a-8b52-74eb6d603c5f"
       ],
+      "artists": [
+        {
+          "mbid": "a8806b5c-3ee0-4277-94d3-1a5427a7707c",
+          "name": "Gary Moore"
+        },
+        {
+          "mbid": "6af15841-1d62-495a-8b52-74eb6d603c5f",
+          "name": "Phil Lynott"
+        }
+      ],
       "recordingMbid": "30c8a92a-b166-48db-84be-af6e2f3f9393",
       "genres": [
         "blues rock",
@@ -62663,6 +65305,20 @@
       ],
       "year": 2009,
       "how": "near"
+    },
+    {
+      "postId": 50196,
+      "sortAs": "Strait, George",
+      "title": "The Big One",
+      "artistMbids": [
+        "5ab2cf34-517e-48eb-b3a5-34e1cbcd600a"
+      ],
+      "recordingMbid": "0e6a7f6c-dc19-4f88-8eda-a31b0cbc7ca1",
+      "genres": [
+        "country"
+      ],
+      "year": 1994,
+      "how": "exact"
     },
     {
       "postId": 50197,
@@ -62746,6 +65402,20 @@
         "country"
       ],
       "year": 1996,
+      "how": "exact"
+    },
+    {
+      "postId": 50203,
+      "sortAs": "Strait, George",
+      "title": "The Love Bug",
+      "artistMbids": [
+        "5ab2cf34-517e-48eb-b3a5-34e1cbcd600a"
+      ],
+      "recordingMbid": "b61817da-184a-4f67-a98d-eabb807e6bd5",
+      "genres": [
+        "country"
+      ],
+      "year": 1993,
       "how": "exact"
     },
     {
@@ -63415,6 +66085,18 @@
       "how": "exact"
     },
     {
+      "postId": 50476,
+      "artistMbids": [
+        "ca891d65-d9b0-4258-89f7-e6ba29d83767"
+      ],
+      "sortAs": "Iron Maiden",
+      "genres": [
+        "heavy metal",
+        "nwobhm",
+        "metal"
+      ]
+    },
+    {
       "postId": 50477,
       "sortAs": "Iron Maiden",
       "title": "Aces High",
@@ -63619,6 +66301,16 @@
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "149f91ef-1287-46da-9a8e-87fee02f1471"
       ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+          "name": "Pharrell Williams"
+        }
+      ],
       "recordingMbid": "165332aa-112f-4d91-9941-19f313c1a35f",
       "genres": [
         "pop rap",
@@ -63637,6 +66329,20 @@
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "73e5e69d-3554-40d8-8516-00cb38737a1c",
         "164f0d73-1234-4e2c-8743-d77bf2191051"
+      ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+          "name": "Rihanna"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        }
       ],
       "recordingMbid": "8b393866-9876-48a5-a891-b9786ef4809e",
       "genres": [
@@ -63723,6 +66429,16 @@
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "164f0d73-1234-4e2c-8743-d77bf2191051"
       ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        }
+      ],
       "recordingMbid": "c857137c-b09b-4ed5-8006-961624e27854",
       "genres": [
         "pop rap",
@@ -63761,11 +66477,33 @@
       "how": "exact"
     },
     {
+      "postId": 50733,
+      "artistMbids": [
+        "75a72702-a5ef-4513-bca5-c5b944903546"
+      ],
+      "sortAs": "Legend, John",
+      "genres": [
+        "soul",
+        "contemporary r&b",
+        "neo soul"
+      ]
+    },
+    {
       "postId": 50736,
       "sortAs": "Legend, John",
       "artistMbids": [
         "75a72702-a5ef-4513-bca5-c5b944903546",
         "80b3cf5e-18fe-4c59-98c7-e5bb87210710"
+      ],
+      "artists": [
+        {
+          "mbid": "75a72702-a5ef-4513-bca5-c5b944903546",
+          "name": "John Legend"
+        },
+        {
+          "mbid": "80b3cf5e-18fe-4c59-98c7-e5bb87210710",
+          "name": "The Roots"
+        }
       ],
       "recordingMbid": "8d51cdf0-f1ab-4d4d-b155-7a546afb3f27",
       "genres": [
@@ -63784,6 +66522,16 @@
       "artistMbids": [
         "75a72702-a5ef-4513-bca5-c5b944903546",
         "f563a1a9-069b-41ed-8b3b-e1b1a6f5b34b"
+      ],
+      "artists": [
+        {
+          "mbid": "75a72702-a5ef-4513-bca5-c5b944903546",
+          "name": "John Legend"
+        },
+        {
+          "mbid": "f563a1a9-069b-41ed-8b3b-e1b1a6f5b34b",
+          "name": "André 3000"
+        }
       ],
       "recordingMbid": "0c2977eb-5199-427d-a565-207e76f3cd09",
       "genres": [
@@ -64178,6 +66926,16 @@
       "artistMbids": [
         "c3d14b41-a48d-488f-bfed-ce0597bb0b1f",
         "1d543e07-d0d2-4834-a8db-d65c50c2a856"
+      ],
+      "artists": [
+        {
+          "mbid": "c3d14b41-a48d-488f-bfed-ce0597bb0b1f",
+          "name": "Kenny Rogers"
+        },
+        {
+          "mbid": "1d543e07-d0d2-4834-a8db-d65c50c2a856",
+          "name": "Dolly Parton"
+        }
       ],
       "recordingMbid": "71643d7e-9d38-4ea2-a9d9-f0997c68fd45",
       "genres": [
@@ -64741,6 +67499,16 @@
         "028e1863-cab4-4a3d-9dd9-91c682c91005",
         "1138a764-2212-4d0a-b02d-0dc14df91e08"
       ],
+      "artists": [
+        {
+          "mbid": "028e1863-cab4-4a3d-9dd9-91c682c91005",
+          "name": "The Lonely Island"
+        },
+        {
+          "mbid": "1138a764-2212-4d0a-b02d-0dc14df91e08",
+          "name": "Akon"
+        }
+      ],
       "recordingMbid": "fcbde83c-3b9e-45c1-9e26-b3ba826b4c23",
       "genres": [
         "comedy",
@@ -65183,6 +67951,16 @@
         "0ab49580-c84f-44d4-875f-d83760ea2cfe",
         "f5dfa020-ad69-41cd-b3d4-fd7af0414e94"
       ],
+      "artists": [
+        {
+          "mbid": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+          "name": "Maroon 5"
+        },
+        {
+          "mbid": "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+          "name": "Wiz Khalifa"
+        }
+      ],
       "recordingMbid": "bcd54ab6-9552-44cd-a09d-d46a8a374c35",
       "genres": [
         "pop",
@@ -65500,6 +68278,7 @@
         "7b38a145-7137-4c61-8d04-89ade521a6fc"
       ],
       "recordingMbid": "58da7512-dd44-4ebd-b43c-4ee67b21c406",
+      "year": 1978,
       "how": "exact"
     },
     {
@@ -65702,6 +68481,16 @@
         "090dafe5-818c-4bba-9ebf-7e3a651a5c43",
         "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7"
       ],
+      "artists": [
+        {
+          "mbid": "090dafe5-818c-4bba-9ebf-7e3a651a5c43",
+          "name": "New Kids on the Block"
+        },
+        {
+          "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
+          "name": "Ne‐Yo"
+        }
+      ],
       "recordingMbid": "2a2897b9-edef-4c97-a4f8-2dabe571d054",
       "genres": [
         "pop",
@@ -65858,6 +68647,16 @@
       "artistMbids": [
         "ad279295-653f-42e1-9aaa-b731df2e78ba",
         "09887aa7-226e-4ecc-9a0c-02d2ae5777e1"
+      ],
+      "artists": [
+        {
+          "mbid": "ad279295-653f-42e1-9aaa-b731df2e78ba",
+          "name": "Owl City"
+        },
+        {
+          "mbid": "09887aa7-226e-4ecc-9a0c-02d2ae5777e1",
+          "name": "Carly Rae Jepsen"
+        }
       ],
       "recordingMbid": "47094556-37b5-4302-9e67-3bbbefbfdb1f",
       "genres": [
@@ -66159,6 +68958,16 @@
         "070d193a-845c-479f-980e-bef15710653e",
         "51d63176-56e8-45b9-88e3-81e6436473f3"
       ],
+      "artists": [
+        {
+          "mbid": "070d193a-845c-479f-980e-bef15710653e",
+          "name": "Prince"
+        },
+        {
+          "mbid": "51d63176-56e8-45b9-88e3-81e6436473f3",
+          "name": "The New Power Generation"
+        }
+      ],
       "recordingMbid": "97d4735c-bf2c-462c-9833-3646a21168d1",
       "genres": [
         "funk",
@@ -66176,6 +68985,16 @@
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e",
         "4c8ead39-b9df-4c56-a27c-51bc049cfd48"
+      ],
+      "artists": [
+        {
+          "mbid": "070d193a-845c-479f-980e-bef15710653e",
+          "name": "Prince"
+        },
+        {
+          "mbid": "4c8ead39-b9df-4c56-a27c-51bc049cfd48",
+          "name": "The Revolution"
+        }
       ],
       "recordingMbid": "f81427df-b2dc-464e-a8ec-b8030074501f",
       "genres": [
@@ -66225,6 +69044,16 @@
       "artistMbids": [
         "b753584a-3664-46f8-bb84-f6deed133c80",
         "76b2e842-5e85-4c97-ab62-d5bc315595b5"
+      ],
+      "artists": [
+        {
+          "mbid": "b753584a-3664-46f8-bb84-f6deed133c80",
+          "name": "David Arnold"
+        },
+        {
+          "mbid": "76b2e842-5e85-4c97-ab62-d5bc315595b5",
+          "name": "Pulp"
+        }
       ],
       "recordingMbid": "c71baabb-e873-4fbb-a939-0876abbb49ee",
       "year": 1995,
@@ -66335,6 +69164,24 @@
         "975d94b4-7ca8-4eec-ae48-1aa4660995d3",
         "ddfd9b2f-186e-4b2c-ad09-01aa5380c225",
         "66a4b9d2-d5a6-40b8-93d5-0bdd1dbb4b43"
+      ],
+      "artists": [
+        {
+          "mbid": "c2d25856-a09a-4d15-b404-77dd19c19e63",
+          "name": "R. Kelly"
+        },
+        {
+          "mbid": "975d94b4-7ca8-4eec-ae48-1aa4660995d3",
+          "name": "Tyrese"
+        },
+        {
+          "mbid": "ddfd9b2f-186e-4b2c-ad09-01aa5380c225",
+          "name": "Robin Thicke"
+        },
+        {
+          "mbid": "66a4b9d2-d5a6-40b8-93d5-0bdd1dbb4b43",
+          "name": "The‐Dream"
+        }
       ],
       "recordingMbid": "ce4fc836-4ea1-4a4a-bf99-9ee37b64c718",
       "genres": [
@@ -66456,6 +69303,16 @@
         "c2d25856-a09a-4d15-b404-77dd19c19e63",
         "eedac904-9fd2-43f1-af88-cc0ee2646a9e"
       ],
+      "artists": [
+        {
+          "mbid": "c2d25856-a09a-4d15-b404-77dd19c19e63",
+          "name": "R. Kelly"
+        },
+        {
+          "mbid": "eedac904-9fd2-43f1-af88-cc0ee2646a9e",
+          "name": "Public Announcement"
+        }
+      ],
       "recordingMbid": "a58e3a0a-08ad-4721-a064-fb2b753349d7",
       "genres": [
         "contemporary r&b",
@@ -66473,6 +69330,16 @@
       "artistMbids": [
         "c2d25856-a09a-4d15-b404-77dd19c19e63",
         "ce55e49a-32f4-4757-9849-bf04d06d5fcc"
+      ],
+      "artists": [
+        {
+          "mbid": "c2d25856-a09a-4d15-b404-77dd19c19e63",
+          "name": "R. Kelly"
+        },
+        {
+          "mbid": "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
+          "name": "T‐Pain"
+        }
       ],
       "recordingMbid": "9cf3acf7-2797-479b-804f-6aa1b2fc5a15",
       "genres": [
@@ -66573,6 +69440,7 @@
         "art rock",
         "rock"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -66588,6 +69456,7 @@
         "art rock",
         "rock"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -67057,6 +69926,18 @@
       "how": "exact"
     },
     {
+      "postId": 52817,
+      "artistMbids": [
+        "944e1036-8a03-4611-8aa0-31515a05c848"
+      ],
+      "sortAs": "Smash Mouth",
+      "genres": [
+        "ska punk",
+        "alternative rock",
+        "pop rock"
+      ]
+    },
+    {
       "postId": 52841,
       "sortAs": "Son of Dork",
       "title": "Ticket Outta Loserville",
@@ -67157,6 +70038,22 @@
       "how": "exact"
     },
     {
+      "postId": 52903,
+      "sortAs": "Steely Dan",
+      "title": "The Fez",
+      "artistMbids": [
+        "e01c3376-15fa-40d7-b747-5f219bdefdd7"
+      ],
+      "recordingMbid": "9118f851-e818-4c52-bbd8-a72524456629",
+      "genres": [
+        "jazz rock",
+        "yacht rock",
+        "rock"
+      ],
+      "year": 1976,
+      "how": "exact"
+    },
+    {
       "postId": 52904,
       "sortAs": "Steely Dan",
       "title": "FM (No Static at All)",
@@ -67200,6 +70097,18 @@
       ],
       "year": 1977,
       "how": "exact"
+    },
+    {
+      "postId": 52907,
+      "artistMbids": [
+        "e01c3376-15fa-40d7-b747-5f219bdefdd7"
+      ],
+      "sortAs": "Steely Dan",
+      "genres": [
+        "jazz rock",
+        "yacht rock",
+        "rock"
+      ]
     },
     {
       "postId": 52908,
@@ -68085,6 +70994,16 @@
         "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
+      "artists": [
+        {
+          "mbid": "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
+          "name": "Timbaland"
+        },
+        {
+          "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+          "name": "Justin Timberlake"
+        }
+      ],
       "recordingMbid": "1d12a617-e4c9-46a9-a51f-80a07dd010d7",
       "genres": [
         "contemporary r&b",
@@ -68219,6 +71138,16 @@
         "8612924d-2946-49e1-970f-ef1c36517428",
         "c24a2043-23a8-427f-9515-8ec0d74640d3"
       ],
+      "artists": [
+        {
+          "mbid": "8612924d-2946-49e1-970f-ef1c36517428",
+          "name": "Ulf Lundell"
+        },
+        {
+          "mbid": "c24a2043-23a8-427f-9515-8ec0d74640d3",
+          "name": "Nature"
+        }
+      ],
       "recordingMbid": "3932ff12-e95d-4e67-9ba4-7facce3bb4d2",
       "year": 1977,
       "how": "artist-scoped"
@@ -68277,6 +71206,16 @@
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
+      ],
+      "artists": [
+        {
+          "mbid": "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
+          "name": "50 Cent"
+        },
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        }
       ],
       "recordingMbid": "6eb0de4e-a431-4bb8-80d1-b03df94b92a7",
       "genres": [
@@ -68803,6 +71742,16 @@
         "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
         "b2029169-2574-4305-820f-252a5fde3697"
       ],
+      "artists": [
+        {
+          "mbid": "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
+          "name": "Charlie Puth"
+        },
+        {
+          "mbid": "b2029169-2574-4305-820f-252a5fde3697",
+          "name": "Meghan Trainor"
+        }
+      ],
       "recordingMbid": "b6ce4adc-5aa2-41d1-8e60-5e4c5bdff371",
       "genres": [
         "pop",
@@ -68886,6 +71835,16 @@
         "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "149f91ef-1287-46da-9a8e-87fee02f1471"
       ],
+      "artists": [
+        {
+          "mbid": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+          "name": "Daft Punk"
+        },
+        {
+          "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+          "name": "Pharrell Williams"
+        }
+      ],
       "recordingMbid": "744787e9-444c-4494-a544-7640dafc0e9d",
       "genres": [
         "electronic",
@@ -68917,6 +71876,16 @@
       "artistMbids": [
         "302bd7b9-d012-4360-897a-93b00c855680",
         "2f548675-008d-4332-876c-108b0c7ab9c5"
+      ],
+      "artists": [
+        {
+          "mbid": "302bd7b9-d012-4360-897a-93b00c855680",
+          "name": "David Guetta"
+        },
+        {
+          "mbid": "2f548675-008d-4332-876c-108b0c7ab9c5",
+          "name": "Sia"
+        }
       ],
       "recordingMbid": "0069c0f7-9274-4b4b-a10e-110b90a4bcc0",
       "genres": [
@@ -69012,6 +71981,16 @@
       "artistMbids": [
         "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
         "abaa7001-0d80-4e58-be5d-d2d246fd9d87"
+      ],
+      "artists": [
+        {
+          "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+          "name": "Drake"
+        },
+        {
+          "mbid": "abaa7001-0d80-4e58-be5d-d2d246fd9d87",
+          "name": "Majid Jordan"
+        }
       ],
       "recordingMbid": "8e22b46f-fb2d-420a-876a-e7bb60aa840f",
       "genres": [
@@ -69268,6 +72247,16 @@
         "4593d49a-7f67-46ba-9ec0-126bd676286f",
         "2f548675-008d-4332-876c-108b0c7ab9c5"
       ],
+      "artists": [
+        {
+          "mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+          "name": "Flo Rida"
+        },
+        {
+          "mbid": "2f548675-008d-4332-876c-108b0c7ab9c5",
+          "name": "Sia"
+        }
+      ],
       "recordingMbid": "73d8ece1-b317-4a20-87c1-ae3f5f7c0d2e",
       "genres": [
         "pop rap",
@@ -69286,6 +72275,20 @@
         "4593d49a-7f67-46ba-9ec0-126bd676286f",
         "ddfd9b2f-186e-4b2c-ad09-01aa5380c225",
         "25cf214c-0fb4-45e7-b58b-bf975d2a3eef"
+      ],
+      "artists": [
+        {
+          "mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+          "name": "Flo Rida"
+        },
+        {
+          "mbid": "ddfd9b2f-186e-4b2c-ad09-01aa5380c225",
+          "name": "Robin Thicke"
+        },
+        {
+          "mbid": "25cf214c-0fb4-45e7-b58b-bf975d2a3eef",
+          "name": "Verdine White"
+        }
       ],
       "recordingMbid": "51abe8e1-437d-47b4-bba3-bfa19b4f08a2",
       "genres": [
@@ -69352,6 +72355,16 @@
         "022589ac-7177-460d-a178-9976cf70e29f",
         "a96e61bc-1da0-45d0-816d-ebd00b70ff9d"
       ],
+      "artists": [
+        {
+          "mbid": "022589ac-7177-460d-a178-9976cf70e29f",
+          "name": "Freddie Mercury"
+        },
+        {
+          "mbid": "a96e61bc-1da0-45d0-816d-ebd00b70ff9d",
+          "name": "Montserrat Caballé"
+        }
+      ],
       "recordingMbid": "a0d9275e-37b1-4bce-98be-01addff8c79e",
       "genres": [
         "rock",
@@ -69368,6 +72381,16 @@
       "artistMbids": [
         "136c4166-85b3-4994-aa04-59857c434199",
         "ee190f6b-7d98-43ec-b924-da5f8018eca0"
+      ],
+      "artists": [
+        {
+          "mbid": "136c4166-85b3-4994-aa04-59857c434199",
+          "name": "Fun"
+        },
+        {
+          "mbid": "ee190f6b-7d98-43ec-b924-da5f8018eca0",
+          "name": "Janelle Monáe"
+        }
       ],
       "recordingMbid": "d4e08259-38ac-495f-9ffa-57007ce90782",
       "year": 2011,
@@ -69397,6 +72420,16 @@
       "artistMbids": [
         "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
         "2f9ecbed-27be-40e6-abca-6de49d50299e"
+      ],
+      "artists": [
+        {
+          "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+          "name": "George Michael"
+        },
+        {
+          "mbid": "2f9ecbed-27be-40e6-abca-6de49d50299e",
+          "name": "Aretha Franklin"
+        }
       ],
       "recordingMbid": "846d63ea-0a92-4867-9423-d65353268671",
       "genres": [
@@ -69430,6 +72463,16 @@
       "artistMbids": [
         "6f6fd596-76e0-4b82-aa37-f558ac2d337b",
         "fad2875e-ba81-4637-b859-4684622dcb1c"
+      ],
+      "artists": [
+        {
+          "mbid": "6f6fd596-76e0-4b82-aa37-f558ac2d337b",
+          "name": "Gotye"
+        },
+        {
+          "mbid": "fad2875e-ba81-4637-b859-4684622dcb1c",
+          "name": "Kimbra"
+        }
       ],
       "recordingMbid": "5b6ad1ba-9e08-4570-bcef-e3343519070a",
       "genres": [
@@ -69562,6 +72605,16 @@
       "artistMbids": [
         "3a052c99-8c18-484a-8beb-9873b4fb3106",
         "c9dd033c-0270-463c-b3ec-f4b7712486fe"
+      ],
+      "artists": [
+        {
+          "mbid": "3a052c99-8c18-484a-8beb-9873b4fb3106",
+          "name": "Iggy Azalea"
+        },
+        {
+          "mbid": "c9dd033c-0270-463c-b3ec-f4b7712486fe",
+          "name": "Rita Ora"
+        }
       ],
       "recordingMbid": "63b17be0-6cd2-4a3c-9609-860d44896c4b",
       "year": 2014,
@@ -69790,6 +72843,20 @@
         "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
         "1036b808-f58c-4a3e-b461-a2c4492ecf1b"
       ],
+      "artists": [
+        {
+          "mbid": "d24fb461-dee8-41fc-bb15-2f13bb2644a6",
+          "name": "Jessie J"
+        },
+        {
+          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+          "name": "Ariana Grande"
+        },
+        {
+          "mbid": "1036b808-f58c-4a3e-b461-a2c4492ecf1b",
+          "name": "Nicki Minaj"
+        }
+      ],
       "recordingMbid": "146707fc-924f-48ce-b56e-fff3a6a19c06",
       "genres": [
         "pop",
@@ -69904,6 +72971,16 @@
         "e0140a67-e4d1-4f13-8a01-364355bee46e",
         "942a9807-9c1a-4a0e-a285-1fde2c5be9d1"
       ],
+      "artists": [
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        },
+        {
+          "mbid": "942a9807-9c1a-4a0e-a285-1fde2c5be9d1",
+          "name": "Big Sean"
+        }
+      ],
       "recordingMbid": "12456308-20ee-41c6-bfc4-1849c86b2f69",
       "genres": [
         "pop",
@@ -69921,6 +72998,16 @@
       "artistMbids": [
         "e0140a67-e4d1-4f13-8a01-364355bee46e",
         "1036b808-f58c-4a3e-b461-a2c4492ecf1b"
+      ],
+      "artists": [
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        },
+        {
+          "mbid": "1036b808-f58c-4a3e-b461-a2c4492ecf1b",
+          "name": "Nicki Minaj"
+        }
       ],
       "recordingMbid": "91d6000f-b2d5-4eef-a4dd-8537dda3eecf",
       "genres": [
@@ -69997,6 +73084,16 @@
         "122d63fc-8671-43e4-9752-34e846d62a9c",
         "f90e8b26-9e52-4669-a5c9-e28529c47894"
       ],
+      "artists": [
+        {
+          "mbid": "122d63fc-8671-43e4-9752-34e846d62a9c",
+          "name": "Katy Perry"
+        },
+        {
+          "mbid": "f90e8b26-9e52-4669-a5c9-e28529c47894",
+          "name": "Snoop Dogg"
+        }
+      ],
       "recordingMbid": "44e88237-bdb1-4176-9687-714f0d9f6f76",
       "genres": [
         "pop",
@@ -70013,6 +73110,16 @@
       "artistMbids": [
         "122d63fc-8671-43e4-9752-34e846d62a9c",
         "c45d161f-83ce-4464-ba41-44202e6916d9"
+      ],
+      "artists": [
+        {
+          "mbid": "122d63fc-8671-43e4-9752-34e846d62a9c",
+          "name": "Katy Perry"
+        },
+        {
+          "mbid": "c45d161f-83ce-4464-ba41-44202e6916d9",
+          "name": "Juicy J"
+        }
       ],
       "recordingMbid": "12e2e456-5d1c-44e1-9eae-f745c2ce604a",
       "genres": [
@@ -70192,6 +73299,16 @@
         "1b72331b-3a97-4981-a81c-eeee9c275d28",
         "163218c2-9e0f-4d2d-aecb-ebbdef6aab70"
       ],
+      "artists": [
+        {
+          "mbid": "1b72331b-3a97-4981-a81c-eeee9c275d28",
+          "name": "Lilly Wood and The Prick"
+        },
+        {
+          "mbid": "163218c2-9e0f-4d2d-aecb-ebbdef6aab70",
+          "name": "Robin Schulz"
+        }
+      ],
       "recordingMbid": "6c3fb183-e0fe-4626-8f97-29d23db1855c",
       "genres": [
         "alternative rock",
@@ -70284,6 +73401,16 @@
         "97b226c8-7140-4da3-91ac-15e62e131a81",
         "1f6cdf02-c7d3-4165-bbde-b4e54420a00b"
       ],
+      "artists": [
+        {
+          "mbid": "97b226c8-7140-4da3-91ac-15e62e131a81",
+          "name": "Macklemore & Ryan Lewis"
+        },
+        {
+          "mbid": "1f6cdf02-c7d3-4165-bbde-b4e54420a00b",
+          "name": "Wanz"
+        }
+      ],
       "recordingMbid": "42f0b591-cf89-4e45-aaca-7b97a2d1d98a",
       "genres": [
         "hip hop"
@@ -70300,6 +73427,16 @@
         "97b226c8-7140-4da3-91ac-15e62e131a81",
         "5479488b-0818-4da7-93c3-fed04336af3e"
       ],
+      "artists": [
+        {
+          "mbid": "97b226c8-7140-4da3-91ac-15e62e131a81",
+          "name": "Macklemore & Ryan Lewis"
+        },
+        {
+          "mbid": "5479488b-0818-4da7-93c3-fed04336af3e",
+          "name": "Mary Lambert"
+        }
+      ],
       "recordingMbid": "0b96c431-f91e-48b2-a192-75bbbb2b76f3",
       "genres": [
         "hip hop"
@@ -70315,6 +73452,16 @@
       "artistMbids": [
         "97b226c8-7140-4da3-91ac-15e62e131a81",
         "6c7f57c4-8f11-4c59-9d63-bca189f343c1"
+      ],
+      "artists": [
+        {
+          "mbid": "97b226c8-7140-4da3-91ac-15e62e131a81",
+          "name": "Macklemore & Ryan Lewis"
+        },
+        {
+          "mbid": "6c7f57c4-8f11-4c59-9d63-bca189f343c1",
+          "name": "Ray Dalton"
+        }
       ],
       "recordingMbid": "25a2c3cc-0383-461a-a813-d22318df4b0f",
       "genres": [
@@ -70879,6 +74026,16 @@
         "8e66ea2b-b57b-47d9-8df0-df4630aeb8e5",
         "4b585938-f271-45e2-b19a-91c634b5e396"
       ],
+      "artists": [
+        {
+          "mbid": "8e66ea2b-b57b-47d9-8df0-df4630aeb8e5",
+          "name": "Peter Gabriel"
+        },
+        {
+          "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
+          "name": "Kate Bush"
+        }
+      ],
       "recordingMbid": "974de7cf-27b8-4b6e-87c5-cd8d8c31cc6d",
       "genres": [
         "art rock",
@@ -70927,6 +74084,16 @@
         "d262ea27-3ffe-40f7-b922-85c42d625e67",
         "fab34286-b8e1-4879-bce3-194e1358fbd2"
       ],
+      "artists": [
+        {
+          "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+          "name": "Pitbull"
+        },
+        {
+          "mbid": "fab34286-b8e1-4879-bce3-194e1358fbd2",
+          "name": "Kesha"
+        }
+      ],
       "recordingMbid": "0e5b16b5-2b2c-4546-a88a-49adbf5ac5d7",
       "genres": [
         "dance-pop",
@@ -70943,6 +74110,16 @@
       "artistMbids": [
         "d262ea27-3ffe-40f7-b922-85c42d625e67",
         "25607613-aceb-445a-8519-83a2ee0f8402"
+      ],
+      "artists": [
+        {
+          "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+          "name": "Pitbull"
+        },
+        {
+          "mbid": "25607613-aceb-445a-8519-83a2ee0f8402",
+          "name": "Marc Anthony"
+        }
       ],
       "recordingMbid": "8c68eaa5-4c61-419b-a9c0-9d20224fc181",
       "genres": [
@@ -70961,6 +74138,16 @@
       "artistMbids": [
         "d262ea27-3ffe-40f7-b922-85c42d625e67",
         "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7"
+      ],
+      "artists": [
+        {
+          "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+          "name": "Pitbull"
+        },
+        {
+          "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
+          "name": "Ne‐Yo"
+        }
       ],
       "recordingMbid": "a485e725-7ee6-4283-84f6-1aa6cdabaf20",
       "genres": [
@@ -71012,6 +74199,16 @@
       "artistMbids": [
         "d41a6875-b626-4c0f-89a1-aecb643d29ff",
         "f63f2884-56d3-47f3-8a7e-72c324758730"
+      ],
+      "artists": [
+        {
+          "mbid": "d41a6875-b626-4c0f-89a1-aecb643d29ff",
+          "name": "The Pogues"
+        },
+        {
+          "mbid": "f63f2884-56d3-47f3-8a7e-72c324758730",
+          "name": "Kirsty MacColl"
+        }
       ],
       "recordingMbid": "7fa67706-8fa0-45d6-a959-5b0fabd6065a",
       "genres": [
@@ -71176,6 +74373,7 @@
         "blues rock",
         "classic rock"
       ],
+      "year": 1968,
       "how": "exact"
     },
     {
@@ -71807,6 +75005,16 @@
         "3cce3d37-d44f-46a2-b1e3-cd7247d5015c",
         "df2f7876-e731-4bde-965c-bd4a67b3fadd"
       ],
+      "artists": [
+        {
+          "mbid": "3cce3d37-d44f-46a2-b1e3-cd7247d5015c",
+          "name": "Tinie Tempah"
+        },
+        {
+          "mbid": "df2f7876-e731-4bde-965c-bd4a67b3fadd",
+          "name": "Eric Turner"
+        }
+      ],
       "recordingMbid": "a4a25040-fbee-49ce-8a35-d4a659392791",
       "year": 2010,
       "how": "exact"
@@ -71875,6 +75083,18 @@
       "how": "exact"
     },
     {
+      "postId": 53553,
+      "artistMbids": [
+        "0307edfc-437c-4b48-8700-80680e66a228"
+      ],
+      "sortAs": "Houston, Whitney",
+      "genres": [
+        "contemporary r&b",
+        "pop",
+        "dance-pop"
+      ]
+    },
+    {
       "postId": 53554,
       "artist": "Whitney Houston with Georgia Mass Choir",
       "sortAs": "Houston, Whitney",
@@ -71882,6 +75102,16 @@
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228",
         "87420214-1f03-4f6e-9339-b608735babd8"
+      ],
+      "artists": [
+        {
+          "mbid": "0307edfc-437c-4b48-8700-80680e66a228",
+          "name": "Whitney Houston"
+        },
+        {
+          "mbid": "87420214-1f03-4f6e-9339-b608735babd8",
+          "name": "The Georgia Mass Choir"
+        }
       ],
       "recordingMbid": "49f5fbe1-bdf8-4776-9e9c-fb82d9fd14c6",
       "genres": [
@@ -71899,6 +75129,16 @@
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228",
         "87420214-1f03-4f6e-9339-b608735babd8"
+      ],
+      "artists": [
+        {
+          "mbid": "0307edfc-437c-4b48-8700-80680e66a228",
+          "name": "Whitney Houston"
+        },
+        {
+          "mbid": "87420214-1f03-4f6e-9339-b608735babd8",
+          "name": "The Georgia Mass Choir"
+        }
       ],
       "recordingMbid": "1a8e2a4e-6e79-4f1a-a7d3-bbba1146d6b4",
       "genres": [
@@ -71931,6 +75171,16 @@
       "artistMbids": [
         "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
         "525f1f1c-03f0-4bc8-8dfd-e7521f87631b"
+      ],
+      "artists": [
+        {
+          "mbid": "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+          "name": "Wiz Khalifa"
+        },
+        {
+          "mbid": "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
+          "name": "Charlie Puth"
+        }
       ],
       "recordingMbid": "c6cf4924-75b7-40b3-8d66-f50ff8aec30e",
       "genres": [
@@ -71983,6 +75233,16 @@
         "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
+      "artists": [
+        {
+          "mbid": "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+          "name": "2Pac"
+        },
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        }
+      ],
       "recordingMbid": "d2b06b59-e6f8-412f-80e0-f99e8bfcabb8",
       "genres": [
         "gangsta rap",
@@ -72014,6 +75274,16 @@
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
         "405528df-2632-4730-80fc-83e775a97651"
+      ],
+      "artists": [
+        {
+          "mbid": "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
+          "name": "50 Cent"
+        },
+        {
+          "mbid": "405528df-2632-4730-80fc-83e775a97651",
+          "name": "Nate Dogg"
+        }
       ],
       "recordingMbid": "c75ab09e-92c0-49a6-9579-0d2fa74c75b1",
       "genres": [
@@ -72089,6 +75359,16 @@
         "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
         "c28a2f8f-60c9-4964-94ff-f0700e5a77a5"
       ],
+      "artists": [
+        {
+          "mbid": "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
+          "name": "Avicii"
+        },
+        {
+          "mbid": "c28a2f8f-60c9-4964-94ff-f0700e5a77a5",
+          "name": "Salem Al Fakir"
+        }
+      ],
       "recordingMbid": "47130ac0-a5d4-42f7-bdbf-ea71810f5fa3",
       "genres": [
         "progressive house",
@@ -72148,6 +75428,16 @@
         "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
         "bac7f942-8e94-4868-b3f6-ba66c75b136e"
       ],
+      "artists": [
+        {
+          "mbid": "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
+          "name": "Calvin Harris"
+        },
+        {
+          "mbid": "bac7f942-8e94-4868-b3f6-ba66c75b136e",
+          "name": "Disciples"
+        }
+      ],
       "recordingMbid": "10eec724-45dd-4cfa-930c-c28c07c0485d",
       "genres": [
         "dance-pop",
@@ -72165,6 +75455,16 @@
         "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
         "33ca19f4-18c8-4411-98df-ac23890ce9f5"
       ],
+      "artists": [
+        {
+          "mbid": "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
+          "name": "Calvin Harris"
+        },
+        {
+          "mbid": "33ca19f4-18c8-4411-98df-ac23890ce9f5",
+          "name": "Ellie Goulding"
+        }
+      ],
       "recordingMbid": "2a45628d-9b79-4688-996b-bd630cde7d77",
       "genres": [
         "dance-pop",
@@ -72181,6 +75481,16 @@
       "artistMbids": [
         "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
         "589ef702-7f3a-4a1c-8f2c-4727005cfc0e"
+      ],
+      "artists": [
+        {
+          "mbid": "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
+          "name": "Calvin Harris"
+        },
+        {
+          "mbid": "589ef702-7f3a-4a1c-8f2c-4727005cfc0e",
+          "name": "John Newman"
+        }
       ],
       "recordingMbid": "0465719d-c5f2-440e-b5cd-16ba12b232a4",
       "genres": [
@@ -72228,6 +75538,16 @@
         "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
         "b2029169-2574-4305-820f-252a5fde3697"
       ],
+      "artists": [
+        {
+          "mbid": "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
+          "name": "Charlie Puth"
+        },
+        {
+          "mbid": "b2029169-2574-4305-820f-252a5fde3697",
+          "name": "Meghan Trainor"
+        }
+      ],
       "recordingMbid": "b6ce4adc-5aa2-41d1-8e60-5e4c5bdff371",
       "genres": [
         "pop",
@@ -72244,6 +75564,20 @@
         "dacc2d64-7e59-42a8-87a9-10c53919aff2",
         "c3da3346-2643-48a7-93cd-011f6834b3d7",
         "e3d5b5ec-101a-4529-9f2d-01dca64cf44e"
+      ],
+      "artists": [
+        {
+          "mbid": "dacc2d64-7e59-42a8-87a9-10c53919aff2",
+          "name": "Clean Bandit"
+        },
+        {
+          "mbid": "c3da3346-2643-48a7-93cd-011f6834b3d7",
+          "name": "Sean Paul"
+        },
+        {
+          "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
+          "name": "Anne‐Marie"
+        }
       ],
       "recordingMbid": "13f7ba19-553d-444a-81c1-e7fea9739bc9",
       "genres": [
@@ -72524,6 +75858,16 @@
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
         "73e5e69d-3554-40d8-8516-00cb38737a1c"
       ],
+      "artists": [
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        },
+        {
+          "mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+          "name": "Rihanna"
+        }
+      ],
       "recordingMbid": "c975930e-c69c-4685-a214-b544b8f1fd5d",
       "genres": [
         "hip hop",
@@ -72547,6 +75891,18 @@
       ],
       "year": 2005,
       "how": "exact"
+    },
+    {
+      "postId": 49941,
+      "artistMbids": [
+        "516cef4d-0718-4007-9939-f9b38af3f784"
+      ],
+      "sortAs": "Fall Out Boy",
+      "genres": [
+        "pop punk",
+        "alternative rock",
+        "pop rock"
+      ]
     },
     {
       "postId": 49942,
@@ -72752,6 +76108,16 @@
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
+      "artists": [
+        {
+          "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
+          "name": "JAŸ-Z"
+        },
+        {
+          "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+          "name": "Justin Timberlake"
+        }
+      ],
       "recordingMbid": "1cc2c1fa-1e8d-47ed-9d39-2d897708e9f6",
       "genres": [
         "pop rap",
@@ -72948,6 +76314,20 @@
         "d68fda90-ab8d-4799-be56-317ba4ae700f",
         "2f522f5c-111c-4ce8-8bd0-d82e97c227ad",
         "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "artists": [
+        {
+          "mbid": "d68fda90-ab8d-4799-be56-317ba4ae700f",
+          "name": "Luis Fonsi"
+        },
+        {
+          "mbid": "2f522f5c-111c-4ce8-8bd0-d82e97c227ad",
+          "name": "Daddy Yankee"
+        },
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        }
       ],
       "recordingMbid": "9ba26ca8-9dbc-4136-8541-2b25bcc6df1e",
       "genres": [
@@ -73183,6 +76563,16 @@
         "d262ea27-3ffe-40f7-b922-85c42d625e67",
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
       ],
+      "artists": [
+        {
+          "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+          "name": "Pitbull"
+        },
+        {
+          "mbid": "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
+          "name": "Christina Aguilera"
+        }
+      ],
       "recordingMbid": "b72fe6a9-e614-4ebe-b89f-94e6ca6426dd",
       "genres": [
         "dance-pop",
@@ -73248,6 +76638,20 @@
         "73e5e69d-3554-40d8-8516-00cb38737a1c",
         "164f0d73-1234-4e2c-8743-d77bf2191051",
         "ba550d0e-adac-4864-b88b-407cab5e76af"
+      ],
+      "artists": [
+        {
+          "mbid": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+          "name": "Rihanna"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        },
+        {
+          "mbid": "ba550d0e-adac-4864-b88b-407cab5e76af",
+          "name": "Paul McCartney"
+        }
       ],
       "recordingMbid": "27fde3c8-e555-44e2-add4-cc87ce4de06e",
       "genres": [
@@ -73496,6 +76900,16 @@
         "c8b03190-306c-4120-bb0b-6f2ebfc06ea9",
         "056e4f3e-d505-4dad-8ec1-d04f521cbb56"
       ],
+      "artists": [
+        {
+          "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9",
+          "name": "The Weeknd"
+        },
+        {
+          "mbid": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+          "name": "Daft Punk"
+        }
+      ],
       "recordingMbid": "ebd8f597-6191-44c1-a40f-c511e31d7842",
       "genres": [
         "r&b",
@@ -73578,6 +76992,16 @@
       "artistMbids": [
         "56756959-1e78-429c-b897-e1d056cb0225",
         "d226c337-ab8f-4409-9010-fb0d58e7cf69"
+      ],
+      "artists": [
+        {
+          "mbid": "56756959-1e78-429c-b897-e1d056cb0225",
+          "name": "Tove Lo"
+        },
+        {
+          "mbid": "d226c337-ab8f-4409-9010-fb0d58e7cf69",
+          "name": "Hippie Sabotage"
+        }
       ],
       "recordingMbid": "46e10abe-63c9-4f39-9aee-2a929ae7b668",
       "genres": [
@@ -73713,6 +77137,16 @@
       "artistMbids": [
         "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
         "525f1f1c-03f0-4bc8-8dfd-e7521f87631b"
+      ],
+      "artists": [
+        {
+          "mbid": "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+          "name": "Wiz Khalifa"
+        },
+        {
+          "mbid": "525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
+          "name": "Charlie Puth"
+        }
       ],
       "recordingMbid": "c6cf4924-75b7-40b3-8d66-f50ff8aec30e",
       "genres": [
@@ -73883,6 +77317,16 @@
         "507226f4-0842-4f43-950e-81a7017230ec",
         "7291957b-c463-4275-a41c-a104c9e2337f"
       ],
+      "artists": [
+        {
+          "mbid": "507226f4-0842-4f43-950e-81a7017230ec",
+          "name": "Zac Brown Band"
+        },
+        {
+          "mbid": "7291957b-c463-4275-a41c-a104c9e2337f",
+          "name": "Alan Jackson"
+        }
+      ],
       "recordingMbid": "a9dac291-c6d1-4ee5-86ad-c64b66b8ac93",
       "year": 2010,
       "how": "exact"
@@ -73923,6 +77367,16 @@
       "artistMbids": [
         "134e6410-6954-45d1-bd4a-0f2d2ad5471d",
         "27e7c2e8-badc-4a97-8b93-24b6c530b038"
+      ],
+      "artists": [
+        {
+          "mbid": "134e6410-6954-45d1-bd4a-0f2d2ad5471d",
+          "name": "Zara Larsson"
+        },
+        {
+          "mbid": "27e7c2e8-badc-4a97-8b93-24b6c530b038",
+          "name": "MNEK"
+        }
       ],
       "recordingMbid": "f2b1a950-7feb-494f-a312-4bc64aba866e",
       "genres": [
@@ -74052,6 +77506,16 @@
       "artistMbids": [
         "debabff3-2559-46e5-862d-ef2a906d7010",
         "debabff3-2559-46e5-862d-ef2a906d7010"
+      ],
+      "artists": [
+        {
+          "mbid": "debabff3-2559-46e5-862d-ef2a906d7010",
+          "name": "Daryl Hall & John Oates"
+        },
+        {
+          "mbid": "debabff3-2559-46e5-862d-ef2a906d7010",
+          "name": "Daryl Hall & John Oates"
+        }
       ],
       "recordingMbid": "cd617aaa-cdee-45d3-abb5-d20eb7248371",
       "genres": [
@@ -74203,6 +77667,16 @@
         "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
         "afd6e960-0e48-444d-b65d-99e85cae90ba"
       ],
+      "artists": [
+        {
+          "mbid": "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
+          "name": "J Balvin"
+        },
+        {
+          "mbid": "afd6e960-0e48-444d-b65d-99e85cae90ba",
+          "name": "Willy William"
+        }
+      ],
       "recordingMbid": "efffd9f8-298c-4ce8-9770-ef385b0d1832",
       "genres": [
         "reggaeton",
@@ -74265,6 +77739,16 @@
       "artistMbids": [
         "addb00fd-733c-4223-8fdf-f78be2488acd",
         "dc89b77a-fede-4369-b0bc-c141e74702a6"
+      ],
+      "artists": [
+        {
+          "mbid": "addb00fd-733c-4223-8fdf-f78be2488acd",
+          "name": "Alesso"
+        },
+        {
+          "mbid": "dc89b77a-fede-4369-b0bc-c141e74702a6",
+          "name": "Jagwar Twin"
+        }
       ],
       "recordingMbid": "531887b0-66d6-4bf3-b65e-9e8ac1078975",
       "genres": [
@@ -74401,6 +77885,18 @@
       "how": "exact"
     },
     {
+      "postId": 52686,
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3"
+      ],
+      "sortAs": "Gomez, Selena",
+      "genres": [
+        "pop",
+        "dance-pop",
+        "electropop"
+      ]
+    },
+    {
       "postId": 48692,
       "sortAs": "Mars, Bruno",
       "title": "Uptown Funk",
@@ -74534,6 +78030,16 @@
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738",
         "71d58182-aa37-4c04-b21a-efe46ea0f221"
+      ],
+      "artists": [
+        {
+          "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+          "name": "Justin Timberlake"
+        },
+        {
+          "mbid": "71d58182-aa37-4c04-b21a-efe46ea0f221",
+          "name": "Chris Stapleton"
+        }
       ],
       "recordingMbid": "6b7e6590-e079-4fe9-a560-cbb1b5f429c6",
       "genres": [
@@ -74926,6 +78432,19 @@
       "how": "exact"
     },
     {
+      "postId": 53159,
+      "artistMbids": [
+        "9e0e2b01-41db-4008-bd8b-988977d6019a"
+      ],
+      "artist": "The Police",
+      "sortAs": "Police, The",
+      "genres": [
+        "new wave",
+        "rock",
+        "pop rock"
+      ]
+    },
+    {
       "postId": 53160,
       "artist": "The Police",
       "sortAs": "Police, The",
@@ -75062,6 +78581,18 @@
       ],
       "year": 2013,
       "how": "exact"
+    },
+    {
+      "postId": 49140,
+      "artistMbids": [
+        "4b1a830b-0a1f-42e5-b8d5-1d6743912e99"
+      ],
+      "sortAs": "Creed",
+      "genres": [
+        "rock",
+        "alternative rock",
+        "post-grunge"
+      ]
     },
     {
       "postId": 49141,
@@ -75468,6 +78999,30 @@
       ],
       "year": 2014,
       "how": "exact"
+    },
+    {
+      "postId": 52751,
+      "artistMbids": [
+        "b7d92248-97e3-4450-8057-6fe06738f735"
+      ],
+      "sortAs": "Mendes, Shawn",
+      "genres": [
+        "pop",
+        "folk pop",
+        "pop rock"
+      ]
+    },
+    {
+      "postId": 52752,
+      "artistMbids": [
+        "b7d92248-97e3-4450-8057-6fe06738f735"
+      ],
+      "sortAs": "Mendes, Shawn",
+      "genres": [
+        "pop",
+        "folk pop",
+        "pop rock"
+      ]
     },
     {
       "postId": 48336,
@@ -75935,6 +79490,20 @@
         "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
         "78a19169-ac75-4868-b504-7e2e073118e0"
       ],
+      "artists": [
+        {
+          "mbid": "67fd5116-7a49-4abf-a34f-b08774128a7a",
+          "name": "Stormzy"
+        },
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran"
+        },
+        {
+          "mbid": "78a19169-ac75-4868-b504-7e2e073118e0",
+          "name": "Burna Boy"
+        }
+      ],
       "recordingMbid": "a4b1cc66-8e3d-47a2-8200-8a9193c033ca",
       "genres": [
         "hip hop",
@@ -76063,6 +79632,16 @@
         "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
         "d2b3524f-67e8-45ef-bfc1-693cac525135"
       ],
+      "artists": [
+        {
+          "mbid": "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
+          "name": "J Balvin"
+        },
+        {
+          "mbid": "d2b3524f-67e8-45ef-bfc1-693cac525135",
+          "name": "Farruko"
+        }
+      ],
       "recordingMbid": "27f5ea24-5598-48b5-9c45-fdf16b76e1a5",
       "genres": [
         "reggaeton",
@@ -76095,6 +79674,16 @@
         "93ae8651-24ee-406c-b927-eb7cd773ae38",
         "5bdeb32d-56a5-4b6d-a768-264101fa0a0a"
       ],
+      "artists": [
+        {
+          "mbid": "93ae8651-24ee-406c-b927-eb7cd773ae38",
+          "name": "Liam Payne"
+        },
+        {
+          "mbid": "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
+          "name": "J Balvin"
+        }
+      ],
       "recordingMbid": "5716f177-2ca9-4679-a165-620c1b8b965f",
       "year": 2018,
       "how": "artist-scoped"
@@ -76107,6 +79696,16 @@
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
         "dda162b4-f871-4e89-b081-b7b3470782f0"
+      ],
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        },
+        {
+          "mbid": "dda162b4-f871-4e89-b081-b7b3470782f0",
+          "name": "Cash Cash"
+        }
       ],
       "recordingMbid": "e0b3b1cb-32cf-4c80-92b5-66c0cc299a4c",
       "genres": [
@@ -76154,6 +79753,16 @@
       "artistMbids": [
         "33cf3954-10af-4dcb-985f-9420d1fa4168",
         "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "artists": [
+        {
+          "mbid": "33cf3954-10af-4dcb-985f-9420d1fa4168",
+          "name": "Dan + Shay"
+        },
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        }
       ],
       "recordingMbid": "ccdf08fc-0b64-4a8d-8768-358c3d276a12",
       "genres": [
@@ -76302,6 +79911,13 @@
       "how": "exact"
     },
     {
+      "postId": 49537,
+      "artistMbids": [
+        "99316403-6f15-454a-b73c-4481011d8f30"
+      ],
+      "sortAs": "Drömhus"
+    },
+    {
       "postId": 50643,
       "sortAs": "Williams, Jerry",
       "title": "I Can Jive",
@@ -76367,6 +79983,13 @@
       "recordingMbid": "2db15c8c-a294-4535-989e-d478a27af819",
       "year": 2000,
       "how": "exact"
+    },
+    {
+      "postId": 53394,
+      "artistMbids": [
+        "8612924d-2946-49e1-970f-ef1c36517428"
+      ],
+      "sortAs": "Lundell, Ulf"
     },
     {
       "postId": 51954,
@@ -76528,6 +80151,17 @@
       "how": "exact"
     },
     {
+      "postId": 53110,
+      "sortAs": "Belmonts, The",
+      "title": "Teenager in Love",
+      "artistMbids": [
+        "38644649-5a30-4276-b14d-9dcd8d149d18"
+      ],
+      "recordingMbid": "19c9332c-df6d-4121-b30f-3568226d2821",
+      "year": 2016,
+      "how": "exact"
+    },
+    {
       "postId": 49505,
       "sortAs": "Day, Doris",
       "title": "Que Sera, Sera",
@@ -76584,6 +80218,18 @@
       ],
       "year": 2007,
       "how": "exact"
+    },
+    {
+      "postId": 51552,
+      "artistMbids": [
+        "afdb7919-059d-43c1-b668-ba1d265e7e42"
+      ],
+      "sortAs": "Gaye, Marvin",
+      "genres": [
+        "soul",
+        "funk",
+        "smooth soul"
+      ]
     },
     {
       "postId": 51548,
@@ -76844,6 +80490,20 @@
         "e520459c-dff4-491d-a6e4-c97be35e0044",
         "0221734a-35a8-40f7-b5c5-2f61a200bc7c"
       ],
+      "artists": [
+        {
+          "mbid": "8dd98bdc-80ec-4e93-8509-2f46bafc09a7",
+          "name": "Calvin Harris"
+        },
+        {
+          "mbid": "e520459c-dff4-491d-a6e4-c97be35e0044",
+          "name": "Frank Ocean"
+        },
+        {
+          "mbid": "0221734a-35a8-40f7-b5c5-2f61a200bc7c",
+          "name": "Migos"
+        }
+      ],
       "recordingMbid": "de9eb1df-07a2-41b2-9e40-32d78f2b9c09",
       "genres": [
         "dance-pop",
@@ -76861,6 +80521,20 @@
         "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
         "1036b808-f58c-4a3e-b461-a2c4492ecf1b",
         "7bd66c18-cb33-49aa-9279-140acedbdb49"
+      ],
+      "artists": [
+        {
+          "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
+          "name": "Jason Derulo"
+        },
+        {
+          "mbid": "1036b808-f58c-4a3e-b461-a2c4492ecf1b",
+          "name": "Nicki Minaj"
+        },
+        {
+          "mbid": "7bd66c18-cb33-49aa-9279-140acedbdb49",
+          "name": "Ty Dolla $ign"
+        }
       ],
       "recordingMbid": "4fec037c-6684-4624-935e-4829b1b4f1e1",
       "genres": [
@@ -76896,6 +80570,16 @@
         "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
         "f27ec8db-af05-4f36-916e-3d57f91ecf5e"
       ],
+      "artists": [
+        {
+          "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+          "name": "Drake"
+        },
+        {
+          "mbid": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+          "name": "Michael Jackson"
+        }
+      ],
       "recordingMbid": "5b4e4136-b739-4771-825d-7ec39558fc09",
       "genres": [
         "hip hop",
@@ -76914,6 +80598,20 @@
         "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
         "01b8b5bf-06cb-45da-85fb-61ada72fcd69",
         "2f3c4d70-0462-40da-bba3-0aec5772c556"
+      ],
+      "artists": [
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran"
+        },
+        {
+          "mbid": "01b8b5bf-06cb-45da-85fb-61ada72fcd69",
+          "name": "Camila Cabello"
+        },
+        {
+          "mbid": "2f3c4d70-0462-40da-bba3-0aec5772c556",
+          "name": "Cardi B"
+        }
       ],
       "recordingMbid": "07ec60ec-3cb1-4bb2-9967-626aae7e7186",
       "genres": [
@@ -76951,6 +80649,19 @@
       "recordingMbid": "5ac0e7b8-ceb2-4850-84e2-56ad8c0feeb7",
       "year": 1988,
       "how": "exact"
+    },
+    {
+      "postId": 49943,
+      "artistMbids": [
+        "516cef4d-0718-4007-9939-f9b38af3f784"
+      ],
+      "artist": "Fall Out Boy",
+      "sortAs": "Fall Out Boy",
+      "genres": [
+        "pop punk",
+        "alternative rock",
+        "pop rock"
+      ]
     },
     {
       "postId": 49944,
@@ -77017,6 +80728,19 @@
       ],
       "year": 1975,
       "how": "near"
+    },
+    {
+      "postId": 50010,
+      "artistMbids": [
+        "bd13909f-1c29-4c27-a874-d4aaf27c5b1a"
+      ],
+      "artist": "Fleetwood Mac",
+      "sortAs": "Fleetwood Mac",
+      "genres": [
+        "rock",
+        "soft rock",
+        "blues rock"
+      ]
     },
     {
       "postId": 52985,
@@ -77206,6 +80930,16 @@
         "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
         "c8b03190-306c-4120-bb0b-6f2ebfc06ea9"
       ],
+      "artists": [
+        {
+          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+          "name": "Ariana Grande"
+        },
+        {
+          "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9",
+          "name": "The Weeknd"
+        }
+      ],
       "recordingMbid": "a01ddeb1-b15b-4730-a30f-96fc7c5676f2",
       "genres": [
         "pop",
@@ -77261,6 +80995,19 @@
       ],
       "year": 2016,
       "how": "version"
+    },
+    {
+      "postId": 49945,
+      "artistMbids": [
+        "516cef4d-0718-4007-9939-f9b38af3f784"
+      ],
+      "artist": "Fall Out Boy",
+      "sortAs": "Fall Out Boy",
+      "genres": [
+        "pop punk",
+        "alternative rock",
+        "pop rock"
+      ]
     },
     {
       "postId": 47740,
@@ -77419,6 +81166,16 @@
         "ed2ac1e9-d51d-4eff-a2c2-85e81abd6360",
         "b8db7846-1a9d-4c34-abda-b90ee3e69c6b"
       ],
+      "artists": [
+        {
+          "mbid": "ed2ac1e9-d51d-4eff-a2c2-85e81abd6360",
+          "name": "Bob Marley"
+        },
+        {
+          "mbid": "b8db7846-1a9d-4c34-abda-b90ee3e69c6b",
+          "name": "Funkstar De Luxe"
+        }
+      ],
       "recordingMbid": "bf67c437-3dd5-402c-8f92-eecfb09577b0",
       "genres": [
         "reggae",
@@ -77571,6 +81328,16 @@
         "b49817f8-3343-4639-9461-386fb951fa4b",
         "6de0f914-3e60-4418-be3b-42e0feb6eb4d"
       ],
+      "artists": [
+        {
+          "mbid": "b49817f8-3343-4639-9461-386fb951fa4b",
+          "name": "Jawsh 685"
+        },
+        {
+          "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
+          "name": "Jason Derulo"
+        }
+      ],
       "recordingMbid": "3a4f6741-6d7c-4c15-a8a7-49da5570eef8",
       "year": 2020,
       "how": "artist-scoped"
@@ -77582,6 +81349,16 @@
       "artistMbids": [
         "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
         "a1421d73-1a21-484b-97ad-77c9a5676daf"
+      ],
+      "artists": [
+        {
+          "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
+          "name": "Jason Derulo"
+        },
+        {
+          "mbid": "a1421d73-1a21-484b-97ad-77c9a5676daf",
+          "name": "Adam Levine"
+        }
       ],
       "recordingMbid": "0fb03b71-697a-4af3-90f0-8be65a1edbb2",
       "genres": [
@@ -77664,6 +81441,16 @@
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
         "9193bb79-a196-4931-a461-68a3fa3cbeb3"
       ],
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        },
+        {
+          "mbid": "9193bb79-a196-4931-a461-68a3fa3cbeb3",
+          "name": "Willow Sage Hart"
+        }
+      ],
       "recordingMbid": "a8acab82-3308-40a0-bbc4-eb390237b853",
       "genres": [
         "pop",
@@ -77695,6 +81482,16 @@
       "artistMbids": [
         "b1e26560-60e5-4236-bbdb-9aa5a8d5ee19",
         "6143403a-df6c-429e-8ee6-ef869896b0da"
+      ],
+      "artists": [
+        {
+          "mbid": "b1e26560-60e5-4236-bbdb-9aa5a8d5ee19",
+          "name": "Post Malone"
+        },
+        {
+          "mbid": "6143403a-df6c-429e-8ee6-ef869896b0da",
+          "name": "Quavo"
+        }
       ],
       "recordingMbid": "0a4d37c5-cc7e-4644-b4b4-35941deeb48b",
       "genres": [
@@ -77818,6 +81615,7 @@
         "jangle pop",
         "pop rock"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -77859,6 +81657,16 @@
       "artistMbids": [
         "b02ec63e-e78d-43e5-a594-462e95036e8d",
         "1036b808-f58c-4a3e-b461-a2c4492ecf1b"
+      ],
+      "artists": [
+        {
+          "mbid": "b02ec63e-e78d-43e5-a594-462e95036e8d",
+          "name": "Yo Gotti"
+        },
+        {
+          "mbid": "1036b808-f58c-4a3e-b461-a2c4492ecf1b",
+          "name": "Nicki Minaj"
+        }
       ],
       "recordingMbid": "0233472c-0049-43c3-bf39-0807a6a6267f",
       "genres": [
@@ -78032,6 +81840,16 @@
       "artistMbids": [
         "72d424d0-c349-4164-ae3e-8e5274f97b98",
         "5df62a88-cac9-490a-b62c-c7c88f4020f4"
+      ],
+      "artists": [
+        {
+          "mbid": "72d424d0-c349-4164-ae3e-8e5274f97b98",
+          "name": "Saweetie"
+        },
+        {
+          "mbid": "5df62a88-cac9-490a-b62c-c7c88f4020f4",
+          "name": "Doja Cat"
+        }
       ],
       "recordingMbid": "4b417355-ff07-478d-a792-42e194f60dd9",
       "genres": [
@@ -78541,6 +82359,16 @@
         "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
+      "artists": [
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran"
+        },
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John"
+        }
+      ],
       "recordingMbid": "452e5192-1d86-4fc0-98fe-67c20057a1a6",
       "genres": [
         "pop",
@@ -78752,6 +82580,16 @@
         "fab34286-b8e1-4879-bce3-194e1358fbd2",
         "125948ec-7f91-4d1a-8b83-accbf50fae3d"
       ],
+      "artists": [
+        {
+          "mbid": "fab34286-b8e1-4879-bce3-194e1358fbd2",
+          "name": "Kesha"
+        },
+        {
+          "mbid": "125948ec-7f91-4d1a-8b83-accbf50fae3d",
+          "name": "3OH!3"
+        }
+      ],
       "recordingMbid": "7e802933-e6c8-410d-8455-db425cd99e02",
       "genres": [
         "dance-pop",
@@ -78960,6 +82798,16 @@
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
         "9193bb79-a196-4931-a461-68a3fa3cbeb3"
+      ],
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        },
+        {
+          "mbid": "9193bb79-a196-4931-a461-68a3fa3cbeb3",
+          "name": "Willow Sage Hart"
+        }
       ],
       "recordingMbid": "a8acab82-3308-40a0-bbc4-eb390237b853",
       "genres": [
@@ -79336,13 +83184,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 48091,
-      "id": 102,
-      "artist": "Aurora",
-      "song": "Day it rained forever",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 52631,
       "id": 156,
       "artist": "Santana & Michelle Branch",
@@ -79385,13 +83226,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 52360,
-      "id": 194,
-      "artist": "Red hot chili peppers",
-      "song": "Zephyr song",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 50998,
       "id": 217,
       "artist": "Kid Rock & Sheryl Crow",
@@ -79418,13 +83252,6 @@
       "id": 259,
       "artist": "Dana Secada",
       "song": "Angel queen",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 50633,
-      "id": 262,
-      "artist": "Jennifer Warnes",
-      "song": "Time of my life (Dirty dancing)",
       "reason": "no match in the canonical dump"
     },
     {
@@ -79736,6 +83563,14 @@
       "reason": "no match in the canonical dump"
     },
     {
+      "postId": 52140,
+      "id": 742,
+      "artist": "Pink",
+      "song": "So what",
+      "reason": "credited to Pink (electronic netlabel musician), but this artist's other songs are by P!nk",
+      "suggestion": "Pink – So What"
+    },
+    {
       "postId": 48958,
       "id": 749,
       "artist": "Chris Daughtry",
@@ -80045,13 +83880,6 @@
       "suggestion": "ABBA – I Do, I Do, I Do, I Do, I Do"
     },
     {
-      "postId": 47780,
-      "id": 1113,
-      "artist": "Abba",
-      "song": "Winner takes it all",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 50406,
       "id": 1121,
       "artist": "Huey Lewis & Gwyneth Paltrow",
@@ -80168,7 +83996,8 @@
       "id": 1432,
       "artist": "Prince",
       "song": "Most beautiful girl",
-      "reason": "no match in the canonical dump"
+      "reason": "weak match (loose)",
+      "suggestion": "Prince – The Most Beautiful Girl in the World"
     },
     {
       "postId": 52489,
@@ -80238,13 +84067,6 @@
       "id": 1677,
       "artist": "Puff Daddy, Faith Evans & 112",
       "song": "I'll be missing you",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 48223,
-      "id": 1720,
-      "artist": "Bay City Rollers",
-      "song": "Bump",
       "reason": "no match in the canonical dump"
     },
     {
@@ -80698,13 +84520,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 48301,
-      "id": 2103,
-      "artist": "Bette Midler",
-      "song": "Glory of love",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 49959,
       "id": 2124,
       "artist": "Finsk musik",
@@ -80978,13 +84793,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 49249,
-      "id": 2164,
-      "artist": "David Cook",
-      "song": "Time of my life",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 51749,
       "id": 2174,
       "artist": "Moulin Rouge",
@@ -81147,13 +84955,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 49057,
-      "id": 2451,
-      "artist": "Commitments",
-      "song": "Dark end of the street",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 51015,
       "id": 2466,
       "artist": "Kim Fransson",
@@ -81231,24 +85032,10 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 48226,
-      "id": 2591,
-      "artist": "BC 52's",
-      "song": "Flintstones",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 49347,
       "id": 2597,
       "artist": "Destiny's Child",
       "song": "Un-break my heart",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 50577,
-      "id": 2631,
-      "artist": "Janet Jackson & Luther Vandross",
-      "song": "Best things in life are free",
       "reason": "no match in the canonical dump"
     },
     {
@@ -81350,6 +85137,14 @@
       "artist": "Sound of Music",
       "song": "My favourite things",
       "reason": "no match in the canonical dump"
+    },
+    {
+      "postId": 51686,
+      "id": 2799,
+      "artist": "Mika",
+      "song": "Relax",
+      "reason": "credited to Mika (Austrian electronic house-dance duo), but this artist's other songs are by MIKA",
+      "suggestion": "Mika – Relax"
     },
     {
       "postId": 52810,
@@ -81462,13 +85257,6 @@
       "id": 2974,
       "artist": "Bloodhound Gang",
       "song": "Another dick with no balls",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 48424,
-      "id": 2981,
-      "artist": "Bloodhound Gang",
-      "song": "Bad touch",
       "reason": "no match in the canonical dump"
     },
     {
@@ -81653,13 +85441,6 @@
       "id": 3443,
       "artist": "Bette Midler",
       "song": "That's the glory of love",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 51345,
-      "id": 3456,
-      "artist": "Loverboy",
-      "song": "Kid is hot tonight",
       "reason": "no match in the canonical dump"
     },
     {
@@ -81867,13 +85648,6 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 52645,
-      "id": 3656,
-      "artist": "Savage Garden",
-      "song": "Animal song",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 52754,
       "id": 3657,
       "artist": "Shawn Mullin",
@@ -81964,13 +85738,6 @@
       "id": 3868,
       "artist": "Whitney Houston & Jermaine Jackson",
       "song": "If you say my eyes are beautiful",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 48082,
-      "id": 3876,
-      "artist": "Audioslave",
-      "song": "Last remaining light",
       "reason": "no match in the canonical dump"
     },
     {
@@ -82149,13 +85916,6 @@
       "id": 4107,
       "artist": "Dreamgirls",
       "song": "Move",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 51714,
-      "id": 4153,
-      "artist": "Missy Elliott",
-      "song": "Rain (Supa dupa fly)",
       "reason": "no match in the canonical dump"
     },
     {
@@ -82371,31 +86131,10 @@
       "reason": "no match in the canonical dump"
     },
     {
-      "postId": 50032,
-      "id": 4638,
-      "artist": "Flogging Molly",
-      "song": "Worst day since yesterday",
-      "reason": "no match in the canonical dump"
-    },
-    {
       "postId": 50065,
       "id": 4662,
       "artist": "Foo Fighters",
       "song": "I'll be coming home next year",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 50196,
-      "id": 4674,
-      "artist": "George Strait",
-      "song": "Big one",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 50203,
-      "id": 4681,
-      "artist": "George Strait",
-      "song": "Love bug",
       "reason": "no match in the canonical dump"
     },
     {
@@ -82502,13 +86241,6 @@
       "id": 4969,
       "artist": "Snoop Dog & Pharrell",
       "song": "Drop it like it's hot",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 52903,
-      "id": 4977,
-      "artist": "Steely Dan",
-      "song": "Fez",
       "reason": "no match in the canonical dump"
     },
     {
@@ -83137,13 +86869,6 @@
       "id": 5691,
       "artist": "The cartoons",
       "song": "Doo dah",
-      "reason": "no match in the canonical dump"
-    },
-    {
-      "postId": 53110,
-      "id": 5693,
-      "artist": "The Belmonts",
-      "song": "A teenager in love",
       "reason": "no match in the canonical dump"
     },
     {
