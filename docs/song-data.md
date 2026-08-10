@@ -392,17 +392,78 @@ The table above is what the artist pass costs through the web service, and it is
 plan. The offline match does the same work for 88% of the catalogue in 45 seconds, so these figures apply only to
 the 506 strings it cannot fold — roughly a quarter of the crawl, and the quarter that most needs judgement.
 
+## Asking about a hundred things at once
+
+Every cost estimate above assumed a request per entity, and that assumption was wrong. Search takes a Lucene
+query, `arid` and `rid` are queryable fields, and a query may be a disjunction, so
+`arid:(id1 OR id2 OR … id100)` returns a hundred artists in one request. The 1670 artists the match identified
+cost **39 requests and 95 seconds**, with no retries, where 1670 lookups spent their time on 503s and were
+heading for three hours.
+
+That is worth stating plainly because it is the difference between a plan and a pipeline: the per-entity
+enrichment this document budgeted hours for is minutes. The same trick works for recordings, and for compound
+conditions — `(arid:X AND recording:"T") OR (arid:Y AND recording:"U")` is a legal query.
+
+It is not free of a catch. A search page returns a hundred results ranked by relevance, so the members of a batch
+compete for the same hundred slots. Batching ids is safe, because each id matches exactly one entity. Batching
+conditions is not: at five artist-and-title pairs per query, a fifth of the pairs are crowded out by popular
+songs with hundreds of matching recordings. The right response is not to give up the batching, since five pairs
+still date 2.75 recordings per request against a single pair's 1.0, but to make a wide pass first and then narrow
+passes over what it missed.
+
+### Genres, from tags and MusicBrainz's own vocabulary
+
+This document proposed getting genre from Discogs, on the grounds that MusicBrainz's genres are sparse. They are
+sparse as _genres_; they are not sparse as _tags_. Artist search returns raw tags with vote counts, and 98 of the
+first 100 artists have some. The trouble with tags is that they are not all genres: U2 is tagged `alternative
+rock` and also `irish`, `ireland` and `dublin`.
+
+MusicBrainz publishes the genre list it recognises, all 2184 of them, at `genre/all`. Intersecting an artist's
+tags with that list keeps `britpop` and drops `british`, for the cost of paging through the vocabulary once.
+**1424 of 1670 artists** come back with at least one genre, which covers **4469 songs**. Discogs is no longer
+needed for a first cut.
+
+Genres are per artist, not per song, which is the honest limit of this: it puts `pop` next to a jazz standard on
+a pop singer's album. Per-song genre would need the recording's own tags, which are far sparser.
+
+### The year is not the recording's date
+
+The obvious way to date a song is to ask the recording we matched, and it is wrong often enough to be useless.
+The canonical dump picks whichever recording its own scoring liked, and for `Girls and Boys` that is a 2000
+reissue, for `No Scrub` a 2013 compilation, and for `'74-'75` an acoustic re-recording from 2003. Those dates are
+correct about the master and say nothing about the song.
+
+The question that gives a useful answer is _what is the earliest release of this title by this artist_, which is
+a search rather than a lookup, filtered to the recordings whose title is exactly the song. That filter is the
+important part: remixes, live takes and extended mixes are separate recordings with longer titles, and letting
+them in is how a 2019 live version becomes a song's release year.
+
+One systematic error survives, and it is worth knowing about. Where the venue's title is a misspelling that
+MusicBrainz also holds as a genuine later recording, the year follows the later recording: the catalogue's
+`Girls just wanna have fun` matches Cyndi Lauper's mid-90s re-recording under that spelling rather than the 1983
+`Girls Just Want to Have Fun`. The title is right, the artist is right, and the year is twelve years late.
+
 ## Order of work
 
-1. **Match offline** against the canonical dump. Produces identity and canonical titles for 88% of the catalogue in
-   under a minute, with no requests. Discard bracketed placeholder credits, and mark the prefix matches for review.
-2. **Resolve the residue** — 506 artist strings — through the web service with alias search and title corroboration,
-   judged from evidence. This is where the venue's typos and abbreviations live.
-3. **Enrich by MBID** rather than by search: 1644 artists plus their works, for first-release year, work,
-   composer and language. Direct lookups, so no search ambiguity.
-4. Work the flag queue, biggest blast radius first, into `data/overrides.json`.
-5. Add genre, from Discogs rather than MusicBrainz tags.
-6. Artist pages, which are the reason for all of the above.
+Done, and live on the site:
+
+1. **Match offline** against the canonical dump. Identity and canonical titles for 89% of the catalogue in 90
+   seconds, no requests. Prefix matches are graded by what the canonical title has that the venue's does not — a
+   bracketed version marker, two stray characters, or something else — and only the first two are applied.
+   Bracketed placeholder entities are excluded by their own name.
+2. **A second pass scoped to the artists the first pass identified**, matching on title alone. This is where the
+   venue's typos live: `Sugarbabes`, `Rozallo` and `Pink` for `P!nk` never match a combined key, but their other
+   songs did.
+3. **Enrich by id, in batches**: canonical names, sort names, aliases and genres for 1670 artists in 39 requests.
+4. **Date the songs** by earliest exact-title release per artist.
+
+Still to do:
+
+5. **Resolve the residue** — the 637 songs the dump cannot place — through the web service with alias search and
+   title corroboration, judged from evidence. This is where the remaining typos and the category labels live.
+6. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`.
+7. Works and composers, for the songs where the writer matters more than the performer.
+8. Artist pages, which are the reason for all of the above.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.

@@ -124,9 +124,7 @@ async function main(): Promise<void> {
     for (let index = 0; index < mbids.length; index += BATCH) {
         const wanted = mbids.slice(index, index + BATCH);
         const query = `arid:(${wanted.join(" OR ")})`;
-        const page = await mbGet<{ artists?: SearchHit[] }>(
-            `artist?query=${encodeURIComponent(query)}&limit=${BATCH}`,
-        );
+        const page = await mbGet<{ artists?: SearchHit[] }>(`artist?query=${encodeURIComponent(query)}&limit=${BATCH}`);
         for (const hit of page.artists ?? []) {
             artists.push(toArtist(hit, vocabulary));
         }

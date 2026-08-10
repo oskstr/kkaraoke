@@ -13,6 +13,8 @@ export interface Song {
     song: string;
     /** Artist genres, where MusicBrainz has enough votes to be worth showing. */
     genres?: string[];
+    /** Earliest release of this title by this artist, where MusicBrainz knows it. */
+    year?: number;
     /** True when the artist or title shown is a correction rather than the venue's own. */
     corrected?: boolean;
 }
@@ -29,6 +31,7 @@ interface Correction {
     sortAs?: string;
     title?: string;
     genres?: string[];
+    year?: number;
 }
 
 /** Swedish collation, so å, ä and ö sort after z rather than beside a, a and o. */
@@ -59,6 +62,7 @@ const composed: readonly Song[] = catalogue.songs
             // Sorting an artist by their own sort name is what puts The Beatles under B,
             // and it only exists once a lookup has provided it.
             ...(correction.genres === undefined ? {} : { genres: correction.genres }),
+            ...(correction.year === undefined ? {} : { year: correction.year }),
             ...(artist === song.artist && title === song.song ? {} : { corrected: true }),
         };
     })

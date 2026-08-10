@@ -20,8 +20,14 @@ const USER_AGENT = "kkaraoke-resolver/0.1 ( https://github.com/oskstr/kkaraoke )
 
 /** Slightly slower than the documented limit, since 503s show up even at exactly 1/s. */
 const MIN_INTERVAL_MS = 1200;
-/** A ceiling on the adaptive backoff, past which the run is not worth waiting for. */
-const MAX_INTERVAL_MS = 10_000;
+/**
+ * A ceiling on the adaptive backoff. Deliberately low: a 503 costs one retry, so a steady
+ * trickle of them is cheaper than the interval it would take to avoid them. Aiming at zero
+ * 503s drove the interval to ten seconds and turned a 35-minute pass into a four-hour one.
+ */
+const MAX_INTERVAL_MS = 4000;
+/** How many clean requests before easing off again. Small, for the same reason. */
+const EASE_AFTER = 5;
 const MAX_ATTEMPTS = 5;
 const REQUEST_TIMEOUT_MS = 30_000;
 
@@ -97,8 +103,8 @@ async function request(path: string): Promise<unknown> {
             const body = await attemptOnce(path);
             // Ease back towards the documented rate once the server stops complaining,
             // so that one bad patch does not slow the whole run down permanently.
-            if (++sinceThrottled >= 20 && interval > MIN_INTERVAL_MS) {
-                interval = Math.max(MIN_INTERVAL_MS, Math.round(interval * 0.8));
+            if (++sinceThrottled >= EASE_AFTER && interval > MIN_INTERVAL_MS) {
+                interval = Math.max(MIN_INTERVAL_MS, Math.round(interval * 0.85));
                 sinceThrottled = 0;
                 console.warn(`    easing back to ${interval}ms between requests`);
             }
@@ -109,7 +115,7 @@ async function request(path: string): Promise<unknown> {
                 // sustainable, and it is worth acting on: the limit is per IP, and on a
                 // shared address the documented one request per second is not ours alone.
                 sinceThrottled = 0;
-                interval = Math.min(MAX_INTERVAL_MS, Math.round(interval * 1.5));
+                interval = Math.min(MAX_INTERVAL_MS, Math.round(interval * 1.25));
             }
             if (error instanceof Permanent) {
                 throw error;

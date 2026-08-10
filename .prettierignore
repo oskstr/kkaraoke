@@ -17,3 +17,6 @@ data/resolved.json
 
 # Artist lookups, written by `pnpm fetch:artists`.
 data/artists.json
+
+# Recording dates, written by `pnpm fetch:recordings`.
+data/recordings.json

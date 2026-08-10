@@ -17,6 +17,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { parseArgs } from "node:util";
 import type { Artist } from "./fetch-artists.ts";
+import type { Recording } from "./fetch-recordings.ts";
 
 interface MatchRecord {
     postId: number;
@@ -45,6 +46,8 @@ interface Resolved {
     artistMbids?: string[];
     recordingMbid?: string;
     genres?: string[];
+    /** Earliest release of this title by this artist, which is not the same as the master's date. */
+    year?: number;
     how?: string;
 }
 
@@ -68,6 +71,7 @@ async function main(): Promise<void> {
         options: {
             matches: { type: "string", default: "data/canonical-matches.json" },
             artists: { type: "string", default: "data/artists.json" },
+            recordings: { type: "string", default: "data/recordings.json" },
             out: { type: "string", default: "data/resolved.json" },
         },
     });
@@ -86,6 +90,12 @@ async function main(): Promise<void> {
 
     // An array rather than an object keyed by id: five thousand keys in a JSON module
     // makes TypeScript infer five thousand properties, and the site can build its own map.
+    const recordingFile = await readJson<{ recordings: Recording[] }>(values.recordings);
+    const years = new Map((recordingFile?.recordings ?? []).map((r) => [r.recordingMbid, r.year]));
+    if (recordingFile === undefined) {
+        console.warn(`No ${values.recordings} yet, so songs will have no year.`);
+    }
+
     const songs: Resolved[] = [];
     const review: {
         postId: number;
@@ -99,6 +109,7 @@ async function main(): Promise<void> {
     let titleFixes = 0;
     let artistFixes = 0;
     let genreCount = 0;
+    let yearCount = 0;
 
     for (const match of matches.songs) {
         if (!match.matched) {
@@ -158,6 +169,11 @@ async function main(): Promise<void> {
             resolved.genres = genres;
             genreCount++;
         }
+        const year = match.recordingMbid === undefined ? undefined : years.get(match.recordingMbid);
+        if (year !== undefined) {
+            resolved.year = year;
+            yearCount++;
+        }
         if (match.how !== undefined) resolved.how = match.how;
 
         songs.push(resolved);
@@ -168,6 +184,7 @@ async function main(): Promise<void> {
     console.log(`  titles corrected: ${titleFixes}`);
     console.log(`  artist names corrected: ${artistFixes}`);
     console.log(`  songs with a genre: ${genreCount}`);
+    console.log(`  songs with a year: ${yearCount}`);
 
     await mkdir(dirname(values.out), { recursive: true });
     await writeFile(
