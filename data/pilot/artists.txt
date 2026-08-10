@@ -1,0 +1,71 @@
+# Pilot set for evaluating artist resolution. Deliberately weighted towards the cases
+# that are known to be hard, with a few unambiguous ones as controls so that false
+# positives are visible too. Strings must match `artist` in data/songs.json exactly.
+
+# Named by an alias, or with the casing mangled
+Hall & Oates
+Rem
+Abba
+Beatles
+Ac/Dc
+Inxs
+Kiss
+Mamas & The Papas
+
+# One act whose own name contains a separator: must not be split
+Adam & The Ants
+Simon & Garfunkel
+KC & The Sunshine Band
+Peter, Björn & John
+Peter, Paul & Mary
+Emerson, Lake & Palmer
+Florence & The Machine
+
+# Genuinely several artists: must be split
+Christina Aguilera, Lil Kim, Mya & Pink
+Lionel Richie & Diana Ross
+Avicii Ft. Robbie Williams
+Calvin Harris Feat. Ellie Goulding
+Kikki, Bettan och Lotta
+
+# A band whose name contains "&", collaborating via "And"
+Lilly Wood & The Prick And Robin Schulz
+
+# Slash means band and its own frontman, not a collaboration
+Björn Skifs/Blue Swede
+Jimmy Somerville/Bronski Beat
+Travis/Fran Healey
+Rosie/Originals
+
+# Same artist twice, differing only in case: should resolve to one entity
+Ace of Base
+Ace of base
+The Doors
+The doors
+Fleetwood Mac
+Fleetwood mac
+Jason DeRulo
+Jason Derulo
+Style council
+Style Council
+
+# Not an artist at all
+Finsk musik
+Julsång
+Disney
+Chicago
+Sound of Music
+Irish traditional song
+Enya (fellowship Of The Ring Soundtrack)
+Lady & The Tramp
+
+# Controls: should resolve cleanly and confidently
+Celine Dion
+Britney Spears
+Coldplay
+Elvis Presley
+
+# Nordic, where source coverage is thinner
+Nationalteatern
+Östen med Resten
+Åge Alexandersen

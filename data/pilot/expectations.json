@@ -1,0 +1,90 @@
+{
+    "note": "Hand-written expectations for scoring a resolver run against the pilot set. These are my judgements from reading the evidence, not ground truth, and the cases marked `observeOnly` are ones where I do not think there is a single defensible answer yet.",
+    "checks": [
+        { "artist": "Hall & Oates", "status": "resolved", "artistCount": 1, "expectName": "Daryl Hall & John Oates" },
+        { "artist": "Rem", "status": "resolved", "artistCount": 1, "expectName": "R.E.M." },
+        { "artist": "Abba", "status": "resolved", "artistCount": 1, "expectName": "ABBA" },
+        { "artist": "Beatles", "status": "resolved", "artistCount": 1, "expectName": "The Beatles" },
+        { "artist": "Ac/Dc", "status": "resolved", "artistCount": 1, "expectName": "AC/DC" },
+        { "artist": "Inxs", "status": "resolved", "artistCount": 1, "expectName": "INXS" },
+        { "artist": "Kiss", "status": "resolved", "artistCount": 1 },
+        { "artist": "Mamas & The Papas", "status": "resolved", "artistCount": 1 },
+
+        { "artist": "Adam & The Ants", "status": "resolved", "artistCount": 1, "collaboration": false },
+        { "artist": "Simon & Garfunkel", "status": "resolved", "artistCount": 1, "collaboration": false },
+        { "artist": "KC & The Sunshine Band", "status": "resolved", "artistCount": 1, "collaboration": false },
+        {
+            "artist": "Peter, Björn & John",
+            "status": "resolved",
+            "artistCount": 1,
+            "collaboration": false,
+            "expectName": "Peter Bjorn and John"
+        },
+        { "artist": "Peter, Paul & Mary", "status": "resolved", "artistCount": 1, "collaboration": false },
+        { "artist": "Emerson, Lake & Palmer", "status": "resolved", "artistCount": 1, "collaboration": false },
+        { "artist": "Florence & The Machine", "status": "resolved", "artistCount": 1, "collaboration": false },
+
+        {
+            "artist": "Christina Aguilera, Lil Kim, Mya & Pink",
+            "status": "resolved",
+            "artistCount": 4,
+            "collaboration": true
+        },
+        { "artist": "Lionel Richie & Diana Ross", "status": "resolved", "artistCount": 2, "collaboration": true },
+        { "artist": "Avicii Ft. Robbie Williams", "status": "resolved", "artistCount": 2, "collaboration": true },
+        {
+            "artist": "Calvin Harris Feat. Ellie Goulding",
+            "status": "resolved",
+            "artistCount": 2,
+            "collaboration": true
+        },
+        {
+            "artist": "Lilly Wood & The Prick And Robin Schulz",
+            "status": "resolved",
+            "artistCount": 2,
+            "collaboration": true
+        },
+        { "artist": "Kikki, Bettan och Lotta", "observeOnly": "may be one trio entity or three soloists" },
+
+        { "artist": "Björn Skifs/Blue Swede", "observeOnly": "band and its own frontman, not a collaboration" },
+        { "artist": "Jimmy Somerville/Bronski Beat", "observeOnly": "band and its own frontman" },
+        { "artist": "Travis/Fran Healey", "observeOnly": "band and its own frontman" },
+        { "artist": "Rosie/Originals", "observeOnly": "likely Rosie and the Originals" },
+
+        { "artist": "Ace of Base", "sameEntityAs": "Ace of base" },
+        { "artist": "The Doors", "sameEntityAs": "The doors" },
+        { "artist": "Fleetwood Mac", "sameEntityAs": "Fleetwood mac" },
+        { "artist": "Jason DeRulo", "sameEntityAs": "Jason Derulo" },
+        { "artist": "Style council", "sameEntityAs": "Style Council" },
+
+        { "artist": "Finsk musik", "mustNotResolve": true },
+        { "artist": "Julsång", "mustNotResolve": true },
+        { "artist": "Disney", "mustNotResolve": true },
+        { "artist": "Sound of Music", "mustNotResolve": true },
+        { "artist": "Irish traditional song", "mustNotResolve": true },
+        { "artist": "Lady & The Tramp", "mustNotResolve": true },
+
+        {
+            "artist": "Chicago",
+            "status": "resolved",
+            "artistCount": 1,
+            "note": "the band, not the musical; the song titles are the only thing that separates them"
+        },
+        {
+            "artist": "Enya (fellowship Of The Ring Soundtrack)",
+            "status": "resolved",
+            "artistCount": 1,
+            "expectName": "Enya",
+            "note": "the soundtrack annotation has to be stripped"
+        },
+
+        { "artist": "Celine Dion", "status": "resolved", "artistCount": 1 },
+        { "artist": "Britney Spears", "status": "resolved", "artistCount": 1 },
+        { "artist": "Coldplay", "status": "resolved", "artistCount": 1 },
+        { "artist": "Elvis Presley", "status": "resolved", "artistCount": 1 },
+
+        { "artist": "Nationalteatern", "status": "resolved", "artistCount": 1 },
+        { "artist": "Östen med Resten", "status": "resolved", "artistCount": 1 },
+        { "artist": "Åge Alexandersen", "status": "resolved", "artistCount": 1 }
+    ]
+}
