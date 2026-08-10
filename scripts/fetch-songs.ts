@@ -36,7 +36,7 @@ const ELEMENT_IDS = {
     song: "d1a0a37",
 } as const;
 
-const USER_AGENT = "kkaraoke-catalogue-fetcher (one-off scrape of the public song list)";
+const USER_AGENT = "kkaraoke-catalogue-fetcher (+https://github.com/oskstr/kkaraoke)";
 const REQUEST_TIMEOUT_MS = 30_000;
 const MAX_ATTEMPTS = 4;
 
@@ -82,7 +82,7 @@ const NAMED_ENTITIES = new Map([
 const unknownEntities = new Set<string>();
 
 function decodeEntities(text: string): string {
-    return text.replace(/&(#x?[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);/g, (match, entity: string) => {
+    return text.replace(/&(#[xX][0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);/g, (match, entity: string) => {
         if (entity.startsWith("#x") || entity.startsWith("#X")) {
             return String.fromCodePoint(Number.parseInt(entity.slice(2), 16));
         }
