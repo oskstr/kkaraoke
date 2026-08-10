@@ -18,7 +18,9 @@
         "fetch:songs": "node --experimental-strip-types scripts/fetch-songs.ts",
         "collect:evidence": "node --experimental-strip-types scripts/collect-artist-evidence.ts",
         "score:verdicts": "node --experimental-strip-types scripts/score-artist-verdicts.ts",
-        "match:canonical": "node --experimental-strip-types scripts/match-canonical.ts"
+        "match:canonical": "node --experimental-strip-types scripts/match-canonical.ts",
+        "fetch:artists": "node --experimental-strip-types scripts/fetch-artists.ts",
+        "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts"
     },
     "dependencies": {
         "@astrojs/react": "^6.0.2",

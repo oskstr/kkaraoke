@@ -11,3 +11,9 @@ data/pilot/tail-evidence.json
 
 # Offline match against the MusicBrainz canonical dump, written by `pnpm match:canonical`.
 data/canonical-matches.json
+
+# The machine-resolved layer, written by `pnpm build:resolved`.
+data/resolved.json
+
+# Artist lookups, written by `pnpm fetch:artists`.
+data/artists.json
