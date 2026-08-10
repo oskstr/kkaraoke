@@ -6,12 +6,7 @@ packages:
     - "."
 
 # pnpm blocks dependency build scripts by default, and pnpm 11 makes an
-# undeclared one a hard error rather than a warning. These are the only three
-# that ask to run one, and all are allowed: @prisma/engines fetches the schema
-# engine that `prisma db pull` and `prisma migrate` rely on, and esbuild verifies
-# its platform binary. Set any of them to `false` to trade those commands for a
-# leaner install.
+# undeclared one a hard error rather than a warning. esbuild is the only
+# dependency that asks to run one, and its script verifies the platform binary.
 allowBuilds:
-    "@prisma/engines": true
     esbuild: true
-    prisma: true
