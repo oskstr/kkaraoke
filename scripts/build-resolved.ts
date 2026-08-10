@@ -50,8 +50,13 @@ interface Resolved {
     sortAs?: string;
     title?: string;
     artistMbids?: string[];
-    /** The credited artists individually, for a page that wants to link each of them. */
+    /** The credited artists individually, which is what the artist column is built from. */
     artists?: { mbid: string; name: string }[];
+    /**
+     * The matched release's own flattened credit line, kept for the collaboration kind it
+     * encodes and never displayed.
+     */
+    credit?: string;
     /**
      * The show or film the song is from, where the venue put that in the artist column. Kept
      * apart from the artist: `Grease` is what people search for and is not a performer.
@@ -68,8 +73,26 @@ interface Resolved {
  * Genres are user tags, so a long tail of one-vote suggestions comes with them. Two votes
  * is enough to drop the noise while keeping the genres an artist is actually known for.
  */
+/** Where the venue joins several artists into one string, as the matcher splits it. */
+const JOIN = /\s+(?:feat\.?|ft\.?|featuring|with|duet with|med|vs\.?|versus|and|x)\s+|\s*[&,+/]\s*/i;
+
 const MIN_GENRE_VOTES = 2;
 const MAX_GENRES = 3;
+
+const HAS_LATIN = /\p{Script=Latin}/u;
+
+/**
+ * The name to show. MusicBrainz's canonical name is the artist's own preferred one, which for
+ * `Άννα Βίσση` and `鄭秀文` is written in a script nobody in the room can type. Where it has no
+ * Latin letters at all, a Latin alias is the usable name; `98°` and `A★Teens` keep theirs,
+ * because a symbol is not a script.
+ */
+function displayName(artist: Artist): string {
+    if (HAS_LATIN.test(artist.name)) {
+        return artist.name;
+    }
+    return (artist.aliases ?? []).find((alias) => HAS_LATIN.test(alias)) ?? artist.name;
+}
 
 /** Punctuation and case removed, so that `P!nk` and `Pink` can be told apart by name. */
 const nameKey = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -86,40 +109,6 @@ function related(a: Artist | undefined, b: Artist | undefined): boolean {
     }
     const [left, right] = [nameKey(a.name), nameKey(b.name)];
     return left !== right && (left.startsWith(right) || right.startsWith(left));
-}
-
-/**
- * How a collaboration should read. The dump gives only the flattened credit line the matched
- * release happened to print, so the same two people arrive as `Nicole Kidman and Ewan
- * McGregor` on one song and `Nicole Kidman & Ewan McGregor` on the next, and one release
- * managed `Hall& Oates`. They are two artists either way, each with their own id.
- *
- * Where the line is nothing but the credited artists' own names joined by a neutral
- * conjunction, it can be rebuilt from those names and read the same way every time. Where it
- * says anything else it is left alone, because the something else is usually the part that
- * matters: `feat.` marks a guest, `duet with` marks a duet, `vs.` marks a remix.
- */
-function readAsCredit(credit: string, credited: Artist[]): string {
-    const tidy = credit.replace(/\s*&\s*/g, " & ").trim();
-    if (credited.length < 2) {
-        return tidy;
-    }
-    const neutral = tidy.split(/\s*(?:&|,|\band\b)\s*/).filter((part) => part.length > 0);
-    const names = credited.map((artist) => artist.name);
-    // A part accounts for an artist when it is their name, or the end of it: one release
-    // credits Daryl Hall and John Oates as `Hall& Oates`, which is the same two men shortened,
-    // and rebuilding it is what stops their three songs reading two different ways.
-    const accounts = (part: string, name: string): boolean => {
-        const [left, right] = [nameKey(part), nameKey(name)];
-        return left === right || (left.length >= 3 && right.endsWith(left));
-    };
-    const accounted =
-        neutral.length === names.length && neutral.every((part, index) => accounts(part, names[index] ?? ""));
-    if (!accounted) {
-        return tidy;
-    }
-    // Oxford-free: `A & B`, and `A, B & C` for three or more.
-    return [names.slice(0, -1).join(", "), names.at(-1)].join(" & ");
 }
 
 function pickGenres(artist: Artist | undefined): string[] {
@@ -235,8 +224,9 @@ async function main(): Promise<void> {
             return;
         }
         const resolved: Resolved = { postId: match.postId, artistMbids: [artist.mbid] };
-        if (artist.name !== match.artist) {
-            resolved.artist = artist.name;
+        const name = displayName(artist);
+        if (name !== match.artist) {
+            resolved.artist = name;
             artistFixes++;
         }
         if (artist.sortName !== undefined) resolved.sortAs = artist.sortName;
@@ -305,15 +295,14 @@ async function main(): Promise<void> {
         const credited = mbids.map((mbid) => artists.get(mbid)).filter((artist) => artist !== undefined);
         const lead = credited[0];
 
-        // A single credited artist gets the canonical name from its own lookup, because the
-        // dump's credit is whatever the matched release printed. A collaboration is rebuilt
-        // from the same names where the line is only names, and kept verbatim where it is not.
+        // Each distinct artist, comma separated, from their own canonical names. The dump's
+        // credit line is one flattened string of whatever the matched release printed, which
+        // makes two people look like a band with a long name and spells them differently from
+        // one release to the next. It is kept below as data, not shown.
         const canonical =
-            mbids.length === 1 && lead !== undefined
-                ? lead.name
-                : match.artistCredit === undefined
-                  ? undefined
-                  : readAsCredit(match.artistCredit, credited);
+            credited.length === mbids.length && credited.length > 0
+                ? credited.map(displayName).join(", ")
+                : match.artistCredit;
 
         // MusicBrainz files songs with no identifiable performer under placeholder
         // entities named in brackets, such as [Disney] and [traditional]. The id is real
@@ -322,6 +311,17 @@ async function main(): Promise<void> {
         const anonymous = canonical !== undefined && /^\[.*\]$/.test(canonical);
         if (anonymous) {
             review.push({ ...pick(match), reason: `MusicBrainz files this under ${canonical}, a placeholder` });
+        }
+
+        // Scoping a search to the lead can land on the lead's solo recording, so `Ashanti & Ja
+        // Rule – Happy` becomes Ashanti alone. The canonical names, year and genres are still
+        // a gain over the venue's string, so this is applied and noted rather than withheld.
+        if (match.how === "lead-scoped" && credited.length < match.artist.split(JOIN).length) {
+            review.push({
+                ...pick(match),
+                reason: "matched through the lead artist, and the credit names fewer artists than the venue did",
+                suggestion: `${canonical ?? ""} – ${match.title ?? ""}`,
+            });
         }
 
         const resolved: Resolved = { postId: match.postId };
@@ -343,11 +343,16 @@ async function main(): Promise<void> {
             titleFixes++;
         }
         if (mbids.length > 0) resolved.artistMbids = mbids;
-        // The credit line above is for reading; this is the same thing for linking. A
-        // collaboration is several artists with their own ids, and the page cannot make
-        // them separately clickable until it has them separately.
-        if (credited.length > 1) {
-            resolved.artists = credited.map((artist) => ({ mbid: artist.mbid, name: artist.name }));
+        // What the artist column is made of, so the page can link each name on its own rather
+        // than parsing one back out of a string.
+        if (credited.length > 0) {
+            resolved.artists = credited.map((artist) => ({ mbid: artist.mbid, name: displayName(artist) }));
+        }
+        // MusicBrainz distinguishes a guest from an equal billing, and the dump flattens that
+        // distinction into this line: `feat.`, `duet with`, `vs.`. Keeping it means the
+        // distinction can be recovered later, properly, from the web service's join phrases.
+        if (credited.length > 1 && match.artistCredit !== undefined) {
+            resolved.credit = match.artistCredit;
         }
         if (match.recordingMbid !== undefined) resolved.recordingMbid = match.recordingMbid;
 

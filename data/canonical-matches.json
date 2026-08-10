@@ -1200,7 +1200,20 @@
       "id": 66,
       "artist": "Bryan Adams & Mel C",
       "song": "When you're gone",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bryan Adams feat. Melanie C",
+      "artistMbids": [
+        "4dbf5678-7a31-406a-abbe-232f8ac2cd63",
+        "25b509ef-48ad-461b-a0bc-94cdddb8c919"
+      ],
+      "recording": "When You’re Gone",
+      "recordingMbid": "9300c69a-3bad-4d82-85ed-2e1d82f8013d",
+      "release": "On a Day Like Today",
+      "score": 203310,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "When You’re Gone"
     },
     {
       "postId": 47934,
@@ -1482,7 +1495,21 @@
       "id": 82,
       "artist": "Blackstreet & Janet Jackson",
       "song": "Girlfriend/boyfriend",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Blackstreet feat. Eve & Ja Rule",
+      "artistMbids": [
+        "d72d000b-b860-44f4-9ac1-5d82e3fff9a9",
+        "1ac10f5e-2079-4435-b78f-dda6ecdeba15",
+        "b504f625-4ef6-4a5a-81e8-870a61e8dc9c"
+      ],
+      "recording": "Girlfriend/Boyfriend",
+      "recordingMbid": "be87caca-52cb-457e-94c2-688562ba134b",
+      "release": "Finally",
+      "score": 222471,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Girlfriend/Boyfriend"
     },
     {
       "postId": 50949,
@@ -1838,7 +1865,19 @@
       "id": 101,
       "artist": "Elvis Presley feat. JXL Remix",
       "song": "A little less conversation",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Elvis Presley",
+      "artistMbids": [
+        "01809552-4f87-45b0-afff-2c6f0730a3be"
+      ],
+      "recording": "A Little Less Conversation",
+      "recordingMbid": "eee65b9a-6806-4428-9700-f1e47887b1cb",
+      "release": "A Little Less Conversation",
+      "score": 2314800,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "A Little Less Conversation"
     },
     {
       "postId": 48091,
@@ -2877,7 +2916,20 @@
       "id": 156,
       "artist": "Santana & Michelle Branch",
       "song": "The game of love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Santana featuring Michelle Branch",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "a10f94a9-2a3c-4166-b9fa-a7bed0bf7d96"
+      ],
+      "recording": "The Game of Love",
+      "recordingMbid": "127993e7-6d72-4321-8dcc-363e73d72a41",
+      "release": "Shaman",
+      "score": 311335,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "The Game of Love"
     },
     {
       "postId": 49929,
@@ -2979,7 +3031,21 @@
       "id": 162,
       "artist": "Dj Sammy & Yanou feat. Fido",
       "song": "Heaven",
-      "matched": false
+      "matched": true,
+      "artistCredit": "DJ Sammy & Yanou feat. Do",
+      "artistMbids": [
+        "c43e35b8-8234-408b-9a25-07f2fcbeb317",
+        "433ccb7d-440a-4fa9-aeee-11cb74254f7b",
+        "16907f68-6858-4d64-8ab7-d33495e4e1a5"
+      ],
+      "recording": "Heaven",
+      "recordingMbid": "a00d2698-6049-4dc7-9e1a-825f10f9f6c5",
+      "release": "Heaven",
+      "score": 308311,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Heaven"
     },
     {
       "postId": 50880,
@@ -3177,7 +3243,21 @@
       "id": 173,
       "artist": "Puff Daddy, Usher & Loon",
       "song": "I need a girl",
-      "matched": false
+      "matched": true,
+      "artistCredit": "P. Diddy feat. Usher & Loon",
+      "artistMbids": [
+        "cabb4fcf-4067-4ba5-908d-76ee66fcf0c6",
+        "3414d446-735a-443c-931f-10634f57e5b9",
+        "aa825996-e5c8-4b90-ab48-b973b82384ed"
+      ],
+      "recording": "I Need a Girl",
+      "recordingMbid": "7c4e16a1-a24c-472c-829c-4632892a4578",
+      "release": "I Need a Girl (Part One)",
+      "score": 3676362,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Need a Girl"
     },
     {
       "postId": 52136,
@@ -3241,14 +3321,38 @@
       "id": 177,
       "artist": "Blue & Elton John",
       "song": "Sorry seems to be the hardest word",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Blue",
+      "artistMbids": [
+        "9c79224c-70cd-4367-8d90-35ca99401b75"
+      ],
+      "recording": "Sorry Seems to Be the Hardest Word",
+      "recordingMbid": "09f82918-19ad-492c-aa90-73e03b391657",
+      "release": "One Love",
+      "score": 313782,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Sorry Seems to Be the Hardest Word"
     },
     {
       "postId": 48067,
       "id": 178,
       "artist": "Ashanti & Ja Rule",
       "song": "Happy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ashanti",
+      "artistMbids": [
+        "a47ed6d5-480e-428c-8ce9-d7a6a571e857"
+      ],
+      "recording": "Happy",
+      "recordingMbid": "410a54c4-7f79-4273-bc68-2c2fab67f9c4",
+      "release": "Ashanti",
+      "score": 304204,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Happy"
     },
     {
       "postId": 48607,
@@ -3980,7 +4084,20 @@
       "id": 217,
       "artist": "Kid Rock & Sheryl Crow",
       "song": "Picture",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kid Rock feat. Sheryl Crow",
+      "artistMbids": [
+        "ad0ecd8b-805e-406e-82cb-5b00c3a3a29e",
+        "80ccfede-c258-4575-a7ad-c982e9932e0f"
+      ],
+      "recording": "Picture",
+      "recordingMbid": "226f63fb-8f80-4057-a834-a6899c8d1714",
+      "release": "Cocky",
+      "score": 284268,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Picture"
     },
     {
       "postId": 52675,
@@ -4313,7 +4430,20 @@
       "id": 235,
       "artist": "Christina Aguilera & Lil Kim",
       "song": "Can't hold us down",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Christina Aguilera featuring Lil’ Kim",
+      "artistMbids": [
+        "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
+        "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e"
+      ],
+      "recording": "Can’t Hold Us Down",
+      "recordingMbid": "e2efe5fd-ac48-4e59-b580-15e829ba856e",
+      "release": "Stripped",
+      "score": 311454,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Can’t Hold Us Down"
     },
     {
       "postId": 49682,
@@ -7856,14 +7986,39 @@
       "id": 425,
       "artist": "Tina Arena & Marc",
       "song": "I want to spend my lifetime loving you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tina Arena",
+      "artistMbids": [
+        "c1ccc784-9f18-4369-96b1-38106419b5ad"
+      ],
+      "recording": "I Want to Spend My Lifetime Loving You",
+      "recordingMbid": "4ed997f1-9fa0-4086-9a44-66b6023a8140",
+      "release": "In Deep",
+      "score": 202555,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Want to Spend My Lifetime Loving You"
     },
     {
       "postId": 48866,
       "id": 426,
       "artist": "Celine Dion & Clive Griffith",
       "song": "When I fall in love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Céline Dion & Clive Griffin",
+      "artistMbids": [
+        "847e8a0c-cc20-4213-9e16-975515c2a926",
+        "2fe86e7f-5438-40c4-9e67-d6454ee2d5ca"
+      ],
+      "recording": "When I Fall in Love",
+      "recordingMbid": "10c5ad68-a65f-4588-ad89-c46b036828ab",
+      "release": "The Colour of My Love",
+      "score": 92381,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "When I Fall in Love"
     },
     {
       "postId": 53321,
@@ -7949,7 +8104,20 @@
       "id": 431,
       "artist": "Peabo Bryson & Regina Bell",
       "song": "A whole new world",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Peabo Bryson & Regina Belle",
+      "artistMbids": [
+        "b8170690-3a95-42e4-adef-afc9576ed90c",
+        "e1235abf-1fab-40a5-833a-057968d90e48"
+      ],
+      "recording": "A Whole New World",
+      "recordingMbid": "da09a07a-2bb9-4702-8374-b52d0082ec74",
+      "release": "A Celebration of Disney’s Hit Singles & More",
+      "score": 5342922,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "A Whole New World"
     },
     {
       "postId": 48177,
@@ -7995,7 +8163,20 @@
       "id": 434,
       "artist": "Cagnet feat. Natalie",
       "song": "What will I do",
-      "matched": false
+      "matched": true,
+      "artistCredit": "CAGNET feat.Anna McMurphy",
+      "artistMbids": [
+        "23a914d3-2e6e-49f5-b914-c32a4e2446a7",
+        "c8b58f72-9f52-4235-80ee-accd2fe2e0af"
+      ],
+      "recording": "What Will I Do",
+      "recordingMbid": "a2072a67-3236-43ca-8630-9081bd1eee7b",
+      "release": "DEEPER and DEEPER",
+      "score": 2278636,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "What Will I Do"
     },
     {
       "postId": 50142,
@@ -9051,14 +9232,39 @@
       "id": 495,
       "artist": "Linda Ronstadt & Aron Neville",
       "song": "Don't know much",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Linda Ronstadt feat. Aaron Neville",
+      "artistMbids": [
+        "498f2581-be21-4eef-8756-fbb89d79b1c0",
+        "2f53411b-ec29-4979-aa46-62786a2bb377"
+      ],
+      "recording": "Don’t Know Much",
+      "recordingMbid": "e1f0dc99-dd7b-4944-a7d3-37bc7307d237",
+      "release": "Cry Like a Rainstorm — Howl Like the Wind",
+      "score": 33527,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Don’t Know Much"
     },
     {
       "postId": 50171,
       "id": 496,
       "artist": "George Benson & Roberta Flack",
       "song": "You are the love of my life",
-      "matched": false
+      "matched": true,
+      "artistCredit": "George Benson",
+      "artistMbids": [
+        "467f69b6-8d6d-4d2c-bfad-e89adf2806ff"
+      ],
+      "recording": "You Are the Love of My Life",
+      "recordingMbid": "563e13fb-2edd-4e79-89e8-25d6d08ef3b0",
+      "release": "20/20",
+      "score": 5176,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "You Are the Love of My Life"
     },
     {
       "postId": 49189,
@@ -13264,7 +13470,20 @@
       "id": 724,
       "artist": "Shakira feat. Wyclef Sean",
       "song": "Hips don't lie",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shakira feat. Wyclef Jean",
+      "artistMbids": [
+        "bf24ca37-25f4-4e34-9aec-460b94364cfc",
+        "4f29ecd7-21a5-4c03-b9ba-d0cfe9488f8c"
+      ],
+      "recording": "Hips Don’t Lie",
+      "recordingMbid": "2c0b2787-307c-49e9-b2e9-5b1ddd6e713e",
+      "release": "Oral Fixation, Vol. 2",
+      "score": 408441,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hips Don’t Lie"
     },
     {
       "postId": 47953,
@@ -23674,7 +23893,20 @@
       "id": 1299,
       "artist": "Santana & Rob Thomas",
       "song": "Smooth",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Santana featuring Rob Thomas",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "e42680f7-e439-4666-9c2c-536c2b3c6db3"
+      ],
+      "recording": "Smooth",
+      "recordingMbid": "fd635cea-3510-4d4b-930d-9ed69f754685",
+      "release": "Supernatural",
+      "score": 224920,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Smooth"
     },
     {
       "postId": 52787,
@@ -26608,7 +26840,19 @@
       "id": 1458,
       "artist": "Robbie Williams & Nicole Kidman",
       "song": "Something stupid",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Robbie Williams",
+      "artistMbids": [
+        "db4624cf-0e44-481e-a9dc-2142b833ec2f"
+      ],
+      "recording": "Something Stupid",
+      "recordingMbid": "1e957ec3-99dd-452c-a4e0-8cb714b67e8f",
+      "release": "Swing When You’re Winning (piano/vocal/guitar)",
+      "score": 329979,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Something Stupid"
     },
     {
       "postId": 47858,
@@ -30695,7 +30939,21 @@
       "id": 1677,
       "artist": "Puff Daddy, Faith Evans & 112",
       "song": "I'll be missing you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Puff Daddy & Faith Evans featuring 112",
+      "artistMbids": [
+        "cabb4fcf-4067-4ba5-908d-76ee66fcf0c6",
+        "ebcd0bad-75ef-4203-b7b3-7af38a9ef198",
+        "9132d515-dc0e-4494-85ae-20f06eed14f9"
+      ],
+      "recording": "I’ll Be Missing You",
+      "recordingMbid": "adfc0d84-c4a5-4d60-8c5a-509bc6d768a3",
+      "release": "Tribute to The Notorious B.I.G.",
+      "score": 2282021,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I’ll Be Missing You"
     },
     {
       "postId": 49444,
@@ -39509,7 +39767,21 @@
       "id": 2196,
       "artist": "Björn Skifs/Blue Swede",
       "song": "Hooked on a feeling",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Björn Skifs, Kör, Orkester",
+      "artistMbids": [
+        "b3c8a465-9081-41ef-b845-43fbf24e15e0",
+        "e7b12974-79d5-427b-99ab-c11fbfb0b8fd",
+        "66a728aa-e27a-443e-9b59-4a5061599792"
+      ],
+      "recording": "Hooked On A Feeling",
+      "recordingMbid": "8bc9a05d-890d-4030-8595-78410745ba02",
+      "release": "Sånger För Livet 9 (Live I Globen)",
+      "score": 493435,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hooked On A Feeling"
     },
     {
       "postId": 50488,
@@ -40722,7 +40994,19 @@
       "id": 2260,
       "artist": "Kenny Loggins & Jo Dee Messina",
       "song": "Your mama don't dance",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kenny Loggins",
+      "artistMbids": [
+        "15042d2b-2d4c-4451-a96a-6f547642de13"
+      ],
+      "recording": "Your Mama Don’t Dance",
+      "recordingMbid": "70bbdae6-7cb1-419d-9158-0695e81ff804",
+      "release": "Outside From The Redwoods",
+      "score": 4521750,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Your Mama Don’t Dance"
     },
     {
       "postId": 49502,
@@ -42077,7 +42361,19 @@
       "id": 2335,
       "artist": "Frankie Valli & Four Seasons",
       "song": "December -63 (Oh what a night)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Frankie Valli",
+      "artistMbids": [
+        "3c714102-94d8-42f4-9005-fb8a75c2766d"
+      ],
+      "recording": "December ’63 (Oh What a Night)",
+      "recordingMbid": "eaab0276-1c71-4817-8273-73bfd6adfe14",
+      "release": "Simply the Best Party Hits",
+      "score": 5644839,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "December ’63 (Oh What a Night)"
     },
     {
       "postId": 48514,
@@ -42387,7 +42683,20 @@
       "id": 2353,
       "artist": "Santana & Chad Kroeger",
       "song": "Into the night",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Santana feat. Chad Kroeger",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "a59edb65-fae2-4344-b77a-5232516d4d7a"
+      ],
+      "recording": "Into the Night",
+      "recordingMbid": "5d53b703-8a93-4fb9-8b26-6b484d2a1139",
+      "release": "Into the Night",
+      "score": 2347925,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Into the Night"
     },
     {
       "postId": 52104,
@@ -43421,7 +43730,21 @@
       "id": 2409,
       "artist": "50 Cent & Justin Timberlake",
       "song": "Ayo technology",
-      "matched": false
+      "matched": true,
+      "artistCredit": "50 Cent feat. Justin Timberlake & Timbaland",
+      "artistMbids": [
+        "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
+        "596ffa74-3d08-44ef-b113-765d43d12738",
+        "daa09819-5da5-4c7a-8bef-eb372bb27ff1"
+      ],
+      "recording": "Ayo Technology",
+      "recordingMbid": "5f9fd972-c5d5-4ff8-8599-f5fd9b8526b9",
+      "release": "Curtis",
+      "score": 477216,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Ayo Technology"
     },
     {
       "postId": 48017,
@@ -47835,7 +48158,19 @@
       "id": 2645,
       "artist": "Lou Rawls & Sam Cooke",
       "song": "Bring it on home to me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lou Rawls",
+      "artistMbids": [
+        "c8bd802a-6e4a-41a4-95fa-2c1ee33f65a5"
+      ],
+      "recording": "Bring It on Home to Me",
+      "recordingMbid": "f9b4ff3a-1693-43d6-8591-ed873aee98cb",
+      "release": "I Can't Make It Alone: The Axelrod Years",
+      "score": 4784723,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Bring It on Home to Me"
     },
     {
       "postId": 50240,
@@ -49153,7 +49488,20 @@
       "id": 2719,
       "artist": "Rihanna & Ne-Yo",
       "song": "Hate that I love you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rihanna feat. Ne‐Yo",
+      "artistMbids": [
+        "73e5e69d-3554-40d8-8516-00cb38737a1c",
+        "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7"
+      ],
+      "recording": "Hate That I Love You",
+      "recordingMbid": "711992bd-dfc8-4463-b4c3-a5edb610ab12",
+      "release": "Good Girl Gone Bad",
+      "score": 471266,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hate That I Love You"
     },
     {
       "postId": 50906,
@@ -51262,7 +51610,21 @@
       "id": 2832,
       "artist": "Lady Gaga, Space Cowboy & Flo Rida",
       "song": "Starstruck",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lady Gaga feat. Space Cowboy and Flo Rida",
+      "artistMbids": [
+        "650e7db6-b795-4eb5-a702-5ea2fc46c848",
+        "92f29d03-1d89-42a6-9ea7-ed17bc5d6dc1",
+        "4593d49a-7f67-46ba-9ec0-126bd676286f"
+      ],
+      "recording": "Starstruck",
+      "recordingMbid": "52779acc-01f5-4314-9279-6903db38db53",
+      "release": "The Fame",
+      "score": 514994,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Starstruck"
     },
     {
       "postId": 52542,
@@ -51461,7 +51823,20 @@
       "id": 2843,
       "artist": "Gwen Stefani & Cee Lo",
       "song": "Sweet escape",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gwen Stefani feat. Akon",
+      "artistMbids": [
+        "2e41ae9c-afd2-4f20-8f1e-17281ce9b472",
+        "1138a764-2212-4d0a-b02d-0dc14df91e08"
+      ],
+      "recording": "Sweet Escape",
+      "recordingMbid": "2491442f-1691-4623-8641-b4f3d4671c88",
+      "release": "Dance Mania 2: The Ultimate Club Party",
+      "score": 5493996,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Sweet Escape"
     },
     {
       "postId": 50945,
@@ -52123,7 +52498,20 @@
       "id": 2879,
       "artist": "Isley Brothers & Ronald Isley (Mr Biggs)",
       "song": "What would you do",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Isley Brothers feat. The Pied Piper",
+      "artistMbids": [
+        "4a76400d-283f-492e-9754-18ef41755f81",
+        "31424ace-6e99-4322-8ef8-66dafa32cfac"
+      ],
+      "recording": "What Would You Do?",
+      "recordingMbid": "d8bfc0f9-e1f2-4d02-8ad9-34569bb226c7",
+      "release": "Body Kiss",
+      "score": 334548,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "What Would You Do?"
     },
     {
       "postId": 50312,
@@ -52824,7 +53212,20 @@
       "id": 2917,
       "artist": "Toby Keith & Sting",
       "song": "I'm so happy I can't stop crying",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Toby Keith feat. Sting",
+      "artistMbids": [
+        "2f951906-5629-4fef-a260-5033151c162a",
+        "7944ed53-2a58-4035-9b93-140a71e41c34"
+      ],
+      "recording": "I’m So Happy I Can’t Stop Crying",
+      "recordingMbid": "cbf259cc-490d-485e-ace7-87a082a16ef4",
+      "release": "Dream Walkin'",
+      "score": 175789,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I’m So Happy I Can’t Stop Crying"
     },
     {
       "postId": 53441,
@@ -52946,7 +53347,20 @@
       "id": 2924,
       "artist": "Usher & Young Jeezy",
       "song": "Love in this club",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Usher feat. Young Jeezy",
+      "artistMbids": [
+        "3414d446-735a-443c-931f-10634f57e5b9",
+        "dcad99e7-3c3e-4c78-bf8a-68203e17da48"
+      ],
+      "recording": "Love in This Club",
+      "recordingMbid": "f66afd75-9ede-4cd4-aa5f-b5db9d7dcf3b",
+      "release": "Here I Stand",
+      "score": 508866,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Love in This Club"
     },
     {
       "postId": 53257,
@@ -57442,7 +57856,20 @@
       "id": 3165,
       "artist": "Tom Jones & Cardigans",
       "song": "Burning down the house",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tom Jones with The Cardigans",
+      "artistMbids": [
+        "57c6f649-6cde-48a7-8114-2a200247601a",
+        "3e55d51d-687f-4a9d-af96-2fabccf802e5"
+      ],
+      "recording": "Burning Down the House",
+      "recordingMbid": "2a93defa-ffcc-4046-81b0-8a8a4c6b7d54",
+      "release": "Reload",
+      "score": 227196,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Burning Down the House"
     },
     {
       "postId": 49395,
@@ -57468,7 +57895,19 @@
       "id": 3167,
       "artist": "Enrique Iglesias & Lil' Wayne",
       "song": "Can you hear me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Enrique Iglesias",
+      "artistMbids": [
+        "35f866dc-c061-48ba-8157-cf2e0eac4857"
+      ],
+      "recording": "Can You Hear Me",
+      "recordingMbid": "c0d06f34-de3c-4b3b-9f65-12bba5b5f77e",
+      "release": "Insomniac",
+      "score": 509109,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Can You Hear Me"
     },
     {
       "postId": 49845,
@@ -58111,7 +58550,21 @@
       "id": 3202,
       "artist": "Dolly Parton & Alison Kraus",
       "song": "Just when I needed you most",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dolly Parton with Alison Krauss & John Sebastian",
+      "artistMbids": [
+        "1d543e07-d0d2-4834-a8db-d65c50c2a856",
+        "6b064ead-91a4-4ac8-8076-b1febe4f4aac",
+        "95f9b1a1-dc0c-4440-9cd3-225aaba246ee"
+      ],
+      "recording": "Just When I Needed You Most",
+      "recordingMbid": "d03e6c51-fd84-4174-8179-790fd39781f9",
+      "release": "Treasures",
+      "score": 1369401,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Just When I Needed You Most"
     },
     {
       "postId": 50166,
@@ -59020,7 +59473,20 @@
       "id": 3251,
       "artist": "Eddie Rabbitt & Crystal Gale",
       "song": "You and I",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eddie Rabbitt feat. Crystal Gayle",
+      "artistMbids": [
+        "486d04cf-355f-4afb-a694-a895918c45ac",
+        "cefd9d3d-9506-461c-972f-89b4cbade9da"
+      ],
+      "recording": "You and I",
+      "recordingMbid": "db7900f8-12e7-4f85-b677-ddfe26ad7e7b",
+      "release": "Radio Romance",
+      "score": 992,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "You and I"
     },
     {
       "postId": 48786,
@@ -61852,7 +62318,20 @@
       "id": 3405,
       "artist": "Alan Jackson & Jimmy Buffet",
       "song": "It's five o'clock somewhere",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alan Jackson and Jimmy Buffett",
+      "artistMbids": [
+        "7291957b-c463-4275-a41c-a104c9e2337f",
+        "16fdd9af-467f-47ce-bd29-3413b445b90f"
+      ],
+      "recording": "It’s Five O’Clock Somewhere",
+      "recordingMbid": "affe29da-9d02-4845-b7e5-ac0f611fc969",
+      "release": "It's Five O'Clock Somewhere",
+      "score": 3383107,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "It’s Five O’Clock Somewhere"
     },
     {
       "postId": 48813,
@@ -62798,7 +63277,19 @@
       "id": 3457,
       "artist": "Ozzy Osbourne & Lita Ford",
       "song": "Close my eyes forever",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ozzy Osbourne",
+      "artistMbids": [
+        "8aa5b65a-5b3c-4029-92bf-47a544356934"
+      ],
+      "recording": "Close My Eyes Forever",
+      "recordingMbid": "e4839615-de53-4661-ba17-e87abb24cefd",
+      "release": "No More Tears",
+      "score": 898894,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Close My Eyes Forever"
     },
     {
       "postId": 52158,
@@ -64568,7 +65059,19 @@
       "id": 3554,
       "artist": "Barry White & Tina Turner",
       "song": "In your wildest dreams",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Barry White",
+      "artistMbids": [
+        "b904d624-9e05-4398-8f4f-88fbcf022f79"
+      ],
+      "recording": "In Your Wildest Dreams",
+      "recordingMbid": "9b60642d-cc55-4577-847c-8635fd6eb2cf",
+      "release": "Greatest Hits",
+      "score": 4982558,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "In Your Wildest Dreams"
     },
     {
       "postId": 51678,
@@ -70222,7 +70725,20 @@
       "id": 3868,
       "artist": "Whitney Houston & Jermaine Jackson",
       "song": "If you say my eyes are beautiful",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Whitney Houston with Jermaine Jackson",
+      "artistMbids": [
+        "0307edfc-437c-4b48-8700-80680e66a228",
+        "ccbdc2ab-1055-44d5-8417-a6b4898bf91b"
+      ],
+      "recording": "If You Say My Eyes Are Beautiful",
+      "recordingMbid": "89c2e01c-ed63-4a7b-9260-2418d9f87371",
+      "release": "I Wanna Dance With Somebody (The Movie: Whitney New, Classic and Reimagined)",
+      "score": 4429195,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "If You Say My Eyes Are Beautiful"
     },
     {
       "postId": 52322,
@@ -70733,14 +71249,40 @@
       "id": 3896,
       "artist": "Bob Sinclair & Cutee B",
       "song": "Rock this party",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bob Sinclar & Cutee B",
+      "artistMbids": [
+        "f9ab44f1-7b19-4ecb-830c-403abcf36cd1",
+        "b53b6115-7ae9-4cf2-aabd-3177e8645d1b"
+      ],
+      "recording": "Rock This Party",
+      "recordingMbid": "15b5a6e7-5708-4467-beed-f2792cb6ec56",
+      "release": "Sun Factory 7",
+      "score": 4795243,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Rock This Party"
     },
     {
       "postId": 47857,
       "id": 3897,
       "artist": "Akon & Snoop Dogg",
       "song": "I wanna love you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Akon feat. Snoop Dogg",
+      "artistMbids": [
+        "1138a764-2212-4d0a-b02d-0dc14df91e08",
+        "f90e8b26-9e52-4669-a5c9-e28529c47894"
+      ],
+      "recording": "I Wanna Love You",
+      "recordingMbid": "6a76144a-a154-48ae-8f1c-739050d1bbc0",
+      "release": "Konvicted",
+      "score": 444060,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Wanna Love You"
     },
     {
       "postId": 53038,
@@ -71117,7 +71659,20 @@
       "id": 3918,
       "artist": "Brad Paisley & Alison Kraus",
       "song": "Whiskey lullaby",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Brad Paisley & Alison Krauss",
+      "artistMbids": [
+        "6cfd7ffc-824f-4219-8e27-4b9417700f44",
+        "6b064ead-91a4-4ac8-8076-b1febe4f4aac"
+      ],
+      "recording": "Whiskey Lullaby",
+      "recordingMbid": "9b808d74-a993-416a-bcff-de9e44b39fe9",
+      "release": "Mud on the Tires",
+      "score": 1741081,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Whiskey Lullaby"
     },
     {
       "postId": 52696,
@@ -71926,7 +72481,20 @@
       "id": 3963,
       "artist": "Shakira & Freshlyground",
       "song": "Waka waka (this time for Africa)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shakira feat. Freshlyground",
+      "artistMbids": [
+        "bf24ca37-25f4-4e34-9aec-460b94364cfc",
+        "fc318255-d27e-4e85-bfe5-46657eaef734"
+      ],
+      "recording": "Waka Waka (This Time for Africa)",
+      "recordingMbid": "76355f77-9737-430a-90cc-9f7f7d694e72",
+      "release": "Sale el sol",
+      "score": 590482,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Waka Waka (This Time for Africa)"
     },
     {
       "postId": 53215,
@@ -72308,7 +72876,19 @@
       "id": 3984,
       "artist": "Swedish House Mafia & John Martin",
       "song": "Save the world",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Swedish House Mafia",
+      "artistMbids": [
+        "99075985-0d80-4692-a15e-b16f78831792"
+      ],
+      "recording": "Save the World",
+      "recordingMbid": "b1048dcb-76bf-498f-ae97-2867e96bf79c",
+      "release": "In the Club, Vol. 3",
+      "score": 4825595,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Save the World"
     },
     {
       "postId": 52511,
@@ -73229,7 +73809,20 @@
       "id": 4035,
       "artist": "Brandy & Mase",
       "song": "Top of the world",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Brandy feat. Mase",
+      "artistMbids": [
+        "01e60eba-52df-4694-8f09-39f43abe54e9",
+        "76716b81-e361-427e-a931-19373388387d"
+      ],
+      "recording": "Top of the World",
+      "recordingMbid": "070f4dbc-6cdd-4e6b-bc2b-35590cad222d",
+      "release": "Never Say Never",
+      "score": 200020,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Top of the World"
     },
     {
       "postId": 53096,
@@ -73823,7 +74416,19 @@
       "id": 4068,
       "artist": "Bruno Mars & Travie McCoy",
       "song": "Billionaire",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bruno Mars",
+      "artistMbids": [
+        "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
+      ],
+      "recording": "Billionaire",
+      "recordingMbid": "906d0bc5-1ed7-4a63-bbc4-e35cb6b49ff9",
+      "release": "Club R&B 2",
+      "score": 4454904,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Billionaire"
     },
     {
       "postId": 53591,
@@ -74333,7 +74938,21 @@
       "id": 4096,
       "artist": "2 Pac feat. KC & Jo Jo",
       "song": "How do u want it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "2Pac feat. K‐Ci & JoJo",
+      "artistMbids": [
+        "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "23d1dfc6-0281-488a-8e32-ef7ddc279fbc"
+      ],
+      "recording": "How Do U Want It",
+      "recordingMbid": "53fc4524-0733-49f1-813b-52b64355a0f3",
+      "release": "All Eyez On Me",
+      "score": 149963,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo",
+      "trusted": true,
+      "title": "How Do U Want It"
     },
     {
       "postId": 47720,
@@ -76121,7 +76740,20 @@
       "id": 4194,
       "artist": "Justin Bieber & Jayden Smith",
       "song": "Never say never",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Bieber feat. Jaden Smith",
+      "artistMbids": [
+        "e0140a67-e4d1-4f13-8a01-364355bee46e",
+        "166cb987-3156-4166-b0d3-f1ad5a6c514c"
+      ],
+      "recording": "Never Say Never",
+      "recordingMbid": "52a8c592-13e9-4f47-9599-12c47ea0eab0",
+      "release": "Under the Mistletoe",
+      "score": 635112,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Never Say Never"
     },
     {
       "postId": 49900,
@@ -77748,7 +78380,19 @@
       "id": 4280,
       "artist": "Justin Bieber & Rascal Flatts",
       "song": "That should be me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Bieber",
+      "artistMbids": [
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "recording": "That Should Be Me",
+      "recordingMbid": "f1054d79-dcd6-4db0-9e2b-7d650dc51b28",
+      "release": "My World 2.0",
+      "score": 577857,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "That Should Be Me"
     },
     {
       "postId": 51129,
@@ -77954,7 +78598,19 @@
       "id": 4292,
       "artist": "Juanes & Colbie Caillat",
       "song": "Hoy me voy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Juanes",
+      "artistMbids": [
+        "8b0f05ce-354e-4121-9e0b-8b4732ea844f"
+      ],
+      "recording": "Hoy me voy",
+      "recordingMbid": "a1a46b05-c029-48bf-840b-9ac8bb7afa27",
+      "release": "La vida... es un ratico",
+      "score": 480312,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hoy me voy"
     },
     {
       "postId": 50830,
@@ -78629,7 +79285,20 @@
       "id": 4330,
       "artist": "Alan Jackson & George Strait",
       "song": "Designated drinker",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alan Jackson a duet with George Strait",
+      "artistMbids": [
+        "7291957b-c463-4275-a41c-a104c9e2337f",
+        "5ab2cf34-517e-48eb-b3a5-34e1cbcd600a"
+      ],
+      "recording": "Designated Drinker",
+      "recordingMbid": "fbb19b8f-6a1c-46c9-9705-bc21ae2d7e9c",
+      "release": "Drive",
+      "score": 1722766,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Designated Drinker"
     },
     {
       "postId": 47874,
@@ -78788,7 +79457,20 @@
       "id": 4339,
       "artist": "Alicia Keys & Beyonce",
       "song": "Put it in a love song",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alicia Keys featuring Beyoncé",
+      "artistMbids": [
+        "8ef1df30-ae4f-4dbd-9351-1a32b208a01e",
+        "859d0860-d480-4efd-970c-c05d5f1776b8"
+      ],
+      "recording": "Put It in a Love Song",
+      "recordingMbid": "82c1304f-efbb-4dd1-9dab-511a768ea686",
+      "release": "The Element of Freedom",
+      "score": 559722,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Put It in a Love Song"
     },
     {
       "postId": 47943,
@@ -80340,7 +81022,20 @@
       "id": 4423,
       "artist": "Britney Spears & Madonna",
       "song": "Me against the music",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Britney Spears featuring Madonna",
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76",
+        "79239441-bfd5-4981-a70c-55c3f15c1287"
+      ],
+      "recording": "Me Against the Music",
+      "recordingMbid": "2d509293-e4ef-4142-ad44-a4ddab4b350e",
+      "release": "In the Zone",
+      "score": 342564,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Me Against the Music"
     },
     {
       "postId": 48690,
@@ -81051,7 +81746,19 @@
       "id": 4461,
       "artist": "Justin Timberlake & Ciara",
       "song": "Love sex magic",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Timberlake",
+      "artistMbids": [
+        "596ffa74-3d08-44ef-b113-765d43d12738"
+      ],
+      "recording": "Love Sex Magic",
+      "recordingMbid": "e3ea8667-2be6-46cb-ac16-b1b153bcbfa1",
+      "release": "Suite 806",
+      "score": 5277867,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Love Sex Magic"
     },
     {
       "postId": 49021,
@@ -83427,7 +84134,21 @@
       "id": 4586,
       "artist": "Dolly Parton & Emmylou Harris",
       "song": "Wildflowers",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dolly Parton, Linda Ronstadt & Emmylou Harris",
+      "artistMbids": [
+        "1d543e07-d0d2-4834-a8db-d65c50c2a856",
+        "498f2581-be21-4eef-8756-fbb89d79b1c0",
+        "35ef61ca-43db-4772-ba27-0489e9ebcb69"
+      ],
+      "recording": "Wildflowers",
+      "recordingMbid": "cf3f2e44-e928-4069-899f-cc802b59db31",
+      "release": "Trio",
+      "score": 13963,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Wildflowers"
     },
     {
       "postId": 49481,
@@ -83624,7 +84345,20 @@
       "id": 4597,
       "artist": "Donna Summer & Brooklyn Dreams",
       "song": "Heaven knows",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Donna Summer with Brooklyn Dreams",
+      "artistMbids": [
+        "b60527cc-54f3-4bbe-a01b-dcf34c95ae14",
+        "35efa01e-f296-4dd0-8a85-29cb9dd6970b"
+      ],
+      "recording": "Heaven Knows",
+      "recordingMbid": "5e433b3f-dbe7-49f0-a57c-6b9d1d6f711f",
+      "release": "Heaven Knows",
+      "score": 3557025,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Heaven Knows"
     },
     {
       "postId": 49512,
@@ -83650,14 +84384,40 @@
       "id": 4599,
       "artist": "Dr Dre, Eminem & Skylar Grey",
       "song": "I need a doctor (explicit)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dr. Dre feat. Eminem & Skylar Grey",
+      "artistMbids": [
+        "5f6ab597-f57a-40da-be9e-adad48708203",
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "bd01c9d7-89dd-4cb4-9baa-a43bfa292bed"
+      ],
+      "recording": "I Need a Doctor",
+      "recordingMbid": "2c939a2e-040c-4488-a8f1-7f40d335bf9d",
+      "release": "I Need a Doctor",
+      "score": 2365333,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Need a Doctor"
     },
     {
       "postId": 49516,
       "id": 4600,
       "artist": "Dr Dre, Snoop Doggy Dog",
       "song": "Nuthin' but a 'G' thang",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dr. Dre",
+      "artistMbids": [
+        "5f6ab597-f57a-40da-be9e-adad48708203"
+      ],
+      "recording": "Nuthin’ but a “G” Thang",
+      "recordingMbid": "85fd26d3-c92f-40c1-8d9d-169ddc7ca1ab",
+      "release": "The Chronic",
+      "score": 76254,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Nuthin’ but a “G” Thang"
     },
     {
       "postId": 49552,
@@ -84156,7 +84916,20 @@
       "id": 4628,
       "artist": "Eternal & Bebe Winans",
       "song": "I wanna be the only one",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eternal feat. BeBe Winans",
+      "artistMbids": [
+        "7343056e-041e-4b28-a85a-58e8fb975136",
+        "8c86f18c-6703-473c-a1ca-482abd0cca27"
+      ],
+      "recording": "I Wanna Be the Only One",
+      "recordingMbid": "71f51ca6-2e29-4816-9cc7-842fc1c16dd5",
+      "release": "Before the Rain",
+      "score": 173791,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Wanna Be the Only One"
     },
     {
       "postId": 49884,
@@ -86202,7 +86975,20 @@
       "id": 4737,
       "artist": "Jason Mraz & Colbie Caillat",
       "song": "Lucky",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jason Mraz feat. Colbie Caillat",
+      "artistMbids": [
+        "82eb8936-7bf6-4577-8320-a2639465206d",
+        "efc8a006-d0c6-4a9b-8cb1-91ca770fa2b9"
+      ],
+      "recording": "Lucky",
+      "recordingMbid": "f68a7497-91aa-4d8a-88c8-abc0ba5b49f7",
+      "release": "We Sing. We Dance. We Steal Things.",
+      "score": 508310,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Lucky"
     },
     {
       "postId": 50598,
@@ -86384,7 +87170,19 @@
       "id": 4747,
       "artist": "Jay Z feat Pharrell",
       "song": "I know",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jay‐Z",
+      "artistMbids": [
+        "f82bcf78-5b69-4622-a5ef-73800768d9ac"
+      ],
+      "recording": "I Know",
+      "recordingMbid": "c5f440c7-43da-47e7-a9b6-9c91a106a894",
+      "release": "American Gangster",
+      "score": 481808,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Know"
     },
     {
       "postId": 50698,
@@ -86476,7 +87274,20 @@
       "id": 4753,
       "artist": "John Legend & Kanye West",
       "song": "Number one",
-      "matched": false
+      "matched": true,
+      "artistCredit": "John Legend feat. Kanye West",
+      "artistMbids": [
+        "75a72702-a5ef-4513-bca5-c5b944903546",
+        "164f0d73-1234-4e2c-8743-d77bf2191051"
+      ],
+      "recording": "Number One",
+      "recordingMbid": "754df21e-16ef-43e7-9a86-6ba15f897579",
+      "release": "Get Lifted",
+      "score": 372741,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Number One"
     },
     {
       "postId": 50773,
@@ -90281,7 +91092,20 @@
       "id": 4956,
       "artist": "Santana & Eagle-Eye Cherry",
       "song": "Wishing it was",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Santana featuring Eagle‐Eye Cherry",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "4a5777b3-f55b-437c-8b23-d9ee7791c7fc"
+      ],
+      "recording": "Wishing It Was",
+      "recordingMbid": "3f1750ef-6a9e-4703-92a5-643592aa22e3",
+      "release": "Supernatural",
+      "score": 224920,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Wishing It Was"
     },
     {
       "postId": 52688,
@@ -92119,7 +92943,19 @@
       "id": 5055,
       "artist": "Aerosmith And Run Dmc",
       "song": "Walk This Way",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Aerosmith",
+      "artistMbids": [
+        "3d2b98e5-556f-4451-a3ff-c50ea18d57cb"
+      ],
+      "recording": "Walk This Way",
+      "recordingMbid": "84c487bc-7614-4c8f-87ec-a5a6e6903e8c",
+      "release": "Toys in the Attic",
+      "score": 10515,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Walk This Way"
     },
     {
       "postId": 47928,
@@ -92297,7 +93133,20 @@
       "id": 5065,
       "artist": "Ariana Grande Ft. Zedd",
       "song": "Break Free",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ariana Grande featuring Zedd",
+      "artistMbids": [
+        "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "56c4b861-0922-4c3a-a9b9-3bfcb00f8274"
+      ],
+      "recording": "Break Free",
+      "recordingMbid": "c97fba6d-198d-4357-b5ce-83f6fb721596",
+      "release": "My Everything",
+      "score": 706461,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Break Free"
     },
     {
       "postId": 48069,
@@ -92380,7 +93229,20 @@
       "id": 5070,
       "artist": "Barbra Streisand And Celine Dion",
       "song": "Tell Him",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Barbra Streisand & Céline Dion",
+      "artistMbids": [
+        "56cd15a1-0d74-438b-8244-c96ffe1cae03",
+        "847e8a0c-cc20-4213-9e16-975515c2a926"
+      ],
+      "recording": "Tell Him",
+      "recordingMbid": "f8d8c8d9-7532-4c8f-8e60-97d04169a96f",
+      "release": "Let’s Talk About Love",
+      "score": 1734195,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Tell Him"
     },
     {
       "postId": 48187,
@@ -92833,7 +93695,19 @@
       "id": 5094,
       "artist": "Christina Aguilera And Luis Fonsi",
       "song": "Si No Te Hubiera Conocido",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Christina Aguilera",
+      "artistMbids": [
+        "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
+      ],
+      "recording": "Si No Te Hubiera Conocido",
+      "recordingMbid": "09f2825b-3502-4599-a055-af61d8c07c1e",
+      "release": "Mi Reflejo",
+      "score": 264118,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Si No Te Hubiera Conocido"
     },
     {
       "postId": 49005,
@@ -93242,7 +94116,20 @@
       "id": 5116,
       "artist": "Eminem And Lil Wayne",
       "song": "No Love (clean Version)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eminem feat. Lil Wayne",
+      "artistMbids": [
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "ac9a487a-d9d2-4f27-bb23-0f4686488345"
+      ],
+      "recording": "No Love",
+      "recordingMbid": "f33166a8-dc47-4e36-b972-1a128ea12708",
+      "release": "Recovery",
+      "score": 583599,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "No Love"
     },
     {
       "postId": 49800,
@@ -93287,7 +94174,21 @@
       "id": 5119,
       "artist": "Enrique Iglesias Feat. Sean Paul",
       "song": "Bailando",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Enrique Iglesias feat. Descemer Bueno & Gente de Zona",
+      "artistMbids": [
+        "35f866dc-c061-48ba-8157-cf2e0eac4857",
+        "cdfa25d4-b9fa-4e99-a163-18fddf7d514f",
+        "35e53195-f6e1-40bc-a3ae-62b1900ee199"
+      ],
+      "recording": "Bailando",
+      "recordingMbid": "1770e567-3d4e-4dd9-b3d0-704ec276f0e9",
+      "release": "Sex and Love",
+      "score": 698739,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Bailando"
     },
     {
       "postId": 49833,
@@ -94658,7 +95559,19 @@
       "id": 5194,
       "artist": "Lighthouse Family, The",
       "song": "High",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lighthouse Family",
+      "artistMbids": [
+        "3ebe18d1-dfb6-41eb-8447-4a7693f79d9a"
+      ],
+      "recording": "High",
+      "recordingMbid": "ab5d1724-45ce-4133-8b24-d2070740f25f",
+      "release": "Postcards From Heaven",
+      "score": 178637,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "High"
     },
     {
       "postId": 51243,
@@ -95675,7 +96588,20 @@
       "id": 5250,
       "artist": "Pink Feat. Lily Allen",
       "song": "True Love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "P!nk featuring Lily Rose Cooper",
+      "artistMbids": [
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+        "6e0c7c0e-cba5-4c2c-a652-38f71ef5785d"
+      ],
+      "recording": "True Love",
+      "recordingMbid": "68256ed3-68e9-42f5-8f5d-6af458e92473",
+      "release": "The Truth About Love",
+      "score": 651746,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "True Love"
     },
     {
       "postId": 52171,
@@ -95939,7 +96865,19 @@
       "id": 5264,
       "artist": "Rihanna Feat Kanye West And Paul Mccartney",
       "song": "Four Five Seconds",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rihanna",
+      "artistMbids": [
+        "73e5e69d-3554-40d8-8516-00cb38737a1c"
+      ],
+      "recording": "FourFiveSeconds",
+      "recordingMbid": "5d2f60da-95a5-47dd-a436-06f064e45227",
+      "release": "YE LIVE IN MEXICO (Part 1)",
+      "score": 1698361,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "FourFiveSeconds"
     },
     {
       "postId": 52456,
@@ -97220,14 +98158,38 @@
       "id": 5334,
       "artist": "Avicii Feat. Salem Al Fakir",
       "song": "You Make Me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Avicii",
+      "artistMbids": [
+        "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5"
+      ],
+      "recording": "You Make Me",
+      "recordingMbid": "237a8ea1-3c6d-4fb1-86ac-085234d022ac",
+      "release": "True",
+      "score": 681123,
+      "how": "artist-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "You Make Me"
     },
     {
       "postId": 48101,
       "id": 5335,
       "artist": "Avicii Ft. Robbie Williams",
       "song": "The Days",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Avicii",
+      "artistMbids": [
+        "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5"
+      ],
+      "recording": "The Days",
+      "recordingMbid": "14c0942d-e311-4a6a-9361-136118521da5",
+      "release": "Stories",
+      "score": 726568,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "The Days"
     },
     {
       "postId": 48335,
@@ -97531,7 +98493,21 @@
       "id": 5351,
       "artist": "Dr Dre And Eminem And Skylar Grey",
       "song": "I Need A Doctor",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dr. Dre feat. Eminem & Skylar Grey",
+      "artistMbids": [
+        "5f6ab597-f57a-40da-be9e-adad48708203",
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "bd01c9d7-89dd-4cb4-9baa-a43bfa292bed"
+      ],
+      "recording": "I Need a Doctor",
+      "recordingMbid": "2c939a2e-040c-4488-a8f1-7f40d335bf9d",
+      "release": "I Need a Doctor",
+      "score": 2365333,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "I Need a Doctor"
     },
     {
       "postId": 49523,
@@ -97785,7 +98761,20 @@
       "id": 5365,
       "artist": "Ed Sheeran feat. Rudimental",
       "song": "Bloodstream",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ed Sheeran & Rudimental",
+      "artistMbids": [
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "b09ced80-aa65-43c1-9aa7-58b1e982eada"
+      ],
+      "recording": "Bloodstream",
+      "recordingMbid": "7ac9da85-2b28-4891-9792-6eaa7e14a6ae",
+      "release": "We the Generation",
+      "score": 589610,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Bloodstream"
     },
     {
       "postId": 49787,
@@ -98161,7 +99150,20 @@
       "id": 5386,
       "artist": "James Morrison And Nelly Furtado",
       "song": "Broken Strings",
-      "matched": false
+      "matched": true,
+      "artistCredit": "James Morrison feat. Nelly Furtado",
+      "artistMbids": [
+        "88a8d8a9-7c9b-4f7b-8700-7f0f7a503688",
+        "13655113-cd16-4b43-9dca-cadbbf26ee05"
+      ],
+      "recording": "Broken Strings",
+      "recordingMbid": "a57d7275-3724-4259-9593-a433fe4d8b3f",
+      "release": "Songs for You, Truths for Me",
+      "score": 516831,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Broken Strings"
     },
     {
       "postId": 50584,
@@ -99149,7 +100151,19 @@
       "id": 5442,
       "artist": "Swedish House Mafia And Pharrell",
       "song": "One",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Swedish House Mafia",
+      "artistMbids": [
+        "99075985-0d80-4692-a15e-b16f78831792"
+      ],
+      "recording": "One",
+      "recordingMbid": "0637055f-84ec-4634-97e6-410192cd4c4e",
+      "release": "One (Your Name)",
+      "score": 2449814,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "One"
     },
     {
       "postId": 53070,
@@ -99897,7 +100911,20 @@
       "id": 5483,
       "artist": "Demi Lovato ft Cher Lloyd",
       "song": "Really dont care",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Demi Lovato featuring Cher Lloyd",
+      "artistMbids": [
+        "faf4cefb-036c-4c88-b93a-5b03dd0a0e6b",
+        "48fbfb0b-92ee-45eb-99c2-0bde4c05962e"
+      ],
+      "recording": "Really Don’t Care",
+      "recordingMbid": "d32bcf1d-e6e5-4cfb-adf8-2f74bfa9b12f",
+      "release": "Demi",
+      "score": 674577,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Really Don’t Care"
     },
     {
       "postId": 49434,
@@ -100425,7 +101452,20 @@
       "id": 5514,
       "artist": "Selena Gomez ft ASAP Rocky",
       "song": "Good for you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Selena Gomez f. A$AP Rocky",
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3",
+        "25b7b584-d952-4662-a8b9-dd8cdfbfeb64"
+      ],
+      "recording": "Good for You",
+      "recordingMbid": "2dd146c9-85f7-48ec-9973-af1f7c6534ad",
+      "release": "Revival",
+      "score": 733344,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Good for You"
     },
     {
       "postId": 53180,
@@ -100546,7 +101586,20 @@
       "id": 5522,
       "artist": "Selena Gomez Ft. Gucci Mane",
       "song": "Fetish",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Selena Gomez feat. Gucci Mane",
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3",
+        "36494952-f434-45d8-a958-8b4acdbcf8a8"
+      ],
+      "recording": "Fetish",
+      "recordingMbid": "55903ac5-73df-4c4e-870a-c2b160c9b102",
+      "release": "Rare",
+      "score": 821635,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Fetish"
     },
     {
       "postId": 53100,
@@ -100598,7 +101651,20 @@
       "id": 5526,
       "artist": "Selena Gomez Ft Marshmello",
       "song": "Wolves",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Selena Gomez × Marshmello",
+      "artistMbids": [
+        "e4bc69e2-a064-4f93-ada1-f7f209cc1cc3",
+        "301b45a4-b8b9-410e-8344-4b4eaf96691a"
+      ],
+      "recording": "Wolves",
+      "recordingMbid": "ff67fcb7-365a-4164-87e9-ef7768767528",
+      "release": "Rare",
+      "score": 821635,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Wolves"
     },
     {
       "postId": 48692,
@@ -101358,7 +102424,20 @@
       "id": 5571,
       "artist": "The Script ft Will i am",
       "song": "Hall of fame",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Script featuring will.i.am",
+      "artistMbids": [
+        "4c98aa1b-34eb-4336-987f-5e50aa059c00",
+        "d574c9bd-46f6-440a-8d6a-8412a283eeb1"
+      ],
+      "recording": "Hall of Fame",
+      "recordingMbid": "395bd5a1-79cc-4e04-8869-ca9eabc78d09",
+      "release": "#3",
+      "score": 651337,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hall of Fame"
     },
     {
       "postId": 53170,
@@ -102025,7 +103104,21 @@
       "id": 5608,
       "artist": "Ed Sheeran ft Chris Stapleton",
       "song": "Blow",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ed Sheeran, Chris Stapleton & Bruno Mars",
+      "artistMbids": [
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "71d58182-aa37-4c04-b21a-efe46ea0f221",
+        "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
+      ],
+      "recording": "BLOW",
+      "recordingMbid": "8d815dff-26a2-4558-8c80-dbd700e53b6d",
+      "release": "No.6 Collaborations Project",
+      "score": 811894,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "BLOW"
     },
     {
       "postId": 50879,
@@ -102839,7 +103932,21 @@
       "id": 5655,
       "artist": "Tiesto ft Rita Ora",
       "song": "Ritual",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tiësto · Jonas Blue · Rita Ora",
+      "artistMbids": [
+        "aabb1d9f-be12-45b3-a84d-a1fc3e8181fd",
+        "17678771-5799-4017-851a-319f25b6948d",
+        "c9dd033c-0270-463c-b3ec-f4b7712486fe"
+      ],
+      "recording": "Ritual",
+      "recordingMbid": "14176f80-21ec-452d-a71a-ff648be17c26",
+      "release": "The London Sessions",
+      "score": 1410611,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Ritual"
     },
     {
       "postId": 50927,
@@ -104017,7 +105124,19 @@
       "id": 5726,
       "artist": "Bruno Mars ft Cardi B",
       "song": "Finesse",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bruno Mars",
+      "artistMbids": [
+        "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
+      ],
+      "recording": "Finesse",
+      "recordingMbid": "159c9d87-a6f9-4722-87b6-20c307b5e0be",
+      "release": "XXIVK Magic",
+      "score": 758068,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Finesse"
     },
     {
       "postId": 49526,
@@ -104430,7 +105549,20 @@
       "id": 5750,
       "artist": "ariana grande",
       "song": "Almost is never enough",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ariana Grande with Nathan Sykes from The Wanted",
+      "artistMbids": [
+        "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "292e4a04-ed9b-4963-8075-0576f1dc3487"
+      ],
+      "recording": "Almost Is Never Enough",
+      "recordingMbid": "3fc835ca-79a2-401e-9f83-84a17573fd9a",
+      "release": "Yours Truly",
+      "score": 680388,
+      "how": "artist-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Almost Is Never Enough"
     },
     {
       "postId": 50021,
@@ -104616,7 +105748,20 @@
       "id": 5761,
       "artist": "Anne-Marie ft Doja Cat",
       "song": "To be young",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Anne‐Marie feat. Doja Cat",
+      "artistMbids": [
+        "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
+        "5df62a88-cac9-490a-b62c-c7c88f4020f4"
+      ],
+      "recording": "To Be Young",
+      "recordingMbid": "9195898d-6f0e-44b7-903d-e639228618c7",
+      "release": "Therapy",
+      "score": 839969,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "To Be Young"
     },
     {
       "postId": 48339,
@@ -104866,7 +106011,20 @@
       "id": 5776,
       "artist": "Doja Cat ft Gucci mane",
       "song": "Like that",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Doja Cat feat. Gucci Mane",
+      "artistMbids": [
+        "5df62a88-cac9-490a-b62c-c7c88f4020f4",
+        "36494952-f434-45d8-a958-8b4acdbcf8a8"
+      ],
+      "recording": "Like That",
+      "recordingMbid": "6226845f-d2d3-46af-91db-251baf777ed1",
+      "release": "Hot Pink (Japan version)",
+      "score": 830726,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Like That"
     },
     {
       "postId": 49542,
@@ -105076,7 +106234,20 @@
       "id": 5788,
       "artist": "Justin Bieber ft Chance the rapper",
       "song": "Holy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Justin Bieber feat. Chance the Rapper",
+      "artistMbids": [
+        "e0140a67-e4d1-4f13-8a01-364355bee46e",
+        "373a4c98-a46b-48e4-86ec-f6ca65b4f438"
+      ],
+      "recording": "Holy",
+      "recordingMbid": "abd1a019-255a-4fe6-8608-aa6cd1f6dd2a",
+      "release": "Justice",
+      "score": 836620,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Holy"
     },
     {
       "postId": 50964,
@@ -105123,7 +106294,20 @@
       "id": 5791,
       "artist": "Lady Gaga ft Ariana Grande",
       "song": "Rain on me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lady Gaga with Ariana Grande",
+      "artistMbids": [
+        "650e7db6-b795-4eb5-a702-5ea2fc46c848",
+        "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387"
+      ],
+      "recording": "Rain on Me",
+      "recordingMbid": "a0eb8c91-e3ce-4fef-a9d7-3d03753c6ece",
+      "release": "Chromatica",
+      "score": 825947,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Rain on Me"
     },
     {
       "postId": 51540,
@@ -105156,7 +106340,20 @@
       "id": 5794,
       "artist": "Nelly ft Florida georgia line",
       "song": "Lil bit",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Nelly feat. Florida Georgia Line",
+      "artistMbids": [
+        "811900b2-68fc-4d41-8bad-69b7a1f4d628",
+        "c16817df-0160-490d-a437-c128cbca9218"
+      ],
+      "recording": "Lil Bit",
+      "recordingMbid": "d4b69eee-e3a8-4ed5-9db0-ba909eaac30f",
+      "release": "Heartland",
+      "score": 1478781,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Lil Bit"
     },
     {
       "postId": 51998,
@@ -105434,7 +106631,20 @@
       "id": 5809,
       "artist": "Shawn Mendes ft Justin Bieber",
       "song": "Monster",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shawn Mendes & Justin Bieber",
+      "artistMbids": [
+        "b7d92248-97e3-4450-8057-6fe06738f735",
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "recording": "Monster",
+      "recordingMbid": "693c3127-ba40-415c-9326-c450d3bdc844",
+      "release": "Wonder",
+      "score": 831634,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Monster"
     },
     {
       "postId": 51238,
@@ -105615,7 +106825,20 @@
       "id": 5821,
       "artist": "Tate Mcrae ft Khalid",
       "song": "Working",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tate McRae × Khalid",
+      "artistMbids": [
+        "f9133869-f87c-459c-9aa7-2f176cda7e06",
+        "28737730-ec70-4da5-89c5-77ac13c5c34d"
+      ],
+      "recording": "working",
+      "recordingMbid": "1511b44d-79ea-4f3e-917f-3e6588b4b34b",
+      "release": "working",
+      "score": 2881781,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "working"
     },
     {
       "postId": 51942,
@@ -106419,14 +107642,40 @@
       "id": 5867,
       "artist": "Elton John ft Britney Spears",
       "song": "Hold me closer",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Elton John & Britney Spears",
+      "artistMbids": [
+        "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "recording": "Hold Me Closer",
+      "recordingMbid": "a6c97509-320e-4be3-b5ce-676dee47ef23",
+      "release": "The Lockdown Sessions",
+      "score": 1487178,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Hold Me Closer"
     },
     {
       "postId": 49712,
       "id": 5868,
       "artist": "Elton John ft Dua Lipa",
       "song": "Cold heart (pnau remix)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Elton John, Dua Lipa",
+      "artistMbids": [
+        "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "6f1a58bf-9b1b-49cf-a44a-6cefad7ae04f"
+      ],
+      "recording": "Cold Heart (PNAU remix)",
+      "recordingMbid": "65c3725c-3a34-41b1-99da-dff0ba2b388c",
+      "release": "The Lockdown Sessions",
+      "score": 842414,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "Cold Heart"
     },
     {
       "postId": 50023,
@@ -106554,7 +107803,21 @@
       "id": 5876,
       "artist": "Ed Sheeran ft Chris Stapleton",
       "song": "Blow",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ed Sheeran, Chris Stapleton & Bruno Mars",
+      "artistMbids": [
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "71d58182-aa37-4c04-b21a-efe46ea0f221",
+        "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
+      ],
+      "recording": "BLOW",
+      "recordingMbid": "8d815dff-26a2-4558-8c80-dbd700e53b6d",
+      "release": "No.6 Collaborations Project",
+      "score": 811894,
+      "how": "lead-scoped",
+      "rewrites": [],
+      "trusted": true,
+      "title": "BLOW"
     },
     {
       "postId": 50987,
