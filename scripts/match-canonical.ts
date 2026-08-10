@@ -100,6 +100,19 @@ function titleToUse(recording: string): string {
 
 const LEADING_ARTICLE = /^(the|a|an)\s+/i;
 
+/**
+ * Where the venue joins several artists into one string. The whole string is then nobody: it
+ * matches no key, and it has no other songs to be identified from, so `2 Pac feat. KC & Jo Jo`
+ * is unreachable while `2 Pac` is not. Splitting on the first join word gives the lead, which
+ * is enough to scope a search for the title.
+ */
+const JOIN = /\s+(?:feat\.?|ft\.?|featuring|with|duet with|med|vs\.?|versus|and|x)\s+|\s*[&,+/]\s*/i;
+
+function leadArtist(artist: string): string | undefined {
+    const lead = artist.split(JOIN)[0]?.trim();
+    return lead !== undefined && lead.length > 0 && lead !== artist.trim() ? lead : undefined;
+}
+
 interface Form {
     value: string;
     rewrites: Rewrite[];
@@ -181,11 +194,11 @@ function keysFor(artist: string, title: string): { key: string; rewrites: Rewrit
  * variant, and anything else may be a coincidence — `Secrets` reaches Madonna's
  * `Secret (Some Bizarre mix)` that way.
  */
-const HOWS = ["exact", "version", "spelling", "artist-scoped", "near", "loose"] as const;
+const HOWS = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "near", "loose"] as const;
 type How = (typeof HOWS)[number];
 
 /** All but `loose`, which is the bucket for matches that could be coincidence. */
-const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "near"];
+const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "near"];
 
 /**
  * Whether two keys are within `limit` edits of each other, abandoning the calculation as
@@ -521,20 +534,26 @@ async function main(): Promise<void> {
     for (const song of catalogue.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
-        const set = mbidsByArtist.get(song.artist) ?? new Set<string>();
+        const key = combinedLookup(song.artist);
+        const set = mbidsByArtist.get(key) ?? new Set<string>();
         for (const mbid of match.artistMbids) set.add(mbid);
-        mbidsByArtist.set(song.artist, set);
+        mbidsByArtist.set(key, set);
     }
 
-    const byTitle = new Map<string, { postId: number; mbids: Set<string> }[]>();
+    const byTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
     for (const song of catalogue.songs) {
         if (best.has(song.postId)) continue;
-        const mbids = mbidsByArtist.get(song.artist);
+        // The whole artist string first, then its lead. 111 of the misses are a collaboration
+        // the venue wrote as one string whose lead we have already identified elsewhere.
+        const own = mbidsByArtist.get(combinedLookup(song.artist));
+        const lead = leadArtist(song.artist);
+        const viaLead = own === undefined || own.size === 0;
+        const mbids = viaLead ? (lead === undefined ? undefined : mbidsByArtist.get(combinedLookup(lead))) : own;
         if (mbids === undefined || mbids.size === 0) continue;
         for (const title of new Set([song.song, withoutAnnotation(song.song)])) {
             const key = combinedLookup(title);
             if (key.length === 0) continue;
-            const entry = { postId: song.postId, mbids };
+            const entry = { postId: song.postId, mbids, viaLead };
             const existing = byTitle.get(key);
             if (existing === undefined) byTitle.set(key, [entry]);
             else existing.push(entry);
@@ -555,8 +574,16 @@ async function main(): Promise<void> {
                     // The title has to be the whole of the row's title, not a fragment of
                     // it, or `Stay` would match everything ending in that word.
                     if (combinedLookup(row.recording) !== titleKey) continue;
-                    if (!row.artistMbids.some((mbid) => entry.mbids.has(mbid))) continue;
-                    consider({ postId: entry.postId, rank: 0, rewrites: [] }, "artist-scoped", row);
+                    // Scoping by a lead means the lead has to be the lead. Merely appearing in
+                    // the credit is how `Peabo Bryson & Regina Bell – A whole new world` lands
+                    // on a Koda Kumi cover that features him.
+                    const credited = entry.viaLead ? row.artistMbids.slice(0, 1) : row.artistMbids;
+                    if (!credited.some((mbid) => entry.mbids.has(mbid))) continue;
+                    consider(
+                        { postId: entry.postId, rank: 0, rewrites: [] },
+                        entry.viaLead ? "lead-scoped" : "artist-scoped",
+                        row,
+                    );
                 }
             }
         });
