@@ -41,11 +41,15 @@ development.
 
 ```
 /
+├── data/
+│   └── songs.json          # scraped catalogue
 ├── prisma/
 │   └── schema.prisma       # kkaraoke table
 ├── prisma.config.ts        # connection URL for the Prisma CLI
 ├── public/
 │   └── favicon.svg
+├── scripts/
+│   └── fetch-songs.ts      # scrapes the catalogue from kkaraoke.se
 ├── src/
 │   ├── db/
 │   │   └── songs.ts        # Prisma queries
@@ -65,15 +69,16 @@ Astro turns each file in `src/pages/` into a route based on its filename.
 
 All commands are run from the root of the project:
 
-| Command        | Action                                                |
-| :------------- | :---------------------------------------------------- |
-| `pnpm install` | Installs dependencies and generates the Prisma client |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`           |
-| `pnpm build`   | Builds the production site to `./dist/`               |
-| `pnpm preview` | Previews the build locally, before deploying          |
-| `pnpm check`   | Type-checks the project with `astro check`            |
-| `pnpm format`  | Formats the project with Prettier                     |
-| `pnpm astro`   | Runs CLI commands like `astro add`, `astro sync`      |
+| Command            | Action                                                |
+| :----------------- | :---------------------------------------------------- |
+| `pnpm install`     | Installs dependencies and generates the Prisma client |
+| `pnpm dev`         | Starts local dev server at `localhost:4321`           |
+| `pnpm build`       | Builds the production site to `./dist/`               |
+| `pnpm preview`     | Previews the build locally, before deploying          |
+| `pnpm check`       | Type-checks the project with `astro check`            |
+| `pnpm format`      | Formats the project with Prettier                     |
+| `pnpm astro`       | Runs CLI commands like `astro add`, `astro sync`      |
+| `pnpm fetch:songs` | Re-scrapes `data/songs.json` from kkaraoke.se         |
 
 TypeScript is held at 6.x on purpose. `astro check` goes through the Astro language server, which needs TypeScript's
 programmatic compiler API, and the native compiler shipped in 7.0 does not expose it yet. Upgrading TypeScript to 7
@@ -90,6 +95,30 @@ The connection URL lives in two places for two different consumers. The applicat
 passes it to the `@prisma/adapter-pg` driver adapter, which Prisma 7 requires in place of the old Rust query engine.
 `prisma.config.ts` supplies the same URL to the Prisma CLI, because Prisma 7 no longer accepts `url` in the datasource
 block of `schema.prisma`. Both read `process.env` directly, so nothing in the project loads an env file of its own.
+
+## Fetching the catalogue
+
+`data/songs.json` is scraped from [the venue's song list](https://www.kkaraoke.se/latar/) by `pnpm fetch:songs`. It is
+committed, so a refresh shows up as a reviewable diff:
+
+```shell
+pnpm fetch:songs
+git diff --stat data/songs.json
+```
+
+The source has no API. It is a WordPress page whose JetEngine listing widget re-renders all ~450 KB of HTML for every
+page of results, so the script walks the pages and lifts each row out of the markup. Two details make that work:
+
+- The page renders the same catalogue twice, once at 10 rows per page and once at 50. The `jsf=jet-engine/default` query
+  parameter aims `pagenum` at the 50-row listing, which is why the script uses that one.
+- Every row is three Elementor heading widgets that are only distinguishable by the element id in their class, and their
+  order in the markup is not the order the columns appear in on screen. The script matches on those ids.
+
+Both are details of how the page happens to be built today, so the script asserts each of them and every field it reads,
+and aborts rather than writing a partial or empty catalogue if the page changes shape. `--pages <n>` limits the walk for
+a quick check, and `--delay <ms>` (1 second by default) spaces out the requests.
+
+Nothing consumes `data/songs.json` yet; the site still reads the song list from PostgreSQL.
 
 ## Styling
 
