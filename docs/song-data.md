@@ -680,16 +680,22 @@ Done, and live on the site:
 5. **Resolve each artist string once**, from its solo matches, and apply the result to that string's songs whether
    or not they matched individually. This is what keeps one act under one spelling, and what turns a namesake into
    a flag instead of a correction.
-
-6. **Reach a collaboration through its lead**, where the venue wrote several artists into one string. 95 songs.
+6. **Reach a collaboration through its lead**, where the venue wrote several artists into one string. 95 songs, and
+   it corrects the venue inside the collaboration too: `Wyclef Sean` is Wyclef Jean.
 7. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
    confirmed and applied; the 6 that were not changed nothing.
 
 That places 5589 of 5915 songs: 4098 corrected titles, 1383 corrected artist names, 4757 with genres, 5436 dated.
 
-Still to do: 7. Work the review queue in `data/resolved.json`, biggest blast radius first, into `data/overrides.json`. 8. Works and composers, for the songs where the writer matters more than the performer. 9. Artist pages, which are the reason for all of the above. `data/resolved.json` already carries each
-collaboration's artists separately, with their ids, so the page has what it needs to link them one by one; the
-`artist` field beside it is the release's credit line, kept because `feat.` tells a guest apart from a duet.
+Still to do:
+
+8. Work [`data/review.md`](../data/review.md), biggest group first, into `data/proposals.json` where the dump can
+   confirm a guess and into `data/overrides.json` where it cannot.
+9. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
+   phrase rather than by parsing the flattened credit line the dump provides.
+10. Works and composers, for the songs where the writer matters more than the performer.
+11. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
+    individually, with their ids, so the page has what it needs to link them one by one.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.
