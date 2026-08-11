@@ -19,11 +19,12 @@ able to say so.
 
 ## Three layers, and who is allowed to write to them
 
-| File                  | Written by              | Contents                                                          |
-| :-------------------- | :---------------------- | :---------------------------------------------------------------- |
-| `data/songs.json`     | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
-| `data/resolved.json`  | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
-| `data/overrides.json` | humans only             | Review decisions and hand corrections. No script ever writes it.  |
+| File                        | Written by              | Contents                                                          |
+| :-------------------------- | :---------------------- | :---------------------------------------------------------------- |
+| `data/songs.json`           | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
+| `data/resolved.json`        | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
+| `data/overrides.json`       | humans only             | Review decisions and hand corrections. No script ever writes it.  |
+| `data/overrides-review.md`  | `pnpm build:resolved`   | Venue vs override side-by-side. Regenerable; do not edit.         |
 
 The site composes the three, with overrides winning. Keeping the machine-written and human-written files apart is
 the whole point: a re-scrape or a re-run must never be able to destroy a review decision. Raw API responses are

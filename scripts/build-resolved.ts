@@ -217,6 +217,7 @@ async function main(): Promise<void> {
             overrides: { type: "string", default: "data/overrides.json" },
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
+            "overrides-review": { type: "string", default: "data/overrides-review.md" },
         },
     });
 
@@ -229,10 +230,11 @@ async function main(): Promise<void> {
     // Overrides are hand decisions that already settled a song — category buckets with no
     // performer, spelling the dump cannot confirm, and so on. They must not reappear in the
     // review queue just because the matcher has nothing to match.
-    const overrideFile = await readJson<{ overrides: { postId: number }[] }>(values.overrides);
-    const overridden = new Set((overrideFile?.overrides ?? []).map((o) => o.postId));
-    if (overrideFile !== undefined && overridden.size > 0) {
-        console.log(`${overridden.size} songs already settled in overrides; skipping them in the review queue`);
+    const overrideFile = await readJson<{ overrides: OverrideRecord[] }>(values.overrides);
+    const overrides = overrideFile?.overrides ?? [];
+    const overridden = new Set(overrides.map((o) => o.postId));
+    if (overrides.length > 0) {
+        console.log(`${overrides.length} songs already settled in overrides; skipping them in the review queue`);
     }
     // Enrichment is optional so that the titles can be applied before the artist lookups,
     // which take an hour, have finished.
@@ -519,6 +521,23 @@ async function main(): Promise<void> {
     console.log(`Wrote ${values.out}`);
     await writeFile(values.queue, reviewQueue(review), "utf8");
     console.log(`Wrote ${values.queue}`);
+
+    const byPostId = new Map(matches.songs.map((song) => [song.postId, song]));
+    const overridesReviewPath = values["overrides-review"];
+    await writeFile(overridesReviewPath, overridesReview(overrides, byPostId), "utf8");
+    console.log(`Wrote ${overridesReviewPath}`);
+}
+
+/** A hand correction from `data/overrides.json`. */
+interface OverrideRecord {
+    postId: number;
+    artist?: string;
+    sortAs?: string;
+    title?: string;
+    from?: string;
+    category?: string;
+    language?: string;
+    why?: string;
 }
 
 interface ReviewEntry {
@@ -593,6 +612,54 @@ function reviewQueue(review: ReviewEntry[]): string {
             lines.push("");
         }
     }
+    return `${lines.join("\n").trimEnd()}\n`;
+}
+
+/**
+ * Side-by-side of what the venue filed and what the override decided, so a human can review
+ * hand corrections without diffing JSON against the scrape.
+ */
+function overridesReview(
+    overrides: OverrideRecord[],
+    byPostId: Map<number, MatchRecord>,
+): string {
+    const cell = (value: string): string => value.replace(/\|/g, "\\|").replace(/\n/g, " ");
+    /** Empty string is a deliberate omit; missing field means “leave the venue's”. */
+    const shown = (value: string | undefined, fallback: string): string =>
+        value === undefined ? fallback : value === "" ? "*(empty)*" : value;
+
+    const lines = [
+        "# Override review",
+        "",
+        `${overrides.length} songs, written by \`pnpm build:resolved\` from \`data/overrides.json\` and`,
+        "the venue scrape. Regenerable, so do not edit it — change the override instead.",
+        "",
+        "Each row is what the venue had, then what we show after the override. An empty artist",
+        "means omit a category label rather than invent a performer.",
+        "",
+        "| id | venue artist | venue title | → artist | → title | category | why | postId |",
+        "| -: | --- | --- | --- | --- | --- | --- | -: |",
+    ];
+
+    const rows = [...overrides].sort((a, b) => {
+        const left = byPostId.get(a.postId);
+        const right = byPostId.get(b.postId);
+        return (left?.id ?? a.postId) - (right?.id ?? b.postId);
+    });
+
+    for (const override of rows) {
+        const venue = byPostId.get(override.postId);
+        if (venue === undefined) {
+            lines.push(
+                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+            );
+            continue;
+        }
+        lines.push(
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+        );
+    }
+
     return `${lines.join("\n").trimEnd()}\n`;
 }
 
