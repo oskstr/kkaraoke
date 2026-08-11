@@ -638,7 +638,8 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
   `language: "ita"` / `"fin"`.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
-`data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
+`data/overrides.json` stays the place for anything the dump cannot confirm but a human (or an
+open-web check) knows — including real commercial tracks MusicBrainz simply lacks or keys oddly.
 
 ## A collaboration is its artists, not a band with a long name
 
@@ -742,8 +743,11 @@ Still to do:
 
 9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — into
    `data/proposals.json` where the dump can confirm a real artist, and into `data/overrides.json`
-   where it cannot. Traditional buckets (`Julsång` and the like) already use overrides with a
-   `category` and an omitted artist; do not re-propose cover singers for them.
+   where it cannot. **Absence from the dump is not absence from the world:** confirm leftovers on
+   the open web (Wikipedia, press, Spotify, Discogs, …) before treating them as unresolvable.
+   `Det är bara vi` (Carola, 2010 royal wedding) and `walking proud` (Ayumi Hamasaki) are real and
+   live in overrides for exactly that reason. Traditional buckets (`Julsång` and the like) already
+   use overrides with a `category` and an omitted artist; do not re-propose cover singers for them.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
 11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the

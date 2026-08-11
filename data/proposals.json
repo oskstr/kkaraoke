@@ -2526,12 +2526,6 @@
             "why": "Nas hit; venue wrongly credited Luther"
         },
         {
-            "postId": 48782,
-            "artist": "Carola Häggkvist",
-            "title": "Det är bara vi",
-            "why": "Try full Carola name"
-        },
-        {
             "postId": 50082,
             "artist": "Frank Marino",
             "title": "I’m a King Bee / Excerpt From ’Back Door Man’ (live)",
@@ -2572,13 +2566,6 @@
             "artist": "Son of a Plumber",
             "title": "Jo-Anna Says",
             "why": "Per Gessle project; venue filed C'mon/Jo-Anna as medley"
-        },
-        {
-            "postId": 48108,
-            "artist": "浜崎あゆみ",
-            "title": "walking proud",
-            "language": "jpn",
-            "why": "Canonical MB artist credit; dump key uses special romanization"
         }
     ]
 }

@@ -8,12 +8,25 @@
             "title": "Ekorr'n satt i granen"
         },
         {
+            "postId": 48108,
+            "artist": "Ayumi Hamasaki",
+            "title": "walking proud",
+            "language": "jpn",
+            "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
+        },
+        {
             "postId": 48654,
             "category": "Hymn",
             "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
             "artist": "",
             "sortAs": "Hymn",
             "title": "Face to Face"
+        },
+        {
+            "postId": 48782,
+            "artist": "Carola",
+            "title": "Det är bara vi",
+            "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
         },
         {
             "postId": 50135,
