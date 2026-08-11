@@ -25,6 +25,8 @@ able to say so.
 | `data/resolved.json`        | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
 | `data/overrides.json`       | humans only             | Review decisions and hand corrections. No script ever writes it.  |
 | `data/overrides-review.md`  | `pnpm build:resolved`   | Venue vs override side-by-side. Regenerable; do not edit.         |
+| `data/proposals.json`       | humans / agents         | Guesses put to the dump. Applies only when MusicBrainz agrees.    |
+| `data/proposals-review.md`  | `pnpm build:resolved`   | Venue vs proposal side-by-side. Regenerable; do not edit.         |
 
 The site composes the three, with overrides winning. Keeping the machine-written and human-written files apart is
 the whole point: a re-scrape or a re-run must never be able to destroy a review decision. Raw API responses are

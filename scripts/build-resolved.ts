@@ -218,6 +218,7 @@ async function main(): Promise<void> {
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
             "overrides-review": { type: "string", default: "data/overrides-review.md" },
+            "proposals-review": { type: "string", default: "data/proposals-review.md" },
         },
     });
 
@@ -225,8 +226,9 @@ async function main(): Promise<void> {
     if (matches === undefined) {
         throw new Error(`Could not read ${values.matches}. Run \`pnpm match:canonical\` first.`);
     }
-    const proposalFile = await readJson<{ proposals: { postId: number }[] }>(values.proposals);
-    const proposed = new Set((proposalFile?.proposals ?? []).map((p) => p.postId));
+    const proposalFile = await readJson<{ proposals: ProposalRecord[] }>(values.proposals);
+    const proposals = proposalFile?.proposals ?? [];
+    const proposed = new Set(proposals.map((p) => p.postId));
     // Overrides are hand decisions that already settled a song — category buckets with no
     // performer, spelling the dump cannot confirm, and so on. They must not reappear in the
     // review queue just because the matcher has nothing to match.
@@ -526,6 +528,19 @@ async function main(): Promise<void> {
     const overridesReviewPath = values["overrides-review"];
     await writeFile(overridesReviewPath, overridesReview(overrides, byPostId), "utf8");
     console.log(`Wrote ${overridesReviewPath}`);
+    const proposalsReviewPath = values["proposals-review"];
+    await writeFile(proposalsReviewPath, proposalsReview(proposals, byPostId), "utf8");
+    console.log(`Wrote ${proposalsReviewPath}`);
+}
+
+/** A guess put to the dump in `data/proposals.json`. */
+interface ProposalRecord {
+    postId: number;
+    artist?: string;
+    title?: string;
+    from?: string;
+    language?: string;
+    why: string;
 }
 
 /** A hand correction from `data/overrides.json`. */
@@ -657,6 +672,62 @@ function overridesReview(
         }
         lines.push(
             `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+        );
+    }
+
+    return `${lines.join("\n").trimEnd()}\n`;
+}
+
+/**
+ * Side-by-side of what the venue filed and what a proposal asked the dump to look for.
+ * `dump` says whether the matcher confirmed it (`yes`), never found it (`no`), or the
+ * proposal never had to win because something else already matched (`—`).
+ */
+function proposalsReview(
+    proposals: ProposalRecord[],
+    byPostId: Map<number, MatchRecord>,
+): string {
+    const cell = (value: string): string => value.replace(/\|/g, "\\|").replace(/\n/g, " ");
+    const shown = (value: string | undefined, fallback: string): string =>
+        value === undefined ? fallback : value === "" ? "*(empty)*" : value;
+    const dumpStatus = (proposal: ProposalRecord, venue: MatchRecord | undefined): string => {
+        if (venue === undefined || !venue.matched) return "no";
+        if (venue.proposed !== undefined) return "yes";
+        // Proposal exists but another key won — still applied for from/language/title overlay
+        // when present; say so rather than implying the dump rejected the artist guess.
+        return "other";
+    };
+
+    const lines = [
+        "# Proposal review",
+        "",
+        `${proposals.length} songs, written by \`pnpm build:resolved\` from \`data/proposals.json\` and`,
+        "the venue scrape. Regenerable, so do not edit it — change the proposal instead.",
+        "",
+        "Each row is what the venue had, then what the proposal asked MusicBrainz to confirm.",
+        "A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal key won,",
+        "`other` when a different key matched, and `no` when nothing matched.",
+        "",
+        "| id | venue artist | venue title | → artist | → title | from | language | dump | why | postId |",
+        "| -: | --- | --- | --- | --- | --- | --- | --- | --- | -: |",
+    ];
+
+    const rows = [...proposals].sort((a, b) => {
+        const left = byPostId.get(a.postId);
+        const right = byPostId.get(b.postId);
+        return (left?.id ?? a.postId) - (right?.id ?? b.postId);
+    });
+
+    for (const proposal of rows) {
+        const venue = byPostId.get(proposal.postId);
+        if (venue === undefined) {
+            lines.push(
+                `| — | — | — | ${cell(shown(proposal.artist, "—"))} | ${cell(shown(proposal.title, "—"))} | ${cell(proposal.from ?? "")} | ${cell(proposal.language ?? "")} | no | ${cell(proposal.why)} | ${proposal.postId} |`,
+            );
+            continue;
+        }
+        lines.push(
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(proposal.artist, venue.artist))} | ${cell(shown(proposal.title, venue.song))} | ${cell(proposal.from ?? "")} | ${cell(proposal.language ?? "")} | ${dumpStatus(proposal, venue)} | ${cell(proposal.why)} | ${proposal.postId} |`,
         );
     }
 
