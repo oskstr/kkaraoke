@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T07:16:12.643Z",
+  "generatedAt": "2026-08-11T07:32:41.488Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -242,6 +242,7 @@
         }
       ],
       "recordingMbid": "30773a2b-6d9b-41f4-8348-8bdafe959f80",
+      "year": 1993,
       "how": "title-first"
     },
     {
@@ -15928,6 +15929,7 @@
         }
       ],
       "recordingMbid": "2e3aff6e-f295-4150-ae93-17eb47b46925",
+      "year": 1989,
       "how": "title-first"
     },
     {
@@ -21029,6 +21031,23 @@
       "how": "exact"
     },
     {
+      "postId": 49192,
+      "sortAs": "Cue",
+      "title": "Burnin’",
+      "artistMbids": [
+        "49fccdcd-0b10-4eb6-b2fc-14913fb9552a"
+      ],
+      "artists": [
+        {
+          "mbid": "49fccdcd-0b10-4eb6-b2fc-14913fb9552a",
+          "name": "Cue"
+        }
+      ],
+      "recordingMbid": "c05a39c2-9896-4619-8ab7-5a2030019df4",
+      "year": 1997,
+      "how": "exact"
+    },
+    {
       "postId": 51139,
       "artist": "Lars Winnerbäck",
       "sortAs": "Winnerbäck, Lars",
@@ -21359,6 +21378,24 @@
         "europop"
       ],
       "year": 1975,
+      "how": "exact"
+    },
+    {
+      "postId": 49174,
+      "artist": "The Creeps",
+      "sortAs": "Creeps, The",
+      "title": "Ooh – I Like It!",
+      "artistMbids": [
+        "bf5c2247-e48d-4e48-8783-220c5a175821"
+      ],
+      "artists": [
+        {
+          "mbid": "bf5c2247-e48d-4e48-8783-220c5a175821",
+          "name": "The Creeps"
+        }
+      ],
+      "recordingMbid": "7b14032b-7d6f-445b-9abb-fa89389b3bb9",
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -23325,15 +23362,25 @@
     },
     {
       "postId": 48393,
+      "sortAs": "Black Sabbath",
+      "title": "Iron Man",
       "artistMbids": [
         "5182c1d9-c7d2-4dad-afa0-ccfeada921a8"
       ],
-      "sortAs": "Black Sabbath",
+      "artists": [
+        {
+          "mbid": "5182c1d9-c7d2-4dad-afa0-ccfeada921a8",
+          "name": "Black Sabbath"
+        }
+      ],
+      "recordingMbid": "a15e2d0a-efcb-4f4f-ad54-22a4879bbcf9",
       "genres": [
         "heavy metal",
         "hard rock",
         "traditional doom metal"
-      ]
+      ],
+      "year": 1971,
+      "how": "exact"
     },
     {
       "postId": 51880,
@@ -25752,6 +25799,7 @@
         "rock",
         "jazz fusion"
       ],
+      "year": 1999,
       "how": "lead-scoped"
     },
     {
@@ -26137,6 +26185,27 @@
         }
       ],
       "recordingMbid": "12e01969-0c5a-4206-97d0-57bbacd4c5f2",
+      "year": 1967,
+      "how": "exact"
+    },
+    {
+      "postId": 52620,
+      "artist": "Sandie Shaw",
+      "sortAs": "Shaw, Sandie",
+      "title": "Puppet on a String",
+      "artistMbids": [
+        "16963107-9288-43a2-946c-81de2f5eddfa"
+      ],
+      "artists": [
+        {
+          "mbid": "16963107-9288-43a2-946c-81de2f5eddfa",
+          "name": "Sandie Shaw"
+        }
+      ],
+      "recordingMbid": "49f5dc80-ef59-402a-ae68-09101671616d",
+      "genres": [
+        "pop"
+      ],
       "year": 1967,
       "how": "exact"
     },
@@ -27416,6 +27485,35 @@
         "pop"
       ],
       "year": 1999,
+      "how": "exact"
+    },
+    {
+      "postId": 51676,
+      "artist": "Santana, Michelle Branch",
+      "sortAs": "Santana",
+      "title": "The Game of Love",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "a10f94a9-2a3c-4166-b9fa-a7bed0bf7d96"
+      ],
+      "artists": [
+        {
+          "mbid": "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+          "name": "Santana"
+        },
+        {
+          "mbid": "a10f94a9-2a3c-4166-b9fa-a7bed0bf7d96",
+          "name": "Michelle Branch"
+        }
+      ],
+      "credit": "Santana feat. Michelle Branch",
+      "recordingMbid": "8a388235-5225-4032-b2c5-86060857d26d",
+      "genres": [
+        "latin rock",
+        "rock",
+        "jazz fusion"
+      ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -32017,6 +32115,35 @@
       "how": "exact"
     },
     {
+      "postId": 52797,
+      "artist": "David Baddiel, Frank Skinner, The Lightning Seeds",
+      "sortAs": "Baddiel, David",
+      "title": "Three Lions",
+      "artistMbids": [
+        "4f69a7a1-a499-48f7-b0f4-d9bf2270cbd8",
+        "f035320f-c286-475f-9fd1-8ef9884c1a6b",
+        "1ba601a0-3401-4b28-8ddd-9af8203661e8"
+      ],
+      "artists": [
+        {
+          "mbid": "4f69a7a1-a499-48f7-b0f4-d9bf2270cbd8",
+          "name": "David Baddiel"
+        },
+        {
+          "mbid": "f035320f-c286-475f-9fd1-8ef9884c1a6b",
+          "name": "Frank Skinner"
+        },
+        {
+          "mbid": "1ba601a0-3401-4b28-8ddd-9af8203661e8",
+          "name": "The Lightning Seeds"
+        }
+      ],
+      "credit": "Baddiel, Skinner & The Lightning Seeds",
+      "recordingMbid": "ab1c3923-c289-4ff0-8cf0-f5df53aeef59",
+      "year": 1996,
+      "how": "exact"
+    },
+    {
       "postId": 49836,
       "sortAs": "Erasure",
       "title": "Breath of Life",
@@ -32145,6 +32272,23 @@
         "pop"
       ],
       "year": 2003,
+      "how": "exact"
+    },
+    {
+      "postId": 49952,
+      "sortAs": "Fat Les",
+      "title": "Vindaloo",
+      "artistMbids": [
+        "4488bb49-dc2a-4297-b486-e3405a010bd5"
+      ],
+      "artists": [
+        {
+          "mbid": "4488bb49-dc2a-4297-b486-e3405a010bd5",
+          "name": "Fat Les"
+        }
+      ],
+      "recordingMbid": "2031e7f1-8b1c-4cd1-97f5-4f8e29335286",
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -32825,13 +32969,23 @@
     },
     {
       "postId": 49999,
+      "sortAs": "Five",
+      "title": "Slam Dunk (da Funk)",
       "artistMbids": [
         "88d6db37-0d87-4e84-a949-9cf8e8879505"
       ],
-      "sortAs": "Five",
+      "artists": [
+        {
+          "mbid": "88d6db37-0d87-4e84-a949-9cf8e8879505",
+          "name": "Five"
+        }
+      ],
+      "recordingMbid": "efbfab60-a5b0-46b8-90b7-bca6f27031e1",
       "genres": [
         "pop"
-      ]
+      ],
+      "year": 1997,
+      "how": "exact"
     },
     {
       "postId": 50215,
@@ -34515,6 +34669,7 @@
         }
       ],
       "recordingMbid": "c7cf8503-da73-4117-b9f9-fd53e4d1a0f3",
+      "year": 1987,
       "how": "title-first"
     },
     {
@@ -34604,6 +34759,7 @@
         }
       ],
       "recordingMbid": "6fdbc2f4-2c42-4c97-a53c-c4c3100d8c91",
+      "year": 1959,
       "how": "title-first"
     },
     {
@@ -37123,6 +37279,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -37187,6 +37344,7 @@
         "big band",
         "christmas music"
       ],
+      "year": 1953,
       "how": "exact"
     },
     {
@@ -37270,6 +37428,7 @@
         }
       ],
       "recordingMbid": "67851d72-1fe2-480a-9e62-c286e48f8f66",
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -37313,6 +37472,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -39682,6 +39842,23 @@
       "how": "version"
     },
     {
+      "postId": 53328,
+      "artist": "Tony! Toni! Toné!",
+      "sortAs": "Tony! Toni! Toné!",
+      "title": "Anniversary",
+      "artistMbids": [
+        "511562a6-c381-44df-9bc4-27be779716b8"
+      ],
+      "artists": [
+        {
+          "mbid": "511562a6-c381-44df-9bc4-27be779716b8",
+          "name": "Tony! Toni! Toné!"
+        }
+      ],
+      "recordingMbid": "a2b15871-10ad-4843-8978-265d6f679534",
+      "how": "exact"
+    },
+    {
       "postId": 50770,
       "sortAs": "Cash, Johnny",
       "title": "A Boy Named Sue",
@@ -39701,6 +39878,25 @@
         "folk"
       ],
       "year": 1969,
+      "how": "exact"
+    },
+    {
+      "postId": 50671,
+      "sortAs": "Croce, Jim",
+      "title": "Bad, Bad Leroy Brown",
+      "artistMbids": [
+        "fcfa9543-e113-4ef9-9ef6-455ba4cbe7af"
+      ],
+      "artists": [
+        {
+          "mbid": "fcfa9543-e113-4ef9-9ef6-455ba4cbe7af",
+          "name": "Jim Croce"
+        }
+      ],
+      "recordingMbid": "6c5c01d1-96e6-4c98-8959-b2a08686dc4e",
+      "genres": [
+        "folk"
+      ],
       "how": "exact"
     },
     {
@@ -44997,16 +45193,24 @@
     },
     {
       "postId": 51443,
+      "sortAs": "Manfred Mann",
+      "title": "Do Wah Diddy Diddy",
       "artistMbids": [
-        "83e9c775-84ea-4cf6-abdf-b9ffa8c3d060"
+        "06b6f280-8787-4a3d-8ab6-c6487b465320"
       ],
-      "artist": "Manfred Mann’s Earth Band",
-      "sortAs": "Mann, Manfred, Earth Band",
+      "artists": [
+        {
+          "mbid": "06b6f280-8787-4a3d-8ab6-c6487b465320",
+          "name": "Manfred Mann"
+        }
+      ],
+      "recordingMbid": "df02ac34-1801-4fa3-9997-2a2c4599f291",
       "genres": [
-        "rock",
-        "progressive pop",
-        "progressive rock"
-      ]
+        "pop rock",
+        "psychedelic pop"
+      ],
+      "year": 1964,
+      "how": "exact"
     },
     {
       "postId": 49756,
@@ -49689,6 +49893,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -52756,15 +52961,25 @@
     },
     {
       "postId": 51164,
+      "sortAs": "Led Zeppelin",
+      "title": "D’yer Mak’er",
       "artistMbids": [
         "678d88b2-87b0-403b-b63d-5da7465aecc3"
       ],
-      "sortAs": "Led Zeppelin",
+      "artists": [
+        {
+          "mbid": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+          "name": "Led Zeppelin"
+        }
+      ],
+      "recordingMbid": "0cfbca12-01e1-4014-932e-e634293ba770",
       "genres": [
         "hard rock",
         "rock",
         "blues rock"
-      ]
+      ],
+      "year": 1973,
+      "how": "exact"
     },
     {
       "postId": 52572,
@@ -55718,22 +55933,34 @@
     },
     {
       "postId": 52810,
-      "artist": "Slum Village",
+      "artist": "Slum Village, Ye, John Legend",
       "sortAs": "Slum Village",
       "artistMbids": [
-        "c0c1183e-6940-48ca-8f96-98250fcb3ef1"
+        "c0c1183e-6940-48ca-8f96-98250fcb3ef1",
+        "164f0d73-1234-4e2c-8743-d77bf2191051",
+        "75a72702-a5ef-4513-bca5-c5b944903546"
       ],
       "artists": [
         {
           "mbid": "c0c1183e-6940-48ca-8f96-98250fcb3ef1",
           "name": "Slum Village"
+        },
+        {
+          "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+          "name": "Ye"
+        },
+        {
+          "mbid": "75a72702-a5ef-4513-bca5-c5b944903546",
+          "name": "John Legend"
         }
       ],
-      "recordingMbid": "1229db1f-74f3-4f3f-b238-0a21d7835d5d",
+      "credit": "Slum Village feat. Kanye West & John Legend",
+      "recordingMbid": "78aa5ad6-7784-4f1b-aaca-c01f889abce7",
       "genres": [
         "hip hop"
       ],
-      "how": "title-first"
+      "year": 2004,
+      "how": "collab-scoped"
     },
     {
       "postId": 50818,
@@ -55780,15 +56007,25 @@
     },
     {
       "postId": 52229,
+      "sortAs": "Prince",
+      "title": "Sexy M.F.",
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e"
       ],
-      "sortAs": "Prince",
+      "artists": [
+        {
+          "mbid": "070d193a-845c-479f-980e-bef15710653e",
+          "name": "Prince"
+        }
+      ],
+      "recordingMbid": "464ee813-9007-4490-bf74-d9dd7bad7c92",
       "genres": [
         "funk",
         "pop",
         "contemporary r&b"
-      ]
+      ],
+      "year": 1992,
+      "how": "exact"
     },
     {
       "postId": 52067,
@@ -56688,15 +56925,25 @@
     },
     {
       "postId": 52574,
+      "sortAs": "Roxy Music",
+      "title": "Do the Strand",
       "artistMbids": [
         "331ce348-1b08-40b9-8ed7-0763b92bd003"
       ],
-      "sortAs": "Roxy Music",
+      "artists": [
+        {
+          "mbid": "331ce348-1b08-40b9-8ed7-0763b92bd003",
+          "name": "Roxy Music"
+        }
+      ],
+      "recordingMbid": "d59e1a98-1907-4941-8d55-ddbd90ddf411",
       "genres": [
         "art rock",
         "glam rock",
         "art pop"
-      ]
+      ],
+      "year": 1973,
+      "how": "exact"
     },
     {
       "postId": 50475,
@@ -59578,6 +59825,7 @@
         "europop",
         "pop"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -60549,6 +60797,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1984,
       "how": "exact"
     },
     {
@@ -75469,6 +75718,7 @@
         }
       ],
       "recordingMbid": "10fcced7-86b9-44fa-9ce3-e93353338197",
+      "year": 1994,
       "how": "title-first"
     },
     {
@@ -78216,16 +78466,26 @@
     },
     {
       "postId": 52144,
+      "artist": "P!nk",
+      "sortAs": "Pink",
+      "title": "U + Ur Hand",
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
-      "artist": "P!nk",
-      "sortAs": "Pink",
+      "artists": [
+        {
+          "mbid": "f4d5cc07-3bc9-4836-9b15-88a08359bc63",
+          "name": "P!nk"
+        }
+      ],
+      "recordingMbid": "f3805a9e-9ece-41fe-bed8-6a9169d3fa42",
       "genres": [
         "pop",
         "pop rock",
         "dance-pop"
-      ]
+      ],
+      "year": 2006,
+      "how": "exact"
     },
     {
       "postId": 50109,
@@ -78680,6 +78940,7 @@
         "bachata",
         "latin"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -106825,6 +107086,29 @@
       "how": "exact"
     },
     {
+      "postId": 51847,
+      "artist": "New Kids on the Block",
+      "sortAs": "New Kids on the Block",
+      "title": "Step by Step",
+      "artistMbids": [
+        "090dafe5-818c-4bba-9ebf-7e3a651a5c43"
+      ],
+      "artists": [
+        {
+          "mbid": "090dafe5-818c-4bba-9ebf-7e3a651a5c43",
+          "name": "New Kids on the Block"
+        }
+      ],
+      "recordingMbid": "ee67f77f-c7db-406d-b5cc-a79189ef32af",
+      "genres": [
+        "pop",
+        "teen pop",
+        "dance-pop"
+      ],
+      "year": 1990,
+      "how": "exact"
+    },
+    {
       "postId": 51852,
       "sortAs": "New Order",
       "artistMbids": [
@@ -111396,6 +111680,28 @@
       "how": "exact"
     },
     {
+      "postId": 52960,
+      "artist": "The Strokes",
+      "sortAs": "Strokes, The",
+      "artistMbids": [
+        "f181961b-20f7-459e-89de-920ef03c7ed0"
+      ],
+      "artists": [
+        {
+          "mbid": "f181961b-20f7-459e-89de-920ef03c7ed0",
+          "name": "The Strokes"
+        }
+      ],
+      "recordingMbid": "e8d5c3f6-494f-439a-8f6c-889df2b7a4b8",
+      "genres": [
+        "indie rock",
+        "garage rock revival",
+        "post-punk revival"
+      ],
+      "year": 2000,
+      "how": "exact"
+    },
+    {
       "postId": 52961,
       "sortAs": "Stromae",
       "title": "Alors on danse",
@@ -111484,24 +111790,35 @@
     },
     {
       "postId": 53155,
-      "artist": "The Lonely Island",
+      "artist": "The Lonely Island, Adam Levine, Kendrick Lamar",
       "sortAs": "Lonely Island, The",
+      "title": "YOLO",
       "artistMbids": [
-        "028e1863-cab4-4a3d-9dd9-91c682c91005"
+        "028e1863-cab4-4a3d-9dd9-91c682c91005",
+        "a1421d73-1a21-484b-97ad-77c9a5676daf",
+        "381086ea-f511-4aba-bdf9-71c753dc5077"
       ],
       "artists": [
         {
           "mbid": "028e1863-cab4-4a3d-9dd9-91c682c91005",
           "name": "The Lonely Island"
+        },
+        {
+          "mbid": "a1421d73-1a21-484b-97ad-77c9a5676daf",
+          "name": "Adam Levine"
+        },
+        {
+          "mbid": "381086ea-f511-4aba-bdf9-71c753dc5077",
+          "name": "Kendrick Lamar"
         }
       ],
-      "recordingMbid": "6d4148cf-4d42-4405-bf0b-6b2d5d9023c8",
+      "credit": "The Lonely Island feat. Adam Levine & Kendrick Lamar",
+      "recordingMbid": "0c8e6ee0-393f-4f53-aa3e-b5aac0eeb867",
       "genres": [
         "comedy",
         "hip hop"
       ],
-      "year": 2013,
-      "how": "title-first"
+      "how": "lead-scoped"
     },
     {
       "postId": 53186,
@@ -111711,6 +112028,29 @@
       ],
       "recordingMbid": "8d3ab27a-a1f0-47e5-84f3-37672d964c0b",
       "year": 1987,
+      "how": "exact"
+    },
+    {
+      "postId": 53559,
+      "artist": "The Who",
+      "sortAs": "Who, The",
+      "title": "Baba O’Riley",
+      "artistMbids": [
+        "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
+      ],
+      "artists": [
+        {
+          "mbid": "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa",
+          "name": "The Who"
+        }
+      ],
+      "recordingMbid": "a6081bc1-2a76-4984-b21f-38bc3dcca3a5",
+      "genres": [
+        "rock",
+        "hard rock",
+        "classic rock"
+      ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -112324,6 +112664,23 @@
         "contemporary r&b"
       ],
       "year": 2010,
+      "how": "exact"
+    },
+    {
+      "postId": 49601,
+      "sortAs": "Eamon",
+      "title": "Fuck It (I Don’t Want You Back)",
+      "artistMbids": [
+        "d791111a-9fcc-4ebe-bb16-b785719a642b"
+      ],
+      "artists": [
+        {
+          "mbid": "d791111a-9fcc-4ebe-bb16-b785719a642b",
+          "name": "Eamon"
+        }
+      ],
+      "recordingMbid": "d4b6a184-c08b-4bd4-ae97-fb42f478c23c",
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -113727,6 +114084,33 @@
       "how": "exact"
     },
     {
+      "postId": 49643,
+      "artist": "Eminem, Ed Sheeran",
+      "sortAs": "Eminem",
+      "artistMbids": [
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
+      ],
+      "artists": [
+        {
+          "mbid": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+          "name": "Eminem"
+        },
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran"
+        }
+      ],
+      "credit": "Eminem feat. Ed Sheeran",
+      "recordingMbid": "32d6bfe9-b231-4d5f-9034-61226f7d7d96",
+      "genres": [
+        "hip hop",
+        "hardcore hip hop",
+        "pop rap"
+      ],
+      "how": "exact"
+    },
+    {
       "postId": 52006,
       "artist": "Panic! at the Disco",
       "sortAs": "Panic! at the Disco",
@@ -113882,16 +114266,26 @@
     },
     {
       "postId": 53159,
+      "artist": "The Police",
+      "sortAs": "Police, The",
+      "title": "De Do Do Do, De Da Da Da",
       "artistMbids": [
         "9e0e2b01-41db-4008-bd8b-988977d6019a"
       ],
-      "artist": "The Police",
-      "sortAs": "Police, The",
+      "artists": [
+        {
+          "mbid": "9e0e2b01-41db-4008-bd8b-988977d6019a",
+          "name": "The Police"
+        }
+      ],
+      "recordingMbid": "66eb9308-6b98-4cf0-8127-830508000a98",
       "genres": [
         "new wave",
         "rock",
         "pop rock"
-      ]
+      ],
+      "year": 1980,
+      "how": "exact"
     },
     {
       "postId": 53160,
@@ -114772,6 +115166,62 @@
       ],
       "year": 2019,
       "how": "lead-scoped"
+    },
+    {
+      "postId": 50879,
+      "artist": "Ed Sheeran, Justin Bieber",
+      "sortAs": "Sheeran, Ed",
+      "title": "I Don’t Care",
+      "artistMbids": [
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "artists": [
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran"
+        },
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
+        }
+      ],
+      "credit": "Ed Sheeran & Justin Bieber",
+      "recordingMbid": "09fe14ca-7734-4fa0-9365-8159d236d7af",
+      "genres": [
+        "pop",
+        "folk pop",
+        "dance-pop"
+      ],
+      "year": 2019,
+      "how": "exact"
+    },
+    {
+      "postId": 51793,
+      "artist": "Lil Nas X, Billy Ray Cyrus",
+      "sortAs": "Lil Nas X",
+      "title": "Old Town Road",
+      "artistMbids": [
+        "0b30341b-b59d-4979-8130-b66c0e475321",
+        "63e8d6f9-e247-45c9-aaf2-e079cddbdd54"
+      ],
+      "artists": [
+        {
+          "mbid": "0b30341b-b59d-4979-8130-b66c0e475321",
+          "name": "Lil Nas X"
+        },
+        {
+          "mbid": "63e8d6f9-e247-45c9-aaf2-e079cddbdd54",
+          "name": "Billy Ray Cyrus"
+        }
+      ],
+      "credit": "Lil Nas X feat. Billy Ray Cyrus",
+      "recordingMbid": "b60afa19-1768-4046-b6eb-d76b5d4554f1",
+      "genres": [
+        "pop rap"
+      ],
+      "year": 2018,
+      "how": "exact"
     },
     {
       "postId": 52150,
@@ -115695,6 +116145,39 @@
       "recordingMbid": "5716f177-2ca9-4679-a165-620c1b8b965f",
       "year": 2018,
       "how": "artist-scoped"
+    },
+    {
+      "postId": 50509,
+      "artist": "Cardi B, Bad Bunny, J Balvin",
+      "sortAs": "Cardi B",
+      "title": "I Like It",
+      "artistMbids": [
+        "2f3c4d70-0462-40da-bba3-0aec5772c556",
+        "89aa5ecb-59ad-46f5-b3eb-2d424e941f19",
+        "5bdeb32d-56a5-4b6d-a768-264101fa0a0a"
+      ],
+      "artists": [
+        {
+          "mbid": "2f3c4d70-0462-40da-bba3-0aec5772c556",
+          "name": "Cardi B"
+        },
+        {
+          "mbid": "89aa5ecb-59ad-46f5-b3eb-2d424e941f19",
+          "name": "Bad Bunny"
+        },
+        {
+          "mbid": "5bdeb32d-56a5-4b6d-a768-264101fa0a0a",
+          "name": "J Balvin"
+        }
+      ],
+      "credit": "Cardi B, Bad Bunny & J Balvin",
+      "recordingMbid": "e6e2b27b-2de0-445d-b4a8-bc722c3ebcfe",
+      "genres": [
+        "hip hop",
+        "east coast hip hop",
+        "pop"
+      ],
+      "how": "exact"
     },
     {
       "postId": 52151,
@@ -117370,6 +117853,7 @@
         "soft rock",
         "blues rock"
       ],
+      "year": 1979,
       "how": "exact"
     },
     {
@@ -118985,6 +119469,27 @@
       ],
       "year": 2020,
       "how": "lead-scoped"
+    },
+    {
+      "postId": 51238,
+      "artist": "Lil Nas X",
+      "sortAs": "Lil Nas X",
+      "title": "MONTERO (Call Me by Your Name)",
+      "artistMbids": [
+        "0b30341b-b59d-4979-8130-b66c0e475321"
+      ],
+      "artists": [
+        {
+          "mbid": "0b30341b-b59d-4979-8130-b66c0e475321",
+          "name": "Lil Nas X"
+        }
+      ],
+      "recordingMbid": "6ed6a516-8b56-4ba2-a621-00678bc86ec5",
+      "genres": [
+        "pop rap"
+      ],
+      "year": 2021,
+      "how": "exact"
     },
     {
       "postId": 52198,

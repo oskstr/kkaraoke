@@ -1,6 +1,6 @@
 # Songs still to review
 
-317 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
+290 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
 
 A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only
 adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at
@@ -9,14 +9,14 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 ## Contents
 
-- no match, and this artist string is unknown to MusicBrainz — **157**
-- this artist has no such title; the venue may have credited the wrong one — **64**
-- matched through the lead artist, which named fewer artists than the venue did — **53**
+- no match, and this artist string is unknown to MusicBrainz — **140**
+- this artist has no such title; the venue may have credited the wrong one — **56**
+- matched through the lead artist, which named fewer artists than the venue did — **51**
 - weak match — **27**
 - matched a placeholder entity — **13**
 - credited to a namesake, not to this artist — **3**
 
-## no match, and this artist string is unknown to MusicBrainz (157)
+## no match, and this artist string is unknown to MusicBrainz (140)
 
 ### Finsk musik — 39
 
@@ -143,18 +143,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 2587 | Stroking | 49015 |
 
-### Creeps — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1088 | Oh I like it | 49174 |
-
-### Cue — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1067 | Burning | 49192 |
-
 ### David Shutrick — 1
 
 | id | the venue's title | postId |
@@ -191,18 +179,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 5688 | Om du vill bli min fru | 49535 |
 
-### Eamon — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5485 | Fuck it, i dont want yo back | 49601 |
-
-### Ed Sheeran Ft. Eminem — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5558 | River | 49643 |
-
 ### Electric Boys — 1
 
 | id | the venue's title | postId |
@@ -232,12 +208,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 996 | Upp över mina öron | 49860 |
-
-### Fat Les — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1611 | Vidaloo | 49952 |
 
 ### Flamingokvintetten — 1
 
@@ -311,23 +281,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3755 | Wild rover | 50466 |
 
-### J Balvin ft. Cardi B — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5652 | I like it | 50509 |
-
 ### Jekyll & Hide — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3779 | This is the moment | 50622 |
-
-### Jim Croce — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2002 | Bad bad leeroy brown | 50671 |
 
 ### Jimmy Rogers — 1
 
@@ -352,12 +310,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 1066 | Aldrig skall jag sluta älska dig | 50790 |
-
-### Justin Bieber ft Ed sheeran — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5609 | I don't care | 50879 |
 
 ### Kardinall Offishall — 1
 
@@ -395,12 +347,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 498 | Slip and slide | 51149 |
 
-### Lil Naz X — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5810 | Call me by your name | 51238 |
-
 ### Lion King — 1
 
 | id | the venue's title | postId |
@@ -437,12 +383,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 336 | I'll be here for you | 51674 |
 
-### Michelle Branch feat. Santana — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1379 | Game of love | 51676 |
-
 ### Midsommarsång — 1
 
 | id | the venue's title | postId |
@@ -472,18 +412,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3643 | Till there was you | 51769 |
-
-### Nas Ft Billy Ray Cyrus — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5610 | Old town road | 51793 |
-
-### New Kids On Block — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5223 | Step By Step | 51847 |
 
 ### Norieve R18 — 1
 
@@ -569,18 +497,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 1009 | Vindarna viskar mitt namn | 52531 |
 
-### Sandy Shaw — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1318 | Puppet on a string | 52620 |
-
-### Skinner & Baddiel — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1604 | Three lions | 52797 |
-
 ### Son of a plumber — 1
 
 | id | the venue's title | postId |
@@ -611,12 +527,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3537 | This could be the start to something big | 52922 |
 
-### Strokes, The — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5439 | Someday | 52960 |
-
 ### The cartoons — 1
 
 | id | the venue's title | postId |
@@ -634,12 +544,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3259 | Oh my God! | 53156 |
-
-### Tony!Tony!Tony! — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2000 | Anniversary song | 53328 |
 
 ### Tooji (Eurovision 2012 Norway) — 1
 
@@ -659,14 +563,8 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3649 | Maria | 53491 |
 
-### Who, The — 1
 
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5455 | Baba O'riley | 53559 |
-
-
-## this artist has no such title; the venue may have credited the wrong one (64)
+## this artist has no such title; the venue may have credited the wrong one (56)
 
 ### Ola Svensson — 4
 
@@ -714,12 +612,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3443 | That's the glory of love | 48305 |
-
-### Black Sabbath — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1182 | Iron man black | 48393 |
 
 ### Bloodhound Gang — 1
 
@@ -774,12 +666,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 1904 | Am I easy to forget | 49814 |
-
-### Five — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1644 | Slam dunk the funk | 49999 |
 
 ### Foo Fighters — 1
 
@@ -853,12 +739,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 943 | Idag och imorgon | 50999 |
 
-### Led Zeppelin — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2668 | D'y'mak'er | 51164 |
-
 ### Louis Armstrong — 1
 
 | id | the venue's title | postId |
@@ -870,12 +750,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 2735 | If I ruled the world | 51363 |
-
-### Manfred Mann — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2294 | Doo wha diddy | 51443 |
 
 ### Mariah Carey — 1
 
@@ -907,23 +781,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 1665 | Come on Eileen | 51896 |
 
-### Pink — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3892 | U and ur hand | 52144 |
-
 ### Prefab Sprout — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 4015 | King of rock and roll | 52210 |
-
-### Prince — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2813 | Sexy motherfucker | 52229 |
 
 ### R Kelly — 1
 
@@ -942,12 +804,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 300 | Make it real | 52558 |
-
-### Roxy Music — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2856 | The strand | 52574 |
 
 ### Samantha Fox — 1
 
@@ -997,12 +853,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3992 | If this were a movie | 53063 |
 
-### The police — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5566 | De do do de | 53159 |
-
 ### Trace Adkins — 1
 
 | id | the venue's title | postId |
@@ -1028,7 +878,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 5317 | Nobody Loves Me Like You | 53553 |
 
 
-## matched through the lead artist, which named fewer artists than the venue did (53)
+## matched through the lead artist, which named fewer artists than the venue did (51)
 
 ### Aerosmith And Run Dmc — 1
 
@@ -1270,12 +1120,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | --- | -: |
 | 5531 | Sun comes up | Rudimental – Sun Comes Up | 52583 |
 
-### Slum Village, Kanye West & John Legend — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 2810 | Selfish | Slum Village – Selfish | 52810 |
-
 ### Snoop Dog & Justin Timberlake — 1
 
 | id | the venue's title | what we found | postId |
@@ -1305,12 +1149,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 5442 | One | Swedish House Mafia – One | 53023 |
-
-### The Lonely Island Feat. Adam Levine & Kendrick Lam — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 5444 | Yolo | The Lonely Island – Yolo | 53155 |
 
 ### Thomas Jack ft Nico — 1
 

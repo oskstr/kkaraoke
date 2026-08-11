@@ -702,6 +702,174 @@
             "artist": "Ariana Grande feat. Mac Miller",
             "title": "The Way",
             "why": "Grand is Grande"
+        },
+        {
+            "postId": 49174,
+            "artist": "The Creeps",
+            "title": "Ooh I Like It!",
+            "why": "Creeps is The Creeps; Oh is Ooh"
+        },
+        {
+            "postId": 49192,
+            "artist": "Cue",
+            "title": "Burnin'",
+            "why": "Burning is Burnin'"
+        },
+        {
+            "postId": 53159,
+            "artist": "The Police",
+            "title": "De Do Do Do, De Da Da Da",
+            "why": "venue truncated the title"
+        },
+        {
+            "postId": 52751,
+            "artist": "Shawn Mendes",
+            "title": "There's Nothing Holding Me Back",
+            "why": "venue dropped There's"
+        },
+        {
+            "postId": 53559,
+            "artist": "The Who",
+            "title": "Baba O'Riley",
+            "why": "Who, The; O'riley casing"
+        },
+        {
+            "postId": 52960,
+            "artist": "The Strokes",
+            "title": "Someday",
+            "why": "Strokes, The"
+        },
+        {
+            "postId": 51847,
+            "artist": "New Kids on the Block",
+            "title": "Step by Step",
+            "why": "New Kids On Block"
+        },
+        {
+            "postId": 49601,
+            "artist": "Eamon",
+            "title": "Fuck It (I Don't Want You Back)",
+            "why": "title"
+        },
+        {
+            "postId": 51793,
+            "artist": "Lil Nas X feat. Billy Ray Cyrus",
+            "title": "Old Town Road",
+            "why": "venue credited Nas; Lil Nas X"
+        },
+        {
+            "postId": 51238,
+            "artist": "Lil Nas X",
+            "title": "Montero (Call Me by Your Name)",
+            "why": "Call me by your name"
+        },
+        {
+            "postId": 50671,
+            "artist": "Jim Croce",
+            "title": "Bad, Bad Leroy Brown",
+            "why": "leeroy is Leroy"
+        },
+        {
+            "postId": 51443,
+            "artist": "Manfred Mann",
+            "title": "Do Wah Diddy Diddy",
+            "why": "Doo wha diddy"
+        },
+        {
+            "postId": 50782,
+            "artist": "Johnny Nash",
+            "title": "The Lion Sleeps Tonight",
+            "why": "full title"
+        },
+        {
+            "postId": 49952,
+            "artist": "Fat Les",
+            "title": "Vindaloo",
+            "why": "Vidaloo is Vindaloo"
+        },
+        {
+            "postId": 52797,
+            "artist": "Baddiel, Skinner & The Lightning Seeds",
+            "title": "Three Lions",
+            "why": "Skinner & Baddiel"
+        },
+        {
+            "postId": 51676,
+            "artist": "Santana feat. Michelle Branch",
+            "title": "The Game of Love",
+            "why": "Santana lead on the recording"
+        },
+        {
+            "postId": 50406,
+            "artist": "Huey Lewis & Gwyneth Paltrow",
+            "title": "Cruisin'",
+            "why": "exact credit"
+        },
+        {
+            "postId": 52229,
+            "artist": "Prince",
+            "title": "Sexy MF",
+            "why": "Sexy motherfucker"
+        },
+        {
+            "postId": 52574,
+            "artist": "Roxy Music",
+            "title": "Do the Strand",
+            "why": "The strand is Do the Strand"
+        },
+        {
+            "postId": 51164,
+            "artist": "Led Zeppelin",
+            "title": "D'yer Mak'er",
+            "why": "D'y'mak'er"
+        },
+        {
+            "postId": 52144,
+            "artist": "P!nk",
+            "title": "U + Ur Hand",
+            "why": "U and ur hand"
+        },
+        {
+            "postId": 53328,
+            "artist": "Tony! Toni! Toné!",
+            "title": "Anniversary",
+            "why": "Tony!Tony!Tony!"
+        },
+        {
+            "postId": 52620,
+            "artist": "Sandie Shaw",
+            "title": "Puppet on a String",
+            "why": "Sandy is Sandie"
+        },
+        {
+            "postId": 48393,
+            "artist": "Black Sabbath",
+            "title": "Iron Man",
+            "why": "Iron man black"
+        },
+        {
+            "postId": 49999,
+            "artist": "Five",
+            "title": "Slam Dunk (Da Funk)",
+            "why": "Slam dunk the funk"
+        },
+        {
+            "postId": 50879,
+            "artist": "Ed Sheeran & Justin Bieber",
+            "title": "I Don't Care",
+            "why": "backup if collab-scoped misses; dump bills Sheeran first"
+        },
+        {
+            "postId": 49643,
+            "artist": "Eminem feat. Ed Sheeran",
+            "title": "River",
+            "why": "backup; dump bills Eminem first"
+        },
+        {
+            "postId": 50509,
+            "artist": "Cardi B, Bad Bunny & J Balvin",
+            "title": "I Like It",
+            "why": "Cardi B lead; venue had J Balvin ft Cardi B"
         }
     ]
 }

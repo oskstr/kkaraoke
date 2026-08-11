@@ -318,7 +318,7 @@ async function main(): Promise<void> {
         // credit headed by the venue's lead. The canonical names, year and genres are still
         // a gain over the venue's string, so this is applied and noted rather than withheld.
         if (
-            (match.how === "lead-scoped" || match.how === "title-first") &&
+            (match.how === "lead-scoped" || match.how === "title-first" || match.how === "collab-scoped") &&
             credited.length < match.artist.split(JOIN).length
         ) {
             review.push({

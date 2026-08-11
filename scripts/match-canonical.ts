@@ -137,6 +137,14 @@ function leadArtist(artist: string): string | undefined {
     return lead !== undefined && lead.length > 0 && lead !== artist.trim() ? lead : undefined;
 }
 
+/** Every named part of a collaboration string, for order-independent matching. */
+function artistFragments(artist: string): string[] {
+    return artist
+        .split(JOIN)
+        .map((part) => part.trim())
+        .filter((part) => part.length > 0);
+}
+
 interface Form {
     value: string;
     rewrites: Rewrite[];
@@ -223,11 +231,30 @@ function keysFor(artist: string, title: string): { key: string; rewrites: Rewrit
  * id, but it is what reaches a misspelled artist who has no other trusted song yet —
  * `Zara Larssn`, `Colby Caillat`, `Nanne Grönwall`.
  */
-const HOWS = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "title-first", "near", "loose"] as const;
+const HOWS = [
+    "exact",
+    "version",
+    "spelling",
+    "artist-scoped",
+    "lead-scoped",
+    "collab-scoped",
+    "title-first",
+    "near",
+    "loose",
+] as const;
 type How = (typeof HOWS)[number];
 
 /** All but `loose`, which is the bucket for matches that could be coincidence. */
-const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "title-first", "near"];
+const TRUSTED: readonly How[] = [
+    "exact",
+    "version",
+    "spelling",
+    "artist-scoped",
+    "lead-scoped",
+    "collab-scoped",
+    "title-first",
+    "near",
+];
 
 /**
  * Whether two keys are within `limit` edits of each other, abandoning the calculation as
@@ -645,6 +672,19 @@ async function main(): Promise<void> {
         if (lead !== undefined && leadMbid !== undefined) {
             remember(combinedLookup(lead), [leadMbid]);
         }
+        // Featured artists too, when the credit line splits into as many names as ids:
+        // `Bruno Mars ft Cardi B` is how we learn Cardi B, so `J Balvin ft. Cardi B` can
+        // insist on both ids being present rather than guessing from the lead alone.
+        const creditParts = artistFragments(match.artistCredit);
+        if (creditParts.length > 1 && creditParts.length === match.artistMbids.length) {
+            for (let index = 0; index < creditParts.length; index++) {
+                const part = creditParts[index];
+                const mbid = match.artistMbids[index];
+                if (part !== undefined && mbid !== undefined) {
+                    remember(combinedLookup(part), [mbid]);
+                }
+            }
+        }
     }
 
     const byTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
@@ -695,6 +735,58 @@ async function main(): Promise<void> {
             }
         });
         console.log(`  recovered ${best.size - afterFirst} more songs`);
+    }
+
+    // Collaborations the venue billed in the wrong order: `Ed Sheeran Ft. Eminem – River` is
+    // Eminem feat. Ed Sheeran, and `Justin Bieber ft Ed sheeran – I don't care` is Ed Sheeran &
+    // Justin Bieber. Lead-scoping rejects those because the venue's lead is not the recording's.
+    // When two or more named fragments are already known, requiring every one of them on the
+    // credit is order-free and still blocks the Peabo-on-a-cover failure (Regina Belle absent).
+    const beforeCollab = best.size;
+    const collabByTitle = new Map<string, { postId: number; required: Set<string>[] }[]>();
+    for (const song of catalogue.songs) {
+        if (best.has(song.postId)) continue;
+        const fragments = artistFragments(song.artist);
+        if (fragments.length < 2) continue;
+        const required: Set<string>[] = [];
+        for (const fragment of fragments) {
+            const mbids =
+                mbidsByArtist.get(combinedLookup(fragment)) ??
+                (!LEADING_ARTICLE.test(fragment) ? mbidsByArtist.get(combinedLookup(`The ${fragment}`)) : undefined);
+            if (mbids !== undefined && mbids.size > 0) {
+                required.push(mbids);
+            }
+        }
+        if (required.length < 2) continue;
+        for (const title of new Set([song.song, withoutAnnotation(song.song)])) {
+            const key = combinedLookup(title);
+            if (key.length === 0) continue;
+            const entry = { postId: song.postId, required };
+            const existing = collabByTitle.get(key);
+            if (existing === undefined) collabByTitle.set(key, [entry]);
+            else existing.push(entry);
+        }
+    }
+    if (collabByTitle.size > 0) {
+        console.log(`pass 2b: ${collabByTitle.size} titles with two or more known collaboration fragments`);
+        const tails = affixIndex(collabByTitle.keys(), "tail");
+        await scan(values.csv, (key, line) => {
+            for (const titleKey of tails(key)) {
+                const entries = collabByTitle.get(titleKey);
+                if (entries === undefined) continue;
+                let row: Row | undefined;
+                for (const entry of entries) {
+                    if (best.has(entry.postId)) continue;
+                    row ??= toRow(line);
+                    if (row === undefined) return;
+                    if (combinedLookup(row.recording) !== titleKey) continue;
+                    const credited = new Set(row.artistMbids);
+                    if (!entry.required.every((mbids) => [...mbids].some((mbid) => credited.has(mbid)))) continue;
+                    consider({ postId: entry.postId, rank: 0, rewrites: [] }, "collab-scoped", row);
+                }
+            }
+        });
+        console.log(`  recovered ${best.size - beforeCollab} more songs`);
     }
 
     // A title-first pass, for artists the earlier passes cannot reach at all: the venue's

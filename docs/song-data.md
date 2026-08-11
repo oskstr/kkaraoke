@@ -545,6 +545,11 @@ Matched collaborations now also teach their lead: once `Clean Bandit feat. Sean 
 `Clean Bandit ft Zara Larssn` can be lead-scoped. After title-first identifies new artists, a second scoped pass
 picks up the rest of their catalogue — that is how `Kygo – Higher love` lands once Firestone has named Kygo.
 
+Wrong billing order is a separate failure: `Ed Sheeran Ft. Eminem – River` is Eminem feat. Ed Sheeran on the
+dump, so lead-scoping rejects it. When two or more named fragments are already known, a collab-scoped pass
+requires every one of them on the credit and ignores order — which also needs the featured artists from earlier
+matches to be indexed from the credit line (`Bruno Mars ft Cardi B` → Cardi B).
+
 ## Who works the review queue
 
 An agent can do most of it, and the reason is not that it guesses well. It is that a guess and a

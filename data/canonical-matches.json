@@ -20007,7 +20007,20 @@
       "id": 1067,
       "artist": "Cue",
       "song": "Burning",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cue",
+      "artistMbids": [
+        "49fccdcd-0b10-4eb6-b2fc-14913fb9552a"
+      ],
+      "recording": "Burnin’",
+      "recordingMbid": "c05a39c2-9896-4619-8ab7-5a2030019df4",
+      "release": "Cue",
+      "score": 266470,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Burning is Burnin'",
+      "trusted": true,
+      "title": "Burnin’"
     },
     {
       "postId": 51139,
@@ -20384,7 +20397,20 @@
       "id": 1088,
       "artist": "Creeps",
       "song": "Oh I like it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Creeps",
+      "artistMbids": [
+        "bf5c2247-e48d-4e48-8783-220c5a175821"
+      ],
+      "recording": "Ooh – I Like It!",
+      "recordingMbid": "7b14032b-7d6f-445b-9abb-fa89389b3bb9",
+      "release": "Blue Tomato",
+      "score": 51180,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Creeps is The Creeps; Oh is Ooh",
+      "trusted": true,
+      "title": "Ooh – I Like It!"
     },
     {
       "postId": 51505,
@@ -22147,7 +22173,20 @@
       "id": 1182,
       "artist": "Black Sabbath",
       "song": "Iron man black",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Black Sabbath",
+      "artistMbids": [
+        "5182c1d9-c7d2-4dad-afa0-ccfeada921a8"
+      ],
+      "recording": "Iron Man",
+      "recordingMbid": "a15e2d0a-efcb-4f4f-ad54-22a4879bbcf9",
+      "release": "Paranoid",
+      "score": 10536,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Iron man black",
+      "trusted": true,
+      "title": "Iron Man"
     },
     {
       "postId": 51880,
@@ -24702,7 +24741,20 @@
       "id": 1318,
       "artist": "Sandy Shaw",
       "song": "Puppet on a string",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sandie Shaw",
+      "artistMbids": [
+        "16963107-9288-43a2-946c-81de2f5eddfa"
+      ],
+      "recording": "Puppet on a String",
+      "recordingMbid": "49f5dc80-ef59-402a-ae68-09101671616d",
+      "release": "Puppet on a String",
+      "score": 48568,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Sandy is Sandie",
+      "trusted": true,
+      "title": "Puppet on a String"
     },
     {
       "postId": 51441,
@@ -25848,7 +25900,21 @@
       "id": 1379,
       "artist": "Michelle Branch feat. Santana",
       "song": "Game of love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Santana feat. Michelle Branch",
+      "artistMbids": [
+        "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+        "a10f94a9-2a3c-4166-b9fa-a7bed0bf7d96"
+      ],
+      "recording": "The Game of Love",
+      "recordingMbid": "8a388235-5225-4032-b2c5-86060857d26d",
+      "release": "Live",
+      "score": 4547034,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Santana lead on the recording",
+      "trusted": true,
+      "title": "The Game of Love"
     },
     {
       "postId": 52676,
@@ -30121,7 +30187,22 @@
       "id": 1604,
       "artist": "Skinner & Baddiel",
       "song": "Three lions",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Baddiel, Skinner & The Lightning Seeds",
+      "artistMbids": [
+        "4f69a7a1-a499-48f7-b0f4-d9bf2270cbd8",
+        "f035320f-c286-475f-9fd1-8ef9884c1a6b",
+        "1ba601a0-3401-4b28-8ddd-9af8203661e8"
+      ],
+      "recording": "Three Lions",
+      "recordingMbid": "ab1c3923-c289-4ff0-8cf0-f5df53aeef59",
+      "release": "Huge Hits 1996",
+      "score": 5420363,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Skinner & Baddiel",
+      "trusted": true,
+      "title": "Three Lions"
     },
     {
       "postId": 49836,
@@ -30242,7 +30323,20 @@
       "id": 1611,
       "artist": "Fat Les",
       "song": "Vidaloo",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Fat Les",
+      "artistMbids": [
+        "4488bb49-dc2a-4297-b486-e3405a010bd5"
+      ],
+      "recording": "Vindaloo",
+      "recordingMbid": "2031e7f1-8b1c-4cd1-97f5-4f8e29335286",
+      "release": "Vindaloo",
+      "score": 2292401,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Vidaloo is Vindaloo",
+      "trusted": true,
+      "title": "Vindaloo"
     },
     {
       "postId": 47971,
@@ -30860,7 +30954,20 @@
       "id": 1644,
       "artist": "Five",
       "song": "Slam dunk the funk",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Five",
+      "artistMbids": [
+        "88d6db37-0d87-4e84-a949-9cf8e8879505"
+      ],
+      "recording": "Slam Dunk (da Funk)",
+      "recordingMbid": "efbfab60-a5b0-46b8-90b7-bca6f27031e1",
+      "release": "Five",
+      "score": 200284,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Slam dunk the funk",
+      "trusted": true,
+      "title": "Slam Dunk (da Funk)"
     },
     {
       "postId": 50215,
@@ -37334,7 +37441,20 @@
       "id": 2000,
       "artist": "Tony!Tony!Tony!",
       "song": "Anniversary song",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tony Toni Toné",
+      "artistMbids": [
+        "511562a6-c381-44df-9bc4-27be779716b8"
+      ],
+      "recording": "Anniversary",
+      "recordingMbid": "a2b15871-10ad-4843-8978-265d6f679534",
+      "release": "Sons of Soul",
+      "score": 90121,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tony!Tony!Tony!",
+      "trusted": true,
+      "title": "Anniversary"
     },
     {
       "postId": 50770,
@@ -37360,7 +37480,20 @@
       "id": 2002,
       "artist": "Jim Croce",
       "song": "Bad bad leeroy brown",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jim Croce",
+      "artistMbids": [
+        "fcfa9543-e113-4ef9-9ef6-455ba4cbe7af"
+      ],
+      "recording": "Bad, Bad Leroy Brown",
+      "recordingMbid": "6c5c01d1-96e6-4c98-8959-b2a08686dc4e",
+      "release": "Life and Times",
+      "score": 447501,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "leeroy is Leroy",
+      "trusted": true,
+      "title": "Bad, Bad Leroy Brown"
     },
     {
       "postId": 49017,
@@ -42427,7 +42560,20 @@
       "id": 2294,
       "artist": "Manfred Mann",
       "song": "Doo wha diddy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Manfred Mann",
+      "artistMbids": [
+        "06b6f280-8787-4a3d-8ab6-c6487b465320"
+      ],
+      "recording": "Do Wah Diddy Diddy",
+      "recordingMbid": "df02ac34-1801-4fa3-9997-2a2c4599f291",
+      "release": "The Best of Manfred Mann",
+      "score": 19329,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Doo wha diddy",
+      "trusted": true,
+      "title": "Do Wah Diddy Diddy"
     },
     {
       "postId": 49756,
@@ -49493,7 +49639,20 @@
       "id": 2668,
       "artist": "Led Zeppelin",
       "song": "D'y'mak'er",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Led Zeppelin",
+      "artistMbids": [
+        "678d88b2-87b0-403b-b63d-5da7465aecc3"
+      ],
+      "recording": "D’yer Mak’er",
+      "recordingMbid": "0cfbca12-01e1-4014-932e-e634293ba770",
+      "release": "Houses of the Holy",
+      "score": 6955,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "D'y'mak'er",
+      "trusted": true,
+      "title": "D’yer Mak’er"
     },
     {
       "postId": 52572,
@@ -52168,15 +52327,17 @@
       "artist": "Slum Village, Kanye West & John Legend",
       "song": "Selfish",
       "matched": true,
-      "artistCredit": "Slum Village",
+      "artistCredit": "Slum Village feat. Kanye West & John Legend",
       "artistMbids": [
-        "c0c1183e-6940-48ca-8f96-98250fcb3ef1"
+        "c0c1183e-6940-48ca-8f96-98250fcb3ef1",
+        "164f0d73-1234-4e2c-8743-d77bf2191051",
+        "75a72702-a5ef-4513-bca5-c5b944903546"
       ],
       "recording": "Selfish",
-      "recordingMbid": "1229db1f-74f3-4f3f-b238-0a21d7835d5d",
-      "release": "Once Upon a Time in 2004",
-      "score": 5568100,
-      "how": "title-first",
+      "recordingMbid": "78aa5ad6-7784-4f1b-aaca-c01f889abce7",
+      "release": "Detroit Deli (A Taste of Detroit)",
+      "score": 367525,
+      "how": "collab-scoped",
       "rewrites": [],
       "trusted": true,
       "title": "Selfish"
@@ -52224,7 +52385,20 @@
       "id": 2813,
       "artist": "Prince",
       "song": "Sexy motherfucker",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Prince",
+      "artistMbids": [
+        "070d193a-845c-479f-980e-bef15710653e"
+      ],
+      "recording": "Sexy M.F.",
+      "recordingMbid": "464ee813-9007-4490-bf74-d9dd7bad7c92",
+      "release": "Stagetronic",
+      "score": 4519908,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Sexy motherfucker",
+      "trusted": true,
+      "title": "Sexy M.F."
     },
     {
       "postId": 52067,
@@ -53045,7 +53219,20 @@
       "id": 2856,
       "artist": "Roxy Music",
       "song": "The strand",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Roxy Music",
+      "artistMbids": [
+        "331ce348-1b08-40b9-8ed7-0763b92bd003"
+      ],
+      "recording": "Do the Strand",
+      "recordingMbid": "d59e1a98-1907-4941-8d55-ddbd90ddf411",
+      "release": "For Your Pleasure",
+      "score": 4197,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "The strand is Do the Strand",
+      "trusted": true,
+      "title": "Do the Strand"
     },
     {
       "postId": 50475,
@@ -72473,7 +72660,20 @@
       "id": 3892,
       "artist": "Pink",
       "song": "U and ur hand",
-      "matched": false
+      "matched": true,
+      "artistCredit": "P!nk",
+      "artistMbids": [
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
+      ],
+      "recording": "U + Ur Hand",
+      "recordingMbid": "f3805a9e-9ece-41fe-bed8-6a9169d3fa42",
+      "release": "I’m Not Dead",
+      "score": 429800,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "U and ur hand",
+      "trusted": true,
+      "title": "U + Ur Hand"
     },
     {
       "postId": 50109,
@@ -97740,7 +97940,20 @@
       "id": 5223,
       "artist": "New Kids On Block",
       "song": "Step By Step",
-      "matched": false
+      "matched": true,
+      "artistCredit": "New Kids on the Block",
+      "artistMbids": [
+        "090dafe5-818c-4bba-9ebf-7e3a651a5c43"
+      ],
+      "recording": "Step by Step",
+      "recordingMbid": "ee67f77f-c7db-406d-b5cc-a79189ef32af",
+      "release": "Step By Step",
+      "score": 44258,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "New Kids On Block",
+      "trusted": true,
+      "title": "Step by Step"
     },
     {
       "postId": 51852,
@@ -101850,7 +102063,20 @@
       "id": 5439,
       "artist": "Strokes, The",
       "song": "Someday",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Strokes",
+      "artistMbids": [
+        "f181961b-20f7-459e-89de-920ef03c7ed0"
+      ],
+      "recording": "Someday",
+      "recordingMbid": "e8d5c3f6-494f-439a-8f6c-889df2b7a4b8",
+      "release": "Is This It",
+      "score": 280072,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Strokes, The",
+      "trusted": true,
+      "title": "Someday"
     },
     {
       "postId": 52961,
@@ -101934,18 +102160,20 @@
       "artist": "The Lonely Island Feat. Adam Levine & Kendrick Lam",
       "song": "Yolo",
       "matched": true,
-      "artistCredit": "The Lonely Island",
+      "artistCredit": "The Lonely Island feat. Adam Levine & Kendrick Lamar",
       "artistMbids": [
-        "028e1863-cab4-4a3d-9dd9-91c682c91005"
+        "028e1863-cab4-4a3d-9dd9-91c682c91005",
+        "a1421d73-1a21-484b-97ad-77c9a5676daf",
+        "381086ea-f511-4aba-bdf9-71c753dc5077"
       ],
-      "recording": "Yolo",
-      "recordingMbid": "6d4148cf-4d42-4405-bf0b-6b2d5d9023c8",
+      "recording": "YOLO",
+      "recordingMbid": "0c8e6ee0-393f-4f53-aa3e-b5aac0eeb867",
       "release": "The Wack Album",
-      "score": 2051697,
-      "how": "title-first",
+      "score": 676450,
+      "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Yolo"
+      "title": "YOLO"
     },
     {
       "postId": 53186,
@@ -102144,7 +102372,20 @@
       "id": 5455,
       "artist": "Who, The",
       "song": "Baba O'riley",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Who",
+      "artistMbids": [
+        "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
+      ],
+      "recording": "Baba O’Riley",
+      "recordingMbid": "a6081bc1-2a76-4984-b21f-38bc3dcca3a5",
+      "release": "Who’s Next",
+      "score": 1603,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Who, The; O'riley casing",
+      "trusted": true,
+      "title": "Baba O’Riley"
     },
     {
       "postId": 53563,
@@ -102706,7 +102947,20 @@
       "id": 5485,
       "artist": "Eamon",
       "song": "Fuck it, i dont want yo back",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eamon",
+      "artistMbids": [
+        "d791111a-9fcc-4ebe-bb16-b785719a642b"
+      ],
+      "recording": "Fuck It (I Don’t Want You Back)",
+      "recordingMbid": "d4b6a184-c08b-4bd4-ae97-fb42f478c23c",
+      "release": "I Don’t Want You Back",
+      "score": 364177,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "title",
+      "trusted": true,
+      "title": "Fuck It (I Don’t Want You Back)"
     },
     {
       "postId": 49415,
@@ -104059,7 +104313,21 @@
       "id": 5558,
       "artist": "Ed Sheeran Ft. Eminem",
       "song": "River",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eminem feat. Ed Sheeran",
+      "artistMbids": [
+        "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
+      ],
+      "recording": "River",
+      "recordingMbid": "32d6bfe9-b231-4d5f-9034-61226f7d7d96",
+      "release": "Revival",
+      "score": 780377,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "backup; dump bills Eminem first",
+      "trusted": true,
+      "title": "River"
     },
     {
       "postId": 52006,
@@ -104199,7 +104467,20 @@
       "id": 5566,
       "artist": "The police",
       "song": "De do do de",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Police",
+      "artistMbids": [
+        "9e0e2b01-41db-4008-bd8b-988977d6019a"
+      ],
+      "recording": "De Do Do Do, De Da Da Da",
+      "recordingMbid": "66eb9308-6b98-4cf0-8127-830508000a98",
+      "release": "Zenyattà Mondatta",
+      "score": 1399,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "venue truncated the title",
+      "trusted": true,
+      "title": "De Do Do Do, De Da Da Da"
     },
     {
       "postId": 53160,
@@ -104983,14 +105264,42 @@
       "id": 5609,
       "artist": "Justin Bieber ft Ed sheeran",
       "song": "I don't care",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ed Sheeran & Justin Bieber",
+      "artistMbids": [
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+      ],
+      "recording": "I Don’t Care",
+      "recordingMbid": "09fe14ca-7734-4fa0-9365-8159d236d7af",
+      "release": "No.6 Collaborations Project",
+      "score": 811894,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "backup if collab-scoped misses; dump bills Sheeran first",
+      "trusted": true,
+      "title": "I Don’t Care"
     },
     {
       "postId": 51793,
       "id": 5610,
       "artist": "Nas Ft Billy Ray Cyrus",
       "song": "Old town road",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lil Nas X feat. Billy Ray Cyrus",
+      "artistMbids": [
+        "0b30341b-b59d-4979-8130-b66c0e475321",
+        "63e8d6f9-e247-45c9-aaf2-e079cddbdd54"
+      ],
+      "recording": "Old Town Road",
+      "recordingMbid": "b60afa19-1768-4046-b6eb-d76b5d4554f1",
+      "release": "Cream of Country 2020",
+      "score": 5533551,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "venue credited Nas; Lil Nas X",
+      "trusted": true,
+      "title": "Old Town Road"
     },
     {
       "postId": 52150,
@@ -105784,7 +106093,22 @@
       "id": 5652,
       "artist": "J Balvin ft. Cardi B",
       "song": "I like it",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cardi B, Bad Bunny & J Balvin",
+      "artistMbids": [
+        "2f3c4d70-0462-40da-bba3-0aec5772c556",
+        "89aa5ecb-59ad-46f5-b3eb-2d424e941f19",
+        "5bdeb32d-56a5-4b6d-a768-264101fa0a0a"
+      ],
+      "recording": "I Like It",
+      "recordingMbid": "e6e2b27b-2de0-445d-b4a8-bc722c3ebcfe",
+      "release": "Invasion of Privacy",
+      "score": 806440,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Cardi B lead; venue had J Balvin ft Cardi B",
+      "trusted": true,
+      "title": "I Like It"
     },
     {
       "postId": 52151,
@@ -108728,7 +109052,20 @@
       "id": 5810,
       "artist": "Lil Naz X",
       "song": "Call me by your name",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lil Nas X",
+      "artistMbids": [
+        "0b30341b-b59d-4979-8130-b66c0e475321"
+      ],
+      "recording": "MONTERO (Call Me by Your Name)",
+      "recordingMbid": "6ed6a516-8b56-4ba2-a621-00678bc86ec5",
+      "release": "MONTERO",
+      "score": 1481841,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Call me by your name",
+      "trusted": true,
+      "title": "MONTERO (Call Me by Your Name)"
     },
     {
       "postId": 52198,
