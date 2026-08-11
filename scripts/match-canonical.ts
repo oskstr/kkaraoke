@@ -145,13 +145,26 @@ function fromAnnotation(recording: string): string | undefined {
 }
 
 /**
+ * MusicBrainz often labels the second half of a medley as `Excerpt From 'Song'`. That is
+ * cataloguing, not a title — and it is not our `from` field (shows and films). Karaoke
+ * wants the song name: `I'm a King Bee / Back Door Man`.
+ */
+function stripExcerptFromLabels(title: string): string {
+    const cleaned = title.replace(
+        /\bExcerpt From\s+['"“”‘’]?([^'"“”‘’/]+?)['"“”‘’]?(?=\s*\/|\s*$|\s*[([])/gi,
+        "$1",
+    );
+    return cleaned === title ? title : cleaned.replace(/\s+/g, " ").trim();
+}
+
+/**
  * The title to publish, which is MusicBrainz's exact recording title unless that title only
  * differs by naming a master we did not ask about — or by naming the film it is from.
  */
 function titleToUse(recording: string): { title: string; from?: string } {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] === undefined || !VERSION_MARKER.test(bracket[1])) {
-        return { title: recording };
+        return { title: stripExcerptFromLabels(recording) };
     }
     // Language versions are the song the venue meant, not a master to strip away.
     if (LANGUAGE_VERSION.test(bracket[1])) {
@@ -159,13 +172,15 @@ function titleToUse(recording: string): { title: string; from?: string } {
         if (language !== undefined) {
             const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
             return {
-                title: recording.replace(new RegExp(language, "i"), capitalized).replace(/\s+/g, " ").trim(),
+                title: stripExcerptFromLabels(
+                    recording.replace(new RegExp(language, "i"), capitalized).replace(/\s+/g, " ").trim(),
+                ),
             };
         }
-        return { title: recording };
+        return { title: stripExcerptFromLabels(recording) };
     }
     const base = withoutAnnotation(recording);
-    const title = base.length > 0 ? base : recording;
+    const title = stripExcerptFromLabels(base.length > 0 ? base : recording);
     const from = fromAnnotation(recording);
     return from === undefined ? { title } : { title, from };
 }

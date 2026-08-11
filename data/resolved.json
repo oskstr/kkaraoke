@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T15:29:26.404Z",
+  "generatedAt": "2026-08-11T17:44:14.449Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -76024,7 +76024,7 @@
     },
     {
       "postId": 50082,
-      "title": "I’m a King Bee / Excerpt From ’Back Door Man’",
+      "title": "I'm a King Bee / Back Door Man",
       "artistMbids": [
         "837d85bc-0764-4a08-90a4-61fb3c3c7a0a"
       ],
