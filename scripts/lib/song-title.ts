@@ -8,9 +8,13 @@
  * the place to get a clean song name.
  */
 
-/** Words that mark a particular master rather than the song's name. */
+/**
+ * Words that mark a particular master rather than the song's name.
+ * Includes mixtape/DJ jargon (`blend`, `rmx`, `emix`, `revision`) so
+ * `In Da Club (Blend By 2sty)` publishes as `In Da Club`.
+ */
 export const VERSION_MARKER =
-    /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from)\b/i;
+    /\b(?:mix|remix|rmx|emix|blend|revision|rework|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from|mixtape|(?:the\s+)?video|sessions?|slowed|chopped|hook|intro|outro)\b/i;
 
 /** A language in the bracket is why the venue wrote it — keep `Du hast (English version)`. */
 export const LANGUAGE_VERSION =

@@ -162,11 +162,11 @@
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
-      "recording": "Secret (DiFrankz' 2003 Confidential Chill Out Mix)",
-      "recordingMbid": "6dcfc578-8bfa-4111-983d-1ee325f7b8e3",
-      "release": "Chill Out",
-      "score": 4474335,
-      "how": "version",
+      "recording": "Secret",
+      "recordingMbid": "aa71ed74-f19d-4c86-a910-91119d6d67ac",
+      "release": "Bedtime Stories",
+      "score": 111166,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Singular studio",
       "venueArtist": "Madonna",
@@ -971,16 +971,18 @@
       "artist": "Connells",
       "song": "74-75",
       "matched": true,
-      "artistCredit": "Connells",
+      "artistCredit": "The Connells",
       "artistMbids": [
         "daeea3e4-d2de-4ef4-a5c0-a90bf227c705"
       ],
-      "recording": "’74‐’75 (acoustic)",
-      "recordingMbid": "af448e21-dae0-4bd1-b7e4-c99131c8720c",
-      "release": "Unplugged as Good as It Gets",
-      "score": 5470551,
-      "how": "version",
-      "rewrites": [],
+      "recording": "’74–’75",
+      "recordingMbid": "bcb4d5d0-e8e2-4284-8a62-ec74f808a5de",
+      "release": "Ring",
+      "score": 91389,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "’74–’75"
     },
@@ -1381,11 +1383,11 @@
       "artistMbids": [
         "77e6c304-599d-46e0-8ba3-238207a43668"
       ],
-      "recording": "She Wants You (Cevin Fisher Instinctive club mix)",
-      "recordingMbid": "503bbb0a-a0f0-4cba-8549-fdd3e650d4a9",
-      "release": "The Best Club Anthems 99 …Ever!",
-      "score": 5444118,
-      "how": "version",
+      "recording": "She Wants You",
+      "recordingMbid": "658c8fd3-fb8d-4fa4-92fa-753d03887b00",
+      "release": "Honey to the B",
+      "score": 203362,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Bill truncated Billie",
       "venueArtist": "Bill",
@@ -1689,21 +1691,23 @@
       "artist": "Christina Aguilera, Lil Kim, Mya & Pink",
       "song": "Lady Marmalade",
       "matched": true,
-      "artistCredit": "Christina Aguilera, Lil’ Kim, Mya & Pink",
+      "artistCredit": "Christina Aguilera, Lil’ Kim, Mya and Pink",
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
         "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e",
         "7c5e39c3-7645-4e37-968d-a4e45cd38c5d",
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
-      "recording": "Lady Marmalade (Thunderpuss club mix)",
-      "recordingMbid": "7dd46246-1f40-4bfa-94ee-f63d85cbdf62",
-      "release": "Promo Only: Mainstream Club, July 2001",
-      "score": 5458583,
+      "recording": "Lady Marmalade (Thunderpuss Thunderdub)",
+      "recordingMbid": "fbfde8f2-d78a-433c-ab7b-c5878249ea5d",
+      "release": "Come What May",
+      "score": 2313444,
       "how": "version",
-      "rewrites": [],
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
-      "title": "Lady Marmalade"
+      "title": "Lady Marmalade (Thunderpuss Thunderdub)"
     },
     {
       "postId": 51228,
@@ -2525,12 +2529,15 @@
       "artistMbids": [
         "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
       ],
-      "recording": "How Come You Don't Call Me Anymore",
-      "recordingMbid": "fd6ef57e-2193-459f-89ea-da62c3b6e750",
-      "release": "Radio City Hall NYC",
-      "score": 4667029,
+      "recording": "How Come You Don’t Call Me",
+      "recordingMbid": "ebe13618-bbdd-4ef3-9a91-9981602e528f",
+      "release": "Songs in A minor",
+      "score": 278388,
       "how": "exact",
       "rewrites": [],
+      "proposed": "MusicBrainz studio recordings of her Songs in A Minor cut use this title (e.g. recording ebe13618-…, 2001-06-05). The linked work is Prince's How Come U Don't Call Me Anymore; work aliases only add a You/Anymore? search hint, not this short form. Dump had matched a live cover titled …Anymore.",
+      "venueArtist": "Alicia Keys",
+      "proposalArtist": "Alicia Keys",
       "trusted": true,
       "title": "How Come You Don't Call Me"
     },
@@ -3138,14 +3145,14 @@
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "Like I Love You (MTV's Making the video - Excerpts)",
-      "recordingMbid": "6dfbb301-b562-43dd-a559-40bf6f9b098c",
-      "release": "Justified the Videos",
-      "score": 5204953,
+      "recording": "Like I Love You? (Dsico disctruct)",
+      "recordingMbid": "1d7473bc-dbc7-43be-802b-88b67be0e994",
+      "release": "I'm Not Retarded",
+      "score": 310243,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Like I Love You (MTV's Making the video - Excerpts)"
+      "title": "Like I Love You? (Dsico disctruct)"
     },
     {
       "postId": 48066,
@@ -3290,10 +3297,10 @@
       "artistMbids": [
         "78e98e0e-f873-4e5e-b4b7-88b7293fd713"
       ],
-      "recording": "AM to PM (mainstream version without intro)",
-      "recordingMbid": "34548598-c897-425e-b28c-005134cb6bb3",
-      "release": "Promo Only: Mainstream Radio, August 2001",
-      "score": 5620033,
+      "recording": "AM To PM (DJ Can't Say No x Spice Ranger Bootleg)",
+      "recordingMbid": "e5a483a5-7796-4ca2-8524-cb70d57b7de8",
+      "release": "AM To PM (DJ Can't Say No x Spice Ranger Bootleg)",
+      "score": 5050760,
       "how": "version",
       "rewrites": [],
       "proposed": "one l too many",
@@ -3312,11 +3319,11 @@
       "artistMbids": [
         "c0c5e158-d61d-4043-a0eb-dc6cc1e0a539"
       ],
-      "recording": "Dy-Na-Mi-Tee (album version)",
-      "recordingMbid": "07e7334e-91cf-45c5-b4d1-77004c29ad12",
-      "release": "Just the Hits: Girl Power",
-      "score": 5533207,
-      "how": "version",
+      "recording": "Dy‐na‐mi‐tee",
+      "recordingMbid": "0baa7ad3-1ed8-4538-941d-bb9d3e484411",
+      "release": "A Little Deeper",
+      "score": 306554,
+      "how": "exact",
       "rewrites": [],
       "proposed": "venue Dynamite/Dy-na-mi-te is Ms. Dynamite's Dy-Na-Mi-Tee",
       "venueArtist": "Dynamite",
@@ -4222,14 +4229,14 @@
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
       ],
-      "recording": "In Da Club (Blend By 2sty)",
-      "recordingMbid": "1054bceb-d3c6-4671-9182-6794753dfbde",
-      "release": "Jamnik Mixtape",
-      "score": 1836246,
-      "how": "version",
+      "recording": "In da Club",
+      "recordingMbid": "87877ebd-874b-4dd2-83c6-4c1360ba26a0",
+      "release": "Get Rich or Die Tryin’",
+      "score": 330949,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "In Da Club (Blend By 2sty)"
+      "title": "In da Club"
     },
     {
       "postId": 52546,
@@ -4260,12 +4267,14 @@
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
       ],
-      "recording": "Beautiful (remix)",
-      "recordingMbid": "667461d5-8751-4cf8-8c80-24953983512f",
-      "release": "Pop Beats V07 S06 (disc 1)",
-      "score": 5626324,
+      "recording": "Beautiful",
+      "recordingMbid": "77fba263-80bc-4233-9694-210567d5c947",
+      "release": "Stripped",
+      "score": 311454,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
       "title": "Beautiful"
     },
@@ -7695,18 +7704,20 @@
       "artist": "Beatles",
       "song": "Sgt Peppers lonely hearts club band",
       "matched": true,
-      "artistCredit": "Beatles",
+      "artistCredit": "The Beatles",
       "artistMbids": [
         "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
       ],
-      "recording": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",
-      "recordingMbid": "52ae315f-b83e-4ed0-8dfd-3b20b91d6252",
-      "release": "Sgt: Peppers Lonely Hearts Club Band Rockband Mixes 2009",
-      "score": 2044123,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Sgt. Pepper’s Lonely Hearts Club Band",
+      "recordingMbid": "c55e74ff-bd7d-40ff-a591-c6993c59bda8",
+      "release": "Sgt. Pepper’s Lonely Hearts Club Band",
+      "score": 43,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Sgt. Pepper's Lonely Hearts Club Band"
+      "title": "Sgt. Pepper’s Lonely Hearts Club Band"
     },
     {
       "postId": 48250,
@@ -11607,14 +11618,14 @@
       "artistMbids": [
         "e33c460f-011a-469a-b934-08932a3729c4"
       ],
-      "recording": "Endless Summer Night",
-      "recordingMbid": "5220fc9d-8ad4-4444-871b-cad238b64981",
-      "release": "Hard Rock Live at the channel [V]",
-      "score": 4525164,
-      "how": "exact",
+      "recording": "Endless Summer Nights",
+      "recordingMbid": "0c72beea-313e-47ea-bca9-2f244388fe48",
+      "release": "Richard Marx",
+      "score": 14472,
+      "how": "spelling",
       "rewrites": [],
       "trusted": true,
-      "title": "Endless Summer Night"
+      "title": "Endless Summer Nights"
     },
     {
       "postId": 52398,
@@ -11724,14 +11735,14 @@
       "artistMbids": [
         "a35237a0-4f47-40a6-b6f3-1e786db23402"
       ],
-      "recording": "Tonight's the Night",
-      "recordingMbid": "16b558b4-5281-4601-b3db-98d01ecf3044",
-      "release": "Live in Melbourne, Australia, 1977",
-      "score": 4512296,
-      "how": "exact",
+      "recording": "Tonight’s the Night (Gonna Be Alright)",
+      "recordingMbid": "c829ed77-4332-42e0-a252-d3476d7c4374",
+      "release": "A Night on the Town",
+      "score": 23027,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Tonight's the Night"
+      "title": "Tonight’s the Night (Gonna Be Alright)"
     },
     {
       "postId": 51271,
@@ -12605,11 +12616,11 @@
       "artistMbids": [
         "d138302b-4f57-4d1d-83e3-47f95cb51774"
       ],
-      "recording": "Everyway That I Can (remix)",
-      "recordingMbid": "fe0425b4-2605-4d1c-ba85-9db782bcc122",
-      "release": "Arabian Sweet Pop Mix",
-      "score": 5622914,
-      "how": "version",
+      "recording": "Everyway That I Can",
+      "recordingMbid": "84cf85f0-6593-4f52-b563-e9299846ea2a",
+      "release": "Everyway That I Can",
+      "score": 3705605,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Sertab; every way that l can",
       "venueArtist": "Sertab",
@@ -13358,11 +13369,11 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Lena Anthem (album version)",
-      "recordingMbid": "68a742f5-c423-4284-b605-447609222221",
-      "release": "Lena Anthem",
-      "score": 2327967,
-      "how": "version",
+      "recording": "Lena Anthem",
+      "recordingMbid": "750b126e-ecbd-46d8-ac11-651cc97ad312",
+      "release": "Det gör ont en stund på natten men inget på dan",
+      "score": 368867,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Lena PH is how the venue abbreviates Lena Philipsson",
       "venueArtist": "Lena PH",
@@ -14228,14 +14239,14 @@
       "artistMbids": [
         "fcdeb957-b420-4249-a092-946b537a00ca"
       ],
-      "recording": "I Wish I Was a Punk Rocker",
-      "recordingMbid": "2ccdf997-359e-40b3-b0da-00eceb8ac4e6",
-      "release": "Live from the Basement",
-      "score": 1031375,
-      "how": "exact",
+      "recording": "I Wish I Was a Punk Rocker (with Flowers in My Hair)",
+      "recordingMbid": "d5e013b6-d195-498a-9f1d-284bda4e601c",
+      "release": "Smile… It Confuses People",
+      "score": 433660,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I Wish I Was a Punk Rocker"
+      "title": "I Wish I Was a Punk Rocker (with Flowers in My Hair)"
     },
     {
       "postId": 52844,
@@ -18465,11 +18476,11 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Det gör ont (Filterfokker remix)",
-      "recordingMbid": "b5cdc4a8-aa51-4a84-a767-6442d752e212",
-      "release": "Det gör ont",
-      "score": 3478833,
-      "how": "version",
+      "recording": "Det gör ont",
+      "recordingMbid": "17af4b39-adbb-4f38-a8e3-c0e8949f60f9",
+      "release": "Det gör ont en stund på natten men inget på dan",
+      "score": 368867,
+      "how": "exact",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
       "venueArtist": "Lena PH",
@@ -18753,11 +18764,11 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Dansa i neon (Bäcklin remix)",
-      "recordingMbid": "9a1c0754-6277-4cfb-88ab-e323d388401d",
-      "release": "Schooldays: 20 lektioner i musik",
-      "score": 5450291,
-      "how": "version",
+      "recording": "Dansa i neon",
+      "recordingMbid": "6363d6f2-a91e-4b49-86e7-f47615ea20ea",
+      "release": "Dansa i neon",
+      "score": 18278,
+      "how": "exact",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
       "venueArtist": "Lena PH",
@@ -23096,14 +23107,14 @@
       "artistMbids": [
         "ec4b6d29-527c-4cc0-89bb-8a4775f350d0"
       ],
-      "recording": "I Hear You Knockin’",
-      "recordingMbid": "96c6669c-0ee3-4f3f-9247-664c79c5baac",
-      "release": "Live at Rockpalast: Loreley 1983",
-      "score": 4564303,
-      "how": "exact",
+      "recording": "I Hear You Knocking",
+      "recordingMbid": "2efe447c-095a-4e8b-9e6e-9b19c954fc53",
+      "release": "Rockpile",
+      "score": 281910,
+      "how": "spelling",
       "rewrites": [],
       "trusted": true,
-      "title": "I Hear You Knockin’"
+      "title": "I Hear You Knocking"
     },
     {
       "postId": 51727,
@@ -23650,16 +23661,18 @@
       "artist": "Bellamy Brothers",
       "song": "Let your love flow",
       "matched": true,
-      "artistCredit": "Bellamy Brothers",
+      "artistCredit": "The Bellamy Brothers",
       "artistMbids": [
         "252b5d32-5bd5-4cae-9d48-6aafa2145c33"
       ],
       "recording": "Let Your Love Flow",
-      "recordingMbid": "23547372-4aca-4ffe-82ec-b46c1093d761",
-      "release": "Live at Gilley’s",
-      "score": 4533324,
+      "recordingMbid": "f86acf5f-fb5f-4346-938f-940ba31076ae",
+      "release": "The Anthology, Vol. 1",
+      "score": 567837,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Let Your Love Flow"
     },
@@ -25392,18 +25405,20 @@
       "artist": "Chordettes",
       "song": "Mr Sandman",
       "matched": true,
-      "artistCredit": "Chordettes",
+      "artistCredit": "The Chordettes",
       "artistMbids": [
         "997117eb-5a4c-4a37-99f9-f2515e2d9739"
       ],
-      "recording": "Mr Sandman (Father Funk remix)",
-      "recordingMbid": "46111805-b348-4a73-bf6e-26486ec49ab9",
-      "release": "Bootlegs 'n' B-Sides",
-      "score": 5569769,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Mr. Sandman",
+      "recordingMbid": "99e6ab9f-b9e5-4f14-8073-2c0cd53274e9",
+      "release": "Greatest Hits",
+      "score": 1002163,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Mr Sandman"
+      "title": "Mr. Sandman"
     },
     {
       "postId": 50411,
@@ -26213,14 +26228,14 @@
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
       ],
-      "recording": "Dirty (G Sweet remix)",
-      "recordingMbid": "2331f4e6-7d41-497d-9d5d-5ab0f09bc8d9",
-      "release": "Mutant Pop Six",
-      "score": 5595811,
-      "how": "version",
+      "recording": "Dirty - Beginn",
+      "recordingMbid": "d50e6725-5634-458f-9b60-f2425393ee19",
+      "release": "Musik und Bildung: 2005 04 Mozart 2006",
+      "score": 4980164,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Dirty"
+      "trusted": false,
+      "title": "Dirty - Beginn"
     },
     {
       "postId": 51992,
@@ -27738,14 +27753,14 @@
       "artistMbids": [
         "197450cd-0124-4164-b723-3c22dd16494d"
       ],
-      "recording": "New York, New York",
-      "recordingMbid": "cd2c878d-ce41-4eec-a14d-e811c53f11e4",
-      "release": "Sinatra 80th: Live in Concert",
-      "score": 4524512,
-      "how": "exact",
+      "recording": "New York, New York (Chew Fu Big Room Fix)",
+      "recordingMbid": "e2cb11f5-2330-45c0-b51b-c6d2b055d9bc",
+      "release": "Remix Your Bootz Party",
+      "score": 4475709,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "New York, New York"
+      "title": "New York, New York (Chew Fu Big Room Fix)"
     },
     {
       "postId": 48283,
@@ -28638,16 +28653,18 @@
       "artist": "Drifters",
       "song": "Under the boardwalk",
       "matched": true,
-      "artistCredit": "Drifters",
+      "artistCredit": "The Drifters",
       "artistMbids": [
         "9e2d3f58-0653-4007-bcb7-1746fcdd9363"
       ],
       "recording": "Under the Boardwalk",
-      "recordingMbid": "1ebc7513-8ed6-4d47-8441-d8551b9e6291",
-      "release": "Soul Chronology Live! – The Sixties",
-      "score": 5392097,
+      "recordingMbid": "44ec0e2c-ca79-40b1-b5b7-44416ca156cb",
+      "release": "Under the Boardwalk",
+      "score": 101958,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Under the Boardwalk"
     },
@@ -31900,12 +31917,14 @@
       "artistMbids": [
         "9092d8e1-9b38-4372-a96d-000b8561a8bc"
       ],
-      "recording": "How Do I Live (dance mix)",
-      "recordingMbid": "3e4e9601-10c0-4045-9044-de2da0a362d5",
-      "release": "New Hits 1998",
-      "score": 5436317,
+      "recording": "How Do I Live",
+      "recordingMbid": "2459a758-046a-4886-b42d-b496a5ad3d2a",
+      "release": "Sittin’ on Top of the World",
+      "score": 199753,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
       "title": "How Do I Live"
     },
@@ -34368,16 +34387,14 @@
       "artistMbids": [
         "20ff3303-4fe2-4a47-a1b6-291e26aa3438"
       ],
-      "recording": "Say It Loud, I’m Black I’m Proud",
-      "recordingMbid": "e54e2073-8798-42a1-b7ce-43e50a07b3f0",
-      "release": "The Complete Works: The Very Best of Music",
-      "score": 4866615,
-      "how": "exact",
-      "rewrites": [
-        "ampersand-spelled-out"
-      ],
+      "recording": "Say It Loud - I'm Black And I'm Proud (Pt. 1&2)",
+      "recordingMbid": "60c80cf4-6268-4af7-a746-b853b72e9164",
+      "release": "Say It Loud: I’m Black and I’m Proud",
+      "score": 2035001,
+      "how": "version",
+      "rewrites": [],
       "trusted": true,
-      "title": "Say It Loud (I’m Black, I’m Proud)"
+      "title": "Say It Loud - I'm Black And I'm Proud (Pt. 1&2)"
     },
     {
       "postId": 51816,
@@ -34445,20 +34462,18 @@
       "artist": "Blues Brothers",
       "song": "Soul man",
       "matched": true,
-      "artistCredit": "The Blues Brothers",
+      "artistCredit": "Blues Brothers",
       "artistMbids": [
-        "165d17a9-c8aa-41bf-9db2-adefce5cefd9"
+        "7252abc2-dfc8-4aa6-889f-2d168b265403"
       ],
-      "recording": "Soul Man",
-      "recordingMbid": "a520477b-547b-49a2-a9ec-0cec47ada38f",
-      "release": "‘TPH Production’ Perform a Tribute to the Blues Brothers",
-      "score": 1026718,
-      "how": "exact",
-      "rewrites": [
-        "artist-article-added"
-      ],
-      "trusted": true,
-      "title": "Soul Man"
+      "recording": "Soul Man (reprise) / End Credits",
+      "recordingMbid": "e1a2342a-be92-40dd-b447-e69ce9a7330d",
+      "release": "The Best of the Blues Brothers",
+      "score": 4947433,
+      "how": "loose",
+      "rewrites": [],
+      "trusted": false,
+      "title": "Soul Man (reprise) / End Credits"
     },
     {
       "postId": 49504,
@@ -34671,12 +34686,14 @@
       "artistMbids": [
         "43c4fe8f-84d8-4922-835f-ffeed8a1d7b4"
       ],
-      "recording": "Wishin’ and Hopin’ (rerecorded)",
-      "recordingMbid": "bbd4574f-5dd0-43f7-b8e0-8aa6758c91d5",
-      "release": "100 Hits of the Swingin’ Sixties",
-      "score": 5596041,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Wishin’ & Hoping",
+      "recordingMbid": "111b3dfd-bca3-41af-b98e-09b2ba47af1c",
+      "release": "Modrophenia: The Hits of the Sixties",
+      "score": 5443904,
+      "how": "spelling",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "proposed": "Canonical",
       "venueArtist": "Merseybeats",
       "proposalArtist": "The Merseybeats",
@@ -34846,14 +34863,16 @@
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
-      "recording": "Power of Goodbye (Demo)",
-      "recordingMbid": "21d7cf33-8660-4c64-a66e-0d1444455478",
-      "release": "Demo",
-      "score": 5316418,
-      "how": "version",
-      "rewrites": [],
+      "recording": "The Power of Good‐Bye",
+      "recordingMbid": "cb51201b-a94d-4f1c-9d2e-ed94803e469a",
+      "release": "Ray of Light",
+      "score": 197198,
+      "how": "exact",
+      "rewrites": [
+        "title-article-added"
+      ],
       "trusted": true,
-      "title": "Power of Goodbye"
+      "title": "The Power of Good‐Bye"
     },
     {
       "postId": 51421,
@@ -37645,14 +37664,14 @@
       "artistMbids": [
         "b60527cc-54f3-4bbe-a01b-dcf34c95ae14"
       ],
-      "recording": "McArthur Park (RAINmaker ReStructure Mix)",
-      "recordingMbid": "e4b672a4-35c2-49cc-b13e-88c1ca726769",
+      "recording": "McArthur Park Suite",
+      "recordingMbid": "071e359f-8358-40a2-8134-b08df8107989",
       "release": "Greatest Remixes: I Feel Love",
       "score": 4486954,
-      "how": "version",
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "McArthur Park"
+      "trusted": false,
+      "title": "McArthur Park Suite"
     },
     {
       "postId": 53047,
@@ -37835,16 +37854,18 @@
       "artist": "O'Jays",
       "song": "Back stabbers",
       "matched": true,
-      "artistCredit": "O’Jays",
+      "artistCredit": "The O’Jays",
       "artistMbids": [
         "8153c6ef-026c-481f-b081-974f2c948d9f"
       ],
-      "recording": "Back Stabbers (mono version)",
-      "recordingMbid": "abcc6c9d-b7d3-4ffa-a525-e81a418c8d12",
+      "recording": "Back Stabbers",
+      "recordingMbid": "a362bb56-a30f-4cfa-ac7a-887ca97dc91e",
       "release": "Back Stabbers",
-      "score": 3540953,
-      "how": "version",
-      "rewrites": [],
+      "score": 106185,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Back Stabbers"
     },
@@ -38232,14 +38253,14 @@
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
-      "recording": "The Impossible Dream",
-      "recordingMbid": "802343bc-0e53-45ca-87d1-afd7848b4060",
-      "release": "As Recorded at Madison Square Garden",
-      "score": 4518315,
-      "how": "exact",
+      "recording": "The Impossible Dream (The Quest)",
+      "recordingMbid": "0a38523d-b44b-46c5-a945-8b76b03ffa2d",
+      "release": "You Gave Me a Mountain",
+      "score": 3628850,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "The Impossible Dream"
+      "title": "The Impossible Dream (The Quest)"
     },
     {
       "postId": 51771,
@@ -39737,16 +39758,18 @@
       "artist": "Bellamy Brothers",
       "song": "If I said you had a beautiful body",
       "matched": true,
-      "artistCredit": "Bellamy Brothers",
+      "artistCredit": "The Bellamy Brothers",
       "artistMbids": [
         "252b5d32-5bd5-4cae-9d48-6aafa2145c33"
       ],
-      "recording": "If I Said You Had a Beautiful Body Would You Hold It Against Me?",
-      "recordingMbid": "1249c505-4e2a-46c4-a160-23f76672b459",
-      "release": "Live at Gilley’s",
-      "score": 4533324,
-      "how": "loose",
-      "rewrites": [],
+      "recording": "If I Said You Had a Beautiful Body",
+      "recordingMbid": "99e9059a-98fc-492e-8e4b-c19e986e633e",
+      "release": "The Two and Only",
+      "score": 1722347,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "If I Said You Had a Beautiful Body Would You Hold It Against Me"
     },
@@ -40554,14 +40577,14 @@
       "artistMbids": [
         "d339efbb-77b9-4147-ba9e-59f2f24550b2"
       ],
-      "recording": "I Do Not Hook Up",
-      "recordingMbid": "c37116aa-574e-458d-b8b5-b6bc6a659102",
-      "release": "All I Ever Wanted",
-      "score": 541175,
-      "how": "exact",
+      "recording": "I Do Not Hook Up (Bimbo Jones)",
+      "recordingMbid": "9c25d697-e6cb-4d97-92fa-c10354af96c1",
+      "release": "X-Mix Dance Series 121",
+      "score": 5388056,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I Do Not Hook Up"
+      "title": "I Do Not Hook Up (Bimbo Jones)"
     },
     {
       "postId": 47883,
@@ -43151,18 +43174,20 @@
       "artist": "Kooks",
       "song": "Naive",
       "matched": true,
-      "artistCredit": "Kooks",
+      "artistCredit": "The Kooks",
       "artistMbids": [
         "f82f3a3e-29c2-42ca-b589-bc5dc210fa9e"
       ],
-      "recording": "Naive (Karl G remix)",
-      "recordingMbid": "8e9b9625-d803-4dfb-a71d-868853bc2bc4",
-      "release": "Karl G Remixes 4",
-      "score": 5360389,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Naïve",
+      "recordingMbid": "32c2aff2-2eef-4578-a7f3-a48f94658c94",
+      "release": "Inside In/Inside Out",
+      "score": 425699,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Naive"
+      "title": "Naïve"
     },
     {
       "postId": 53140,
@@ -43524,17 +43549,17 @@
       "artistMbids": [
         "16fdd9af-467f-47ce-bd29-3413b445b90f"
       ],
-      "recording": "Margaritaville (Reprise)",
-      "recordingMbid": "2de26fc8-b50c-430e-94d7-439d7ca1c2bc",
-      "release": "2002‐06‐20: Tweeter Center Tinley Park, IL",
-      "score": 5223292,
-      "how": "version",
+      "recording": "Margaritaville / Boat Drinks",
+      "recordingMbid": "e464347d-1c3a-4a1b-93cf-4ef6cfb9d2f8",
+      "release": "2013‐06‐29: Huntington Bank Pavilion at Northerly Island, Chicago, IL",
+      "score": 5200010,
+      "how": "loose",
       "rewrites": [],
       "proposed": "one t short",
       "venueArtist": "Jimmy Buffet",
       "proposalArtist": "Jimmy Buffett",
       "trusted": true,
-      "title": "Margaritaville"
+      "title": "Margaritaville / Boat Drinks"
     },
     {
       "postId": 48555,
@@ -44756,11 +44781,11 @@
       "artistMbids": [
         "16fdd9af-467f-47ce-bd29-3413b445b90f"
       ],
-      "recording": "Changes in Latitudes, Changes in Attitudes (LP version)",
-      "recordingMbid": "8031ccd2-874e-47f0-8679-634616f8a1bf",
-      "release": "TM Century: GoldDisc 312",
-      "score": 5542066,
-      "how": "version",
+      "recording": "Changes in Latitudes, Changes in Attitudes",
+      "recordingMbid": "5d33301f-58a8-4851-93c5-19cf43e7c5ff",
+      "release": "Changes in Latitudes, Changes in Attitudes",
+      "score": 7719,
+      "how": "exact",
       "rewrites": [],
       "proposed": "both words are plural",
       "venueArtist": "Jimmy Buffet",
@@ -44855,12 +44880,14 @@
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "15257a48-d9f6-4fd1-b30e-323576b15aca"
       ],
-      "recording": "Don’t Go Breaking My Heart (remix)",
-      "recordingMbid": "895ca240-6afd-4ceb-91f3-0f402e60b64a",
-      "release": "Don’t Go Breaking My Heart",
-      "score": 2268227,
+      "recording": "Don’t Go Breaking My Heart",
+      "recordingMbid": "16169863-f864-4ad7-b253-3f1cd5549b58",
+      "release": "Duets",
+      "score": 92691,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
       "title": "Don’t Go Breaking My Heart"
     },
@@ -45506,11 +45533,11 @@
       "artistMbids": [
         "9092d8e1-9b38-4372-a96d-000b8561a8bc"
       ],
-      "recording": "How Do I Live (Re-Imagined)",
-      "recordingMbid": "f26b4e9f-fb03-4ba2-99fa-7964dc711997",
-      "release": "How Do I Live (Re-Imagined)",
-      "score": 2647389,
-      "how": "version",
+      "recording": "How Do I Live",
+      "recordingMbid": "2459a758-046a-4886-b42d-b496a5ad3d2a",
+      "release": "Sittin’ on Top of the World",
+      "score": 199753,
+      "how": "exact",
       "rewrites": [
         "annotation-stripped"
       ],
@@ -46294,14 +46321,14 @@
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
       ],
-      "recording": "Candy Shop",
-      "recordingMbid": "b75b3d42-5c3e-4b1e-b708-98ff5267e29e",
-      "release": "Live at the Hard Rock (edited version)",
-      "score": 4589392,
-      "how": "exact",
+      "recording": "Candy Shop (super clean)",
+      "recordingMbid": "d1d1103f-02e5-48c7-99be-40d6ad788fd8",
+      "release": "Candy Shop",
+      "score": 2336615,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Candy Shop"
+      "title": "Candy Shop (super clean)"
     },
     {
       "postId": 47832,
@@ -48445,14 +48472,14 @@
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
-      "recording": "With Every Heartbeat (Punks Jump Up rmx)",
-      "recordingMbid": "9a971bd9-97a3-401e-9967-a1ef613eabd8",
-      "release": "Sound of the City",
-      "score": 5628897,
-      "how": "version",
+      "recording": "With Every Heartbeat",
+      "recordingMbid": "134c7bc6-0ffa-40c8-814f-f0ae12e10449",
+      "release": "Radio 1’s Live Lounge, Volume 2",
+      "score": 5391440,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "With Every Heartbeat (Punks Jump Up rmx)"
+      "title": "With Every Heartbeat"
     },
     {
       "postId": 48396,
@@ -49091,16 +49118,18 @@
       "artist": "B 52's",
       "song": "Good stuff",
       "matched": true,
-      "artistCredit": "B‐52’s",
+      "artistCredit": "The B‐52s",
       "artistMbids": [
         "127f591a-7e27-4435-92db-0780f219f3a1"
       ],
-      "recording": "Good Stuff (remix)",
-      "recordingMbid": "8db2d8a0-6b5d-4df9-94f2-eef0dab74115",
-      "release": "In the Groove",
-      "score": 5403044,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Good Stuff",
+      "recordingMbid": "73c69e18-5fa7-45c4-9102-cf0526765dc3",
+      "release": "Good Stuff",
+      "score": 73869,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Good Stuff"
     },
@@ -49687,16 +49716,18 @@
       "artist": "B 52's",
       "song": "Roam",
       "matched": true,
-      "artistCredit": "B-52's",
+      "artistCredit": "The B‐52s",
       "artistMbids": [
         "127f591a-7e27-4435-92db-0780f219f3a1"
       ],
-      "recording": "Roam (Miami Funky Break mix)",
-      "recordingMbid": "a39a1b3a-74a8-4115-a70f-90b9612c51bb",
-      "release": "Promo Only: Mainstream Club, September 1998",
-      "score": 5438038,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Roam",
+      "recordingMbid": "8c56fa84-0ee5-43e7-b0b9-b84c6100c948",
+      "release": "Cosmic Thing",
+      "score": 32460,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Roam"
     },
@@ -49710,14 +49741,14 @@
       "artistMbids": [
         "70248960-cb53-4ea4-943a-edb18f7d336f"
       ],
-      "recording": "Rosalita (Come Out Tonight) (Con’t)",
-      "recordingMbid": "1e45dc8a-f4e5-4549-a7b5-b1f6d82f04f1",
-      "release": "Second Day at Castle Hall Vol 2",
-      "score": 4661010,
-      "how": "loose",
+      "recording": "Rosalita (Come Out Tonight)",
+      "recordingMbid": "91fe6d8f-a4c8-488b-862e-6d317e310e8e",
+      "release": "The Wild, the Innocent & The E Street Shuffle",
+      "score": 24809,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "Rosalita (Come Out Tonight) (Con’t)"
+      "trusted": true,
+      "title": "Rosalita (Come Out Tonight)"
     },
     {
       "postId": 49108,
@@ -49882,18 +49913,18 @@
       "artist": "Destiny's Child",
       "song": "Soldier",
       "matched": true,
-      "artistCredit": "Destiny's Child",
+      "artistCredit": "Destiny’s Child",
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
-      "recording": "Soldier (Maurice's Nu Anthem Emix)",
-      "recordingMbid": "7b4b73f4-11d2-42f5-a2ee-4279d54b620a",
-      "release": "Promo Only: Mainstream Club, February 2005",
-      "score": 5485523,
-      "how": "version",
+      "recording": "Soldier",
+      "recordingMbid": "2bee83b5-4ac3-461d-9919-642e21bf172d",
+      "release": "Live in Atlanta",
+      "score": 4547551,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Soldier (Maurice's Nu Anthem Emix)"
+      "title": "Soldier"
     },
     {
       "postId": 48451,
@@ -50874,16 +50905,18 @@
       "artist": "Isley Brothers",
       "song": "Between the sheets",
       "matched": true,
-      "artistCredit": "Isley Brothers",
+      "artistCredit": "The Isley Brothers",
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
-      "recording": "Between the Sheets (Ticklish remix)",
-      "recordingMbid": "ccbdfb6d-d148-4e2a-b863-cd689710dcce",
-      "release": "Girl Trapz, Volume Three",
-      "score": 4456675,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Between the Sheets",
+      "recordingMbid": "e0c9252d-26ab-42a1-afe9-802080b67d94",
+      "release": "Between the Sheets",
+      "score": 5814,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Between the Sheets"
     },
@@ -51104,18 +51137,20 @@
       "artist": "Goo Goo Dolls",
       "song": "Broadway",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
-      "recording": "Broadway [Sessions@aol]",
-      "recordingMbid": "9b5183aa-28f0-480e-b493-e4aa7102a4e6",
-      "release": "Big Machine",
-      "score": 2316552,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Broadway",
+      "recordingMbid": "7487e1db-b678-4320-a25f-9236c8d37efb",
+      "release": "Dizzy Up the Girl",
+      "score": 202536,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Broadway [Sessions@aol]"
+      "title": "Broadway"
     },
     {
       "postId": 52317,
@@ -52029,11 +52064,11 @@
         "b60527cc-54f3-4bbe-a01b-dcf34c95ae14",
         "56cd15a1-0d74-438b-8244-c96ffe1cae03"
       ],
-      "recording": "No More Tears (Enough Is Enough) (remix)",
-      "recordingMbid": "59eddb14-43a6-4941-b227-bf60818fe79c",
-      "release": "DGTL: Laurent Garnier at DGTL Amsterdam, 2018",
-      "score": 5200875,
-      "how": "version",
+      "recording": "No More Tears (Enough Is Enough)",
+      "recordingMbid": "0d569f63-b64f-449d-be3e-8c4ea58d7c70",
+      "release": "The Event of the Decade - A Retrospective",
+      "score": 120600,
+      "how": "exact",
       "rewrites": [],
       "proposed": "classic duet; avoid 2017 remix masters",
       "venueArtist": "Barbra Streisand & Donna Summer",
@@ -54095,14 +54130,14 @@
       "artistMbids": [
         "2e41ae9c-afd2-4f20-8f1e-17281ce9b472"
       ],
-      "recording": "Rich Girl",
-      "recordingMbid": "f38cfe29-42f5-4edb-b60a-83f1eb6eaeba",
-      "release": "Harajuku Lovers Live",
-      "score": 4645360,
-      "how": "exact",
+      "recording": "Rich Girl (Album Track Preview)",
+      "recordingMbid": "5855ff51-9f59-4f1c-9a63-67761f40532d",
+      "release": "What You Waiting For?",
+      "score": 2328387,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Rich Girl"
+      "title": "Rich Girl (Album Track Preview)"
     },
     {
       "postId": 51987,
@@ -54719,16 +54754,18 @@
       "artist": "Rolling Stones",
       "song": "Start me up",
       "matched": true,
-      "artistCredit": "Rolling Stones",
+      "artistCredit": "The Rolling Stones",
       "artistMbids": [
         "b071f9fa-14b0-4217-8e97-eb41da73f598"
       ],
       "recording": "Start Me Up",
-      "recordingMbid": "f79a42ee-2390-4d71-ac47-ee2f205b9cb5",
-      "release": "Sweet Summer Sun: Hyde Park Live",
-      "score": 4647328,
+      "recordingMbid": "0b095f1f-4927-4b86-a2f7-a1b1abf5bac7",
+      "release": "Tattoo You",
+      "score": 1842,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Start Me Up"
     },
@@ -55775,18 +55812,20 @@
       "artist": "Isley Brothers",
       "song": "Who's that lady",
       "matched": true,
-      "artistCredit": "Isley Brothers",
+      "artistCredit": "The Isley Brothers",
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
-      "recording": "Who’s That Lady (The Reflex Revision)",
-      "recordingMbid": "494dcf38-e317-48e7-924f-b6bc323c64dc",
-      "release": "Million Sellers: Valentine Edition",
-      "score": 4479009,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Who’s That Lady",
+      "recordingMbid": "f4601e7f-3d05-4d63-8ace-d7aab143eff1",
+      "release": "Who's That Lady / My Little Girl",
+      "score": 3522392,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Who’s That Lady (The Reflex Revision)"
+      "title": "Who’s That Lady"
     },
     {
       "postId": 51173,
@@ -62308,14 +62347,16 @@
       "artistMbids": [
         "614e3804-7d34-41ba-857f-811bad7c2b7a"
       ],
-      "recording": "Romeo & Juliet (5.1 mix)",
-      "recordingMbid": "4a4d4e76-809e-425f-9024-73415283902f",
-      "release": "Alchemy: Dire Straits Live",
-      "score": 4647169,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Romeo and Juliet",
+      "recordingMbid": "4d75c61b-067e-4ce8-a325-099c8310de97",
+      "release": "Making Movies",
+      "score": 2677,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
-      "title": "Romeo & Juliet"
+      "title": "Romeo and Juliet"
     },
     {
       "postId": 51178,
@@ -73222,11 +73263,11 @@
       "artistMbids": [
         "e57f0cac-4f56-473c-8d7e-d93f753fd586"
       ],
-      "recording": "The Joker [live Don Kirshner's Rock Concert, 1973]",
-      "recordingMbid": "050ce1db-99fc-4cff-b058-b8b014fe2a5c",
-      "release": "Welcome to the Vault",
-      "score": 4850801,
-      "how": "version",
+      "recording": "The Joker",
+      "recordingMbid": "177727a4-92ee-4efe-8498-df6f33ca9372",
+      "release": "The Joker",
+      "score": 47039,
+      "how": "exact",
       "rewrites": [],
       "proposed": "The Joker is Steve Miller Band, not solo Steve Miller",
       "venueArtist": "Steve Miller",
@@ -75957,14 +75998,14 @@
       "artistMbids": [
         "d8354b38-e942-4c89-ba93-29323432abc3"
       ],
-      "recording": "The Kill (Rebirth)",
-      "recordingMbid": "14e09c6c-8b5d-422e-81fb-45f524a81bdd",
-      "release": "Guitar Hero: World Tour",
-      "score": 5379830,
+      "recording": "The Kill (Bury Me)",
+      "recordingMbid": "d80b1b6f-f302-4e9f-8262-18226e077c2e",
+      "release": "The Kill",
+      "score": 3366766,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "The Kill (Rebirth)"
+      "title": "The Kill (Bury Me)"
     },
     {
       "postId": 52369,
@@ -76847,11 +76888,11 @@
       "artistMbids": [
         "99075985-0d80-4692-a15e-b16f78831792"
       ],
-      "recording": "Save the World (Futurebound vs. Metrik remix)",
-      "recordingMbid": "52afff0b-1e29-4ca0-9491-6009063be678",
-      "release": "Drum & Bass Summer Slammers 2011",
-      "score": 5560319,
-      "how": "version",
+      "recording": "Save the World Tonight",
+      "recordingMbid": "dcd79d18-eb8a-4771-a8df-00e86438b9bd",
+      "release": "Mega Dance Top 50 Autumn 2011",
+      "score": 5515076,
+      "how": "loose",
       "rewrites": [],
       "proposed": "feat John Martin",
       "venueArtist": "Swedish House Mafia & John Martin",
@@ -76947,14 +76988,14 @@
       "artistMbids": [
         "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
       ],
-      "recording": "It Will Rain",
-      "recordingMbid": "2cca4426-0679-48be-bd29-9ec8d0173b4b",
-      "release": "The Town Festival 2023",
-      "score": 4632915,
-      "how": "exact",
+      "recording": "It Will Rain (with Alex Patsavas commentary)",
+      "recordingMbid": "7bf03bab-716a-4fae-bd54-e5bef4ad2167",
+      "release": "The Twilight Saga: Breaking Dawn, Part 1: Original Motion Picture Soundtrack",
+      "score": 5380254,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "It Will Rain"
+      "title": "It Will Rain (with Alex Patsavas commentary)"
     },
     {
       "postId": 48883,
@@ -78992,9 +79033,10 @@
       "release": "The Video Year Mix 2011",
       "score": 5205518,
       "how": "version",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
+      "proposed": "Drop Amazing mashup",
+      "venueArtist": "Bruno Mars",
+      "proposalArtist": "Bruno Mars",
       "trusted": true,
       "title": "Just the Way You Are"
     },
@@ -80051,14 +80093,14 @@
       "artistMbids": [
         "23eeaeaf-423d-4859-8c91-2175ece74287"
       ],
-      "recording": "Superman (It Ain’t Easy)",
-      "recordingMbid": "4c87f4b6-32ef-4e0e-b2b7-fdaa38740620",
-      "release": "Ultimate Smallville Soundtrack",
-      "score": 5519493,
+      "recording": "Superman (It’s Not Easy)",
+      "recordingMbid": "6a6e5342-975e-4f2b-9760-c3487c31ec42",
+      "release": "America Town",
+      "score": 254603,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Superman (It Ain’t Easy)"
+      "title": "Superman (It’s Not Easy)"
     },
     {
       "postId": 50141,
@@ -83937,14 +83979,14 @@
       "artistMbids": [
         "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a"
       ],
-      "recording": "You Probably Couldn't See",
-      "recordingMbid": "139ca226-fbf6-4064-a742-4206df2d3536",
-      "release": "2006-08-26: Live at Reading Festival, England",
-      "score": 4632217,
-      "how": "exact",
+      "recording": "You Probably Couldn’t See for the Lights but You Were Staring Straight at Me",
+      "recordingMbid": "d235fada-ee9f-4002-b822-b7bf709026b5",
+      "release": "Whatever People Say I Am, That’s What I’m Not",
+      "score": 426022,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "You Probably Couldn't See"
+      "trusted": false,
+      "title": "You Probably Couldn’t See for the Lights but You Were Staring Straight at Me"
     },
     {
       "postId": 48088,
@@ -85238,11 +85280,11 @@
       "artistMbids": [
         "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
       ],
-      "recording": "Do Somethin’ (DJ Monks remix)",
-      "recordingMbid": "83db0314-db69-4a92-8a6e-a5475f0a1660",
-      "release": "Massive Dance",
-      "score": 5482316,
-      "how": "version",
+      "recording": "Do Somethin’",
+      "recordingMbid": "b1f17b40-b61c-4858-8022-ff974eb255a6",
+      "release": "Circus",
+      "score": 524482,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Canonical beats remix loose",
       "venueArtist": "Britney Spears",
@@ -86018,16 +86060,16 @@
       "artist": "Justin Timberlake & Ciara",
       "song": "Love sex magic",
       "matched": true,
-      "artistCredit": "Ciara Feat. Justin Timberlake",
+      "artistCredit": "Ciara feat. Justin Timberlake",
       "artistMbids": [
         "03172286-f7ed-4864-a4db-459cd5ca9790",
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "Love Sex Magic (Jason Nevins Sex club mix)",
-      "recordingMbid": "20f05e0d-a61c-44bb-ba78-da1c88ce109c",
-      "release": "CD Club Promo Only June 2009 Part 1",
-      "score": 5507302,
-      "how": "version",
+      "recording": "Love Sex Magic",
+      "recordingMbid": "1335e962-109d-4e33-aba2-350370c3c02d",
+      "release": "Maximum Bass Overdrive",
+      "score": 4816795,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Correct lead",
       "venueArtist": "Justin Timberlake & Ciara",
@@ -86560,14 +86602,16 @@
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
-      "recording": "The Image of Me (live)",
-      "recordingMbid": "29c10049-0549-4d4a-8c7e-27abb4b93ecb",
-      "release": "Turn Back the Years (live Oslo ’70)",
-      "score": 4629006,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Image of Me",
+      "recordingMbid": "4d915dd7-a8d6-4722-b8c2-32b9a3ea9b76",
+      "release": "Image of Me / Dim Light Thick Smoke (and Loud Loud Music)",
+      "score": 3503960,
+      "how": "exact",
+      "rewrites": [
+        "title-article-dropped"
+      ],
       "trusted": true,
-      "title": "The Image of Me"
+      "title": "Image of Me"
     },
     {
       "postId": 49080,
@@ -87787,11 +87831,11 @@
       "artistMbids": [
         "8538e728-ca0b-4321-b7e5-cff6565dd4c0"
       ],
-      "recording": "Blasphemous Rumours (Summer Day dance cut)",
-      "recordingMbid": "15d9bbc5-6e80-4cec-909c-9134712b905d",
-      "release": "The First Violation by H Null",
-      "score": 4485271,
-      "how": "version",
+      "recording": "Blasphemous Rumours",
+      "recordingMbid": "3b51de17-0fb6-473d-adfe-a20e0abd7a68",
+      "release": "Some Great Reward",
+      "score": 3044,
+      "how": "exact",
       "rewrites": [],
       "proposed": "Full title",
       "venueArtist": "Depeche Mode",
@@ -88823,17 +88867,16 @@
       "artist": "Eagles",
       "song": "Lying eyes",
       "matched": true,
-      "artistCredit": "The Eagles",
+      "artistCredit": "Eagles",
       "artistMbids": [
         "f46bd570-5768-462e-b84c-c7c993bbf47e"
       ],
-      "recording": "Lyin’ Eyes (edited, mono)",
-      "recordingMbid": "28c29c1d-a5e5-45ac-b9c0-6c5c9e21a693",
-      "release": "Lyin’ Eyes",
-      "score": 3550391,
-      "how": "version",
+      "recording": "Lyin’ Eyes",
+      "recordingMbid": "f4bd678a-f16b-479e-8df1-8233223c6878",
+      "release": "One of These Nights",
+      "score": 4641,
+      "how": "exact",
       "rewrites": [
-        "artist-article-added",
         "title-contraction"
       ],
       "trusted": true,
@@ -89466,14 +89509,16 @@
       "artistMbids": [
         "c3694ddc-f7e5-40dd-9fad-90d11a2c50fa"
       ],
-      "recording": "Seven Deadly Sins",
-      "recordingMbid": "6aa86019-c5a8-4792-8345-6d6dd3f8bfde",
-      "release": "Live at the Greek Theatre",
-      "score": 4556607,
+      "recording": "The Seven Deadly Sins",
+      "recordingMbid": "a3a786cb-1c89-4da3-b843-8a8af967437f",
+      "release": "Within a Mile of Home",
+      "score": 370377,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "title-article-added"
+      ],
       "trusted": true,
-      "title": "Seven Deadly Sins"
+      "title": "The Seven Deadly Sins"
     },
     {
       "postId": 50035,
@@ -89906,14 +89951,14 @@
       "artistMbids": [
         "0d21b01f-21f2-419b-8d98-4158ba0c0aa4"
       ],
-      "recording": "I Can’t Help Myself (Sugar Pie, Honey Bunch) (multiplex: with lead vocals)",
-      "recordingMbid": "2eacf998-8e70-4077-af7b-48241a14763b",
-      "release": "Motown Original Artist Karaoke: I Can’t Help Myself",
-      "score": 5603692,
-      "how": "loose",
+      "recording": "I Can’t Help Myself (Sugar Pie, Honey Bunch)",
+      "recordingMbid": "85323b77-8fce-47a1-ab0d-2366c5300115",
+      "release": "Second Album",
+      "score": 807499,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch) (multiplex: with lead vocals)"
+      "trusted": true,
+      "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch)"
     },
     {
       "postId": 50077,
@@ -91763,14 +91808,14 @@
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "My Love (Ibiza Is Burning)",
-      "recordingMbid": "ab94f4c3-475a-4d06-b84b-1fb4bca4202e",
-      "release": "Promo Only: Mainstream Club, January 2007",
-      "score": 5491910,
+      "recording": "My Love (Parkinson UK TV performance)",
+      "recordingMbid": "40f6ce98-68f5-4423-9ca1-81bad2574da2",
+      "release": "FutureSex/LoveSounds",
+      "score": 483022,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "My Love (Ibiza Is Burning)"
+      "title": "My Love (Parkinson UK TV performance)"
     },
     {
       "postId": 50889,
@@ -94636,17 +94681,19 @@
       "artist": "Prince and the new power generation",
       "song": "Cream",
       "matched": true,
-      "artistCredit": "Prince and The New Power Generation",
+      "artistCredit": "Prince & The New Power Generation",
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e",
         "51d63176-56e8-45b9-88e3-81e6436473f3"
       ],
-      "recording": "Cream (N.P.G. mix)",
-      "recordingMbid": "97d4735c-bf2c-462c-9833-3646a21168d1",
+      "recording": "Cream",
+      "recordingMbid": "08b26cf1-0b15-48e8-9b09-50a0a94a5bcb",
       "release": "Diamonds and Pearls",
-      "score": 865421,
-      "how": "version",
-      "rewrites": [],
+      "score": 60105,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
       "title": "Cream"
     },
@@ -95332,14 +95379,14 @@
       "artistMbids": [
         "ea4dfa26-f633-4da6-a52a-f49ea4897b58"
       ],
-      "recording": "It’s the End of the World as We Know It",
-      "recordingMbid": "d518525e-f2bc-4b96-8461-7024a0b386a9",
-      "release": "Losing My Religion, Volume 3 (Unauthorised live)",
-      "score": 4520515,
-      "how": "exact",
+      "recording": "It’s the End of the World as We Know It (and I Feel Fine)",
+      "recordingMbid": "7b35a0dd-eda8-4757-a759-8a4d0a5679dd",
+      "release": "Document",
+      "score": 14979,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s the End of the World as We Know It"
+      "title": "It’s the End of the World as We Know It (and I Feel Fine)"
     },
     {
       "postId": 52384,
@@ -100136,11 +100183,11 @@
       "artistMbids": [
         "3ebe18d1-dfb6-41eb-8447-4a7693f79d9a"
       ],
-      "recording": "High (Itaal Shur's Beautiful Urban dub mix)",
-      "recordingMbid": "d4adc3ba-ae43-4f2b-a5e9-a6324799172f",
-      "release": "A Taste of the UK Music Scene, CD 1",
-      "score": 5630659,
-      "how": "version",
+      "recording": "High (Francois K vocal 12\" (Pt. 1 & 2))",
+      "recordingMbid": "cdb0716e-b9fe-4ae7-b565-43828c3c366a",
+      "release": "Hed Kandi: Disco Heaven 02.02",
+      "score": 5612169,
+      "how": "loose",
       "rewrites": [],
       "proposed": "Drop inverted The",
       "venueArtist": "Lighthouse Family, The",
@@ -100842,13 +100889,15 @@
       "artistMbids": [
         "33e6ded6-22cc-447e-aefa-9a7a6ba81b6b"
       ],
-      "recording": "Cheerleader (Felix Jaehn remix edit)",
-      "recordingMbid": "7f842cb9-e221-4035-aed5-fb24c41bafae",
-      "release": "Kontor: Top of the Clubs: The Biggest Hits of the Year MMXV",
-      "score": 5525791,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
+      "recording": "Cheerleader",
+      "recordingMbid": "8cf639b9-aff3-47e8-b461-ff93dae8174f",
+      "release": "Young & Free",
+      "score": 1212625,
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": true,
       "title": "Cheerleader"
     },
     {
@@ -102175,16 +102224,18 @@
       "artist": "Temper Trap",
       "song": "Sweet Disposition",
       "matched": true,
-      "artistCredit": "Temper Trap",
+      "artistCredit": "The Temper Trap",
       "artistMbids": [
         "bb6eaced-69dd-4636-829f-9f987acc4fc3"
       ],
-      "recording": "Sweet Disposition (Astrix remix)",
-      "recordingMbid": "8819340c-e6eb-43cb-a94f-0193fc9893ec",
-      "release": "Sweet Disposition (Astrix rmx)",
-      "score": 5017148,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Sweet Disposition",
+      "recordingMbid": "9c57ad32-9688-4ef5-baa2-b79e4d2404ae",
+      "release": "Conditions",
+      "score": 548099,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Sweet Disposition"
     },
@@ -104980,10 +105031,10 @@
       "artistMbids": [
         "99075985-0d80-4692-a15e-b16f78831792"
       ],
-      "recording": "One (White Noise vs. Apocalypse remix)",
-      "recordingMbid": "5028afa2-57f4-4831-944d-e6f543dda31f",
-      "release": "Remixes",
-      "score": 5307836,
+      "recording": "One (Your Name)",
+      "recordingMbid": "3257cc49-8152-452d-adaa-8bfb3771113d",
+      "release": "The Singles",
+      "score": 5140800,
       "how": "version",
       "rewrites": [],
       "proposed": "feat Pharrell",
@@ -106355,14 +106406,14 @@
       "artistMbids": [
         "6b28ecf0-94e6-48bb-aa2a-5ede325b675b"
       ],
-      "recording": "Hook",
-      "recordingMbid": "c3b070b3-3f29-4254-857a-577b7cb1821e",
-      "release": "Four",
-      "score": 110165,
-      "how": "exact",
+      "recording": "Hook (2.0)",
+      "recordingMbid": "d5eceeba-9dd4-47ed-8f9a-a8c1c1aef733",
+      "release": "Run‐Around / Hook (2.0)",
+      "score": 2862155,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Hook"
+      "title": "Hook (2.0)"
     },
     {
       "postId": 50760,
@@ -108237,13 +108288,14 @@
       "matched": true,
       "artistCredit": "Ed Sheeran & Justin Bieber",
       "artistMbids": [
-        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
       ],
-      "recording": "I Don't Care (Chronixx & Koffee Remix)",
-      "recordingMbid": "07049a59-c206-4beb-8833-f4460e562ecb",
-      "release": "I Don’t Care (Chronixx & Koffee remix)",
-      "score": 5032369,
-      "how": "version",
+      "recording": "I Don’t Care",
+      "recordingMbid": "09fe14ca-7734-4fa0-9365-8159d236d7af",
+      "release": "No.6 Collaborations Project",
+      "score": 811894,
+      "how": "exact",
       "rewrites": [],
       "proposed": "backup if collab-scoped misses; dump bills Sheeran first",
       "venueArtist": "Justin Bieber ft Ed sheeran",
@@ -108653,14 +108705,14 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "recording": "Bow Down",
-      "recordingMbid": "b7affb7d-1ff1-4207-8b35-d9f6b8035d5b",
-      "release": "HOMECOMING - THE LIVE ALBUM",
-      "score": 4570741,
-      "how": "exact",
+      "recording": "Bow Down / I Been On",
+      "recordingMbid": "3c0b9ceb-9ba4-4178-90bf-ceef90189f93",
+      "release": "Bow Down / I Been On",
+      "score": 2495102,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Bow Down"
+      "trusted": false,
+      "title": "Bow Down / I Been On"
     },
     {
       "postId": 48318,
@@ -110027,10 +110079,10 @@
         "afdb7919-059d-43c1-b668-ba1d265e7e42",
         "ce4582b6-aee7-4da1-b841-3c619d4fb5a5"
       ],
-      "recording": "Ain’t Nothing Like the Real Thing (The Rurals Cool mix)",
-      "recordingMbid": "45299d39-9807-43b1-8970-b059518d9f79",
-      "release": "Motown Remixed",
-      "score": 5388081,
+      "recording": "Ain’t Nothing Like the Real Thing (alternate take)",
+      "recordingMbid": "28e4004a-7e76-47ae-9cfe-b02da7b292ad",
+      "release": "The Complete Duets",
+      "score": 4759680,
       "how": "version",
       "rewrites": [],
       "proposed": "Duet",
@@ -110334,14 +110386,16 @@
       "artistMbids": [
         "dfe9a7c4-8cf2-47f4-9dcb-d233c2b86ec3"
       ],
-      "recording": "Me and Mr Jones",
-      "recordingMbid": "055c56fa-f2fc-4bab-999e-32e4b06a1a53",
-      "release": "Live Glastonbury Festival",
-      "score": 4576095,
+      "recording": "Me & Mr Jones",
+      "recordingMbid": "217c4f4a-d6d1-44db-9581-4cc83b738446",
+      "release": "Back to Black",
+      "score": 445618,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
-      "title": "Me and Mr Jones"
+      "title": "Me & Mr Jones"
     },
     {
       "postId": 50081,
@@ -110571,10 +110625,10 @@
       "artistMbids": [
         "0d79fe8e-ba27-4859-bb8c-2f255f346853"
       ],
-      "recording": "Blood Sweat & Tears Music Video",
-      "recordingMbid": "39cd6bcb-23c4-4ef8-811a-f4d222900ca7",
-      "release": "FACE YOURSELF",
-      "score": 789483,
+      "recording": "Blood Sweat & Tears - Live",
+      "recordingMbid": "38f1f272-d7e8-4ae7-93ff-3e574eeef484",
+      "release": "PERMISSION TO DANCE ON STAGE - LIVE",
+      "score": 4634535,
       "how": "loose",
       "rewrites": [
         "ampersand-spelled-out"
@@ -110651,12 +110705,15 @@
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "recording": "I’m Like a Lawyer… (Me & You) (Kevin Osmond remix) (WIP as of 12/20/21 version)",
-      "recordingMbid": "152dd5b4-cb9d-4ac5-b04f-9cfa6fc250d6",
-      "release": "Rarities, Unreleased Tracks, and Looks Toward the Future",
-      "score": 5268104,
-      "how": "loose",
+      "recording": "I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)",
+      "recordingMbid": "2c761688-4736-407b-9113-687f9c6d81b0",
+      "release": "Infinity on High",
+      "score": 463515,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Fall out boy",
+      "proposalArtist": "Fall Out Boy",
       "trusted": true,
       "title": "I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)"
     },
@@ -110670,14 +110727,14 @@
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "recording": "This Ain’t a Scene (Jason Nevins radio mix)",
-      "recordingMbid": "66e3c89b-00b9-434f-a14f-a74bb60c54b9",
-      "release": "Remixland Summer 2007",
-      "score": 5388030,
-      "how": "version",
+      "recording": "This Ain’t a Scene, It’s an Arms Race",
+      "recordingMbid": "08239d61-762e-44ac-8f68-aed6760c3caf",
+      "release": "Infinity on High",
+      "score": 463515,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "This Ain’t a Scene"
+      "trusted": false,
+      "title": "This Ain’t a Scene, It’s an Arms Race"
     },
     {
       "postId": 50007,
@@ -110897,19 +110954,17 @@
       "artist": "High school musical",
       "song": "Breaking free",
       "matched": true,
-      "artistCredit": "Zac Efron and Vanessa Hudgens",
+      "artistCredit": "Zac Efron & Vanessa Hudgens",
       "artistMbids": [
         "b25c6c3f-3861-4687-be1d-3c8d238cfb34",
         "9da7ed18-20fa-4279-88c8-94299728236d"
       ],
       "recording": "Breaking Free",
-      "recordingMbid": "4be9aa2a-7220-496e-9135-9ddee00c99fd",
-      "release": "Disney’s Karaoke Series: High School Musical",
-      "score": 4371356,
+      "recordingMbid": "d4182fba-1731-4925-8e76-c64d4a649127",
+      "release": "Hits Remixed",
+      "score": 5546431,
       "how": "exact",
-      "rewrites": [
-        "ampersand-spelled-out"
-      ],
+      "rewrites": [],
       "proposed": "HSM cast",
       "from": "High School Musical",
       "venueArtist": "High school musical",
@@ -112845,24 +112900,19 @@
       "artist": "High school musical",
       "song": "Were all in this together",
       "matched": true,
-      "artistCredit": "The High School Musical Cast",
+      "artistCredit": "High School Musical",
       "artistMbids": [
-        "869b594f-c4f5-4747-ad57-cc9463fef491"
+        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
       ],
-      "recording": "We're All In This Together",
-      "recordingMbid": "d1a18ae6-e97c-475d-93d5-68de28e67ca8",
-      "release": "High School Musical",
-      "score": 4886355,
+      "recording": "We’re All in This Together",
+      "recordingMbid": "8eb65771-0f8a-4068-b5c8-f822ba89a073",
+      "release": "FabricLive.39 (radio mix)",
+      "score": 4943142,
       "how": "exact",
-      "rewrites": [
-        "artist-article-added"
-      ],
-      "proposed": "Cast not [Disney]",
-      "from": "High School Musical",
-      "venueArtist": "High school musical",
-      "proposalArtist": "High School Musical Cast",
+      "rewrites": [],
       "trusted": true,
-      "title": "We’re All in This Together"
+      "title": "We’re All in This Together",
+      "from": "High School Musical"
     },
     {
       "postId": 49946,
@@ -112969,14 +113019,14 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "recording": "Bow Down",
-      "recordingMbid": "b7affb7d-1ff1-4207-8b35-d9f6b8035d5b",
-      "release": "HOMECOMING - THE LIVE ALBUM",
-      "score": 4570741,
-      "how": "exact",
+      "recording": "Bow Down / I Been On",
+      "recordingMbid": "3c0b9ceb-9ba4-4178-90bf-ceef90189f93",
+      "release": "Bow Down / I Been On",
+      "score": 2495102,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Bow Down"
+      "trusted": false,
+      "title": "Bow Down / I Been On"
     },
     {
       "postId": 48322,

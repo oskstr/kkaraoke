@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T23:02:12.462Z",
+  "generatedAt": "2026-08-11T23:27:02.931Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -186,7 +186,6 @@
     },
     {
       "postId": 51393,
-      "language": "eng",
       "sortAs": "Madonna",
       "title": "Secret",
       "artistMbids": [
@@ -198,13 +197,13 @@
           "name": "Madonna"
         }
       ],
-      "recordingMbid": "6dcfc578-8bfa-4111-983d-1ee325f7b8e3",
+      "recordingMbid": "aa71ed74-f19d-4c86-a910-91119d6d67ac",
       "genres": [
         "pop",
         "dance-pop",
         "art pop"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48529,
@@ -1153,12 +1152,12 @@
           "name": "The Connells"
         }
       ],
-      "recordingMbid": "af448e21-dae0-4bd1-b7e4-c99131c8720c",
+      "recordingMbid": "bcb4d5d0-e8e2-4284-8a62-ec74f808a5de",
       "genres": [
         "alternative rock"
       ],
       "year": 1993,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48449,
@@ -1630,7 +1629,6 @@
     },
     {
       "postId": 48328,
-      "language": "eng",
       "artist": "Billie Piper",
       "sortAs": "Piper, Billie",
       "title": "She Wants You",
@@ -1643,11 +1641,11 @@
           "name": "Billie Piper"
         }
       ],
-      "recordingMbid": "503bbb0a-a0f0-4cba-8549-fdd3e650d4a9",
+      "recordingMbid": "658c8fd3-fb8d-4fa4-92fa-753d03887b00",
       "genres": [
         "pop"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 53249,
@@ -2006,9 +2004,9 @@
     },
     {
       "postId": 49004,
-      "language": "eng",
       "artist": "Christina Aguilera, Lil’ Kim, Mya, P!nk",
       "sortAs": "Aguilera, Christina",
+      "title": "Lady Marmalade (Thunderpuss Thunderdub)",
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
         "bc1b5c95-e6d6-46b5-957a-5e8908b02c1e",
@@ -2033,14 +2031,13 @@
           "name": "P!nk"
         }
       ],
-      "credit": "Christina Aguilera, Lil’ Kim, Mya & Pink",
-      "recordingMbid": "7dd46246-1f40-4bfa-94ee-f63d85cbdf62",
+      "credit": "Christina Aguilera, Lil’ Kim, Mya and Pink",
+      "recordingMbid": "fbfde8f2-d78a-433c-ab7b-c5878249ea5d",
       "genres": [
         "pop",
         "contemporary r&b",
         "dance-pop"
       ],
-      "year": 2001,
       "how": "version"
     },
     {
@@ -2983,7 +2980,6 @@
     },
     {
       "postId": 47904,
-      "language": "eng",
       "sortAs": "Keys, Alicia",
       "title": "How Come You Don't Call Me",
       "artistMbids": [
@@ -2995,13 +2991,12 @@
           "name": "Alicia Keys"
         }
       ],
-      "recordingMbid": "fd6ef57e-2193-459f-89ea-da62c3b6e750",
+      "recordingMbid": "ebe13618-bbdd-4ef3-9a91-9981602e528f",
       "genres": [
         "contemporary r&b",
         "r&b",
         "neo soul"
       ],
-      "year": 2005,
       "how": "exact"
     },
     {
@@ -3714,9 +3709,8 @@
     },
     {
       "postId": 50880,
-      "language": "eng",
       "sortAs": "Timberlake, Justin",
-      "title": "Like I Love You (MTV's Making the video - Excerpts)",
+      "title": "Like I Love You? (Dsico disctruct)",
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
@@ -3726,7 +3720,7 @@
           "name": "Justin Timberlake"
         }
       ],
-      "recordingMbid": "6dfbb301-b562-43dd-a559-40bf6f9b098c",
+      "recordingMbid": "1d7473bc-dbc7-43be-802b-88b67be0e994",
       "genres": [
         "pop",
         "dance-pop",
@@ -3904,7 +3898,7 @@
           "name": "Christina Milian"
         }
       ],
-      "recordingMbid": "34548598-c897-425e-b28c-005134cb6bb3",
+      "recordingMbid": "e5a483a5-7796-4ca2-8524-cb70d57b7de8",
       "genres": [
         "pop",
         "r&b"
@@ -3913,10 +3907,9 @@
     },
     {
       "postId": 49570,
-      "language": "eng",
       "artist": "Ms. Dynamite",
       "sortAs": "Dynamite, Ms.",
-      "title": "Dy-na-mi-tee",
+      "title": "Dy-Na-Mi-Tee",
       "artistMbids": [
         "c0c5e158-d61d-4043-a0eb-dc6cc1e0a539"
       ],
@@ -3926,12 +3919,12 @@
           "name": "Ms. Dynamite"
         }
       ],
-      "recordingMbid": "07e7334e-91cf-45c5-b4d1-77004c29ad12",
+      "recordingMbid": "0baa7ad3-1ed8-4538-941d-bb9d3e484411",
       "genres": [
         "hip hop",
         "r&b"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 52246,
@@ -4986,8 +4979,9 @@
     },
     {
       "postId": 47741,
+      "language": "eng",
       "sortAs": "50 Cent",
-      "title": "In Da Club (Blend By 2sty)",
+      "title": "In da Club",
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
       ],
@@ -4997,13 +4991,14 @@
           "name": "50 Cent"
         }
       ],
-      "recordingMbid": "1054bceb-d3c6-4671-9182-6794753dfbde",
+      "recordingMbid": "87877ebd-874b-4dd2-83c6-4c1360ba26a0",
       "genres": [
         "hip hop",
         "east coast hip hop",
         "gangsta rap"
       ],
-      "how": "version"
+      "year": 2002,
+      "how": "exact"
     },
     {
       "postId": 52546,
@@ -5040,7 +5035,7 @@
           "name": "Christina Aguilera"
         }
       ],
-      "recordingMbid": "667461d5-8751-4cf8-8c80-24953983512f",
+      "recordingMbid": "77fba263-80bc-4233-9694-210567d5c947",
       "genres": [
         "pop",
         "contemporary r&b",
@@ -8956,7 +8951,7 @@
       "postId": 48249,
       "artist": "The Beatles",
       "sortAs": "Beatles, The",
-      "title": "Sgt. Pepper's Lonely Hearts Club Band",
+      "title": "Sgt. Pepper’s Lonely Hearts Club Band",
       "artistMbids": [
         "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
       ],
@@ -8966,14 +8961,13 @@
           "name": "The Beatles"
         }
       ],
-      "recordingMbid": "52ae315f-b83e-4ed0-8dfd-3b20b91d6252",
+      "recordingMbid": "c55e74ff-bd7d-40ff-a591-c6993c59bda8",
       "genres": [
         "rock",
         "pop",
         "pop rock"
       ],
-      "year": 1967,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48250,
@@ -13424,7 +13418,7 @@
     {
       "postId": 52397,
       "sortAs": "Marx, Richard",
-      "title": "Endless Summer Night",
+      "title": "Endless Summer Nights",
       "artistMbids": [
         "e33c460f-011a-469a-b934-08932a3729c4"
       ],
@@ -13434,13 +13428,12 @@
           "name": "Richard Marx"
         }
       ],
-      "recordingMbid": "5220fc9d-8ad4-4444-871b-cad238b64981",
+      "recordingMbid": "0c72beea-313e-47ea-bca9-2f244388fe48",
       "genres": [
         "pop",
         "soft rock"
       ],
-      "year": 1995,
-      "how": "exact"
+      "how": "spelling"
     },
     {
       "postId": 52398,
@@ -13555,7 +13548,7 @@
     {
       "postId": 52522,
       "sortAs": "Stewart, Rod",
-      "title": "Tonight's the Night",
+      "title": "Tonight’s the Night (Gonna Be Alright)",
       "artistMbids": [
         "a35237a0-4f47-40a6-b6f3-1e786db23402"
       ],
@@ -13565,14 +13558,13 @@
           "name": "Rod Stewart"
         }
       ],
-      "recordingMbid": "16b558b4-5281-4601-b3db-98d01ecf3044",
+      "recordingMbid": "c829ed77-4332-42e0-a252-d3476d7c4374",
       "genres": [
         "rock",
         "blues rock",
         "pop rock"
       ],
-      "year": 1977,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 51271,
@@ -14580,11 +14572,12 @@
           "name": "Sertab Erener"
         }
       ],
-      "recordingMbid": "fe0425b4-2605-4d1c-ba85-9db782bcc122",
+      "recordingMbid": "84cf85f0-6593-4f52-b563-e9299846ea2a",
       "genres": [
         "pop"
       ],
-      "how": "version"
+      "year": 2003,
+      "how": "exact"
     },
     {
       "postId": 50691,
@@ -15342,12 +15335,13 @@
           "name": "Lena Philipsson"
         }
       ],
-      "recordingMbid": "68a742f5-c423-4284-b605-447609222221",
+      "recordingMbid": "750b126e-ecbd-46d8-ac11-651cc97ad312",
       "genres": [
         "pop",
         "schlager"
       ],
-      "how": "version"
+      "year": 2004,
+      "how": "exact"
     },
     {
       "postId": 49226,
@@ -16245,7 +16239,7 @@
     {
       "postId": 52617,
       "sortAs": "Thom, Sandi",
-      "title": "I Wish I Was a Punk Rocker",
+      "title": "I Wish I Was a Punk Rocker (with Flowers in My Hair)",
       "artistMbids": [
         "fcdeb957-b420-4249-a092-946b537a00ca"
       ],
@@ -16255,14 +16249,13 @@
           "name": "Sandi Thom"
         }
       ],
-      "recordingMbid": "2ccdf997-359e-40b3-b0da-00eceb8ac4e6",
+      "recordingMbid": "d5e013b6-d195-498a-9f1d-284bda4e601c",
       "genres": [
         "alternative rock",
         "indie rock",
         "rock"
       ],
-      "year": 2005,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 52844,
@@ -20835,6 +20828,7 @@
     },
     {
       "postId": 51181,
+      "language": "swe",
       "artist": "Lena Philipsson",
       "sortAs": "Philipsson, Lena",
       "artistMbids": [
@@ -20846,12 +20840,13 @@
           "name": "Lena Philipsson"
         }
       ],
-      "recordingMbid": "b5cdc4a8-aa51-4a84-a767-6442d752e212",
+      "recordingMbid": "17af4b39-adbb-4f38-a8e3-c0e8949f60f9",
       "genres": [
         "pop",
         "schlager"
       ],
-      "how": "version"
+      "year": 2004,
+      "how": "exact"
     },
     {
       "postId": 48559,
@@ -21123,12 +21118,13 @@
           "name": "Lena Philipsson"
         }
       ],
-      "recordingMbid": "9a1c0754-6277-4cfb-88ab-e323d388401d",
+      "recordingMbid": "6363d6f2-a91e-4b49-86e7-f47615ea20ea",
       "genres": [
         "pop",
         "schlager"
       ],
-      "how": "version"
+      "year": 1987,
+      "how": "exact"
     },
     {
       "postId": 48382,
@@ -25860,9 +25856,8 @@
     },
     {
       "postId": 49240,
-      "language": "eng",
       "sortAs": "Edmunds, Dave",
-      "title": "I Hear You Knockin’",
+      "title": "I Hear You Knocking",
       "artistMbids": [
         "ec4b6d29-527c-4cc0-89bb-8a4775f350d0"
       ],
@@ -25872,14 +25867,13 @@
           "name": "Dave Edmunds"
         }
       ],
-      "recordingMbid": "96c6669c-0ee3-4f3f-9247-664c79c5baac",
+      "recordingMbid": "2efe447c-095a-4e8b-9e6e-9b19c954fc53",
       "genres": [
         "blues rock",
         "pop rock",
         "power pop"
       ],
-      "year": 1990,
-      "how": "exact"
+      "how": "spelling"
     },
     {
       "postId": 51727,
@@ -26517,7 +26511,6 @@
     },
     {
       "postId": 48286,
-      "language": "eng",
       "artist": "The Bellamy Brothers",
       "sortAs": "Bellamy Brothers, The",
       "title": "Let Your Love Flow",
@@ -26530,13 +26523,12 @@
           "name": "The Bellamy Brothers"
         }
       ],
-      "recordingMbid": "23547372-4aca-4ffe-82ec-b46c1093d761",
+      "recordingMbid": "f86acf5f-fb5f-4346-938f-940ba31076ae",
       "genres": [
         "country",
         "country pop",
         "country rock"
       ],
-      "year": 1975,
       "how": "exact"
     },
     {
@@ -28568,6 +28560,7 @@
       "postId": 48947,
       "artist": "The Chordettes",
       "sortAs": "Chordettes, The",
+      "title": "Mr. Sandman",
       "artistMbids": [
         "997117eb-5a4c-4a37-99f9-f2515e2d9739"
       ],
@@ -28577,12 +28570,11 @@
           "name": "The Chordettes"
         }
       ],
-      "recordingMbid": "46111805-b348-4a73-bf6e-26486ec49ab9",
+      "recordingMbid": "99e6ab9f-b9e5-4f14-8073-2c0cd53274e9",
       "genres": [
         "pop"
       ],
-      "year": 1950,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 50411,
@@ -29516,24 +29508,15 @@
     },
     {
       "postId": 48993,
-      "language": "eng",
-      "sortAs": "Aguilera, Christina",
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
       ],
-      "artists": [
-        {
-          "mbid": "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
-          "name": "Christina Aguilera"
-        }
-      ],
-      "recordingMbid": "2331f4e6-7d41-497d-9d5d-5ab0f09bc8d9",
+      "sortAs": "Aguilera, Christina",
       "genres": [
         "pop",
         "contemporary r&b",
         "dance-pop"
-      ],
-      "how": "version"
+      ]
     },
     {
       "postId": 51992,
@@ -31292,8 +31275,8 @@
     },
     {
       "postId": 50087,
-      "language": "eng",
       "sortAs": "Sinatra, Frank",
+      "title": "New York, New York (Chew Fu Big Room Fix)",
       "artistMbids": [
         "197450cd-0124-4164-b723-3c22dd16494d"
       ],
@@ -31303,14 +31286,13 @@
           "name": "Frank Sinatra"
         }
       ],
-      "recordingMbid": "cd2c878d-ce41-4eec-a14d-e811c53f11e4",
+      "recordingMbid": "e2cb11f5-2330-45c0-b51b-c6d2b055d9bc",
       "genres": [
         "jazz",
         "swing",
         "traditional pop"
       ],
-      "year": 1988,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 48283,
@@ -32333,7 +32315,6 @@
     },
     {
       "postId": 49532,
-      "language": "eng",
       "artist": "The Drifters",
       "sortAs": "Drifters, The",
       "title": "Under the Boardwalk",
@@ -32346,13 +32327,12 @@
           "name": "The Drifters"
         }
       ],
-      "recordingMbid": "1ebc7513-8ed6-4d47-8441-d8551b9e6291",
+      "recordingMbid": "44ec0e2c-ca79-40b1-b5b7-44416ca156cb",
       "genres": [
         "doo-wop",
         "pop",
         "r&b"
       ],
-      "year": 1982,
       "how": "exact"
     },
     {
@@ -36063,7 +36043,6 @@
     },
     {
       "postId": 51159,
-      "language": "eng",
       "sortAs": "Rimes, LeAnn",
       "title": "How Do I Live",
       "artistMbids": [
@@ -36075,13 +36054,12 @@
           "name": "LeAnn Rimes"
         }
       ],
-      "recordingMbid": "3e4e9601-10c0-4045-9044-de2da0a362d5",
+      "recordingMbid": "2459a758-046a-4886-b42d-b496a5ad3d2a",
       "genres": [
         "country",
         "pop",
         "contemporary country"
       ],
-      "year": 1997,
       "how": "exact"
     },
     {
@@ -38861,9 +38839,8 @@
     },
     {
       "postId": 50539,
-      "language": "eng",
       "sortAs": "Brown, James",
-      "title": "Say It Loud (I’m Black, I’m Proud)",
+      "title": "Say It Loud - I'm Black And I'm Proud (Pt. 1&2)",
       "artistMbids": [
         "20ff3303-4fe2-4a47-a1b6-291e26aa3438"
       ],
@@ -38873,13 +38850,13 @@
           "name": "James Brown"
         }
       ],
-      "recordingMbid": "e54e2073-8798-42a1-b7ce-43e50a07b3f0",
+      "recordingMbid": "60c80cf4-6268-4af7-a746-b853b72e9164",
       "genres": [
         "soul",
         "funk",
         "disco"
       ],
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 51816,
@@ -38957,20 +38934,11 @@
     },
     {
       "postId": 48446,
-      "artist": "T.P.H. Productions",
-      "sortAs": "T.P.H. Productions",
-      "title": "Soul Man",
       "artistMbids": [
         "165d17a9-c8aa-41bf-9db2-adefce5cefd9"
       ],
-      "artists": [
-        {
-          "mbid": "165d17a9-c8aa-41bf-9db2-adefce5cefd9",
-          "name": "T.P.H. Productions"
-        }
-      ],
-      "recordingMbid": "a520477b-547b-49a2-a9ec-0cec47ada38f",
-      "how": "exact"
+      "artist": "T.P.H. Productions",
+      "sortAs": "T.P.H. Productions"
     },
     {
       "postId": 49504,
@@ -39191,11 +39159,11 @@
           "name": "The Merseybeats"
         }
       ],
-      "recordingMbid": "bbd4574f-5dd0-43f7-b8e0-8aa6758c91d5",
+      "recordingMbid": "111b3dfd-bca3-41af-b98e-09b2ba47af1c",
       "genres": [
         "merseybeat"
       ],
-      "how": "version"
+      "how": "spelling"
     },
     {
       "postId": 49568,
@@ -39385,9 +39353,8 @@
     },
     {
       "postId": 51420,
-      "language": "eng",
       "sortAs": "Madonna",
-      "title": "Power of Goodbye",
+      "title": "The Power of Good‐Bye",
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
@@ -39397,13 +39364,13 @@
           "name": "Madonna"
         }
       ],
-      "recordingMbid": "21d7cf33-8660-4c64-a66e-0d1444455478",
+      "recordingMbid": "cb51201b-a94d-4f1c-9d2e-ed94803e469a",
       "genres": [
         "pop",
         "dance-pop",
         "art pop"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 51421,
@@ -42574,25 +42541,15 @@
     },
     {
       "postId": 49485,
-      "language": "eng",
-      "sortAs": "Summer, Donna",
-      "title": "McArthur Park",
       "artistMbids": [
         "b60527cc-54f3-4bbe-a01b-dcf34c95ae14"
       ],
-      "artists": [
-        {
-          "mbid": "b60527cc-54f3-4bbe-a01b-dcf34c95ae14",
-          "name": "Donna Summer"
-        }
-      ],
-      "recordingMbid": "e4b672a4-35c2-49cc-b13e-88c1ca726769",
+      "sortAs": "Summer, Donna",
       "genres": [
         "disco",
         "dance",
         "soul"
-      ],
-      "how": "version"
+      ]
     },
     {
       "postId": 53047,
@@ -42795,7 +42752,6 @@
     },
     {
       "postId": 51917,
-      "language": "eng",
       "artist": "The O’Jays",
       "sortAs": "O’Jays, The",
       "title": "Back Stabbers",
@@ -42808,14 +42764,13 @@
           "name": "The O’Jays"
         }
       ],
-      "recordingMbid": "abcc6c9d-b7d3-4ffa-a525-e81a418c8d12",
+      "recordingMbid": "a362bb56-a30f-4cfa-ac7a-887ca97dc91e",
       "genres": [
         "r&b",
         "smooth soul",
         "soul"
       ],
-      "year": 1972,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 53460,
@@ -43115,9 +43070,8 @@
     },
     {
       "postId": 49753,
-      "language": "eng",
       "sortAs": "Presley, Elvis",
-      "title": "The Impossible Dream",
+      "title": "The Impossible Dream (The Quest)",
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
@@ -43127,14 +43081,13 @@
           "name": "Elvis Presley"
         }
       ],
-      "recordingMbid": "802343bc-0e53-45ca-87d1-afd7848b4060",
+      "recordingMbid": "0a38523d-b44b-46c5-a945-8b76b03ffa2d",
       "genres": [
         "rock and roll",
         "rockabilly",
         "rock"
       ],
-      "year": 1972,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 51771,
@@ -44869,7 +44822,6 @@
     },
     {
       "postId": 48288,
-      "language": "eng",
       "artist": "The Bellamy Brothers",
       "sortAs": "Bellamy Brothers, The",
       "title": "If I Said You Had a Beautiful Body Would You Hold It Against Me",
@@ -44882,13 +44834,13 @@
           "name": "The Bellamy Brothers"
         }
       ],
-      "recordingMbid": "1249c505-4e2a-46c4-a160-23f76672b459",
+      "recordingMbid": "99e9059a-98fc-492e-8e4b-c19e986e633e",
       "genres": [
         "country",
         "country pop",
         "country rock"
       ],
-      "how": "loose"
+      "how": "exact"
     },
     {
       "postId": 47927,
@@ -45792,7 +45744,7 @@
     {
       "postId": 50956,
       "sortAs": "Clarkson, Kelly",
-      "title": "I Do Not Hook Up",
+      "title": "I Do Not Hook Up (Bimbo Jones)",
       "artistMbids": [
         "d339efbb-77b9-4147-ba9e-59f2f24550b2"
       ],
@@ -45802,12 +45754,11 @@
           "name": "Kelly Clarkson"
         }
       ],
-      "recordingMbid": "c37116aa-574e-458d-b8b5-b6bc6a659102",
+      "recordingMbid": "9c25d697-e6cb-4d97-92fa-c10354af96c1",
       "genres": [
         "pop"
       ],
-      "year": 2009,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 47883,
@@ -48553,6 +48504,7 @@
       "postId": 51059,
       "artist": "The Kooks",
       "sortAs": "Kooks, The",
+      "title": "Naïve",
       "artistMbids": [
         "f82f3a3e-29c2-42ca-b589-bc5dc210fa9e"
       ],
@@ -48562,14 +48514,13 @@
           "name": "The Kooks"
         }
       ],
-      "recordingMbid": "8e9b9625-d803-4dfb-a71d-868853bc2bc4",
+      "recordingMbid": "32c2aff2-2eef-4578-a7f3-a48f94658c94",
       "genres": [
         "indie rock",
         "indie pop",
         "pop rock"
       ],
-      "year": 2005,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 53140,
@@ -48985,6 +48936,7 @@
       "postId": 50677,
       "artist": "Jimmy Buffett",
       "sortAs": "Buffett, Jimmy",
+      "title": "Margaritaville / Boat Drinks",
       "artistMbids": [
         "16fdd9af-467f-47ce-bd29-3413b445b90f"
       ],
@@ -48994,13 +48946,13 @@
           "name": "Jimmy Buffett"
         }
       ],
-      "recordingMbid": "2de26fc8-b50c-430e-94d7-439d7ca1c2bc",
+      "recordingMbid": "e464347d-1c3a-4a1b-93cf-4ef6cfb9d2f8",
       "genres": [
         "country",
         "soft rock",
         "country rock"
       ],
-      "how": "version"
+      "how": "loose"
     },
     {
       "postId": 48555,
@@ -50383,13 +50335,14 @@
           "name": "Jimmy Buffett"
         }
       ],
-      "recordingMbid": "8031ccd2-874e-47f0-8679-634616f8a1bf",
+      "recordingMbid": "5d33301f-58a8-4851-93c5-19cf43e7c5ff",
       "genres": [
         "country",
         "soft rock",
         "country rock"
       ],
-      "how": "version"
+      "year": 1977,
+      "how": "exact"
     },
     {
       "postId": 52270,
@@ -50482,7 +50435,6 @@
     },
     {
       "postId": 49710,
-      "language": "eng",
       "artist": "Elton John, RuPaul",
       "sortAs": "John, Elton",
       "title": "Don’t Go Breaking My Heart",
@@ -50501,13 +50453,12 @@
         }
       ],
       "credit": "Elton John & RuPaul",
-      "recordingMbid": "895ca240-6afd-4ceb-91f3-0f402e60b64a",
+      "recordingMbid": "16169863-f864-4ad7-b253-3f1cd5549b58",
       "genres": [
         "pop",
         "piano rock",
         "pop rock"
       ],
-      "year": 1976,
       "how": "exact"
     },
     {
@@ -51245,13 +51196,13 @@
           "name": "LeAnn Rimes"
         }
       ],
-      "recordingMbid": "f26b4e9f-fb03-4ba2-99fa-7964dc711997",
+      "recordingMbid": "2459a758-046a-4886-b42d-b496a5ad3d2a",
       "genres": [
         "country",
         "pop",
         "contemporary country"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 52169,
@@ -52145,9 +52096,8 @@
     },
     {
       "postId": 47742,
-      "language": "eng",
       "sortAs": "50 Cent",
-      "title": "Candy Shop",
+      "title": "Candy Shop (super clean)",
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
       ],
@@ -52157,14 +52107,13 @@
           "name": "50 Cent"
         }
       ],
-      "recordingMbid": "b75b3d42-5c3e-4b1e-b708-98ff5267e29e",
+      "recordingMbid": "d1d1103f-02e5-48c7-99be-40d6ad788fd8",
       "genres": [
         "hip hop",
         "east coast hip hop",
         "gangsta rap"
       ],
-      "year": 2005,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 47832,
@@ -54526,8 +54475,9 @@
     },
     {
       "postId": 52507,
+      "language": "eng",
       "sortAs": "Robyn",
-      "title": "With Every Heartbeat (Punks Jump Up rmx)",
+      "title": "With Every Heartbeat",
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
@@ -54537,13 +54487,14 @@
           "name": "Robyn"
         }
       ],
-      "recordingMbid": "9a971bd9-97a3-401e-9967-a1ef613eabd8",
+      "recordingMbid": "134c7bc6-0ffa-40c8-814f-f0ae12e10449",
       "genres": [
         "pop",
         "dance-pop",
         "alternative dance"
       ],
-      "how": "version"
+      "year": 2007,
+      "how": "exact"
     },
     {
       "postId": 48396,
@@ -55295,7 +55246,6 @@
     },
     {
       "postId": 48110,
-      "language": "eng",
       "artist": "The B-52s",
       "sortAs": "B‐52s, The",
       "title": "Good Stuff",
@@ -55308,14 +55258,13 @@
           "name": "The B-52s"
         }
       ],
-      "recordingMbid": "8db2d8a0-6b5d-4df9-94f2-eef0dab74115",
+      "recordingMbid": "73c69e18-5fa7-45c4-9102-cf0526765dc3",
       "genres": [
         "pop rock",
         "dance-pop",
         "new wave"
       ],
-      "year": 1992,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48839,
@@ -56003,26 +55952,34 @@
           "name": "The B-52s"
         }
       ],
-      "recordingMbid": "a39a1b3a-74a8-4115-a70f-90b9612c51bb",
+      "recordingMbid": "8c56fa84-0ee5-43e7-b0b9-b84c6100c948",
       "genres": [
         "pop rock",
         "dance-pop",
         "new wave"
       ],
-      "year": 1989,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48666,
+      "sortAs": "Springsteen, Bruce",
+      "title": "Rosalita (Come Out Tonight)",
       "artistMbids": [
         "70248960-cb53-4ea4-943a-edb18f7d336f"
       ],
-      "sortAs": "Springsteen, Bruce",
+      "artists": [
+        {
+          "mbid": "70248960-cb53-4ea4-943a-edb18f7d336f",
+          "name": "Bruce Springsteen"
+        }
+      ],
+      "recordingMbid": "91fe6d8f-a4c8-488b-862e-6d317e310e8e",
       "genres": [
         "rock",
         "heartland rock",
         "americana"
-      ]
+      ],
+      "how": "version"
     },
     {
       "postId": 49108,
@@ -56211,9 +56168,9 @@
     },
     {
       "postId": 49344,
+      "language": "eng",
       "artist": "Destiny’s Child",
       "sortAs": "Destiny’s Child",
-      "title": "Soldier (Maurice's Nu Anthem Emix)",
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
@@ -56223,13 +56180,14 @@
           "name": "Destiny’s Child"
         }
       ],
-      "recordingMbid": "7b4b73f4-11d2-42f5-a2ee-4279d54b620a",
+      "recordingMbid": "2bee83b5-4ac3-461d-9919-642e21bf172d",
       "genres": [
         "pop",
         "contemporary r&b",
         "dance-pop"
       ],
-      "how": "version"
+      "year": 2004,
+      "how": "exact"
     },
     {
       "postId": 48451,
@@ -57376,7 +57334,6 @@
     },
     {
       "postId": 50480,
-      "language": "eng",
       "artist": "The Isley Brothers",
       "sortAs": "Isley Brothers, The",
       "title": "Between the Sheets",
@@ -57389,14 +57346,13 @@
           "name": "The Isley Brothers"
         }
       ],
-      "recordingMbid": "ccbdfb6d-d148-4e2a-b863-cd689710dcce",
+      "recordingMbid": "e0c9252d-26ab-42a1-afe9-802080b67d94",
       "genres": [
         "funk",
         "soul",
         "r&b"
       ],
-      "year": 1983,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 50525,
@@ -57647,7 +57603,6 @@
     {
       "postId": 50240,
       "sortAs": "Goo Goo Dolls",
-      "title": "Broadway [Sessions@aol]",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
@@ -57657,13 +57612,13 @@
           "name": "Goo Goo Dolls"
         }
       ],
-      "recordingMbid": "9b5183aa-28f0-480e-b493-e4aa7102a4e6",
+      "recordingMbid": "7487e1db-b678-4320-a25f-9236c8d37efb",
       "genres": [
         "alternative rock",
         "pop punk",
         "acoustic rock"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 52317,
@@ -58730,13 +58685,13 @@
         }
       ],
       "credit": "Donna Summer & Barbra Streisand",
-      "recordingMbid": "59eddb14-43a6-4941-b227-bf60818fe79c",
+      "recordingMbid": "0d569f63-b64f-449d-be3e-8c4ea58d7c70",
       "genres": [
         "disco",
         "dance",
         "soul"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 52073,
@@ -61136,9 +61091,8 @@
     },
     {
       "postId": 50311,
-      "language": "eng",
       "sortAs": "Stefani, Gwen",
-      "title": "Rich Girl",
+      "title": "Rich Girl (Album Track Preview)",
       "artistMbids": [
         "2e41ae9c-afd2-4f20-8f1e-17281ce9b472"
       ],
@@ -61148,14 +61102,13 @@
           "name": "Gwen Stefani"
         }
       ],
-      "recordingMbid": "f38cfe29-42f5-4edb-b60a-83f1eb6eaeba",
+      "recordingMbid": "5855ff51-9f59-4f1c-9a63-67761f40532d",
       "genres": [
         "pop",
         "alternative pop",
         "dance-pop"
       ],
-      "year": 2004,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 51987,
@@ -61867,7 +61820,6 @@
     },
     {
       "postId": 52542,
-      "language": "eng",
       "artist": "The Rolling Stones",
       "sortAs": "Rolling Stones, The",
       "title": "Start Me Up",
@@ -61880,13 +61832,12 @@
           "name": "The Rolling Stones"
         }
       ],
-      "recordingMbid": "f79a42ee-2390-4d71-ac47-ee2f205b9cb5",
+      "recordingMbid": "0b095f1f-4927-4b86-a2f7-a1b1abf5bac7",
       "genres": [
         "rock",
         "blues rock",
         "classic rock"
       ],
-      "year": 1982,
       "how": "exact"
     },
     {
@@ -63124,7 +63075,7 @@
       "postId": 50485,
       "artist": "The Isley Brothers",
       "sortAs": "Isley Brothers, The",
-      "title": "Who’s That Lady (The Reflex Revision)",
+      "title": "Who’s That Lady",
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
@@ -63134,14 +63085,13 @@
           "name": "The Isley Brothers"
         }
       ],
-      "recordingMbid": "494dcf38-e317-48e7-924f-b6bc323c64dc",
+      "recordingMbid": "f4601e7f-3d05-4d63-8ace-d7aab143eff1",
       "genres": [
         "funk",
         "soul",
         "r&b"
       ],
-      "year": 2017,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 51173,
@@ -70838,6 +70788,7 @@
     {
       "postId": 49399,
       "sortAs": "Dire Straits",
+      "title": "Romeo and Juliet",
       "artistMbids": [
         "614e3804-7d34-41ba-857f-811bad7c2b7a"
       ],
@@ -70847,13 +70798,13 @@
           "name": "Dire Straits"
         }
       ],
-      "recordingMbid": "4a4d4e76-809e-425f-9024-73415283902f",
+      "recordingMbid": "4d75c61b-067e-4ce8-a325-099c8310de97",
       "genres": [
         "rock",
         "soft rock",
         "classic rock"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 51178,
@@ -83288,6 +83239,7 @@
     },
     {
       "postId": 52924,
+      "language": "eng",
       "artist": "Steve Miller Band",
       "sortAs": "Miller, Steve, Band",
       "title": "The Joker",
@@ -83300,13 +83252,14 @@
           "name": "Steve Miller Band"
         }
       ],
-      "recordingMbid": "050ce1db-99fc-4cff-b058-b8b014fe2a5c",
+      "recordingMbid": "177727a4-92ee-4efe-8498-df6f33ca9372",
       "genres": [
         "blues rock",
         "rock",
         "psychedelic rock"
       ],
-      "how": "version"
+      "year": 1973,
+      "how": "exact"
     },
     {
       "postId": 53188,
@@ -86524,10 +86477,9 @@
     },
     {
       "postId": 47732,
-      "language": "eng",
       "artist": "Thirty Seconds to Mars",
       "sortAs": "Thirty Seconds to Mars",
-      "title": "The Kill (Rebirth)",
+      "title": "The Kill (Bury Me)",
       "artistMbids": [
         "d8354b38-e942-4c89-ba93-29323432abc3"
       ],
@@ -86537,7 +86489,7 @@
           "name": "Thirty Seconds to Mars"
         }
       ],
-      "recordingMbid": "14e09c6c-8b5d-422e-81fb-45f524a81bdd",
+      "recordingMbid": "d80b1b6f-f302-4e9f-8262-18226e077c2e",
       "genres": [
         "alternative rock",
         "rock"
@@ -87611,7 +87563,6 @@
     },
     {
       "postId": 53021,
-      "language": "eng",
       "artist": "Swedish House Mafia",
       "sortAs": "Swedish House Mafia",
       "title": "Save the World",
@@ -87624,13 +87575,13 @@
           "name": "Swedish House Mafia"
         }
       ],
-      "recordingMbid": "52afff0b-1e29-4ca0-9491-6009063be678",
+      "recordingMbid": "dcd79d18-eb8a-4771-a8df-00e86438b9bd",
       "genres": [
         "house",
         "electro house",
         "electronic"
       ],
-      "how": "version"
+      "how": "loose"
     },
     {
       "postId": 52511,
@@ -87736,9 +87687,8 @@
     },
     {
       "postId": 48696,
-      "language": "eng",
       "sortAs": "Mars, Bruno",
-      "title": "It Will Rain",
+      "title": "It Will Rain (with Alex Patsavas commentary)",
       "artistMbids": [
         "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
       ],
@@ -87748,14 +87698,13 @@
           "name": "Bruno Mars"
         }
       ],
-      "recordingMbid": "2cca4426-0679-48be-bd29-9ec8d0173b4b",
+      "recordingMbid": "7bf03bab-716a-4fae-bd54-e5bef4ad2167",
       "genres": [
         "pop",
         "funk",
         "r&b"
       ],
-      "year": 2011,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 48883,
@@ -91431,7 +91380,7 @@
       "postId": 50004,
       "artist": "Five for Fighting",
       "sortAs": "Five for Fighting",
-      "title": "Superman (It Ain’t Easy)",
+      "title": "Superman (It’s Not Easy)",
       "artistMbids": [
         "23eeaeaf-423d-4859-8c91-2175ece74287"
       ],
@@ -91441,7 +91390,7 @@
           "name": "Five for Fighting"
         }
       ],
-      "recordingMbid": "4c87f4b6-32ef-4e0e-b2b7-fdaa38740620",
+      "recordingMbid": "6a6e5342-975e-4f2b-9760-c3487c31ec42",
       "how": "version"
     },
     {
@@ -95984,24 +95933,15 @@
     },
     {
       "postId": 48037,
-      "sortAs": "Arctic Monkeys",
-      "title": "You Probably Couldn't See",
       "artistMbids": [
         "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a"
       ],
-      "artists": [
-        {
-          "mbid": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
-          "name": "Arctic Monkeys"
-        }
-      ],
-      "recordingMbid": "139ca226-fbf6-4064-a742-4206df2d3536",
+      "sortAs": "Arctic Monkeys",
       "genres": [
         "indie rock",
         "alternative rock",
         "garage rock revival"
-      ],
-      "how": "exact"
+      ]
     },
     {
       "postId": 48088,
@@ -97507,7 +97447,6 @@
     },
     {
       "postId": 48650,
-      "language": "eng",
       "sortAs": "Spears, Britney",
       "title": "Do Somethin’",
       "artistMbids": [
@@ -97519,13 +97458,13 @@
           "name": "Britney Spears"
         }
       ],
-      "recordingMbid": "83db0314-db69-4a92-8a6e-a5475f0a1660",
+      "recordingMbid": "b1f17b40-b61c-4858-8022-ff974eb255a6",
       "genres": [
         "pop",
         "teen pop",
         "dance-pop"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 48651,
@@ -98444,14 +98383,14 @@
           "name": "Justin Timberlake"
         }
       ],
-      "credit": "Ciara Feat. Justin Timberlake",
-      "recordingMbid": "20f05e0d-a61c-44bb-ba78-da1c88ce109c",
+      "credit": "Ciara feat. Justin Timberlake",
+      "recordingMbid": "1335e962-109d-4e33-aba2-350370c3c02d",
       "genres": [
         "r&b",
         "pop",
         "contemporary r&b"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 49021,
@@ -99044,9 +98983,8 @@
     },
     {
       "postId": 49079,
-      "language": "eng",
       "sortAs": "Twitty, Conway",
-      "title": "The Image of Me",
+      "title": "Image of Me",
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
@@ -99056,11 +98994,11 @@
           "name": "Conway Twitty"
         }
       ],
-      "recordingMbid": "29c10049-0549-4d4a-8c7e-27abb4b93ecb",
+      "recordingMbid": "4d915dd7-a8d6-4722-b8c2-32b9a3ea9b76",
       "genres": [
         "country"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 49080,
@@ -100498,7 +100436,6 @@
     },
     {
       "postId": 49323,
-      "language": "eng",
       "sortAs": "Depeche Mode",
       "title": "Blasphemous Rumours",
       "artistMbids": [
@@ -100510,13 +100447,13 @@
           "name": "Depeche Mode"
         }
       ],
-      "recordingMbid": "15d9bbc5-6e80-4cec-909c-9134712b905d",
+      "recordingMbid": "3b51de17-0fb6-473d-adfe-a20e0abd7a68",
       "genres": [
         "electronic",
         "synth-pop",
         "new wave"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 49324,
@@ -101755,7 +101692,7 @@
       "postId": 49600,
       "language": "eng",
       "sortAs": "Eagles",
-      "title": "Lyin' Eyes",
+      "title": "Lyin’ Eyes",
       "artistMbids": [
         "f46bd570-5768-462e-b84c-c7c993bbf47e"
       ],
@@ -101765,13 +101702,14 @@
           "name": "Eagles"
         }
       ],
-      "recordingMbid": "28c29c1d-a5e5-45ac-b9c0-6c5c9e21a693",
+      "recordingMbid": "f4bd678a-f16b-479e-8df1-8233223c6878",
       "genres": [
         "rock",
         "country rock",
         "classic rock"
       ],
-      "how": "version"
+      "year": 1975,
+      "how": "exact"
     },
     {
       "postId": 49698,
@@ -102506,9 +102444,8 @@
     },
     {
       "postId": 50034,
-      "language": "eng",
       "sortAs": "Flogging Molly",
-      "title": "Seven Deadly Sins",
+      "title": "The Seven Deadly Sins",
       "artistMbids": [
         "c3694ddc-f7e5-40dd-9fad-90d11a2c50fa"
       ],
@@ -102518,12 +102455,11 @@
           "name": "Flogging Molly"
         }
       ],
-      "recordingMbid": "6aa86019-c5a8-4792-8345-6d6dd3f8bfde",
+      "recordingMbid": "a3a786cb-1c89-4da3-b843-8a8af967437f",
       "genres": [
         "celtic punk",
         "folk punk"
       ],
-      "year": 2005,
       "how": "exact"
     },
     {
@@ -103020,15 +102956,24 @@
     },
     {
       "postId": 50076,
+      "sortAs": "Four Tops",
+      "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch)",
       "artistMbids": [
         "0d21b01f-21f2-419b-8d98-4158ba0c0aa4"
       ],
-      "sortAs": "Four Tops",
+      "artists": [
+        {
+          "mbid": "0d21b01f-21f2-419b-8d98-4158ba0c0aa4",
+          "name": "Four Tops"
+        }
+      ],
+      "recordingMbid": "85323b77-8fce-47a1-ab0d-2366c5300115",
       "genres": [
         "soul",
         "funk",
         "motown"
-      ]
+      ],
+      "how": "version"
     },
     {
       "postId": 50077,
@@ -105196,7 +105141,7 @@
     {
       "postId": 50888,
       "sortAs": "Timberlake, Justin",
-      "title": "My Love (Ibiza Is Burning)",
+      "title": "My Love (Parkinson UK TV performance)",
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
@@ -105206,7 +105151,7 @@
           "name": "Justin Timberlake"
         }
       ],
-      "recordingMbid": "ab94f4c3-475a-4d06-b84b-1fb4bca4202e",
+      "recordingMbid": "40f6ce98-68f5-4423-9ca1-81bad2574da2",
       "genres": [
         "pop",
         "dance-pop",
@@ -108646,7 +108591,6 @@
     },
     {
       "postId": 52235,
-      "language": "eng",
       "artist": "Prince, The New Power Generation",
       "sortAs": "Prince",
       "artistMbids": [
@@ -108663,15 +108607,14 @@
           "name": "The New Power Generation"
         }
       ],
-      "credit": "Prince and The New Power Generation",
-      "recordingMbid": "97d4735c-bf2c-462c-9833-3646a21168d1",
+      "credit": "Prince & The New Power Generation",
+      "recordingMbid": "08b26cf1-0b15-48e8-9b09-50a0a94a5bcb",
       "genres": [
         "funk",
         "pop",
         "contemporary r&b"
       ],
-      "year": 1991,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 52236,
@@ -109518,10 +109461,9 @@
     },
     {
       "postId": 52383,
-      "language": "eng",
       "artist": "R.E.M.",
       "sortAs": "R.E.M.",
-      "title": "It’s the End of the World as We Know It",
+      "title": "It’s the End of the World as We Know It (and I Feel Fine)",
       "artistMbids": [
         "ea4dfa26-f633-4da6-a52a-f49ea4897b58"
       ],
@@ -109531,14 +109473,13 @@
           "name": "R.E.M."
         }
       ],
-      "recordingMbid": "d518525e-f2bc-4b96-8461-7024a0b386a9",
+      "recordingMbid": "7b35a0dd-eda8-4757-a759-8a4d0a5679dd",
       "genres": [
         "alternative rock",
         "jangle pop",
         "pop rock"
       ],
-      "year": 1989,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 52384,
@@ -115218,7 +115159,6 @@
     },
     {
       "postId": 51236,
-      "language": "eng",
       "artist": "Lighthouse Family",
       "sortAs": "Lighthouse Family",
       "artistMbids": [
@@ -115230,11 +115170,11 @@
           "name": "Lighthouse Family"
         }
       ],
-      "recordingMbid": "d4adc3ba-ae43-4f2b-a5e9-a6324799172f",
+      "recordingMbid": "cdb0716e-b9fe-4ae7-b565-43828c3c366a",
       "genres": [
         "pop"
       ],
-      "how": "version"
+      "how": "loose"
     },
     {
       "postId": 51243,
@@ -116047,6 +115987,28 @@
         "indie rock"
       ],
       "year": 2005,
+      "how": "exact"
+    },
+    {
+      "postId": 51967,
+      "artist": "OMI",
+      "sortAs": "OMI",
+      "title": "Cheerleader",
+      "artistMbids": [
+        "33e6ded6-22cc-447e-aefa-9a7a6ba81b6b"
+      ],
+      "artists": [
+        {
+          "mbid": "33e6ded6-22cc-447e-aefa-9a7a6ba81b6b",
+          "name": "OMI"
+        }
+      ],
+      "recordingMbid": "8cf639b9-aff3-47e8-b461-ff93dae8174f",
+      "genres": [
+        "afrobeats",
+        "dance-pop",
+        "reggae-pop"
+      ],
       "how": "exact"
     },
     {
@@ -117605,12 +117567,11 @@
           "name": "The Temper Trap"
         }
       ],
-      "recordingMbid": "8819340c-e6eb-43cb-a94f-0193fc9893ec",
+      "recordingMbid": "9c57ad32-9688-4ef5-baa2-b79e4d2404ae",
       "genres": [
         "indie rock"
       ],
-      "year": 2008,
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 53106,
@@ -120924,7 +120885,6 @@
     },
     {
       "postId": 53023,
-      "language": "zxx",
       "artist": "Swedish House Mafia",
       "sortAs": "Swedish House Mafia",
       "artistMbids": [
@@ -120936,7 +120896,7 @@
           "name": "Swedish House Mafia"
         }
       ],
-      "recordingMbid": "5028afa2-57f4-4831-944d-e6f543dda31f",
+      "recordingMbid": "3257cc49-8152-452d-adaa-8bfb3771113d",
       "genres": [
         "house",
         "electro house",
@@ -122510,6 +122470,7 @@
     {
       "postId": 48447,
       "sortAs": "Blues Traveler",
+      "title": "Hook (2.0)",
       "artistMbids": [
         "6b28ecf0-94e6-48bb-aa2a-5ede325b675b"
       ],
@@ -122519,13 +122480,12 @@
           "name": "Blues Traveler"
         }
       ],
-      "recordingMbid": "c3b070b3-3f29-4254-857a-577b7cb1821e",
+      "recordingMbid": "d5eceeba-9dd4-47ed-8f9a-a8c1c1aef733",
       "genres": [
         "rock",
         "blues rock"
       ],
-      "year": 1994,
-      "how": "exact"
+      "how": "version"
     },
     {
       "postId": 50760,
@@ -124758,26 +124718,33 @@
     },
     {
       "postId": 50879,
-      "language": "mul",
-      "artist": "Ed Sheeran",
+      "language": "eng",
+      "artist": "Ed Sheeran, Justin Bieber",
       "sortAs": "Sheeran, Ed",
-      "title": "I Don't Care",
+      "title": "I Don’t Care",
       "artistMbids": [
-        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+        "e0140a67-e4d1-4f13-8a01-364355bee46e"
       ],
       "artists": [
         {
           "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
           "name": "Ed Sheeran"
+        },
+        {
+          "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+          "name": "Justin Bieber"
         }
       ],
-      "recordingMbid": "07049a59-c206-4beb-8833-f4460e562ecb",
+      "credit": "Ed Sheeran & Justin Bieber",
+      "recordingMbid": "09fe14ca-7734-4fa0-9365-8159d236d7af",
       "genres": [
         "pop",
         "folk pop",
         "dance-pop"
       ],
-      "how": "version"
+      "year": 2019,
+      "how": "exact"
     },
     {
       "postId": 51793,
@@ -125249,26 +125216,15 @@
     },
     {
       "postId": 48317,
-      "language": "eng",
-      "sortAs": "Beyoncé",
-      "title": "Bow Down",
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "artists": [
-        {
-          "mbid": "859d0860-d480-4efd-970c-c05d5f1776b8",
-          "name": "Beyonce"
-        }
-      ],
-      "recordingMbid": "b7affb7d-1ff1-4207-8b35-d9f6b8035d5b",
+      "sortAs": "Beyoncé",
       "genres": [
         "pop",
         "r&b",
         "contemporary r&b"
-      ],
-      "year": 2019,
-      "how": "exact"
+      ]
     },
     {
       "postId": 48318,
@@ -126807,7 +126763,6 @@
     },
     {
       "postId": 51552,
-      "language": "eng",
       "artist": "Marvin Gaye, Tammi Terrell",
       "sortAs": "Gaye, Marvin",
       "title": "Ain’t Nothing Like the Real Thing",
@@ -126826,7 +126781,7 @@
         }
       ],
       "credit": "Marvin Gaye & Tammi Terrell",
-      "recordingMbid": "45299d39-9807-43b1-8970-b059518d9f79",
+      "recordingMbid": "28e4004a-7e76-47ae-9cfe-b02da7b292ad",
       "genres": [
         "soul",
         "funk",
@@ -127174,9 +127129,8 @@
     },
     {
       "postId": 47964,
-      "language": "eng",
       "sortAs": "Winehouse, Amy",
-      "title": "Me and Mr Jones",
+      "title": "Me & Mr Jones",
       "artistMbids": [
         "dfe9a7c4-8cf2-47f4-9dcb-d233c2b86ec3"
       ],
@@ -127186,13 +127140,12 @@
           "name": "Amy Winehouse"
         }
       ],
-      "recordingMbid": "055c56fa-f2fc-4bab-999e-32e4b06a1a53",
+      "recordingMbid": "217c4f4a-d6d1-44db-9581-4cc83b738446",
       "genres": [
         "soul",
         "contemporary r&b",
         "jazz"
       ],
-      "year": 2007,
       "how": "exact"
     },
     {
@@ -127485,7 +127438,7 @@
       "artistMbids": [
         "0d79fe8e-ba27-4859-bb8c-2f255f346853"
       ],
-      "recordingMbid": "39cd6bcb-23c4-4ef8-811a-f4d222900ca7",
+      "recordingMbid": "38f1f272-d7e8-4ae7-93ff-3e574eeef484",
       "how": "loose"
     },
     {
@@ -127578,35 +127531,26 @@
           "name": "Fall Out Boy"
         }
       ],
-      "recordingMbid": "152dd5b4-cb9d-4ac5-b04f-9cfa6fc250d6",
+      "recordingMbid": "2c761688-4736-407b-9113-687f9c6d81b0",
       "genres": [
         "pop punk",
         "alternative rock",
         "pop rock"
       ],
-      "how": "loose"
+      "how": "exact"
     },
     {
       "postId": 49944,
-      "artist": "Fall Out Boy",
-      "sortAs": "Fall Out Boy",
-      "title": "This Ain’t a Scene",
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "artists": [
-        {
-          "mbid": "516cef4d-0718-4007-9939-f9b38af3f784",
-          "name": "Fall Out Boy"
-        }
-      ],
-      "recordingMbid": "66e3c89b-00b9-434f-a14f-a74bb60c54b9",
+      "artist": "Fall Out Boy",
+      "sortAs": "Fall Out Boy",
       "genres": [
         "pop punk",
         "alternative rock",
         "pop rock"
-      ],
-      "how": "version"
+      ]
     },
     {
       "postId": 50007,
@@ -127865,7 +127809,6 @@
     {
       "postId": 50367,
       "from": "High School Musical",
-      "language": "eng",
       "artist": "Zac Efron, Vanessa Hudgens",
       "sortAs": "Efron, Zac",
       "title": "Breaking Free",
@@ -127883,8 +127826,8 @@
           "name": "Vanessa Hudgens"
         }
       ],
-      "credit": "Zac Efron and Vanessa Hudgens",
-      "recordingMbid": "4be9aa2a-7220-496e-9135-9ddee00c99fd",
+      "credit": "Zac Efron & Vanessa Hudgens",
+      "recordingMbid": "d4182fba-1731-4925-8e76-c64d4a649127",
       "how": "exact"
     },
     {
@@ -130217,12 +130160,18 @@
     {
       "postId": 50370,
       "from": "High School Musical",
-      "artist": "The High School Musical Cast",
       "title": "We’re All in This Together",
       "artistMbids": [
-        "869b594f-c4f5-4747-ad57-cc9463fef491"
+        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
       ],
-      "recordingMbid": "d1a18ae6-e97c-475d-93d5-68de28e67ca8",
+      "artists": [
+        {
+          "mbid": "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49",
+          "name": "[Disney]"
+        }
+      ],
+      "recordingMbid": "8eb65771-0f8a-4068-b5c8-f822ba89a073",
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -130343,27 +130292,16 @@
     },
     {
       "postId": 48321,
-      "language": "eng",
-      "artist": "Beyonce",
-      "sortAs": "Beyoncé",
-      "title": "Bow Down",
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "artists": [
-        {
-          "mbid": "859d0860-d480-4efd-970c-c05d5f1776b8",
-          "name": "Beyonce"
-        }
-      ],
-      "recordingMbid": "b7affb7d-1ff1-4207-8b35-d9f6b8035d5b",
+      "artist": "Beyonce",
+      "sortAs": "Beyoncé",
       "genres": [
         "pop",
         "r&b",
         "contemporary r&b"
-      ],
-      "year": 2019,
-      "how": "exact"
+      ]
     },
     {
       "postId": 48322,

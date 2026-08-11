@@ -1,6 +1,6 @@
 # Songs still to review
 
-5 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
+10 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
 
 A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only
 adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at
@@ -9,28 +9,53 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 ## Contents
 
-- weak match — **4**
+- weak match — **8**
 - no match, and this artist string is unknown to MusicBrainz — **1**
+- matched a placeholder entity — **1**
 
-## weak match (4)
+## weak match (8)
 
-### Bruce Springsteen — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 2574 | Rosalita | Bruce Springsteen – Rosalita (Come Out Tonight) (Con’t) — matched by loose | 48666 |
-
-### Four Tops — 1
+### Arctic Monkeys — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 4663 | I can't help myself | Four Tops – I Can’t Help Myself (Sugar Pie, Honey Bunch) (multiplex: with lead vocals) — matched by loose | 50076 |
+| 4352 | You probably couldn't see | Arctic Monkeys – You Probably Couldn’t See for the Lights but You Were Staring Straight at Me — matched by loose | 48037 |
 
-### Omi — 1
+### Beyonce — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 5230 | Cheerleader (felix Jaehn Remix) | OMI – Cheerleader (Felix Jaehn remix edit) — matched by loose | 51967 |
+| 5630 | Bow down | Beyoncé – Bow Down / I Been On — matched by loose | 48317 |
+
+### Beyoncé — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5849 | Bow down | Beyoncé – Bow Down / I Been On — matched by loose | 48321 |
+
+### Blues Brothers — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 1787 | Soul man | Blues Brothers – Soul Man (reprise) / End Credits — matched by loose | 48446 |
+
+### Christina Aguilera — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 1359 | Dirty | Christina Aguilera – Dirty - Beginn — matched by loose | 48993 |
+
+### Donna Summer — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 1949 | McArthur park | Donna Summer – McArthur Park Suite — matched by loose | 49485 |
+
+### Fall out boy — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5733 | This aint a scene | Fall Out Boy – This Ain’t a Scene, It’s an Arms Race — matched by loose | 49944 |
 
 ### Sting — 1
 
@@ -46,3 +71,12 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 333 | Follow your road | 49271 |
+
+
+## matched a placeholder entity (1)
+
+### High school musical — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5843 | Were all in this together | MusicBrainz files this under [Disney], which is an id but not a performer | 50370 |

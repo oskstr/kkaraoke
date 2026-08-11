@@ -517,7 +517,14 @@ function toRow(line: string): Row | undefined {
 
 /** Concert bootlegs in the dump often outscore the studio cut on the same misspelled title. */
 function isLiveRelease(release: string): boolean {
-    return /^\d{4}-\d{2}-\d{2}\s*:/.test(release) || /\blive\b/i.test(release);
+    return (
+        /^\d{4}-\d{2}-\d{2}\s*:/.test(release) ||
+        /\blive\b/i.test(release) ||
+        // Venue-named releases without the word "live" (e.g. Alicia Keys – Radio City Hall NYC).
+        /\b(?:radio city|madison square|wembley|stadium|arena|amphitheatre|amphitheater|festival|concert hall|high school)\b/i.test(
+            release,
+        )
+    );
 }
 
 /** Remix / acoustic / club / concert masters should not beat the plain studio cut. */
@@ -529,7 +536,8 @@ function isVariantRecording(recording: string): boolean {
         if (LANGUAGE_VERSION.test(bracket[1])) return false;
         return isMasterAnnotation(bracket[1]);
     }
-    return /\b(?:remix|mix|club|dub|mash(?:[- ]?up)?|bootleg|acoustic|instrumental|karaoke)\b/i.test(
+    // Do not match bare `club` here — that is the title of `In da Club`, not a club mix.
+    return /\b(?:remix|rmx|emix|mix|blend|revision|rework|dub|mash(?:[- ]?up)?|bootleg|acoustic|instrumental|karaoke|mixtape|(?:the\s+)?video|sessions?|slowed|chopped|hook)\b/i.test(
         recording,
     );
 }
@@ -733,6 +741,15 @@ async function main(): Promise<void> {
             }
             const existingLive = isLiveRelease(existing.release);
             const newLive = isLiveRelease(row.release);
+            const existingVariant = isVariantRecording(existing.recording);
+            const newVariant = isVariantRecording(row.recording);
+            // Never replace a plain studio cut with a live/remix just because the venue
+            // string ranked better — Alicia Keys' Songs in A Minor title is shorter than
+            // the live `…Anymore` the venue wrote, so the proposal hits studio at a worse
+            // rank and must not be stolen back by Radio City Hall.
+            if (!existingLive && !existingVariant && (newLive || newVariant)) {
+                return;
+            }
             // A studio cut reached by one title contraction beats a concert bootleg that
             // matched the venue's misspelling exactly (`Lying Eyes` live vs `Lyin' Eyes`).
             // Proposals may use a worse rank; still let them pull the studio master.
@@ -741,11 +758,11 @@ async function main(): Promise<void> {
             const studioUpgrade =
                 existingLive &&
                 !newLive &&
-                !isVariantRecording(row.recording) &&
+                !newVariant &&
                 (rank <= existing.rank + 1 || entry.proposed !== undefined);
             const variantUpgrade =
-                isVariantRecording(existing.recording) &&
-                !isVariantRecording(row.recording) &&
+                existingVariant &&
+                !newVariant &&
                 (rank <= existing.rank + 1 || entry.proposed !== undefined);
             // Wrong-attribution proposals: the venue string matched someone else who happens
             // to have a recording of that title (`Dynamite` the band, solo `Steve Miller`).

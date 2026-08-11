@@ -17,7 +17,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 101 | Elvis Presley feat. JXL Remix | A little less conversation | Elvis vs. JXL | A Little Less Conversation |  |  | yes | JXL remix | 49767 |
 | 103 | Madonna | Die another day | Madonna | Die Another Day | Die Another Day |  | other | James Bond theme | 51394 |
 | 128 | Las Ketchup | Ketchup song | Las Ketchup | The Ketchup Song (Aserejé) |  |  | other | Full title | 51142 |
-| 131 | Alicia Keys | How come you don't call me anymore | Alicia Keys | How Come You Don't Call Me |  |  | other | Songs in A Minor / Deezer / Spotify title for her cut; MB work uses Prince's How Come U Don't Call Me Anymore | 47904 |
+| 131 | Alicia Keys | How come you don't call me anymore | Alicia Keys | How Come You Don't Call Me |  |  | yes | MusicBrainz studio recordings of her Songs in A Minor cut use this title (e.g. recording ebe13618-…, 2001-06-05). The linked work is Prince's How Come U Don't Call Me Anymore; work aliases only add a You/Anymore? search hint, not this short form. Dump had matched a live cover titled …Anymore. | 47904 |
 | 171 | Christina Millian | Am to pm | Christina Milian | AM to PM |  |  | yes | one l too many | 49007 |
 | 172 | Dynamite | Dy-na-mi-te | Ms. Dynamite | Dy-Na-Mi-Tee |  |  | yes | venue Dynamite/Dy-na-mi-te is Ms. Dynamite's Dy-Na-Mi-Tee | 49570 |
 | 177 | Blue & Elton John | Sorry seems to be the hardest word | Blue feat. Elton John | Sorry Seems to Be the Hardest Word |  |  | yes | Both | 48434 |
@@ -302,7 +302,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 4058 | Weezer | If you're wondering if I want you to | Weezer | (If You’re Wondering If I Want You To) I Want You To |  |  | yes | Full title | 53488 |
 | 4068 | Bruno Mars & Travie McCoy | Billionaire | Travie McCoy feat. Bruno Mars | Billionaire |  |  | yes | Correct lead | 48701 |
 | 4092 | Rammstein | Du hast (english) | Rammstein | Du hast (English version) |  |  | other | English version of Du hast | 52329 |
-| 4095 | Bruno Mars | Just the way you are (Amazing) | Bruno Mars | Just the Way You Are |  |  | other | Drop Amazing mashup | 48697 |
+| 4095 | Bruno Mars | Just the way you are (Amazing) | Bruno Mars | Just the Way You Are |  |  | yes | Drop Amazing mashup | 48697 |
 | 4096 | 2 Pac feat. KC & Jo Jo | How do u want it | 2Pac feat. K-Ci & JoJo | How Do U Want It |  |  | yes | the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo | 47722 |
 | 4100 | Little Mermaid | Part of your world (Disney) | Jodi Benson | Part of Your World | The Little Mermaid |  | yes | Ariel's singing voice | 51298 |
 | 4107 | Dreamgirls | Move | Beyoncé | Move Your Body | Dreamgirls |  | other | Dreamgirls; may not match | 49531 |
@@ -401,7 +401,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 5700 | Marvin Gaye | Nothing like the real thing | Marvin Gaye & Tammi Terrell | Ain’t Nothing Like the Real Thing |  |  | yes | Duet | 51552 |
 | 5726 | Bruno Mars ft Cardi B | Finesse | Bruno Mars | Finesse |  |  | yes | Cardi remix; prefer Bruno Mars Finesse | 48702 |
 | 5728 | BTS | Blood sweat and tears | BTS | Blood Sweat & Tears |  |  | other | BTS hit | 48716 |
-| 5732 | Fall out boy | I'm like a lawyer | Fall Out Boy | I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You) |  |  | other | Full title | 49943 |
+| 5732 | Fall out boy | I'm like a lawyer | Fall Out Boy | I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You) |  |  | yes | Full title | 49943 |
 | 5737 | Fleetwod mac | Sara | Fleetwood Mac | Sara |  |  | yes | Fleetwod is Fleetwood | 50010 |
 | 5745 | High school musical | Breaking free | Zac Efron & Vanessa Hudgens | Breaking Free | High School Musical |  | yes | HSM cast | 50367 |
 | 5746 | High school musical | What time is | The High School Musical Cast | What Time Is It? | High School Musical 2 |  | yes | HSM2 | 50368 |
@@ -420,7 +420,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 5823 | Donna Fargo | Happiest girl in the while U.S | Donna Fargo | The Happiest Girl in the Whole U.S.A. |  |  | yes | Full title | 49483 |
 | 5824 | David Crosby ft Phil Collins | Hero | David Crosby | Hero |  |  | yes | With Phil Collins | 49251 |
 | 5839 | Thomas Jack ft Nico | Rivers | Thomas Jack | Rivers |  |  | yes | feat Nico & Vinz | 53207 |
-| 5843 | High school musical | Were all in this together | High School Musical Cast | We’re All in This Together | High School Musical |  | yes | Cast not [Disney] | 50370 |
+| 5843 | High school musical | Were all in this together | High School Musical Cast | We’re All in This Together | High School Musical |  | other | Cast not [Disney] | 50370 |
 | 5873 | Joel Corry ft MNEK | Head and heart | Joel Corry feat. MNEK | Head & Heart |  |  | yes | Head and heart; dump uses & which folds differently from and | 50715 |
 | 5900 | Ryan Gosling | I'm just Ken | Ryan Gosling | I'm Just Ken | Barbie |  | other | from Barbie (2023) | 52589 |
 | 5901 | Andrea Bocelli ft Sara Brightman | Time to say goodbye | Andrea Bocelli & Sarah Brightman | Time to Say Goodbye |  |  | yes | Sara is Sarah | 47972 |
