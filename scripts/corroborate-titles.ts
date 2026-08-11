@@ -10,6 +10,7 @@
  *
  * Usage: pnpm corroborate:titles [--resolved data/resolved.json] [--songs data/songs.json]
  *                                [--out data/corroboration.json] [--limit N]
+ *                                [--review-only]
  */
 
 import { createHash } from "node:crypto";
@@ -285,8 +286,30 @@ async function run(): Promise<void> {
             /** Unauthenticated Discogs allows ~25 requests/minute. */
             "discogs-gap-ms": { type: "string", default: "3000" },
             "deezer-gap-ms": { type: "string", default: "200" },
+            /** Rewrite the review markdown from an existing corroboration.json — no network. */
+            "review-only": { type: "boolean", default: false },
         },
     });
+
+    if (values["review-only"] === true) {
+        const existing = await readJson<{ checks: Check[] }>(values.fill);
+        if (existing === undefined) {
+            throw new Error(`No ${values.fill} to render.`);
+        }
+        const neither = existing.checks.filter(
+            (c) =>
+                c.deezer !== undefined &&
+                c.discogs !== undefined &&
+                !c.deezer.ok &&
+                !c.discogs.ok &&
+                !isRateLimited(c.deezer) &&
+                !isRateLimited(c.discogs),
+        );
+        const reviewPath = values.out.replace(/\.json$/, "-review.md");
+        await writeFile(reviewPath, formatCorroborationReview(neither), "utf8");
+        console.log(`Wrote ${reviewPath} (${neither.length} songs)`);
+        return;
+    }
 
     const songsFile = JSON.parse(await readFile(values.songs, "utf8")) as { songs: SongRow[] };
     const resolvedFile = await readJson<{ songs: ResolvedRow[] }>(values.resolved);
@@ -458,6 +481,56 @@ async function run(): Promise<void> {
     );
 
     const reviewPath = values.out.replace(/\.json$/, "-review.md");
+    await writeFile(reviewPath, formatCorroborationReview(neither), "utf8");
+    console.log(`Wrote ${values.out} and ${reviewPath}`);
+}
+
+function cell(value: string): string {
+    return value.replace(/\|/g, "/").replace(/\n/g, " ");
+}
+
+/** What the other catalogue returned, or why there is nothing to compare. */
+function sourceDiff(ours: { artist: string; title: string }, source: SourceCheck | undefined): string {
+    if (source === undefined) return "—";
+    if (source.ok) return "agrees";
+    const theirArtist = source.artist;
+    const theirTitle = source.title;
+    if (theirArtist !== undefined || theirTitle !== undefined) {
+        const theirs = `${theirArtist ?? "?"} – ${theirTitle ?? "?"}`;
+        const artistDiff =
+            theirArtist !== undefined && !namesAgree(theirArtist, ours.artist)
+                ? `artist ${ours.artist} → ${theirArtist}`
+                : undefined;
+        const titleDiff =
+            theirTitle !== undefined && !namesAgree(theirTitle, ours.title)
+                ? `title ${ours.title} → ${theirTitle}`
+                : undefined;
+        const parts = [artistDiff, titleDiff].filter((part) => part !== undefined);
+        // Always keep the full top hit so karaoke/cover noise is visible even when only
+        // one field failed the name match.
+        return parts.length > 0 ? `${parts.join("; ")} (${theirs})` : `top hit: ${theirs}`;
+    }
+    if (source.note !== undefined && source.note.length > 0) {
+        // Strip long URLs from HTTP errors so the table stays readable.
+        if (/\bHTTP \d+\b/.test(source.note)) {
+            return source.note.replace(/https?:\S+/g, "").trim();
+        }
+        if (/^no \w+/i.test(source.note)) return "not found";
+        return source.note;
+    }
+    return "not found";
+}
+
+function formatCorroborationReview(neither: Check[]): string {
+    const disagreements = neither.filter(
+        (c) =>
+            c.deezer?.artist !== undefined ||
+            c.deezer?.title !== undefined ||
+            c.discogs?.artist !== undefined ||
+            c.discogs?.title !== undefined,
+    );
+    const notFound = neither.filter((c) => !disagreements.includes(c));
+
     const lines = [
         "# Title/artist corroboration review",
         "",
@@ -465,18 +538,31 @@ async function run(): Promise<void> {
         "MusicBrainz remains primary; use this list to decide overrides or further checks.",
         "Rate-limited rows are omitted — re-run `pnpm corroborate:titles` to retry them.",
         "",
-        `| postId | artist | title | Deezer | Discogs |`,
+        `**${disagreements.length}** with a conflicting top hit (diff shown), **${notFound.length}** not found on either source.`,
+        "",
+        "## Disagreements",
+        "",
+        "Ours versus the other catalogue's top hit when that hit exists but does not match.",
+        "",
+        `| postId | our artist | our title | Deezer | Discogs |`,
         `| --- | --- | --- | --- | --- |`,
-        ...neither.map(
-            (c) =>
-                `| ${c.postId} | ${c.artist.replace(/\|/g, "/")} | ${c.title.replace(/\|/g, "/")} | ${
-                    c.deezer?.note ?? "no"
-                } | ${c.discogs?.note ?? "no"} |`,
-        ),
+        ...disagreements.map((c) => {
+            const ours = { artist: c.artist, title: c.title };
+            return `| ${c.postId} | ${cell(c.artist)} | ${cell(c.title)} | ${cell(
+                sourceDiff(ours, c.deezer),
+            )} | ${cell(sourceDiff(ours, c.discogs))} |`;
+        }),
+        "",
+        "## Not found on either source",
+        "",
+        "No usable Deezer or Discogs hit — often a remix/annotation title, a very local cut, or a credit the other catalogues file differently.",
+        "",
+        `| postId | our artist | our title |`,
+        `| --- | --- | --- |`,
+        ...notFound.map((c) => `| ${c.postId} | ${cell(c.artist)} | ${cell(c.title)} |`),
         "",
     ];
-    await writeFile(reviewPath, `${lines.join("\n")}\n`, "utf8");
-    console.log(`Wrote ${values.out} and ${reviewPath}`);
+    return `${lines.join("\n")}\n`;
 }
 
 await main();
