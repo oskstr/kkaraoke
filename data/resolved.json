@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T15:14:07.393Z",
+  "generatedAt": "2026-08-11T15:29:26.404Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -29293,28 +29293,6 @@
         "europop"
       ],
       "year": 1976,
-      "how": "exact"
-    },
-    {
-      "postId": 50116,
-      "artist": "Elvis Presley",
-      "sortAs": "Presley, Elvis",
-      "title": "Danny Boy",
-      "artistMbids": [
-        "01809552-4f87-45b0-afff-2c6f0730a3be"
-      ],
-      "artists": [
-        {
-          "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
-          "name": "Elvis Presley"
-        }
-      ],
-      "recordingMbid": "037ef856-caca-4b12-af16-0fee72c4f34f",
-      "genres": [
-        "rock and roll",
-        "rockabilly",
-        "rock"
-      ],
       "how": "exact"
     },
     {

@@ -158,12 +158,20 @@ so the resolution path is a proposal that names the karaoke-standard performer a
 `from` is reserved for shows and films — there is no musical called Finsk musik. Other Finnish-language songs
 in the catalogue get the same language code from the MusicBrainz works pass, not only this venue bucket.
 
-**Christmas (19, filed under `Julsång`).** Mostly traditional or 19th-century works — `Stilla natt`,
-`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. These have no single performer to find —
-`O helga natt` has a composer but not one singer — so inventing Carola or Bing Crosby would be worse than
-omitting the artist. They belong in `data/overrides.json` with `category: "Christmas"` and an empty artist,
-not under the venue label `Julsång` and not under a cover singer. The same rule covers midsummer songs,
-birthday songs, hymns, and Irish traditionals. `Jul medley` is not a single work at all.
+**Christmas (19, filed under `Julsång`) and other traditional / category buckets.** Three rules, in order:
+
+1. **If we can establish who originally made the song**, credit that artist (and still keep a `category`
+   such as Christmas when the venue filed it under a bucket).
+2. **If the venue already names a particular artist's rendition** of a traditional song — `Metallica` on
+   `Whiskey in the Jar`, `Stevie Wonder` on `Happy Birthday`, `Louis Armstrong` on `When the Saints` — keep
+   that artist. The track is most likely their version; do not replace it with a “more famous” cover or strip
+   it because the work is traditional.
+3. **If it is traditional and neither of the above applies**, omit the artist. Do not invent Carola or Bing
+   Crosby for `Stilla natt`, and do not leave the artist column as `Julsång`. Use `data/overrides.json` with
+   `category: "Christmas"` (or Midsummer, Birthday, Hymn, Irish traditional, …) and an empty artist.
+
+`Jul medley` is not a single work at all. The same three rules cover midsummer songs, birthday songs, hymns,
+and Irish traditionals filed under category labels.
 
 **Films and musicals (28 values, 66 songs).** `Disney` (13 songs), `Chicago` (5), `Sound of Music` (4),
 `High school musical` (4), `Grease` (3), `Frozen II` (3), `Moulin Rouge` (3), plus `Blues Brothers`,
@@ -623,11 +631,10 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
 
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
-- **The traditional repertoire.** `Julsång` (19 songs) is mostly carols with no single performer to find —
-  dump credits for `Stilla natt` or `Santa Claus Is Coming to Town` run to hundreds or thousands of artists.
-  Inventing one — or leaving the artist column as `Julsång` — is worse than omitting the artist; these live
-  in `data/overrides.json` with a Christmas `category`. The same for midsummer, birthday, hymn, and
-  traditional buckets. Italian and Finnish venue buckets were resolvable to real singers with
+- **Which cover to invent for a traditional work.** Dump credits for `Stilla natt` run to hundreds of artists.
+  Picking one is not a lookup. Category buckets like `Julsång` get an empty artist and a `category` in
+  overrides. When the venue already named a rendition, that name stays. When the original artist is
+  dump-confirmable, that name is used. Italian and Finnish venue buckets were resolvable to real singers with
   `language: "ita"` / `"fin"`.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and

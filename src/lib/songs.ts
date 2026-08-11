@@ -58,9 +58,10 @@ interface Correction {
 }
 
 /**
- * A hand correction. Overrides win over the resolver. An empty `artist` means omit the
- * venue's category label rather than invent a performer — traditional material belongs
- * under `category`, not under Carola or Bing Crosby.
+ * A hand correction. Overrides win over the resolver. An empty `artist` means omit a
+ * venue category label (`Julsång`, …) when there is no original artist and the venue did
+ * not name a rendition — not an invitation to invent Carola or Bing Crosby. When the
+ * venue already credited a performer's version of a traditional song, that credit stays.
  */
 interface Override {
     postId: number;

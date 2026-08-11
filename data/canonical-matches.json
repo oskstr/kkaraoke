@@ -26186,22 +26186,7 @@
       "id": 1357,
       "artist": "Fredric Weatherly",
       "song": "Danny boy",
-      "matched": true,
-      "artistCredit": "Elvis Presley",
-      "artistMbids": [
-        "01809552-4f87-45b0-afff-2c6f0730a3be"
-      ],
-      "recording": "Danny Boy",
-      "recordingMbid": "037ef856-caca-4b12-af16-0fee72c4f34f",
-      "release": "From Elvis Presley Boulevard, Memphis, Tennessee",
-      "score": 105401,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Weatherly wrote it; Elvis karaoke standard",
-      "venueArtist": "Fredric Weatherly",
-      "proposalArtist": "Elvis Presley",
-      "trusted": true,
-      "title": "Danny Boy"
+      "matched": false
     },
     {
       "postId": 51728,
