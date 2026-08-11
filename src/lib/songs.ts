@@ -18,9 +18,11 @@ export interface Song {
     /**
      * The show or film the song is from, where the venue filed it under that instead of a
      * performer. `Grease` is what someone would search for, so it must not be lost when the
-     * artist column starts naming the cast.
+     * artist column starts naming the cast. Not for language labels — see `language`.
      */
     from?: string;
+    /** ISO 639-3 lyrics language from the MusicBrainz work, where known. */
+    language?: string;
     /** True when the artist or title shown is a correction rather than the venue's own. */
     corrected?: boolean;
 }
@@ -39,6 +41,7 @@ interface Correction {
     genres?: string[];
     year?: number;
     from?: string;
+    language?: string;
     /**
      * Present on collaborations only. `artist` above is the release's credit line, which
      * reads properly but is a single string; this is the same artists individually, with the
@@ -77,6 +80,7 @@ const composed: readonly Song[] = catalogue.songs
             ...(correction.genres === undefined ? {} : { genres: correction.genres }),
             ...(correction.year === undefined ? {} : { year: correction.year }),
             ...(correction.from === undefined ? {} : { from: correction.from }),
+            ...(correction.language === undefined ? {} : { language: correction.language }),
             ...(artist === song.artist && title === song.song ? {} : { corrected: true }),
         };
     })

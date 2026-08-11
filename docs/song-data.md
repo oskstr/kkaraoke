@@ -154,16 +154,15 @@ covering 39 songs before an obscure single. Because the agent's confidence is it
 
 **Finnish (39, filed under `Finsk musik`).** Real songs by real artists, filed under a language label rather than
 a performer. Title-only lookup is ambiguous across the dump (`Myrskyn jälkeen` hits several artists at score 100),
-so the resolution path is a proposal that names the karaoke-standard performer and keeps the language bucket in
-`from` (same pattern as `Italian`) — e.g. Kari Tapio for `Myrskyn jälkeen`, Juice Leskinen Slam for
-`Viidestoista yö`. The common fact across the group is language, not a shared artist; until a dedicated language
-field exists, `from: "Finsk musik"` preserves what people search for.
+so the resolution path is a proposal that names the karaoke-standard performer and sets `language: "fin"`.
+`from` is reserved for shows and films — there is no musical called Finsk musik. Other Finnish-language songs
+in the catalogue get the same language code from the MusicBrainz works pass, not only this venue bucket.
 
 **Christmas (19, filed under `Julsång`).** Mostly traditional or 19th-century works — `Stilla natt`,
 `Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. Where a single karaoke performer is clear, propose
-that artist and keep the Christmas category in `from` (`Julsång`). Most of these have no canonical performer —
-`O helga natt` has a composer but not one singer — so inventing one would be worse than leaving the category
-alone. `Jul medley` is not a single work at all.
+that artist and keep a Christmas category separately from `from`. Most of these have no canonical performer —
+`O helga natt` has a composer but not one singer — so inventing one would be worse than leaving them unmatched.
+`Jul medley` is not a single work at all.
 
 **Films and musicals (28 values, 66 songs).** `Disney` (13 songs), `Chicago` (5), `Sound of Music` (4),
 `High school musical` (4), `Grease` (3), `Frozen II` (3), `Moulin Rouge` (3), plus `Blues Brothers`,
@@ -516,8 +515,9 @@ judgement failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit bec
 other collaborations, `Nanne Grönwall` is filed by MusicBrainz as the mononym `Nanne`, and `Colby Caillat` has no
 other trusted song to fuzzy-match from. A title-first pass, lead indexing from matched collaborations, and a
 second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
-`Finsk musik` rows (real performers, `from: "Finsk musik"` for the language bucket). The queue is
-down from 460 to **226**:
+`Finsk musik` rows (real performers, `language: "fin"` — not `from`, which is for shows and films).
+Italian proposals use `language: "ita"` the same way. A library-wide MusicBrainz works pass fills
+`language` for every trusted recording that has a linked work. The queue is down from 460 to **226**:
 
 | Songs | What it is                                                                                                                                              |
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -620,10 +620,10 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
 
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
-- **The traditional repertoire.** `Julsång` (19 songs) is mostly carols with no single performer to find.
-  Inventing one would be worse than leaving the label alone; these want a Christmas category. Italian was
-  mostly resolvable to real singers with `from: "Italian"`; Finnish likewise with real artists and
-  `from: "Finsk musik"` as the language bucket.
+- **The traditional repertoire.** `Julsång` (19 songs) is mostly carols with no single performer to find —
+  dump credits for `Stilla natt` or `Santa Claus Is Coming to Town` run to hundreds or thousands of artists.
+  Inventing one would be worse than leaving the label alone; these want a Christmas category, not a singer.
+  Italian and Finnish venue buckets were resolvable to real singers with `language: "ita"` / `"fin"`.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
 `data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.

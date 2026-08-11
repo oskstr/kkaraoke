@@ -18,6 +18,7 @@ import { dirname } from "node:path";
 import { parseArgs } from "node:util";
 import type { Artist } from "./fetch-artists.ts";
 import type { Recording } from "./fetch-recordings.ts";
+import type { WorkLink } from "./fetch-works.ts";
 
 interface MatchRecord {
     postId: number;
@@ -32,6 +33,8 @@ interface MatchRecord {
     /** Set where the dump confirmed a proposal, holding the proposer's reasoning. */
     proposed?: string;
     from?: string;
+    /** ISO 639-3 from a proposal, until a works lookup confirms one. */
+    language?: string;
     artistCredit?: string;
     artistMbids?: string[];
     /** MusicBrainz's own recording title, master markers and all. */
@@ -60,8 +63,11 @@ interface Resolved {
     /**
      * The show or film the song is from, where the venue put that in the artist column. Kept
      * apart from the artist: `Grease` is what people search for and is not a performer.
+     * Never a language label — that is `language`.
      */
     from?: string;
+    /** ISO 639-3 lyrics language from the MusicBrainz work, or a confirmed proposal. */
+    language?: string;
     recordingMbid?: string;
     genres?: string[];
     /** Earliest release of this title by this artist, which is not the same as the master's date. */
@@ -132,6 +138,7 @@ async function main(): Promise<void> {
             matches: { type: "string", default: "data/canonical-matches.json" },
             artists: { type: "string", default: "data/artists.json" },
             recordings: { type: "string", default: "data/recordings.json" },
+            works: { type: "string", default: "data/works.json" },
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
         },
@@ -155,6 +162,16 @@ async function main(): Promise<void> {
     const years = new Map((recordingFile?.recordings ?? []).map((r) => [r.recordingMbid, r.year]));
     if (recordingFile === undefined) {
         console.warn(`No ${values.recordings} yet, so songs will have no year.`);
+    }
+
+    const worksFile = await readJson<{ works: WorkLink[] }>(values.works);
+    const languages = new Map(
+        (worksFile?.works ?? [])
+            .filter((work) => work.language !== undefined)
+            .map((work) => [work.recordingMbid, work.language!]),
+    );
+    if (worksFile === undefined) {
+        console.warn(`No ${values.works} yet, so languages come only from proposals.`);
     }
 
     // Which artist each of the venue's artist strings turned out to name, where its songs
@@ -205,6 +222,7 @@ async function main(): Promise<void> {
     let artistFixes = 0;
     let genreCount = 0;
     let yearCount = 0;
+    let languageCount = 0;
     let artistOnly = 0;
 
     /**
@@ -330,6 +348,13 @@ async function main(): Promise<void> {
 
         const resolved: Resolved = { postId: match.postId };
         if (match.from !== undefined) resolved.from = match.from;
+        const language =
+            (match.recordingMbid === undefined ? undefined : languages.get(match.recordingMbid)) ??
+            match.language;
+        if (language !== undefined) {
+            resolved.language = language;
+            languageCount++;
+        }
         if (!anonymous && canonical !== undefined && canonical !== match.artist) {
             resolved.artist = canonical;
             artistFixes++;
@@ -381,6 +406,7 @@ async function main(): Promise<void> {
     console.log(`  artist names corrected: ${artistFixes}`);
     console.log(`  songs with a genre: ${genreCount}`);
     console.log(`  songs with a year: ${yearCount}`);
+    console.log(`  songs with a language: ${languageCount}`);
     console.log(`  artist named from the artist's other songs, title still unknown: ${artistOnly}`);
 
     await mkdir(dirname(values.out), { recursive: true });

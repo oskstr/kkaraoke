@@ -449,6 +449,8 @@ interface Wanted {
     /** Set when the key came from a proposal rather than from the catalogue's own strings. */
     proposed?: string;
     from?: string;
+    /** ISO 639-3 lyrics language, where a proposal names one (never a show or film). */
+    language?: string;
 }
 
 interface Match extends Row {
@@ -459,6 +461,8 @@ interface Match extends Row {
     proposed?: string;
     /** The show or film the song comes from, as the proposal gave it. */
     from?: string;
+    /** ISO 639-3 lyrics language from a proposal, until a works lookup confirms one. */
+    language?: string;
     trusted: boolean;
 }
 
@@ -585,9 +589,16 @@ interface Proposal {
     /**
      * The show or film the song is from, where that is what the venue put in the artist
      * column. Its own field rather than an artist, because `Grease` is not a performer and
-     * `John Travolta` is not what anyone searches for.
+     * `John Travolta` is not what anyone searches for. Not for language labels such as
+     * `Finsk musik` or `Italian` — those belong in `language`.
      */
     from?: string;
+    /**
+     * ISO 639-3 lyrics language (`fin`, `ita`, `swe`, …), where the venue filed songs under
+     * a language label rather than a performer, or where a proposer knows the language
+     * ahead of a works lookup.
+     */
+    language?: string;
     /** Why the proposer thinks so, kept for whoever reads the match later. */
     why: string;
 }
@@ -641,6 +652,7 @@ async function main(): Promise<void> {
                     rewrites,
                     proposed: proposal.why,
                     ...(proposal.from === undefined ? {} : { from: proposal.from }),
+                    ...(proposal.language === undefined ? {} : { language: proposal.language }),
                 });
             }
         }
@@ -666,6 +678,7 @@ async function main(): Promise<void> {
             rewrites: entry.rewrites,
             ...(entry.proposed === undefined ? {} : { proposed: entry.proposed }),
             ...(entry.from === undefined ? {} : { from: entry.from }),
+            ...(entry.language === undefined ? {} : { language: entry.language }),
             rank,
             trusted: TRUSTED.includes(how),
         });
@@ -1054,6 +1067,7 @@ async function main(): Promise<void> {
             ...rest,
             title: published.title,
             ...(from === undefined ? {} : { from }),
+            ...(match.language === undefined ? {} : { language: match.language }),
             ...(placeholder ? { placeholder: true as const, trusted: false } : {}),
         };
     });

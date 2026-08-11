@@ -21,6 +21,7 @@
         "match:canonical": "node --experimental-strip-types scripts/match-canonical.ts",
         "fetch:artists": "node --experimental-strip-types scripts/fetch-artists.ts",
         "fetch:recordings": "node --experimental-strip-types scripts/fetch-recordings.ts",
+        "fetch:works": "node --experimental-strip-types scripts/fetch-works.ts",
         "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts"
     },
     "dependencies": {
