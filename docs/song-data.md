@@ -508,7 +508,7 @@ where a substitution is not. Inside an artist's own catalogue it finds Madonna's
 
 The queue is [`data/review.md`](../data/review.md), generated with everything else. It is grouped by what is
 wrong, because those are different jobs, and within that by the venue's artist string, largest group first, since
-one decision about `Finsk musik` settles thirty-nine songs and one about `Rozallo` settles one. Each row carries
+one decision about a wrong-attribution cluster settles many songs and one about `Rozallo` settles one. Each row carries
 the `postId` a proposal is keyed by and the `id` on the wall.
 
 Most of what used to look like “obvious typos of famous artists” in that queue were real matching gaps, not
@@ -620,9 +620,10 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
 
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
-- **The traditional repertoire.** `Julsång` (19 songs) and `Italian` (15) are mostly carols and
-  Neapolitan standards with no single performer to find. Inventing one would be worse than
-  leaving the label alone; these want a category, not an artist.
+- **The traditional repertoire.** `Julsång` (19 songs) is mostly carols with no single performer to find.
+  Inventing one would be worse than leaving the label alone; these want a Christmas category. Italian was
+  mostly resolvable to real singers with `from: "Italian"`; Finnish likewise with real artists and
+  `from: "Finsk musik"` as the language bucket.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
 `data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
@@ -727,8 +728,9 @@ and web service agree. Regenerated counts live in `data/review.md` and the match
 
 Still to do:
 
-9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — especially `Finsk musik` and
-   `Julsång`, which want a category rather than an invented performer — into `data/proposals.json` where the dump
+9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — especially `Julsång`,
+   which wants a Christmas category rather than an invented performer, and the wrong-attribution bucket —
+   into `data/proposals.json` where the dump can confirm a real artist.
    can confirm a guess and into `data/overrides.json` where it cannot.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
