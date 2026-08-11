@@ -48,16 +48,14 @@
       "artistMbids": [
         "81bac815-97c5-4723-8f0b-4d8edfad1010"
       ],
-      "recording": "Jump",
-      "recordingMbid": "7d6191f4-ccbb-46c2-b986-ec478e1bb877",
-      "release": "All Night Disco",
-      "score": 5494057,
+      "recording": "Jump (for My Love)",
+      "recordingMbid": "dd954fca-e86e-404a-955d-306d2bf5fb87",
+      "release": "Superstars of the 80’s: Things Can Only Get Better",
+      "score": 5485631,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Jump"
+      "title": "Jump (for My Love)"
     },
     {
       "postId": 51016,
@@ -746,14 +744,12 @@
         "00ed154e-8679-42f0-8f42-e59bd7e185af",
         "967002b0-58ef-4b22-a58c-fbc631ff695c"
       ],
-      "recording": "Senza una donna",
-      "recordingMbid": "270f3699-17ef-421e-b7e1-98b470e38eae",
-      "release": "Senza una donna (Without a Woman)",
-      "score": 3596159,
+      "recording": "Senza una donna (Without a Woman)",
+      "recordingMbid": "825bff68-573f-4770-9ae7-b674d2b3cddc",
+      "release": "Oro, incenso & birra",
+      "score": 811055,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "Zuchero typo; full duet",
       "venueArtist": "Zuchero & Paul Young",
       "proposalArtist": "Zucchero & Paul Young",
@@ -1833,14 +1829,14 @@
       "artistMbids": [
         "90c7177f-4be5-413d-aabd-d228934c2b9b"
       ],
-      "recording": "Kiss 'When the Sun Don't Shine' (Airscape mix)",
-      "recordingMbid": "2fd3fd79-c3af-48de-aa61-16046b2472de",
-      "release": "Club Beats (Series 3 Volume 3)",
-      "score": 5443690,
-      "how": "version",
+      "recording": "Kiss (When the Sun Don’t Shine)",
+      "recordingMbid": "58e45486-bfca-4c19-88d9-a87a282866b0",
+      "release": "The Platinum Album",
+      "score": 248776,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Kiss 'When the Sun Don't Shine'"
+      "title": "Kiss (When the Sun Don’t Shine)"
     },
     {
       "postId": 48605,
@@ -3142,14 +3138,14 @@
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "Like I Love You",
-      "recordingMbid": "001c7ea5-9132-48da-9609-8ceec5219fb7",
-      "release": "Live From London",
-      "score": 4540810,
-      "how": "exact",
+      "recording": "Like I Love You (MTV's Making the video - Excerpts)",
+      "recordingMbid": "6dfbb301-b562-43dd-a559-40bf6f9b098c",
+      "release": "Justified the Videos",
+      "score": 5204953,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Like I Love You"
+      "title": "Like I Love You (MTV's Making the video - Excerpts)"
     },
     {
       "postId": 48066,
@@ -4226,14 +4222,14 @@
       "artistMbids": [
         "8e68819d-71be-4e7d-b41d-f1df81b01d3f"
       ],
-      "recording": "In da Club",
-      "recordingMbid": "87877ebd-874b-4dd2-83c6-4c1360ba26a0",
-      "release": "Get Rich or Die Tryin’",
-      "score": 330949,
-      "how": "exact",
+      "recording": "In Da Club (Blend By 2sty)",
+      "recordingMbid": "1054bceb-d3c6-4671-9182-6794753dfbde",
+      "release": "Jamnik Mixtape",
+      "score": 1836246,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "In da Club"
+      "title": "In Da Club (Blend By 2sty)"
     },
     {
       "postId": 52546,
@@ -7413,14 +7409,14 @@
       "artistMbids": [
         "57c6f649-6cde-48a7-8114-2a200247601a"
       ],
-      "recording": "I’ll Never Fall in Love Again",
-      "recordingMbid": "15593647-c0e3-40e2-8ab3-a48c54aa36aa",
-      "release": "The Best of Tom Jones Live: From Las Vegas to London",
-      "score": 4532484,
-      "how": "exact",
+      "recording": "I’ll Never Fall in Love Again (It Looks Like)",
+      "recordingMbid": "f15652d2-8d46-4fb8-9ce2-02a541e67a4d",
+      "release": "Everlasting Love Songs",
+      "score": 5395373,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ll Never Fall in Love Again"
+      "title": "I’ll Never Fall in Love Again (It Looks Like)"
     },
     {
       "postId": 48236,
@@ -8500,14 +8496,14 @@
       "artistMbids": [
         "3943ae31-40b4-4de5-a4d6-819d9f3de72e"
       ],
-      "recording": "That's Why (You Go Away) (Live)",
-      "recordingMbid": "fbdf27ae-1fb3-460d-8e9a-63ea61039692",
-      "release": "The Best Of Michael Learns To Rock Live",
-      "score": 4551045,
-      "how": "version",
+      "recording": "That’s Why (You Go Away)",
+      "recordingMbid": "dcaba97a-81a0-4c69-bfcb-9182c2e7e910",
+      "release": "Played on Pepper",
+      "score": 131229,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "That's Why (You Go Away)"
+      "title": "That’s Why (You Go Away)"
     },
     {
       "postId": 53440,
@@ -10393,14 +10389,14 @@
       "artistMbids": [
         "847e8a0c-cc20-4213-9e16-975515c2a926"
       ],
-      "recording": "Beauty and the Beast",
-      "recordingMbid": "b232cf14-3aec-4249-9933-1fd22786c41a",
-      "release": "Live in Memphis",
-      "score": 4663765,
-      "how": "exact",
+      "recording": "Beauty And The Beast (美女與野獸)",
+      "recordingMbid": "a988293a-53ca-454e-8204-7c0e7f442d12",
+      "release": "A New Day Has Come (席琳·迪翁｜嶄新的一天)",
+      "score": 4768028,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Beauty and the Beast"
+      "title": "Beauty And The Beast (美女與野獸)"
     },
     {
       "postId": 52124,
@@ -12457,14 +12453,14 @@
       "artistMbids": [
         "401c3991-b76b-499d-8082-9f2df958ef78"
       ],
-      "recording": "Easy Lover",
-      "recordingMbid": "ad059914-c42d-4d0c-9f4b-cc22dfa5df49",
-      "release": "Serious Hits… Live!",
-      "score": 4515567,
-      "how": "exact",
+      "recording": "Easy Lover (fade)",
+      "recordingMbid": "0603ac6c-f56b-4598-b4a2-8c9477b4d2a0",
+      "release": "TM Century: GoldDisc 206",
+      "score": 5542027,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Easy Lover"
+      "title": "Easy Lover (fade)"
     },
     {
       "postId": 53535,
@@ -15670,14 +15666,14 @@
       "artistMbids": [
         "d6faa296-be6f-4e8a-99de-a368e2f68374"
       ],
-      "recording": "T.K.O. (Knock You Out - The Remix)",
-      "recordingMbid": "1139f00c-3eba-427f-a6a6-e3feeccf412b",
-      "release": "Bless",
-      "score": 338829,
+      "recording": "T.K.O. (Knock You Out)",
+      "recordingMbid": "2ae5c5a8-de40-4f17-9b96-cb8db581841b",
+      "release": "Absolute Kidz 8",
+      "score": 5466640,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "T.K.O."
+      "title": "T.K.O. (Knock You Out)"
     },
     {
       "postId": 48171,
@@ -23081,14 +23077,14 @@
       "artistMbids": [
         "20ff3303-4fe2-4a47-a1b6-291e26aa3438"
       ],
-      "recording": "I Got You (I Feel Good) (bass)",
-      "recordingMbid": "1a708fcb-ff33-4661-aa35-a006d0bf7948",
-      "release": "The Funkmasters: The Great James Brown Rhythm Sections, 1960-1973",
-      "score": 5141959,
-      "how": "version",
+      "recording": "I Got You (I Feel Good)",
+      "recordingMbid": "bf9984ff-64e4-43b7-aac8-86768d6cc7d4",
+      "release": "Millennium Edition",
+      "score": 273136,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Got You (I Feel Good) (bass)"
+      "title": "I Got You (I Feel Good)"
     },
     {
       "postId": 49240,
@@ -24002,11 +23998,11 @@
       "artistMbids": [
         "5dfdca28-9ddc-4853-933c-8bc97d87beec"
       ],
-      "recording": "Sweet Dreams (Are Made of This) (Cyric remix)",
-      "recordingMbid": "88aeb40f-a59c-4050-a6c5-4cf0a035b826",
-      "release": "From Highway to Hell: The Ultimate Cover Collection",
-      "score": 4764339,
-      "how": "version",
+      "recording": "Sweet Dreams (Are Made of This)",
+      "recordingMbid": "b123feea-8ae8-4932-b090-4cea1a185858",
+      "release": "Sweet Dreams (Bootleg)",
+      "score": 190896,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Sweet Dreams (Are Made of This)"
@@ -31690,14 +31686,12 @@
       "artistMbids": [
         "88d6db37-0d87-4e84-a949-9cf8e8879505"
       ],
-      "recording": "Slam Dunk",
-      "recordingMbid": "c90920e8-6205-443b-968c-bdbe770f9079",
-      "release": "Hit Explosion ’98, Volume 2",
-      "score": 5432309,
+      "recording": "Slam Dunk (da Funk)",
+      "recordingMbid": "efbfab60-a5b0-46b8-90b7-bca6f27031e1",
+      "release": "Five",
+      "score": 200284,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "Slam dunk the funk",
       "venueArtist": "Five",
       "proposalArtist": "Five",
@@ -33287,17 +33281,18 @@
       "artist": "Steve Harley & Cockney Rebe",
       "song": "Make me smile (Come up and see me)",
       "matched": true,
-      "artistCredit": "Steve Harley & Cockney Rebel",
+      "artistCredit": "Steve Harley and Cockney Rebel",
       "artistMbids": [
-        "58177b75-d725-45e1-9b35-df18f1fd15c2",
-        "827dec20-90f0-4ef5-90a0-af0a7095782d"
+        "9a07b4ae-7c2f-4473-b019-c63c3d5db45c"
       ],
-      "recording": "Make Me Smile (Come up and See Me) - 2014 Remaster",
-      "recordingMbid": "2709bac4-6f9d-4c51-9c05-95109fd84fb3",
-      "release": "Best Dad In The World Ever",
-      "score": 5559914,
-      "how": "loose",
-      "rewrites": [],
+      "recording": "Make Me Smile (Come Up and See Me)",
+      "recordingMbid": "7229a939-9d81-43dd-8456-3fbea4821380",
+      "release": "Murphy’s Rock Classics, Volume One",
+      "score": 5416502,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "proposed": "Full band",
       "venueArtist": "Steve Harley & Cockney Rebe",
       "proposalArtist": "Steve Harley & Cockney Rebel",
@@ -33895,11 +33890,11 @@
       "artistMbids": [
         "5c0d53a1-daa6-4afe-bf2d-b324f0602e26"
       ],
-      "recording": "I Understand (Just How You Feel) (rerecorded)",
-      "recordingMbid": "f855f976-21e6-4a0e-868f-92945bac87d7",
-      "release": "100 Hits of the Swingin’ Sixties",
-      "score": 5596041,
-      "how": "version",
+      "recording": "I Understand (Just How You Feel)",
+      "recordingMbid": "279bd145-e579-4b65-aead-e1121e28bed7",
+      "release": "The Best Of",
+      "score": 4990687,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "I Understand (Just How You Feel)"
@@ -34851,14 +34846,14 @@
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
-      "recording": "Power of Good-bye (Dallas’ Low End mix)",
-      "recordingMbid": "27608200-06c9-4f05-97bf-f6d46ceeb771",
-      "release": "Dance Hits & Remixes",
-      "score": 4469416,
+      "recording": "Power of Goodbye (Demo)",
+      "recordingMbid": "21d7cf33-8660-4c64-a66e-0d1444455478",
+      "release": "Demo",
+      "score": 5316418,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Power of Good-bye"
+      "title": "Power of Goodbye"
     },
     {
       "postId": 51421,
@@ -36732,16 +36727,14 @@
       "artistMbids": [
         "62c28bc0-f696-4c50-8e54-5f8e9120bdb8"
       ],
-      "recording": "There's a Kind of Hush",
-      "recordingMbid": "adf52f05-1dec-40a2-9556-d4d529808868",
-      "release": "Live in Japan",
-      "score": 4526835,
+      "recording": "There's a Kind of Hush (All Over the World)",
+      "recordingMbid": "1f8ed0db-826c-4b6c-bf95-224d336f4b13",
+      "release": "The Complete Decca Studio Albums: Release Me",
+      "score": 785383,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "There's a Kind of Hush"
+      "title": "There's a Kind of Hush (All Over the World)"
     },
     {
       "postId": 49812,
@@ -37789,14 +37782,14 @@
       "artistMbids": [
         "e18709d6-dcd1-4db2-9c4c-0d8d1d431ab6"
       ],
-      "recording": "I Love the Nightlife (Disco 'Round) (Real Rapino 7\" mix)",
-      "recordingMbid": "9cf731c8-dc4f-4228-a75f-3e164d1735ef",
-      "release": "I Love the Nightlife (disco ’round)",
-      "score": 4996902,
-      "how": "version",
+      "recording": "I Love the Nightlife (Disco Round)",
+      "recordingMbid": "3abafa96-abe3-4b86-b26f-2938d23972b7",
+      "release": "I Love the Night Life",
+      "score": 112485,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Love the Nightlife (Disco 'Round)"
+      "title": "I Love the Nightlife (Disco Round)"
     },
     {
       "postId": 50931,
@@ -38719,11 +38712,11 @@
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228"
       ],
-      "recording": "I Wanna Dance With Somebody (Who Loves Me) (DJ edit)",
-      "recordingMbid": "e1ee9495-c349-470b-99be-229ba9fdee9a",
-      "release": "DJ Edits Collection: 80s",
-      "score": 5597643,
-      "how": "version",
+      "recording": "I Wanna Dance With Somebody (Who Loves Me)",
+      "recordingMbid": "900c26eb-e3a4-481d-9c3b-dd8963a7c185",
+      "release": "Whitney",
+      "score": 14415,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "I Wanna Dance With Somebody (Who Loves Me)"
@@ -39232,11 +39225,11 @@
       "artistMbids": [
         "084308bd-1654-436f-ba03-df6697104e19"
       ],
-      "recording": "Good Riddance (Time of Your Life) (live at Makuhari Messe, Tokyo, Japan, March 18, 2001)",
-      "recordingMbid": "a58b0348-d8fd-4204-8f06-de72d65b0718",
-      "release": "Warning",
-      "score": 1695059,
-      "how": "version",
+      "recording": "Good Riddance (Time of Your Life)",
+      "recordingMbid": "91398240-3c6b-4222-b897-7f9f3a96983b",
+      "release": "nimrod.",
+      "score": 178902,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Good Riddance (Time of Your Life)"
@@ -39862,16 +39855,14 @@
       "artistMbids": [
         "c296e10c-110a-4103-9e77-47bfebb7fb2e"
       ],
-      "recording": "Them Belly Full",
-      "recordingMbid": "8e6467ee-df5c-4d30-a99d-fd469cc6b96c",
-      "release": "Bob Marley: The 420 Edition",
-      "score": 4881697,
+      "recording": "Them Belly Full (but We Hungry)",
+      "recordingMbid": "7d9e7167-4328-48dc-aca3-7da7fb904d36",
+      "release": "Dreams of Freedom: Ambient Translations of Bob Marley in Dub",
+      "score": 4468428,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Them Belly Full"
+      "title": "Them Belly Full (but We Hungry)"
     },
     {
       "postId": 52017,
@@ -43202,11 +43193,11 @@
       "artistMbids": [
         "2ddd167f-5b8a-4372-b350-6ad50493bac0"
       ],
-      "recording": "Over My Head (Cable Car) (live acoustic)",
-      "recordingMbid": "673df59f-115a-4731-a852-dbf186bb79e5",
-      "release": "Acoustic Café",
-      "score": 5528618,
-      "how": "version",
+      "recording": "Over My Head (Cable Car)",
+      "recordingMbid": "d77db5e1-15ba-4e37-87bf-34a6537b341c",
+      "release": "How to Save a Life",
+      "score": 401402,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Over My Head (Cable Car)"
@@ -44924,16 +44915,14 @@
       "artistMbids": [
         "21387249-8a66-4839-903f-9f5376715320"
       ],
-      "recording": "Brandy",
-      "recordingMbid": "f7bfc398-8824-42ff-b816-73732ea955fb",
-      "release": "All The Hits - The Back Catalogue 2",
-      "score": 5416667,
+      "recording": "Brandy (You’re a Fine Girl)",
+      "recordingMbid": "accad857-6d36-410a-8859-3e456a08b1ac",
+      "release": "Looking Glass",
+      "score": 1080005,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Brandy"
+      "title": "Brandy (You’re a Fine Girl)"
     },
     {
       "postId": 49757,
@@ -48456,14 +48445,14 @@
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
-      "recording": "With Every Heartbeat",
-      "recordingMbid": "134c7bc6-0ffa-40c8-814f-f0ae12e10449",
-      "release": "Radio 1’s Live Lounge, Volume 2",
-      "score": 5391440,
-      "how": "exact",
+      "recording": "With Every Heartbeat (Punks Jump Up rmx)",
+      "recordingMbid": "9a971bd9-97a3-401e-9967-a1ef613eabd8",
+      "release": "Sound of the City",
+      "score": 5628897,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "With Every Heartbeat"
+      "title": "With Every Heartbeat (Punks Jump Up rmx)"
     },
     {
       "postId": 48396,
@@ -49125,14 +49114,14 @@
       "artistMbids": [
         "847e8a0c-cc20-4213-9e16-975515c2a926"
       ],
-      "recording": "Goodbye's (The Saddest Word) (Radio Edit)",
-      "recordingMbid": "3744a7f1-8f36-4258-8e43-39b304d65463",
-      "release": "Goodbye's (The Saddest Word)",
-      "score": 2319052,
-      "how": "version",
+      "recording": "Goodbye’s (The Saddest Word)",
+      "recordingMbid": "0cb05d58-e067-4953-8659-b98087359144",
+      "release": "A New Day Has Come",
+      "score": 303791,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Goodbye's (The Saddest Word)"
+      "title": "Goodbye’s (The Saddest Word)"
     },
     {
       "postId": 48313,
@@ -49718,14 +49707,14 @@
       "artistMbids": [
         "70248960-cb53-4ea4-943a-edb18f7d336f"
       ],
-      "recording": "Rosalita",
-      "recordingMbid": "fe0ac43f-0f6d-475a-baca-b544319166c3",
-      "release": "Greatest Hits Live",
-      "score": 4522500,
-      "how": "exact",
+      "recording": "Rosalita (Come Out Tonight) (Con’t)",
+      "recordingMbid": "1e45dc8a-f4e5-4549-a7b5-b1f6d82f04f1",
+      "release": "Second Day at Castle Hall Vol 2",
+      "score": 4661010,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Rosalita"
+      "trusted": false,
+      "title": "Rosalita (Come Out Tonight) (Con’t)"
     },
     {
       "postId": 49108,
@@ -49872,14 +49861,12 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "recording": "Single Ladies",
-      "recordingMbid": "e9fd7c60-8bd2-49d8-a5ff-56ee8f8bcd98",
-      "release": "Your Girls Favorite Mixtape (Fall Edition 2)",
-      "score": 4453666,
+      "recording": "Single Ladies (Put a Ring on It)",
+      "recordingMbid": "67dc066b-d84e-444c-b250-82917db7281e",
+      "release": "I Am… Sasha Fierce",
+      "score": 520328,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "All the single ladies",
       "venueArtist": "Beyonce",
       "proposalArtist": "Beyoncé",
@@ -49892,18 +49879,18 @@
       "artist": "Destiny's Child",
       "song": "Soldier",
       "matched": true,
-      "artistCredit": "Destiny’s Child",
+      "artistCredit": "Destiny's Child",
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
-      "recording": "Soldier",
-      "recordingMbid": "2bee83b5-4ac3-461d-9919-642e21bf172d",
-      "release": "Live in Atlanta",
-      "score": 4547551,
-      "how": "exact",
+      "recording": "Soldier (Maurice's Nu Anthem Emix)",
+      "recordingMbid": "7b4b73f4-11d2-42f5-a2ee-4279d54b620a",
+      "release": "Promo Only: Mainstream Club, February 2005",
+      "score": 5485523,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Soldier"
+      "title": "Soldier (Maurice's Nu Anthem Emix)"
     },
     {
       "postId": 48451,
@@ -50130,14 +50117,14 @@
       "artistMbids": [
         "81435053-e1a2-48a4-adfd-e89f310c7b38"
       ],
-      "recording": "Time (Clock of the Heart) (DJ Turbo's Disco Groove)",
-      "recordingMbid": "ffa7b416-631b-420f-9e0f-b9ff1a3b1d7b",
-      "release": "Greatest Moments: The Best Of Boy George & Culture Club",
-      "score": 4744660,
-      "how": "version",
+      "recording": "Time (Clock of the Heart)",
+      "recordingMbid": "6ccd7479-73ee-4817-ac8e-5192780433bd",
+      "release": "Colour by Numbers",
+      "score": 3930,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Time (Clock of the Heart) (DJ Turbo's Disco Groove)"
+      "title": "Time (Clock of the Heart)"
     },
     {
       "postId": 49206,
@@ -50325,14 +50312,14 @@
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
-      "recording": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)",
-      "recordingMbid": "33373290-7c0a-4f3e-a6e7-3c9d9c4e4e81",
-      "release": "Odds & Ends: Scepter Records Rarities",
-      "score": 4847806,
-      "how": "version",
+      "recording": "You’ll Never Get to Heaven (If You Break My Heart)",
+      "recordingMbid": "5be84fd4-ea1d-437e-92eb-0da6d6af1655",
+      "release": "An Evening With Dionne Warwick",
+      "score": 391007,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)"
+      "title": "You’ll Never Get to Heaven (If You Break My Heart)"
     },
     {
       "postId": 49125,
@@ -51114,20 +51101,18 @@
       "artist": "Goo Goo Dolls",
       "song": "Broadway",
       "matched": true,
-      "artistCredit": "The Goo Goo Dolls",
+      "artistCredit": "Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
-      "recording": "Broadway",
-      "recordingMbid": "7487e1db-b678-4320-a25f-9236c8d37efb",
-      "release": "Dizzy Up the Girl",
-      "score": 202536,
-      "how": "exact",
-      "rewrites": [
-        "artist-article-added"
-      ],
+      "recording": "Broadway [Sessions@aol]",
+      "recordingMbid": "9b5183aa-28f0-480e-b493-e4aa7102a4e6",
+      "release": "Big Machine",
+      "score": 2316552,
+      "how": "version",
+      "rewrites": [],
       "trusted": true,
-      "title": "Broadway"
+      "title": "Broadway [Sessions@aol]"
     },
     {
       "postId": 52317,
@@ -51975,16 +51960,14 @@
       "artistMbids": [
         "650e7db6-b795-4eb5-a702-5ea2fc46c848"
       ],
-      "recording": "Eh, Eh",
-      "recordingMbid": "f44fdf6f-55d4-4328-a182-bd0f068ae3c1",
-      "release": "NRJ Dance",
-      "score": 5506613,
+      "recording": "Eh, Eh (Nothing Else I Can Say)",
+      "recordingMbid": "d10a1cd1-0caa-405a-817a-111e2a1d8064",
+      "release": "The Fame",
+      "score": 513770,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Eh, Eh"
+      "title": "Eh, Eh (Nothing Else I Can Say)"
     },
     {
       "postId": 47902,
@@ -52105,16 +52088,14 @@
       "artistMbids": [
         "d3b2711f-2baa-441a-be95-14945ca7e6ea"
       ],
-      "recording": "Fading Like a Flower",
-      "recordingMbid": "2282e411-9649-4e95-a026-3913b77c414b",
-      "release": "Opportunity Nox",
-      "score": 2319754,
+      "recording": "Fading Like a Flower (Every Time You Leave)",
+      "recordingMbid": "77ae826b-98be-4f96-b4a1-aa7a812aaef7",
+      "release": "Joyride",
+      "score": 57752,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Fading Like a Flower"
+      "title": "Fading Like a Flower (Every Time You Leave)"
     },
     {
       "postId": 50814,
@@ -52840,14 +52821,12 @@
       "artistMbids": [
         "cfbc0924-0035-4d6c-8197-f024653af823"
       ],
-      "recording": "If I Ruled The World",
-      "recordingMbid": "2e782b7c-6571-4f54-bc9f-704c3170f46c",
-      "release": "Da Bomb Volume 1",
-      "score": 216898,
+      "recording": "If I Ruled the World (Imagine That)",
+      "recordingMbid": "0582cf0c-cb97-4a8b-82a1-7d85bce0531c",
+      "release": "It Was Written",
+      "score": 153169,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "Nas hit; venue wrongly credited Luther",
       "venueArtist": "Luther Vandross",
       "proposalArtist": "Nas",
@@ -54914,11 +54893,11 @@
       "artistMbids": [
         "b4d32cff-f19e-455f-86c4-f347d824ca61"
       ],
-      "recording": "Sweet Dreams (Are Made of This) (Costel Van Dein remix)",
-      "recordingMbid": "36f14c37-42f5-45e0-87ae-3aeb9c3ebec5",
-      "release": "Knife Party at EDC Las Vegas 2021: Cosmic Meadow Stage",
-      "score": 4612654,
-      "how": "version",
+      "recording": "Sweet Dreams (Are Made of This)",
+      "recordingMbid": "bf8e28bb-b4ef-4b9a-bc64-8f58dd4ff5dd",
+      "release": "Sweet Dreams (Are Made of This)",
+      "score": 1996,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Sweet Dreams (Are Made of This)"
@@ -55264,11 +55243,11 @@
       "artistMbids": [
         "ffdb2b8f-ecbf-427a-abc7-c47f4ebc8ae3"
       ],
-      "recording": "Touch Me (I Want Your Body) (clean version)",
-      "recordingMbid": "ac1cd96c-4b0d-453f-a4e6-8b516fc0b866",
-      "release": "RFM Party 80 La Compilation Best of",
-      "score": 5516142,
-      "how": "version",
+      "recording": "Touch Me (I Want Your Body)",
+      "recordingMbid": "e3a37173-4d1a-46ef-b833-a929f666f7bc",
+      "release": "Touch Me",
+      "score": 9794,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Touch Me (I Want Your Body)"
@@ -56647,11 +56626,11 @@
       "artistMbids": [
         "a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432"
       ],
-      "recording": "Pride (In the Name of Love) / City of Blinding Lights",
-      "recordingMbid": "ef7b50f5-393d-4ce1-95aa-117bfe7ca402",
-      "release": "The Official Inaugural Celebration",
-      "score": 5642280,
-      "how": "loose",
+      "recording": "Pride (In the Name of Love)",
+      "recordingMbid": "697c8b18-6e25-460b-a4ba-e861b1649359",
+      "release": "The Unforgettable Fire",
+      "score": 2996,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Pride (In the Name of Love)"
@@ -58175,15 +58154,12 @@
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
-      "recording": "Don't Think Twice, It's All Right (live at Town Hall, Birmingham, England - May 5, 1965)",
-      "recordingMbid": "01820bc6-5891-4edf-a8d9-c64ba760c2ba",
-      "release": "50th Anniversary Collection: 1965",
-      "score": 5204179,
+      "recording": "Don't Think Twice (Twice)",
+      "recordingMbid": "018c09c6-f3a0-4640-9b2f-b2386ce33760",
+      "release": "What Are You Trying to Say?",
+      "score": 4639737,
       "how": "version",
       "rewrites": [],
-      "proposed": "Full title beats loose",
-      "venueArtist": "Bob Dylan",
-      "proposalArtist": "Bob Dylan",
       "trusted": true,
       "title": "Don’t Think Twice, It’s All Right"
     },
@@ -58368,14 +58344,14 @@
       "artistMbids": [
         "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
       ],
-      "recording": "Get Down (You're the One for Me) (vocal Journey radio edit)",
-      "recordingMbid": "ee878422-ca90-4959-83bf-46dc4836e648",
-      "release": "Dance Now! Vol. 15",
-      "score": 5421852,
-      "how": "version",
+      "recording": "Get Down (You’re the One for Me)",
+      "recordingMbid": "393c4024-7259-43da-a9c0-01b3631c28db",
+      "release": "Backstreet Boys",
+      "score": 151810,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Get Down (You're the One for Me)"
+      "title": "Get Down (You’re the One for Me)"
     },
     {
       "postId": 49584,
@@ -59023,14 +58999,14 @@
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
       ],
-      "recording": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll) (St. Albans High School, Australia, March 1976)",
-      "recordingMbid": "e97e4b09-3653-4685-a45a-292efdd032ef",
-      "release": "Plug Me In",
-      "score": 5201882,
-      "how": "version",
+      "recording": "It’s a Long Way to the Top (If You Wanna Rock ’n’ Roll)",
+      "recordingMbid": "fcb8c560-ae73-4947-b2c9-96e7e4c864f8",
+      "release": "T.N.T.",
+      "score": 9327,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll) (St. Albans High School, Australia, March 1976)"
+      "title": "It’s a Long Way to the Top (If You Wanna Rock ’n’ Roll)"
     },
     {
       "postId": 48475,
@@ -64667,11 +64643,11 @@
         "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
         "94204786-d86d-40ab-ba91-ef8e6c640e07"
       ],
-      "recording": "Stay (I Missed You) (Living Room mix)",
-      "recordingMbid": "3fa00771-2e43-4b62-97b6-d2798eea3a53",
-      "release": "Stay (I Missed You)",
-      "score": 2263718,
-      "how": "version",
+      "recording": "Stay (I Missed You)",
+      "recordingMbid": "cf4f2106-63f0-4504-bc55-5a1543ff70f7",
+      "release": "Tails",
+      "score": 131879,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Stay (I Missed You)"
@@ -64896,16 +64872,14 @@
       "artistMbids": [
         "12be5b16-915f-44bc-978a-8ddfab235b79"
       ],
-      "recording": "You Are Loved",
-      "recordingMbid": "caee3ca9-d7ed-4a67-860d-c10aa93b1b07",
-      "release": "2008-10-26: Bridge School Benefit, Shoreline Amphitheatre, Mountain View, CA, USA",
-      "score": 5393780,
+      "recording": "You Are Loved (Don’t Give Up)",
+      "recordingMbid": "94931a83-c4d0-4236-9a5b-38da3f3acf5f",
+      "release": "Awake",
+      "score": 443645,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "You Are Loved"
+      "title": "You Are Loved (Don’t Give Up)"
     },
     {
       "postId": 50803,
@@ -65178,14 +65152,14 @@
       "artistMbids": [
         "4d5447d7-c61c-4120-ba1b-d7f471d385b9"
       ],
-      "recording": "Happy Xmas (War Is Over) [Studio Outtake]",
-      "recordingMbid": "fd632071-622a-4aaa-ac30-63076eb8f87a",
-      "release": "After The Remember",
-      "score": 4739369,
-      "how": "version",
+      "recording": "Happy Xmas (War Is Over)",
+      "recordingMbid": "f18ea8da-2718-43b8-95e6-a8bd59eb0ac0",
+      "release": "Imagine",
+      "score": 796958,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Happy Xmas (War Is Over) [Studio Outtake]"
+      "title": "Happy Xmas (War Is Over)"
     },
     {
       "postId": 50778,
@@ -65350,16 +65324,14 @@
       "artistMbids": [
         "c707b37e-cb5c-4694-be4d-46beefcb2475"
       ],
-      "recording": "Fool",
-      "recordingMbid": "d549d4b3-db6e-43c6-9e2a-b2c733ec53cc",
-      "release": "Romantic Popsongs",
-      "score": 5394364,
+      "recording": "Fool (If You Think It’s Over)",
+      "recordingMbid": "b36f59a4-89c9-4707-8e9b-8ed963aa3ee4",
+      "release": "Whatever Happened to Benny Santini?",
+      "score": 11169,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Fool"
+      "title": "Fool (If You Think It’s Over)"
     },
     {
       "postId": 48979,
@@ -65504,16 +65476,14 @@
       "artistMbids": [
         "c707b37e-cb5c-4694-be4d-46beefcb2475"
       ],
-      "recording": "The Road to Hell (U.K. edit)",
-      "recordingMbid": "cddf032e-b105-4900-b6f3-192d5ec8f2cd",
-      "release": "Cities 97 Sampler, Volume 3 (Songs for the Earth)",
-      "score": 5618495,
-      "how": "version",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "recording": "The Road to Hell (Part 2)",
+      "recordingMbid": "5811942e-587b-4d4d-98c8-8ef57469f0b1",
+      "release": "The Road to Hell (Part 2) / He Should Know Better",
+      "score": 3593174,
+      "how": "exact",
+      "rewrites": [],
       "trusted": true,
-      "title": "The Road to Hell"
+      "title": "The Road to Hell (Part 2)"
     },
     {
       "postId": 52894,
@@ -65813,11 +65783,11 @@
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
-      "recording": "Sad Songs (Say So Much) (remastered)",
-      "recordingMbid": "e55ed700-4c95-4d3a-8370-11761e8499d6",
-      "release": "Diamonds (Deluxe)",
-      "score": 4932453,
-      "how": "version",
+      "recording": "Sad Songs (Say So Much)",
+      "recordingMbid": "4029b9eb-2077-4875-b8d2-f9cdca79770b",
+      "release": "Breaking Hearts",
+      "score": 3396,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Sad Songs (Say So Much)"
@@ -67186,7 +67156,7 @@
       "recordingMbid": "0acc48f6-4155-46d4-a1ce-d06715a861b1",
       "release": "Stories of a Hero",
       "score": 4744961,
-      "how": "exact",
+      "how": "loose",
       "rewrites": [],
       "proposed": "Drop dump Excerpt From / live medley annotation; title is I'm a King Bee",
       "venueArtist": "Frank Marino",
@@ -68256,11 +68226,11 @@
       "artistMbids": [
         "57c6f649-6cde-48a7-8114-2a200247601a"
       ],
-      "recording": "Thunderball",
-      "recordingMbid": "fcf86769-76cb-4221-ad2f-373b6726b4ca",
-      "release": "13 Smash Hits + Live in London",
-      "score": 783196,
-      "how": "exact",
+      "recording": "Thunderball (Ausschnitt)",
+      "recordingMbid": "e049819d-974b-4fdc-b495-8792715db666",
+      "release": "Musik und Bildung: 2000 01 Hommage a",
+      "score": 4753678,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Thunderball",
@@ -71089,14 +71059,14 @@
       "artistMbids": [
         "9a883a69-436b-4d17-9ffd-122a9bf4419a"
       ],
-      "recording": "Don't Let Go (Love) (2000 Watts remix)",
-      "recordingMbid": "1a3a4ee2-c4c1-4373-97e8-652868da45d6",
-      "release": "Don't Let Go (Love)",
-      "score": 2280329,
-      "how": "version",
+      "recording": "Don’t Let Go (Love)",
+      "recordingMbid": "b6728b18-9795-49f6-8f84-eb9df17b7b3b",
+      "release": "EV3",
+      "score": 175902,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Let Go (Love)"
+      "title": "Don’t Let Go (Love)"
     },
     {
       "postId": 50665,
@@ -73442,10 +73412,10 @@
       "artistMbids": [
         "70ea63ea-70dc-4b63-951a-2c249d2b3b0a"
       ],
-      "recording": "Maria (Perc a pella mix)",
-      "recordingMbid": "7cb02e35-ea53-46d9-bbf9-89720a510307",
-      "release": "Maria (remixes)",
-      "score": 5013515,
+      "recording": "Maria (remixes)",
+      "recordingMbid": "3266db52-a0ac-4c34-81f2-ff0e76bfaa4f",
+      "release": "Mr Music Hits 8. 1997",
+      "score": 5429861,
       "how": "version",
       "rewrites": [],
       "proposed": "Spanish title",
@@ -73673,14 +73643,14 @@
       "artistMbids": [
         "f90e8b26-9e52-4669-a5c9-e28529c47894"
       ],
-      "recording": "What's My Name? (clean radio version)",
-      "recordingMbid": "141709e4-4079-4f94-8850-338ca4c50bde",
-      "release": "Bravo Hits: Best of 94",
-      "score": 5409917,
+      "recording": "What's My Name? (Who I Am)",
+      "recordingMbid": "d0dff071-5309-49d2-9b1c-51c0a284c98f",
+      "release": "Maze Some Noize",
+      "score": 4768327,
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "What's My Name?"
+      "title": "What's My Name? (Who I Am)"
     },
     {
       "postId": 52861,
@@ -73787,20 +73757,20 @@
       "artist": "Proclaimers",
       "song": "I'm gonna be (500 miles)",
       "matched": true,
-      "artistCredit": "Proclaimers",
+      "artistCredit": "The Proclaimers",
       "artistMbids": [
         "1303b976-b862-4f04-94fd-a8d444e06714"
       ],
-      "recording": "I’m Gonna Be",
-      "recordingMbid": "777f3b0b-8762-4b06-aee6-870aae7943d7",
-      "release": "The Ultimate Music Collection",
-      "score": 5416896,
+      "recording": "I’m Gonna Be (500 Miles)",
+      "recordingMbid": "e3cf7cc1-2b38-4c46-acd9-c5cd6f602320",
+      "release": "Sunshine on Leith",
+      "score": 24042,
       "how": "exact",
       "rewrites": [
-        "annotation-stripped"
+        "artist-article-added"
       ],
       "trusted": true,
-      "title": "I’m Gonna Be"
+      "title": "I’m Gonna Be (500 Miles)"
     },
     {
       "postId": 48291,
@@ -74195,16 +74165,14 @@
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
-      "recording": "Do You Know",
-      "recordingMbid": "47b483a4-ab7b-4588-8ed4-a7b1c8fd05bb",
-      "release": "More Hits Made Famous By The Music Factory 5",
-      "score": 5426515,
+      "recording": "Do You Know (What It Takes)",
+      "recordingMbid": "f0d61dea-5f8f-4de0-b5e2-d225c2bd3171",
+      "release": "Robyn Is Here",
+      "score": 132271,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Do You Know"
+      "title": "Do You Know (What It Takes)"
     },
     {
       "postId": 52648,
@@ -74369,14 +74337,14 @@
       "artistMbids": [
         "177fde26-5a95-46d9-922f-0933940d97e5"
       ],
-      "recording": "I Do",
-      "recordingMbid": "a98de674-446b-4e29-ae25-3b77692f6ff5",
-      "release": "Hit Explosion ’99, Volume 12",
-      "score": 5442920,
+      "recording": "I Do (Cherish You)",
+      "recordingMbid": "b279624d-8d5f-4af6-9202-82dece964679",
+      "release": "98° and Rising",
+      "score": 203475,
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "I Do"
+      "title": "I Do (Cherish You)"
     },
     {
       "postId": 52101,
@@ -75755,11 +75723,11 @@
       "artistMbids": [
         "01e60eba-52df-4694-8f09-39f43abe54e9"
       ],
-      "recording": "Right Here (Departed) (Mad Decent Right Mad mix)",
-      "recordingMbid": "35065bda-aec6-4eaa-b7a8-303c6f3cab9b",
+      "recording": "Right Here (Departed)",
+      "recordingMbid": "41f90c49-62e3-43ad-865d-fee4cd5e5e71",
       "release": "Human",
-      "score": 1053996,
-      "how": "version",
+      "score": 521948,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Right Here (Departed)"
@@ -75983,14 +75951,14 @@
       "artistMbids": [
         "d8354b38-e942-4c89-ba93-29323432abc3"
       ],
-      "recording": "The Kill",
-      "recordingMbid": "dc384fad-47b6-4d37-a4c1-ba2eeeded459",
-      "release": "2010-06-24: 1LIVE 2010: Acoustic Set: 1LIVE, Cologne, Germany",
-      "score": 4592348,
-      "how": "exact",
+      "recording": "The Kill (Rebirth)",
+      "recordingMbid": "14e09c6c-8b5d-422e-81fb-45f524a81bdd",
+      "release": "Guitar Hero: World Tour",
+      "score": 5379830,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "The Kill"
+      "title": "The Kill (Rebirth)"
     },
     {
       "postId": 52369,
@@ -77299,14 +77267,14 @@
       "artistMbids": [
         "3d2b98e5-556f-4451-a3ff-c50ea18d57cb"
       ],
-      "recording": "Dude (Looks Like a Lady) (1987)",
-      "recordingMbid": "73322183-8d1e-4ffc-8bb0-4239e73b3385",
-      "release": "History (Golden Hits) 1973-1997",
-      "score": 4735198,
-      "how": "version",
+      "recording": "Dude (Looks Like a Lady)",
+      "recordingMbid": "b62424dd-1498-4642-874a-7bea46e5a51d",
+      "release": "Permanent Vacation",
+      "score": 14891,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Dude (Looks Like a Lady) (1987)"
+      "title": "Dude (Looks Like a Lady)"
     },
     {
       "postId": 47868,
@@ -78125,16 +78093,14 @@
       "artistMbids": [
         "d570bb31-b9ca-45a4-a2d9-11b186d9c159"
       ],
-      "recording": "Wham Rap!",
-      "recordingMbid": "c5b1a054-ec6e-4886-b84d-7d613ffd03f5",
-      "release": "Time Trip: Hits of the 70s, 80s and 90s",
-      "score": 5422949,
+      "recording": "Wham Rap! (Enjoy What You Do?)",
+      "recordingMbid": "1a6cb6c5-8671-45c8-96e6-c269addd4a88",
+      "release": "Fantastic",
+      "score": 1273,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Wham Rap!"
+      "title": "Wham Rap! (Enjoy What You Do?)"
     },
     {
       "postId": 53400,
@@ -79015,10 +78981,10 @@
       "artistMbids": [
         "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
       ],
-      "recording": "Just the Way You Are (Manufactured Superstars and Jquintal remix)",
-      "recordingMbid": "cbefbed7-09b1-4c02-818c-10996a52e202",
-      "release": "Just the Way You Are (Remix)",
-      "score": 5016619,
+      "recording": "Just the Way You Are (Rutger Van Gelder Bootleg)",
+      "recordingMbid": "ad9d0ac6-b26f-48e7-b3c7-ccd6c38f10f4",
+      "release": "The Video Year Mix 2011",
+      "score": 5205518,
       "how": "version",
       "rewrites": [
         "annotation-stripped"
@@ -80079,14 +80045,14 @@
       "artistMbids": [
         "23eeaeaf-423d-4859-8c91-2175ece74287"
       ],
-      "recording": "Superman",
-      "recordingMbid": "63c16515-3934-4076-be87-fefb3e31db6f",
-      "release": "Live with String Quartet",
-      "score": 4604512,
-      "how": "exact",
+      "recording": "Superman (It Ain’t Easy)",
+      "recordingMbid": "4c87f4b6-32ef-4e0e-b2b7-fdaa38740620",
+      "release": "Ultimate Smallville Soundtrack",
+      "score": 5519493,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Superman"
+      "title": "Superman (It Ain’t Easy)"
     },
     {
       "postId": 50141,
@@ -84902,16 +84868,14 @@
       "artistMbids": [
         "9960700d-2017-40bd-b2d4-1d365d668c81"
       ],
-      "recording": "Comeback Kid",
-      "recordingMbid": "94570782-c210-422d-8787-c4df870974de",
-      "release": "Live From Studio M, Volume 7",
-      "score": 5391757,
+      "recording": "Comeback Kid (That’s My Dog)",
+      "recordingMbid": "17bdeb1a-5a46-4302-b538-2b74a4ec60f6",
+      "release": "Loverboy",
+      "score": 611999,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Comeback Kid"
+      "title": "Comeback Kid (That’s My Dog)"
     },
     {
       "postId": 48632,
@@ -87817,10 +87781,10 @@
       "artistMbids": [
         "8538e728-ca0b-4321-b7e5-cff6565dd4c0"
       ],
-      "recording": "Blasphemous Rumours (Sixteen Candles dub edit)",
-      "recordingMbid": "0cb0829b-9b88-451e-a7fe-4394f979679a",
-      "release": "Beyond Remixes",
-      "score": 4484110,
+      "recording": "Blasphemous Rumours (Summer Day dance cut)",
+      "recordingMbid": "15d9bbc5-6e80-4cec-909c-9134712b905d",
+      "release": "The First Violation by H Null",
+      "score": 4485271,
       "how": "version",
       "rewrites": [],
       "proposed": "Full title",
@@ -89932,20 +89896,18 @@
       "artist": "Four Tops",
       "song": "I can't help myself",
       "matched": true,
-      "artistCredit": "The Four Tops",
+      "artistCredit": "Four Tops",
       "artistMbids": [
         "0d21b01f-21f2-419b-8d98-4158ba0c0aa4"
       ],
-      "recording": "I Can't Help Myself",
-      "recordingMbid": "1d3a2c7e-9e8a-4579-a6d3-1358a5e7b5d6",
-      "release": "Their Greatest Hits",
-      "score": 4877722,
-      "how": "exact",
-      "rewrites": [
-        "artist-article-added"
-      ],
-      "trusted": true,
-      "title": "I Can't Help Myself"
+      "recording": "I Can’t Help Myself (Sugar Pie, Honey Bunch) (multiplex: with lead vocals)",
+      "recordingMbid": "2eacf998-8e70-4077-af7b-48241a14763b",
+      "release": "Motown Original Artist Karaoke: I Can’t Help Myself",
+      "score": 5603692,
+      "how": "loose",
+      "rewrites": [],
+      "trusted": false,
+      "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch) (multiplex: with lead vocals)"
     },
     {
       "postId": 50077,
@@ -91229,16 +91191,14 @@
       "artistMbids": [
         "82eb8936-7bf6-4577-8320-a2639465206d"
       ],
-      "recording": "The Remedy",
-      "recordingMbid": "6737ab9d-0aab-4c80-8320-faaaf3f834f0",
-      "release": "Beautiful Mess - Live on Earth",
-      "score": 4555391,
+      "recording": "The Remedy (I Won’t Worry)",
+      "recordingMbid": "063a7fe1-1614-43a0-9440-108cc5cef2f1",
+      "release": "Waiting for My Rocket to Come",
+      "score": 311053,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "The Remedy"
+      "title": "The Remedy (I Won’t Worry)"
     },
     {
       "postId": 50590,
@@ -91516,15 +91476,15 @@
       "artist": "Jay Z",
       "song": "Izzo (hOVA)",
       "matched": true,
-      "artistCredit": "Jay-Z",
+      "artistCredit": "Jay‐Z",
       "artistMbids": [
         "f82bcf78-5b69-4622-a5ef-73800768d9ac"
       ],
-      "recording": "Izzo (H.O.V.A.) (instrumental)",
-      "recordingMbid": "066b86b3-53b2-4276-839e-3a0a5c676e69",
-      "release": "Izzo (H.O.V.A.)",
-      "score": 2313414,
-      "how": "version",
+      "recording": "Izzo (H.O.V.A.)",
+      "recordingMbid": "64ea3615-a07e-42f6-9ecd-fa6ec6d014b4",
+      "release": "The Blueprint",
+      "score": 281459,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Izzo (H.O.V.A.)"
@@ -91797,14 +91757,14 @@
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "My Love",
-      "recordingMbid": "5a368cad-906d-4c65-8ca7-85cf7cb2f523",
-      "release": "FutureSex/LoveShow: Live From Madison Square Garden",
-      "score": 5201860,
-      "how": "exact",
+      "recording": "My Love (Ibiza Is Burning)",
+      "recordingMbid": "ab94f4c3-475a-4d06-b84b-1fb4bca4202e",
+      "release": "Promo Only: Mainstream Club, January 2007",
+      "score": 5491910,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "My Love"
+      "title": "My Love (Ibiza Is Burning)"
     },
     {
       "postId": 50889,
@@ -92256,16 +92216,14 @@
       "artistMbids": [
         "5a5eeab3-e4b7-42e9-8ae9-b90eeb210b96"
       ],
-      "recording": "Searching",
-      "recordingMbid": "6c0f3b78-c789-4c4b-b203-78e31b8a1461",
-      "release": "Twenty Great Hits",
-      "score": 4882569,
+      "recording": "Searching (For Someone Like You)",
+      "recordingMbid": "0e4f97e6-abdb-442b-a16b-359953370f41",
+      "release": "The Country Music Hall of Fame",
+      "score": 4699944,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Searching"
+      "title": "Searching (For Someone Like You)"
     },
     {
       "postId": 51070,
@@ -92946,16 +92904,14 @@
       "artistMbids": [
         "494e8d09-f85b-4543-892f-a5096aed1cd4"
       ],
-      "recording": "Can’t Take That Away",
-      "recordingMbid": "1cfc19e0-bba8-4258-9b3e-fa868b58bbfe",
-      "release": "Divas 2000: A Tribute to Diana Ross",
-      "score": 5393859,
+      "recording": "Can’t Take That Away (Mariah’s theme)",
+      "recordingMbid": "e99de9ae-6d00-485f-9f13-eb2aec492351",
+      "release": "Rainbow",
+      "score": 228576,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "trusted": true,
-      "title": "Can’t Take That Away"
+      "title": "Can’t Take That Away (Mariah’s theme)"
     },
     {
       "postId": 51487,
@@ -94018,11 +93974,11 @@
       "artistMbids": [
         "090dafe5-818c-4bba-9ebf-7e3a651a5c43"
       ],
-      "recording": "You Got It (The Right Stuff) (The New Kids in the House mix)",
-      "recordingMbid": "43ef2093-afc3-4638-abc3-ae9ed216a241",
-      "release": "Fantastic 80s! Extended",
-      "score": 5487933,
-      "how": "version",
+      "recording": "You Got It (The Right Stuff)",
+      "recordingMbid": "a2145a12-6eb1-4f9b-bfd8-619240f848c6",
+      "release": "Hangin’ Tough",
+      "score": 24060,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "You Got It (The Right Stuff)"
@@ -95989,14 +95945,12 @@
       "artistMbids": [
         "e01c3376-15fa-40d7-b747-5f219bdefdd7"
       ],
-      "recording": "FM Jam Reprise",
-      "recordingMbid": "199c209a-3b82-4403-b05d-0cd34af49017",
-      "release": "1996-07-21: Nissan Pavilion, Bristow, VA, USA",
-      "score": 4672189,
-      "how": "loose",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "recording": "FM (No Static at All)",
+      "recordingMbid": "24c09593-a4f6-4261-87a2-cfab91aa9451",
+      "release": "FM (No Static at All)",
+      "score": 3557036,
+      "how": "exact",
+      "rewrites": [],
       "trusted": true,
       "title": "FM (No Static at All)"
     },
@@ -96260,11 +96214,11 @@
       "artistMbids": [
         "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e"
       ],
-      "recording": "Uptight (Everything’s Alright) (extended mix)",
-      "recordingMbid": "a857d73d-805c-49b5-bc25-e30132031687",
-      "release": "The Motown Box",
-      "score": 5485684,
-      "how": "version",
+      "recording": "Uptight (Everything’s Alright)",
+      "recordingMbid": "6ec3aded-2fb6-48dc-870d-e51ece0a1b48",
+      "release": "Up‐Tight (Everything’s Alright)",
+      "score": 215065,
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
       "title": "Uptight (Everything’s Alright)"
@@ -96973,11 +96927,11 @@
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
-      "recording": "Fight the Power, Pts 1 & 2",
-      "recordingMbid": "97e38e54-e158-49fa-8b80-4b7d6d385102",
-      "release": "DiscoSwede - Disco Delights Vol.17",
-      "score": 5624086,
-      "how": "loose",
+      "recording": "Fight the Power (Part 1 & 2)",
+      "recordingMbid": "55207fc7-9260-461e-9152-85422bbc1d0c",
+      "release": "Grand 12‐Inches 12",
+      "score": 4838386,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Fight the Power, Parts 1 & 2"
@@ -100882,13 +100836,13 @@
       "artistMbids": [
         "33e6ded6-22cc-447e-aefa-9a7a6ba81b6b"
       ],
-      "recording": "Cheerleader (Felix Jaehn remix)",
-      "recordingMbid": "0454fb52-1c92-4340-9b1e-ff1c21066828",
-      "release": "Cheerleader (Felix Jaehn remix)",
-      "score": 2533705,
-      "how": "exact",
+      "recording": "Cheerleader (Felix Jaehn remix edit)",
+      "recordingMbid": "7f842cb9-e221-4035-aed5-fb24c41bafae",
+      "release": "Kontor: Top of the Clubs: The Biggest Hits of the Year MMXV",
+      "score": 5525791,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
+      "trusted": false,
       "title": "Cheerleader"
     },
     {
@@ -102821,14 +102775,12 @@
       "artistMbids": [
         "408b2a33-d229-46a5-a361-0667bc616e34"
       ],
-      "recording": "Around The World",
-      "recordingMbid": "c0b22639-b1d0-4fb6-871d-141ea0b07c04",
-      "release": "Ultimix 81",
-      "score": 5387498,
+      "recording": "Around the World (La La La La La)",
+      "recordingMbid": "bf04e25a-bcc2-4404-9491-7ce66a9d3abc",
+      "release": "Planet Pop",
+      "score": 257750,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "Atc casing; title",
       "venueArtist": "Atc",
       "proposalArtist": "ATC",
@@ -103661,14 +103613,12 @@
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "recording": "My Songs Know What You Did In The Dark",
-      "recordingMbid": "9b386557-ba07-467d-95f9-843c2e4abad5",
-      "release": "FUCT: The Lost Songs",
-      "score": 4506282,
+      "recording": "My Songs Know What You Did in the Dark (Light ’Em Up)",
+      "recordingMbid": "8606a66d-cdd8-4dac-ae25-9d574488e050",
+      "release": "Save Rock and Roll",
+      "score": 672835,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "Full title",
       "venueArtist": "Fall Out Boy",
       "proposalArtist": "Fall Out Boy",
@@ -105855,14 +105805,12 @@
       "artistMbids": [
         "d791111a-9fcc-4ebe-bb16-b785719a642b"
       ],
-      "recording": "Fuck It",
-      "recordingMbid": "d53b2914-3221-4632-b5df-a36e4982963a",
-      "release": "Planète Rap 2004, Volume 2",
-      "score": 5474302,
+      "recording": "Fuck It (I Don’t Want You Back)",
+      "recordingMbid": "d4b6a184-c08b-4bd4-ae97-fb42f478c23c",
+      "release": "I Don’t Want You Back",
+      "score": 364177,
       "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "rewrites": [],
       "proposed": "title",
       "venueArtist": "Eamon",
       "proposalArtist": "Eamon",
@@ -108851,14 +108799,14 @@
       "artistMbids": [
         "1fda852b-92e9-4562-82fa-c52820a77b23"
       ],
-      "recording": "Don't Cha",
-      "recordingMbid": "a6ddedb8-ccf9-44f1-9816-ec13ea9f7363",
-      "release": "Live from London",
-      "score": 4645388,
-      "how": "exact",
+      "recording": "Don't Cha (Ralphi's Hot Freak)",
+      "recordingMbid": "5107072f-c1df-4070-bf28-ca6c7c06e61a",
+      "release": "Supermodelo 2006",
+      "score": 5490928,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Cha"
+      "title": "Don't Cha (Ralphi's Hot Freak)"
     },
     {
       "postId": 53318,
@@ -113728,14 +113676,14 @@
       "artistMbids": [
         "8fb5370b-9568-4b61-9da5-2aa12c9928db"
       ],
-      "recording": "Pink",
-      "recordingMbid": "e6cfc131-98b5-40ad-9b2c-11f71c5ad075",
-      "release": "Live from the Barbie Dream House",
-      "score": 4995042,
-      "how": "exact",
+      "recording": "Pink (Bad Day)",
+      "recordingMbid": "5c906657-9ada-4a7d-9bd4-e491948bf2d8",
+      "release": "Pink",
+      "score": 5006300,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Pink"
+      "title": "Pink (Bad Day)"
     },
     {
       "postId": 51304,
@@ -113997,11 +113945,11 @@
       "artistMbids": [
         "a992d757-1207-499c-8be9-6537da8db2a8"
       ],
-      "recording": "I’m Just Ken",
-      "recordingMbid": "5cd6f1ee-bee3-4599-8e90-fe7d50fb100f",
-      "release": "Live from the Barbie Dream House",
-      "score": 4995042,
-      "how": "exact",
+      "recording": "I’m Just Ken (Merry Kristmas Barbie)",
+      "recordingMbid": "97085acf-6322-494b-b4b9-3daecafddec2",
+      "release": "Ken: The EP",
+      "score": 5091602,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "I'm Just Ken",

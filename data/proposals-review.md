@@ -240,7 +240,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2974 | Bloodhound Gang | Another dick with no balls | Bloodhound Gang | Right Turn Clyde |  |  | yes | Lyric used as title | 48423 |
 | 2989 | Cher | Body to body | Cher | Body to Body, Heart to Heart |  |  | yes | Full title | 48917 |
 | 2990 | A-teens | Bouncing off the ceiling | A*Teens | Upside Down |  |  | yes | Bouncing off the ceiling is Upside Down | 47753 |
-| 3012 | Bob Dylan | Don't think twice | Bob Dylan | Don’t Think Twice, It’s All Right |  |  | yes | Full title beats loose | 48472 |
+| 3012 | Bob Dylan | Don't think twice | Bob Dylan | Don’t Think Twice, It’s All Right |  |  | other | Full title beats loose | 48472 |
 | 3035 | Eagles | Heat is on | Glenn Frey | The Heat Is On |  |  | yes | Glenn Frey, not the Eagles | 49586 |
 | 3048 | Backstreet Boys | I want to be with you | Backstreet Boys | I Wanna Be With You |  |  | yes | Wanna | 48139 |
 | 3157 | Chris Brown | Yo (excuse me) | Chris Brown | Yo (Excuse Me Miss) |  |  | other | Full title | 48954 |

@@ -127,6 +127,23 @@ const VERSION_MARKER =
 const LANGUAGE_VERSION =
     /\b(?:english|swedish|finnish|german|spanish|french|italian|norwegian|danish|dutch|portuguese)\b/i;
 
+const MONTH =
+    /\b(?:january|february|march|april|may|june|july|august|september|october|november|december)\b/i;
+
+/**
+ * Trailing brackets that name a particular master/performance rather than the song:
+ * mix markers, a bare year (`(1987)`), or a concert place/date
+ * (`(St. Albans High School, Australia, March 1976)`).
+ */
+function isMasterAnnotation(inner: string): boolean {
+    const text = inner.trim();
+    if (VERSION_MARKER.test(text)) return true;
+    if (/^(?:19|20)\d{2}$/.test(text)) return true;
+    // Concert bootleg labels almost always carry a year plus a place or month.
+    if (/\b(?:19|20)\d{2}\b/.test(text) && (MONTH.test(text) || /,/.test(text))) return true;
+    return false;
+}
+
 /**
  * Pull the show or film out of a `(from "…")` / `(from … soundtrack)` suffix, when that is
  * what the bracket is doing. Returns undefined for every other kind of bracket.
@@ -164,7 +181,7 @@ function stripExcerptFromLabels(title: string): string {
  */
 function titleToUse(recording: string): { title: string; from?: string } {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
-    if (bracket?.[1] === undefined || !VERSION_MARKER.test(bracket[1])) {
+    if (bracket?.[1] === undefined || !isMasterAnnotation(bracket[1])) {
         return { title: stripExcerptFromLabels(recording) };
     }
     // Language versions are the song the venue meant, not a master to strip away.
@@ -592,13 +609,14 @@ function isLiveRelease(release: string): boolean {
     return /^\d{4}-\d{2}-\d{2}\s*:/.test(release) || /\blive\b/i.test(release);
 }
 
-/** Remix / acoustic / club masters should not beat the plain studio cut the karaoke track imitates. */
+/** Remix / acoustic / club / concert masters should not beat the plain studio cut. */
 function isVariantRecording(recording: string): boolean {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] !== undefined) {
-        // Language versions are the song; every other annotation is a particular master.
+        // Language versions are the song; mix/live/year/concert labels are a particular master.
+        // Subtitles that belong to the title (`If You Wanna Rock 'n' Roll`) are neither.
         if (LANGUAGE_VERSION.test(bracket[1])) return false;
-        return true;
+        return isMasterAnnotation(bracket[1]);
     }
     return /\b(?:remix|mix|club|dub|mash(?:[- ]?up)?|bootleg|acoustic|instrumental|karaoke)\b/i.test(
         recording,
