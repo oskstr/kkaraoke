@@ -515,11 +515,13 @@ Most of what used to look like “obvious typos of famous artists” in that que
 judgement failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit because the lead was only known from
 other collaborations, `Nanne Grönwall` is filed by MusicBrainz as the mononym `Nanne`, and `Colby Caillat` has no
 other trusted song to fuzzy-match from. A title-first pass, lead indexing from matched collaborations, and a
-second scoped pass after title-first now clear those. The queue is down from 460 to **265**:
+second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
+`Finsk musik` rows (real performers, `from: "Finsk musik"` for the language bucket). The queue is
+down from 460 to **226**:
 
 | Songs | What it is                                                                                                                                              |
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   121 | The artist string is not an artist. `Finsk musik` (39) and `Julsång` (19) still dominate; Italian and several shows were proposed and mostly confirmed. |
+|    82 | The artist string is not an artist. `Julsång` (19) still dominates; Finnish and Italian were proposed and dump-confirmed.                               |
 |    50 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                  |
 |    50 | Matched through the lead artist (or title-first via the lead), with a collaborator dropped.                                                             |
 |    28 | A prefix match too weak to apply.                                                                                                                       |

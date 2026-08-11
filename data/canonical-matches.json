@@ -39847,273 +39847,819 @@
       "id": 2124,
       "artist": "Finsk musik",
       "song": "Myrskyn jälkeen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kari Tapio",
+      "artistMbids": [
+        "cd379eaf-ac4e-4db3-88b1-ecdf19b58495"
+      ],
+      "recording": "Myrskyn jälkeen",
+      "recordingMbid": "6c925661-324d-4051-a1a2-43c5c37bb556",
+      "release": "Myrskyn jälkeen",
+      "score": 136067,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "venue filed under Finsk musik; Kari Tapio's 1995 hit",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Myrskyn jälkeen"
     },
     {
       "postId": 49960,
       "id": 2125,
       "artist": "Finsk musik",
       "song": "Kaduilla tuulee",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jari Sillanpää",
+      "artistMbids": [
+        "973c00fb-ebdf-4436-a36b-8565fa32b82b"
+      ],
+      "recording": "Kaduilla tuulee",
+      "recordingMbid": "0af02e4a-c371-42f3-9098-cff3bdb488d4",
+      "release": "Jari Sillanpää",
+      "score": 159211,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Jari Sillanpää, 1996; language label not an artist",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kaduilla tuulee"
     },
     {
       "postId": 49961,
       "id": 2126,
       "artist": "Finsk musik",
       "song": "Matkalla pohjoiseen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Juha Vainio",
+      "artistMbids": [
+        "1a1da243-4387-4a5a-9c84-d667daed92d7"
+      ],
+      "recording": "Matkalla pohjoiseen",
+      "recordingMbid": "fa371b2f-3f8e-4485-99ea-a0cda6e2dc6b",
+      "release": "Elämää ja erotiikkaa",
+      "score": 1131195,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Juha Watt Vainio, 1981",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Matkalla pohjoiseen"
     },
     {
       "postId": 49962,
       "id": 2127,
       "artist": "Finsk musik",
       "song": "Kuin joutsenlaulu",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kake Randelin",
+      "artistMbids": [
+        "3d83628c-374f-4dcc-8e11-c676278e40f9"
+      ],
+      "recording": "Kuin joutsenlaulu",
+      "recordingMbid": "15f1250d-7b1c-469a-812c-209b2d56695f",
+      "release": "Kop kop kop",
+      "score": 1100970,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Kake Randelin iskelmä standard",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kuin joutsenlaulu"
     },
     {
       "postId": 49963,
       "id": 2128,
       "artist": "Finsk musik",
       "song": "Viidestoista yö",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Juice Leskinen Slam",
+      "artistMbids": [
+        "73a919cc-c2d8-416e-a98c-7556eedb787d"
+      ],
+      "recording": "Viidestoista yö",
+      "recordingMbid": "801636df-3b61-4410-b354-eb7cae9e54d3",
+      "release": "XV yö (Tauko III)",
+      "score": 259978,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Juice Leskinen Slam, 1980; earlier Dingo guess was wrong",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Viidestoista yö"
     },
     {
       "postId": 49964,
       "id": 2129,
       "artist": "Finsk musik",
       "song": "Vaskikellot",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Antti Huovila",
+      "artistMbids": [
+        "53daf0cb-a1c3-4ee1-a2b1-fbc85f376c91"
+      ],
+      "recording": "Vaskikellot",
+      "recordingMbid": "400b969e-fc61-4b04-b73e-aba282610f3e",
+      "release": "Vaskikellot",
+      "score": 260032,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Antti Huovila",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Vaskikellot"
     },
     {
       "postId": 49965,
       "id": 2130,
       "artist": "Finsk musik",
       "song": "Titanic",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Frederik",
+      "artistMbids": [
+        "4b598be3-8f19-4b21-bcf7-1bbda1d58d39"
+      ],
+      "recording": "Titanic",
+      "recordingMbid": "c5bd973d-f16f-465b-bae5-8c6df1686fbd",
+      "release": "Alta pois",
+      "score": 1036707,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Frederik's Finnish Titanic, not Celine Dion",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Titanic"
     },
     {
       "postId": 49966,
       "id": 2131,
       "artist": "Finsk musik",
       "song": "St pauli ja reeperbahn",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Irwin Goodman",
+      "artistMbids": [
+        "078f98b2-3a90-4443-817b-440c7089b0c4"
+      ],
+      "recording": "St. Pauli ja Reeperbahn",
+      "recordingMbid": "4ba52fb2-221c-4440-98aa-54254c7f3aae",
+      "release": "St. Pauli ja Reeperbahn",
+      "score": 287581,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Irwin Goodman; venue spelling missed the period",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "St. Pauli ja Reeperbahn"
     },
     {
       "postId": 49967,
       "id": 2132,
       "artist": "Finsk musik",
       "song": "Linnut",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rainer Friman",
+      "artistMbids": [
+        "83adba50-f8b3-4276-8fd5-297002104208"
+      ],
+      "recording": "Linnut",
+      "recordingMbid": "3e552e91-9f99-4fa4-861f-2f2c344dd145",
+      "release": "Linnut",
+      "score": 1756795,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Rainer Friman",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Linnut"
     },
     {
       "postId": 49968,
       "id": 2133,
       "artist": "Finsk musik",
       "song": "Illan varjoon himmeään",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Agents",
+      "artistMbids": [
+        "8fa7b39a-6faa-49ab-8a62-8dc6b71c1947"
+      ],
+      "recording": "Illan varjoon himmeään",
+      "recordingMbid": "0936a6fe-4076-4a47-bea8-3a16043dbf4e",
+      "release": "is more!",
+      "score": 183070,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Agents recording of the standard",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Illan varjoon himmeään"
     },
     {
       "postId": 49969,
       "id": 2134,
       "artist": "Finsk musik",
       "song": "Eva",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jippu",
+      "artistMbids": [
+        "c8178f7e-7649-4c2d-9c63-0627a3594fd4"
+      ],
+      "recording": "Eva (Kielletyllä iholla)",
+      "recordingMbid": "bb593b82-07f1-4a59-a46c-29a63ee16d82",
+      "release": "Väärinpäin lentävät linnut",
+      "score": 643664,
+      "how": "version",
+      "rewrites": [],
+      "proposed": "Jippu",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Eva (Kielletyllä iholla)"
     },
     {
       "postId": 49970,
       "id": 2135,
       "artist": "Finsk musik",
       "song": "Sinisen taivaan sateenkaari",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Janne Tulkki",
+      "artistMbids": [
+        "14b8a691-008b-49df-b9d8-234914a2ea36"
+      ],
+      "recording": "Sinisen taivaan sateenkaari",
+      "recordingMbid": "a3ee0803-b88c-4104-b233-594cf804f021",
+      "release": "Legendat",
+      "score": 1063913,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Janne Tulkki",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Sinisen taivaan sateenkaari"
     },
     {
       "postId": 49971,
       "id": 2136,
       "artist": "Finsk musik",
       "song": "Moottoripyörä on moottoripyörä",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mika Sundqvist",
+      "artistMbids": [
+        "ee74e74e-bd95-4abc-aae3-e998147c3ad6"
+      ],
+      "recording": "Moottoripyörä on moottoripyörä",
+      "recordingMbid": "809ef30f-82e8-4db8-af95-18dafe33dfaa",
+      "release": "Moottoripyörä on moottoripyörä",
+      "score": 1976725,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Mika Sundqvist, 1980",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Moottoripyörä on moottoripyörä"
     },
     {
       "postId": 49972,
       "id": 2137,
       "artist": "Finsk musik",
       "song": "Mahtava peräsin ja pulleat purjeet",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Solistiyhtye Suomi",
+      "artistMbids": [
+        "8b49d89a-cd3d-4766-aebb-0a5e1dd2d7a5"
+      ],
+      "recording": "Mahtava peräsin ja pulleat purjeet",
+      "recordingMbid": "6826febc-5432-49a9-b8b7-367787c17f63",
+      "release": "Rilluttele yö",
+      "score": 1994922,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Solistiyhtye Suomi",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Mahtava peräsin ja pulleat purjeet"
     },
     {
       "postId": 49973,
       "id": 2138,
       "artist": "Finsk musik",
       "song": "Kaikki tytöt -karakum-",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Finlanders",
+      "artistMbids": [
+        "531ee00f-0b6d-4547-9324-d415bc579cab"
+      ],
+      "recording": "Kaikki tytöt",
+      "recordingMbid": "04ab61d0-7271-4e37-acf4-60241953b32c",
+      "release": "Haavenainen",
+      "score": 1100931,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Finlanders; venue appended -karakum-",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kaikki tytöt"
     },
     {
       "postId": 49974,
       "id": 2139,
       "artist": "Finsk musik",
       "song": "Kaikki muuttuu -you can have her-",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Four Cats",
+      "artistMbids": [
+        "08220a44-a3c1-4ce5-be0f-a2f347f30572"
+      ],
+      "recording": "Kaikki muuttuu",
+      "recordingMbid": "7887575c-9aa8-463f-a74c-1dc435ab9673",
+      "release": "Four Cats",
+      "score": 1919950,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Four Cats Finnish take on You Can Have Her",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kaikki muuttuu"
     },
     {
       "postId": 49975,
       "id": 2140,
       "artist": "Finsk musik",
       "song": "Aurinko, kuu ja tähdet",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tomi Markkola",
+      "artistMbids": [
+        "92e40fbd-5a7c-43d8-8254-e8b98c3f14f1"
+      ],
+      "recording": "Aurinko, kuu ja tähdet",
+      "recordingMbid": "7f9b9764-86ee-4445-8740-81eda10376de",
+      "release": "Parhaat - 40 hittiä",
+      "score": 4760567,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tomi Markkola",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Aurinko, kuu ja tähdet"
     },
     {
       "postId": 49976,
       "id": 2141,
       "artist": "Finsk musik",
       "song": "Elämän valttikortit",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ahti Lampi",
+      "artistMbids": [
+        "3cc6c33e-4b45-4a66-8e07-95dd3da13494"
+      ],
+      "recording": "Elämän valttikortit",
+      "recordingMbid": "9fe6c033-e463-4f5c-b206-6bf46e6ecffc",
+      "release": "Elämän valttikortit",
+      "score": 3563493,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Ahti Lampi, 1980",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Elämän valttikortit"
     },
     {
       "postId": 49977,
       "id": 2142,
       "artist": "Finsk musik",
       "song": "Juodaan viinaa",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Hector",
+      "artistMbids": [
+        "600bec42-17d9-432b-949c-9ec362b13348"
+      ],
+      "recording": "Juodaan viinaa",
+      "recordingMbid": "6b0cda67-de26-4357-ad15-dca211720156",
+      "release": "Yhtenä iltana",
+      "score": 47456,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Hector, 1990",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Juodaan viinaa"
     },
     {
       "postId": 49978,
       "id": 2143,
       "artist": "Finsk musik",
       "song": "Kaiken takana on nainen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Matti & Teppo",
+      "artistMbids": [
+        "eb646490-1356-4c19-bdea-01fd008c593a"
+      ],
+      "recording": "Kaiken takana on nainen",
+      "recordingMbid": "dbb32bdd-8176-492c-9b3b-459c78fd7f5f",
+      "release": "20 Suosikkia: Kaiken takana on nainen",
+      "score": 4731357,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Matti & Teppo",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kaiken takana on nainen"
     },
     {
       "postId": 49979,
       "id": 2144,
       "artist": "Finsk musik",
       "song": "Lulu",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tuula Amberla",
+      "artistMbids": [
+        "fe6f777a-86ed-4684-944f-f5ce64b239a9"
+      ],
+      "recording": "Lulu",
+      "recordingMbid": "827306aa-1254-4a1f-9bb6-91e6e161643a",
+      "release": "Lulu",
+      "score": 35137,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tuula Amberla",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Lulu"
     },
     {
       "postId": 49980,
       "id": 2145,
       "artist": "Finsk musik",
       "song": "Rafaelin enkeli",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Pekka Ruuska",
+      "artistMbids": [
+        "cbd6c15f-cb76-4be4-bdba-2284ee5b9065"
+      ],
+      "recording": "Rafaelin enkeli",
+      "recordingMbid": "ef5628f1-9b41-4f55-ac15-21d6b0670010",
+      "release": "Yhdestoista hetki",
+      "score": 47475,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Pekka Ruuska, 1990",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Rafaelin enkeli"
     },
     {
       "postId": 49981,
       "id": 2146,
       "artist": "Finsk musik",
       "song": "Jäätelökesä",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Maarit",
+      "artistMbids": [
+        "89bf49b4-f799-44ae-9f12-14bfc927d36e"
+      ],
+      "recording": "Jäätelökesä",
+      "recordingMbid": "1e567935-c15f-43f5-8fab-dcbf0f01a991",
+      "release": "Siivet saan",
+      "score": 1037394,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Maarit",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Jäätelökesä"
     },
     {
       "postId": 49982,
       "id": 2147,
       "artist": "Finsk musik",
       "song": "Syksyn sävel",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Juice Leskinen",
+      "artistMbids": [
+        "d1d914e2-34df-4a84-8fc2-226889c10814"
+      ],
+      "recording": "Syksyn sävel",
+      "recordingMbid": "fb01c939-74fb-4295-b409-326527514e33",
+      "release": "Syksyn sävel",
+      "score": 3548762,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Juice Leskinen, 1975",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Syksyn sävel"
     },
     {
       "postId": 49983,
       "id": 2148,
       "artist": "Finsk musik",
       "song": "Krokotiilirock -crocodile rock-",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Muska",
+      "artistMbids": [
+        "8021d7c0-c61c-430b-a082-ae7f6122d59c"
+      ],
+      "recording": "Krokotiili rock",
+      "recordingMbid": "7f288966-9ebb-462c-8bad-1085e066e751",
+      "release": "Muska",
+      "score": 62331,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Muska's Finnish Crocodile Rock",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Krokotiili rock"
     },
     {
       "postId": 49984,
       "id": 2149,
       "artist": "Finsk musik",
       "song": "Nummela",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Anssi Kela",
+      "artistMbids": [
+        "7d55d189-67d5-4ff4-abe4-311459bd999b"
+      ],
+      "recording": "Nummela",
+      "recordingMbid": "3204b907-a0c2-49fb-913e-0b705d6739ca",
+      "release": "Nummela",
+      "score": 275328,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Anssi Kela",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Nummela"
     },
     {
       "postId": 49985,
       "id": 2150,
       "artist": "Finsk musik",
       "song": "Tahdon rakastella sinua",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Pelle Miljoona & 1980",
+      "artistMbids": [
+        "54ccabd8-749e-43ff-8861-ac45ff9bde20"
+      ],
+      "recording": "Tahdon rakastella sinua",
+      "recordingMbid": "6b4df678-db2e-44ae-8d2a-614e76ef543d",
+      "release": "Viimeinen syksy",
+      "score": 35108,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Pelle Miljoona & 1980",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Tahdon rakastella sinua"
     },
     {
       "postId": 49986,
       "id": 2151,
       "artist": "Finsk musik",
       "song": "Teuvo, maanteiden kuningas",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Leevi and the Leavings",
+      "artistMbids": [
+        "5ffb1041-7236-45d4-8523-60faf95946c6"
+      ],
+      "recording": "Teuvo, maanteiden kuningas",
+      "recordingMbid": "4e9fbf1d-88fa-4923-9eb8-f1d0494e8e88",
+      "release": "Häntä koipien välissä",
+      "score": 24757,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Leevi and the Leavings, 1988",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Teuvo, maanteiden kuningas"
     },
     {
       "postId": 49987,
       "id": 2152,
       "artist": "Finsk musik",
       "song": "Kevät",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tavaramarkkinat",
+      "artistMbids": [
+        "81667921-2cd7-4c53-8d2f-5d6c39549963"
+      ],
+      "recording": "Kevät",
+      "recordingMbid": "13fad109-8ef8-4dfb-8c61-9a14c4462b36",
+      "release": "Lievä kosto",
+      "score": 35116,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tavaramarkkinat",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Kevät"
     },
     {
       "postId": 49988,
       "id": 2153,
       "artist": "Finsk musik",
       "song": "Autiotalo",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dingo",
+      "artistMbids": [
+        "f7c46d72-b6d1-4134-a34a-1f054b1aceb9"
+      ],
+      "recording": "Autiotalo",
+      "recordingMbid": "62af9b09-2989-465e-8ca8-f43a410204c9",
+      "release": "Kerjäläisten valtakunta",
+      "score": 114288,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Dingo, 1984",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Autiotalo"
     },
     {
       "postId": 49989,
       "id": 2154,
       "artist": "Finsk musik",
       "song": "Bensaa suonissa",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rauli Badding Somerjoki",
+      "artistMbids": [
+        "2b82ac4a-0264-4cf3-98d7-61e5bc941f28"
+      ],
+      "recording": "Bensaa suonissa",
+      "recordingMbid": "7652d59b-92e3-42dc-bfa6-d98c4205a004",
+      "release": "Synnyin rokkaamaan",
+      "score": 260116,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Rauli Badding Somerjoki",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Bensaa suonissa"
     },
     {
       "postId": 49990,
       "id": 2155,
       "artist": "Finsk musik",
       "song": "Märkää rakkautta",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Essi Wuorela",
+      "artistMbids": [
+        "c5bdefbc-6730-4ead-93fa-c1eb4e03f158"
+      ],
+      "recording": "Märkää rakkautta",
+      "recordingMbid": "c93858fb-c640-4cbf-a612-13e66a2d1ab6",
+      "release": "Pala taivasta",
+      "score": 136094,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Essi Wuorela",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Märkää rakkautta"
     },
     {
       "postId": 49991,
       "id": 2156,
       "artist": "Finsk musik",
       "song": "Doris",
-      "matched": false
+      "matched": true,
+      "artistCredit": "J. Karjalainen",
+      "artistMbids": [
+        "ee03c284-c6dc-49b5-ba31-e388157f6ed3"
+      ],
+      "recording": "Doris",
+      "recordingMbid": "636969f9-d2dd-4641-99ac-9bcd205b3b88",
+      "release": "Suomirokkia 13: 20 sinivalkoista rockhittiä!",
+      "score": 5499398,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "J. Karjalainen",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Doris"
     },
     {
       "postId": 49992,
       "id": 2157,
       "artist": "Finsk musik",
       "song": "Joutsenlaulu",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Yö",
+      "artistMbids": [
+        "a35d2112-4137-4c14-89fb-58e02036c326"
+      ],
+      "recording": "Joutsenlaulu",
+      "recordingMbid": "6df90883-a932-4323-b2a8-17102e66181c",
+      "release": "Nuorallatanssija",
+      "score": 628739,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Yö",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Joutsenlaulu"
     },
     {
       "postId": 49993,
       "id": 2158,
       "artist": "Finsk musik",
       "song": "Keskiyön aikaan -I'll meet you at midnight-",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Markku Aro",
+      "artistMbids": [
+        "1b013b59-f2b7-4b94-aa8b-02248015cd73"
+      ],
+      "recording": "Keskiyön aikaan",
+      "recordingMbid": "162b2024-569a-49ab-bf65-2bafe154db54",
+      "release": "Parhaat",
+      "score": 4689731,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Markku Aro; Finnish I'll Meet You at Midnight",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Keskiyön aikaan"
     },
     {
       "postId": 49994,
       "id": 2159,
       "artist": "Finsk musik",
       "song": "Valo yössä",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tuomari Nurmio",
+      "artistMbids": [
+        "1fb517fd-25e4-4f71-9967-6e2674c781ed"
+      ],
+      "recording": "Valo yössä",
+      "recordingMbid": "e95e7e7e-6d27-4074-9a78-a6bb1f00fdaa",
+      "release": "Hullu puutarhuri",
+      "score": 448643,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tuomari Nurmio",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Valo yössä"
     },
     {
       "postId": 49995,
       "id": 2160,
       "artist": "Finsk musik",
       "song": "Huone 105",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Nisa Soraya",
+      "artistMbids": [
+        "db2db3d0-4342-4754-87f0-12a30783dc77"
+      ],
+      "recording": "Huone 105",
+      "recordingMbid": "7ae4d398-ed8c-4927-b508-8d1f41fcf2b5",
+      "release": "Nisa",
+      "score": 1143730,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Nisa Soraya original; Kikka covered it later",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Huone 105"
     },
     {
       "postId": 49996,
       "id": 2161,
       "artist": "Finsk musik",
       "song": "Jestas sentään -crazy-",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Markku Aro",
+      "artistMbids": [
+        "1b013b59-f2b7-4b94-aa8b-02248015cd73"
+      ],
+      "recording": "Jestas sentään",
+      "recordingMbid": "1dd6a9e9-8b68-43ab-8bb6-1979a7aa4161",
+      "release": "Niin käy kun rakastuu",
+      "score": 1936806,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Markku Aro; Finnish Crazy",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Jestas sentään"
     },
     {
       "postId": 49997,
       "id": 2162,
       "artist": "Finsk musik",
       "song": "Linda linda",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Frederik",
+      "artistMbids": [
+        "4b598be3-8f19-4b21-bcf7-1bbda1d58d39"
+      ],
+      "recording": "Linda Linda",
+      "recordingMbid": "41b666ad-562e-40d4-8476-a9fa9d1dd576",
+      "release": "Tsingis Khan",
+      "score": 1036712,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Frederik's Finnish Linda Linda",
+      "from": "Finsk musik",
+      "trusted": true,
+      "title": "Linda Linda"
     },
     {
       "postId": 48090,

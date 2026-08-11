@@ -1,6 +1,6 @@
 # Songs still to review
 
-265 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
+226 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
 
 A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only
 adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at
@@ -9,58 +9,14 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 ## Contents
 
-- no match, and this artist string is unknown to MusicBrainz — **121**
+- no match, and this artist string is unknown to MusicBrainz — **82**
 - matched through the lead artist, which named fewer artists than the venue did — **50**
 - this artist has no such title; the venue may have credited the wrong one — **50**
 - weak match — **28**
 - matched a placeholder entity — **13**
 - credited to a namesake, not to this artist — **3**
 
-## no match, and this artist string is unknown to MusicBrainz (121)
-
-### Finsk musik — 39
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2124 | Myrskyn jälkeen | 49959 |
-| 2125 | Kaduilla tuulee | 49960 |
-| 2126 | Matkalla pohjoiseen | 49961 |
-| 2127 | Kuin joutsenlaulu | 49962 |
-| 2128 | Viidestoista yö | 49963 |
-| 2129 | Vaskikellot | 49964 |
-| 2130 | Titanic | 49965 |
-| 2131 | St pauli ja reeperbahn | 49966 |
-| 2132 | Linnut | 49967 |
-| 2133 | Illan varjoon himmeään | 49968 |
-| 2134 | Eva | 49969 |
-| 2135 | Sinisen taivaan sateenkaari | 49970 |
-| 2136 | Moottoripyörä on moottoripyörä | 49971 |
-| 2137 | Mahtava peräsin ja pulleat purjeet | 49972 |
-| 2138 | Kaikki tytöt -karakum- | 49973 |
-| 2139 | Kaikki muuttuu -you can have her- | 49974 |
-| 2140 | Aurinko, kuu ja tähdet | 49975 |
-| 2141 | Elämän valttikortit | 49976 |
-| 2142 | Juodaan viinaa | 49977 |
-| 2143 | Kaiken takana on nainen | 49978 |
-| 2144 | Lulu | 49979 |
-| 2145 | Rafaelin enkeli | 49980 |
-| 2146 | Jäätelökesä | 49981 |
-| 2147 | Syksyn sävel | 49982 |
-| 2148 | Krokotiilirock -crocodile rock- | 49983 |
-| 2149 | Nummela | 49984 |
-| 2150 | Tahdon rakastella sinua | 49985 |
-| 2151 | Teuvo, maanteiden kuningas | 49986 |
-| 2152 | Kevät | 49987 |
-| 2153 | Autiotalo | 49988 |
-| 2154 | Bensaa suonissa | 49989 |
-| 2155 | Märkää rakkautta | 49990 |
-| 2156 | Doris | 49991 |
-| 2157 | Joutsenlaulu | 49992 |
-| 2158 | Keskiyön aikaan -I'll meet you at midnight- | 49993 |
-| 2159 | Valo yössä | 49994 |
-| 2160 | Huone 105 | 49995 |
-| 2161 | Jestas sentään -crazy- | 49996 |
-| 2162 | Linda linda | 49997 |
+## no match, and this artist string is unknown to MusicBrainz (82)
 
 ### Julsång — 19
 

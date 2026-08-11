@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T07:45:22.989Z",
+  "generatedAt": "2026-08-11T08:19:53.753Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -42543,6 +42543,727 @@
       "how": "exact"
     },
     {
+      "postId": 49959,
+      "from": "Finsk musik",
+      "artist": "Kari Tapio",
+      "sortAs": "Tapio, Kari",
+      "artistMbids": [
+        "cd379eaf-ac4e-4db3-88b1-ecdf19b58495"
+      ],
+      "artists": [
+        {
+          "mbid": "cd379eaf-ac4e-4db3-88b1-ecdf19b58495",
+          "name": "Kari Tapio"
+        }
+      ],
+      "recordingMbid": "6c925661-324d-4051-a1a2-43c5c37bb556",
+      "genres": [
+        "schlager"
+      ],
+      "year": 1995,
+      "how": "exact"
+    },
+    {
+      "postId": 49960,
+      "from": "Finsk musik",
+      "artist": "Jari Sillanpää",
+      "sortAs": "Sillanpää, Jari",
+      "artistMbids": [
+        "973c00fb-ebdf-4436-a36b-8565fa32b82b"
+      ],
+      "artists": [
+        {
+          "mbid": "973c00fb-ebdf-4436-a36b-8565fa32b82b",
+          "name": "Jari Sillanpää"
+        }
+      ],
+      "recordingMbid": "0af02e4a-c371-42f3-9098-cff3bdb488d4",
+      "year": 1996,
+      "how": "exact"
+    },
+    {
+      "postId": 49961,
+      "from": "Finsk musik",
+      "artist": "Juha Vainio",
+      "sortAs": "Vainio, Juha",
+      "artistMbids": [
+        "1a1da243-4387-4a5a-9c84-d667daed92d7"
+      ],
+      "artists": [
+        {
+          "mbid": "1a1da243-4387-4a5a-9c84-d667daed92d7",
+          "name": "Juha Vainio"
+        }
+      ],
+      "recordingMbid": "fa371b2f-3f8e-4485-99ea-a0cda6e2dc6b",
+      "year": 1985,
+      "how": "exact"
+    },
+    {
+      "postId": 49962,
+      "from": "Finsk musik",
+      "artist": "Kake Randelin",
+      "sortAs": "Randelin, Kake",
+      "artistMbids": [
+        "3d83628c-374f-4dcc-8e11-c676278e40f9"
+      ],
+      "artists": [
+        {
+          "mbid": "3d83628c-374f-4dcc-8e11-c676278e40f9",
+          "name": "Kake Randelin"
+        }
+      ],
+      "recordingMbid": "15f1250d-7b1c-469a-812c-209b2d56695f",
+      "year": 1983,
+      "how": "exact"
+    },
+    {
+      "postId": 49963,
+      "from": "Finsk musik",
+      "artist": "Juice Leskinen Slam",
+      "sortAs": "Leskinen, Juice, Slam",
+      "artistMbids": [
+        "73a919cc-c2d8-416e-a98c-7556eedb787d"
+      ],
+      "artists": [
+        {
+          "mbid": "73a919cc-c2d8-416e-a98c-7556eedb787d",
+          "name": "Juice Leskinen Slam"
+        }
+      ],
+      "recordingMbid": "801636df-3b61-4410-b354-eb7cae9e54d3",
+      "year": 1980,
+      "how": "exact"
+    },
+    {
+      "postId": 49964,
+      "from": "Finsk musik",
+      "artist": "Antti Huovila",
+      "sortAs": "Huovila, Antti",
+      "artistMbids": [
+        "53daf0cb-a1c3-4ee1-a2b1-fbc85f376c91"
+      ],
+      "artists": [
+        {
+          "mbid": "53daf0cb-a1c3-4ee1-a2b1-fbc85f376c91",
+          "name": "Antti Huovila"
+        }
+      ],
+      "recordingMbid": "400b969e-fc61-4b04-b73e-aba282610f3e",
+      "year": 2000,
+      "how": "exact"
+    },
+    {
+      "postId": 49965,
+      "from": "Finsk musik",
+      "artist": "Frederik",
+      "sortAs": "Frederik",
+      "artistMbids": [
+        "4b598be3-8f19-4b21-bcf7-1bbda1d58d39"
+      ],
+      "artists": [
+        {
+          "mbid": "4b598be3-8f19-4b21-bcf7-1bbda1d58d39",
+          "name": "Frederik"
+        }
+      ],
+      "recordingMbid": "c5bd973d-f16f-465b-bae5-8c6df1686fbd",
+      "year": 1981,
+      "how": "exact"
+    },
+    {
+      "postId": 49966,
+      "from": "Finsk musik",
+      "artist": "Irwin Goodman",
+      "sortAs": "Goodman, Irwin",
+      "title": "St. Pauli ja Reeperbahn",
+      "artistMbids": [
+        "078f98b2-3a90-4443-817b-440c7089b0c4"
+      ],
+      "artists": [
+        {
+          "mbid": "078f98b2-3a90-4443-817b-440c7089b0c4",
+          "name": "Irwin Goodman"
+        }
+      ],
+      "recordingMbid": "4ba52fb2-221c-4440-98aa-54254c7f3aae",
+      "year": 1970,
+      "how": "exact"
+    },
+    {
+      "postId": 49967,
+      "from": "Finsk musik",
+      "artist": "Rainer Friman",
+      "sortAs": "Friman, Rainer",
+      "artistMbids": [
+        "83adba50-f8b3-4276-8fd5-297002104208"
+      ],
+      "artists": [
+        {
+          "mbid": "83adba50-f8b3-4276-8fd5-297002104208",
+          "name": "Rainer Friman"
+        }
+      ],
+      "recordingMbid": "3e552e91-9f99-4fa4-861f-2f2c344dd145",
+      "year": 1989,
+      "how": "exact"
+    },
+    {
+      "postId": 49968,
+      "from": "Finsk musik",
+      "artist": "Agents",
+      "sortAs": "Agents",
+      "artistMbids": [
+        "8fa7b39a-6faa-49ab-8a62-8dc6b71c1947"
+      ],
+      "artists": [
+        {
+          "mbid": "8fa7b39a-6faa-49ab-8a62-8dc6b71c1947",
+          "name": "Agents"
+        }
+      ],
+      "recordingMbid": "0936a6fe-4076-4a47-bea8-3a16043dbf4e",
+      "year": 1997,
+      "how": "exact"
+    },
+    {
+      "postId": 49969,
+      "from": "Finsk musik",
+      "artist": "Jippu",
+      "sortAs": "Jippu",
+      "title": "Eva (Kielletyllä iholla)",
+      "artistMbids": [
+        "c8178f7e-7649-4c2d-9c63-0627a3594fd4"
+      ],
+      "artists": [
+        {
+          "mbid": "c8178f7e-7649-4c2d-9c63-0627a3594fd4",
+          "name": "Jippu"
+        }
+      ],
+      "recordingMbid": "bb593b82-07f1-4a59-a46c-29a63ee16d82",
+      "year": 2012,
+      "how": "version"
+    },
+    {
+      "postId": 49970,
+      "from": "Finsk musik",
+      "artist": "Janne Tulkki",
+      "sortAs": "Tulkki, Janne",
+      "artistMbids": [
+        "14b8a691-008b-49df-b9d8-234914a2ea36"
+      ],
+      "artists": [
+        {
+          "mbid": "14b8a691-008b-49df-b9d8-234914a2ea36",
+          "name": "Janne Tulkki"
+        }
+      ],
+      "recordingMbid": "a3ee0803-b88c-4104-b233-594cf804f021",
+      "year": 1999,
+      "how": "exact"
+    },
+    {
+      "postId": 49971,
+      "from": "Finsk musik",
+      "artist": "Mika Sundqvist",
+      "sortAs": "Sundqvist, Mika",
+      "artistMbids": [
+        "ee74e74e-bd95-4abc-aae3-e998147c3ad6"
+      ],
+      "artists": [
+        {
+          "mbid": "ee74e74e-bd95-4abc-aae3-e998147c3ad6",
+          "name": "Mika Sundqvist"
+        }
+      ],
+      "recordingMbid": "809ef30f-82e8-4db8-af95-18dafe33dfaa",
+      "year": 1980,
+      "how": "exact"
+    },
+    {
+      "postId": 49972,
+      "from": "Finsk musik",
+      "artist": "Solistiyhtye Suomi",
+      "sortAs": "Solistiyhtye Suomi",
+      "artistMbids": [
+        "8b49d89a-cd3d-4766-aebb-0a5e1dd2d7a5"
+      ],
+      "artists": [
+        {
+          "mbid": "8b49d89a-cd3d-4766-aebb-0a5e1dd2d7a5",
+          "name": "Solistiyhtye Suomi"
+        }
+      ],
+      "recordingMbid": "6826febc-5432-49a9-b8b7-367787c17f63",
+      "year": 1983,
+      "how": "exact"
+    },
+    {
+      "postId": 49973,
+      "from": "Finsk musik",
+      "artist": "Finlanders",
+      "sortAs": "Finlanders",
+      "title": "Kaikki tytöt",
+      "artistMbids": [
+        "531ee00f-0b6d-4547-9324-d415bc579cab"
+      ],
+      "artists": [
+        {
+          "mbid": "531ee00f-0b6d-4547-9324-d415bc579cab",
+          "name": "Finlanders"
+        }
+      ],
+      "recordingMbid": "04ab61d0-7271-4e37-acf4-60241953b32c",
+      "year": 1986,
+      "how": "exact"
+    },
+    {
+      "postId": 49974,
+      "from": "Finsk musik",
+      "artist": "Four Cats",
+      "sortAs": "Four Cats",
+      "title": "Kaikki muuttuu",
+      "artistMbids": [
+        "08220a44-a3c1-4ce5-be0f-a2f347f30572"
+      ],
+      "artists": [
+        {
+          "mbid": "08220a44-a3c1-4ce5-be0f-a2f347f30572",
+          "name": "Four Cats"
+        }
+      ],
+      "recordingMbid": "7887575c-9aa8-463f-a74c-1dc435ab9673",
+      "year": 1962,
+      "how": "exact"
+    },
+    {
+      "postId": 49975,
+      "from": "Finsk musik",
+      "artist": "Tomi Markkola",
+      "sortAs": "Markkola, Tomi",
+      "artistMbids": [
+        "92e40fbd-5a7c-43d8-8254-e8b98c3f14f1"
+      ],
+      "artists": [
+        {
+          "mbid": "92e40fbd-5a7c-43d8-8254-e8b98c3f14f1",
+          "name": "Tomi Markkola"
+        }
+      ],
+      "recordingMbid": "7f9b9764-86ee-4445-8740-81eda10376de",
+      "year": 2001,
+      "how": "exact"
+    },
+    {
+      "postId": 49976,
+      "from": "Finsk musik",
+      "artist": "Ahti Lampi",
+      "sortAs": "Lampi, Ahti",
+      "artistMbids": [
+        "3cc6c33e-4b45-4a66-8e07-95dd3da13494"
+      ],
+      "artists": [
+        {
+          "mbid": "3cc6c33e-4b45-4a66-8e07-95dd3da13494",
+          "name": "Ahti Lampi"
+        }
+      ],
+      "recordingMbid": "9fe6c033-e463-4f5c-b206-6bf46e6ecffc",
+      "year": 1980,
+      "how": "exact"
+    },
+    {
+      "postId": 49977,
+      "from": "Finsk musik",
+      "artist": "Hector",
+      "sortAs": "Hector",
+      "artistMbids": [
+        "600bec42-17d9-432b-949c-9ec362b13348"
+      ],
+      "artists": [
+        {
+          "mbid": "600bec42-17d9-432b-949c-9ec362b13348",
+          "name": "Hector"
+        }
+      ],
+      "recordingMbid": "6b0cda67-de26-4357-ad15-dca211720156",
+      "year": 1990,
+      "how": "exact"
+    },
+    {
+      "postId": 49978,
+      "from": "Finsk musik",
+      "artist": "Matti ja Teppo",
+      "sortAs": "Matti ja Teppo",
+      "artistMbids": [
+        "eb646490-1356-4c19-bdea-01fd008c593a"
+      ],
+      "artists": [
+        {
+          "mbid": "eb646490-1356-4c19-bdea-01fd008c593a",
+          "name": "Matti ja Teppo"
+        }
+      ],
+      "recordingMbid": "dbb32bdd-8176-492c-9b3b-459c78fd7f5f",
+      "year": 1986,
+      "how": "exact"
+    },
+    {
+      "postId": 49979,
+      "from": "Finsk musik",
+      "artist": "Tuula Amberla",
+      "sortAs": "Amberla, Tuula",
+      "artistMbids": [
+        "fe6f777a-86ed-4684-944f-f5ce64b239a9"
+      ],
+      "artists": [
+        {
+          "mbid": "fe6f777a-86ed-4684-944f-f5ce64b239a9",
+          "name": "Tuula Amberla"
+        }
+      ],
+      "recordingMbid": "827306aa-1254-4a1f-9bb6-91e6e161643a",
+      "year": 1984,
+      "how": "exact"
+    },
+    {
+      "postId": 49980,
+      "from": "Finsk musik",
+      "artist": "Pekka Ruuska",
+      "sortAs": "Ruuska, Pekka",
+      "artistMbids": [
+        "cbd6c15f-cb76-4be4-bdba-2284ee5b9065"
+      ],
+      "artists": [
+        {
+          "mbid": "cbd6c15f-cb76-4be4-bdba-2284ee5b9065",
+          "name": "Pekka Ruuska"
+        }
+      ],
+      "recordingMbid": "ef5628f1-9b41-4f55-ac15-21d6b0670010",
+      "year": 1990,
+      "how": "exact"
+    },
+    {
+      "postId": 49981,
+      "from": "Finsk musik",
+      "artist": "Maarit",
+      "sortAs": "Maarit",
+      "artistMbids": [
+        "89bf49b4-f799-44ae-9f12-14bfc927d36e"
+      ],
+      "artists": [
+        {
+          "mbid": "89bf49b4-f799-44ae-9f12-14bfc927d36e",
+          "name": "Maarit"
+        }
+      ],
+      "recordingMbid": "1e567935-c15f-43f5-8fab-dcbf0f01a991",
+      "year": 1978,
+      "how": "exact"
+    },
+    {
+      "postId": 49982,
+      "from": "Finsk musik",
+      "artist": "Juice Leskinen",
+      "sortAs": "Leskinen, Juice",
+      "artistMbids": [
+        "d1d914e2-34df-4a84-8fc2-226889c10814"
+      ],
+      "artists": [
+        {
+          "mbid": "d1d914e2-34df-4a84-8fc2-226889c10814",
+          "name": "Juice Leskinen"
+        }
+      ],
+      "recordingMbid": "fb01c939-74fb-4295-b409-326527514e33",
+      "genres": [
+        "rock",
+        "singer-songwriter"
+      ],
+      "year": 1975,
+      "how": "exact"
+    },
+    {
+      "postId": 49983,
+      "from": "Finsk musik",
+      "artist": "Muska",
+      "sortAs": "Muska",
+      "title": "Krokotiili rock",
+      "artistMbids": [
+        "8021d7c0-c61c-430b-a082-ae7f6122d59c"
+      ],
+      "artists": [
+        {
+          "mbid": "8021d7c0-c61c-430b-a082-ae7f6122d59c",
+          "name": "Muska"
+        }
+      ],
+      "recordingMbid": "7f288966-9ebb-462c-8bad-1085e066e751",
+      "year": 1973,
+      "how": "exact"
+    },
+    {
+      "postId": 49984,
+      "from": "Finsk musik",
+      "artist": "Anssi Kela",
+      "sortAs": "Kela, Anssi",
+      "artistMbids": [
+        "7d55d189-67d5-4ff4-abe4-311459bd999b"
+      ],
+      "artists": [
+        {
+          "mbid": "7d55d189-67d5-4ff4-abe4-311459bd999b",
+          "name": "Anssi Kela"
+        }
+      ],
+      "recordingMbid": "3204b907-a0c2-49fb-913e-0b705d6739ca",
+      "year": 2001,
+      "how": "exact"
+    },
+    {
+      "postId": 49985,
+      "from": "Finsk musik",
+      "artist": "Pelle Miljoona & 1980",
+      "sortAs": "Pelle Miljoona & 1980",
+      "artistMbids": [
+        "54ccabd8-749e-43ff-8861-ac45ff9bde20"
+      ],
+      "artists": [
+        {
+          "mbid": "54ccabd8-749e-43ff-8861-ac45ff9bde20",
+          "name": "Pelle Miljoona & 1980"
+        }
+      ],
+      "recordingMbid": "6b4df678-db2e-44ae-8d2a-614e76ef543d",
+      "year": 1979,
+      "how": "exact"
+    },
+    {
+      "postId": 49986,
+      "from": "Finsk musik",
+      "artist": "Leevi and the Leavings",
+      "sortAs": "Leevi and the Leavings",
+      "artistMbids": [
+        "5ffb1041-7236-45d4-8523-60faf95946c6"
+      ],
+      "artists": [
+        {
+          "mbid": "5ffb1041-7236-45d4-8523-60faf95946c6",
+          "name": "Leevi and the Leavings"
+        }
+      ],
+      "recordingMbid": "4e9fbf1d-88fa-4923-9eb8-f1d0494e8e88",
+      "year": 1988,
+      "how": "exact"
+    },
+    {
+      "postId": 49987,
+      "from": "Finsk musik",
+      "artist": "Tavaramarkkinat",
+      "sortAs": "Tavaramarkkinat",
+      "artistMbids": [
+        "81667921-2cd7-4c53-8d2f-5d6c39549963"
+      ],
+      "artists": [
+        {
+          "mbid": "81667921-2cd7-4c53-8d2f-5d6c39549963",
+          "name": "Tavaramarkkinat"
+        }
+      ],
+      "recordingMbid": "13fad109-8ef8-4dfb-8c61-9a14c4462b36",
+      "year": 1986,
+      "how": "exact"
+    },
+    {
+      "postId": 49988,
+      "from": "Finsk musik",
+      "artist": "Dingo",
+      "sortAs": "Dingo",
+      "artistMbids": [
+        "f7c46d72-b6d1-4134-a34a-1f054b1aceb9"
+      ],
+      "artists": [
+        {
+          "mbid": "f7c46d72-b6d1-4134-a34a-1f054b1aceb9",
+          "name": "Dingo"
+        }
+      ],
+      "recordingMbid": "62af9b09-2989-465e-8ca8-f43a410204c9",
+      "genres": [
+        "pop rock",
+        "rock"
+      ],
+      "year": 1984,
+      "how": "exact"
+    },
+    {
+      "postId": 49989,
+      "from": "Finsk musik",
+      "artist": "Rauli Badding Somerjoki",
+      "sortAs": "Somerjoki, Rauli Badding",
+      "artistMbids": [
+        "2b82ac4a-0264-4cf3-98d7-61e5bc941f28"
+      ],
+      "artists": [
+        {
+          "mbid": "2b82ac4a-0264-4cf3-98d7-61e5bc941f28",
+          "name": "Rauli Badding Somerjoki"
+        }
+      ],
+      "recordingMbid": "7652d59b-92e3-42dc-bfa6-d98c4205a004",
+      "year": 1970,
+      "how": "exact"
+    },
+    {
+      "postId": 49990,
+      "from": "Finsk musik",
+      "artist": "Essi Wuorela",
+      "sortAs": "Wuorela, Essi",
+      "artistMbids": [
+        "c5bdefbc-6730-4ead-93fa-c1eb4e03f158"
+      ],
+      "artists": [
+        {
+          "mbid": "c5bdefbc-6730-4ead-93fa-c1eb4e03f158",
+          "name": "Essi Wuorela"
+        }
+      ],
+      "recordingMbid": "c93858fb-c640-4cbf-a612-13e66a2d1ab6",
+      "year": 1995,
+      "how": "exact"
+    },
+    {
+      "postId": 49991,
+      "from": "Finsk musik",
+      "artist": "J. Karjalainen",
+      "sortAs": "Karjalainen, Jukka",
+      "artistMbids": [
+        "ee03c284-c6dc-49b5-ba31-e388157f6ed3"
+      ],
+      "artists": [
+        {
+          "mbid": "ee03c284-c6dc-49b5-ba31-e388157f6ed3",
+          "name": "J. Karjalainen"
+        }
+      ],
+      "recordingMbid": "636969f9-d2dd-4641-99ac-9bcd205b3b88",
+      "year": 2008,
+      "how": "exact"
+    },
+    {
+      "postId": 49992,
+      "from": "Finsk musik",
+      "artist": "Yö",
+      "sortAs": "Yö",
+      "artistMbids": [
+        "a35d2112-4137-4c14-89fb-58e02036c326"
+      ],
+      "artists": [
+        {
+          "mbid": "a35d2112-4137-4c14-89fb-58e02036c326",
+          "name": "Yö"
+        }
+      ],
+      "recordingMbid": "6df90883-a932-4323-b2a8-17102e66181c",
+      "year": 1984,
+      "how": "exact"
+    },
+    {
+      "postId": 49993,
+      "from": "Finsk musik",
+      "artist": "Markku Aro",
+      "sortAs": "Aro, Markku",
+      "title": "Keskiyön aikaan",
+      "artistMbids": [
+        "1b013b59-f2b7-4b94-aa8b-02248015cd73"
+      ],
+      "artists": [
+        {
+          "mbid": "1b013b59-f2b7-4b94-aa8b-02248015cd73",
+          "name": "Markku Aro"
+        }
+      ],
+      "recordingMbid": "162b2024-569a-49ab-bf65-2bafe154db54",
+      "year": 1977,
+      "how": "exact"
+    },
+    {
+      "postId": 49994,
+      "from": "Finsk musik",
+      "artist": "Tuomari Nurmio",
+      "sortAs": "Nurmio, Tuomari",
+      "artistMbids": [
+        "1fb517fd-25e4-4f71-9967-6e2674c781ed"
+      ],
+      "artists": [
+        {
+          "mbid": "1fb517fd-25e4-4f71-9967-6e2674c781ed",
+          "name": "Tuomari Nurmio"
+        }
+      ],
+      "recordingMbid": "e95e7e7e-6d27-4074-9a78-a6bb1f00fdaa",
+      "year": 1991,
+      "how": "exact"
+    },
+    {
+      "postId": 49995,
+      "from": "Finsk musik",
+      "artist": "Nisa Soraya",
+      "sortAs": "Soraya, Nisa",
+      "artistMbids": [
+        "db2db3d0-4342-4754-87f0-12a30783dc77"
+      ],
+      "artists": [
+        {
+          "mbid": "db2db3d0-4342-4754-87f0-12a30783dc77",
+          "name": "Nisa Soraya"
+        }
+      ],
+      "recordingMbid": "7ae4d398-ed8c-4927-b508-8d1f41fcf2b5",
+      "year": 1982,
+      "how": "exact"
+    },
+    {
+      "postId": 49996,
+      "from": "Finsk musik",
+      "artist": "Markku Aro",
+      "sortAs": "Aro, Markku",
+      "title": "Jestas sentään",
+      "artistMbids": [
+        "1b013b59-f2b7-4b94-aa8b-02248015cd73"
+      ],
+      "artists": [
+        {
+          "mbid": "1b013b59-f2b7-4b94-aa8b-02248015cd73",
+          "name": "Markku Aro"
+        }
+      ],
+      "recordingMbid": "1dd6a9e9-8b68-43ab-8bb6-1979a7aa4161",
+      "year": 1973,
+      "how": "exact"
+    },
+    {
+      "postId": 49997,
+      "from": "Finsk musik",
+      "artist": "Frederik",
+      "sortAs": "Frederik",
+      "title": "Linda Linda",
+      "artistMbids": [
+        "4b598be3-8f19-4b21-bcf7-1bbda1d58d39"
+      ],
+      "artists": [
+        {
+          "mbid": "4b598be3-8f19-4b21-bcf7-1bbda1d58d39",
+          "name": "Frederik"
+        }
+      ],
+      "recordingMbid": "41b666ad-562e-40d4-8476-a9fa9d1dd576",
+      "year": 1979,
+      "how": "exact"
+    },
+    {
       "postId": 48090,
       "sortAs": "Augustana",
       "artistMbids": [
@@ -71254,6 +71975,7 @@
         "disco",
         "pop"
       ],
+      "year": 1974,
       "how": "exact"
     },
     {
@@ -73896,6 +74618,7 @@
         "rock",
         "christmas music"
       ],
+      "year": 1997,
       "how": "title-first"
     },
     {
