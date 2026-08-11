@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T22:41:50.543Z",
+  "generatedAt": "2026-08-11T23:02:12.462Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -30,7 +30,7 @@
       "language": "eng",
       "artist": "Rozalla",
       "sortAs": "Rozalla",
-      "title": "Everybody’s Free (to Feel Good)",
+      "title": "Everybody’s Free",
       "artistMbids": [
         "a41e9be6-6caf-464d-b3a8-48fdebc179f7"
       ],
@@ -166,7 +166,7 @@
       "postId": 49204,
       "language": "eng",
       "sortAs": "Lauper, Cyndi",
-      "title": "Girls Just Want to Have Fun",
+      "title": "Girls Just Wanna Have Fun",
       "artistMbids": [
         "7bd9e20e-74b9-446a-a2ed-a223f82a36e7"
       ],
@@ -776,7 +776,7 @@
       "language": "eng",
       "artist": "Sam the Sham & the Pharaohs",
       "sortAs": "Sam the Sham & the Pharaohs",
-      "title": "Wooly Bully",
+      "title": "Woolly Bully",
       "artistMbids": [
         "e9d7f684-d144-46c4-b411-19effff4defb"
       ],
@@ -984,7 +984,7 @@
       "postId": 53024,
       "language": "eng",
       "sortAs": "Sweet",
-      "title": "The Ballroom Blitz",
+      "title": "Ballroom Blitz",
       "artistMbids": [
         "dc73bb40-b697-4df9-a2ec-0555bebdba75"
       ],
@@ -1654,7 +1654,7 @@
       "language": "eng",
       "artist": "TLC",
       "sortAs": "TLC",
-      "title": "No Scrubs",
+      "title": "No Scrub",
       "artistMbids": [
         "99790314-885a-4975-8614-9c5bc890364d"
       ],
@@ -2985,7 +2985,7 @@
       "postId": 47904,
       "language": "eng",
       "sortAs": "Keys, Alicia",
-      "title": "How Come U Don’t Call Me Anymore",
+      "title": "How Come You Don't Call Me",
       "artistMbids": [
         "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
       ],
@@ -3716,7 +3716,7 @@
       "postId": 50880,
       "language": "eng",
       "sortAs": "Timberlake, Justin",
-      "title": "Like I Love You",
+      "title": "Like I Love You (MTV's Making the video - Excerpts)",
       "artistMbids": [
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
@@ -4118,7 +4118,7 @@
       "language": "eng",
       "artist": "DJ Sammy",
       "sortAs": "Sammy, DJ",
-      "title": "The Boys of Summer",
+      "title": "Boys of Summer",
       "artistMbids": [
         "c43e35b8-8234-408b-9a25-07f2fcbeb317"
       ],
@@ -5154,7 +5154,7 @@
       "language": "eng",
       "artist": "P!nk",
       "sortAs": "Pink",
-      "title": "Get the Party Started",
+      "title": "Get the Party Started (Ernie's All Night Party Anthem)",
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
@@ -5266,7 +5266,7 @@
       "postId": 51396,
       "language": "eng",
       "sortAs": "Madonna",
-      "title": "Nothing Fails",
+      "title": "Nothing Falls",
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
@@ -8220,7 +8220,7 @@
       "postId": 52062,
       "language": "eng",
       "sortAs": "Bryson, Peabo",
-      "title": "Can’t Stop the Rain",
+      "title": "Can You Stop the Rain",
       "artistMbids": [
         "b8170690-3a95-42e4-adef-afc9576ed90c"
       ],
@@ -8625,7 +8625,7 @@
       "postId": 53274,
       "language": "eng",
       "sortAs": "Jones, Tom",
-      "title": "I’ll Never Fall in Love Again",
+      "title": "I’ll Never Fall in Love Again (It Looks Like)",
       "artistMbids": [
         "57c6f649-6cde-48a7-8114-2a200247601a"
       ],
@@ -8862,7 +8862,7 @@
       "language": "eng",
       "artist": "The Beatles",
       "sortAs": "Beatles, The",
-      "title": "You’re Going to Lose That Girl",
+      "title": "You’re Going to Loose That Girl",
       "artistMbids": [
         "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
       ],
@@ -8980,7 +8980,7 @@
       "language": "eng",
       "artist": "The Beatles",
       "sortAs": "Beatles, The",
-      "title": "The Long and Winding Road",
+      "title": "Long And Winding Road",
       "artistMbids": [
         "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
       ],
@@ -10450,7 +10450,7 @@
       "language": "eng",
       "artist": "Minnie Riperton",
       "sortAs": "Riperton, Minnie",
-      "title": "Lovin’ You",
+      "title": "Loving You",
       "artistMbids": [
         "e842abf7-8a63-4602-8879-75958c2884a1"
       ],
@@ -10557,7 +10557,7 @@
       "postId": 51464,
       "language": "eng",
       "sortAs": "Carey, Mariah",
-      "title": "Against All Odds (Take a Look at Me Now)",
+      "title": "Against All Odds",
       "artistMbids": [
         "494e8d09-f85b-4543-892f-a5096aed1cd4"
       ],
@@ -11823,7 +11823,7 @@
       "postId": 52323,
       "language": "eng",
       "sortAs": "Rainbow",
-      "title": "The Temple of the King",
+      "title": "Temple of the King",
       "artistMbids": [
         "e3cb4543-210f-499a-b0d1-3882c312dfb9"
       ],
@@ -12339,7 +12339,7 @@
       "postId": 51627,
       "language": "eng",
       "sortAs": "Bolton, Michael",
-      "title": "Said I Loved You… but I Lied",
+      "title": "Said I Love You… but I Lied",
       "artistMbids": [
         "e8bee5d1-a3a5-4c1a-ada4-f1ca22101e84"
       ],
@@ -13382,7 +13382,7 @@
       "postId": 52395,
       "language": "eng",
       "sortAs": "Marx, Richard",
-      "title": "Hold On to the Nights",
+      "title": "Hold on to the Night",
       "artistMbids": [
         "e33c460f-011a-469a-b934-08932a3729c4"
       ],
@@ -14262,7 +14262,7 @@
       "postId": 53454,
       "language": "swe",
       "sortAs": "Vikingarna",
-      "title": "Mitt eget blue Hawaii",
+      "title": "Till mitt eget Blue Hawaii",
       "artistMbids": [
         "a1a92a82-1577-43fb-aa58-84c14789feec"
       ],
@@ -14396,7 +14396,7 @@
       "postId": 52129,
       "language": "eng",
       "sortAs": "Collins, Phil",
-      "title": "Easy Lover",
+      "title": "Easy Lover (fade)",
       "artistMbids": [
         "401c3991-b76b-499d-8082-9f2df958ef78"
       ],
@@ -15584,7 +15584,6 @@
       "postId": 53231,
       "language": "swe",
       "sortAs": "Timbuktu",
-      "title": "Det löser sej",
       "artistMbids": [
         "349fd7a7-183b-4139-a4ee-1d9b7146f8a1"
       ],
@@ -15605,7 +15604,7 @@
       "postId": 50159,
       "language": "eng",
       "sortAs": "DeGraw, Gavin",
-      "title": "I Don’t Want to Be",
+      "title": "I Don't Wanna Be",
       "artistMbids": [
         "3f2a12e9-6398-42fd-b257-2f6abd4aa5fc"
       ],
@@ -18202,7 +18201,7 @@
       "postId": 48467,
       "language": "eng",
       "sortAs": "Dylan, Bob",
-      "title": "The Times They Are A‐Changin’",
+      "title": "The Times They Are A-Changing",
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
@@ -18225,7 +18224,7 @@
       "postId": 48468,
       "language": "eng",
       "sortAs": "Dylan, Bob",
-      "title": "Knockin’ on Heaven’s Door",
+      "title": "Knocking on Heaven's Door",
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
@@ -21280,7 +21279,7 @@
       "postId": 52087,
       "language": "swe",
       "sortAs": "Wahlgren, Pernilla",
-      "title": "Piccadilly circus",
+      "title": "Picadilly Circus",
       "artistMbids": [
         "34e3047b-f35d-4a12-8d21-a87bcc6d178a"
       ],
@@ -21409,7 +21408,6 @@
       "language": "swe",
       "artist": "Monica Törnell, Lasse Holm",
       "sortAs": "Törnell, Monica",
-      "title": "E de det här du kallar kärlek",
       "artistMbids": [
         "831fca4a-093a-4f82-9b57-c2c5e994401e",
         "7055ff0e-0b44-4bda-8892-3807b93d2d50"
@@ -22162,7 +22160,6 @@
       "postId": 49094,
       "language": "swe",
       "sortAs": "Vreeswijk, Cornelis",
-      "title": "Somliga går med trasiga skor",
       "artistMbids": [
         "ca264abf-3eb6-4d53-827b-6ab16988a4a3"
       ],
@@ -22304,7 +22301,6 @@
       "postId": 48779,
       "language": "swe",
       "sortAs": "Carola",
-      "title": "Tommy tycker om mej",
       "artistMbids": [
         "1a21747b-7b43-4e97-849b-db5ab664583e"
       ],
@@ -24066,7 +24062,7 @@
       "language": "eng",
       "artist": "ABBA",
       "sortAs": "ABBA",
-      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "title": "Gimme, Gimme, Gimme",
       "artistMbids": [
         "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
       ],
@@ -24897,7 +24893,7 @@
       "language": "eng",
       "artist": "Sly & the Family Stone",
       "sortAs": "Sly & the Family Stone",
-      "title": "Thank You (Falettinme Be Mice Elf Agin)",
+      "title": "Thank You",
       "artistMbids": [
         "b7ec4c54-1f93-4bf2-957f-7b9921ab84ea"
       ],
@@ -24943,7 +24939,7 @@
       "postId": 49880,
       "language": "eng",
       "sortAs": "Eurythmics",
-      "title": "There Must Be an Angel (Playing With My Heart)",
+      "title": "There Must Be an Angel",
       "artistMbids": [
         "b4d32cff-f19e-455f-86c4-f347d824ca61"
       ],
@@ -25638,7 +25634,7 @@
       "postId": 50835,
       "language": "eng",
       "sortAs": "Judas Priest",
-      "title": "You’ve Got Another Thing Comin’",
+      "title": "You’ve Got Another Thing Coming",
       "artistMbids": [
         "6b335658-22c8-485d-93de-0bc29a1d0349"
       ],
@@ -25729,7 +25725,7 @@
       "postId": 51811,
       "language": "eng",
       "sortAs": "Diamond, Neil",
-      "title": "Brother Love’s Travelling Salvation Show",
+      "title": "Brother Love’s Traveling Salvation Show",
       "artistMbids": [
         "a42d3fd5-55de-4206-86c3-4fbb5404018f"
       ],
@@ -25752,7 +25748,7 @@
       "postId": 49721,
       "language": "eng",
       "sortAs": "Presley, Elvis",
-      "title": "(You’re the) Devil in Disguise",
+      "title": "Devil in Disguise",
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
@@ -26476,7 +26472,7 @@
       "language": "eng",
       "artist": "John Fred & His Playboy Band",
       "sortAs": "Fred, John & His Playboy Band",
-      "title": "Judy in Disguise (With Glasses)",
+      "title": "Judy in Disguise",
       "artistMbids": [
         "05cfb5c7-0152-41f4-a9c9-622e8f710dfa"
       ],
@@ -26617,7 +26613,7 @@
       "language": "eng",
       "artist": "John D. Loudermilk",
       "sortAs": "Loudermilk, John D.",
-      "title": "Language of Love",
+      "title": "The Language of Love",
       "artistMbids": [
         "e5fbd7a7-eaaa-49fa-8512-ac2d1b416011"
       ],
@@ -26896,7 +26892,7 @@
       "postId": 49036,
       "language": "eng",
       "sortAs": "Coldplay",
-      "title": "The Hardest Part",
+      "title": "Hardest Part",
       "artistMbids": [
         "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
       ],
@@ -27126,7 +27122,7 @@
       "postId": 52347,
       "language": "eng",
       "sortAs": "Charles, Ray",
-      "title": "I Got a Woman",
+      "title": "I Gotta Woman",
       "artistMbids": [
         "2ce02909-598b-44ef-a456-151ba0a3bd70"
       ],
@@ -27476,7 +27472,7 @@
       "postId": 52773,
       "language": "eng",
       "sortAs": "Showaddywaddy",
-      "title": "Dancing Party",
+      "title": "Dancin’ Party",
       "artistMbids": [
         "0561d857-1d15-4ca1-93ec-ff6036c6e1a2"
       ],
@@ -27521,7 +27517,7 @@
       "postId": 52033,
       "language": "eng",
       "sortAs": "Cline, Patsy",
-      "title": "Walkin’ After Midnight",
+      "title": "Walking After Midnight",
       "artistMbids": [
         "ad82dd72-0df3-4a09-8d7a-1af9c9e80522"
       ],
@@ -27819,7 +27815,7 @@
       "postId": 50130,
       "language": "eng",
       "sortAs": "Fugees",
-      "title": "Killing Me Softly With His Song",
+      "title": "Killing Me Softly",
       "artistMbids": [
         "ea321799-9b1d-4e74-a074-a5facf597d82"
       ],
@@ -28000,7 +27996,7 @@
       "postId": 52493,
       "language": "eng",
       "sortAs": "Palmer, Robert",
-      "title": "Simply Irresistible",
+      "title": "Simply Irresistable",
       "artistMbids": [
         "96b1d906-0fda-406d-beb6-19c6758998df"
       ],
@@ -28417,7 +28413,7 @@
       "postId": 52764,
       "language": "eng",
       "sortAs": "Crow, Sheryl",
-      "title": "The First Cut Is the Deepest",
+      "title": "First Cut Is the Deepest",
       "artistMbids": [
         "80ccfede-c258-4575-a7ad-c982e9932e0f"
       ],
@@ -28639,7 +28635,7 @@
       "language": "eng",
       "artist": "The Mamas & the Papas",
       "sortAs": "Mamas & the Papas, The",
-      "title": "California Dreamin’",
+      "title": "California Dreaming",
       "artistMbids": [
         "ff294730-0315-440d-a543-54005779c15b"
       ],
@@ -28881,7 +28877,7 @@
       "postId": 51275,
       "language": "eng",
       "sortAs": "Richie, Lionel",
-      "title": "All Night Long (All Night)",
+      "title": "All Night Long",
       "artistMbids": [
         "3cb25fb2-5547-4b05-adec-1a5e37830d46"
       ],
@@ -29522,7 +29518,6 @@
       "postId": 48993,
       "language": "eng",
       "sortAs": "Aguilera, Christina",
-      "title": "Dirrty",
       "artistMbids": [
         "b202beb7-99bd-47e7-8b72-195c8d72ebdd"
       ],
@@ -29943,7 +29938,7 @@
       "postId": 52497,
       "language": "eng",
       "sortAs": "Flack, Roberta",
-      "title": "The First Time Ever I Saw Your Face",
+      "title": "First Time I Ever Saw Your Face",
       "artistMbids": [
         "5298bbcb-7330-49bf-a780-2d757f10a20a"
       ],
@@ -29965,7 +29960,6 @@
       "postId": 50465,
       "language": "eng",
       "sortAs": "Cara, Irene",
-      "title": "Flashdance… What a Feeling",
       "artistMbids": [
         "26358fa2-80c2-47b0-a08b-33817caca7e8"
       ],
@@ -30085,7 +30079,7 @@
       "postId": 52130,
       "language": "eng",
       "sortAs": "Collins, Phil",
-      "title": "A Groovy Kind of Love",
+      "title": "Groovy Kind of Love",
       "artistMbids": [
         "401c3991-b76b-499d-8082-9f2df958ef78"
       ],
@@ -30191,7 +30185,7 @@
       "language": "eng",
       "artist": "The Rolling Stones",
       "sortAs": "Rolling Stones, The",
-      "title": "Honky Tonk Women",
+      "title": "Hony Tonk Women",
       "artistMbids": [
         "b071f9fa-14b0-4217-8e97-eb41da73f598"
       ],
@@ -30905,7 +30899,7 @@
       "postId": 49265,
       "language": "eng",
       "sortAs": "Martin, Dean",
-      "title": "Little Ole’ Wine Drinker Me",
+      "title": "Little Ole Winedrinker",
       "artistMbids": [
         "5e6c760b-42e0-4df4-a221-0269355da00a"
       ],
@@ -31107,7 +31101,6 @@
       "postId": 48189,
       "language": "eng",
       "sortAs": "Manilow, Barry",
-      "title": "Brandy",
       "artistMbids": [
         "7bb60591-46f3-4147-b692-1814a87e832e"
       ],
@@ -31301,7 +31294,6 @@
       "postId": 50087,
       "language": "eng",
       "sortAs": "Sinatra, Frank",
-      "title": "Theme From “New York, New York”",
       "artistMbids": [
         "197450cd-0124-4164-b723-3c22dd16494d"
       ],
@@ -31596,7 +31588,6 @@
       "language": "eng",
       "artist": "The Beautiful South",
       "sortAs": "Beautiful South, The",
-      "title": "Rotterdam (or Anywhere)",
       "artistMbids": [
         "eec43ebc-815a-4105-b1cb-205b8f57b4fa"
       ],
@@ -32041,7 +32032,7 @@
       "postId": 49373,
       "language": "eng",
       "sortAs": "Dion & The Belmonts",
-      "title": "A Teenager in Love",
+      "title": "Teenager in Love",
       "artistMbids": [
         "236459d6-f9ea-4f89-9239-21c0bedaaf25"
       ],
@@ -32413,7 +32404,7 @@
       "language": "eng",
       "artist": "The Everly Brothers",
       "sortAs": "Everly Brothers, The",
-      "title": "Wake Up Little Susie",
+      "title": "Wake Up Little Suzy",
       "artistMbids": [
         "091ec508-877f-4e3c-92a3-10903bbbc7ad"
       ],
@@ -33280,7 +33271,6 @@
       "postId": 50119,
       "language": "swe",
       "sortAs": "Freestyle",
-      "title": "Vill ha dej",
       "artistMbids": [
         "773efcd3-bdf4-43ac-9b6e-50a19db9aa91"
       ],
@@ -33678,7 +33668,7 @@
       "postId": 49744,
       "language": "eng",
       "sortAs": "Presley, Elvis",
-      "title": "(Marie’s the Name) His Latest Flame",
+      "title": "(Marie’s the Name of) His Latest Flame",
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
@@ -33792,7 +33782,7 @@
       "postId": 49749,
       "language": "eng",
       "sortAs": "Presley, Elvis",
-      "title": "(You’re So Square) Baby I Don’t Care",
+      "title": "Baby I Don’t Care",
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
@@ -35204,7 +35194,7 @@
       "postId": 49804,
       "language": "eng",
       "sortAs": "En Vogue",
-      "title": "Something He Can Feel",
+      "title": "Giving Him Something He Can Feel",
       "artistMbids": [
         "9a883a69-436b-4d17-9ffd-122a9bf4419a"
       ],
@@ -35631,7 +35621,7 @@
       "postId": 50629,
       "language": "mul",
       "sortAs": "Lopez, Jennifer",
-      "title": "Hold You Down (The Eliel mix)",
+      "title": "Hold You Down",
       "artistMbids": [
         "f0602f55-1770-483d-89bd-4bae0d0ac086"
       ],
@@ -37097,7 +37087,7 @@
       "language": "eng",
       "artist": "AC/DC",
       "sortAs": "AC/DC",
-      "title": "For Those About to Rock (We Salute You)",
+      "title": "For Those About to Rock",
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
       ],
@@ -37599,7 +37589,7 @@
       "postId": 50681,
       "language": "eng",
       "sortAs": "Cliff, Jimmy",
-      "title": "Reggae Night",
+      "title": "Reggae Nights",
       "artistMbids": [
         "2caa54a7-b08c-41da-b892-3a41abe778be"
       ],
@@ -37664,7 +37654,7 @@
       "postId": 48463,
       "language": "eng",
       "sortAs": "Bob & Marcia",
-      "title": "To Be Young, Gifted and Black",
+      "title": "Young, Gifted and Black",
       "artistMbids": [
         "ab329dc9-4c4c-4601-83e7-1224a113749a"
       ],
@@ -38119,7 +38109,7 @@
       "language": "eng",
       "artist": "Simon & Garfunkel",
       "sortAs": "Simon & Garfunkel",
-      "title": "Bridge Over Troubled Water",
+      "title": "Bridge Over Troubled Waters",
       "artistMbids": [
         "5d02f264-e225-41ff-83f7-d9b1f0b1874a"
       ],
@@ -39397,7 +39387,7 @@
       "postId": 51420,
       "language": "eng",
       "sortAs": "Madonna",
-      "title": "The Power of Good-Bye",
+      "title": "Power of Goodbye",
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
@@ -39532,7 +39522,7 @@
       "postId": 53536,
       "language": "eng",
       "sortAs": "Houston, Whitney",
-      "title": "The Greatest Love of All",
+      "title": "Greatest Love of All",
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228"
       ],
@@ -40222,7 +40212,7 @@
       "postId": 53421,
       "language": "eng",
       "sortAs": "Van Halen",
-      "title": "Oh, Pretty Woman",
+      "title": "Pretty Woman",
       "artistMbids": [
         "b665b768-0d83-4363-950c-31ed39317c15"
       ],
@@ -41337,7 +41327,7 @@
       "postId": 50687,
       "language": "eng",
       "sortAs": "Durante, Jimmy",
-      "title": "Knickerbocker Holiday: September Song",
+      "title": "September Song",
       "artistMbids": [
         "c4c8a72e-a518-48ba-bd59-c27ea6f8d932"
       ],
@@ -41509,7 +41499,7 @@
       "postId": 49811,
       "language": "eng",
       "sortAs": "Humperdinck, Engelbert",
-      "title": "There’s a Kind of Hush",
+      "title": "There's a Kind of Hush (All Over the World)",
       "artistMbids": [
         "62c28bc0-f696-4c50-8e54-5f8e9120bdb8"
       ],
@@ -41828,7 +41818,7 @@
       "language": "eng",
       "artist": "Guns N’ Roses",
       "sortAs": "Guns N’ Roses",
-      "title": "Knockin’ on Heaven’s Door",
+      "title": "Knocking on Heavens Door",
       "artistMbids": [
         "eeb1195b-f213-4ce1-b28c-8565211f8e43"
       ],
@@ -42083,7 +42073,6 @@
       "postId": 52475,
       "language": "eng",
       "sortAs": "Williams, Robbie",
-      "title": "Freedom 90",
       "artistMbids": [
         "db4624cf-0e44-481e-a9dc-2142b833ec2f"
       ],
@@ -42587,7 +42576,7 @@
       "postId": 49485,
       "language": "eng",
       "sortAs": "Summer, Donna",
-      "title": "MacArthur Park",
+      "title": "McArthur Park",
       "artistMbids": [
         "b60527cc-54f3-4bbe-a01b-dcf34c95ae14"
       ],
@@ -42740,7 +42729,7 @@
       "postId": 47903,
       "language": "eng",
       "sortAs": "Bridges, Alicia",
-      "title": "I Love the Nightlife",
+      "title": "I Love the Nightlife (Disco Round)",
       "artistMbids": [
         "e18709d6-dcd1-4db2-9c4c-0d8d1d431ab6"
       ],
@@ -42896,7 +42885,7 @@
       "language": "eng",
       "artist": "Hank Williams, Jr.",
       "sortAs": "Williams, Hank, Jr.",
-      "title": "Your Cheatin’ Heart",
+      "title": "Your Cheating Heart",
       "artistMbids": [
         "1d8010a0-b642-4c8f-9c8d-8dc66b7bb81a"
       ],
@@ -43022,7 +43011,7 @@
       "postId": 53573,
       "language": "eng",
       "sortAs": "Nelson, Willie",
-      "title": "Mammas Don’t Let Your Babies Grow Up to Be Cowboys",
+      "title": "Mama Don't Let Your Babies Grow Up to Be Cowboys",
       "artistMbids": [
         "668fd73c-bf54-4310-a139-305517f05311"
       ],
@@ -44076,7 +44065,7 @@
       "language": "eng",
       "artist": "Bob Marley & The Wailers",
       "sortAs": "Marley, Bob & The Wailers",
-      "title": "Talkin’ Blues",
+      "title": "Talking Blues",
       "artistMbids": [
         "c296e10c-110a-4103-9e77-47bfebb7fb2e"
       ],
@@ -46969,7 +46958,7 @@
       "postId": 49475,
       "language": "eng",
       "sortAs": "Henley, Don",
-      "title": "The Boys of Summer",
+      "title": "Boys of Summer",
       "artistMbids": [
         "b2c2d4fe-8c1e-44ec-8be6-ff500e105a90"
       ],
@@ -47058,7 +47047,7 @@
       "postId": 48960,
       "language": "eng",
       "sortAs": "De Burgh, Chris",
-      "title": "The Lady in Red",
+      "title": "Lady in Red",
       "artistMbids": [
         "0c2d1de8-fc3a-4ca9-a90b-eea69a5968a5"
       ],
@@ -47545,7 +47534,7 @@
       "language": "eng",
       "artist": "KISS",
       "sortAs": "KISS",
-      "title": "God Gave Rock ’n’ Roll to You II",
+      "title": "God Gave Rock and Roll to You",
       "artistMbids": [
         "e1f1e33e-2e4c-4d43-b91b-7064068d3283"
       ],
@@ -49063,7 +49052,7 @@
       "postId": 48505,
       "language": "eng",
       "sortAs": "Seger, Bob",
-      "title": "Old Time Rock & Roll",
+      "title": "Old Time Rock and Roll",
       "artistMbids": [
         "4382b934-64c3-47ac-98db-65f26d845c48"
       ],
@@ -49852,7 +49841,7 @@
       "postId": 49756,
       "language": "eng",
       "sortAs": "Presley, Elvis",
-      "title": "(Let Me Be Your) Teddy Bear",
+      "title": "Teddy Bear",
       "artistMbids": [
         "01809552-4f87-45b0-afff-2c6f0730a3be"
       ],
@@ -50101,7 +50090,7 @@
       "language": "eng",
       "artist": "Gladys Knight & the Pips",
       "sortAs": "Knight, Gladys & the Pips",
-      "title": "Neither One of Us (Wants to Be the First to Say Goodbye)",
+      "title": "Neither One of Us",
       "artistMbids": [
         "ca825016-f7fd-4ccf-a523-6ee36ea88828"
       ],
@@ -51336,7 +51325,7 @@
       "postId": 51578,
       "language": "eng",
       "sortAs": "McFly",
-      "title": "5 Colours in Her Hair",
+      "title": "Five Colours in Her Hair",
       "artistMbids": [
         "72d3dc3f-3984-42b9-89de-42d6eeb1abf3"
       ],
@@ -52763,7 +52752,7 @@
       "language": "eng",
       "artist": "Ms. Lauryn Hill",
       "sortAs": "Hill, Lauryn",
-      "title": "Can’t Take My Eyes Off You",
+      "title": "Can’t Take My Eyes Off of You",
       "artistMbids": [
         "e8414012-4a1c-4ad4-be5e-fc55294e28cc"
       ],
@@ -52808,7 +52797,7 @@
       "language": "eng",
       "artist": "Jay-Z, Linkin Park",
       "sortAs": "Jay‐Z",
-      "title": "Encore",
+      "title": "Numb / Encore",
       "artistMbids": [
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
         "f59c5520-5f46-4d2c-b2c4-822eabf53419"
@@ -55915,7 +55904,7 @@
       "postId": 49829,
       "language": "eng",
       "sortAs": "Iglesias, Enrique",
-      "title": "Only You",
+      "title": "Only You (Solo en ti)",
       "artistMbids": [
         "35f866dc-c061-48ba-8157-cf2e0eac4857"
       ],
@@ -56431,7 +56420,7 @@
       "postId": 49385,
       "language": "eng",
       "sortAs": "Warwick, Dionne",
-      "title": "(Theme from) Valley of the Dolls",
+      "title": "Valley of the Dolls",
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
@@ -56453,7 +56442,7 @@
       "postId": 49386,
       "language": "eng",
       "sortAs": "Warwick, Dionne",
-      "title": "This Guy’s in Love With You",
+      "title": "This Girl Is in Love With You",
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
@@ -56520,7 +56509,7 @@
       "postId": 49206,
       "language": "eng",
       "sortAs": "Lauper, Cyndi",
-      "title": "True Colors",
+      "title": "True Colours",
       "artistMbids": [
         "7bd9e20e-74b9-446a-a2ed-a223f82a36e7"
       ],
@@ -57840,7 +57829,7 @@
       "postId": 51327,
       "language": "eng",
       "sortAs": "Reed, Lou",
-      "title": "Caroline Says I",
+      "title": "Caroline Says",
       "artistMbids": [
         "9d1ebcfe-4c15-4d18-95d3-d919898638a1"
       ],
@@ -59458,7 +59447,7 @@
       "language": "eng",
       "artist": "The Pussycat Dolls",
       "sortAs": "Pussycat Dolls, The",
-      "title": "Hush Hush; Hush Hush",
+      "title": "Hush Hush",
       "artistMbids": [
         "1fda852b-92e9-4562-82fa-c52820a77b23"
       ],
@@ -59590,7 +59579,7 @@
       "postId": 51580,
       "language": "eng",
       "sortAs": "McFly",
-      "title": "I’ll Be OK",
+      "title": "I’ll Be Okay",
       "artistMbids": [
         "72d3dc3f-3984-42b9-89de-42d6eeb1abf3"
       ],
@@ -60226,7 +60215,7 @@
       "postId": 52413,
       "language": "eng",
       "sortAs": "Springfield, Rick",
-      "title": "Love Is Alright Tonite",
+      "title": "Love Is Alright Tonight",
       "artistMbids": [
         "88543892-2eef-4a6a-a84c-5b8502b80421"
       ],
@@ -61380,7 +61369,7 @@
       "postId": 50818,
       "language": "eng",
       "sortAs": "Journey",
-      "title": "Separate Ways (Worlds Apart)",
+      "title": "Separate Ways",
       "artistMbids": [
         "abd506e1-6f2b-4d6f-b937-92c267f6f88b"
       ],
@@ -62106,7 +62095,7 @@
       "language": "eng",
       "artist": "Gwen Stefani, Akon",
       "sortAs": "Stefani, Gwen",
-      "title": "The Sweet Escape",
+      "title": "Sweet Escape",
       "artistMbids": [
         "2e41ae9c-afd2-4f20-8f1e-17281ce9b472",
         "1138a764-2212-4d0a-b02d-0dc14df91e08"
@@ -62583,7 +62572,7 @@
       "postId": 52604,
       "language": "eng",
       "sortAs": "Cooke, Sam",
-      "title": "Twistin’ the Night Away",
+      "title": "Twisting the Night Away",
       "artistMbids": [
         "6c8fd0be-d961-454c-aee0-4366a6dbc993"
       ],
@@ -64785,7 +64774,7 @@
       "postId": 48470,
       "language": "eng",
       "sortAs": "Dylan, Bob",
-      "title": "Hard Rain’s A‐Gonna Fall",
+      "title": "A Hard Rain’s A‐Gonna Fall",
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
@@ -65808,7 +65797,7 @@
       "postId": 48676,
       "language": "eng",
       "sortAs": "Springsteen, Bruce",
-      "title": "Dead Man Walkin’",
+      "title": "Dead Man Walking",
       "artistMbids": [
         "70248960-cb53-4ea4-943a-edb18f7d336f"
       ],
@@ -65997,7 +65986,6 @@
       "postId": 48133,
       "language": "eng",
       "sortAs": "Backstreet Boys",
-      "title": "Everybody (Backstreet’s Back)",
       "artistMbids": [
         "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
       ],
@@ -66888,7 +66876,7 @@
       "postId": 47914,
       "language": "eng",
       "sortAs": "Keys, Alicia",
-      "title": "If I Were Your Woman",
+      "title": "If I Was Your Woman",
       "artistMbids": [
         "8ef1df30-ae4f-4dbd-9351-1a32b208a01e"
       ],
@@ -68217,7 +68205,7 @@
       "postId": 48567,
       "language": "eng",
       "sortAs": "Boston",
-      "title": "Rock & Roll Band",
+      "title": "Rock and Roll Band",
       "artistMbids": [
         "0d8b0d50-e4cf-4da4-965d-f24c58ec3268"
       ],
@@ -69521,7 +69509,7 @@
       "postId": 49778,
       "language": "eng",
       "sortAs": "Eminem",
-      "title": "Cleanin’ Out My Closet",
+      "title": "Cleaning Out My Closet",
       "artistMbids": [
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
       ],
@@ -69762,7 +69750,7 @@
       "postId": 49217,
       "language": "eng",
       "sortAs": "Bedingfield, Daniel",
-      "title": "Gotta Get Thru This",
+      "title": "Gotta Get Through This",
       "artistMbids": [
         "9169bdc6-5725-45ec-bba5-e9df75dbe8cc"
       ],
@@ -71093,7 +71081,6 @@
       "postId": 49781,
       "language": "eng",
       "sortAs": "Eminem",
-      "title": "The Real Slim Shady",
       "artistMbids": [
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
       ],
@@ -72444,7 +72431,6 @@
       "language": "eng",
       "artist": "Manic Street Preachers",
       "sortAs": "Manic Street Preachers",
-      "title": "The Everlasting",
       "artistMbids": [
         "32efea44-6cb5-4b4f-bdaa-c8b8f6cef981"
       ],
@@ -72898,7 +72884,7 @@
       "postId": 51707,
       "language": "eng",
       "sortAs": "Milli Vanilli",
-      "title": "Girl I’m Gonna Miss You",
+      "title": "I’m Gonna Miss You",
       "artistMbids": [
         "d3d83a98-4a2e-433c-903c-5b4c79ccb42e"
       ],
@@ -74818,7 +74804,7 @@
       "postId": 51602,
       "language": "eng",
       "sortAs": "Haggard, Merle",
-      "title": "I Started Loving You Again",
+      "title": "Today I Started Loving You Again",
       "artistMbids": [
         "deb2448c-6fdf-4d31-921e-757630515dbd"
       ],
@@ -74839,7 +74825,7 @@
       "postId": 51965,
       "language": "eng",
       "sortAs": "Newton‐John, Olivia",
-      "title": "Take Me Home, Country Roads",
+      "title": "Country Roads",
       "artistMbids": [
         "10ccb5d8-f9d5-4954-9441-3419b522a214"
       ],
@@ -74905,7 +74891,7 @@
       "postId": 51829,
       "language": "eng",
       "sortAs": "Young, Neil",
-      "title": "Rockin’ in the Free World",
+      "title": "Rocking in the Free World",
       "artistMbids": [
         "75167b8b-44e4-407b-9d35-effe87b223cf"
       ],
@@ -75068,7 +75054,7 @@
       "postId": 50099,
       "language": "eng",
       "sortAs": "Zappa, Frank",
-      "title": "Dancin’ Fool",
+      "title": "Dancing Fool",
       "artistMbids": [
         "e20747e7-55a4-452e-8766-7b985585082d"
       ],
@@ -75159,7 +75145,7 @@
       "postId": 49891,
       "language": "eng",
       "sortAs": "Cassidy, Eva",
-      "title": "True Colors",
+      "title": "True Colours",
       "artistMbids": [
         "6f2dfabb-f0bb-4801-a392-592489a148e7"
       ],
@@ -75273,7 +75259,7 @@
       "postId": 48863,
       "language": "eng",
       "sortAs": "Dion, Céline",
-      "title": "Beautiful Boy (Darling Boy)",
+      "title": "Beautiful Boy",
       "artistMbids": [
         "847e8a0c-cc20-4213-9e16-975515c2a926"
       ],
@@ -75843,7 +75829,7 @@
       "postId": 51345,
       "language": "eng",
       "sortAs": "Loverboy",
-      "title": "The Kid Is Hot Tonite",
+      "title": "The Kid Is Hot Tonight",
       "artistMbids": [
         "c11ba128-03b1-404d-ae88-452524b7ecc3"
       ],
@@ -76329,7 +76315,7 @@
       "postId": 47936,
       "artist": "The Allman Brothers Band",
       "sortAs": "Allman Brothers Band, The",
-      "title": "Ain’t Wastin’ Time No More",
+      "title": "Ain’t Wasting Time No More",
       "artistMbids": [
         "72359492-22be-4ed9-aaa0-efa434fb2b01"
       ],
@@ -76375,7 +76361,7 @@
       "postId": 48508,
       "language": "eng",
       "sortAs": "Seger, Bob",
-      "title": "The Fire Down Below",
+      "title": "Fire Down Below",
       "artistMbids": [
         "4382b934-64c3-47ac-98db-65f26d845c48"
       ],
@@ -76438,7 +76424,7 @@
       "postId": 49850,
       "language": "eng",
       "sortAs": "Clapton, Eric",
-      "title": "Don’t Think Twice, It’s All Right",
+      "title": "Don’t Think Twice, It’s Alright",
       "artistMbids": [
         "618b6900-0618-4f1e-b835-bccb17f84294"
       ],
@@ -76852,7 +76838,7 @@
       "postId": 53601,
       "language": "eng",
       "sortAs": "Zager & Evans",
-      "title": "In the Year 2525 (Exordium and Terminus)",
+      "title": "In the Year 2525",
       "artistMbids": [
         "8fda69dc-1c26-4a75-8097-f9f8ed210878"
       ],
@@ -76918,7 +76904,7 @@
       "postId": 52731,
       "language": "eng",
       "sortAs": "Twain, Shania",
-      "title": "The Woman in Me (Needs the Man in You)",
+      "title": "The Woman in Me",
       "artistMbids": [
         "faabb55d-3c9e-4c23-8779-732ac2ee2c0d"
       ],
@@ -77054,7 +77040,7 @@
       "postId": 52737,
       "language": "eng",
       "sortAs": "Twain, Shania",
-      "title": "Don’t Be Stupid (You Know I Love You)",
+      "title": "Don’t Be Stupid",
       "artistMbids": [
         "faabb55d-3c9e-4c23-8779-732ac2ee2c0d"
       ],
@@ -77740,7 +77726,7 @@
       "postId": 48207,
       "language": "eng",
       "sortAs": "White, Barry",
-      "title": "I’m Gonna Love You Just a Little More Babe",
+      "title": "I’m Gonna Love You Just a Little Bit More Baby",
       "artistMbids": [
         "b904d624-9e05-4398-8f4f-88fbcf022f79"
       ],
@@ -77763,7 +77749,7 @@
       "postId": 48208,
       "language": "eng",
       "sortAs": "White, Barry",
-      "title": "It's Ecstasy When You Lay Down Next to Me",
+      "title": "It’s Ecstacy When You Lay Down Next to Me",
       "artistMbids": [
         "b904d624-9e05-4398-8f4f-88fbcf022f79"
       ],
@@ -77992,7 +77978,7 @@
       "postId": 53187,
       "language": "eng",
       "sortAs": "Who, The",
-      "title": "Getting in Tune",
+      "title": "Gettin' in Tune",
       "artistMbids": [
         "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
       ],
@@ -78363,7 +78349,7 @@
       "language": "eng",
       "artist": "The Doobie Brothers",
       "sortAs": "Doobie Brothers, The",
-      "title": "China Grove",
+      "title": "China Groove",
       "artistMbids": [
         "588dea29-eea3-456b-a815-3ee04f75c8e7"
       ],
@@ -79385,7 +79371,7 @@
       "language": "eng",
       "artist": "The Everly Brothers",
       "sortAs": "Everly Brothers, The",
-      "title": "(’Til) I Kissed You",
+      "title": "(’Till) I Kissed You",
       "artistMbids": [
         "091ec508-877f-4e3c-92a3-10903bbbc7ad"
       ],
@@ -80016,7 +80002,7 @@
       "language": "eng",
       "artist": "David Essex",
       "sortAs": "Essex, David",
-      "title": "Pippin: Corner of the Sky",
+      "title": "Corner of the Sky",
       "artistMbids": [
         "822e180a-061a-4da0-a1f3-35e8bdf5f240"
       ],
@@ -80039,7 +80025,7 @@
       "language": "eng",
       "artist": "Mitzi Gaynor",
       "sortAs": "Gaynor, Mitzi",
-      "title": "I’m Gonna Wash That Man Right Outa My Hair",
+      "title": "I'm Gonna Wash That Man Right Out of My Hair",
       "artistMbids": [
         "d5500491-0676-4fa1-ba88-5e4bc0b74449"
       ],
@@ -80580,7 +80566,7 @@
       "postId": 51931,
       "language": "eng",
       "sortAs": "Oasis",
-      "title": "Cigarettes & Alcohol",
+      "title": "Cigarettes and Alcohol",
       "artistMbids": [
         "39ab1aed-75e0-4140-bd47-540276886b60"
       ],
@@ -81319,7 +81305,7 @@
       "postId": 52421,
       "language": "eng",
       "sortAs": "Martin, Ricky",
-      "title": "The Cup of Life",
+      "title": "Cup of Life",
       "artistMbids": [
         "70ea63ea-70dc-4b63-951a-2c249d2b3b0a"
       ],
@@ -81941,7 +81927,7 @@
       "postId": 47866,
       "language": "eng",
       "sortAs": "Morissette, Alanis",
-      "title": "Thank U",
+      "title": "Thank You",
       "artistMbids": [
         "4bdcee62-4902-4773-8cd1-e252e2e31225"
       ],
@@ -82007,7 +81993,7 @@
       "postId": 52765,
       "language": "eng",
       "sortAs": "Crow, Sheryl",
-      "title": "My Favorite Mistake",
+      "title": "My Favourite Mistake",
       "artistMbids": [
         "80ccfede-c258-4575-a7ad-c982e9932e0f"
       ],
@@ -82271,7 +82257,7 @@
       "postId": 52344,
       "language": "eng",
       "sortAs": "Rascal Flatts",
-      "title": "Broken Road",
+      "title": "Bless the Broken Road",
       "artistMbids": [
         "6e0ae159-8449-4262-bba5-18ec87fa529f"
       ],
@@ -82635,7 +82621,7 @@
       "postId": 53198,
       "language": "eng",
       "sortAs": "Thin Lizzy",
-      "title": "Dancing in the Moonlight (It’s Caught Me in Its Spotlight)",
+      "title": "Dancing in the Moonlight",
       "artistMbids": [
         "6a726ac6-019e-455c-8bbb-571a77bed52e"
       ],
@@ -83283,7 +83269,7 @@
       "postId": 51297,
       "language": "eng",
       "sortAs": "Little Eva",
-      "title": "The Loco‐Motion",
+      "title": "Loco‐Motion",
       "artistMbids": [
         "531643e6-b3ba-4c7f-9d0d-f2831dc42317"
       ],
@@ -83615,7 +83601,7 @@
       "postId": 52324,
       "language": "eng",
       "sortAs": "Rainbow",
-      "title": "Since You Been Gone",
+      "title": "Since You’ve Been Gone",
       "artistMbids": [
         "e3cb4543-210f-499a-b0d1-3882c312dfb9"
       ],
@@ -83884,7 +83870,7 @@
       "language": "eng",
       "artist": "Richard O’Brien",
       "sortAs": "O’Brien, Richard",
-      "title": "The Time Warp",
+      "title": "Time Warp",
       "artistMbids": [
         "ff693144-69be-4ec5-9150-cb3c5652e430"
       ],
@@ -84063,7 +84049,7 @@
       "postId": 52099,
       "language": "eng",
       "sortAs": "Pet Shop Boys",
-      "title": "It’s All Right",
+      "title": "It’s Alright",
       "artistMbids": [
         "be540c02-7898-4b79-9acc-c8122c7d9e83"
       ],
@@ -86541,7 +86527,7 @@
       "language": "eng",
       "artist": "Thirty Seconds to Mars",
       "sortAs": "Thirty Seconds to Mars",
-      "title": "The Kill",
+      "title": "The Kill (Rebirth)",
       "artistMbids": [
         "d8354b38-e942-4c89-ba93-29323432abc3"
       ],
@@ -87128,7 +87114,7 @@
       "language": "mul",
       "artist": "Shakira, Freshlyground",
       "sortAs": "Shakira",
-      "title": "Waka Waka",
+      "title": "Waka Waka (This Time for Africa)",
       "artistMbids": [
         "bf24ca37-25f4-4e34-9aec-460b94364cfc",
         "fc318255-d27e-4e85-bfe5-46657eaef734"
@@ -87695,7 +87681,7 @@
       "language": "eng",
       "artist": "Chingy, Snoop Dogg, Ludacris",
       "sortAs": "Chingy",
-      "title": "Holidae In",
+      "title": "Holidae Inn",
       "artistMbids": [
         "2c311e1d-5da3-4ffb-a46e-572981b5849f",
         "f90e8b26-9e52-4669-a5c9-e28529c47894",
@@ -88193,7 +88179,7 @@
       "postId": 53613,
       "language": "eng",
       "sortAs": "ZZ Top",
-      "title": "Gimme All Your Lovin’",
+      "title": "Gimme All Your Loving",
       "artistMbids": [
         "a81259a0-a2f5-464b-866e-71220f2739f1"
       ],
@@ -88961,7 +88947,7 @@
       "postId": 47940,
       "language": "eng",
       "sortAs": "Alphabeat",
-      "title": "10.000 Nights of Thunder",
+      "title": "10,000 Nights",
       "artistMbids": [
         "ce6d5579-1f03-4992-8189-a40f8f0489b0"
       ],
@@ -91462,7 +91448,7 @@
       "postId": 50141,
       "language": "eng",
       "sortAs": "Gates, Gareth",
-      "title": "Anyone of Us",
+      "title": "Anyone of Us (Stupid Mistake)",
       "artistMbids": [
         "32b81271-e4e7-4ee0-a095-63c7bdac69b8"
       ],
@@ -91703,7 +91689,7 @@
       "language": "eng",
       "artist": "Dr. Dre, Eminem",
       "sortAs": "Dre, Dr.",
-      "title": "Forgot About Dre",
+      "title": "Forget About Dre",
       "artistMbids": [
         "5f6ab597-f57a-40da-be9e-adad48708203",
         "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
@@ -93660,7 +93646,7 @@
       "language": "eng",
       "artist": "The Stone Roses",
       "sortAs": "Stone Roses, The",
-      "title": "She Bangs the Drums",
+      "title": "She Bangs the Drum",
       "artistMbids": [
         "b5fa29f1-6c22-4321-a488-b5f363b06b06"
       ],
@@ -93749,7 +93735,7 @@
       "postId": 50152,
       "language": "eng",
       "sortAs": "Moore, Gary",
-      "title": "Still Got the Blues (for You)",
+      "title": "Still Got the Blues",
       "artistMbids": [
         "a8806b5c-3ee0-4277-94d3-1a5427a7707c"
       ],
@@ -94053,7 +94039,7 @@
       "postId": 49203,
       "language": "eng",
       "sortAs": "Cutting Crew",
-      "title": "(I Just) Died in Your Arms",
+      "title": "(I Just) Died in Your Arms Tonight",
       "artistMbids": [
         "2aa79fa9-7ac0-443b-b250-18d67227a1cb"
       ],
@@ -95338,7 +95324,7 @@
       "language": "eng",
       "artist": "10cc",
       "sortAs": "10cc",
-      "title": "Feel the Love - Oomachasaooma",
+      "title": "Feel the Love",
       "artistMbids": [
         "f37c537b-3557-4031-bfd6-ab63ced32854"
       ],
@@ -95813,7 +95799,7 @@
       "language": "eng",
       "artist": "Ani DiFranco, Lost Bayou Ramblers, The Roots of Music",
       "sortAs": "DiFranco, Ani",
-      "title": "Little Plastic Castle",
+      "title": "Little Plastic Castles",
       "artistMbids": [
         "a7bdc71f-697a-45d9-92b2-a01fbbe50272",
         "ced874ac-f431-4f88-8e79-ed521b91cdef",
@@ -96469,7 +96455,7 @@
       "postId": 48194,
       "language": "eng",
       "sortAs": "Manilow, Barry",
-      "title": "I Want to Do It With You",
+      "title": "I Wanna Do It With You",
       "artistMbids": [
         "7bb60591-46f3-4147-b692-1814a87e832e"
       ],
@@ -96946,7 +96932,6 @@
       "postId": 48426,
       "language": "eng",
       "sortAs": "Bloodhound Gang",
-      "title": "The Ballad of Chasey Lain",
       "artistMbids": [
         "b2dbfc09-b332-408b-a235-1850e41971c5"
       ],
@@ -97478,7 +97463,7 @@
       "postId": 48648,
       "language": "eng",
       "sortAs": "Spears, Britney",
-      "title": "If U Seek Amy",
+      "title": "If You Seek Amy",
       "artistMbids": [
         "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
       ],
@@ -98872,7 +98857,7 @@
       "postId": 49070,
       "language": "eng",
       "sortAs": "Twitty, Conway",
-      "title": "I See the Want in Your Eyes",
+      "title": "I See the Want to in Your Eyes",
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
@@ -98893,7 +98878,7 @@
       "postId": 49071,
       "language": "eng",
       "sortAs": "Twitty, Conway",
-      "title": "Hello Darlin’",
+      "title": "Hello Darling",
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
@@ -98935,7 +98920,7 @@
       "postId": 49073,
       "language": "eng",
       "sortAs": "Twitty, Conway",
-      "title": "I’d Just Love to Lay You Down",
+      "title": "I’d Love to Lay You Down",
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
@@ -100017,7 +100002,7 @@
       "postId": 49256,
       "language": "eng",
       "sortAs": "Ruffin, David",
-      "title": "I’m Gonna Walk Away From Love",
+      "title": "Walk Away From Love",
       "artistMbids": [
         "3d2ac089-fdc8-4381-a4b5-fcdc7fc36590"
       ],
@@ -101770,7 +101755,7 @@
       "postId": 49600,
       "language": "eng",
       "sortAs": "Eagles",
-      "title": "Lyin’ Eyes",
+      "title": "Lyin' Eyes",
       "artistMbids": [
         "f46bd570-5768-462e-b84c-c7c993bbf47e"
       ],
@@ -101792,7 +101777,6 @@
       "postId": 49698,
       "language": "eng",
       "sortAs": "John, Elton",
-      "title": "Rocket Man (I Think It’s Going to Be a Long, Long Time)",
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
@@ -101973,7 +101957,6 @@
       "postId": 49706,
       "language": "eng",
       "sortAs": "John, Elton",
-      "title": "Little Jeannie",
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
@@ -103419,7 +103402,7 @@
       "postId": 50203,
       "language": "eng",
       "sortAs": "Strait, George",
-      "title": "Love Bug",
+      "title": "The Love Bug",
       "artistMbids": [
         "5ab2cf34-517e-48eb-b3a5-34e1cbcd600a"
       ],
@@ -105738,7 +105721,7 @@
       "postId": 51055,
       "language": "eng",
       "sortAs": "Wells, Kitty",
-      "title": "Making Believe",
+      "title": "Makin' Believe",
       "artistMbids": [
         "5a5eeab3-e4b7-42e9-8ae9-b90eeb210b96"
       ],
@@ -107480,7 +107463,7 @@
       "language": "eng",
       "artist": "Mike + the Mechanics",
       "sortAs": "Mike + the Mechanics",
-      "title": "Silent Running (On Dangerous Ground)",
+      "title": "Silent Running",
       "artistMbids": [
         "a04e09c8-733c-4430-9e22-99ef9dd5e2d7"
       ],
@@ -108619,7 +108602,7 @@
       "postId": 52233,
       "language": "eng",
       "sortAs": "Prince",
-      "title": "Alphabet St.",
+      "title": "Alphabet Street",
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e"
       ],
@@ -108642,7 +108625,7 @@
       "postId": 52234,
       "language": "eng",
       "sortAs": "Prince",
-      "title": "Sign “☮︎” the Times",
+      "title": "Sign o’ the Times",
       "artistMbids": [
         "070d193a-845c-479f-980e-bef15710653e"
       ],
@@ -108770,7 +108753,7 @@
       "language": "eng",
       "artist": "David Arnold, Pulp",
       "sortAs": "Arnold, David",
-      "title": "All Time High (Main Titles)",
+      "title": "All Time High",
       "artistMbids": [
         "b753584a-3664-46f8-bb84-f6deed133c80",
         "76b2e842-5e85-4c97-ab62-d5bc315595b5"
@@ -108797,7 +108780,7 @@
       "postId": 52253,
       "language": "eng",
       "sortAs": "Pulp",
-      "title": "Sorted for E’s & Wizz",
+      "title": "Sorted for E’s and Wizz",
       "artistMbids": [
         "76b2e842-5e85-4c97-ab62-d5bc315595b5"
       ],
@@ -109170,7 +109153,7 @@
       "postId": 52308,
       "language": "eng",
       "sortAs": "Radical Face",
-      "title": "Welcome Home, Son",
+      "title": "Welcome Home",
       "artistMbids": [
         "6c25514f-1f14-4106-a142-be95ba11f117"
       ],
@@ -109538,7 +109521,7 @@
       "language": "eng",
       "artist": "R.E.M.",
       "sortAs": "R.E.M.",
-      "title": "It’s the End of the World as We Know It (and I Feel Fine)",
+      "title": "It’s the End of the World as We Know It",
       "artistMbids": [
         "ea4dfa26-f633-4da6-a52a-f49ea4897b58"
       ],
@@ -109680,7 +109663,7 @@
       "postId": 52512,
       "language": "eng",
       "sortAs": "Robyn",
-      "title": "Do You Really Want Me (Show Respect)",
+      "title": "Do You Really Want Me",
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
@@ -111424,7 +111407,7 @@
       "postId": 53147,
       "language": "eng",
       "sortAs": "Isley Brothers, The",
-      "title": "Fight the Power",
+      "title": "Fight the Power, Parts 1 & 2",
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
@@ -111885,7 +111868,6 @@
       "postId": 53393,
       "artist": "Ulf Lundell, Nature",
       "sortAs": "Lundell, Ulf",
-      "title": "Sextisju sextisju",
       "artistMbids": [
         "8612924d-2946-49e1-970f-ef1c36517428",
         "c24a2043-23a8-427f-9515-8ec0d74640d3"
@@ -114091,7 +114073,7 @@
       "language": "eng",
       "artist": "Huey Lewis and the News",
       "sortAs": "Lewis, Huey and the News",
-      "title": "The Power of Love",
+      "title": "Power of Love",
       "artistMbids": [
         "2be6ae30-d220-4419-80da-2a46813ed872"
       ],
@@ -116704,7 +116686,7 @@
       "postId": 52276,
       "language": "eng",
       "sortAs": "Queen",
-      "title": "Flash",
+      "title": "Flash’s Theme",
       "artistMbids": [
         "0383dadf-2a4e-4d10-a46a-e9e041da8eb3"
       ],
@@ -116894,7 +116876,7 @@
       "postId": 52494,
       "language": "eng",
       "sortAs": "Palmer, Robert",
-      "title": "Bad Case of Lovin’ You",
+      "title": "Bad Case of Lovin’ You (Doctor, Doctor)",
       "artistMbids": [
         "96b1d906-0fda-406d-beb6-19c6758998df"
       ],
@@ -117117,7 +117099,6 @@
       "postId": 52770,
       "language": "eng",
       "sortAs": "Bassey, Shirley",
-      "title": "This Is My Life (La vita)",
       "artistMbids": [
         "05ec70a5-3858-4346-a649-fda0a297b8c1"
       ],
@@ -117857,7 +117838,7 @@
       "language": "eng",
       "artist": "The Weeknd",
       "sortAs": "Weeknd, The",
-      "title": "Can’t Feel My Face",
+      "title": "I Can’t Feel My Face",
       "artistMbids": [
         "c8b03190-306c-4120-bb0b-6f2ebfc06ea9"
       ],
@@ -118519,7 +118500,6 @@
       "postId": 48345,
       "language": "eng",
       "sortAs": "Bragg, Billy",
-      "title": "A New England",
       "artistMbids": [
         "7cec4a03-0a83-4308-856a-afb8aa5db0fc"
       ],
@@ -120758,7 +120738,6 @@
       "postId": 52799,
       "language": "eng",
       "sortAs": "Skunk Anansie",
-      "title": "Hedonism (Just Because You Feel Good)",
       "artistMbids": [
         "e212efdf-98b2-4dce-92ed-62cfc1e29854"
       ],
@@ -121277,7 +121256,7 @@
       "postId": 53563,
       "language": "eng",
       "sortAs": "Smith, Will",
-      "title": "The Fresh Prince of Bel-Air",
+      "title": "Fresh Prince Of Bel-Air",
       "artistMbids": [
         "5bae7081-64ef-4473-825a-38d310deb14c"
       ],
@@ -121299,7 +121278,7 @@
       "postId": 53564,
       "language": "eng",
       "sortAs": "Smith, Will",
-      "title": "Gettin’ Jiggy Wit It",
+      "title": "Gettin’ Jiggy With It",
       "artistMbids": [
         "5bae7081-64ef-4473-825a-38d310deb14c"
       ],
@@ -122016,7 +121995,7 @@
       "language": "eng",
       "artist": "Verna Felton",
       "sortAs": "Felton, Verna",
-      "title": "Bibbidi‐Bobbidi‐Boo",
+      "title": "Bibbidi-Bobbidi-Boo",
       "artistMbids": [
         "9d053b32-5de6-4d1a-9ce2-d01fe74ff5f1"
       ],
@@ -124782,7 +124761,7 @@
       "language": "mul",
       "artist": "Ed Sheeran",
       "sortAs": "Sheeran, Ed",
-      "title": "I Don’t Care (Chronixx & Koffee remix)",
+      "title": "I Don't Care",
       "artistMbids": [
         "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
       ],
@@ -126148,7 +126127,7 @@
       "postId": 49097,
       "language": "swe",
       "sortAs": "Vreeswijk, Cornelis",
-      "title": "Deirdres samba",
+      "title": "Deidres samba",
       "artistMbids": [
         "ca264abf-3eb6-4d53-827b-6ab16988a4a3"
       ],
@@ -126952,7 +126931,7 @@
       "language": "eng",
       "artist": "Roy Orbison",
       "sortAs": "Orbison, Roy",
-      "title": "Dream Baby (How Long Must I Dream)",
+      "title": "Dream Baby",
       "artistMbids": [
         "0bbbc496-c7b5-4b3f-bb6d-bd312827d6e5"
       ],
@@ -127086,7 +127065,7 @@
       "postId": 53447,
       "language": "eng",
       "sortAs": "Vengaboys",
-      "title": "We Like to Party! (The Vengabus)",
+      "title": "We Like to Party",
       "artistMbids": [
         "90c7177f-4be5-413d-aabd-d228934c2b9b"
       ],
@@ -127152,7 +127131,7 @@
       "language": "eng",
       "artist": "Modern Talking",
       "sortAs": "Modern Talking",
-      "title": "You’re My Heart, You’re My Soul",
+      "title": "You're My Heart",
       "artistMbids": [
         "98913495-8867-43b3-aa8d-db88ee4d4cdc"
       ],
@@ -127817,7 +127796,6 @@
       "language": "eng",
       "artist": "The Doors",
       "sortAs": "Doors, The",
-      "title": "The Crystal Ship",
       "artistMbids": [
         "9efff43b-3b29-4082-824e-bc82f646f93d"
       ],
@@ -128174,7 +128152,7 @@
       "language": "eng",
       "artist": "Fall Out Boy",
       "sortAs": "Fall Out Boy",
-      "title": "Little Less Sixteen Candles, a Little More “Touch Me”",
+      "title": "A Little Less Sixteen Candles, a Little More “Touch Me”",
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
@@ -129284,7 +129262,7 @@
       "postId": 52330,
       "language": "eng",
       "sortAs": "Ramones",
-      "title": "Pet Sematary",
+      "title": "Pet Semetary",
       "artistMbids": [
         "d6ed7887-a401-47a8-893c-34b967444d26"
       ],
@@ -129782,7 +129760,7 @@
       "postId": 49483,
       "language": "eng",
       "sortAs": "Fargo, Donna",
-      "title": "The Happiest Girl in the Whole USA",
+      "title": "The Happiest Girl in the Whole U.S.A.",
       "artistMbids": [
         "9ce777de-7e3f-40fe-8c9e-415955fc49d8"
       ],
@@ -130484,7 +130462,6 @@
       "postId": 48928,
       "language": "eng",
       "sortAs": "Cher",
-      "title": "Believe",
       "artistMbids": [
         "bfcc6d75-a6a5-4bc6-8282-47aec8531818"
       ],
@@ -130815,7 +130792,7 @@
       "language": "eng",
       "artist": "Elton John, Dua Lipa",
       "sortAs": "John, Elton",
-      "title": "Cold Heart (PNAU remix)",
+      "title": "Cold Heart",
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "6f1a58bf-9b1b-49cf-a44a-6cefad7ae04f"

@@ -89,7 +89,17 @@ export function titleKey(value: string): string {
         .replace(/[^a-z0-9]+/g, "");
 }
 
-function editDistance(a: string, b: string): number {
+/**
+ * Fold common title spelling variants so corroboration can recognise the same song:
+ * `How Come U Don't Call Me Anymore` ≈ `How Come You Don't Call Me`.
+ */
+export function titleKeyLoose(value: string): string {
+    return titleKey(value)
+        .replace(/you/g, "u")
+        .replace(/anymore$/, "");
+}
+
+export function editDistance(a: string, b: string): number {
     if (a === b) return 0;
     if (a.length === 0) return b.length;
     if (b.length === 0) return a.length;
@@ -133,6 +143,32 @@ export function workTitleCompatible(recordingTitle: string, workTitle: string): 
 }
 
 /**
+ * Whether two titles name the same song for corroboration — looser than publishing rules,
+ * so `How Come You Don't Call Me` can confirm `How Come U Don't Call Me Anymore`.
+ */
+export function titlesCorroborate(a: string, b: string): boolean {
+    const exactA = titleKey(a);
+    const exactB = titleKey(b);
+    if (exactA.length === 0 || exactB.length === 0) return false;
+    if (exactA === exactB) return true;
+    if (exactA.includes(exactB) || exactB.includes(exactA)) {
+        const shorter = exactA.length <= exactB.length ? exactA : exactB;
+        return shorter.length >= Math.min(8, Math.max(4, Math.floor(Math.max(exactA.length, exactB.length) * 0.45)));
+    }
+
+    const looseA = titleKeyLoose(a);
+    const looseB = titleKeyLoose(b);
+    if (looseA === looseB) return true;
+    if (looseA.includes(looseB) || looseB.includes(looseA)) {
+        const shorter = looseA.length <= looseB.length ? looseA : looseB;
+        return shorter.length >= 8;
+    }
+    const distance = editDistance(looseA, looseB);
+    const limit = Math.max(2, Math.floor(Math.min(looseA.length, looseB.length) * 0.25));
+    return distance <= limit;
+}
+
+/**
  * Title to publish: MusicBrainz work title when it is the same song, otherwise the cleaned
  * recording title.
  */
@@ -142,6 +178,14 @@ export function publishedTitle(
 ): { title: string; from?: string; source: "work" | "recording" } {
     const fromRecording = titleFromRecording(recording);
     if (workTitle !== undefined && workTitleCompatible(recording, workTitle)) {
+        // Same song, different spelling (Prince's `U` / `Anymore` vs Alicia Keys' `You`):
+        // keep the matched recording's form — that is what this artist released.
+        if (
+            titleKey(fromRecording.title) !== titleKey(workTitle) &&
+            titlesCorroborate(fromRecording.title, workTitle)
+        ) {
+            return { ...fromRecording, source: "recording" };
+        }
         return fromRecording.from === undefined
             ? { title: workTitle, source: "work" }
             : { title: workTitle, from: fromRecording.from, source: "work" };

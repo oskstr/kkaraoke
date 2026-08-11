@@ -17,7 +17,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile, unlink } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { parseArgs } from "node:util";
-import { titleKey } from "./lib/song-title.ts";
+import { titleKey, titlesCorroborate } from "./lib/song-title.ts";
 
 interface SongRow {
     postId: number;
@@ -141,72 +141,102 @@ function namesAgree(a: string, b: string): boolean {
 }
 
 interface DeezerResult {
-    data?: { title?: string; artist?: { name?: string } }[];
+    data?: { title?: string; artist?: { name?: string }; album?: { title?: string } }[];
 }
 
 function leadName(artist: string): string {
     return artist.split(/\s+(?:&|and|feat\.?|ft\.?|featuring|with|vs\.?)\s+/i)[0]?.trim() || artist;
 }
 
+/**
+ * Streaming catalogues are full of karaoke/tribute rows that share the song title. Those are
+ * not corroboration of our artist — skip them when picking a hit to compare.
+ */
+const KARAOKE_JUNK =
+    /\b(?:karaoke|tribute|originally performed|made famous|made popular|in the style of|sing[- ]?along|backing track|midi(?:fine)?|party tyme|ameritz|stagesound)\b/i;
+
+function isKaraokeJunk(artist: string, title: string, album?: string): boolean {
+    return KARAOKE_JUNK.test(artist) || KARAOKE_JUNK.test(title) || (album !== undefined && KARAOKE_JUNK.test(album));
+}
+
+/** Title spellings worth trying when the dump/work form is not how Spotify/Deezer file it. */
+function titleQueryVariants(title: string): string[] {
+    const variants = [title];
+    const you = title.replace(/\bU\b/g, "You");
+    const u = title.replace(/\bYou\b/g, "U");
+    const dropAnymore = title.replace(/\s+Anymore\s*$/i, "").trim();
+    const youDrop = you.replace(/\s+Anymore\s*$/i, "").trim();
+    for (const variant of [you, u, dropAnymore, youDrop]) {
+        if (variant.length > 0 && !variants.includes(variant)) variants.push(variant);
+    }
+    return variants;
+}
+
+function artistMatches(hitArtist: string, artist: string, queryArtist: string): boolean {
+    return namesAgree(hitArtist, artist) || namesAgree(hitArtist, queryArtist);
+}
+
 async function checkDeezer(artist: string, title: string): Promise<SourceCheck> {
-    const queries = [artist, leadName(artist)].filter(
+    const artists = [artist, leadName(artist)].filter(
         (name, index, all) => name.length > 0 && all.indexOf(name) === index,
     );
-    let top: { artist?: string; title?: string } | undefined;
+    const titles = titleQueryVariants(title);
+    /** Best non-karaoke miss — never report a karaoke cover as "what Deezer says". */
+    let bestMiss: { artist?: string; title?: string } | undefined;
+
+    const considerMiss = (hitArtist: string, hitTitle: string): void => {
+        if (bestMiss !== undefined) return;
+        bestMiss = { artist: hitArtist, title: hitTitle };
+    };
+
     try {
-        for (const queryArtist of queries) {
-            const q = `artist:"${queryArtist}" track:"${title}"`;
-            const url = `https://api.deezer.com/search?q=${encodeURIComponent(q)}&limit=15`;
-            const body = (await cachedGet(DEEZER_CACHE, url, url, {
-                "user-agent": USER_AGENT,
-            })) as DeezerResult;
-            const hits = body.data ?? [];
-            if (hits[0]?.title !== undefined) {
-                top ??= {
-                    title: hits[0].title,
-                    ...(hits[0].artist?.name === undefined
-                        ? {}
-                        : { artist: hits[0].artist.name }),
-                };
-            }
-            for (const hit of hits) {
-                const hitArtist = hit.artist?.name;
-                const hitTitle = hit.title;
-                if (hitArtist === undefined || hitTitle === undefined) continue;
-                if (
-                    (namesAgree(hitArtist, artist) || namesAgree(hitArtist, queryArtist)) &&
-                    namesAgree(hitTitle, title)
-                ) {
-                    return { ok: true, artist: hitArtist, title: hitTitle };
+        for (const queryArtist of artists) {
+            for (const queryTitle of titles) {
+                const q = `artist:"${queryArtist}" track:"${queryTitle}"`;
+                const url = `https://api.deezer.com/search?q=${encodeURIComponent(q)}&limit=15`;
+                const body = (await cachedGet(DEEZER_CACHE, url, url, {
+                    "user-agent": USER_AGENT,
+                })) as DeezerResult;
+                for (const hit of body.data ?? []) {
+                    const hitArtist = hit.artist?.name;
+                    const hitTitle = hit.title;
+                    if (hitArtist === undefined || hitTitle === undefined) continue;
+                    if (isKaraokeJunk(hitArtist, hitTitle, hit.album?.title)) continue;
+                    if (artistMatches(hitArtist, artist, queryArtist) && titlesCorroborate(hitTitle, title)) {
+                        return { ok: true, artist: hitArtist, title: hitTitle };
+                    }
+                    considerMiss(hitArtist, hitTitle);
                 }
             }
         }
-        // Free-text fallback when the quoted artist/track query is too strict.
-        const fallbackUrl =
-            `https://api.deezer.com/search?q=${encodeURIComponent(`${leadName(artist)} ${title}`)}` +
-            `&limit=15`;
-        const fallback = (await cachedGet(DEEZER_CACHE, fallbackUrl, fallbackUrl, {
-            "user-agent": USER_AGENT,
-        })) as DeezerResult;
-        for (const hit of fallback.data ?? []) {
-            const hitArtist = hit.artist?.name;
-            const hitTitle = hit.title;
-            if (hitArtist === undefined || hitTitle === undefined) continue;
-            top ??= { artist: hitArtist, title: hitTitle };
-            if (
-                (namesAgree(hitArtist, artist) || namesAgree(hitArtist, leadName(artist))) &&
-                namesAgree(hitTitle, title)
-            ) {
-                return { ok: true, artist: hitArtist, title: hitTitle };
+
+        // Free-text fallback with the same junk filter and loose title match.
+        for (const queryTitle of titles) {
+            const fallbackUrl =
+                `https://api.deezer.com/search?q=${encodeURIComponent(`${leadName(artist)} ${queryTitle}`)}` +
+                `&limit=15`;
+            const fallback = (await cachedGet(DEEZER_CACHE, fallbackUrl, fallbackUrl, {
+                "user-agent": USER_AGENT,
+            })) as DeezerResult;
+            for (const hit of fallback.data ?? []) {
+                const hitArtist = hit.artist?.name;
+                const hitTitle = hit.title;
+                if (hitArtist === undefined || hitTitle === undefined) continue;
+                if (isKaraokeJunk(hitArtist, hitTitle, hit.album?.title)) continue;
+                if (artistMatches(hitArtist, artist, leadName(artist)) && titlesCorroborate(hitTitle, title)) {
+                    return { ok: true, artist: hitArtist, title: hitTitle };
+                }
+                considerMiss(hitArtist, hitTitle);
             }
         }
-        if (top?.title !== undefined) {
+
+        if (bestMiss?.title !== undefined) {
             const result: SourceCheck = {
                 ok: false,
-                title: top.title,
-                note: "top Deezer hit did not agree on artist+title",
+                title: bestMiss.title,
+                note: "best non-karaoke Deezer hit did not agree on artist+title",
             };
-            if (top.artist !== undefined) result.artist = top.artist;
+            if (bestMiss.artist !== undefined) result.artist = bestMiss.artist;
             return result;
         }
         return { ok: false, note: "no Deezer song hits" };
