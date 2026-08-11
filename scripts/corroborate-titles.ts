@@ -102,23 +102,36 @@ interface ItunesResult {
     results?: { artistName?: string; trackName?: string }[];
 }
 
+function leadName(artist: string): string {
+    return artist.split(/\s+(?:&|and|feat\.?|ft\.?|featuring|with|vs\.?)\s+/i)[0]?.trim() || artist;
+}
+
 async function checkItunes(artist: string, title: string): Promise<SourceCheck> {
-    const term = `${artist} ${title}`;
-    const url =
-        `https://itunes.apple.com/search?term=${encodeURIComponent(term)}` +
-        `&entity=song&limit=10`;
+    const queries = [artist, leadName(artist)].filter(
+        (name, index, all) => name.length > 0 && all.indexOf(name) === index,
+    );
+    let top: { artistName?: string; trackName?: string } | undefined;
     try {
-        const body = (await cachedGet(ITUNES_CACHE, url, url, {
-            "user-agent": USER_AGENT,
-        })) as ItunesResult;
-        const hits = body.results ?? [];
-        for (const hit of hits) {
-            if (hit.artistName === undefined || hit.trackName === undefined) continue;
-            if (namesAgree(hit.artistName, artist) && namesAgree(hit.trackName, title)) {
-                return { ok: true, artist: hit.artistName, title: hit.trackName };
+        for (const queryArtist of queries) {
+            const term = `${queryArtist} ${title}`;
+            const url =
+                `https://itunes.apple.com/search?term=${encodeURIComponent(term)}` +
+                `&entity=song&limit=15`;
+            const body = (await cachedGet(ITUNES_CACHE, url, url, {
+                "user-agent": USER_AGENT,
+            })) as ItunesResult;
+            const hits = body.results ?? [];
+            top ??= hits[0];
+            for (const hit of hits) {
+                if (hit.artistName === undefined || hit.trackName === undefined) continue;
+                if (
+                    (namesAgree(hit.artistName, artist) || namesAgree(hit.artistName, queryArtist)) &&
+                    namesAgree(hit.trackName, title)
+                ) {
+                    return { ok: true, artist: hit.artistName, title: hit.trackName };
+                }
             }
         }
-        const top = hits[0];
         if (top?.trackName !== undefined) {
             const result: SourceCheck = {
                 ok: false,
