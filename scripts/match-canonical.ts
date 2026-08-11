@@ -145,16 +145,17 @@ function fromAnnotation(recording: string): string | undefined {
 }
 
 /**
- * MusicBrainz often labels the second half of a medley as `Excerpt From 'Song'`. That is
- * cataloguing, not a title — and it is not our `from` field (shows and films). Karaoke
- * wants the song name: `I'm a King Bee / Back Door Man`.
+ * MusicBrainz often tacks the second half of a medley on as ` / Excerpt From 'Song'`.
+ * That is the same kind of annotation as `(from "Ghostbusters")` — catalogue noise, not
+ * the karaoke title — so the whole segment is dropped, not rewritten into a slash title.
  */
 function stripExcerptFromLabels(title: string): string {
-    const cleaned = title.replace(
-        /\bExcerpt From\s+['"“”‘’]?([^'"“”‘’/]+?)['"“”‘’]?(?=\s*\/|\s*$|\s*[([])/gi,
-        "$1",
-    );
-    return cleaned === title ? title : cleaned.replace(/\s+/g, " ").trim();
+    const cleaned = title
+        .replace(/\s*\/\s*Excerpt From\s+['"“”‘’]?[^'"“”‘’/]+['"“”‘’]?/gi, "")
+        .replace(/\bExcerpt From\s+['"“”‘’]?[^'"“”‘’/]+['"“”‘’]?/gi, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    return cleaned.length > 0 ? cleaned : title;
 }
 
 /**

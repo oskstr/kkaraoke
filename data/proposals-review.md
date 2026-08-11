@@ -253,7 +253,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 3443 | Bette Midler | That's the glory of love | Bette Midler | The Glory of Love |  |  | yes | Drop That’s | 48305 |
 | 3446 | Carly Simon | Nobody does it better | Carly Simon | Nobody Does It Better | The Spy Who Loved Me |  | other | James Bond theme | 48771 |
 | 3457 | Ozzy Osbourne & Lita Ford | Close my eyes forever | Lita Ford | Close My Eyes Forever |  |  | yes | with Ozzy | 52003 |
-| 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a King Bee / Back Door Man |  |  | yes | Medley of two songs; drop dump's Excerpt From / live annotation | 50082 |
+| 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a King Bee |  |  | yes | Drop dump Excerpt From / live medley annotation; title is I'm a King Bee | 50082 |
 | 3485 | Genesis | Mirror man | The Human League | Mirror Man |  |  | yes | Not Genesis | 50168 |
 | 3504 | Shania Twain | If you're not in it for love | Shania Twain | (If You’re Not in It for Love) I’m Outta Here! |  |  | yes | Full title | 52729 |
 | 3524 | Ohio | Fire | Ohio Players | Fire |  |  | yes | Ohio is Ohio Players | 51952 |
