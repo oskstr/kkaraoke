@@ -19,6 +19,7 @@ import { parseArgs } from "node:util";
 import type { Artist } from "./fetch-artists.ts";
 import type { Recording } from "./fetch-recordings.ts";
 import type { WorkLink } from "./fetch-works.ts";
+import { publishedTitle } from "./lib/song-title.ts";
 
 interface MatchRecord {
     postId: number;
@@ -274,6 +275,11 @@ async function main(): Promise<void> {
             .filter((work) => work.language !== undefined)
             .map((work) => [work.recordingMbid, work.language!]),
     );
+    const workTitles = new Map(
+        (worksFile?.works ?? [])
+            .filter((work) => work.title !== undefined && work.title.length > 0)
+            .map((work) => [work.recordingMbid, work.title!]),
+    );
     if (worksFile === undefined) {
         console.warn(`No ${values.works} yet, so languages come only from proposals.`);
     }
@@ -471,9 +477,19 @@ async function main(): Promise<void> {
         if (!anonymous && lead?.sortName !== undefined) {
             resolved.sortAs = lead.sortName;
         }
-        // `title` rather than `recording`: the matcher has already dropped a trailing marker
-        // that named one master, so a karaoke track is not published as a club mix.
-        const canonicalTitle = match.title ?? match.recording;
+        // Prefer the MusicBrainz work title when it names the same song as the recording.
+        // Fall back to the matcher's published title, then the recording with only mix /
+        // soundtrack markers dropped.
+        const workTitle =
+            match.recordingMbid === undefined ? undefined : workTitles.get(match.recordingMbid);
+        const fromWork =
+            match.recording === undefined
+                ? undefined
+                : publishedTitle(match.recording, workTitle);
+        const canonicalTitle =
+            fromWork?.source === "work"
+                ? fromWork.title
+                : (match.title ?? fromWork?.title ?? match.recording);
         if (canonicalTitle !== undefined && canonicalTitle !== match.song) {
             resolved.title = canonicalTitle;
             titleFixes++;

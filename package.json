@@ -22,6 +22,7 @@
         "fetch:artists": "node --experimental-strip-types scripts/fetch-artists.ts",
         "fetch:recordings": "node --experimental-strip-types scripts/fetch-recordings.ts",
         "fetch:works": "node --experimental-strip-types scripts/fetch-works.ts",
+        "corroborate:titles": "node --experimental-strip-types scripts/corroborate-titles.ts",
         "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts"
     },
     "dependencies": {

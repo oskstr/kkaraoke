@@ -36,7 +36,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Everybody’s Free"
+      "title": "Everybody’s Free (to Feel Good)"
     },
     {
       "postId": 52186,
@@ -150,7 +150,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Girls Just Wanna Have Fun"
+      "title": "Girls Just Want to Have Fun"
     },
     {
       "postId": 51393,
@@ -305,7 +305,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Give Me Your Life"
+      "title": "Don’t Give Me Your Life"
     },
     {
       "postId": 49603,
@@ -593,7 +593,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "St Elmo's Fire"
+      "title": "St. Elmo’s Fire"
     },
     {
       "postId": 49927,
@@ -674,7 +674,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Woolly Bully"
+      "title": "Wooly Bully"
     },
     {
       "postId": 52492,
@@ -849,7 +849,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Ballroom Blitz"
+      "title": "The Ballroom Blitz"
     },
     {
       "postId": 51921,
@@ -982,7 +982,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "’74‐’75"
+      "title": "’74–’75"
     },
     {
       "postId": 48449,
@@ -1330,7 +1330,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "If I Don’t Have You"
+      "title": "If I Don't Have You"
     },
     {
       "postId": 52643,
@@ -1410,7 +1410,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "No Scrub"
+      "title": "No Scrubs"
     },
     {
       "postId": 48806,
@@ -2377,7 +2377,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'm Gonna Be Alright"
+      "title": "I’m Gonna Be Alright"
     },
     {
       "postId": 51081,
@@ -2454,7 +2454,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It Just Won’t Do"
+      "title": "It Just Won't Do"
     },
     {
       "postId": 51142,
@@ -2532,7 +2532,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "How Come You Don't Call Me Anymore"
+      "title": "How Come U Don’t Call Me Anymore"
     },
     {
       "postId": 49827,
@@ -3145,7 +3145,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Like I Love You (MTV's Making the video - Excerpts)"
+      "title": "Like I Love You"
     },
     {
       "postId": 48066,
@@ -3362,7 +3362,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Let Me Get Me"
+      "title": "Don’t Let Me Get Me"
     },
     {
       "postId": 52243,
@@ -3484,7 +3484,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Boys of Summer"
+      "title": "The Boys of Summer"
     },
     {
       "postId": 49775,
@@ -4383,7 +4383,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Get the Party Started (Ernie's All Night Party Anthem)"
+      "title": "Get the Party Started"
     },
     {
       "postId": 50600,
@@ -4478,7 +4478,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Nothing Falls"
+      "title": "Nothing Fails"
     },
     {
       "postId": 49720,
@@ -4884,7 +4884,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Where Is The Love ?"
+      "title": "Where Is the Love?"
     },
     {
       "postId": 51675,
@@ -5156,7 +5156,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "If Ever You’re in My Arms Again"
+      "title": "If Ever You're in My Arms Again"
     },
     {
       "postId": 48767,
@@ -5251,7 +5251,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Don’t Wanna Live Without Your Love"
+      "title": "I Don't Wanna Live Without Your Love"
     },
     {
       "postId": 50221,
@@ -5515,14 +5515,14 @@
       "artistMbids": [
         "7944ed53-2a58-4035-9b93-140a71e41c34"
       ],
-      "recording": "Every Breath You Take",
-      "recordingMbid": "8cc91524-bea0-4d66-9b17-af25c43ef476",
-      "release": "Live (Unapproved)",
-      "score": 887662,
-      "how": "exact",
+      "recording": "Every Breath You Take (feat. Orchestra) (2010)",
+      "recordingMbid": "d336d45c-9339-4c39-a56e-caa0958c6113",
+      "release": "Mercedes-Benz Signature Sound",
+      "score": 5604824,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Every Breath You Take"
+      "trusted": false,
+      "title": "Every Breath You Take (feat. Orchestra) (2010)"
     },
     {
       "postId": 50776,
@@ -5908,7 +5908,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "If We Hold on Together"
+      "title": "If We Hold On Together"
     },
     {
       "postId": 53439,
@@ -6194,7 +6194,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'll Be There"
+      "title": "I’ll Be There"
     },
     {
       "postId": 51795,
@@ -6369,7 +6369,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "What’s Up"
+      "title": "What’s Up?"
     },
     {
       "postId": 51461,
@@ -6958,7 +6958,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Come in Out of the Rain"
+      "title": "Come In Out of the Rain"
     },
     {
       "postId": 48810,
@@ -7053,7 +7053,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can You Stop the Rain"
+      "title": "Can’t Stop the Rain"
     },
     {
       "postId": 49270,
@@ -7091,7 +7091,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lean On Me"
+      "title": "Lean on Me"
     },
     {
       "postId": 47935,
@@ -7281,7 +7281,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'll Remember"
+      "title": "I’ll Remember"
     },
     {
       "postId": 52063,
@@ -7416,7 +7416,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ll Never Fall in Love Again (It Looks Like)"
+      "title": "I’ll Never Fall in Love Again"
     },
     {
       "postId": 48236,
@@ -7582,7 +7582,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Can't Buy Me Love"
+      "title": "Can’t Buy Me Love"
     },
     {
       "postId": 48244,
@@ -7624,7 +7624,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "You’re Going to Loose That Girl"
+      "title": "You’re Going to Lose That Girl"
     },
     {
       "postId": 48246,
@@ -7727,7 +7727,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Long And Winding Road"
+      "title": "The Long and Winding Road"
     },
     {
       "postId": 48251,
@@ -7748,7 +7748,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Ticket To Ride"
+      "title": "Ticket to Ride"
     },
     {
       "postId": 48252,
@@ -7893,7 +7893,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "With A Little Help From My Friends"
+      "title": "With a Little Help From My Friends"
     },
     {
       "postId": 48259,
@@ -7956,7 +7956,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Don't Let Me Down"
+      "title": "Don’t Let Me Down"
     },
     {
       "postId": 48262,
@@ -8268,7 +8268,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Un‐Break My Heart"
+      "title": "Un-Break My Heart"
     },
     {
       "postId": 48826,
@@ -8385,7 +8385,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Tonight I Celebrate My Love"
+      "title": "Tonight, I Celebrate My Love"
     },
     {
       "postId": 48743,
@@ -8598,7 +8598,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Every Time You Go Away"
+      "title": "Everytime You Go Away"
     },
     {
       "postId": 49685,
@@ -8928,7 +8928,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can You Feel the Love Tonight?"
+      "title": "Can You Feel the Love Tonight"
     },
     {
       "postId": 48072,
@@ -9004,7 +9004,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Loving You"
+      "title": "Lovin’ You"
     },
     {
       "postId": 50838,
@@ -9064,7 +9064,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Oops!...I Did It Again"
+      "title": "Oops!…I Did It Again"
     },
     {
       "postId": 48828,
@@ -9102,7 +9102,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Against All Odds"
+      "title": "Against All Odds (Take a Look at Me Now)"
     },
     {
       "postId": 50631,
@@ -9469,7 +9469,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "I'm Easy"
+      "title": "I’m Easy"
     },
     {
       "postId": 51157,
@@ -9568,7 +9568,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can't Take My Eyes Off You"
+      "title": "Can’t Take My Eyes Off You"
     },
     {
       "postId": 51262,
@@ -9607,7 +9607,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "You Are the Love of My Life"
+      "title": "(You Are the) Love of My Life"
     },
     {
       "postId": 49189,
@@ -10222,7 +10222,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Temple of the King"
+      "title": "The Temple of the King"
     },
     {
       "postId": 51806,
@@ -10396,7 +10396,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Beauty And The Beast (美女與野獸)"
+      "title": "Beauty and the Beast"
     },
     {
       "postId": 52124,
@@ -10668,7 +10668,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Said I Love You… but I Lied"
+      "title": "Said I Loved You… but I Lied"
     },
     {
       "postId": 51628,
@@ -10803,7 +10803,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Don't Cry For Me Argentina"
+      "title": "Don’t Cry for Me Argentina"
     },
     {
       "postId": 51401,
@@ -11098,7 +11098,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "He Ain’t Heavy He’s My Brother"
+      "title": "He Ain’t Heavy, He’s My Brother"
     },
     {
       "postId": 51566,
@@ -11576,7 +11576,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hold on to the Night"
+      "title": "Hold On to the Nights"
     },
     {
       "postId": 52396,
@@ -12345,7 +12345,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Till mitt eget Blue Hawaii"
+      "title": "Mitt eget blue Hawaii"
     },
     {
       "postId": 51630,
@@ -12460,7 +12460,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Easy Lover (fade)"
+      "title": "Easy Lover"
     },
     {
       "postId": 53535,
@@ -12928,7 +12928,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hey Baby"
+      "title": "Hey! Baby"
     },
     {
       "postId": 53105,
@@ -13004,7 +13004,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Mundian to bach ke"
+      "title": "Mundian To Bach Ke"
     },
     {
       "postId": 52838,
@@ -13061,7 +13061,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Aicha"
+      "title": "Aïcha"
     },
     {
       "postId": 51518,
@@ -13080,7 +13080,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Rocka på"
+      "title": "Rocka på!"
     },
     {
       "postId": 50320,
@@ -13600,7 +13600,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Det löser sig"
+      "title": "Det löser sej"
     },
     {
       "postId": 50159,
@@ -13619,7 +13619,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Don't Wanna Be"
+      "title": "I Don’t Want to Be"
     },
     {
       "postId": 50359,
@@ -13752,7 +13752,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "What You’re Made Of"
+      "title": "What You're Made Of"
     },
     {
       "postId": 49227,
@@ -13942,7 +13942,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "What’s Left of Me"
+      "title": "What's Left of Me"
     },
     {
       "postId": 48558,
@@ -14096,7 +14096,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Värsta schlagern"
+      "title": "Värsta Schlagern"
     },
     {
       "postId": 51681,
@@ -15232,7 +15232,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "She’s So High"
+      "title": "She's So High"
     },
     {
       "postId": 51846,
@@ -15463,7 +15463,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sträck ut din hand"
+      "title": "Sträck Ut Din Hand"
     },
     {
       "postId": 53013,
@@ -15578,7 +15578,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Not a Sinner nor a Saint"
+      "title": "Not a Sinner Nor a Saint"
     },
     {
       "postId": 50667,
@@ -16040,7 +16040,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Déjà vu"
+      "title": "Deja vu"
     },
     {
       "postId": 48465,
@@ -16059,7 +16059,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Blowing in the wind"
+      "title": "Blowing in the Wind"
     },
     {
       "postId": 48466,
@@ -16097,7 +16097,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The Times They Are A-Changing"
+      "title": "The Times They Are A‐Changin’"
     },
     {
       "postId": 48468,
@@ -16116,7 +16116,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Knocking on Heaven's Door"
+      "title": "Knockin’ on Heaven’s Door"
     },
     {
       "postId": 49296,
@@ -17402,7 +17402,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Snälla, snälla"
+      "title": "Snälla snälla"
     },
     {
       "postId": 49768,
@@ -18801,7 +18801,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Diggi-loo-diggi-ley"
+      "title": "Diggi Loo Diggi Ley"
     },
     {
       "postId": 48065,
@@ -18877,7 +18877,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Fyra bugg och en Coca Cola"
+      "title": "Fyra bugg och en Coca-Cola"
     },
     {
       "postId": 51183,
@@ -18918,7 +18918,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Picadilly Circus"
+      "title": "Piccadilly circus"
     },
     {
       "postId": 50567,
@@ -19713,7 +19713,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Köppäbä-visan"
+      "title": "Köppäbävisan"
     },
     {
       "postId": 53006,
@@ -19771,7 +19771,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Somliga går i trasiga skor"
+      "title": "Somliga går med trasiga skor"
     },
     {
       "postId": 51145,
@@ -19906,7 +19906,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Tommy tycker om mig"
+      "title": "Tommy tycker om mej"
     },
     {
       "postId": 53292,
@@ -20232,7 +20232,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Sommaren i City"
+      "title": "Sommaren i city"
     },
     {
       "postId": 52560,
@@ -20406,7 +20406,7 @@
       "venueArtist": "Uffe Neidemar",
       "proposalArtist": "Ulf Neidemar",
       "trusted": true,
-      "title": "Häng me' på party"
+      "title": "Häng mé på party"
     },
     {
       "postId": 52913,
@@ -21019,7 +21019,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Moviestar"
+      "title": "Movie Star"
     },
     {
       "postId": 49174,
@@ -21234,7 +21234,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Voulez‐vous"
+      "title": "Voulez‐Vous"
     },
     {
       "postId": 47766,
@@ -21367,7 +21367,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Does Your Mother Know"
+      "title": "Does Your Mother Know?"
     },
     {
       "postId": 47773,
@@ -21559,7 +21559,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Gimme, Gimme, Gimme"
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)"
     },
     {
       "postId": 47783,
@@ -21833,7 +21833,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sexyback"
+      "title": "SexyBack"
     },
     {
       "postId": 50648,
@@ -22084,7 +22084,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Your Man"
+      "title": "I'm Your Man"
     },
     {
       "postId": 47865,
@@ -22279,7 +22279,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Thank You"
+      "title": "Thank You (Falettinme Be Mice Elf Agin)"
     },
     {
       "postId": 51084,
@@ -22317,7 +22317,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "There Must Be an Angel"
+      "title": "There Must Be an Angel (Playing With My Heart)"
     },
     {
       "postId": 52970,
@@ -22357,7 +22357,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Un‐Break My Heart"
+      "title": "Un-Break My Heart"
     },
     {
       "postId": 48167,
@@ -22682,7 +22682,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "How Long"
+      "title": "How Long?"
     },
     {
       "postId": 50068,
@@ -22913,7 +22913,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’ve Got Another Thing Coming"
+      "title": "You’ve Got Another Thing Comin’"
     },
     {
       "postId": 52264,
@@ -22989,7 +22989,7 @@
       "how": "near",
       "rewrites": [],
       "trusted": true,
-      "title": "Brother Love’s Traveling Salvation Show"
+      "title": "Brother Love’s Travelling Salvation Show"
     },
     {
       "postId": 49721,
@@ -23008,7 +23008,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Devil in Disguise"
+      "title": "(You’re the) Devil in Disguise"
     },
     {
       "postId": 51511,
@@ -23164,7 +23164,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "A Hard Day's Night"
+      "title": "A Hard Day’s Night"
     },
     {
       "postId": 49062,
@@ -23259,7 +23259,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Reach Out I’ll Be There"
+      "title": "Reach Out, I’ll Be There"
     },
     {
       "postId": 49723,
@@ -23297,7 +23297,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Last Night Was Made For Love"
+      "title": "Last Night Was Made for Love"
     },
     {
       "postId": 50083,
@@ -23585,7 +23585,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The Girl Can't Help It"
+      "title": "The Girl Can’t Help It"
     },
     {
       "postId": 50205,
@@ -23623,7 +23623,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Judy in Disguise"
+      "title": "Judy in Disguise (With Glasses)"
     },
     {
       "postId": 52863,
@@ -23720,7 +23720,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Somebody Else's Guy"
+      "title": "Somebody Else’s Guy"
     },
     {
       "postId": 50741,
@@ -23739,7 +23739,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The Language of Love"
+      "title": "Language of Love"
     },
     {
       "postId": 52550,
@@ -23986,7 +23986,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hardest Part"
+      "title": "The Hardest Part"
     },
     {
       "postId": 51508,
@@ -24184,7 +24184,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Gotta Woman"
+      "title": "I Got a Woman"
     },
     {
       "postId": 49191,
@@ -24488,7 +24488,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Dancin’ Party"
+      "title": "Dancing Party"
     },
     {
       "postId": 47787,
@@ -24526,7 +24526,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Walking After Midnight"
+      "title": "Walkin’ After Midnight"
     },
     {
       "postId": 49517,
@@ -24564,7 +24564,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Who’s Sorry Now"
+      "title": "Who’s Sorry Now?"
     },
     {
       "postId": 51023,
@@ -24773,7 +24773,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Killing Me Softly"
+      "title": "Killing Me Softly With His Song"
     },
     {
       "postId": 49431,
@@ -24811,7 +24811,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sex Bomb"
+      "title": "Sexbomb"
     },
     {
       "postId": 51343,
@@ -24925,7 +24925,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Simply Irresistable"
+      "title": "Simply Irresistible"
     },
     {
       "postId": 51473,
@@ -24944,7 +24944,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Say Somethin'"
+      "title": "Say Somethin’"
     },
     {
       "postId": 50628,
@@ -25270,7 +25270,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "First Cut Is the Deepest"
+      "title": "The First Cut Is the Deepest"
     },
     {
       "postId": 52858,
@@ -25467,7 +25467,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "California Dreaming"
+      "title": "California Dreamin’"
     },
     {
       "postId": 48520,
@@ -25564,7 +25564,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'd Rather Leave While I'm in Love"
+      "title": "I’d Rather Leave While I’m in Love"
     },
     {
       "postId": 51560,
@@ -25602,7 +25602,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Save Your Kisses For Me"
+      "title": "Save Your Kisses for Me"
     },
     {
       "postId": 52086,
@@ -25679,7 +25679,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "All Night Long"
+      "title": "All Night Long (All Night)"
     },
     {
       "postId": 47813,
@@ -25833,7 +25833,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Bat Out of Hell"
+      "title": "Bat out of Hell"
     },
     {
       "postId": 47875,
@@ -25928,7 +25928,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Breakfast at Tiffany's"
+      "title": "Breakfast at Tiffany’s"
     },
     {
       "postId": 53123,
@@ -26220,7 +26220,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Dirty"
+      "title": "Dirrty"
     },
     {
       "postId": 51992,
@@ -26239,7 +26239,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "(Sittin’ on) The Dock of the Bay"
+      "title": "(Sittin’ on) the Dock of the Bay"
     },
     {
       "postId": 49708,
@@ -26570,7 +26570,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "First Time I Ever Saw Your Face"
+      "title": "The First Time Ever I Saw Your Face"
     },
     {
       "postId": 50465,
@@ -26589,7 +26589,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Flashdance"
+      "title": "Flashdance… What a Feeling"
     },
     {
       "postId": 51676,
@@ -26669,7 +26669,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Green Green Grass of Home"
+      "title": "Green, Green Grass of Home"
     },
     {
       "postId": 52130,
@@ -26688,7 +26688,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Groovy Kind of Love"
+      "title": "A Groovy Kind of Love"
     },
     {
       "postId": 50672,
@@ -26785,7 +26785,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Hony Tonk Women"
+      "title": "Honky Tonk Women"
     },
     {
       "postId": 51964,
@@ -27298,7 +27298,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Jumpin' Jack Flash"
+      "title": "Jumpin’ Jack Flash"
     },
     {
       "postId": 51227,
@@ -27396,7 +27396,7 @@
       "how": "near",
       "rewrites": [],
       "trusted": true,
-      "title": "Little Ole Winedrinker"
+      "title": "Little Ole’ Wine Drinker Me"
     },
     {
       "postId": 52420,
@@ -27415,7 +27415,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Livin’ la vida loca"
+      "title": "Livin’ la Vida Loca"
     },
     {
       "postId": 52379,
@@ -27567,7 +27567,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Mandy"
+      "title": "Brandy"
     },
     {
       "postId": 50216,
@@ -27745,7 +27745,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "New York, New York"
+      "title": "Theme From “New York, New York”"
     },
     {
       "postId": 48283,
@@ -27783,7 +27783,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "No Woman No Cry"
+      "title": "No Woman, No Cry"
     },
     {
       "postId": 52791,
@@ -27994,7 +27994,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Rotterdam"
+      "title": "Rotterdam (or Anywhere)"
     },
     {
       "postId": 50979,
@@ -28013,7 +28013,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Ruby Don’t Take Your Love to Town"
+      "title": "Ruby, Don’t Take Your Love to Town"
     },
     {
       "postId": 52537,
@@ -28377,7 +28377,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Teenager in Love"
+      "title": "A Teenager in Love"
     },
     {
       "postId": 50089,
@@ -28708,7 +28708,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Wake Up Little Suzy"
+      "title": "Wake Up Little Susie"
     },
     {
       "postId": 49391,
@@ -29093,7 +29093,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Natt Är Jag Din"
+      "title": "I natt är jag din"
     },
     {
       "postId": 53300,
@@ -29494,7 +29494,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Vill ha dig"
+      "title": "Vill ha dej"
     },
     {
       "postId": 51688,
@@ -29836,7 +29836,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "(Marie’s the Name of) His Latest Flame"
+      "title": "(Marie’s the Name) His Latest Flame"
     },
     {
       "postId": 49745,
@@ -29893,7 +29893,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lawdy, Miss Clawdy"
+      "title": "Lawdy Miss Clawdy"
     },
     {
       "postId": 49748,
@@ -29931,7 +29931,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Baby I Don’t Care"
+      "title": "(You’re So Square) Baby I Don’t Care"
     },
     {
       "postId": 49750,
@@ -30102,7 +30102,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lookin’ out My Back Door"
+      "title": "Lookin’ Out My Back Door"
     },
     {
       "postId": 49152,
@@ -30387,7 +30387,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sweet Hitch‐Hiker"
+      "title": "Sweet Hitch-Hiker"
     },
     {
       "postId": 49167,
@@ -30843,7 +30843,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Baby I’m‐A Want You"
+      "title": "Baby I’m‐a Want You"
     },
     {
       "postId": 49647,
@@ -31003,7 +31003,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t You Want Me?"
+      "title": "Don’t You Want Me"
     },
     {
       "postId": 52788,
@@ -31159,7 +31159,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Giving Him Something He Can Feel"
+      "title": "Something He Can Feel"
     },
     {
       "postId": 52131,
@@ -31520,7 +31520,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Hold You Down"
+      "title": "Hold You Down (The Eliel mix)"
     },
     {
       "postId": 52458,
@@ -31812,7 +31812,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Don't Cry For Me Argentina"
+      "title": "Don’t Cry for Me Argentina"
     },
     {
       "postId": 50809,
@@ -32448,7 +32448,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Which Way You Goin' Billy?"
+      "title": "Which Way You Goin’ Billy?"
     },
     {
       "postId": 50740,
@@ -32562,7 +32562,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "River Deep Mountain High"
+      "title": "River Deep – Mountain High"
     },
     {
       "postId": 53041,
@@ -32792,7 +32792,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "For Those About to Rock"
+      "title": "For Those About to Rock (We Salute You)"
     },
     {
       "postId": 47790,
@@ -33178,7 +33178,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Anarchy in the U.K."
+      "title": "Anarchy in the UK"
     },
     {
       "postId": 48224,
@@ -33216,7 +33216,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Reggae Nights"
+      "title": "Reggae Night"
     },
     {
       "postId": 51547,
@@ -33273,7 +33273,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Young, Gifted and Black"
+      "title": "To Be Young, Gifted and Black"
     },
     {
       "postId": 52919,
@@ -33394,7 +33394,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Halfway To Paradise"
+      "title": "Halfway to Paradise"
     },
     {
       "postId": 51311,
@@ -33705,7 +33705,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Bridge Over Troubled Waters"
+      "title": "Bridge Over Troubled Water"
     },
     {
       "postId": 48722,
@@ -33821,7 +33821,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hi‐Ho Silver Lining"
+      "title": "Hi Ho Silver Lining"
     },
     {
       "postId": 50637,
@@ -34377,7 +34377,7 @@
         "ampersand-spelled-out"
       ],
       "trusted": true,
-      "title": "Say It Loud, I’m Black I’m Proud"
+      "title": "Say It Loud (I’m Black, I’m Proud)"
     },
     {
       "postId": 51816,
@@ -34477,7 +34477,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sugar Bush"
+      "title": "Sugarbush"
     },
     {
       "postId": 49644,
@@ -34637,7 +34637,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "I Can’t Tell the Bottom From the Top"
+      "title": "I Can't Tell the Bottom From the Top"
     },
     {
       "postId": 50266,
@@ -34853,7 +34853,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Power of Goodbye"
+      "title": "The Power of Good-Bye"
     },
     {
       "postId": 51421,
@@ -34967,7 +34967,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Greatest Love of All"
+      "title": "The Greatest Love of All"
     },
     {
       "postId": 53537,
@@ -35547,7 +35547,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Pretty Woman"
+      "title": "Oh, Pretty Woman"
     },
     {
       "postId": 53422,
@@ -36425,7 +36425,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hello Dolly"
+      "title": "Hello, Dolly!"
     },
     {
       "postId": 51335,
@@ -36580,7 +36580,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "September Song"
+      "title": "Knickerbocker Holiday: September Song"
     },
     {
       "postId": 51338,
@@ -36734,7 +36734,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "There's a Kind of Hush (All Over the World)"
+      "title": "There’s a Kind of Hush"
     },
     {
       "postId": 49812,
@@ -37022,7 +37022,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Knocking on Heavens Door"
+      "title": "Knockin’ on Heaven’s Door"
     },
     {
       "postId": 50299,
@@ -37231,7 +37231,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Freedom"
+      "title": "Freedom 90"
     },
     {
       "postId": 52476,
@@ -37652,7 +37652,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "McArthur Park"
+      "title": "MacArthur Park"
     },
     {
       "postId": 53047,
@@ -37690,7 +37690,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "THAT'S THE WAY (I LIKE IT)"
+      "title": "That’s the Way (I Like It)"
     },
     {
       "postId": 51796,
@@ -37789,7 +37789,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Love the Nightlife (Disco Round)"
+      "title": "I Love the Nightlife"
     },
     {
       "postId": 50931,
@@ -37808,7 +37808,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'm Your Boogie Man"
+      "title": "I’m Your Boogie Man"
     },
     {
       "postId": 47992,
@@ -37922,7 +37922,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Your Cheating Heart"
+      "title": "Your Cheatin’ Heart"
     },
     {
       "postId": 53042,
@@ -37960,7 +37960,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Harper Valley P.T.A."
+      "title": "Harper Valley PTA"
     },
     {
       "postId": 52256,
@@ -38036,7 +38036,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Mama Don't Let Your Babies Grow Up to Be Cowboys"
+      "title": "Mammas Don’t Let Your Babies Grow Up to Be Cowboys"
     },
     {
       "postId": 49480,
@@ -38300,7 +38300,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Baby I’m Yours"
+      "title": "Baby, I’m Yours"
     },
     {
       "postId": 51514,
@@ -38319,7 +38319,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s a Little Too Late"
+      "title": "It's a Little Too Late"
     },
     {
       "postId": 52500,
@@ -38985,7 +38985,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Get Up Stand Up"
+      "title": "Get Up, Stand Up"
     },
     {
       "postId": 48492,
@@ -39004,7 +39004,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Could You Be Loved?"
+      "title": "Could You Be Loved"
     },
     {
       "postId": 48493,
@@ -39080,7 +39080,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Talking Blues"
+      "title": "Talkin’ Blues"
     },
     {
       "postId": 48497,
@@ -39137,7 +39137,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Rock the Boat"
+      "title": "Don’t Rock the Boat"
     },
     {
       "postId": 48500,
@@ -39633,7 +39633,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cotton Eye Joe"
+      "title": "Cotton-Eye Joe"
     },
     {
       "postId": 50774,
@@ -39824,7 +39824,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Baby I Love Your Way"
+      "title": "Baby, I Love Your Way"
     },
     {
       "postId": 50682,
@@ -40115,7 +40115,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’re Makin Me High"
+      "title": "You’re Makin’ Me High"
     },
     {
       "postId": 47860,
@@ -40134,7 +40134,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Rock the Jukebox"
+      "title": "Don’t Rock the Jukebox"
     },
     {
       "postId": 52882,
@@ -41785,7 +41785,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Boys of Summer"
+      "title": "The Boys of Summer"
     },
     {
       "postId": 48761,
@@ -41863,7 +41863,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lady in Red"
+      "title": "The Lady in Red"
     },
     {
       "postId": 48961,
@@ -42236,7 +42236,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can't Take My Eyes Off You"
+      "title": "Can’t Take My Eyes Off You"
     },
     {
       "postId": 50110,
@@ -42294,7 +42294,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "God Gave Rock and Roll to You"
+      "title": "God Gave Rock ’n’ Roll to You II"
     },
     {
       "postId": 50210,
@@ -43593,7 +43593,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Old Time Rock and Roll"
+      "title": "Old Time Rock & Roll"
     },
     {
       "postId": 50977,
@@ -43924,7 +43924,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hey Good Lookin’"
+      "title": "Hey, Good Lookin’"
     },
     {
       "postId": 51507,
@@ -44297,7 +44297,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Teddy Bear"
+      "title": "(Let Me Be Your) Teddy Bear"
     },
     {
       "postId": 51215,
@@ -44392,7 +44392,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You're Sixteen"
+      "title": "You’re Sixteen"
     },
     {
       "postId": 49905,
@@ -44509,7 +44509,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Neither One of Us"
+      "title": "Neither One of Us (Wants to Be the First to Say Goodbye)"
     },
     {
       "postId": 48752,
@@ -44998,7 +44998,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lucy In The Sky With Diamonds"
+      "title": "Lucy in the Sky With Diamonds"
     },
     {
       "postId": 50722,
@@ -45591,7 +45591,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Five Colours in Her Hair"
+      "title": "5 Colours in Her Hair"
     },
     {
       "postId": 52950,
@@ -45940,7 +45940,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "there you'll be"
+      "title": "There You’ll Be"
     },
     {
       "postId": 50000,
@@ -46377,7 +46377,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Another brick in the wall"
+      "title": "Another Brick in the Wall"
     },
     {
       "postId": 52005,
@@ -46804,7 +46804,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can’t Take My Eyes Off of You"
+      "title": "Can’t Take My Eyes Off You"
     },
     {
       "postId": 48469,
@@ -46843,7 +46843,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Numb / Encore"
+      "title": "Encore"
     },
     {
       "postId": 51019,
@@ -48027,7 +48027,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’re Out of My Life"
+      "title": "You're out of my life"
     },
     {
       "postId": 47998,
@@ -48065,7 +48065,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Keep on Walking"
+      "title": "Keep On Walking"
     },
     {
       "postId": 50898,
@@ -48433,7 +48433,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Who’s That Girl"
+      "title": "Who’s That Girl?"
     },
     {
       "postId": 52507,
@@ -48926,7 +48926,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Do You Know the Way to San José"
+      "title": "Do You Know the Way to San Jose"
     },
     {
       "postId": 49198,
@@ -49619,7 +49619,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Only You (Solo en ti)"
+      "title": "Only You"
     },
     {
       "postId": 48630,
@@ -50067,7 +50067,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Valley of the Dolls"
+      "title": "(Theme from) Valley of the Dolls"
     },
     {
       "postId": 49386,
@@ -50086,7 +50086,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "This Girl Is in Love With You"
+      "title": "This Guy’s in Love With You"
     },
     {
       "postId": 48669,
@@ -50143,7 +50143,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "True Colours"
+      "title": "True Colors"
     },
     {
       "postId": 49347,
@@ -50203,7 +50203,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Walk on By"
+      "title": "Walk On By"
     },
     {
       "postId": 49124,
@@ -51093,7 +51093,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Bring It on Home to Me"
+      "title": "Bring It On Home to Me"
     },
     {
       "postId": 50240,
@@ -51193,7 +51193,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Burnin’ Up"
+      "title": "Burnin' Up"
     },
     {
       "postId": 52290,
@@ -51272,7 +51272,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Caroline Says"
+      "title": "Caroline Says I"
     },
     {
       "postId": 49878,
@@ -51849,7 +51849,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Talk to Strangers"
+      "title": "Don't Talk to Strangers"
     },
     {
       "postId": 52564,
@@ -52657,7 +52657,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Hush Hush"
+      "title": "Hush Hush; Hush Hush"
     },
     {
       "postId": 51191,
@@ -52771,7 +52771,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ll Be Okay"
+      "title": "I’ll Be OK"
     },
     {
       "postId": 52411,
@@ -52790,7 +52790,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ve Done Everything for You"
+      "title": "I've Done Everything for You"
     },
     {
       "postId": 49758,
@@ -52907,7 +52907,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It's a Mistake"
+      "title": "It’s a Mistake"
     },
     {
       "postId": 49508,
@@ -52926,7 +52926,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It's My Life"
+      "title": "It’s My Life"
     },
     {
       "postId": 50481,
@@ -53312,7 +53312,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Love Is Alright Tonight"
+      "title": "Love Is Alright Tonite"
     },
     {
       "postId": 52573,
@@ -53736,7 +53736,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "One For The Radio"
+      "title": "One for the Radio"
     },
     {
       "postId": 49509,
@@ -54291,7 +54291,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Separate Ways"
+      "title": "Separate Ways (Worlds Apart)"
     },
     {
       "postId": 50563,
@@ -54370,7 +54370,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "She’s My Man"
+      "title": "She's My Man"
     },
     {
       "postId": 50402,
@@ -54920,7 +54920,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Sweet Escape"
+      "title": "The Sweet Escape"
     },
     {
       "postId": 50945,
@@ -55326,7 +55326,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Twisting the Night Away"
+      "title": "Twistin’ the Night Away"
     },
     {
       "postId": 50103,
@@ -56014,7 +56014,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "A Woman’s Touch"
+      "title": "A Woman's Touch"
     },
     {
       "postId": 53266,
@@ -56055,7 +56055,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Big Ol’ Truck"
+      "title": "Big Ol' Truck"
     },
     {
       "postId": 52856,
@@ -56093,7 +56093,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cats in the Cradle"
+      "title": "Cat’s in the Cradle"
     },
     {
       "postId": 53408,
@@ -57040,7 +57040,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Who’s Your Daddy?"
+      "title": "Who's Your Daddy?"
     },
     {
       "postId": 53411,
@@ -57192,7 +57192,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "A Hard Rain’s A‐Gonna Fall"
+      "title": "Hard Rain’s A‐Gonna Fall"
     },
     {
       "postId": 48561,
@@ -58059,7 +58059,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Dead Man Walking"
+      "title": "Dead Man Walkin’"
     },
     {
       "postId": 48845,
@@ -58218,7 +58218,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Everybody"
+      "title": "Everybody (Backstreet’s Back)"
     },
     {
       "postId": 48134,
@@ -58968,7 +58968,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "If I Was Your Woman"
+      "title": "If I Were Your Woman"
     },
     {
       "postId": 49589,
@@ -59139,7 +59139,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Lay Lady Lay"
+      "title": "Lay, Lady, Lay"
     },
     {
       "postId": 47802,
@@ -59730,7 +59730,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Nobody but You"
+      "title": "Nobody But You"
     },
     {
       "postId": 48222,
@@ -60072,7 +60072,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Rock and Roll Band"
+      "title": "Rock & Roll Band"
     },
     {
       "postId": 48952,
@@ -60091,7 +60091,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Run It"
+      "title": "Run It!"
     },
     {
       "postId": 48924,
@@ -60528,7 +60528,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "That’s the Way I Like It"
+      "title": "That's the Way I Like It"
     },
     {
       "postId": 48146,
@@ -60604,7 +60604,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "There's No Other Way"
+      "title": "There’s No Other Way"
     },
     {
       "postId": 48927,
@@ -60642,7 +60642,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Thunderbirds Are Go"
+      "title": "Thunderbirds Are Go!"
     },
     {
       "postId": 47806,
@@ -61159,7 +61159,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cleaning Out My Closet"
+      "title": "Cleanin’ Out My Closet"
     },
     {
       "postId": 49448,
@@ -61311,7 +61311,7 @@
       "how": "near",
       "rewrites": [],
       "trusted": true,
-      "title": "Empire State of Mind, Part II (Broken Down)"
+      "title": "Empire State of Mind, Part II: Broken Down"
     },
     {
       "postId": 48756,
@@ -61368,7 +61368,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Gotta Get Through This"
+      "title": "Gotta Get Thru This"
     },
     {
       "postId": 48757,
@@ -61579,7 +61579,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Think I’m in Love With You"
+      "title": "I Think I'm in Love With You"
     },
     {
       "postId": 51342,
@@ -62004,7 +62004,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Mockingbird"
+      "title": "Mocking Bird"
     },
     {
       "postId": 49670,
@@ -62522,7 +62522,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Real Slim Shady"
+      "title": "The Real Slim Shady"
     },
     {
       "postId": 49000,
@@ -62617,7 +62617,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "This Time I Know It’s for Real"
+      "title": "This Time I Know It's for Real"
     },
     {
       "postId": 49849,
@@ -63578,7 +63578,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Do You Love Me"
+      "title": "Do You Love Me?"
     },
     {
       "postId": 51291,
@@ -63714,7 +63714,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Everlasting"
+      "title": "The Everlasting"
     },
     {
       "postId": 51449,
@@ -63828,7 +63828,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Girl You Know It’s True"
+      "title": "Girl You Know It's True"
     },
     {
       "postId": 51231,
@@ -64094,7 +64094,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Gonna Miss You"
+      "title": "Girl I’m Gonna Miss You"
     },
     {
       "postId": 51193,
@@ -64113,7 +64113,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It Ain’t Over ’Til It’s Over"
+      "title": "It Ain’t Over ’til It’s Over"
     },
     {
       "postId": 50798,
@@ -64496,7 +64496,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Please Don’t Ask Me"
+      "title": "Please Don't Ask Me"
     },
     {
       "postId": 51211,
@@ -64650,7 +64650,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Stay (I Missed You)"
+      "title": "Stay"
     },
     {
       "postId": 50923,
@@ -64746,7 +64746,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "What Goes Around... Comes Around"
+      "title": "What Goes Around... ...Comes Around"
     },
     {
       "postId": 51233,
@@ -64879,7 +64879,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You Are Loved (Don’t Give Up)"
+      "title": "You Are Loved (Don't Give Up)"
     },
     {
       "postId": 50803,
@@ -64936,7 +64936,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You'll Never Walk Alone"
+      "title": "You’ll Never Walk Alone"
     },
     {
       "postId": 51452,
@@ -65483,7 +65483,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The Road to Hell (Part 2)"
+      "title": "The Road to Hell, Part 2"
     },
     {
       "postId": 52894,
@@ -65502,7 +65502,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s Not Over (’Til It’s Over)"
+      "title": "It’s Not Over (’til It’s Over)"
     },
     {
       "postId": 49760,
@@ -65636,7 +65636,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s Five O’Clock Somewhere"
+      "title": "It's Five O' Clock Somewhere"
     },
     {
       "postId": 48813,
@@ -65712,7 +65712,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Coal Miner's Daughter"
+      "title": "Coal Miner’s Daughter"
     },
     {
       "postId": 51602,
@@ -65731,7 +65731,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Today I Started Loving You Again"
+      "title": "I Started Loving You Again"
     },
     {
       "postId": 51965,
@@ -65752,7 +65752,7 @@
         "annotation-stripped"
       ],
       "trusted": true,
-      "title": "Country Roads"
+      "title": "Take Me Home, Country Roads"
     },
     {
       "postId": 53575,
@@ -65809,7 +65809,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Rocking in the Free World"
+      "title": "Rockin’ in the Free World"
     },
     {
       "postId": 52273,
@@ -65905,7 +65905,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Take Me to Your Heaven"
+      "title": "Take me to your heaven"
     },
     {
       "postId": 48931,
@@ -65947,7 +65947,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Dancing Fool"
+      "title": "Dancin’ Fool"
     },
     {
       "postId": 49888,
@@ -66023,7 +66023,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "True Colours"
+      "title": "True Colors"
     },
     {
       "postId": 49892,
@@ -66118,7 +66118,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Beautiful Boy"
+      "title": "Beautiful Boy (Darling Boy)"
     },
     {
       "postId": 50262,
@@ -66504,7 +66504,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Train Kept A Rollin’"
+      "title": "Train Kept A‐Rollin’"
     },
     {
       "postId": 52525,
@@ -66620,7 +66620,7 @@
         "title-article-added"
       ],
       "trusted": true,
-      "title": "The Kid Is Hot Tonight"
+      "title": "The Kid Is Hot Tonite"
     },
     {
       "postId": 52003,
@@ -67045,7 +67045,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Ain’t Wasting Time No More"
+      "title": "Ain’t Wastin’ Time No More"
     },
     {
       "postId": 48366,
@@ -67083,7 +67083,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Fire Down Below"
+      "title": "The Fire Down Below"
     },
     {
       "postId": 48548,
@@ -67140,7 +67140,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Think Twice, It’s Alright"
+      "title": "Don’t Think Twice, It’s All Right"
     },
     {
       "postId": 50082,
@@ -67488,7 +67488,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Do Me Like That"
+      "title": "Don’t Do Me Like That"
     },
     {
       "postId": 53308,
@@ -67526,7 +67526,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "In the Year 2525"
+      "title": "In the Year 2525 (Exordium and Terminus)"
     },
     {
       "postId": 52729,
@@ -67586,7 +67586,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The Woman in Me"
+      "title": "The Woman in Me (Needs the Man in You)"
     },
     {
       "postId": 52732,
@@ -67702,7 +67702,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Be Stupid"
+      "title": "Don’t Be Stupid (You Know I Love You)"
     },
     {
       "postId": 52738,
@@ -68214,7 +68214,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "She's a Lady"
+      "title": "She’s a Lady"
     },
     {
       "postId": 53280,
@@ -68272,7 +68272,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can't Get Enough of Your Love, Babe"
+      "title": "Can’t Get Enough of Your Love Babe"
     },
     {
       "postId": 48205,
@@ -68310,7 +68310,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Only Want to Be With You"
+      "title": "I Only Want to Be with You"
     },
     {
       "postId": 48207,
@@ -68329,7 +68329,7 @@
       "how": "near",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Gonna Love You Just a Little Bit More Baby"
+      "title": "I’m Gonna Love You Just a Little More Babe"
     },
     {
       "postId": 48208,
@@ -68348,7 +68348,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s Ecstacy When You Lay Down Next to Me"
+      "title": "It's Ecstasy When You Lay Down Next to Me"
     },
     {
       "postId": 48209,
@@ -68405,7 +68405,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Never Never Gonna Give Ya Up"
+      "title": "Never, Never Gonna Give Ya Up"
     },
     {
       "postId": 48212,
@@ -68551,7 +68551,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Gettin' in Tune"
+      "title": "Getting in Tune"
     },
     {
       "postId": 52401,
@@ -68878,7 +68878,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "China Groove"
+      "title": "China Grove"
     },
     {
       "postId": 49519,
@@ -69279,7 +69279,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Please Don't Leave Me"
+      "title": "Please Don’t Leave Me"
     },
     {
       "postId": 52372,
@@ -69737,7 +69737,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "(’Till) I Kissed You"
+      "title": "(’Til) I Kissed You"
     },
     {
       "postId": 49911,
@@ -69775,7 +69775,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "When Will I Be Loved"
+      "title": "When Will I Be Loved?"
     },
     {
       "postId": 49913,
@@ -69813,7 +69813,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Telling You Now"
+      "title": "I'm Telling You Now"
     },
     {
       "postId": 48161,
@@ -70762,7 +70762,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Why Does Love Got to Be So Sad"
+      "title": "Why Does Love Got to Be So Sad?"
     },
     {
       "postId": 51928,
@@ -70838,7 +70838,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cigarettes and Alcohol"
+      "title": "Cigarettes & Alcohol"
     },
     {
       "postId": 51932,
@@ -71009,7 +71009,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "D’You Know What I Mean?"
+      "title": "D’you Know What I Mean?"
     },
     {
       "postId": 48114,
@@ -71066,7 +71066,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Let Go (Love)"
+      "title": "Don't Let Go (Love)"
     },
     {
       "postId": 50665,
@@ -71510,7 +71510,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cup of Life"
+      "title": "The Cup of Life"
     },
     {
       "postId": 52422,
@@ -71548,7 +71548,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You Stay With Me"
+      "title": "You Stay with Me"
     },
     {
       "postId": 48406,
@@ -72043,7 +72043,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Thank You"
+      "title": "Thank U"
     },
     {
       "postId": 50396,
@@ -72100,7 +72100,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "My Favourite Mistake"
+      "title": "My Favorite Mistake"
     },
     {
       "postId": 51563,
@@ -72328,7 +72328,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Bless the Broken Road"
+      "title": "Broken Road"
     },
     {
       "postId": 51444,
@@ -72643,7 +72643,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Dancing in the Moonlight"
+      "title": "Dancing in the Moonlight (It’s Caught Me in Its Spotlight)"
     },
     {
       "postId": 51818,
@@ -72662,7 +72662,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Cherry Cherry"
+      "title": "Cherry, Cherry"
     },
     {
       "postId": 51819,
@@ -72776,7 +72776,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Red, Red Wine"
+      "title": "Red Red Wine"
     },
     {
       "postId": 51825,
@@ -72913,7 +72913,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "She's Madonna"
+      "title": "She’s Madonna"
     },
     {
       "postId": 52501,
@@ -72972,7 +72972,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "You've Got a Friend"
+      "title": "You’ve Got a Friend"
     },
     {
       "postId": 49852,
@@ -72991,7 +72991,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Swing Low Sweet Chariot"
+      "title": "Swing Low, Sweet Chariot"
     },
     {
       "postId": 49869,
@@ -73204,7 +73204,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Loco‐Motion"
+      "title": "The Loco‐Motion"
     },
     {
       "postId": 52924,
@@ -73283,7 +73283,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Keep Fishin’"
+      "title": "Keep Fishin'"
     },
     {
       "postId": 52611,
@@ -73498,7 +73498,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Since You’ve Been Gone"
+      "title": "Since You Been Gone"
     },
     {
       "postId": 49068,
@@ -73887,7 +73887,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s Alright"
+      "title": "It’s All Right"
     },
     {
       "postId": 52100,
@@ -74115,7 +74115,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Go"
+      "title": "Don’t Go"
     },
     {
       "postId": 47945,
@@ -75863,7 +75863,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Leave Me"
+      "title": "Don’t Leave Me"
     },
     {
       "postId": 52160,
@@ -75901,7 +75901,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "(I Hate) Everything About You"
+      "title": "I Hate Everything About You"
     },
     {
       "postId": 52161,
@@ -75958,7 +75958,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "The Kill (Rebirth)"
+      "title": "The Kill"
     },
     {
       "postId": 52369,
@@ -76441,7 +76441,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Waka Waka (This Time for Africa)"
+      "title": "Waka Waka"
     },
     {
       "postId": 53215,
@@ -76910,7 +76910,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Holidae Inn"
+      "title": "Holidae In"
     },
     {
       "postId": 48695,
@@ -77255,7 +77255,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Worry Be Happy"
+      "title": "Don’t Worry, Be Happy"
     },
     {
       "postId": 47835,
@@ -77331,7 +77331,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Gimme All Your Loving"
+      "title": "Gimme All Your Lovin’"
     },
     {
       "postId": 47869,
@@ -77426,7 +77426,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s Been Awhile"
+      "title": "It's Been Awhile"
     },
     {
       "postId": 52210,
@@ -77867,7 +77867,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Matter"
+      "title": "Don’t Matter"
     },
     {
       "postId": 53227,
@@ -77907,7 +77907,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sorry, Blame It On Me"
+      "title": "Sorry, Blame It on Me"
     },
     {
       "postId": 47895,
@@ -77967,7 +77967,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "10,000 Nights"
+      "title": "10.000 Nights of Thunder"
     },
     {
       "postId": 47871,
@@ -79574,7 +79574,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Fu‐Gee‐La"
+      "title": "Fu-Gee-La"
     },
     {
       "postId": 49562,
@@ -80071,7 +80071,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Anyone of Us (Stupid Mistake)"
+      "title": "Anyone of Us"
     },
     {
       "postId": 51713,
@@ -80293,7 +80293,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Forget About Dre"
+      "title": "Forgot About Dre"
     },
     {
       "postId": 51763,
@@ -80645,7 +80645,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Ching-A-Ling"
+      "title": "Ching-a-Ling"
     },
     {
       "postId": 50374,
@@ -80683,7 +80683,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Can’t Wait"
+      "title": "I Can't Wait"
     },
     {
       "postId": 51620,
@@ -81917,7 +81917,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "She Bangs the Drum"
+      "title": "She Bangs the Drums"
     },
     {
       "postId": 50376,
@@ -81993,7 +81993,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Still Got the Blues"
+      "title": "Still Got the Blues (for You)"
     },
     {
       "postId": 49840,
@@ -82243,7 +82243,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "(I Just) Died in Your Arms Tonight"
+      "title": "(I Just) Died in Your Arms"
     },
     {
       "postId": 49916,
@@ -82338,7 +82338,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It's Gonna Be Me"
+      "title": "It’s Gonna Be Me"
     },
     {
       "postId": 51786,
@@ -82433,7 +82433,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "When I’m Alone"
+      "title": "When I'm Alone"
     },
     {
       "postId": 48935,
@@ -82570,7 +82570,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Videogames"
+      "title": "Video Games"
     },
     {
       "postId": 51839,
@@ -83400,7 +83400,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Feel the Love"
+      "title": "Feel the Love - Oomachasaooma"
     },
     {
       "postId": 47715,
@@ -83476,7 +83476,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Whataya Want from Me"
+      "title": "Whataya Want From Me"
     },
     {
       "postId": 47849,
@@ -83784,7 +83784,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Little Plastic Castles"
+      "title": "Little Plastic Castle"
     },
     {
       "postId": 48027,
@@ -84014,7 +84014,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Roll On Down the Highway"
+      "title": "Roll on Down the Highway"
     },
     {
       "postId": 48121,
@@ -84166,7 +84166,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Let’s Have a Party"
+      "title": "Let's Have a Party"
     },
     {
       "postId": 48154,
@@ -84204,7 +84204,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "That’s What She Said"
+      "title": "That's What She Said"
     },
     {
       "postId": 48156,
@@ -84337,7 +84337,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Wanna Do It With You"
+      "title": "I Want to Do It With You"
     },
     {
       "postId": 48195,
@@ -84742,7 +84742,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Ballad of Chasey Lain"
+      "title": "The Ballad of Chasey Lain"
     },
     {
       "postId": 48427,
@@ -84799,7 +84799,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Into the Ocean"
+      "title": "Into The Ocean"
     },
     {
       "postId": 48528,
@@ -85201,7 +85201,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "If You Seek Amy"
+      "title": "If U Seek Amy"
     },
     {
       "postId": 48649,
@@ -85377,7 +85377,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Word Up"
+      "title": "Word Up!"
     },
     {
       "postId": 48763,
@@ -85548,7 +85548,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Will You Love Me Tomorrow?"
+      "title": "Will You Love Me Tomorrow"
     },
     {
       "postId": 48793,
@@ -85814,7 +85814,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Somebody’s Crying"
+      "title": "Somebody's Crying"
     },
     {
       "postId": 48965,
@@ -86390,7 +86390,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I See the Want to in Your Eyes"
+      "title": "I See the Want in Your Eyes"
     },
     {
       "postId": 49071,
@@ -86409,7 +86409,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hello Darling"
+      "title": "Hello Darlin’"
     },
     {
       "postId": 49072,
@@ -86447,7 +86447,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’d Love to Lay You Down"
+      "title": "I’d Just Love to Lay You Down"
     },
     {
       "postId": 49074,
@@ -87351,7 +87351,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’re Out of My Life"
+      "title": "You're out of my life"
     },
     {
       "postId": 49256,
@@ -87370,7 +87370,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Walk Away From Love"
+      "title": "I’m Gonna Walk Away From Love"
     },
     {
       "postId": 49257,
@@ -88771,7 +88771,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Scared"
+      "title": "I'm Scared"
     },
     {
       "postId": 49569,
@@ -88850,7 +88850,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Rocket Man"
+      "title": "Rocket Man (I Think It’s Going to Be a Long, Long Time)"
     },
     {
       "postId": 49699,
@@ -89002,7 +89002,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Little Jeanie"
+      "title": "Little Jeannie"
     },
     {
       "postId": 49707,
@@ -89059,7 +89059,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Every Day I Write the Book"
+      "title": "Everyday I Write the Book"
     },
     {
       "postId": 49716,
@@ -90256,7 +90256,7 @@
         "title-article-added"
       ],
       "trusted": true,
-      "title": "The Love Bug"
+      "title": "Love Bug"
     },
     {
       "postId": 50236,
@@ -90604,7 +90604,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Someone’s Watching Over Me"
+      "title": "Someone's Watching Over Me"
     },
     {
       "postId": 50380,
@@ -91005,7 +91005,7 @@
       "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Good and Bad Times (alternate take)"
+      "title": "Good + Bad Times"
     },
     {
       "postId": 50461,
@@ -91567,7 +91567,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hold On to My Love"
+      "title": "Hold On (to My Love)"
     },
     {
       "postId": 50733,
@@ -92204,7 +92204,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Makin' Believe"
+      "title": "Making Believe"
     },
     {
       "postId": 51056,
@@ -92394,7 +92394,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Where Are We Runnin'?"
+      "title": "Where Are We Runnin’?"
     },
     {
       "postId": 51197,
@@ -92470,7 +92470,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can’t Get You Off My Mind"
+      "title": "Can't Get You Off My Mind"
     },
     {
       "postId": 51201,
@@ -92489,7 +92489,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ll Be Waiting"
+      "title": "I'll Be Waiting"
     },
     {
       "postId": 51202,
@@ -92911,7 +92911,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Can’t Take That Away (Mariah’s theme)"
+      "title": "Can’t Take That Away (Mariah’s Theme)"
     },
     {
       "postId": 51487,
@@ -93653,7 +93653,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Silent Running"
+      "title": "Silent Running (On Dangerous Ground)"
     },
     {
       "postId": 51693,
@@ -93886,7 +93886,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Let’s Roll"
+      "title": "Let's Roll"
     },
     {
       "postId": 51833,
@@ -94603,7 +94603,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Alphabet Street"
+      "title": "Alphabet St."
     },
     {
       "postId": 52234,
@@ -94622,7 +94622,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sign o’ the Times"
+      "title": "Sign “☮︎” the Times"
     },
     {
       "postId": 52235,
@@ -94720,7 +94720,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "All Time High"
+      "title": "All Time High (Main Titles)"
     },
     {
       "postId": 52253,
@@ -94739,7 +94739,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Sorted for E’s and Wizz"
+      "title": "Sorted for E’s & Wizz"
     },
     {
       "postId": 52254,
@@ -94894,7 +94894,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "The World’s Greatest"
+      "title": "The World's Greatest"
     },
     {
       "postId": 52295,
@@ -94990,7 +94990,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "She’s Got That Vibe"
+      "title": "She's Got That Vibe"
     },
     {
       "postId": 52301,
@@ -95029,7 +95029,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Welcome Home"
+      "title": "Welcome Home, Son"
     },
     {
       "postId": 52310,
@@ -95333,7 +95333,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s the End of the World as We Know It"
+      "title": "It’s the End of the World as We Know It (and I Feel Fine)"
     },
     {
       "postId": 52384,
@@ -95447,7 +95447,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Do You Really Want Me"
+      "title": "Do You Really Want Me (Show Respect)"
     },
     {
       "postId": 52568,
@@ -95817,7 +95817,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Eddie’s Song"
+      "title": "Eddie's Song"
     },
     {
       "postId": 52898,
@@ -96394,7 +96394,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I Don’t Dance"
+      "title": "I Don't Dance"
     },
     {
       "postId": 52994,
@@ -97239,7 +97239,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Jump"
+      "title": "Don't Jump"
     },
     {
       "postId": 53281,
@@ -97338,7 +97338,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Sextiosju, sextiosju"
+      "title": "Sextisju sextisju"
     },
     {
       "postId": 53413,
@@ -97592,7 +97592,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "A Natural Woman (You Make Me Feel Like)"
+      "title": "(You Make Me Feel Like) A Natural Woman"
     },
     {
       "postId": 48044,
@@ -97786,7 +97786,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Ch‐Check It Out"
+      "title": "Ch-Check It Out"
     },
     {
       "postId": 48234,
@@ -98194,7 +98194,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Si No Te Hubiera Conocido"
+      "title": "Si no te hubiera conocido"
     },
     {
       "postId": 49005,
@@ -99174,7 +99174,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Power of Love"
+      "title": "The Power of Love"
     },
     {
       "postId": 50409,
@@ -101310,7 +101310,7 @@
         "artist-article-added"
       ],
       "trusted": true,
-      "title": "Love You 'Till the End"
+      "title": "Love You Till the End"
     },
     {
       "postId": 52184,
@@ -101391,7 +101391,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Flash’s Theme"
+      "title": "Flash"
     },
     {
       "postId": 52299,
@@ -101548,7 +101548,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Bad Case of Lovin’ You (Doctor, Doctor)"
+      "title": "Bad Case of Lovin’ You"
     },
     {
       "postId": 52543,
@@ -101739,7 +101739,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "This Is My Life"
+      "title": "This Is My Life (La vita)"
     },
     {
       "postId": 52777,
@@ -101986,7 +101986,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Don't Rush Me"
+      "title": "Don’t Rush Me"
     },
     {
       "postId": 53055,
@@ -102062,7 +102062,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’ll Always Love You"
+      "title": "I'll Always Love You"
     },
     {
       "postId": 53067,
@@ -102389,7 +102389,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "I Can’t Feel My Face"
+      "title": "Can’t Feel My Face"
     },
     {
       "postId": 53228,
@@ -102923,7 +102923,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "New England"
+      "title": "A New England"
     },
     {
       "postId": 48745,
@@ -103150,7 +103150,7 @@
       "venueArtist": "Disney",
       "proposalArtist": "Donny Osmond",
       "trusted": true,
-      "title": "I’ll Make a Man out of You"
+      "title": "I’ll Make a Man Out of You"
     },
     {
       "postId": 49413,
@@ -104084,7 +104084,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "CAN’T STOP THE FEELING!"
+      "title": "Can’t Stop the Feeling!"
     },
     {
       "postId": 51114,
@@ -104571,7 +104571,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hallelujah I Love Her So"
+      "title": "Hallelujah, I Love Her So"
     },
     {
       "postId": 52385,
@@ -104807,7 +104807,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Hedonism"
+      "title": "Hedonism (Just Because You Feel Good)"
     },
     {
       "postId": 52830,
@@ -105120,7 +105120,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "2-4-6-8 Motorway"
+      "title": "2‐4‐6‐8 Motorway"
     },
     {
       "postId": 53337,
@@ -105257,7 +105257,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Fresh Prince Of Bel-Air"
+      "title": "The Fresh Prince of Bel-Air"
     },
     {
       "postId": 53564,
@@ -105276,7 +105276,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Gettin’ Jiggy With It"
+      "title": "Gettin’ Jiggy Wit It"
     },
     {
       "postId": 53565,
@@ -107351,7 +107351,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I'll Be Missing You"
+      "title": "I’ll Be Missing You"
     },
     {
       "postId": 53107,
@@ -107947,7 +107947,7 @@
       "how": "spelling",
       "rewrites": [],
       "trusted": true,
-      "title": "Hearts Don’t Break Around Here"
+      "title": "Hearts Don't Break Around Here"
     },
     {
       "postId": 49627,
@@ -108960,7 +108960,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Who Wants to Live Forever"
+      "title": "Who Wants to Live Forever?"
     },
     {
       "postId": 52281,
@@ -109352,7 +109352,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Deidres samba"
+      "title": "Deirdres samba"
     },
     {
       "postId": 49926,
@@ -109903,7 +109903,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Que Sera, Sera"
+      "title": "Que será, será"
     },
     {
       "postId": 49119,
@@ -110126,7 +110126,7 @@
       "how": "title-first",
       "rewrites": [],
       "trusted": true,
-      "title": "Dream Baby"
+      "title": "Dream Baby (How Long Must I Dream)"
     },
     {
       "postId": 52708,
@@ -110164,7 +110164,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Baby It’s Cold Outside"
+      "title": "Baby, It’s Cold Outside"
     },
     {
       "postId": 53438,
@@ -110221,7 +110221,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Shalala Lala"
+      "title": "Sha-La-La-La-La"
     },
     {
       "postId": 53447,
@@ -110240,7 +110240,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "We Like to Party"
+      "title": "We Like to Party! (The Vengabus)"
     },
     {
       "postId": 53448,
@@ -110297,7 +110297,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You're My Heart"
+      "title": "You’re My Heart, You’re My Soul"
     },
     {
       "postId": 47963,
@@ -110845,7 +110845,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Crystal Ship"
+      "title": "The Crystal Ship"
     },
     {
       "postId": 53136,
@@ -111640,7 +111640,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Stuck With You"
+      "title": "Stuck with You"
     },
     {
       "postId": 50586,
@@ -112046,7 +112046,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Pet Semetary"
+      "title": "Pet Sematary"
     },
     {
       "postId": 52331,
@@ -112122,7 +112122,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You Better You Bet"
+      "title": "You Better, You Bet"
     },
     {
       "postId": 53190,
@@ -113065,7 +113065,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Belive"
+      "title": "Believe"
     },
     {
       "postId": 49252,
@@ -113334,7 +113334,7 @@
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Cold Heart"
+      "title": "Cold Heart (PNAU remix)"
     },
     {
       "postId": 50023,
@@ -113568,7 +113568,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Tik Tok"
+      "title": "TiK ToK"
     },
     {
       "postId": 50991,
@@ -113933,7 +113933,7 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "TRUSTFALL"
+      "title": "Trustfall"
     },
     {
       "postId": 52589,

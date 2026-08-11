@@ -26,6 +26,12 @@ import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import catalogue from "../data/songs.json" with { type: "json" };
+import {
+    isMasterAnnotation,
+    LANGUAGE_VERSION,
+    publishedTitle,
+} from "./lib/song-title.ts";
+import type { WorkLink } from "./fetch-works.ts";
 
 /**
  * Characters the dump's Unidecode pass folds but Unicode decomposition does not, since
@@ -106,101 +112,6 @@ function fromArtistAnnotation(artist: string): string | undefined {
         raw = "The Fellowship of the Ring";
     }
     return raw.length > 0 ? raw : undefined;
-}
-
-/**
- * Words that make a trailing bracket a marker for one particular master rather than part of
- * the song's name. The distinction matters twice over: `Lady Marmalade (Thunderpuss club mix)`
- * is the wrong title to show for a karaoke track, and dating that recording dates the remix.
- * Anything else in brackets is left alone, because `Exhale (Shoop Shoop)` and `The Ketchup
- * Song (Aserejé)` really are called that.
- *
- * `from` is here because MusicBrainz often folds the soundtrack credit into the recording
- * title — `Girls Talk Boys (from "Ghostbusters" original motion picture soundtrack)` — and
- * that is annotation, not the song's name. Without it, a prefix match grades as a version
- * and then publishes the contaminated title.
- */
-const VERSION_MARKER =
-    /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from)\b/i;
-
-/** A language in the bracket is why the venue wrote it — keep `Du hast (English version)`. */
-const LANGUAGE_VERSION =
-    /\b(?:english|swedish|finnish|german|spanish|french|italian|norwegian|danish|dutch|portuguese)\b/i;
-
-const MONTH =
-    /\b(?:january|february|march|april|may|june|july|august|september|october|november|december)\b/i;
-
-/**
- * Trailing brackets that name a particular master/performance rather than the song:
- * mix markers, a bare year (`(1987)`), or a concert place/date
- * (`(St. Albans High School, Australia, March 1976)`).
- */
-function isMasterAnnotation(inner: string): boolean {
-    const text = inner.trim();
-    if (VERSION_MARKER.test(text)) return true;
-    if (/^(?:19|20)\d{2}$/.test(text)) return true;
-    // Concert bootleg labels almost always carry a year plus a place or month.
-    if (/\b(?:19|20)\d{2}\b/.test(text) && (MONTH.test(text) || /,/.test(text))) return true;
-    return false;
-}
-
-/**
- * Pull the show or film out of a `(from "…")` / `(from … soundtrack)` suffix, when that is
- * what the bracket is doing. Returns undefined for every other kind of bracket.
- */
-function fromAnnotation(recording: string): string | undefined {
-    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
-    if (bracket?.[1] === undefined || !/\bfrom\b/i.test(bracket[1])) {
-        return undefined;
-    }
-    const raw = bracket[1]
-        .replace(/^\s*from\s+/i, "")
-        .replace(/\s*(?:original\s+)?(?:motion\s+picture\s+)?soundtrack\s*$/i, "")
-        .replace(/^[\s"'“”‘’]+|[\s"'“”‘’]+$/g, "")
-        .trim();
-    return raw.length > 0 ? raw : undefined;
-}
-
-/**
- * MusicBrainz often tacks the second half of a medley on as ` / Excerpt From 'Song'`.
- * That is the same kind of annotation as `(from "Ghostbusters")` — catalogue noise, not
- * the karaoke title — so the whole segment is dropped, not rewritten into a slash title.
- */
-function stripExcerptFromLabels(title: string): string {
-    const cleaned = title
-        .replace(/\s*\/\s*Excerpt From\s+['"“”‘’]?[^'"“”‘’/]+['"“”‘’]?/gi, "")
-        .replace(/\bExcerpt From\s+['"“”‘’]?[^'"“”‘’/]+['"“”‘’]?/gi, "")
-        .replace(/\s+/g, " ")
-        .trim();
-    return cleaned.length > 0 ? cleaned : title;
-}
-
-/**
- * The title to publish, which is MusicBrainz's exact recording title unless that title only
- * differs by naming a master we did not ask about — or by naming the film it is from.
- */
-function titleToUse(recording: string): { title: string; from?: string } {
-    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
-    if (bracket?.[1] === undefined || !isMasterAnnotation(bracket[1])) {
-        return { title: stripExcerptFromLabels(recording) };
-    }
-    // Language versions are the song the venue meant, not a master to strip away.
-    if (LANGUAGE_VERSION.test(bracket[1])) {
-        const language = LANGUAGE_VERSION.exec(bracket[1])?.[0];
-        if (language !== undefined) {
-            const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
-            return {
-                title: stripExcerptFromLabels(
-                    recording.replace(new RegExp(language, "i"), capitalized).replace(/\s+/g, " ").trim(),
-                ),
-            };
-        }
-        return { title: stripExcerptFromLabels(recording) };
-    }
-    const base = withoutAnnotation(recording);
-    const title = stripExcerptFromLabels(base.length > 0 ? base : recording);
-    const from = fromAnnotation(recording);
-    return from === undefined ? { title } : { title, from };
 }
 
 const LEADING_ARTICLE = /^(the|a|an)\s+/i;
@@ -735,10 +646,25 @@ async function main(): Promise<void> {
             csv: { type: "string" },
             out: { type: "string", default: "data/canonical-matches.json" },
             proposals: { type: "string", default: "data/proposals.json" },
+            works: { type: "string", default: "data/works.json" },
         },
     });
     if (values.csv === undefined) {
         throw new Error("--csv <canonical_musicbrainz_data.csv> is required.");
+    }
+
+    const workTitles = new Map<string, string>();
+    {
+        const raw = await readFile(values.works, "utf8").catch(() => undefined);
+        const file = raw === undefined ? undefined : (JSON.parse(raw) as { works: WorkLink[] });
+        for (const work of file?.works ?? []) {
+            if (work.title !== undefined && work.title.length > 0) {
+                workTitles.set(work.recordingMbid, work.title);
+            }
+        }
+        if (workTitles.size > 0) {
+            console.log(`${workTitles.size} MusicBrainz work titles to prefer over recording titles`);
+        }
     }
 
     const proposals = new Map<number, Proposal>();
@@ -1239,13 +1165,18 @@ async function main(): Promise<void> {
         // A bracketed name is one of MusicBrainz's placeholder entities, such as
         // [Disney] or [traditional]. It matches, and it means nothing.
         const placeholder = /^\[.*\]$/.test(match.artistCredit);
-        // `recording` stays MusicBrainz's own title; `title` is the one to publish and to
-        // date, which differs only where the match landed on a particular master.
-        const published = titleToUse(match.recording);
+        // `recording` stays MusicBrainz's own recording title. `title` is what to publish and
+        // date: the linked work title when it names the same song, otherwise the recording
+        // with only mix/soundtrack markers dropped — never year/concert regex hacks.
+        const workTitle =
+            match.recordingMbid === undefined ? undefined : workTitles.get(match.recordingMbid);
+        const published = publishedTitle(match.recording, workTitle);
         // A proposal's title wins when it names the work more carefully than the matched
         // master (`FourFiveSeconds` vs a remix titled with spaces; `Du hast (English version)`).
         const title =
-            proposal?.title !== undefined ? titleToUse(proposal.title).title : published.title;
+            proposal?.title !== undefined
+                ? publishedTitle(proposal.title).title
+                : published.title;
         // A proposal's `from` wins over one extracted from the recording title or from an
         // artist-column soundtrack note: the proposer is naming the show the venue filed
         // under, which is the one worth searching for. Apply even when a non-proposal key

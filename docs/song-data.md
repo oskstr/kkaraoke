@@ -709,12 +709,17 @@ A prefix match onto a bracketed suffix was applying that suffix as the title, so
 was also dating those songs from the remix, which is the very error the dating pass exists to
 avoid.
 
-The suffix cannot simply be dropped, because plenty of them are the title: `Exhale (Shoop
-Shoop)`, `The Ketchup Song (Aserejé)`, `Ain't Goin' Down ('til the Sun Comes Up)`. What
-separates them is whether the bracket names a master — mix, remix, instrumental, acoustic, live,
-karaoke, backing track, reprise and so on — so that is the test, and it is applied once in the
-matcher so that the title shown and the title dated cannot drift apart. 52 titles lose a marker;
-the genuine subtitles keep theirs.
+**Prefer the MusicBrainz work title** when `pnpm fetch:works` has linked the recording to a work
+and that work names the same song (punctuation, articles, spelling, or a subtitle expansion).
+That is the song entity; the dump's recording title is often a particular master. Incompatible
+work links (covers of differently-named works, truncated `…` titles, renamed works like
+`Faith of the Heart` / `Where My Heart Will Take Me`) keep the recording title.
+
+When there is no usable work title, only mix/soundtrack-style markers are dropped from the
+recording string. Bare years and concert place/date brackets are **not** stripped by regex —
+those need a work title, an override, or a separate-source check (`pnpm corroborate:titles`
+against Discogs and iTunes). Subtitles that are part of the name stay:
+`Exhale (Shoop Shoop)`, `The Ketchup Song (Aserejé)`.
 
 ## Order of work
 
@@ -759,11 +764,17 @@ Still to do:
     canonical recording dump — so a full works dump (or `pnpm fetch:works` against recording MBIDs) is
     required. Prefer a works dump when one is available; the API pass is correct but slow. Language
     already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
-    `from` stays reserved for shows and films; broader buckets such as Disney films, Bond themes,
-    Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` /
+    Work **titles** from the same pass are preferred over dump recording titles when they name the
+    same song. `from` stays reserved for shows and films; broader buckets such as Disney films, Bond
+    themes, Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` /
     `category` (Christmas and other traditionals already use `category` in overrides), not as
     fake performers.
-12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
+12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
+    resolved song against iTunes Search and Discogs (both on
+    [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases)).
+    It writes `data/corroboration.json` and a review markdown for songs neither source agrees with —
+    it never invents overrides. Use that list for open-web follow-up.
+13. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
