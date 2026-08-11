@@ -1,0 +1,312 @@
+{
+    "proposals": [
+        {
+            "postId": 51179,
+            "artist": "Lena Philipsson",
+            "why": "Lena PH is how the venue abbreviates Lena Philipsson"
+        },
+        {
+            "postId": 51180,
+            "artist": "Lena Philipsson",
+            "why": "abbreviation of Lena Philipsson"
+        },
+        {
+            "postId": 51181,
+            "artist": "Lena Philipsson",
+            "why": "abbreviation of Lena Philipsson"
+        },
+        {
+            "postId": 51182,
+            "artist": "Lena Philipsson",
+            "why": "abbreviation of Lena Philipsson"
+        },
+        {
+            "postId": 51183,
+            "artist": "Lena Philipsson",
+            "why": "abbreviation of Lena Philipsson"
+        },
+        {
+            "postId": 51184,
+            "artist": "Lena Philipsson",
+            "why": "abbreviation of Lena Philipsson"
+        },
+        {
+            "postId": 52199,
+            "artist": "Poison",
+            "why": "Posion is Poison with two letters swapped"
+        },
+        {
+            "postId": 52200,
+            "artist": "Poison",
+            "why": "Posion is Poison; Unskinny Bop is theirs"
+        },
+        {
+            "postId": 52201,
+            "artist": "Poison",
+            "title": "Your Mama Don't Dance",
+            "why": "Poison covered it in 1989"
+        },
+        {
+            "postId": 50257,
+            "artist": "The Go-Go's",
+            "why": "these two songs are The Go-Go's, not Goo Goo Dolls"
+        },
+        {
+            "postId": 50258,
+            "artist": "The Go-Go's",
+            "why": "The Go-Go's, 1981"
+        },
+        {
+            "postId": 50677,
+            "artist": "Jimmy Buffett",
+            "why": "one t short"
+        },
+        {
+            "postId": 50678,
+            "artist": "Jimmy Buffett",
+            "title": "Changes in Latitudes, Changes in Attitudes",
+            "why": "both words are plural"
+        },
+        {
+            "postId": 48958,
+            "artist": "Daughtry",
+            "why": "the band is Daughtry; Chris is its singer"
+        },
+        {
+            "postId": 48959,
+            "artist": "Daughtry",
+            "why": "the band is Daughtry"
+        },
+        {
+            "postId": 49007,
+            "artist": "Christina Milian",
+            "title": "AM to PM",
+            "why": "one l too many"
+        },
+        {
+            "postId": 52027,
+            "artist": "The Toys",
+            "why": "the 1965 hit"
+        },
+        {
+            "postId": 48868,
+            "artist": "Glen Weston",
+            "why": "from the 1968 Romeo and Juliet"
+        },
+        {
+            "postId": 50269,
+            "artist": "John Travolta & Olivia Newton-John",
+            "why": "the duet from Grease",
+            "from": "Grease"
+        },
+        {
+            "postId": 50270,
+            "artist": "John Travolta & Olivia Newton-John",
+            "why": "the duet from Grease",
+            "from": "Grease"
+        },
+        {
+            "postId": 50271,
+            "artist": "John Travolta",
+            "title": "Greased Lightnin'",
+            "why": "Travolta's number; the title is elided",
+            "from": "Grease"
+        },
+        {
+            "postId": 52853,
+            "artist": "Julie Andrews",
+            "title": "My Favorite Things",
+            "why": "American spelling",
+            "from": "The Sound of Music"
+        },
+        {
+            "postId": 52855,
+            "artist": "Julie Andrews",
+            "why": "the title number",
+            "from": "The Sound of Music"
+        },
+        {
+            "postId": 52852,
+            "artist": "Christopher Plummer",
+            "why": "von Trapp sings it in the film",
+            "from": "The Sound of Music"
+        },
+        {
+            "postId": 52854,
+            "artist": "Julie Andrews",
+            "why": "the children's number, led by Andrews on the soundtrack",
+            "from": "The Sound of Music"
+        },
+        {
+            "postId": 51749,
+            "artist": "Nicole Kidman & Ewan McGregor",
+            "why": "the duet",
+            "from": "Moulin Rouge!"
+        },
+        {
+            "postId": 51750,
+            "artist": "Ewan McGregor",
+            "why": "McGregor sings it in the film",
+            "from": "Moulin Rouge!"
+        },
+        {
+            "postId": 51751,
+            "artist": "Nicole Kidman & Ewan McGregor",
+            "why": "the duet",
+            "from": "Moulin Rouge!"
+        },
+        {
+            "postId": 49422,
+            "artist": "Julie Andrews",
+            "title": "A Spoonful of Sugar",
+            "why": "Mary Poppins; spoonful is one word",
+            "from": "Mary Poppins"
+        },
+        {
+            "postId": 49412,
+            "artist": "Donny Osmond",
+            "why": "Osmond is Shang's singing voice in Mulan",
+            "from": "Mulan"
+        },
+        {
+            "postId": 49420,
+            "artist": "Linda Hunt",
+            "title": "Listen with Your Heart",
+            "why": "Pocahontas; your, not you",
+            "from": "Pocahontas"
+        },
+        {
+            "postId": 50127,
+            "artist": "Evan Rachel Wood",
+            "why": "Queen Iduna's lullaby",
+            "from": "Frozen II"
+        },
+        {
+            "postId": 50128,
+            "artist": "Josh Gad",
+            "title": "When I Am Older",
+            "why": "Olaf's number",
+            "from": "Frozen II"
+        },
+        {
+            "postId": 50129,
+            "artist": "Kristen Bell",
+            "why": "Anna's number",
+            "from": "Frozen II"
+        },
+        {
+            "postId": 50661,
+            "artist": "Yvonne Elliman",
+            "why": "Mary Magdalene on the 1970 album",
+            "from": "Jesus Christ Superstar"
+        },
+        {
+            "postId": 50662,
+            "artist": "Murray Head",
+            "why": "Judas on the 1970 album",
+            "from": "Jesus Christ Superstar"
+        },
+        {
+            "postId": 51771,
+            "artist": "Stanley Holloway",
+            "title": "Get Me to the Church on Time",
+            "why": "Doolittle's number",
+            "from": "My Fair Lady"
+        },
+        {
+            "postId": 51772,
+            "artist": "Vic Damone",
+            "title": "On the Street Where You Live",
+            "why": "Damone's hit version",
+            "from": "My Fair Lady"
+        },
+        {
+            "postId": 50174,
+            "artist": "Glenn Medeiros",
+            "why": "Medeiros 1986; nothing to do with George Harrison"
+        },
+        {
+            "postId": 49679,
+            "artist": "Simple Minds",
+            "why": "Simple Minds, 1995"
+        },
+        {
+            "postId": 48833,
+            "artist": "Aretha Franklin",
+            "title": "(You Make Me Feel Like) A Natural Woman",
+            "why": "Franklin, 1967"
+        },
+        {
+            "postId": 52055,
+            "artist": "Simply Red",
+            "title": "For Your Babies",
+            "why": "Simply Red, 1992"
+        },
+        {
+            "postId": 52873,
+            "artist": "Geri Halliwell",
+            "why": "Halliwell solo, 1999"
+        },
+        {
+            "postId": 52874,
+            "artist": "Geri Halliwell",
+            "why": "Halliwell solo, 1999"
+        },
+        {
+            "postId": 52876,
+            "artist": "Geri Halliwell",
+            "why": "Halliwell solo, 2000"
+        },
+        {
+            "postId": 52875,
+            "artist": "Geri Halliwell",
+            "why": "Halliwell solo, 1999"
+        },
+        {
+            "postId": 52877,
+            "artist": "Melanie C",
+            "why": "Melanie C solo, 1999"
+        },
+        {
+            "postId": 52879,
+            "artist": "Melanie C",
+            "why": "Melanie C solo, 1999"
+        },
+        {
+            "postId": 52880,
+            "artist": "Tin Tin Out & Emma Bunton",
+            "why": "Bunton with Tin Tin Out, 1999"
+        },
+        {
+            "postId": 52881,
+            "artist": "Melanie B",
+            "why": "Melanie B with Missy Elliott, 1998"
+        },
+        {
+            "postId": 52128,
+            "artist": "Dionne Warwick",
+            "why": "Bacharach and David; Warwick is the standard"
+        },
+        {
+            "postId": 49960,
+            "artist": "Eppu Normaali",
+            "why": "low confidence"
+        },
+        {
+            "postId": 49959,
+            "artist": "Dingo",
+            "why": "low confidence"
+        },
+        {
+            "postId": 49963,
+            "artist": "Dingo",
+            "why": "low confidence"
+        },
+        {
+            "postId": 47722,
+            "artist": "2Pac feat. K-Ci & JoJo",
+            "title": "How Do U Want It",
+            "why": "the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo"
+        }
+    ]
+}

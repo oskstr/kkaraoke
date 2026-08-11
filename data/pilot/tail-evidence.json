@@ -1,0 +1,5624 @@
+{
+  "artists": [
+    {
+      "artist": "Thore Skogman",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1063,
+          "song": "Storfiskarvalsen"
+        }
+      ],
+      "sampledTitles": [
+        "Storfiskarvalsen"
+      ],
+      "candidates": [
+        {
+          "mbid": "fda81f3a-de9e-4e44-82c3-f8f385982794",
+          "name": "Thore Skogman",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "composer, lyricist, singer, musician",
+          "country": "SE",
+          "began": "1931-03-09",
+          "aliases": [
+            "Elof Lars Thore Skogman",
+            "Tore Skogman"
+          ],
+          "titleChecks": [
+            {
+              "title": "Storfiskarvalsen",
+              "found": true,
+              "canonicalTitle": "Storfiskarvalsen",
+              "score": 100,
+              "firstReleaseDate": "2007"
+            }
+          ]
+        },
+        {
+          "mbid": "df8e2df4-3999-48fd-b9c2-f96538e0d6b9",
+          "name": "Hobby",
+          "score": 86,
+          "type": "Person",
+          "disambiguation": "Thore Skogman",
+          "country": "SE",
+          "aliases": [
+            "Thore Skogman"
+          ],
+          "titleChecks": [
+            {
+              "title": "Storfiskarvalsen",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "8ca281e5-7f85-4ca2-b947-15b24c57f19c",
+          "name": "ThorE",
+          "score": 37,
+          "type": "Group",
+          "began": "2000",
+          "titleChecks": [
+            {
+              "title": "Storfiskarvalsen",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Tim Deluxe & Sam Obernik",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 127,
+          "song": "It just won't do"
+        }
+      ],
+      "sampledTitles": [
+        "It just won't do"
+      ],
+      "candidates": [
+        {
+          "mbid": "4147c29e-dd36-412f-815f-3d55867df192",
+          "name": "Sam Obernik",
+          "score": 100,
+          "type": "Person",
+          "country": "IE",
+          "aliases": [
+            "Sam Obemik"
+          ],
+          "titleChecks": [
+            {
+              "title": "It just won't do",
+              "found": true,
+              "canonicalTitle": "It Just Won't Do",
+              "score": 100,
+              "firstReleaseDate": "2002"
+            }
+          ]
+        },
+        {
+          "mbid": "54d86cc6-2c30-47b4-bb68-cf5d82560e5c",
+          "name": "Tim Deluxe",
+          "score": 89,
+          "type": "Person",
+          "country": "GB",
+          "began": "1977-07-18",
+          "aliases": [
+            "Tim de Luxe",
+            "Tim deLuxe",
+            "Tim Deluxe (dub)",
+            "Tim Delux",
+            "Time Deluxe"
+          ],
+          "titleChecks": [
+            {
+              "title": "It just won't do",
+              "found": true,
+              "canonicalTitle": "It Just Won’t Do",
+              "score": 100,
+              "firstReleaseDate": "2009-10-05"
+            }
+          ]
+        },
+        {
+          "mbid": "82d9f085-ce40-41f7-a1ed-3bb0f42c1823",
+          "name": "Obernik",
+          "score": 81,
+          "titleChecks": [
+            {
+              "title": "It just won't do",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Tim Deluxe",
+          "candidates": [
+            {
+              "mbid": "54d86cc6-2c30-47b4-bb68-cf5d82560e5c",
+              "name": "Tim Deluxe",
+              "score": 100,
+              "type": "Person",
+              "country": "GB",
+              "began": "1977-07-18",
+              "aliases": [
+                "Tim de Luxe",
+                "Tim deLuxe",
+                "Tim Deluxe (dub)",
+                "Tim Delux",
+                "Time Deluxe"
+              ],
+              "titleChecks": [
+                {
+                  "title": "It just won't do",
+                  "found": true,
+                  "canonicalTitle": "It Just Won’t Do",
+                  "score": 100,
+                  "firstReleaseDate": "2009-10-05"
+                }
+              ]
+            },
+            {
+              "mbid": "b83531c2-58fe-40e6-9d2c-0d98be764073",
+              "name": "Deluxe",
+              "score": 51,
+              "type": "Group",
+              "disambiguation": "French electro/hip‐hop band",
+              "country": "FR",
+              "began": "2007",
+              "titleChecks": [
+                {
+                  "title": "It just won't do",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Sam Obernik",
+          "candidates": [
+            {
+              "mbid": "4147c29e-dd36-412f-815f-3d55867df192",
+              "name": "Sam Obernik",
+              "score": 100,
+              "type": "Person",
+              "country": "IE",
+              "aliases": [
+                "Sam Obemik"
+              ],
+              "titleChecks": [
+                {
+                  "title": "It just won't do",
+                  "found": true,
+                  "canonicalTitle": "It Just Won't Do",
+                  "score": 100,
+                  "firstReleaseDate": "2002"
+                }
+              ]
+            },
+            {
+              "mbid": "82d9f085-ce40-41f7-a1ed-3bb0f42c1823",
+              "name": "Obernik",
+              "score": 49,
+              "titleChecks": [
+                {
+                  "title": "It just won't do",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Kalle Moraeus & Orsa spelmän",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2490,
+          "song": "Underbart"
+        }
+      ],
+      "sampledTitles": [
+        "Underbart"
+      ],
+      "candidates": [
+        {
+          "mbid": "526ac48e-0357-47b6-a646-3ad31be2ff1d",
+          "name": "Orsa spelmän",
+          "score": 100,
+          "type": "Group",
+          "country": "SE",
+          "began": "1987",
+          "titleChecks": [
+            {
+              "title": "Underbart",
+              "found": true,
+              "canonicalTitle": "Underbart",
+              "score": 100,
+              "firstReleaseDate": "2010"
+            }
+          ]
+        },
+        {
+          "mbid": "bdde932a-1a0c-4dc1-be0b-9140769eedfe",
+          "name": "Kalle Moraeus",
+          "score": 89,
+          "type": "Person",
+          "country": "SE",
+          "began": "1963-07-15",
+          "aliases": [
+            "Kalle Moreaus"
+          ],
+          "titleChecks": [
+            {
+              "title": "Underbart",
+              "found": true,
+              "canonicalTitle": "Underbart",
+              "score": 100,
+              "firstReleaseDate": "2010"
+            }
+          ]
+        },
+        {
+          "mbid": "15981756-8c83-49bb-9bcb-c8f18c77c981",
+          "name": "Orsa Spelmanslag",
+          "score": 75,
+          "type": "Group",
+          "began": "1948",
+          "titleChecks": [
+            {
+              "title": "Underbart",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Kalle Moraeus",
+          "candidates": [
+            {
+              "mbid": "bdde932a-1a0c-4dc1-be0b-9140769eedfe",
+              "name": "Kalle Moraeus",
+              "score": 100,
+              "type": "Person",
+              "country": "SE",
+              "began": "1963-07-15",
+              "aliases": [
+                "Kalle Moreaus"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Underbart",
+                  "found": true,
+                  "canonicalTitle": "Underbart",
+                  "score": 100,
+                  "firstReleaseDate": "2010"
+                }
+              ]
+            },
+            {
+              "mbid": "ae0534cf-9061-4825-96e7-7d8eba90dd9b",
+              "name": "Dubmood",
+              "score": 39,
+              "type": "Person",
+              "country": "FR",
+              "aliases": [
+                "Kalle Jonsson"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Underbart",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Orsa spelmän",
+          "candidates": [
+            {
+              "mbid": "526ac48e-0357-47b6-a646-3ad31be2ff1d",
+              "name": "Orsa spelmän",
+              "score": 100,
+              "type": "Group",
+              "country": "SE",
+              "began": "1987",
+              "titleChecks": [
+                {
+                  "title": "Underbart",
+                  "found": true,
+                  "canonicalTitle": "Underbart",
+                  "score": 100,
+                  "firstReleaseDate": "2010"
+                }
+              ]
+            },
+            {
+              "mbid": "15981756-8c83-49bb-9bcb-c8f18c77c981",
+              "name": "Orsa Spelmanslag",
+              "score": 43,
+              "type": "Group",
+              "began": "1948",
+              "titleChecks": [
+                {
+                  "title": "Underbart",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Fairground Attraction",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 32,
+          "song": "Perfect"
+        }
+      ],
+      "sampledTitles": [
+        "Perfect"
+      ],
+      "candidates": [
+        {
+          "mbid": "63f4a78d-009d-4579-98f6-810d15f18397",
+          "name": "Fairground Attraction",
+          "score": 100,
+          "type": "Group",
+          "country": "GB",
+          "began": "1987",
+          "aliases": [
+            "Fairgrond Attraction"
+          ],
+          "titleChecks": [
+            {
+              "title": "Perfect",
+              "found": true,
+              "canonicalTitle": "Perfect",
+              "score": 100,
+              "firstReleaseDate": "1988-09-05"
+            }
+          ]
+        },
+        {
+          "mbid": "16f29112-9c50-4d96-8445-64e322ecd902",
+          "name": "Fairground",
+          "score": 41,
+          "titleChecks": [
+            {
+              "title": "Perfect",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "15e86b37-63d8-456c-941a-c4ff19f753ef",
+          "name": "Attraction",
+          "score": 38,
+          "disambiguation": "US Hard Rock",
+          "began": "1999",
+          "titleChecks": [
+            {
+              "title": "Perfect",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Wild Cherry",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 33,
+          "song": "Play that funky music"
+        }
+      ],
+      "sampledTitles": [
+        "Play that funky music"
+      ],
+      "candidates": [
+        {
+          "mbid": "da5ff827-174b-48d1-9a39-9fa290bb2925",
+          "name": "Wild Cherry",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "1970s US funk rock band, known for “Play That Funky Music”",
+          "country": "US",
+          "began": "1970",
+          "aliases": [
+            "ワイルド・チェリー"
+          ],
+          "titleChecks": [
+            {
+              "title": "Play that funky music",
+              "found": true,
+              "canonicalTitle": "Play That Funky Music",
+              "score": 100,
+              "firstReleaseDate": "1996-10-21"
+            }
+          ]
+        },
+        {
+          "mbid": "03feef50-bb45-4165-a233-0cc118a242d9",
+          "name": "Wild Cherry",
+          "score": 92,
+          "type": "Group",
+          "disambiguation": "band made up of staff from the Last Resort Grill in Athens, GA, USA",
+          "country": "US",
+          "titleChecks": [
+            {
+              "title": "Play that funky music",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "a9883ee5-5dbe-478c-8d3d-03d0035921c8",
+          "name": "WILD CHERRY BOOTS",
+          "score": 81,
+          "type": "Group",
+          "disambiguation": "Japanese soft visual",
+          "country": "JP",
+          "began": "1994",
+          "titleChecks": [
+            {
+              "title": "Play that funky music",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Ray Charles & Elton John",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1786,
+          "song": "Sorry seems to be the hardest word"
+        }
+      ],
+      "sampledTitles": [
+        "Sorry seems to be the hardest word"
+      ],
+      "candidates": [
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "English singer, songwriter, pianist, and composer",
+          "country": "GB",
+          "began": "1947-03-25",
+          "aliases": [
+            "Reg Dwight",
+            "John, Elton",
+            "E. John",
+            "Elthon John",
+            "Elton Hercules John",
+            "Eltonas Džonas",
+            "Seras Eltonas Džonas",
+            "Reginald Kenneth Dwight",
+            "エルトン・ジョン",
+            "Reginald Dwight",
+            "Ann Orson",
+            "Sir Elton John",
+            "Elton Jphn",
+            "Sir Elton Hercules John",
+            "John Elton"
+          ],
+          "titleChecks": [
+            {
+              "title": "Sorry seems to be the hardest word",
+              "found": true,
+              "canonicalTitle": "Sorry Seems to Be the Hardest Word",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "2ce02909-598b-44ef-a456-151ba0a3bd70",
+          "name": "Ray Charles",
+          "score": 94,
+          "type": "Person",
+          "disambiguation": "soul musician, singer and songwriter",
+          "country": "US",
+          "began": "1930-09-23",
+          "aliases": [
+            "Ray Charles Robinson",
+            "レイ・チャールズ",
+            "Charles Ray",
+            "R. Charles"
+          ],
+          "titleChecks": [
+            {
+              "title": "Sorry seems to be the hardest word",
+              "found": true,
+              "canonicalTitle": "Sorry Seems to Be the Hardest Word",
+              "score": 100,
+              "firstReleaseDate": "2004"
+            }
+          ]
+        },
+        {
+          "mbid": "2aaa33f9-51c7-4d27-afdc-8e5fc61b2b83",
+          "name": "Elton Charles",
+          "score": 75,
+          "titleChecks": [
+            {
+              "title": "Sorry seems to be the hardest word",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Ray Charles",
+          "candidates": [
+            {
+              "mbid": "2ce02909-598b-44ef-a456-151ba0a3bd70",
+              "name": "Ray Charles",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "soul musician, singer and songwriter",
+              "country": "US",
+              "began": "1930-09-23",
+              "aliases": [
+                "Ray Charles Robinson",
+                "レイ・チャールズ",
+                "Charles Ray",
+                "R. Charles"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Sorry seems to be the hardest word",
+                  "found": true,
+                  "canonicalTitle": "Sorry Seems to Be the Hardest Word",
+                  "score": 100,
+                  "firstReleaseDate": "2004"
+                }
+              ]
+            },
+            {
+              "mbid": "8518b7af-5e33-498a-90c9-9fd772f4c422",
+              "name": "Ray Charles",
+              "score": 79,
+              "type": "Person",
+              "disambiguation": "Charles Raymond Offenberg, NOT the famous blind pianist",
+              "country": "US",
+              "began": "1918-09-13",
+              "aliases": [
+                "Charles Raymond Offenberg"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Sorry seems to be the hardest word",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Elton John",
+          "candidates": [
+            {
+              "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+              "name": "Elton John",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "English singer, songwriter, pianist, and composer",
+              "country": "GB",
+              "began": "1947-03-25",
+              "aliases": [
+                "Reg Dwight",
+                "John, Elton",
+                "E. John",
+                "Elthon John",
+                "Elton Hercules John",
+                "Eltonas Džonas",
+                "Seras Eltonas Džonas",
+                "Reginald Kenneth Dwight",
+                "エルトン・ジョン",
+                "Reginald Dwight",
+                "Ann Orson",
+                "Sir Elton John",
+                "Elton Jphn",
+                "Sir Elton Hercules John",
+                "John Elton"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Sorry seems to be the hardest word",
+                  "found": true,
+                  "canonicalTitle": "Sorry Seems to Be the Hardest Word",
+                  "score": 100
+                }
+              ]
+            },
+            {
+              "mbid": "6e9199f8-208c-41f9-a176-e5b3dd5a0c76",
+              "name": "Elton John Band",
+              "score": 72,
+              "type": "Group",
+              "titleChecks": [
+                {
+                  "title": "Sorry seems to be the hardest word",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Steve Winwood",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2226,
+          "song": "Higher love"
+        }
+      ],
+      "sampledTitles": [
+        "Higher love"
+      ],
+      "candidates": [
+        {
+          "mbid": "885f90ef-6bd9-409a-b2df-e165e553c68e",
+          "name": "Steve Winwood",
+          "score": 100,
+          "type": "Person",
+          "country": "GB",
+          "began": "1948-05-12",
+          "aliases": [
+            "Stevie Winwood",
+            "Steve Windwood",
+            "Steve Anglo",
+            "Stephen Lawrence Winwood"
+          ],
+          "titleChecks": [
+            {
+              "title": "Higher love",
+              "found": true,
+              "canonicalTitle": "Higher Love",
+              "score": 100,
+              "firstReleaseDate": "1992"
+            }
+          ]
+        },
+        {
+          "mbid": "fa97a850-8fa7-4349-b1d3-2bcc07657376",
+          "name": "John Clarke",
+          "score": 47,
+          "type": "Person",
+          "disambiguation": "engineer, associated with Steve Winwood",
+          "titleChecks": [
+            {
+              "title": "Higher love",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "9fadfba9-ecae-4383-a4d8-47b043cea19a",
+          "name": "Traffic",
+          "score": 46,
+          "type": "Group",
+          "disambiguation": "English rock band",
+          "country": "GB",
+          "began": "1967-04",
+          "aliases": [
+            "Stevie Winwood's Traffic"
+          ],
+          "titleChecks": [
+            {
+              "title": "Higher love",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "4him",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3713,
+          "song": "Basics of life"
+        }
+      ],
+      "sampledTitles": [
+        "Basics of life"
+      ],
+      "candidates": [
+        {
+          "mbid": "3f49566c-2c59-440e-8ea5-4d7afa1ee3f2",
+          "name": "4Him",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "1990",
+          "aliases": [
+            "4 Him"
+          ],
+          "titleChecks": [
+            {
+              "title": "Basics of life",
+              "found": true,
+              "canonicalTitle": "Basics of Life",
+              "score": 100,
+              "firstReleaseDate": "2006"
+            }
+          ]
+        },
+        {
+          "mbid": "2c25cb03-a9ee-44eb-a385-407fdd68288e",
+          "name": "Mark Harris",
+          "score": 48,
+          "type": "Person",
+          "disambiguation": "Contemporary Christian artist, formerly of 4Him",
+          "country": "US",
+          "began": "1962-08-01",
+          "aliases": [
+            "Marcus R. Harris"
+          ],
+          "titleChecks": [
+            {
+              "title": "Basics of life",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "235c6274-0c9f-4c07-be66-b7d32caa80f3",
+          "name": "John Hammond",
+          "score": 47,
+          "type": "Person",
+          "disambiguation": "musician in 4him, drummer",
+          "titleChecks": [
+            {
+              "title": "Basics of life",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Hanna Hedlund",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5671,
+          "song": "Anropar försvunnen"
+        }
+      ],
+      "sampledTitles": [
+        "Anropar försvunnen"
+      ],
+      "candidates": [
+        {
+          "mbid": "a4b8e71f-9f34-4b36-8db9-6a9b12abc2d9",
+          "name": "Hanna Hedlund",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1975-01-24",
+          "aliases": [
+            "Hanna Kristina Hedlund"
+          ],
+          "titleChecks": [
+            {
+              "title": "Anropar försvunnen",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "cb6036be-08d9-4b3e-a2aa-2a0bc6078ff4",
+          "name": "Hanna",
+          "score": 66,
+          "type": "Person",
+          "disambiguation": "Swedish synth-pop artist Hanna Hedlund",
+          "country": "SE",
+          "titleChecks": [
+            {
+              "title": "Anropar försvunnen",
+              "found": true,
+              "canonicalTitle": "Anropar försvunnen",
+              "score": 100,
+              "firstReleaseDate": "2001"
+            }
+          ]
+        },
+        {
+          "mbid": "22a73fcb-6b79-439c-89e9-95363fb8760e",
+          "name": "Johanna Hedlund",
+          "score": 47,
+          "type": "Person",
+          "disambiguation": "cellist",
+          "titleChecks": [
+            {
+              "title": "Anropar försvunnen",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lumineers",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5201,
+          "song": "Ho Hey"
+        }
+      ],
+      "sampledTitles": [
+        "Ho Hey"
+      ],
+      "candidates": [
+        {
+          "mbid": "bfcb6630-9b31-4e63-b11f-7b0363be72b5",
+          "name": "The Lumineers",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "2008-12-31",
+          "aliases": [
+            "Lumineers"
+          ],
+          "titleChecks": [
+            {
+              "title": "Ho Hey",
+              "found": true,
+              "canonicalTitle": "Ho Hey",
+              "score": 100,
+              "firstReleaseDate": "2012-11-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Third World",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2078,
+          "song": "Now that we found love"
+        }
+      ],
+      "sampledTitles": [
+        "Now that we found love"
+      ],
+      "candidates": [
+        {
+          "mbid": "a9355030-319f-4d1b-8798-adaf43f85112",
+          "name": "Third World",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Jamaican reggae fusion band",
+          "country": "JM",
+          "began": "1973",
+          "aliases": [
+            "Thirld World"
+          ],
+          "titleChecks": [
+            {
+              "title": "Now that we found love",
+              "found": true,
+              "canonicalTitle": "Now That We Found Love",
+              "score": 100,
+              "firstReleaseDate": "2008-02-20"
+            }
+          ]
+        },
+        {
+          "mbid": "16d4af7c-4475-4aae-9091-a68aa40ed1b7",
+          "name": "Third World",
+          "score": 90,
+          "type": "Group",
+          "disambiguation": "70s US band",
+          "titleChecks": [
+            {
+              "title": "Now that we found love",
+              "found": true,
+              "canonicalTitle": "Now That We Found Love [*]",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "4dece762-e1c9-4d92-9913-703da7213144",
+          "name": "Third World Love",
+          "score": 79,
+          "type": "Group",
+          "disambiguation": "world fusion band",
+          "country": "IL",
+          "began": "2002",
+          "aliases": [
+            "Third World Love [Avishai Cohen, Yonatan Avishai, Omer Avital, Daniel Freedman]"
+          ],
+          "titleChecks": [
+            {
+              "title": "Now that we found love",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Charlie Drake",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1679,
+          "song": "My boomerang won't come back"
+        }
+      ],
+      "sampledTitles": [
+        "My boomerang won't come back"
+      ],
+      "candidates": [
+        {
+          "mbid": "adebd47c-c1c7-4b2d-b1ce-105005f3fdb1",
+          "name": "Charlie Drake",
+          "score": 100,
+          "type": "Person",
+          "country": "GB",
+          "began": "1925-06-19",
+          "titleChecks": [
+            {
+              "title": "My boomerang won't come back",
+              "found": true,
+              "canonicalTitle": "My Boomerang Won't Come Back",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+          "name": "Drake",
+          "score": 62,
+          "type": "Person",
+          "disambiguation": "Canadian rapper",
+          "country": "CA",
+          "began": "1986-10-24",
+          "aliases": [
+            "ドレイク",
+            "Champagne Papi",
+            "Aubrey Drake Graham",
+            "C. Papi"
+          ],
+          "titleChecks": [
+            {
+              "title": "My boomerang won't come back",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "c7356af9-9ea6-4a78-a55b-c73775716312",
+          "name": "Charlie Parker",
+          "score": 57,
+          "type": "Person",
+          "disambiguation": "aka “Bird”, jazz alto saxophonist",
+          "country": "US",
+          "began": "1920-08-29",
+          "aliases": [
+            "Bird And Chet",
+            "Charlie Parker with Strings",
+            "Charles Christopher Parker, Jr",
+            "Charlie \"Chan\" Parker",
+            "Charlie Parker and Strings",
+            "Charley Parker",
+            "Charlier Parker with Strings",
+            "Charles Parker",
+            "Charlie Parker Jam Session",
+            "Charlie Chan",
+            "C. Parker",
+            "Bird"
+          ],
+          "titleChecks": [
+            {
+              "title": "My boomerang won't come back",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Diana Ross & Marvin Gaye",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1800,
+          "song": "You are everything"
+        }
+      ],
+      "sampledTitles": [
+        "You are everything"
+      ],
+      "candidates": [
+        {
+          "mbid": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+          "name": "Marvin Gaye",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1939-04-02",
+          "aliases": [
+            "Marvin Pentz Gay, Jr.",
+            "Marvin Gay",
+            "Marvine Gaye",
+            "Marving Gaye",
+            "Marvin P. Gaye"
+          ],
+          "titleChecks": [
+            {
+              "title": "You are everything",
+              "found": true,
+              "canonicalTitle": "You Are Everything",
+              "score": 100,
+              "firstReleaseDate": "2004"
+            }
+          ]
+        },
+        {
+          "mbid": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+          "name": "Diana Ross",
+          "score": 87,
+          "type": "Person",
+          "country": "US",
+          "began": "1944-03-26",
+          "aliases": [
+            "Diana Ernestine Earle Ross",
+            "Dianna Ross",
+            "Diane Earle",
+            "ダイアナ・ロス"
+          ],
+          "titleChecks": [
+            {
+              "title": "You are everything",
+              "found": true,
+              "canonicalTitle": "You Are Everything",
+              "score": 100,
+              "firstReleaseDate": "2001"
+            }
+          ]
+        },
+        {
+          "mbid": "c1aa2ec9-53e7-4d90-8d36-bac75832e986",
+          "name": "The Supremes",
+          "score": 81,
+          "type": "Group",
+          "disambiguation": "60s/70s Motown singing group",
+          "country": "US",
+          "began": "1961-01-15",
+          "aliases": [
+            "Diana Ross-Supremes",
+            "Dianna Ross & The Supremes",
+            "Diana Ross + The Supremes",
+            "Diana Ross and The Supremes",
+            "Diana Ross & The Supremes",
+            "Dianna Ross and The Supremes",
+            "The Surpremes",
+            "Supremes",
+            "Diana Ross & Supremes"
+          ],
+          "titleChecks": [
+            {
+              "title": "You are everything",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Diana Ross",
+          "candidates": [
+            {
+              "mbid": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+              "name": "Diana Ross",
+              "score": 100,
+              "type": "Person",
+              "country": "US",
+              "began": "1944-03-26",
+              "aliases": [
+                "Diana Ernestine Earle Ross",
+                "Dianna Ross",
+                "Diane Earle",
+                "ダイアナ・ロス"
+              ],
+              "titleChecks": [
+                {
+                  "title": "You are everything",
+                  "found": true,
+                  "canonicalTitle": "You Are Everything",
+                  "score": 100,
+                  "firstReleaseDate": "2001"
+                }
+              ]
+            },
+            {
+              "mbid": "c1aa2ec9-53e7-4d90-8d36-bac75832e986",
+              "name": "The Supremes",
+              "score": 79,
+              "type": "Group",
+              "disambiguation": "60s/70s Motown singing group",
+              "country": "US",
+              "began": "1961-01-15",
+              "aliases": [
+                "Diana Ross-Supremes",
+                "Dianna Ross & The Supremes",
+                "Diana Ross + The Supremes",
+                "Diana Ross and The Supremes",
+                "Diana Ross & The Supremes",
+                "Dianna Ross and The Supremes",
+                "The Surpremes",
+                "Supremes",
+                "Diana Ross & Supremes"
+              ],
+              "titleChecks": [
+                {
+                  "title": "You are everything",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Marvin Gaye",
+          "candidates": [
+            {
+              "mbid": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+              "name": "Marvin Gaye",
+              "score": 100,
+              "type": "Person",
+              "country": "US",
+              "began": "1939-04-02",
+              "aliases": [
+                "Marvin Pentz Gay, Jr.",
+                "Marvin Gay",
+                "Marvine Gaye",
+                "Marving Gaye",
+                "Marvin P. Gaye"
+              ],
+              "titleChecks": [
+                {
+                  "title": "You are everything",
+                  "found": true,
+                  "canonicalTitle": "You Are Everything",
+                  "score": 100,
+                  "firstReleaseDate": "2004"
+                }
+              ]
+            },
+            {
+              "mbid": "84841a06-cc26-443f-9641-5a740313009e",
+              "name": "A Tribute to Marvin Gaye",
+              "score": 58,
+              "type": "Group",
+              "disambiguation": "Belgian tribute project",
+              "country": "BE",
+              "began": "2014",
+              "likelyTributeOrCover": true,
+              "titleChecks": [
+                {
+                  "title": "You are everything",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Sara Evans",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 309,
+          "song": "Show me the way to your heart"
+        }
+      ],
+      "sampledTitles": [
+        "Show me the way to your heart"
+      ],
+      "candidates": [
+        {
+          "mbid": "773af101-792f-48b8-a588-09a07cff5e53",
+          "name": "Sara Evans",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1971-02-05",
+          "titleChecks": [
+            {
+              "title": "Show me the way to your heart",
+              "found": true,
+              "canonicalTitle": "Show Me the Way to Your Heart",
+              "score": 100,
+              "firstReleaseDate": "2000-10-10"
+            }
+          ]
+        },
+        {
+          "mbid": "f7c4c457-f2d4-4d01-890e-7ddb485b36d6",
+          "name": "Sara Evans Tribute",
+          "score": 80,
+          "type": "Group",
+          "titleChecks": [
+            {
+              "title": "Show me the way to your heart",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "8247a3f2-3a8e-4256-b322-6c57b03a4e36",
+          "name": "Bill Evans",
+          "score": 55,
+          "type": "Person",
+          "disambiguation": "pianist",
+          "country": "US",
+          "began": "1929-08-16",
+          "aliases": [
+            "Bill Evans & Tony Bennett",
+            "William John Evans",
+            "Evans, Bill"
+          ],
+          "titleChecks": [
+            {
+              "title": "Show me the way to your heart",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Flo Rida ft Jason Derulo",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5722,
+          "song": "Hello Friday"
+        }
+      ],
+      "sampledTitles": [
+        "Hello Friday"
+      ],
+      "candidates": [
+        {
+          "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
+          "name": "Jason Derulo",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1989-09-21",
+          "aliases": [
+            "Jason Derülo",
+            "Jason Joel Desrouleaux",
+            "Jason Desrouleaux"
+          ],
+          "titleChecks": [
+            {
+              "title": "Hello Friday",
+              "found": true,
+              "canonicalTitle": "Hello Friday",
+              "score": 100,
+              "firstReleaseDate": "2016-02-26"
+            }
+          ]
+        },
+        {
+          "mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+          "name": "Flo Rida",
+          "score": 99,
+          "type": "Person",
+          "disambiguation": "American rapper",
+          "country": "US",
+          "began": "1979-09-16",
+          "aliases": [
+            "フロー・ライダー",
+            "Tramar Lacel Dillard",
+            "Tramar Dillard",
+            "Florida",
+            "Flo Rida",
+            "flo rida (digi remix)",
+            "Flo-Rida"
+          ],
+          "titleChecks": [
+            {
+              "title": "Hello Friday",
+              "found": true,
+              "canonicalTitle": "Hello Friday",
+              "score": 100,
+              "firstReleaseDate": "2016-02-26"
+            }
+          ]
+        },
+        {
+          "mbid": "2eb6d0ff-55d2-4863-92ee-820c01ca8ab1",
+          "name": "Rida",
+          "score": 67,
+          "type": "Person",
+          "disambiguation": "Lebanese Singer",
+          "country": "LB",
+          "titleChecks": [
+            {
+              "title": "Hello Friday",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Flo Rida",
+          "candidates": [
+            {
+              "mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+              "name": "Flo Rida",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "American rapper",
+              "country": "US",
+              "began": "1979-09-16",
+              "aliases": [
+                "フロー・ライダー",
+                "Tramar Lacel Dillard",
+                "Tramar Dillard",
+                "Florida",
+                "Flo Rida",
+                "flo rida (digi remix)",
+                "Flo-Rida"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hello Friday",
+                  "found": true,
+                  "canonicalTitle": "Hello Friday",
+                  "score": 100,
+                  "firstReleaseDate": "2016-02-26"
+                }
+              ]
+            },
+            {
+              "mbid": "2eb6d0ff-55d2-4863-92ee-820c01ca8ab1",
+              "name": "Rida",
+              "score": 42,
+              "type": "Person",
+              "disambiguation": "Lebanese Singer",
+              "country": "LB",
+              "titleChecks": [
+                {
+                  "title": "Hello Friday",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Jason Derulo",
+          "candidates": [
+            {
+              "mbid": "6de0f914-3e60-4418-be3b-42e0feb6eb4d",
+              "name": "Jason Derulo",
+              "score": 100,
+              "type": "Person",
+              "country": "US",
+              "began": "1989-09-21",
+              "aliases": [
+                "Jason Derülo",
+                "Jason Joel Desrouleaux",
+                "Jason Desrouleaux"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Hello Friday",
+                  "found": true,
+                  "canonicalTitle": "Hello Friday",
+                  "score": 100,
+                  "firstReleaseDate": "2016-02-26"
+                }
+              ]
+            },
+            {
+              "mbid": "48438777-4e19-4a4f-ad20-2827f4123bef",
+              "name": "Gabe",
+              "score": 46,
+              "disambiguation": "Jason Derulo featuring artist",
+              "titleChecks": [
+                {
+                  "title": "Hello Friday",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Loa Falkman",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1007,
+          "song": "Symfoni"
+        }
+      ],
+      "sampledTitles": [
+        "Symfoni"
+      ],
+      "candidates": [
+        {
+          "mbid": "5aecc5c1-28c8-470b-8d49-b1eee29ca4f2",
+          "name": "Loa Falkman",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1947-07-24",
+          "aliases": [
+            "Carl Johan Falkman"
+          ],
+          "titleChecks": [
+            {
+              "title": "Symfoni",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "9fac3fa3-2d70-4510-88fd-d14baa529e31",
+          "name": "Loa Loa",
+          "score": 41,
+          "type": "Group",
+          "disambiguation": "Punk / hardcore group from Moscow, Russia",
+          "country": "RU",
+          "titleChecks": [
+            {
+              "title": "Symfoni",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "401b81f0-6e0a-4c9c-aa79-e5c5ff2861f4",
+          "name": "Loa Loa",
+          "score": 40,
+          "type": "Group",
+          "country": "GB",
+          "titleChecks": [
+            {
+              "title": "Symfoni",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "titleOnly": [
+        {
+          "title": "Symfoni",
+          "hits": [
+            {
+              "title": "Symfoni",
+              "artists": "Astrid S, Hver gang vi møtes",
+              "firstReleaseDate": "2025-02-17",
+              "score": 100
+            },
+            {
+              "title": "Symfoni",
+              "artists": "Roland Cedermark",
+              "firstReleaseDate": "1982",
+              "score": 100
+            },
+            {
+              "title": "Symfoni",
+              "artists": "Orkan",
+              "firstReleaseDate": "2025-08-28",
+              "score": 100
+            },
+            {
+              "title": "Sorgenfri Symfoni",
+              "artists": "Beathoven",
+              "firstReleaseDate": "2024-05-31",
+              "score": 86
+            },
+            {
+              "title": "Ögats Symfoni",
+              "artists": "Edin‐Ådahl",
+              "firstReleaseDate": "1983",
+              "score": 86
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lou Bega",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2206,
+          "song": "Mambo No5"
+        }
+      ],
+      "sampledTitles": [
+        "Mambo No5"
+      ],
+      "candidates": [
+        {
+          "mbid": "64f9c914-74a0-4f6b-8589-6261851b0ab9",
+          "name": "Lou Bega",
+          "score": 100,
+          "type": "Person",
+          "country": "DE",
+          "began": "1975-04-13",
+          "aliases": [
+            "L.B.",
+            "David Lubega"
+          ],
+          "titleChecks": [
+            {
+              "title": "Mambo No5",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "48afdb12-3bca-4fa5-92a5-daa1b63d93c5",
+          "name": "Mr. Mambo",
+          "score": 52,
+          "disambiguation": "Lou Bega cover artist?",
+          "titleChecks": [
+            {
+              "title": "Mambo No5",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "9d1ebcfe-4c15-4d18-95d3-d919898638a1",
+          "name": "Lou Reed",
+          "score": 44,
+          "type": "Person",
+          "country": "US",
+          "began": "1942-03-02",
+          "aliases": [
+            "Reed",
+            "Lewis Allen Reed",
+            "Lewis Reed",
+            "Lou Red",
+            "Lou Ree",
+            "Reed, Lou",
+            "Lou Read"
+          ],
+          "titleChecks": [
+            {
+              "title": "Mambo No5",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "titleOnly": [
+        {
+          "title": "Mambo No5",
+          "hits": [
+            {
+              "title": "Mambo Nº5",
+              "artists": "Pérez Prado",
+              "firstReleaseDate": "2002-12-02",
+              "score": 100
+            },
+            {
+              "title": "Mambo No5",
+              "artists": "高中正義",
+              "firstReleaseDate": "2012-03-28",
+              "score": 100
+            },
+            {
+              "title": "Mambo Nº5",
+              "artists": "Luis Vargas",
+              "firstReleaseDate": "2015-10-01",
+              "score": 100
+            },
+            {
+              "title": "Mambo Nº5",
+              "artists": "Luis Vargas",
+              "firstReleaseDate": "1999",
+              "score": 100
+            },
+            {
+              "title": "Mambo No5 (Cha Cha Cha)",
+              "artists": "Strictly Ballroom",
+              "score": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Little Mermaid",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 4100,
+          "song": "Part of your world (Disney)"
+        }
+      ],
+      "sampledTitles": [
+        "Part of your world (Disney)"
+      ],
+      "candidates": [
+        {
+          "mbid": "609de6fd-b77e-4896-a6cd-30ec13b03283",
+          "name": "Little Mermaid",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Japanese soft visual",
+          "country": "JP",
+          "began": "1995-12",
+          "titleChecks": [
+            {
+              "title": "Part of your world (Disney)",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "491d4c2e-60e0-45ea-829f-ebd9405bd3d1",
+          "name": "Little Mermaid Orchestra",
+          "score": 86,
+          "type": "Group",
+          "country": "DK",
+          "began": "1997",
+          "titleChecks": [
+            {
+              "title": "Part of your world (Disney)",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "f824d695-33f0-46f0-ad79-133107529a94",
+          "name": "The Little Mermaid",
+          "score": 86,
+          "type": "Group",
+          "disambiguation": "Disney franchise",
+          "country": "US",
+          "began": "1989-11-17",
+          "titleChecks": [
+            {
+              "title": "Part of your world (Disney)",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "titleOnly": [
+        {
+          "title": "Part of your world (Disney)",
+          "hits": []
+        }
+      ]
+    },
+    {
+      "artist": "George Michael And Aretha Franklin",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5138,
+          "song": "I Knew You Were Waiting"
+        }
+      ],
+      "sampledTitles": [
+        "I Knew You Were Waiting"
+      ],
+      "candidates": [
+        {
+          "mbid": "2f9ecbed-27be-40e6-abca-6de49d50299e",
+          "name": "Aretha Franklin",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1942-03-25",
+          "aliases": [
+            "アレサ・フランクリン",
+            "Aretha Louise Franklin",
+            "Aretha Fanklin",
+            "Aretha Franklyn",
+            "Franklin, Aretha",
+            "Arthaa Franklin",
+            "Aretja Franklin"
+          ],
+          "titleChecks": [
+            {
+              "title": "I Knew You Were Waiting",
+              "found": true,
+              "canonicalTitle": "I Knew You Were Waiting",
+              "score": 100,
+              "firstReleaseDate": "2022-03-26"
+            }
+          ]
+        },
+        {
+          "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+          "name": "George Michael",
+          "score": 71,
+          "type": "Person",
+          "country": "GB",
+          "began": "1963-06-25",
+          "aliases": [
+            "G.K. Panayiotou",
+            "Georgios Kyriacos Panayiotou",
+            "Michael George",
+            "George Micheal",
+            "Georg Michael",
+            "Michael, George"
+          ],
+          "titleChecks": [
+            {
+              "title": "I Knew You Were Waiting",
+              "found": true,
+              "canonicalTitle": "I Knew You Were Waiting",
+              "score": 100,
+              "firstReleaseDate": "2022-03-26"
+            }
+          ]
+        },
+        {
+          "mbid": "27870d47-bb98-42d1-bf2b-c7e972e6befc",
+          "name": "George Frideric Handel",
+          "score": 69,
+          "type": "Person",
+          "disambiguation": "German‐British baroque composer",
+          "country": "GB",
+          "began": "1685-02-23",
+          "aliases": [
+            "Georg Friedrich Händel",
+            "G. F. Hendelis",
+            "Handel",
+            "George Frederich Handel",
+            "G. F. Haendel",
+            "hendel",
+            "Georg Friedrich Haendel",
+            "Handel and Messiah",
+            "Georg F. Händel",
+            "George Friederich Handel",
+            "Handel, George Friedrich (1685 - 1759)",
+            "George Friedrich Haendel",
+            "G.F. Handel",
+            "GF Haendel",
+            "George Friederic Haendel",
+            "George Friedrich Handel",
+            "ヘンデル",
+            "G. F. Händel",
+            "George Frederic Handel",
+            "Handel, George Frideric",
+            "Georg Fredrich Handel",
+            "Haendel",
+            "Handel, George Frideric (1685-1759)",
+            "Handel, G. F.",
+            "George Frideric Haendel",
+            "G.F. Haendel",
+            "George Friedric Handel",
+            "George Frederich Haendel",
+            "George F. Handel",
+            "Georg Friederich Händel",
+            "Händel",
+            "George Frideric Händel",
+            "Georg Friedrich Handel",
+            "Hændel",
+            "Georgs Frīdrihs Hendelis",
+            "George Frederick Handel",
+            "George Friedrich Händel",
+            "G. F. Handel",
+            "Händel, Georg Friedrich",
+            "George Fredrick Handel",
+            "ゲオルク・フリードリヒ・ヘンデル",
+            "Georg Haendel",
+            "Georg-Friedrich Händel",
+            "헨델",
+            "George Handel",
+            "Handel, Georg Friedrich",
+            "George Frideric Handel"
+          ],
+          "titleChecks": [
+            {
+              "title": "I Knew You Were Waiting",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "George Michael",
+          "candidates": [
+            {
+              "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+              "name": "George Michael",
+              "score": 100,
+              "type": "Person",
+              "country": "GB",
+              "began": "1963-06-25",
+              "aliases": [
+                "G.K. Panayiotou",
+                "Georgios Kyriacos Panayiotou",
+                "Michael George",
+                "George Micheal",
+                "Georg Michael",
+                "Michael, George"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I Knew You Were Waiting",
+                  "found": true,
+                  "canonicalTitle": "I Knew You Were Waiting",
+                  "score": 100,
+                  "firstReleaseDate": "2022-03-26"
+                }
+              ]
+            },
+            {
+              "mbid": "bd5005c6-c041-41c0-943c-656ec9f8248c",
+              "name": "George Michael",
+              "score": 83,
+              "disambiguation": "appears on Cribshitter's track",
+              "titleChecks": [
+                {
+                  "title": "I Knew You Were Waiting",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Aretha Franklin",
+          "candidates": [
+            {
+              "mbid": "2f9ecbed-27be-40e6-abca-6de49d50299e",
+              "name": "Aretha Franklin",
+              "score": 100,
+              "type": "Person",
+              "country": "US",
+              "began": "1942-03-25",
+              "aliases": [
+                "アレサ・フランクリン",
+                "Aretha Louise Franklin",
+                "Aretha Fanklin",
+                "Aretha Franklyn",
+                "Franklin, Aretha",
+                "Arthaa Franklin",
+                "Aretja Franklin"
+              ],
+              "titleChecks": [
+                {
+                  "title": "I Knew You Were Waiting",
+                  "found": true,
+                  "canonicalTitle": "I Knew You Were Waiting",
+                  "score": 100,
+                  "firstReleaseDate": "2022-03-26"
+                }
+              ]
+            },
+            {
+              "mbid": "651afed0-76fa-4b5f-a4fb-88300a7856f6",
+              "name": "Franklin. Ode To Aretha",
+              "score": 59,
+              "type": "Group",
+              "disambiguation": "Belgian Aretha Franklin tribute",
+              "country": "BE",
+              "began": "2020",
+              "aliases": [
+                "Franklin."
+              ],
+              "likelyTributeOrCover": true,
+              "titleChecks": [
+                {
+                  "title": "I Knew You Were Waiting",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Johnny Logan",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 287,
+          "song": "Hold me now"
+        }
+      ],
+      "sampledTitles": [
+        "Hold me now"
+      ],
+      "candidates": [
+        {
+          "mbid": "6f929291-881c-4eb3-8711-54546f52dd01",
+          "name": "Johnny Logan",
+          "score": 100,
+          "type": "Person",
+          "country": "IE",
+          "began": "1954-05-13",
+          "aliases": [
+            "Seán Patrick Michael Sherrard",
+            "Johnny Logan & Friends",
+            "Johhny Logan",
+            "Jonny Logan"
+          ],
+          "titleChecks": [
+            {
+              "title": "Hold me now",
+              "found": true,
+              "canonicalTitle": "Hold Me Now",
+              "score": 100,
+              "firstReleaseDate": "1987"
+            }
+          ]
+        },
+        {
+          "mbid": "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
+          "name": "Johnny Cash",
+          "score": 58,
+          "type": "Person",
+          "disambiguation": "country music legend",
+          "country": "US",
+          "began": "1932-02-26",
+          "aliases": [
+            "Jonny Cash",
+            "Johhny Cash",
+            "J. R. Cash",
+            "John R. Cash"
+          ],
+          "titleChecks": [
+            {
+              "title": "Hold me now",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "323ed974-8bf6-4f54-9525-b774a659f805",
+          "name": "Johnny Hallyday",
+          "score": 54,
+          "type": "Person",
+          "country": "FR",
+          "began": "1943-06-15",
+          "aliases": [
+            "Johnny Halyday",
+            "Johnny Halliday",
+            "Jean-Philippe Léo Smet",
+            "Jean-Philippe Smet"
+          ],
+          "titleChecks": [
+            {
+              "title": "Hold me now",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "John Loudermilk",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1228,
+          "song": "The language of love"
+        }
+      ],
+      "sampledTitles": [
+        "The language of love"
+      ],
+      "candidates": [
+        {
+          "mbid": "e5fbd7a7-eaaa-49fa-8512-ac2d1b416011",
+          "name": "John D. Loudermilk",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1934-03-31",
+          "aliases": [
+            "Ebe Sneezer",
+            "J.D.Loudermilk",
+            "John D. Loudermilk, Jr.",
+            "Johnny Dee"
+          ],
+          "titleChecks": [
+            {
+              "title": "The language of love",
+              "found": true,
+              "canonicalTitle": "The Language of Love",
+              "score": 100,
+              "firstReleaseDate": "1987"
+            }
+          ]
+        },
+        {
+          "mbid": "d3a63880-af67-4698-8790-631471d419d4",
+          "name": "Loudermilk",
+          "score": 95,
+          "type": "Group",
+          "titleChecks": [
+            {
+              "title": "The language of love",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "53b106e7-0cc6-42cc-ac95-ed8d30a3a98e",
+          "name": "John Williams",
+          "score": 87,
+          "type": "Person",
+          "disambiguation": "American score composer and conductor",
+          "country": "US",
+          "began": "1932-02-08",
+          "aliases": [
+            "Towner",
+            "John Williams",
+            "John Towner",
+            "Williams",
+            "John Willams",
+            "Johnny Williams",
+            "John T. Williams",
+            "John William",
+            "ジョン ウィリアムズ",
+            "ジョン・ウィリアムズ",
+            "J. Williams",
+            "Jhon Williams",
+            "John Wiliams",
+            "John Towner Williams",
+            "Towner Williams",
+            "John Williems"
+          ],
+          "titleChecks": [
+            {
+              "title": "The language of love",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Steppenwolf",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1342,
+          "song": "Born to be wild"
+        }
+      ],
+      "sampledTitles": [
+        "Born to be wild"
+      ],
+      "candidates": [
+        {
+          "mbid": "12ff8858-bfcb-4812-a8dd-7e9debf0cbee",
+          "name": "Steppenwolf",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "1961",
+          "aliases": [
+            "John Kay & Steppenwolf",
+            "Steppenvolf"
+          ],
+          "titleChecks": [
+            {
+              "title": "Born to be wild",
+              "found": true,
+              "canonicalTitle": "Born to Be Wild",
+              "score": 100,
+              "firstReleaseDate": "2008-04"
+            }
+          ]
+        },
+        {
+          "mbid": "102ed834-05b7-49db-8ea0-50fbadb97a01",
+          "name": "Steppenwolf ’97",
+          "score": 73,
+          "type": "Group",
+          "disambiguation": "Fake Steppenwolf",
+          "titleChecks": [
+            {
+              "title": "Born to be wild",
+              "found": true,
+              "canonicalTitle": "Born to Be Wild (re-recording)",
+              "score": 100,
+              "firstReleaseDate": "1996-12-31"
+            }
+          ]
+        },
+        {
+          "mbid": "0d833cff-1f5c-4684-8a4b-200bd96f814a",
+          "name": "John Kay",
+          "score": 51,
+          "type": "Person",
+          "disambiguation": "lead singer of Steppenwolf",
+          "country": "CA",
+          "began": "1944-04-12",
+          "aliases": [
+            "Joachim Fritz Krauledat"
+          ],
+          "titleChecks": [
+            {
+              "title": "Born to be wild",
+              "found": true,
+              "canonicalTitle": "Born to Be Wild",
+              "score": 100,
+              "firstReleaseDate": "2004"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Weather Girls",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1412,
+          "song": "It's raining men"
+        }
+      ],
+      "sampledTitles": [
+        "It's raining men"
+      ],
+      "candidates": [
+        {
+          "mbid": "8bc23f36-2d1e-45c5-ad47-69e402b0923a",
+          "name": "The Weather Girls",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "1982",
+          "aliases": [
+            "Two Tons o’ Fun",
+            "Wheater Girls",
+            "Weather Girls",
+            "2 Tons O’ Fun",
+            "The Two Tons",
+            "The Weather Girl",
+            "Wheather Girls",
+            "The Weathergirls",
+            "Two Tons of Fun",
+            "Weathergirls",
+            "Weather Girls, the"
+          ],
+          "titleChecks": [
+            {
+              "title": "It's raining men",
+              "found": true,
+              "canonicalTitle": "It's Raining Men",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "deb0b977-d238-495d-84dc-42d931c96bce",
+          "name": "ウェザーガールズ",
+          "score": 90,
+          "type": "Group",
+          "country": "JP",
+          "began": "2012-10",
+          "titleChecks": [
+            {
+              "title": "It's raining men",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "0f9997bd-e079-429e-8ccd-9378c9b0c746",
+          "name": "Weather Report",
+          "score": 55,
+          "type": "Group",
+          "country": "US",
+          "began": "1971",
+          "aliases": [
+            "ウェザー・リポート"
+          ],
+          "titleChecks": [
+            {
+              "title": "It's raining men",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "George Michael & Elton John",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1362,
+          "song": "Don't let the sun go down on me"
+        }
+      ],
+      "sampledTitles": [
+        "Don't let the sun go down on me"
+      ],
+      "candidates": [
+        {
+          "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+          "name": "Elton John",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "English singer, songwriter, pianist, and composer",
+          "country": "GB",
+          "began": "1947-03-25",
+          "aliases": [
+            "Reg Dwight",
+            "John, Elton",
+            "E. John",
+            "Elthon John",
+            "Elton Hercules John",
+            "Eltonas Džonas",
+            "Seras Eltonas Džonas",
+            "Reginald Kenneth Dwight",
+            "エルトン・ジョン",
+            "Reginald Dwight",
+            "Ann Orson",
+            "Sir Elton John",
+            "Elton Jphn",
+            "Sir Elton Hercules John",
+            "John Elton"
+          ],
+          "titleChecks": [
+            {
+              "title": "Don't let the sun go down on me",
+              "found": true,
+              "canonicalTitle": "Don’t Let the Sun Go Down on Me",
+              "score": 100,
+              "firstReleaseDate": "1983"
+            }
+          ]
+        },
+        {
+          "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+          "name": "George Michael",
+          "score": 79,
+          "type": "Person",
+          "country": "GB",
+          "began": "1963-06-25",
+          "aliases": [
+            "G.K. Panayiotou",
+            "Georgios Kyriacos Panayiotou",
+            "Michael George",
+            "George Micheal",
+            "Georg Michael",
+            "Michael, George"
+          ],
+          "titleChecks": [
+            {
+              "title": "Don't let the sun go down on me",
+              "found": true,
+              "canonicalTitle": "Don’t Let the Sun Go Down on Me",
+              "score": 100,
+              "firstReleaseDate": "2004-11-16"
+            }
+          ]
+        },
+        {
+          "mbid": "27870d47-bb98-42d1-bf2b-c7e972e6befc",
+          "name": "George Frideric Handel",
+          "score": 77,
+          "type": "Person",
+          "disambiguation": "German‐British baroque composer",
+          "country": "GB",
+          "began": "1685-02-23",
+          "aliases": [
+            "Georg Friedrich Händel",
+            "G. F. Hendelis",
+            "Handel",
+            "George Frederich Handel",
+            "G. F. Haendel",
+            "hendel",
+            "Georg Friedrich Haendel",
+            "Handel and Messiah",
+            "Georg F. Händel",
+            "George Friederich Handel",
+            "Handel, George Friedrich (1685 - 1759)",
+            "George Friedrich Haendel",
+            "G.F. Handel",
+            "GF Haendel",
+            "George Friederic Haendel",
+            "George Friedrich Handel",
+            "ヘンデル",
+            "G. F. Händel",
+            "George Frederic Handel",
+            "Handel, George Frideric",
+            "Georg Fredrich Handel",
+            "Haendel",
+            "Handel, George Frideric (1685-1759)",
+            "Handel, G. F.",
+            "George Frideric Haendel",
+            "G.F. Haendel",
+            "George Friedric Handel",
+            "George Frederich Haendel",
+            "George F. Handel",
+            "Georg Friederich Händel",
+            "Händel",
+            "George Frideric Händel",
+            "Georg Friedrich Handel",
+            "Hændel",
+            "Georgs Frīdrihs Hendelis",
+            "George Frederick Handel",
+            "George Friedrich Händel",
+            "G. F. Handel",
+            "Händel, Georg Friedrich",
+            "George Fredrick Handel",
+            "ゲオルク・フリードリヒ・ヘンデル",
+            "Georg Haendel",
+            "Georg-Friedrich Händel",
+            "헨델",
+            "George Handel",
+            "Handel, Georg Friedrich",
+            "George Frideric Handel"
+          ],
+          "titleChecks": [
+            {
+              "title": "Don't let the sun go down on me",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "George Michael",
+          "candidates": [
+            {
+              "mbid": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
+              "name": "George Michael",
+              "score": 100,
+              "type": "Person",
+              "country": "GB",
+              "began": "1963-06-25",
+              "aliases": [
+                "G.K. Panayiotou",
+                "Georgios Kyriacos Panayiotou",
+                "Michael George",
+                "George Micheal",
+                "Georg Michael",
+                "Michael, George"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Don't let the sun go down on me",
+                  "found": true,
+                  "canonicalTitle": "Don’t Let the Sun Go Down on Me",
+                  "score": 100,
+                  "firstReleaseDate": "2004-11-16"
+                }
+              ]
+            },
+            {
+              "mbid": "bd5005c6-c041-41c0-943c-656ec9f8248c",
+              "name": "George Michael",
+              "score": 83,
+              "disambiguation": "appears on Cribshitter's track",
+              "titleChecks": [
+                {
+                  "title": "Don't let the sun go down on me",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Elton John",
+          "candidates": [
+            {
+              "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+              "name": "Elton John",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "English singer, songwriter, pianist, and composer",
+              "country": "GB",
+              "began": "1947-03-25",
+              "aliases": [
+                "Reg Dwight",
+                "John, Elton",
+                "E. John",
+                "Elthon John",
+                "Elton Hercules John",
+                "Eltonas Džonas",
+                "Seras Eltonas Džonas",
+                "Reginald Kenneth Dwight",
+                "エルトン・ジョン",
+                "Reginald Dwight",
+                "Ann Orson",
+                "Sir Elton John",
+                "Elton Jphn",
+                "Sir Elton Hercules John",
+                "John Elton"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Don't let the sun go down on me",
+                  "found": true,
+                  "canonicalTitle": "Don’t Let the Sun Go Down on Me",
+                  "score": 100,
+                  "firstReleaseDate": "1983"
+                }
+              ]
+            },
+            {
+              "mbid": "6e9199f8-208c-41f9-a176-e5b3dd5a0c76",
+              "name": "Elton John Band",
+              "score": 72,
+              "type": "Group",
+              "titleChecks": [
+                {
+                  "title": "Don't let the sun go down on me",
+                  "found": true,
+                  "canonicalTitle": "Don't Let the Sun Go Down on Me",
+                  "score": 100,
+                  "firstReleaseDate": "2013"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Big Mountain",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2071,
+          "song": "Baby I love your way"
+        }
+      ],
+      "sampledTitles": [
+        "Baby I love your way"
+      ],
+      "candidates": [
+        {
+          "mbid": "bc6c4055-043d-4987-b6bd-4d4298284dff",
+          "name": "Big Mountain",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "1991",
+          "titleChecks": [
+            {
+              "title": "Baby I love your way",
+              "found": true,
+              "canonicalTitle": "Baby, I Love Your Way",
+              "score": 100,
+              "firstReleaseDate": "1994-11-28"
+            }
+          ]
+        },
+        {
+          "mbid": "d329476f-c615-435e-8d04-d91433b7e3d1",
+          "name": "Big Mountain County",
+          "score": 81,
+          "type": "Group",
+          "country": "IT",
+          "began": "2012",
+          "aliases": [
+            "BMC"
+          ],
+          "titleChecks": [
+            {
+              "title": "Baby I love your way",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "a0416d9f-cb1c-4408-ab75-1e0035075411",
+          "name": "Big Mountain Players",
+          "score": 80,
+          "titleChecks": [
+            {
+              "title": "Baby I love your way",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lukas Graham",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5404,
+          "song": "7 Years"
+        }
+      ],
+      "sampledTitles": [
+        "7 Years"
+      ],
+      "candidates": [
+        {
+          "mbid": "124cec07-44f1-4a99-9aaa-96a5bb9ec0bd",
+          "name": "Lukas Graham",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Danish pop band",
+          "country": "DK",
+          "began": "2011",
+          "aliases": [
+            "루카스 그레이엄"
+          ],
+          "titleChecks": [
+            {
+              "title": "7 Years",
+              "found": true,
+              "canonicalTitle": "7 Years",
+              "score": 100,
+              "firstReleaseDate": "2018-04-06"
+            }
+          ]
+        },
+        {
+          "mbid": "69cfe463-3075-44d8-b118-02381e4a9ed9",
+          "name": "Lukas Graham",
+          "score": 93,
+          "type": "Person",
+          "disambiguation": "Danish singer from band with same name",
+          "began": "1988-09-18",
+          "titleChecks": [
+            {
+              "title": "7 Years",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "58afc5cb-8faf-4fc4-b4dd-e68e86de4dc9",
+          "name": "Lukas Forchhammer",
+          "score": 91,
+          "type": "Person",
+          "disambiguation": "Lead singer of \"Lukas Graham\"",
+          "began": "1988-09-18",
+          "aliases": [
+            "Lukas Graham",
+            "Lukas Graham Forchhammer"
+          ],
+          "titleChecks": [
+            {
+              "title": "7 Years",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Wizex",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 993,
+          "song": "Miss Decibel"
+        }
+      ],
+      "sampledTitles": [
+        "Miss Decibel"
+      ],
+      "candidates": [
+        {
+          "mbid": "c7157b04-eb2b-4190-89dc-110df0e2ea3a",
+          "name": "Wizex",
+          "score": 100,
+          "type": "Group",
+          "country": "SE",
+          "began": "1973",
+          "titleChecks": [
+            {
+              "title": "Miss Decibel",
+              "found": true,
+              "canonicalTitle": "Miss Decibel",
+              "score": 100,
+              "firstReleaseDate": "2003"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Tingeling feat. Pihlman",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 909,
+          "song": "Tingeling"
+        }
+      ],
+      "sampledTitles": [
+        "Tingeling"
+      ],
+      "candidates": [
+        {
+          "mbid": "4f3ddae3-6fa1-4dee-a40d-e4b56d158aaa",
+          "name": "Tingeling",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Norwegian jazz band",
+          "country": "NO",
+          "began": "1997",
+          "titleChecks": [
+            {
+              "title": "Tingeling",
+              "found": true,
+              "canonicalTitle": "Tingeling, tingeling",
+              "score": 100,
+              "firstReleaseDate": "2009-05-20"
+            }
+          ]
+        },
+        {
+          "mbid": "9b106beb-12b5-4525-8025-42e295a2b90a",
+          "name": "Little Feat",
+          "score": 92,
+          "type": "Group",
+          "country": "US",
+          "began": "1969",
+          "aliases": [
+            "Litte Feat",
+            "Little Feet"
+          ],
+          "titleChecks": [
+            {
+              "title": "Tingeling",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "8aec45d9-61d5-44ca-9e5e-ce923d023228",
+          "name": "Rolf Pihlman",
+          "score": 86,
+          "type": "Person",
+          "titleChecks": [
+            {
+              "title": "Tingeling",
+              "found": true,
+              "canonicalTitle": "Tingeling, tingeling",
+              "score": 100,
+              "firstReleaseDate": "2009-05-20"
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Tingeling",
+          "candidates": [
+            {
+              "mbid": "4f3ddae3-6fa1-4dee-a40d-e4b56d158aaa",
+              "name": "Tingeling",
+              "score": 100,
+              "type": "Group",
+              "disambiguation": "Norwegian jazz band",
+              "country": "NO",
+              "began": "1997",
+              "titleChecks": [
+                {
+                  "title": "Tingeling",
+                  "found": true,
+                  "canonicalTitle": "Tingeling, tingeling",
+                  "score": 100,
+                  "firstReleaseDate": "2009-05-20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Pihlman",
+          "candidates": [
+            {
+              "mbid": "8aec45d9-61d5-44ca-9e5e-ce923d023228",
+              "name": "Rolf Pihlman",
+              "score": 100,
+              "type": "Person",
+              "titleChecks": [
+                {
+                  "title": "Tingeling",
+                  "found": true,
+                  "canonicalTitle": "Tingeling, tingeling",
+                  "score": 100,
+                  "firstReleaseDate": "2009-05-20"
+                }
+              ]
+            },
+            {
+              "mbid": "28db9f9d-eccd-4532-8a39-85bf95e73655",
+              "name": "Lauri Pihlman",
+              "score": 99,
+              "type": "Person",
+              "disambiguation": "Finnish producer and rapper; aka. LX-Beats, Rekami, LapioX; performs with HKI Crates, Joniveli",
+              "country": "FI",
+              "aliases": [
+                "L. Pihlman"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Tingeling",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lill-Babs",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1057,
+          "song": "Leva livet"
+        }
+      ],
+      "sampledTitles": [
+        "Leva livet"
+      ],
+      "candidates": [
+        {
+          "mbid": "790fecd6-0fcc-4c74-a5fd-3ba400a98d16",
+          "name": "Lill‐Babs",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1938-03-09",
+          "aliases": [
+            "Barbro Margareta Svensson",
+            "Lillbabs",
+            "Lill-Babs Svensson",
+            "Barbro \"Lill-Babs\" Svensson"
+          ],
+          "titleChecks": [
+            {
+              "title": "Leva livet",
+              "found": true,
+              "canonicalTitle": "Leva livet",
+              "score": 100,
+              "firstReleaseDate": "1966"
+            }
+          ]
+        },
+        {
+          "mbid": "6ae56e30-d394-4d18-8118-6a0a2b77eaaf",
+          "name": "Alice Babs",
+          "score": 44,
+          "type": "Person",
+          "country": "SE",
+          "began": "1924-01-26",
+          "aliases": [
+            "Alice Hildur Nilson",
+            "Alice Hildur Sjöblom",
+            "Hildur Alice Nilson"
+          ],
+          "titleChecks": [
+            {
+              "title": "Leva livet",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "0be92d9a-4418-435a-a0f1-d49d77232268",
+          "name": "Lill Lindfors",
+          "score": 42,
+          "type": "Person",
+          "country": "SE",
+          "began": "1940-05-12",
+          "aliases": [
+            "Maj Lillemor Lindfors"
+          ],
+          "titleChecks": [
+            {
+              "title": "Leva livet",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Anna Bergendahl",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2500,
+          "song": "This is my life"
+        }
+      ],
+      "sampledTitles": [
+        "This is my life"
+      ],
+      "candidates": [
+        {
+          "mbid": "1cce195c-0d80-45ce-bcc6-ae9bd30b4207",
+          "name": "Anna Bergendahl",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1991-12-11",
+          "aliases": [
+            "Anna Henrietta Bergendahl"
+          ],
+          "titleChecks": [
+            {
+              "title": "This is my life",
+              "found": true,
+              "canonicalTitle": "This Is My Life",
+              "score": 100,
+              "firstReleaseDate": "2010"
+            }
+          ]
+        },
+        {
+          "mbid": "e2b96b55-35c4-45b9-8d7b-726ac927982f",
+          "name": "Άννα Βίσση",
+          "score": 43,
+          "type": "Person",
+          "disambiguation": "Greek singer and actress",
+          "country": "GR",
+          "began": "1957-12-20",
+          "aliases": [
+            "Anna Vishy",
+            "Άννα Βίσση",
+            "Anna Bissi",
+            "Anna Vissy",
+            "Anna Vissi"
+          ],
+          "titleChecks": [
+            {
+              "title": "This is my life",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "07604f0c-218b-4233-94d9-57c4a5432c3a",
+          "name": "Astrid Lindgren",
+          "score": 43,
+          "type": "Person",
+          "disambiguation": "Swedish children’s book author",
+          "country": "SE",
+          "began": "1907-11-14",
+          "aliases": [
+            "Astrid Anna Emilia Lindgren",
+            "Astrid Anna Emilia Ericsson"
+          ],
+          "titleChecks": [
+            {
+              "title": "This is my life",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Avicii Feat. Salem Al Fakir",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5334,
+          "song": "You Make Me"
+        }
+      ],
+      "sampledTitles": [
+        "You Make Me"
+      ],
+      "candidates": [
+        {
+          "mbid": "c28a2f8f-60c9-4964-94ff-f0700e5a77a5",
+          "name": "Salem Al Fakir",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1981-10-27",
+          "aliases": [
+            "Lars Salem Al Fakir",
+            "Salem"
+          ],
+          "titleChecks": [
+            {
+              "title": "You Make Me",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
+          "name": "Avicii",
+          "score": 89,
+          "type": "Person",
+          "country": "SE",
+          "began": "1989-09-08",
+          "aliases": [
+            "Avicci"
+          ],
+          "titleChecks": [
+            {
+              "title": "You Make Me",
+              "found": true,
+              "canonicalTitle": "You Make Me",
+              "score": 100,
+              "firstReleaseDate": "2014"
+            }
+          ]
+        },
+        {
+          "mbid": "9b106beb-12b5-4525-8025-42e295a2b90a",
+          "name": "Little Feat",
+          "score": 68,
+          "type": "Group",
+          "country": "US",
+          "began": "1969",
+          "aliases": [
+            "Litte Feat",
+            "Little Feet"
+          ],
+          "titleChecks": [
+            {
+              "title": "You Make Me",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Avicii",
+          "candidates": [
+            {
+              "mbid": "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
+              "name": "Avicii",
+              "score": 100,
+              "type": "Person",
+              "country": "SE",
+              "began": "1989-09-08",
+              "aliases": [
+                "Avicci"
+              ],
+              "titleChecks": [
+                {
+                  "title": "You Make Me",
+                  "found": true,
+                  "canonicalTitle": "You Make Me",
+                  "score": 100,
+                  "firstReleaseDate": "2014"
+                }
+              ]
+            },
+            {
+              "mbid": "cc6fe92f-8bf0-47fd-b7f8-5600d3b0233a",
+              "name": "Tom Hangs",
+              "score": 45,
+              "type": "Person",
+              "disambiguation": "Tim Bergling (Avicii)",
+              "country": "SE",
+              "began": "1989-09-08",
+              "titleChecks": [
+                {
+                  "title": "You Make Me",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Salem Al Fakir",
+          "candidates": [
+            {
+              "mbid": "c28a2f8f-60c9-4964-94ff-f0700e5a77a5",
+              "name": "Salem Al Fakir",
+              "score": 100,
+              "type": "Person",
+              "country": "SE",
+              "began": "1981-10-27",
+              "aliases": [
+                "Lars Salem Al Fakir",
+                "Salem"
+              ],
+              "titleChecks": [
+                {
+                  "title": "You Make Me",
+                  "found": false
+                }
+              ]
+            },
+            {
+              "mbid": "2df7ce85-0309-47e5-bdce-25426a6d91a4",
+              "name": "Nassim Al Fakir",
+              "score": 41,
+              "type": "Person",
+              "country": "SE",
+              "began": "1977-03-21",
+              "titleChecks": [
+                {
+                  "title": "You Make Me",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Frankie Valli",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2189,
+          "song": "Can't take my eyes off you"
+        }
+      ],
+      "sampledTitles": [
+        "Can't take my eyes off you"
+      ],
+      "candidates": [
+        {
+          "mbid": "3c714102-94d8-42f4-9005-fb8a75c2766d",
+          "name": "Frankie Valli",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "American singer and actor, best known as the frontman of The Four Seasons",
+          "country": "US",
+          "began": "1934-05-03",
+          "aliases": [
+            "Frankie Vally",
+            "Francis Castelluccio"
+          ],
+          "titleChecks": [
+            {
+              "title": "Can't take my eyes off you",
+              "found": true,
+              "canonicalTitle": "Can’t Take My Eyes Off You",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "096472a6-523a-4cc7-aced-ba57c4ca4103",
+          "name": "Walk Like A Man - Frankie Valli Show",
+          "score": 67,
+          "type": "Group",
+          "country": "GB",
+          "titleChecks": [
+            {
+              "title": "Can't take my eyes off you",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "3f64d38c-1ad4-4fb0-941e-7f4b51d4c9e6",
+          "name": "The Four Seasons",
+          "score": 67,
+          "type": "Group",
+          "disambiguation": "aka Frankie Valli and the Four Seasons",
+          "country": "US",
+          "began": "1960",
+          "aliases": [
+            "Frankie Vale & The Four Seasons",
+            "Frankie Valli and the Four Seasons",
+            "Frankie Valli and The Four Seasons",
+            "Franke Valli & The Four Seasons",
+            "F. Valli & Four Seasons",
+            "Frankie Valli and The 4 Seasons",
+            "The 4 Seasons",
+            "Frankie Valli & The 4 Seasons",
+            "Frankie Valli & The Four Seasons",
+            "Frankie Vali & The Four Season",
+            "Four Seasons",
+            "4 Seasons"
+          ],
+          "titleChecks": [
+            {
+              "title": "Can't take my eyes off you",
+              "found": true,
+              "canonicalTitle": "Can't Take My Eyes Off You",
+              "score": 100,
+              "firstReleaseDate": "1986"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Ed Sheeran feat. Rudimental",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5365,
+          "song": "Bloodstream"
+        }
+      ],
+      "sampledTitles": [
+        "Bloodstream"
+      ],
+      "candidates": [
+        {
+          "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+          "name": "Ed Sheeran",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "UK singer‐songwriter",
+          "country": "GB",
+          "began": "1991-02-17",
+          "aliases": [
+            "에드 시런",
+            "Edward Christopher Sheeran"
+          ],
+          "titleChecks": [
+            {
+              "title": "Bloodstream",
+              "found": true,
+              "canonicalTitle": "Bloodstream",
+              "score": 100,
+              "firstReleaseDate": "2022"
+            }
+          ]
+        },
+        {
+          "mbid": "b09ced80-aa65-43c1-9aa7-58b1e982eada",
+          "name": "Rudimental",
+          "score": 89,
+          "type": "Group",
+          "disambiguation": "UK pop / dance act",
+          "country": "GB",
+          "began": "2010",
+          "aliases": [
+            "Rudimenta"
+          ],
+          "titleChecks": [
+            {
+              "title": "Bloodstream",
+              "found": true,
+              "canonicalTitle": "Bloodstream",
+              "score": 100,
+              "firstReleaseDate": "2010-10-02"
+            }
+          ]
+        },
+        {
+          "mbid": "3bca1168-e7c6-4beb-9af9-db9dc674b1fa",
+          "name": "Ed Sheeran",
+          "score": 81,
+          "type": "Person",
+          "disambiguation": "another UK singer‐songwriter, “Eddie Sheeran”, not the +/×/÷/- Ed Sheeran",
+          "country": "GB",
+          "titleChecks": [
+            {
+              "title": "Bloodstream",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Ed Sheeran",
+          "candidates": [
+            {
+              "mbid": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+              "name": "Ed Sheeran",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "UK singer‐songwriter",
+              "country": "GB",
+              "began": "1991-02-17",
+              "aliases": [
+                "에드 시런",
+                "Edward Christopher Sheeran"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Bloodstream",
+                  "found": true,
+                  "canonicalTitle": "Bloodstream",
+                  "score": 100,
+                  "firstReleaseDate": "2022"
+                }
+              ]
+            },
+            {
+              "mbid": "3bca1168-e7c6-4beb-9af9-db9dc674b1fa",
+              "name": "Ed Sheeran",
+              "score": 88,
+              "type": "Person",
+              "disambiguation": "another UK singer‐songwriter, “Eddie Sheeran”, not the +/×/÷/- Ed Sheeran",
+              "country": "GB",
+              "titleChecks": [
+                {
+                  "title": "Bloodstream",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Rudimental",
+          "candidates": [
+            {
+              "mbid": "b09ced80-aa65-43c1-9aa7-58b1e982eada",
+              "name": "Rudimental",
+              "score": 100,
+              "type": "Group",
+              "disambiguation": "UK pop / dance act",
+              "country": "GB",
+              "began": "2010",
+              "aliases": [
+                "Rudimenta"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Bloodstream",
+                  "found": true,
+                  "canonicalTitle": "Bloodstream",
+                  "score": 100,
+                  "firstReleaseDate": "2010-10-02"
+                }
+              ]
+            },
+            {
+              "mbid": "cf1a7f05-6d18-4e32-ae11-1338fbbe87d0",
+              "name": "The Rudimentals",
+              "score": 48,
+              "type": "Group",
+              "disambiguation": "South African ska/reggae band",
+              "began": "2000",
+              "aliases": [
+                "Rudimentals"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Bloodstream",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Chess",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2372,
+          "song": "I know him so well"
+        }
+      ],
+      "sampledTitles": [
+        "I know him so well"
+      ],
+      "candidates": [
+        {
+          "mbid": "fefe7b0f-3a73-4f55-8f53-46346bf094d2",
+          "name": "Chess",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Petra Berger & Denise van der Hek",
+          "titleChecks": [
+            {
+              "title": "I know him so well",
+              "found": true,
+              "canonicalTitle": "I Know Him So Well",
+              "score": 100,
+              "firstReleaseDate": "1992"
+            }
+          ]
+        },
+        {
+          "mbid": "aca5c004-6551-4f3e-9b49-be195893b206",
+          "name": "Chess",
+          "score": 99,
+          "type": "Group",
+          "disambiguation": "German disco trio",
+          "country": "DE",
+          "titleChecks": [
+            {
+              "title": "I know him so well",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "b7ec04d2-6f30-4389-a270-d4b915d87040",
+          "name": "CHESS",
+          "score": 99,
+          "type": "Group",
+          "disambiguation": "visual kei band",
+          "titleChecks": [
+            {
+              "title": "I know him so well",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Art Garfunkle",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1345,
+          "song": "Bright eyes"
+        }
+      ],
+      "sampledTitles": [
+        "Bright eyes"
+      ],
+      "candidates": [
+        {
+          "mbid": "fc0a5289-4b77-4246-9c8d-857c8b617f5d",
+          "name": "Art Garfunkel",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1941-11-05",
+          "aliases": [
+            "Art Garfunkle",
+            "アート・ガーファンクル",
+            "アート ガーファンクル",
+            "Garfunkel Art",
+            "Arthur Ira Garfunkel"
+          ],
+          "titleChecks": [
+            {
+              "title": "Bright eyes",
+              "found": true,
+              "canonicalTitle": "Bright Eyes",
+              "score": 100,
+              "firstReleaseDate": "1998"
+            }
+          ]
+        },
+        {
+          "mbid": "5d02f264-e225-41ff-83f7-d9b1f0b1874a",
+          "name": "Simon & Garfunkel",
+          "score": 84,
+          "type": "Group",
+          "country": "US",
+          "began": "1963",
+          "aliases": [
+            "サイモン&ガーファンクル",
+            "Paul Simon and Arthur Garfunkel",
+            "Simon & Garfunkle",
+            "Simon & Garfunkal",
+            "Simon and Garfunkle",
+            "Paul Simon and Art Garfunkle",
+            "Simon and Garfunkel",
+            "Paul Simon and Art Garfunkel"
+          ],
+          "titleChecks": [
+            {
+              "title": "Bright eyes",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "89ad4ac3-39f7-470e-963a-56509c546377",
+          "name": "Various Artists",
+          "score": 70,
+          "type": "Other",
+          "disambiguation": "add compilations to this artist",
+          "aliases": [
+            "Berühmtesten Opernchören",
+            "versch. Künstler",
+            "Variuos",
+            "Multi‐interprètes",
+            "[различные исполнители]",
+            "ヴァリアス・アーティスト",
+            "val",
+            "Various Talented Artists",
+            "Circus Records",
+            "Various Celtic Artists",
+            "Diverse Kunstnere",
+            "Multi Interprètes",
+            "Various (original artists)",
+            "Variées",
+            "Compilaciones",
+            "Artistes variés",
+            "(various)",
+            "Varius Artist",
+            "Diversen",
+            "AA.VV.",
+            "Hitradio Ö3",
+            "Cheapbeats",
+            "Various Artist - GoGo Wonderful",
+            "Diverse danske artister",
+            "Varied",
+            "Comp.",
+            "VAR",
+            "Ｖ．Ａ.",
+            "אומנים שונים",
+            "A.A.V.V.",
+            "Collectif",
+            "American Folk Blues Festival",
+            "Varoius",
+            "Varios",
+            "Various Speakers",
+            "V. A.",
+            "Variois",
+            "varias",
+            "La Historia de la Fania",
+            "כל המשתתפים",
+            "Various",
+            "Verschiedene",
+            "Various Military Bands",
+            "Collégiale",
+            "Vari",
+            "Artistas Varios",
+            "Various Artists (Rock)",
+            "Varios Intérpretes",
+            "Vários",
+            "Rossmann",
+            "Dominicanos Varios",
+            "Verschiedene Interpret:innen",
+            "Diverse",
+            "More artists",
+            "Various Composers",
+            "V/a",
+            "Varius",
+            "Ferkels grosses Abenteuer",
+            "Erinevad",
+            "Nhiều nghệ sĩ",
+            "razlichnye ispolniteli",
+            "Artisti uniti per l'Emilia",
+            "Nhiều Nghệ Sĩ",
+            "Encrypted Audio",
+            "Artis JK",
+            "Danske Kunstnere",
+            "Światowe Przeboje",
+            "Varoius Artists",
+            "Various DHM Artists",
+            "Hazbin Hotel",
+            "VariousArtist",
+            "Assorted Christian Artists",
+            "Time Life Music: Various Artists",
+            "オムニバス",
+            "Variés",
+            "Battle of the Bits",
+            "Div. artister",
+            "Vari Artisti",
+            "Varius Artists",
+            "Iedereen",
+            "Rizni vykonavci",
+            "Bande originale",
+            "Assorted Artists",
+            "Multi-artistes",
+            "Various Artist",
+            "ヴァリアス",
+            "Various 80's",
+            "Various Artsits",
+            "Sampler",
+            "Multiple Artists",
+            "[Various Artists]",
+            "Hợp ca",
+            "Various Artists [DIY]",
+            "Insomniac Music Group",
+            "Varios artists",
+            "V. Artist",
+            "Various Artitsts",
+            "Vários intérpretes",
+            "Woman & Home / Classic FM",
+            "various aritsts",
+            "A Pacific Northwest Tribute to Ray Charles",
+            "Различные исполнители",
+            "Diverse componisten",
+            "Vrious Artists",
+            "V.A.",
+            "Όλοι",
+            "Razni",
+            "Tốp ca",
+            "Skratch 'N Sniff",
+            "Multi-interprètes",
+            "Varias Artistas",
+            "various artiste",
+            "Various Female Artists",
+            "หลากหลายศิลปิน",
+            "Noevir",
+            "Various Artistes",
+            "EXIT TUNES/PONY CANYON",
+            "Coletânea",
+            "Różni artyści",
+            "Assorted Artisits",
+            "WitChoirRecords",
+            "Bassrush",
+            "Blandede Kunstnere",
+            "VV AA",
+            "Various DJ's",
+            "The Metal Observer",
+            "Fitness Workout Music",
+            "Amrywiol",
+            "Various artists from CISM 89,3 FM",
+            "KZOK 102.5FM",
+            "Various Arists",
+            "30 Vermont Artists",
+            "Tabu Recz",
+            "Compilation",
+            "Divers",
+            "Miscellaneous",
+            "div.",
+            "Goths For Palestine",
+            "Various Compiled By",
+            "MUSIC STUDY PROJECT",
+            "KC101—Connecticut's #1 Hit Music Station",
+            "Mixed Artists",
+            "(V.A.)",
+            "Various Items",
+            "Icelandic Folk Music",
+            "Div. kunstnere",
+            "различных исполнителей",
+            "DESKPOP",
+            "Omnibus",
+            "Various (not original artists)",
+            "Helluva Boss",
+            "Coala.Records",
+            "Różni",
+            "Blandat",
+            "Artisti vari",
+            "Wszyscy artysci",
+            "Variuos Artists",
+            "(Karaoke) Various Artists",
+            "משתתפי פסטיגל",
+            "Siren Cues",
+            "Bypass Audio",
+            "AAVV",
+            "Разни изведувачи",
+            "різних виконавців",
+            "Rizni vykonavtsi",
+            "Intérpretes Diversos",
+            "WiddFam",
+            "Verschiedene Interpreten",
+            "Различни изпълнители",
+            "War Child Records",
+            "VA",
+            "さまざまなアーティスト",
+            "Varios Artistas",
+            "MDB",
+            "Suntory Oolong-cha CM Song Collection",
+            "Artistes divers",
+            "Vários Artistas",
+            "Varies",
+            "Various Big Bands",
+            "Christmas Karma",
+            "אמנים שונים",
+            "Tốp ca nam",
+            "Reinelex Records",
+            "Eri esittäjiä",
+            "هنرمندان مختلف",
+            "Hainbat artista",
+            "Pluraj artistoj",
+            "Různí interpreti",
+            "diversos artistes",
+            "розныя выканаўцы",
+            "群星",
+            "Разные артисты",
+            "Διάφοροι Καλλιτέχνες",
+            "Įvairūs atlikėjai",
+            "Ýmsir hljóðfæraleikarar",
+            "Verious",
+            "Razni Izvođači",
+            "รวมศิลปิน",
+            "Blandade artister",
+            "Різні виконавці",
+            "Diverse Artistar",
+            "Diverse Artister",
+            "مختلف الفنانين",
+            "여러 아티스트",
+            "Various Artists",
+            "Diverse Artiesten",
+            "Diverse Interpreten",
+            "Diverse kunstnere",
+            "Vários artistas",
+            "Varios artistas",
+            "Erinevad esitajad",
+            "Çeşitli sanatçılar",
+            "Różni wykonawcy",
+            "Nhiều ca sĩ",
+            "Razlièni izvajalci",
+            "Artistiaid Amrywiol"
+          ],
+          "titleChecks": [
+            {
+              "title": "Bright eyes",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Benny Borg",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 765,
+          "song": "Balladen om Morgan Kane"
+        }
+      ],
+      "sampledTitles": [
+        "Balladen om Morgan Kane"
+      ],
+      "candidates": [
+        {
+          "mbid": "342a8dd2-859c-4bc2-8ff4-a9f288755c46",
+          "name": "Benny Borg",
+          "score": 100,
+          "type": "Person",
+          "country": "SE",
+          "began": "1945-11-13",
+          "aliases": [
+            "Artie Benny Borg"
+          ],
+          "titleChecks": [
+            {
+              "title": "Balladen om Morgan Kane",
+              "found": true,
+              "canonicalTitle": "Balladen om Morgan Kane",
+              "score": 100,
+              "firstReleaseDate": "2005"
+            }
+          ]
+        },
+        {
+          "mbid": "b09ae88f-4156-4caa-b129-1cacb5e1632e",
+          "name": "Benny Goodman",
+          "score": 54,
+          "type": "Person",
+          "disambiguation": "clarinetist and bandleader",
+          "country": "US",
+          "began": "1909-05-30",
+          "aliases": [
+            "Goodman"
+          ],
+          "titleChecks": [
+            {
+              "title": "Balladen om Morgan Kane",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "02b21439-02f9-4d46-9938-27da30088ef4",
+          "name": "Andy Borg",
+          "score": 53,
+          "type": "Person",
+          "disambiguation": "Austrian Schlager singer",
+          "country": "AT",
+          "began": "1960-11-02",
+          "aliases": [
+            "Adolf Andreas Meyer"
+          ],
+          "titleChecks": [
+            {
+              "title": "Balladen om Morgan Kane",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Michael McDonald",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3786,
+          "song": "Signed, sealed, delivered"
+        }
+      ],
+      "sampledTitles": [
+        "Signed, sealed, delivered"
+      ],
+      "candidates": [
+        {
+          "mbid": "cacbe57b-02d0-4d21-be86-c8a3a5ea6e1e",
+          "name": "Michael McDonald",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "R&B & soul singer",
+          "country": "US",
+          "began": "1952-02-12",
+          "aliases": [
+            "Mike McDonald",
+            "Michael H. McDonald",
+            "Michael Mc Donald"
+          ],
+          "titleChecks": [
+            {
+              "title": "Signed, sealed, delivered",
+              "found": true,
+              "canonicalTitle": "Signed, Sealed, Delivered I'm Yours",
+              "score": 100
+            }
+          ]
+        },
+        {
+          "mbid": "97b34f50-d9b7-48b5-bc00-4bb3db9de0c3",
+          "name": "Michael McDonald",
+          "score": 90,
+          "type": "Person",
+          "disambiguation": "Finland",
+          "country": "FI",
+          "titleChecks": [
+            {
+              "title": "Signed, sealed, delivered",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "2d04ad11-da90-4021-9ce5-3f70c18f6cbd",
+          "name": "Michael McDonald",
+          "score": 89,
+          "type": "Person",
+          "disambiguation": "US actor & comedian",
+          "country": "US",
+          "began": "1964-12-31",
+          "aliases": [
+            "Mike McDonald"
+          ],
+          "titleChecks": [
+            {
+              "title": "Signed, sealed, delivered",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Ani Difranco",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 4344,
+          "song": "Little plastic castles"
+        }
+      ],
+      "sampledTitles": [
+        "Little plastic castles"
+      ],
+      "candidates": [
+        {
+          "mbid": "a7bdc71f-697a-45d9-92b2-a01fbbe50272",
+          "name": "Ani DiFranco",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1970-09-23",
+          "aliases": [
+            "Ani DeFranco",
+            "AniDiFranco",
+            "Ani di Franco",
+            "Ani Difranco",
+            "Angela Maria DiFranco"
+          ],
+          "titleChecks": [
+            {
+              "title": "Little plastic castles",
+              "found": true,
+              "canonicalTitle": "Little Plastic Castles",
+              "score": 100,
+              "firstReleaseDate": "2022"
+            }
+          ]
+        },
+        {
+          "mbid": "4ff534dc-6c13-4b3c-8489-c5724a610fcc",
+          "name": "ANI",
+          "score": 35,
+          "type": "Person",
+          "disambiguation": "Finnish pop singer",
+          "country": "FI",
+          "began": "1998-04-19",
+          "aliases": [
+            "Ani",
+            "Aniachunamoso Nnebedum"
+          ],
+          "titleChecks": [
+            {
+              "title": "Little plastic castles",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "52abe825-6fa1-46c5-b84c-6d908e525680",
+          "name": "Vincenzino DiFranco",
+          "score": 35,
+          "type": "Person",
+          "country": "US",
+          "titleChecks": [
+            {
+              "title": "Little plastic castles",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Case",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 90,
+          "song": "Missing you"
+        }
+      ],
+      "sampledTitles": [
+        "Missing you"
+      ],
+      "candidates": [
+        {
+          "mbid": "67f911f6-dbf7-4ad9-a2ed-82484a1f9902",
+          "name": "Case",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "US R&B vocalist Case Woodard",
+          "country": "US",
+          "began": "1975-10-04",
+          "aliases": [
+            "Case E. Woodard"
+          ],
+          "titleChecks": [
+            {
+              "title": "Missing you",
+              "found": true,
+              "canonicalTitle": "Missing You",
+              "score": 100,
+              "firstReleaseDate": "2017-01-27"
+            }
+          ]
+        },
+        {
+          "mbid": "e13d2935-8c42-4c0a-96d7-654062acf106",
+          "name": "Neko Case",
+          "score": 95,
+          "type": "Person",
+          "country": "US",
+          "began": "1970-09-08",
+          "aliases": [
+            "Neko Richelle Case"
+          ],
+          "titleChecks": [
+            {
+              "title": "Missing you",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "6ede5ac7-a5ed-4814-902d-50de20fb79a2",
+          "name": "Case",
+          "score": 92,
+          "type": "Group",
+          "disambiguation": "UK punk band",
+          "country": "GB",
+          "began": "1979",
+          "titleChecks": [
+            {
+              "title": "Missing you",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Hepstars",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3559,
+          "song": "Cadillac"
+        }
+      ],
+      "sampledTitles": [
+        "Cadillac"
+      ],
+      "candidates": [
+        {
+          "mbid": "a9d4daed-c653-4778-a477-5548010f7ba9",
+          "name": "The Hep Stars",
+          "score": 100,
+          "type": "Group",
+          "country": "SE",
+          "began": "1963",
+          "aliases": [
+            "The Hepstars",
+            "Hep Stars"
+          ],
+          "titleChecks": [
+            {
+              "title": "Cadillac",
+              "found": true,
+              "canonicalTitle": "Cadillac",
+              "score": 100,
+              "firstReleaseDate": "2004-08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "America",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5329,
+          "song": "A horse with no name"
+        }
+      ],
+      "sampledTitles": [
+        "A horse with no name"
+      ],
+      "candidates": [
+        {
+          "mbid": "34cf95c7-4be9-4efd-a48a-c2ea4a0bb114",
+          "name": "America",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "US folk/soft rock band",
+          "country": "US",
+          "began": "1970",
+          "titleChecks": [
+            {
+              "title": "A horse with no name",
+              "found": true,
+              "canonicalTitle": "A Horse With No Name",
+              "score": 100,
+              "firstReleaseDate": "2000"
+            }
+          ]
+        },
+        {
+          "mbid": "d7bb9925-b1bb-4b11-92a4-c05fe444f04d",
+          "name": "America",
+          "score": 76,
+          "disambiguation": "unknown, released single “Just Wasn’t Meant to Be”",
+          "titleChecks": [
+            {
+              "title": "A horse with no name",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "5b10d2e8-b4d7-420a-a914-9c6504ff18e9",
+          "name": "Bronco",
+          "score": 74,
+          "type": "Group",
+          "disambiguation": "Mexican norteño music group",
+          "country": "MX",
+          "began": "1979",
+          "aliases": [
+            "El Gigante de America"
+          ],
+          "titleChecks": [
+            {
+              "title": "A horse with no name",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Marvi Gaye",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5701,
+          "song": "It takes two"
+        }
+      ],
+      "sampledTitles": [
+        "It takes two"
+      ],
+      "candidates": [
+        {
+          "mbid": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+          "name": "Marvin Gaye",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1939-04-02",
+          "aliases": [
+            "Marvin Pentz Gay, Jr.",
+            "Marvin Gay",
+            "Marvine Gaye",
+            "Marving Gaye",
+            "Marvin P. Gaye"
+          ],
+          "titleChecks": [
+            {
+              "title": "It takes two",
+              "found": true,
+              "canonicalTitle": "It Takes Two",
+              "score": 100,
+              "firstReleaseDate": "1986"
+            }
+          ]
+        },
+        {
+          "mbid": "f0bbb830-c234-40f7-8478-6ee7df43d749",
+          "name": "Marvi Hämmer",
+          "score": 81,
+          "type": "Character",
+          "disambiguation": "from National Geographic World - Easy English for Kids",
+          "aliases": [
+            "Marvi Haemmer"
+          ],
+          "titleChecks": [
+            {
+              "title": "It takes two",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "4abc8537-5745-4f92-9ce3-1874a61246cf",
+          "name": "Sanam Marvi",
+          "score": 70,
+          "type": "Person",
+          "country": "PK",
+          "began": "1986",
+          "titleChecks": [
+            {
+              "title": "It takes two",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Fiddler on the roof",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3640,
+          "song": "If I were a rich man"
+        }
+      ],
+      "sampledTitles": [
+        "If I were a rich man"
+      ],
+      "candidates": [
+        {
+          "mbid": "218faad2-499e-4003-8c66-7332fd1d7301",
+          "name": "2016 Broadway Orchestra",
+          "score": 100,
+          "type": "Orchestra",
+          "disambiguation": "Fiddler on the Roof",
+          "titleChecks": [
+            {
+              "title": "If I were a rich man",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "0418fbee-ad7f-4c78-ba7b-17a144ce1c9a",
+          "name": "Tevye",
+          "score": 92,
+          "type": "Character",
+          "disambiguation": "Fiddler on the Roof protagonist",
+          "began": "1894",
+          "titleChecks": [
+            {
+              "title": "If I were a rich man",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "87ed6227-11f3-41fb-ac11-86859c82abc9",
+          "name": "On the Roof",
+          "score": 84,
+          "titleChecks": [
+            {
+              "title": "If I were a rich man",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "titleOnly": [
+        {
+          "title": "If I were a rich man",
+          "hits": [
+            {
+              "title": "If I Were a Rich Man",
+              "artists": "Edmundo Ros",
+              "score": 100
+            },
+            {
+              "title": "If I Were a Rich Man",
+              "artists": "The Magnetic Fields",
+              "score": 100
+            },
+            {
+              "title": "If I Were a Rich Man",
+              "artists": "Roger Whittaker",
+              "score": 100
+            },
+            {
+              "title": "If I Were a Rich Man",
+              "artists": "Roger Whittaker",
+              "firstReleaseDate": "1992",
+              "score": 100
+            },
+            {
+              "title": "If I Were A Rich Man",
+              "artists": "Dimitri Dourakine",
+              "firstReleaseDate": "1993",
+              "score": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lana Del Ray",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 4281,
+          "song": "Video games"
+        }
+      ],
+      "sampledTitles": [
+        "Video games"
+      ],
+      "candidates": [
+        {
+          "mbid": "b7539c32-53e7-4908-bda3-81449c367da6",
+          "name": "Lana Del Rey",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1985-06-21",
+          "aliases": [
+            "Lana dil Ray",
+            "Лана Дель Рей",
+            "ลานา เดล เรย์",
+            "Лана дел Реј",
+            "ਲਾਨਾ ਡੈਲ ਰੇ",
+            "लेना डेल रे",
+            "Лана Дел Рей",
+            "ലാന ഡെൽ റേ",
+            "Лана Дел Реј",
+            "ລານາ ເດລ ເຣ",
+            "라나 델 레이",
+            "ឡាណា ឌែល រេយ៍",
+            "ლანა დელ რეი",
+            "Լանա Դել Ռեյ",
+            "लाना डेल रे",
+            "לנה דל ריי",
+            "لانا دل ری",
+            "Lana Rey Del Mar",
+            "Λάνα Ντελ Ρέι",
+            "لانا دێل ڕەی",
+            "লানা ডেল্ রে",
+            "Лана Дэль Рэй",
+            "لانا دل راى",
+            "لانا دل راي",
+            "拉娜·戴莉",
+            "拉娜·德芮",
+            "拉娜·德雷",
+            "ラナ・デル・レイ",
+            "Miss Daytona",
+            "Lizzi Grant",
+            "LDR",
+            "Lana Del Ray",
+            "Lizzy Grant",
+            "Elizabeth Woolridge Grant",
+            "Sparkle Jump Rope Queen",
+            "May Jailer",
+            "Elizabeth Grant"
+          ],
+          "titleChecks": [
+            {
+              "title": "Video games",
+              "found": true,
+              "canonicalTitle": "Video Games",
+              "score": 100,
+              "firstReleaseDate": "2012-02-15"
+            }
+          ]
+        },
+        {
+          "mbid": "2ce02909-598b-44ef-a456-151ba0a3bd70",
+          "name": "Ray Charles",
+          "score": 74,
+          "type": "Person",
+          "disambiguation": "soul musician, singer and songwriter",
+          "country": "US",
+          "began": "1930-09-23",
+          "aliases": [
+            "Ray Charles Robinson",
+            "レイ・チャールズ",
+            "Charles Ray",
+            "R. Charles"
+          ],
+          "titleChecks": [
+            {
+              "title": "Video games",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "ece8692c-e3f4-46cb-9c2d-cef7277f7121",
+          "name": "Lana Del Rabies",
+          "score": 73,
+          "type": "Person",
+          "disambiguation": "industrial gothic noise project of Sam An",
+          "country": "US",
+          "titleChecks": [
+            {
+              "title": "Video games",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "The Attic",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 669,
+          "song": "I just can't help it"
+        }
+      ],
+      "sampledTitles": [
+        "I just can't help it"
+      ],
+      "candidates": [
+        {
+          "mbid": "3153f531-d737-4409-9998-2cd8f3da7f2f",
+          "name": "The Attic",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "Swedish electro artists",
+          "country": "SE",
+          "began": "2003",
+          "titleChecks": [
+            {
+              "title": "I just can't help it",
+              "found": true,
+              "canonicalTitle": "I Just Can't Help It",
+              "score": 100,
+              "firstReleaseDate": "2004"
+            }
+          ]
+        },
+        {
+          "mbid": "f4a558c3-40fe-4cbb-94da-eac486869f3d",
+          "name": "The Attic",
+          "score": 98,
+          "type": "Group",
+          "disambiguation": "Portuguese jazz trio",
+          "country": "PT",
+          "titleChecks": [
+            {
+              "title": "I just can't help it",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "298a68d9-16cc-420a-8b80-2daf6652e755",
+          "name": "The Attic",
+          "score": 97,
+          "type": "Group",
+          "disambiguation": "Pop-Punk/Alternative Rock Band from Austria",
+          "began": "2014",
+          "titleChecks": [
+            {
+              "title": "I just can't help it",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Dennis DeYoung",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 270,
+          "song": "Desert moon"
+        }
+      ],
+      "sampledTitles": [
+        "Desert moon"
+      ],
+      "candidates": [
+        {
+          "mbid": "9da87628-95a0-4820-93c7-7b1609d9bce7",
+          "name": "Dennis DeYoung",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1947-02-18",
+          "aliases": [
+            "D. Young",
+            "Robert Orin Charles Kilroy",
+            "Dennis De Young"
+          ],
+          "titleChecks": [
+            {
+              "title": "Desert moon",
+              "found": true,
+              "canonicalTitle": "Desert Moon",
+              "score": 100,
+              "firstReleaseDate": "2002"
+            }
+          ]
+        },
+        {
+          "mbid": "24c0aaf3-4ac2-4f9a-9ce6-a1545a96f017",
+          "name": "Dennis Brown",
+          "score": 44,
+          "type": "Person",
+          "disambiguation": "Jamaican reggae singer Dennis Emmanuel Brown",
+          "country": "JM",
+          "began": "1957-02-01",
+          "aliases": [
+            "D. Brown"
+          ],
+          "titleChecks": [
+            {
+              "title": "Desert moon",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "6537511c-deff-4961-89ba-e946155dfda4",
+          "name": "Michelle DeYoung",
+          "score": 42,
+          "type": "Person",
+          "disambiguation": "mezzo‐soprano",
+          "country": "US",
+          "began": "1968",
+          "titleChecks": [
+            {
+              "title": "Desert moon",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "System of a down",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3566,
+          "song": "Chop suey"
+        }
+      ],
+      "sampledTitles": [
+        "Chop suey"
+      ],
+      "candidates": [
+        {
+          "mbid": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+          "name": "System of a Down",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "1995-02-01",
+          "aliases": [
+            "システム・オブ・ア・ダウン",
+            "SOAD",
+            "Soil",
+            "System Of Down",
+            "S.O.A.D.",
+            "SoaD"
+          ],
+          "titleChecks": [
+            {
+              "title": "Chop suey",
+              "found": true,
+              "canonicalTitle": "Chop Suey!",
+              "score": 100,
+              "firstReleaseDate": "2002"
+            }
+          ]
+        },
+        {
+          "mbid": "b4a96d22-7286-4acb-95f7-6b3dab2affcc",
+          "name": "Fuck the System",
+          "score": 59,
+          "disambiguation": "System of a Down cover",
+          "titleChecks": [
+            {
+              "title": "Chop suey",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "1568a5e2-918b-4b55-82cb-19a00fb3cc13",
+          "name": "TOAD (Tribute of a Down)",
+          "score": 57,
+          "type": "Group",
+          "disambiguation": "Northeast PA System of a Down tribute band",
+          "likelyTributeOrCover": true,
+          "titleChecks": [
+            {
+              "title": "Chop suey",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Harpo",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1087,
+          "song": "Moviestar"
+        }
+      ],
+      "sampledTitles": [
+        "Moviestar"
+      ],
+      "candidates": [
+        {
+          "mbid": "37c253e5-24fe-4415-9832-dd7bad675a97",
+          "name": "Harpo",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "Swedish pop singer",
+          "country": "SE",
+          "began": "1950-04-05",
+          "aliases": [
+            "Jan Torsten Svensson"
+          ],
+          "titleChecks": [
+            {
+              "title": "Moviestar",
+              "found": true,
+              "canonicalTitle": "Moviestar",
+              "score": 100,
+              "firstReleaseDate": "2002-11-04"
+            }
+          ]
+        },
+        {
+          "mbid": "dcf7b2e3-d3aa-41e4-bba5-40515122f209",
+          "name": "Slim Harpo",
+          "score": 92,
+          "type": "Person",
+          "country": "US",
+          "began": "1924-01-11",
+          "aliases": [
+            "Harpo Slim"
+          ],
+          "titleChecks": [
+            {
+              "title": "Moviestar",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "0d2845fd-691d-42da-ad9f-d168845f79ad",
+          "name": "Harpo",
+          "score": 91,
+          "type": "Group",
+          "disambiguation": "us rock group",
+          "began": "1974",
+          "titleChecks": [
+            {
+              "title": "Moviestar",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Hozier",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5377,
+          "song": "Take Me To Church"
+        }
+      ],
+      "sampledTitles": [
+        "Take Me To Church"
+      ],
+      "candidates": [
+        {
+          "mbid": "b4691384-50c3-4afd-9988-51d3ec5db65d",
+          "name": "Hozier",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "Irish singer/songwriter",
+          "country": "IE",
+          "began": "1990-03-17",
+          "aliases": [
+            "Andrew Hozier‐Byrne",
+            "Andrew John Hozier‐Byrne"
+          ],
+          "titleChecks": [
+            {
+              "title": "Take Me To Church",
+              "found": true,
+              "canonicalTitle": "Take Me to Church",
+              "score": 100,
+              "firstReleaseDate": "2015-03-10"
+            }
+          ]
+        },
+        {
+          "mbid": "f2c09144-3d06-4fbe-a961-ff642f9358d0",
+          "name": "Vince Hozier",
+          "score": 73,
+          "type": "Person",
+          "titleChecks": [
+            {
+              "title": "Take Me To Church",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "aec41e5c-9dcb-4a33-a339-5768be7f1f33",
+          "name": "Raine Hozier‐Byrne",
+          "score": 66,
+          "type": "Person",
+          "country": "IE",
+          "titleChecks": [
+            {
+              "title": "Take Me To Church",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Ladyhawke",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 2122,
+          "song": "Back of the van"
+        }
+      ],
+      "sampledTitles": [
+        "Back of the van"
+      ],
+      "candidates": [
+        {
+          "mbid": "2e547c75-36c1-49d0-984e-b14498c936f0",
+          "name": "Ladyhawke",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "New Zealand pop rock artist",
+          "country": "NZ",
+          "began": "1979-07-13",
+          "titleChecks": [
+            {
+              "title": "Back of the van",
+              "found": true,
+              "canonicalTitle": "Back of the Van",
+              "score": 100,
+              "firstReleaseDate": "2010-05-04"
+            }
+          ]
+        },
+        {
+          "mbid": "a3dac7ba-9c0b-461b-92f3-29273b86ba63",
+          "name": "Ladyhawk",
+          "score": 78,
+          "type": "Group",
+          "disambiguation": "Canadian indie rock quartet from Vancouver, British Columbia.",
+          "country": "CA",
+          "began": "2004-02-27",
+          "aliases": [
+            "Ladyhawke"
+          ],
+          "titleChecks": [
+            {
+              "title": "Back of the van",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "f90bda8a-6748-4e23-8021-d3ca6dc15de4",
+          "name": "Teenager",
+          "score": 46,
+          "type": "Group",
+          "disambiguation": "Nick Littlemore & Pip Brown (Ladyhawke)",
+          "country": "AU",
+          "began": "2004",
+          "titleChecks": [
+            {
+              "title": "Back of the van",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Lil Uzi Vert",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5816,
+          "song": "XO tour"
+        }
+      ],
+      "sampledTitles": [
+        "XO tour"
+      ],
+      "candidates": [
+        {
+          "mbid": "8837b875-3689-4646-b3fd-d8b53815c7a8",
+          "name": "Lil Uzi Vert",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1994-07-31",
+          "aliases": [
+            "小乌兹",
+            "Саймер Вудс",
+            "Ліл Узі Верт",
+            "Саймир Вудс",
+            "Лил Узи Верт",
+            "사이미어 우즈",
+            "릴 우지 버트",
+            "サイミア・ウッズ",
+            "Սայմիր Վուդս",
+            "סיימיר וודס",
+            "ליל אוזי ורט",
+            "لیل اوزی ورت",
+            "Σάιμιρ Γούντς",
+            "لیل اوزی فیرت",
+            "ليل أوزي فيرت",
+            "سايمير بايسل وودز",
+            "利尔·乌兹·弗特",
+            "LUV",
+            "Sealab Vertical",
+            "Uzi Vert",
+            "Uzi London",
+            "Baby Pluto",
+            "Renji",
+            "Lil Uzi",
+            "Symere Bysil Woods",
+            "リル・ウージー・ヴァート"
+          ],
+          "titleChecks": [
+            {
+              "title": "XO tour",
+              "found": true,
+              "canonicalTitle": "XO TOUR Llif3",
+              "score": 100,
+              "firstReleaseDate": "2022"
+            }
+          ]
+        },
+        {
+          "mbid": "86e46911-b452-4642-a189-5bc37bbd91ea",
+          "name": "The Ensemble",
+          "score": 48,
+          "disambiguation": "backup vocals associated with Lil Uzi Vert",
+          "titleChecks": [
+            {
+              "title": "XO tour",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "6d59f31a-4c22-42b1-8fb3-31993745609c",
+          "name": "Uzi",
+          "score": 39,
+          "type": "Person",
+          "disambiguation": "German rapper",
+          "country": "DE",
+          "began": "1985-08-07",
+          "aliases": [
+            "Thomaz Michaelis"
+          ],
+          "titleChecks": [
+            {
+              "title": "XO tour",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Mick Jagger & Sheryl Crow",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3434,
+          "song": "Old habits die hard"
+        }
+      ],
+      "sampledTitles": [
+        "Old habits die hard"
+      ],
+      "candidates": [
+        {
+          "mbid": "80ccfede-c258-4575-a7ad-c982e9932e0f",
+          "name": "Sheryl Crow",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "American singer-songwriter and musician",
+          "country": "US",
+          "began": "1962-02-11",
+          "aliases": [
+            "Sheryl Suzanne Crow",
+            "Sheryl Crown",
+            "S. Crow",
+            "Shery Crow",
+            "Cheryl Crow",
+            "Sheryl Crow and Friends"
+          ],
+          "titleChecks": [
+            {
+              "title": "Old habits die hard",
+              "found": true,
+              "canonicalTitle": "Old Habits Die Hard",
+              "score": 100,
+              "firstReleaseDate": "2004-10-19"
+            }
+          ]
+        },
+        {
+          "mbid": "b5ffc3aa-b868-4b88-905f-d73d51dbe51c",
+          "name": "Mick Jagger",
+          "score": 88,
+          "type": "Person",
+          "disambiguation": "The Rolling Stones",
+          "country": "GB",
+          "began": "1943-07-26",
+          "aliases": [
+            "Michael Philip Jagger",
+            "Michael Phillip Jagger"
+          ],
+          "titleChecks": [
+            {
+              "title": "Old habits die hard",
+              "found": true,
+              "canonicalTitle": "Old Habits Die Hard",
+              "score": 100,
+              "firstReleaseDate": "2004-10-19"
+            }
+          ]
+        },
+        {
+          "mbid": "09df9931-c15a-44cb-b69c-3418581e1607",
+          "name": "Mick Jagger",
+          "score": 75,
+          "disambiguation": "Fake",
+          "titleChecks": [
+            {
+              "title": "Old habits die hard",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Mick Jagger",
+          "candidates": [
+            {
+              "mbid": "b5ffc3aa-b868-4b88-905f-d73d51dbe51c",
+              "name": "Mick Jagger",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "The Rolling Stones",
+              "country": "GB",
+              "began": "1943-07-26",
+              "aliases": [
+                "Michael Philip Jagger",
+                "Michael Phillip Jagger"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Old habits die hard",
+                  "found": true,
+                  "canonicalTitle": "Old Habits Die Hard",
+                  "score": 100,
+                  "firstReleaseDate": "2004-10-19"
+                }
+              ]
+            },
+            {
+              "mbid": "09df9931-c15a-44cb-b69c-3418581e1607",
+              "name": "Mick Jagger",
+              "score": 90,
+              "disambiguation": "Fake",
+              "titleChecks": [
+                {
+                  "title": "Old habits die hard",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Sheryl Crow",
+          "candidates": [
+            {
+              "mbid": "80ccfede-c258-4575-a7ad-c982e9932e0f",
+              "name": "Sheryl Crow",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "American singer-songwriter and musician",
+              "country": "US",
+              "began": "1962-02-11",
+              "aliases": [
+                "Sheryl Suzanne Crow",
+                "Sheryl Crown",
+                "S. Crow",
+                "Shery Crow",
+                "Cheryl Crow",
+                "Sheryl Crow and Friends"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Old habits die hard",
+                  "found": true,
+                  "canonicalTitle": "Old Habits Die Hard",
+                  "score": 100,
+                  "firstReleaseDate": "2004-10-19"
+                }
+              ]
+            },
+            {
+              "mbid": "d5ac2fb7-f191-471e-88c1-4536123012ab",
+              "name": "Peter Stroud",
+              "score": 53,
+              "type": "Person",
+              "disambiguation": "Sheryl Crow guitarist",
+              "country": "US",
+              "titleChecks": [
+                {
+                  "title": "Old habits die hard",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Livin' Joy",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 24,
+          "song": "Dreamer"
+        }
+      ],
+      "sampledTitles": [
+        "Dreamer"
+      ],
+      "candidates": [
+        {
+          "mbid": "3016b5eb-866d-4051-a7fb-d9175853049b",
+          "name": "Livin’ Joy",
+          "score": 100,
+          "type": "Group",
+          "country": "IT",
+          "aliases": [
+            "Livin Joy'",
+            "Livin’ Joy",
+            "Livin Joy",
+            "Livin'Joy",
+            "Living Joy",
+            "Livin Boy"
+          ],
+          "titleChecks": [
+            {
+              "title": "Dreamer",
+              "found": true,
+              "canonicalTitle": "Dreamer",
+              "score": 100,
+              "firstReleaseDate": "1996-11-04"
+            }
+          ]
+        },
+        {
+          "mbid": "9a58fda3-f4ed-4080-a3a5-f457aac9fcdd",
+          "name": "Joy Division",
+          "score": 46,
+          "type": "Group",
+          "country": "GB",
+          "began": "1978-01",
+          "titleChecks": [
+            {
+              "title": "Dreamer",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "a629f8fc-5e7b-4085-8d6b-e4a392933e9e",
+          "name": "Livin’ Blues",
+          "score": 46,
+          "type": "Group",
+          "country": "NL",
+          "began": "1967",
+          "aliases": [
+            "Livin Blues",
+            "Living Blues"
+          ],
+          "titleChecks": [
+            {
+              "title": "Dreamer",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Dj Sammy & Yanou feat. Fido",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 162,
+          "song": "Heaven"
+        }
+      ],
+      "sampledTitles": [
+        "Heaven"
+      ],
+      "candidates": [
+        {
+          "mbid": "433ccb7d-440a-4fa9-aeee-11cb74254f7b",
+          "name": "Yanou",
+          "score": 100,
+          "type": "Person",
+          "disambiguation": "German trance/eurodance artist Yann Peifer",
+          "country": "DE",
+          "began": "1974-03-06",
+          "titleChecks": [
+            {
+              "title": "Heaven",
+              "found": true,
+              "canonicalTitle": "Heaven",
+              "score": 100,
+              "firstReleaseDate": "2002"
+            }
+          ]
+        },
+        {
+          "mbid": "c43e35b8-8234-408b-9a25-07f2fcbeb317",
+          "name": "DJ Sammy",
+          "score": 92,
+          "type": "Person",
+          "country": "ES",
+          "began": "1969-10-19",
+          "aliases": [
+            "D J Sammy"
+          ],
+          "titleChecks": [
+            {
+              "title": "Heaven",
+              "found": true,
+              "canonicalTitle": "Heaven",
+              "score": 100,
+              "firstReleaseDate": "2002"
+            }
+          ]
+        },
+        {
+          "mbid": "6912153a-e94c-4600-a821-951193cf7c08",
+          "name": "Beam & Yanou",
+          "score": 86,
+          "type": "Group",
+          "country": "DE",
+          "aliases": [
+            "Beam & Janou"
+          ],
+          "titleChecks": [
+            {
+              "title": "Heaven",
+              "found": false
+            }
+          ]
+        }
+      ],
+      "splitFragments": [
+        {
+          "fragment": "Dj Sammy",
+          "candidates": [
+            {
+              "mbid": "c43e35b8-8234-408b-9a25-07f2fcbeb317",
+              "name": "DJ Sammy",
+              "score": 100,
+              "type": "Person",
+              "country": "ES",
+              "began": "1969-10-19",
+              "aliases": [
+                "D J Sammy"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": true,
+                  "canonicalTitle": "Heaven",
+                  "score": 100,
+                  "firstReleaseDate": "2002"
+                }
+              ]
+            },
+            {
+              "mbid": "3a55b948-780e-4d1d-9589-4e59acae1249",
+              "name": "DJ Sammy",
+              "score": 88,
+              "disambiguation": "aka DJ Sammy (TH)",
+              "aliases": [
+                "DJ Sammy (TH)"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": true,
+                  "canonicalTitle": "Heaven (Yanou's Candlelight Mix)",
+                  "score": 100,
+                  "firstReleaseDate": "2003"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Yanou",
+          "candidates": [
+            {
+              "mbid": "433ccb7d-440a-4fa9-aeee-11cb74254f7b",
+              "name": "Yanou",
+              "score": 100,
+              "type": "Person",
+              "disambiguation": "German trance/eurodance artist Yann Peifer",
+              "country": "DE",
+              "began": "1974-03-06",
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": true,
+                  "canonicalTitle": "Heaven",
+                  "score": 100,
+                  "firstReleaseDate": "2002"
+                }
+              ]
+            },
+            {
+              "mbid": "56ed5bda-989c-466f-a9a2-80ed21c81376",
+              "name": "Yanou Pauwels",
+              "score": 77,
+              "type": "Person",
+              "disambiguation": "Belgian classical double bassist",
+              "country": "BE",
+              "began": "1990",
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fragment": "Fido",
+          "candidates": [
+            {
+              "mbid": "0deace23-aed7-4a02-99ff-fa233056b3fe",
+              "name": "Fido",
+              "score": 100,
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": false
+                }
+              ]
+            },
+            {
+              "mbid": "d7db36a9-4408-4592-a3d7-bd90301953c7",
+              "name": "Fido",
+              "score": 99,
+              "type": "Person",
+              "disambiguation": "Joel Fido Martínez, reggaeton artist from Alexis & Fido",
+              "country": "PR",
+              "began": "1979-07-14",
+              "aliases": [
+                "Joel Fido Martínez"
+              ],
+              "titleChecks": [
+                {
+                  "title": "Heaven",
+                  "found": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Tramps",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 1953,
+          "song": "Disco inferno"
+        }
+      ],
+      "sampledTitles": [
+        "Disco inferno"
+      ],
+      "candidates": [
+        {
+          "mbid": "8799413d-7df8-4eb9-8542-af8cea6b0feb",
+          "name": "The Trammps",
+          "score": 100,
+          "type": "Group",
+          "disambiguation": "US disco/soul band",
+          "country": "US",
+          "began": "1972",
+          "aliases": [
+            "Trammps",
+            "The Tramps"
+          ],
+          "titleChecks": [
+            {
+              "title": "Disco inferno",
+              "found": true,
+              "canonicalTitle": "Disco Inferno",
+              "score": 100,
+              "firstReleaseDate": "2005"
+            }
+          ]
+        },
+        {
+          "mbid": "c5b2538f-6cb9-4f6b-aa11-e600672d1610",
+          "name": "The Tramps",
+          "score": 89,
+          "type": "Group",
+          "disambiguation": "Norwegian band",
+          "began": "1994",
+          "titleChecks": [
+            {
+              "title": "Disco inferno",
+              "found": true,
+              "canonicalTitle": "Disco Inferno",
+              "score": 100,
+              "firstReleaseDate": "2007"
+            }
+          ]
+        },
+        {
+          "mbid": "c03e22bf-2719-4538-83a2-b9e7397c09d3",
+          "name": "The Saddle Tramps",
+          "score": 89,
+          "type": "Group",
+          "aliases": [
+            "Saddle Tramps"
+          ],
+          "titleChecks": [
+            {
+              "title": "Disco inferno",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "France Gall",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 4101,
+          "song": "Ella elle l'a"
+        }
+      ],
+      "sampledTitles": [
+        "Ella elle l'a"
+      ],
+      "candidates": [
+        {
+          "mbid": "385966f0-b912-4755-bad6-4780ebf3f4cd",
+          "name": "France Gall",
+          "score": 100,
+          "type": "Person",
+          "country": "FR",
+          "began": "1947-10-09",
+          "aliases": [
+            "フランス・ギャル",
+            "France Galle",
+            "Isabelle Geneviève Marie Anne Gall",
+            "Isabelle Gall"
+          ],
+          "titleChecks": [
+            {
+              "title": "Ella elle l'a",
+              "found": true,
+              "canonicalTitle": "Ella, elle l’a",
+              "score": 100,
+              "firstReleaseDate": "1996-01"
+            }
+          ]
+        },
+        {
+          "mbid": "491244a7-ed6c-4fe5-a19a-0170a014f7ea",
+          "name": ":zoviet*france:",
+          "score": 43,
+          "type": "Group",
+          "country": "GB",
+          "began": "1980",
+          "aliases": [
+            ":$OVIET:FRANCE:",
+            "Zoviet France",
+            ":Zoviet*France:",
+            ":Zoviet-France:",
+            "Soviet France"
+          ],
+          "titleChecks": [
+            {
+              "title": "Ella elle l'a",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "45345df7-cd1e-4649-b5b7-65fe21bdfa86",
+          "name": "GALL",
+          "score": 41,
+          "type": "Group",
+          "disambiguation": "Noise / Powerviolence band from Potsdam",
+          "titleChecks": [
+            {
+              "title": "Ella elle l'a",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Bing Crosby",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 3371,
+          "song": "White christmas"
+        }
+      ],
+      "sampledTitles": [
+        "White christmas"
+      ],
+      "candidates": [
+        {
+          "mbid": "2437980f-513a-44fc-80f1-b90d9d7fcf8f",
+          "name": "Bing Crosby",
+          "score": 100,
+          "type": "Person",
+          "country": "US",
+          "began": "1903-05-03",
+          "aliases": [
+            "ビング・クロスビー",
+            "Bing Cosby",
+            "Bind Crosby",
+            "Harry Lillis Crosby",
+            "Bing Crosby & Family",
+            "Bing Cropsby",
+            "Bin Crosby",
+            "Bong Crosby"
+          ],
+          "titleChecks": [
+            {
+              "title": "White christmas",
+              "found": true,
+              "canonicalTitle": "White Christmas",
+              "score": 100,
+              "firstReleaseDate": "2004"
+            }
+          ]
+        },
+        {
+          "mbid": "a3e319d5-e28e-4028-b9e9-3ff15b0511af",
+          "name": "Ella Fitzgerald & Bing Crosby",
+          "score": 58,
+          "titleChecks": [
+            {
+              "title": "White christmas",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "e4921fe6-9ea1-42a2-ae04-cb4b6c94a0b0",
+          "name": "Bing Crosby With Dorsey Brothers Orchestra",
+          "score": 53,
+          "type": "Group",
+          "titleChecks": [
+            {
+              "title": "White christmas",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Band Of Horses",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 4370,
+          "song": "Is there a ghost"
+        }
+      ],
+      "sampledTitles": [
+        "Is there a ghost"
+      ],
+      "candidates": [
+        {
+          "mbid": "07b6020a-c539-4d68-aeef-f159f3befc76",
+          "name": "Band of Horses",
+          "score": 100,
+          "type": "Group",
+          "country": "US",
+          "began": "2004",
+          "titleChecks": [
+            {
+              "title": "Is there a ghost",
+              "found": true,
+              "canonicalTitle": "Is There a Ghost",
+              "score": 100,
+              "firstReleaseDate": "2010-05-18"
+            }
+          ]
+        },
+        {
+          "mbid": "d6652e7b-33fe-49ef-8336-4c863b4f996f",
+          "name": "The E Street Band",
+          "score": 52,
+          "type": "Group",
+          "country": "US",
+          "began": "1972-10",
+          "aliases": [
+            "The E-Street Band",
+            "Bruce Springsteen and the E Street Band",
+            "Bruce Springsteen and the E-Street Band",
+            "Bruce Springsteen & The E Street Band",
+            "Bruce Springsteen & The E-Street Band"
+          ],
+          "titleChecks": [
+            {
+              "title": "Is there a ghost",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "846850ad-c50f-4771-bd5b-b58f26347163",
+          "name": "Wild Horses",
+          "score": 51,
+          "type": "Group",
+          "disambiguation": "country band from Texas",
+          "country": "US",
+          "began": "1989",
+          "aliases": [
+            "Wild Horses Band"
+          ],
+          "titleChecks": [
+            {
+              "title": "Is there a ghost",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Stars On 54",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 5436,
+          "song": "If You Could Read My Mind"
+        }
+      ],
+      "sampledTitles": [
+        "If You Could Read My Mind"
+      ],
+      "candidates": [
+        {
+          "mbid": "b53bed16-3fef-49de-9a62-d954cf5446bc",
+          "name": "Stars on 54",
+          "score": 100,
+          "type": "Group",
+          "aliases": [
+            "Stars On",
+            "Stars on 54 Ultra Naté, Amber & Jocelèn Enriquez",
+            "Stars On 54: Ultra Naté, Amber & Jocelyn Enriquez",
+            "Ultra Nate, Amber & Jocelyn Enriquez"
+          ],
+          "titleChecks": [
+            {
+              "title": "If You Could Read My Mind",
+              "found": true,
+              "canonicalTitle": "If You Could Read My Mind",
+              "score": 100,
+              "firstReleaseDate": "2000"
+            }
+          ]
+        },
+        {
+          "mbid": "42ca42ca-51c2-4e6a-8e0b-6f9237533a45",
+          "name": "Stars on 45",
+          "score": 45,
+          "type": "Group",
+          "country": "NL",
+          "began": "1980",
+          "aliases": [
+            "Starsound",
+            "Starsounds",
+            "Stars on 45's"
+          ],
+          "titleChecks": [
+            {
+              "title": "If You Could Read My Mind",
+              "found": false
+            }
+          ]
+        },
+        {
+          "mbid": "685220bb-d3fa-448f-a5ec-dda4fa3268a7",
+          "name": "The 54 All‐Stars",
+          "score": 44,
+          "aliases": [
+            "The 54 Allstars"
+          ],
+          "titleChecks": [
+            {
+              "title": "If You Could Read My Mind",
+              "found": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artist": "Tramteatret",
+      "songCount": 1,
+      "songs": [
+        {
+          "id": 789,
+          "song": "Å livet svinger"
+        }
+      ],
+      "sampledTitles": [
+        "Å livet svinger"
+      ],
+      "candidates": [
+        {
+          "mbid": "b79d50c5-ddce-42d9-8ee2-32f1480a8a88",
+          "name": "Tramteatret",
+          "score": 100,
+          "type": "Group",
+          "country": "NO",
+          "began": "1976-06-15",
+          "aliases": [
+            "Tramteateret",
+            "Pelle Parafins Bøljeband"
+          ],
+          "titleChecks": [
+            {
+              "title": "Å livet svinger",
+              "found": true,
+              "canonicalTitle": "Å, livet svinger",
+              "score": 100,
+              "firstReleaseDate": "1980"
+            }
+          ]
+        },
+        {
+          "mbid": "326b6e1b-4685-4c1f-91aa-2dfc1e16eba3",
+          "name": "Henning Westeng",
+          "score": 41,
+          "type": "Person",
+          "disambiguation": "drummer; aka. Kåre Kelner; member of Tramteatret, Brask & Bram",
+          "country": "NO",
+          "titleChecks": [
+            {
+              "title": "Å livet svinger",
+              "found": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

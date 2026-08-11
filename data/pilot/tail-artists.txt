@@ -1,0 +1,65 @@
+# A deliberately arbitrary sample of the long tail: 60 of the 1278 artist strings
+# that have exactly one song, chosen by hashing the name so the pick is reproducible
+# and not curated by me. The pilot set covered this bucket but only with cases I found
+# interesting, which is not the same as representative.
+
+Thore Skogman
+Tim Deluxe & Sam Obernik
+Kalle Moraeus & Orsa spelmän
+Fairground Attraction
+Wild Cherry
+Ray Charles & Elton John
+Steve Winwood
+4him
+Hanna Hedlund
+Lumineers
+Third World
+Charlie Drake
+Diana Ross & Marvin Gaye
+Sara Evans
+Flo Rida ft Jason Derulo
+Loa Falkman
+Lou Bega
+Little Mermaid
+George Michael And Aretha Franklin
+Johnny Logan
+John Loudermilk
+Steppenwolf
+Weather Girls
+George Michael & Elton John
+Big Mountain
+Lukas Graham
+Wizex
+Tingeling feat. Pihlman
+Lill-Babs
+Anna Bergendahl
+Avicii Feat. Salem Al Fakir
+Frankie Valli
+Ed Sheeran feat. Rudimental
+Chess
+Art Garfunkle
+Benny Borg
+Michael McDonald
+Ani Difranco
+Case
+Hepstars
+America
+Marvi Gaye
+Fiddler on the roof
+Lana Del Ray
+The Attic
+Dennis DeYoung
+System of a down
+Harpo
+Hozier
+Ladyhawke
+Lil Uzi Vert
+Mick Jagger & Sheryl Crow
+Livin' Joy
+Dj Sammy & Yanou feat. Fido
+Tramps
+France Gall
+Bing Crosby
+Band Of Horses
+Stars On 54
+Tramteatret
