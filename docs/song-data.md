@@ -533,6 +533,10 @@ A prefix match onto `Girls Talk Boys (from "Ghostbusters" original motion pictur
 version match and then publishing the soundtrack annotation as the title. `from` is now treated as a version
 marker alongside mix/remix/live, so the published title is `Girls Talk Boys` and the film is recorded in `from`.
 
+The same leakage happens on the artist column: `Enya (fellowship Of The Ring Soundtrack)` is Enya, from
+The Fellowship of the Ring. Parentheses that look like soundtrack/film notes are stripped from the artist
+string before matching (while `Chess (Linda Eder)` is left alone, because that names a performer).
+
 ## Title-first, for artists with no other trusted song
 
 Pass 2 can only scope by an artist it has already identified. A misspelled solo artist with one song —

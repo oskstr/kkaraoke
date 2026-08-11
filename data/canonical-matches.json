@@ -9475,7 +9475,21 @@
       "id": 498,
       "artist": "Laura Allan",
       "song": "Slip and slide",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Laura Allan",
+      "artistMbids": [
+        "78e5b68a-c26d-4756-b93a-a085ae87abeb"
+      ],
+      "recording": "Slip & Slide",
+      "recordingMbid": "33b744b8-3923-4d54-a211-0c0b33c01336",
+      "release": "Laura Allan",
+      "score": 683475,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "trusted": true,
+      "title": "Slip & Slide"
     },
     {
       "postId": 51906,
@@ -18509,7 +18523,21 @@
       "id": 984,
       "artist": "Lasse Holm & Monica Törnell",
       "song": "Är det det här du kallar kärlek",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Monica Törnell & Lasse Holm",
+      "artistMbids": [
+        "831fca4a-093a-4f82-9b57-c2c5e994401e",
+        "7055ff0e-0b44-4bda-8892-3807b93d2d50"
+      ],
+      "recording": "Är det det här du kallar kärlek",
+      "recordingMbid": "18c3178d-ca10-497d-9c65-791b9e48e79d",
+      "release": "Melodifestival Favoriter",
+      "score": 5417183,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Melodifestivalen 1986; dump bills Monica first; venue title is the Är-spelling of E' de'…",
+      "trusted": true,
+      "title": "Är det det här du kallar kärlek"
     },
     {
       "postId": 51792,
@@ -21031,7 +21059,21 @@
       "id": 1121,
       "artist": "Huey Lewis & Gwyneth Paltrow",
       "song": "Cruisin'",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gwyneth Paltrow & Huey Lewis",
+      "artistMbids": [
+        "dc71c08e-3ee5-409d-ae0d-f4fd9050e170",
+        "b0b6393a-a5fb-4246-921e-33e0c20371cf"
+      ],
+      "recording": "Cruisin’",
+      "recordingMbid": "d672f5c3-f1f0-493d-b745-8c1b09c53426",
+      "release": "Cruisin’",
+      "score": 2303731,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "dump bills Gwyneth first",
+      "trusted": true,
+      "title": "Cruisin’"
     },
     {
       "postId": 52590,
@@ -21361,7 +21403,21 @@
       "id": 1139,
       "artist": "Hair",
       "song": "Easy to be hard",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Three Dog Night",
+      "artistMbids": [
+        "1a48176d-1414-4a18-9792-50ba585d4d59"
+      ],
+      "recording": "Easy to Be Hard",
+      "recordingMbid": "7d5501d6-1bba-4e61-be7d-8c03b8df10e9",
+      "release": "Suitable for Framing",
+      "score": 903590,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Hair; popular recording",
+      "from": "Hair",
+      "trusted": true,
+      "title": "Easy to Be Hard"
     },
     {
       "postId": 49298,
@@ -46482,7 +46538,22 @@
       "id": 2501,
       "artist": "Lion King",
       "song": "Hakuna matata",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Nathan Lane & Ernie Sabella",
+      "artistMbids": [
+        "6744daab-306b-483c-81c3-d4f7cafd90df",
+        "dcd0cef2-9e39-485b-ba39-e10e6c2707a6"
+      ],
+      "recording": "Hakuna Matata",
+      "recordingMbid": "f53b54b8-9174-45a7-a8fe-683f64874aaf",
+      "release": "A Celebration of Disney’s Hit Singles & More",
+      "score": 5342922,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Lion King OST; Timon and Pumbaa",
+      "from": "The Lion King",
+      "trusted": true,
+      "title": "Hakuna Matata"
     },
     {
       "postId": 50185,
@@ -46779,7 +46850,21 @@
       "id": 2517,
       "artist": "Jennifer Hudson",
       "song": "And I'm telling you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jennifer Hudson",
+      "artistMbids": [
+        "95b5d5b5-46c4-4c3e-89d5-ffe9236427ac"
+      ],
+      "recording": "And I Am Telling You I’m Not Going",
+      "recordingMbid": "7e900649-3f80-4e42-81c9-671e26860f5e",
+      "release": "Jennifer Hudson",
+      "score": 516820,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Dreamgirls film",
+      "from": "Dreamgirls",
+      "trusted": true,
+      "title": "And I Am Telling You I’m Not Going"
     },
     {
       "postId": 50940,
@@ -48116,7 +48201,20 @@
       "id": 2587,
       "artist": "Clarence Carter",
       "song": "Stroking",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Clarence Carter",
+      "artistMbids": [
+        "d24bd0d5-0bfe-43ca-9ddd-d731abda89d7"
+      ],
+      "recording": "Strokin’",
+      "recordingMbid": "355e7663-b43a-42cb-91b9-0a7e00254523",
+      "release": "Dr. C.C.",
+      "score": 19668,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Stroking is Strokin'",
+      "trusted": true,
+      "title": "Strokin’"
     },
     {
       "postId": 49346,
@@ -49499,7 +49597,21 @@
       "id": 2660,
       "artist": "Lady Gaga & Wale",
       "song": "Chillin",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Wale feat. Lady Gaga",
+      "artistMbids": [
+        "e34e41f2-f480-45d3-8190-a3ce5ab34fab",
+        "650e7db6-b795-4eb5-a702-5ea2fc46c848"
+      ],
+      "recording": "Chillin’",
+      "recordingMbid": "5a783c9b-80c6-42b9-bbad-72fc81126d61",
+      "release": "Attention Deficit",
+      "score": 557781,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Wale lead on the recording",
+      "trusted": true,
+      "title": "Chillin’"
     },
     {
       "postId": 50744,
@@ -59581,7 +59693,21 @@
       "id": 3192,
       "artist": "Louis Primer (The Jungle book)",
       "song": "I wanna be like you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Louis Prima",
+      "artistMbids": [
+        "b5997eef-2516-491a-a10e-5cee842bbcdc"
+      ],
+      "recording": "I Wan'na Be Like You",
+      "recordingMbid": "4908f9c4-30a2-4de1-b3d6-457b8ba802bf",
+      "release": "The New Sounds of the Louis Prima Show",
+      "score": 325356,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Louis Primer is Louis Prima; Jungle Book",
+      "from": "The Jungle Book",
+      "trusted": true,
+      "title": "I Wan'na Be Like You"
     },
     {
       "postId": 50651,
@@ -63151,7 +63277,21 @@
       "id": 3382,
       "artist": "Lady & The Tramp",
       "song": "Bella Notte (english)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Peggy Lee",
+      "artistMbids": [
+        "5a2463af-eef0-4a22-bc8f-5865fbe9c78e"
+      ],
+      "recording": "Bella Notte",
+      "recordingMbid": "698c5240-c5a9-4ffb-b494-c3fcc90295a0",
+      "release": "Bella Notte / La La Lu",
+      "score": 3511398,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Lady and the Tramp soundtrack",
+      "from": "Lady and the Tramp",
+      "trusted": true,
+      "title": "Bella Notte"
     },
     {
       "postId": 51427,
@@ -65797,7 +65937,20 @@
       "id": 3524,
       "artist": "Ohio",
       "song": "Fire",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ohio Players",
+      "artistMbids": [
+        "81e07550-d0e2-467e-bc71-44b5d52de8f4"
+      ],
+      "recording": "Fire",
+      "recordingMbid": "1b07acdb-9b8c-4115-bcec-b2c593f6161a",
+      "release": "Fire",
+      "score": 57961,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Ohio is Ohio Players",
+      "trusted": true,
+      "title": "Fire"
     },
     {
       "postId": 51918,
@@ -65844,7 +65997,20 @@
       "id": 3527,
       "artist": "Sos",
       "song": "Take your time (do it right)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The S.O.S. Band",
+      "artistMbids": [
+        "39515237-2d70-436a-800c-fcbac974bec4"
+      ],
+      "recording": "Take Your Time (Do It Right)",
+      "recordingMbid": "b1d3da4b-fb0e-4ba9-8e69-864d29b1dc88",
+      "release": "S.O.S.",
+      "score": 34481,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Sos is The S.O.S. Band",
+      "trusted": true,
+      "title": "Take Your Time (Do It Right)"
     },
     {
       "postId": 49675,
@@ -67725,18 +67891,20 @@
       "artist": "Ian Dury",
       "song": "Sex, drugs and rock and roll",
       "matched": true,
-      "artistCredit": "Ian Dury & the Blockheads",
+      "artistCredit": "Ian Dury",
       "artistMbids": [
-        "d4675794-9ad3-48eb-bcd4-b98be183b396"
+        "3d5c6889-2471-43c4-b853-08fc5fda810a"
       ],
-      "recording": "Sex Drugs and Rock and Roll",
-      "recordingMbid": "528fc2dd-e260-4c48-b385-1d4d68cbcdbf",
-      "release": "1980-12-13: Lucianatten Sweden",
-      "score": 4680670,
-      "how": "artist-scoped",
-      "rewrites": [],
+      "recording": "Sex & Drugs & Rock & Roll",
+      "recordingMbid": "8363f5ec-19a7-4e08-8987-2e306886eb88",
+      "release": "New Boots and Panties!!",
+      "score": 160946,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
-      "title": "Sex Drugs and Rock and Roll"
+      "title": "Sex & Drugs & Rock & Roll"
     },
     {
       "postId": 50521,
@@ -68036,7 +68204,21 @@
       "id": 3643,
       "artist": "Music Man",
       "song": "Till there was you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Beatles",
+      "artistMbids": [
+        "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d"
+      ],
+      "recording": "Till There Was You",
+      "recordingMbid": "7ac6bb7b-6dca-4343-95f6-27eefc1a8841",
+      "release": "With The Beatles",
+      "score": 13906,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Music Man number; Beatles popular recording",
+      "from": "The Music Man",
+      "trusted": true,
+      "title": "Till There Was You"
     },
     {
       "postId": 51772,
@@ -72661,17 +72843,18 @@
       "artist": "Pink",
       "song": "U and ur hand",
       "matched": true,
-      "artistCredit": "P!nk",
+      "artistCredit": "Pink",
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
-      "recording": "U + Ur Hand",
-      "recordingMbid": "f3805a9e-9ece-41fe-bed8-6a9169d3fa42",
-      "release": "I’m Not Dead",
-      "score": 429800,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "U and ur hand",
+      "recording": "U + Ur Hand (Bimbo Jones mix)",
+      "recordingMbid": "592b9fe0-776f-454e-bac9-b94ecee22e50",
+      "release": "Promo Only: Mainstream Club, April 2007",
+      "score": 5497744,
+      "how": "version",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
       "title": "U + Ur Hand"
     },
@@ -76188,7 +76371,21 @@
       "id": 4078,
       "artist": "Aqua",
       "song": "Happy boys and girls",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Aqua",
+      "artistMbids": [
+        "a1ed5e33-22ff-4e7d-a457-42f4309e135f"
+      ],
+      "recording": "Happy Boys & Girls",
+      "recordingMbid": "d535ac64-f8be-402a-8b55-942e3a9de759",
+      "release": "Aquarium",
+      "score": 175364,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "trusted": true,
+      "title": "Happy Boys & Girls"
     },
     {
       "postId": 47826,
@@ -76599,7 +76796,21 @@
       "id": 4100,
       "artist": "Little Mermaid",
       "song": "Part of your world (Disney)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jodi Benson",
+      "artistMbids": [
+        "62d54f86-3b76-4934-9ed1-7d34c3a381de"
+      ],
+      "recording": "Part of Your World",
+      "recordingMbid": "55189d79-1c46-405f-8db9-3da3e48ee763",
+      "release": "The Little Mermaid: Original Motion Picture Soundtrack",
+      "score": 4353199,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Ariel's singing voice",
+      "from": "The Little Mermaid",
+      "trusted": true,
+      "title": "Part of Your World"
     },
     {
       "postId": 50080,
@@ -86161,7 +86372,21 @@
       "id": 4603,
       "artist": "Duffy",
       "song": "Syrup and honey",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Duffy",
+      "artistMbids": [
+        "2c4dae8c-e591-49e0-9c5a-62b310a15788"
+      ],
+      "recording": "Syrup & Honey",
+      "recordingMbid": "c00e937c-f69e-422d-bedf-9960e86a9609",
+      "release": "Rockferry",
+      "score": 503247,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "trusted": true,
+      "title": "Syrup & Honey"
     },
     {
       "postId": 49555,
@@ -93306,7 +93531,20 @@
       "id": 4981,
       "artist": "Steely Dan",
       "song": "My school",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Steely Dan",
+      "artistMbids": [
+        "e01c3376-15fa-40d7-b747-5f219bdefdd7"
+      ],
+      "recording": "My Old School",
+      "recordingMbid": "e6fe5188-e68f-46d3-bc3c-c46cb7282bbf",
+      "release": "Countdown to Ecstasy",
+      "score": 7620,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "My school is My Old School",
+      "trusted": true,
+      "title": "My Old School"
     },
     {
       "postId": 52908,
@@ -94559,7 +94797,22 @@
       "id": 5047,
       "artist": "Tooji (Eurovision 2012 Norway)",
       "song": "Stay",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tooji",
+      "artistMbids": [
+        "723dfb38-ebd5-4139-8af1-dc0987c8f048"
+      ],
+      "recording": "Stay",
+      "recordingMbid": "8bea343d-4f52-42fe-94c7-3c6817d6540b",
+      "release": "Stay",
+      "score": 2473877,
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": true,
+      "title": "Stay",
+      "from": "Eurovision 2012 Norway"
     },
     {
       "postId": 53365,
@@ -94999,8 +95252,10 @@
       "recordingMbid": "f8d8c8d9-7532-4c8f-8e60-97d04169a96f",
       "release": "Let’s Talk About Love",
       "score": 1734195,
-      "how": "lead-scoped",
-      "rewrites": [],
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
       "title": "Tell Him"
     },
@@ -95976,7 +96231,22 @@
       "id": 5121,
       "artist": "Enya (fellowship Of The Ring Soundtrack)",
       "song": "May It Be",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Enya",
+      "artistMbids": [
+        "4967c0a1-b9f3-465e-8440-4598fd9fc33c"
+      ],
+      "recording": "May It Be",
+      "recordingMbid": "972ec167-c260-42e1-9b5b-61950c423965",
+      "release": "Dark Sky Island",
+      "score": 740330,
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": true,
+      "title": "May It Be",
+      "from": "The Fellowship of the Ring"
     },
     {
       "postId": 49871,
@@ -97873,8 +98143,10 @@
       "recordingMbid": "398dcffc-8740-4b8b-8453-846fbf8c5de2",
       "release": "Sigh No More",
       "score": 554874,
-      "how": "title-first",
-      "rewrites": [],
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
       "title": "Little Lion Man"
     },
@@ -98400,7 +98672,21 @@
       "id": 5247,
       "artist": "Phantom Of The Opera",
       "song": "Music Of The Night",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Michael Crawford",
+      "artistMbids": [
+        "2c654643-cdbd-4634-be26-c4d1a90cfabd"
+      ],
+      "recording": "The Music of the Night",
+      "recordingMbid": "f5d6d15f-02ad-42bd-abcd-8681666be8ce",
+      "release": "The Phantom of the Opera",
+      "score": 4352319,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Phantom of the Opera",
+      "from": "The Phantom of the Opera",
+      "trusted": true,
+      "title": "The Music of the Night"
     },
     {
       "postId": 52148,
@@ -99620,17 +99906,19 @@
       "artist": "Timbaland And One Republic",
       "song": "Apologize",
       "matched": true,
-      "artistCredit": "Timbaland feat. OneRepublic",
+      "artistCredit": "Timbaland & OneRepublic",
       "artistMbids": [
         "daa09819-5da5-4c7a-8bef-eb372bb27ff1",
         "c33c2065-b1c3-4406-b066-d33a9e2ea71a"
       ],
       "recording": "Apologize",
-      "recordingMbid": "3c44fba8-01fc-4eb3-8587-1a7f5e9603ae",
-      "release": "Shock Value",
-      "score": 467269,
-      "how": "lead-scoped",
-      "rewrites": [],
+      "recordingMbid": "840bcfca-2cef-4775-bc76-1774c221ada4",
+      "release": "Apologize",
+      "score": 3373745,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
       "title": "Apologize"
     },
@@ -101481,7 +101769,22 @@
       "id": 5408,
       "artist": "Marina and The Diamonds",
       "song": "Robot",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Marina & the Diamonds",
+      "artistMbids": [
+        "7f3d82ee-3817-4367-9eec-f33a312247a1"
+      ],
+      "recording": "I Am Not a Robot",
+      "recordingMbid": "fd7d9162-a284-4a10-906c-faae4f1e166b",
+      "release": "The Family Jewels",
+      "score": 575331,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "Robot is I Am Not a Robot",
+      "trusted": true,
+      "title": "I Am Not a Robot"
     },
     {
       "postId": 51592,
@@ -106586,7 +106889,20 @@
       "id": 5678,
       "artist": "Ulf Lundell",
       "song": "Oh  lalala jag vill ha dig",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ulf Lundell",
+      "artistMbids": [
+        "8612924d-2946-49e1-970f-ef1c36517428"
+      ],
+      "recording": "(Oh la la) Jag vill ha dej",
+      "recordingMbid": "cfa84321-5516-49d5-8114-baa8b5b0b87e",
+      "release": "Ripp Rapp",
+      "score": 14431,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Oh lalala jag vill ha dig",
+      "trusted": true,
+      "title": "(Oh la la) Jag vill ha dej"
     },
     {
       "postId": 51954,
@@ -106764,7 +107080,20 @@
       "id": 5688,
       "artist": "Drängarna",
       "song": "Om du vill bli min fru",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Drängarna",
+      "artistMbids": [
+        "eab69289-45ca-4e2a-bb66-080a2a1f3d4b"
+      ],
+      "recording": "Vill du bli min fru",
+      "recordingMbid": "be50c5bf-f0e1-4e27-be6b-210211559e21",
+      "release": "I afton logdans",
+      "score": 141998,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "venue added Om",
+      "trusted": true,
+      "title": "Vill du bli min fru"
     },
     {
       "postId": 48319,
@@ -107484,7 +107813,21 @@
       "id": 5728,
       "artist": "BTS",
       "song": "Blood sweat and tears",
-      "matched": false
+      "matched": true,
+      "artistCredit": "BTS",
+      "artistMbids": [
+        "0d79fe8e-ba27-4859-bb8c-2f255f346853"
+      ],
+      "recording": "Blood Sweat & Tears Music Video",
+      "recordingMbid": "39cd6bcb-23c4-4ef8-811a-f4d222900ca7",
+      "release": "FACE YOURSELF",
+      "score": 789483,
+      "how": "loose",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "trusted": false,
+      "title": "Blood Sweat & Tears Music Video"
     },
     {
       "postId": 49632,
@@ -108563,16 +108906,16 @@
       "artist": "Joel Corry ft MNEK",
       "song": "Head & heart",
       "matched": true,
-      "artistCredit": "Joel Corry feat. MNEK",
+      "artistCredit": "Joel Corry × MNEK",
       "artistMbids": [
         "7b545a9d-0be7-4a32-90ff-154489117216",
         "27e7c2e8-badc-4a97-8b93-24b6c530b038"
       ],
       "recording": "Head & Heart",
-      "recordingMbid": "141bce43-70e0-4326-b58c-2bf505787502",
-      "release": "Today’s Hits 2020",
-      "score": 4938445,
-      "how": "title-first",
+      "recordingMbid": "168c30ff-7597-471b-a4c8-31c719f4f8af",
+      "release": "Another Friday Night",
+      "score": 864812,
+      "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
       "title": "Head & Heart"
@@ -110245,7 +110588,21 @@
       "id": 5873,
       "artist": "Joel Corry ft MNEK",
       "song": "Head and heart",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Joel Corry feat. MNEK",
+      "artistMbids": [
+        "7b545a9d-0be7-4a32-90ff-154489117216",
+        "27e7c2e8-badc-4a97-8b93-24b6c530b038"
+      ],
+      "recording": "Head & Heart",
+      "recordingMbid": "141bce43-70e0-4326-b58c-2bf505787502",
+      "release": "Today’s Hits 2020",
+      "score": 4938445,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Head and heart; dump uses & which folds differently from and",
+      "trusted": true,
+      "title": "Head & Heart"
     },
     {
       "postId": 50757,

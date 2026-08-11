@@ -1,6 +1,6 @@
 # Songs still to review
 
-290 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
+265 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
 
 A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only
 adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at
@@ -9,14 +9,14 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 ## Contents
 
-- no match, and this artist string is unknown to MusicBrainz — **140**
-- this artist has no such title; the venue may have credited the wrong one — **56**
-- matched through the lead artist, which named fewer artists than the venue did — **51**
-- weak match — **27**
+- no match, and this artist string is unknown to MusicBrainz — **121**
+- matched through the lead artist, which named fewer artists than the venue did — **50**
+- this artist has no such title; the venue may have credited the wrong one — **50**
+- weak match — **28**
 - matched a placeholder entity — **13**
 - credited to a namesake, not to this artist — **3**
 
-## no match, and this artist string is unknown to MusicBrainz (140)
+## no match, and this artist string is unknown to MusicBrainz (121)
 
 ### Finsk musik — 39
 
@@ -131,18 +131,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 2100 | Face to face | 48654 |
 
-### BTS — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5728 | Blood sweat and tears | 48716 |
-
-### Clarence Carter — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2587 | Stroking | 49015 |
-
 ### David Shutrick — 1
 
 | id | the venue's title | postId |
@@ -173,23 +161,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 5823 | Happiest girl in the while U.S | 49483 |
 
-### Drängarna — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5688 | Om du vill bli min fru | 49535 |
-
 ### Electric Boys — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 754 | All lips and hips | 49663 |
-
-### Enya (fellowship Of The Ring Soundtrack) — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5121 | May It Be | 49834 |
 
 ### Erik Amarillo — 1
 
@@ -257,12 +233,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 1246 | Don't rain on my parade | 50361 |
 
-### Huey Lewis & Gwyneth Paltrow — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1121 | Cruisin' | 50406 |
-
 ### Idolgänget 2010 — 1
 
 | id | the venue's title | postId |
@@ -299,12 +269,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 1074 | Märk hur vår skugga | 50704 |
 
-### Joel Corry ft MNEK — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5873 | Head and heart | 50715 |
-
 ### Jonas Gardell — 1
 
 | id | the venue's title | postId |
@@ -322,54 +286,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 2466 | 3 floors down | 51015 |
-
-### Lady & The Tramp — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3382 | Bella Notte (english) | 51090 |
-
-### Lady Gaga & Wale — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2660 | Chillin | 51121 |
-
-### Lasse Holm & Monica Törnell — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 984 | Är det det här du kallar kärlek | 51147 |
-
-### Laura Allan — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 498 | Slip and slide | 51149 |
-
-### Lion King — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2501 | Hakuna matata | 51267 |
-
-### Little Mermaid — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4100 | Part of your world (Disney) | 51298 |
-
-### Louis Primer (The Jungle book) — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3192 | I wanna be like you | 51342 |
-
-### Marina and The Diamonds — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5408 | Robot | 51512 |
 
 ### Merseybeats — 1
 
@@ -407,23 +323,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 2337 | Won't you be my neighbour | 51757 |
 
-### Music Man — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3643 | Till there was you | 51769 |
-
 ### Norieve R18 — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 499 | Just tell me you love me | 51906 |
-
-### Ohio — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3524 | Fire | 51952 |
 
 ### Oliver — 1
 
@@ -448,12 +352,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3764 | Next time I fall in love | 52105 |
-
-### Phantom Of The Opera — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5247 | Music Of The Night | 52120 |
 
 ### Piano singalong — 1
 
@@ -503,12 +401,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 817 | C'mon/Jo-Anna Says | 52840 |
 
-### Sos — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3527 | Take your time (do it right) | 52850 |
-
 ### South Pacific — 1
 
 | id | the venue's title | postId |
@@ -545,12 +437,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3259 | Oh my God! | 53156 |
 
-### Tooji (Eurovision 2012 Norway) — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5047 | Stay | 53329 |
-
 ### Waylon Jennings — 1
 
 | id | the venue's title | postId |
@@ -564,321 +450,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 3649 | Maria | 53491 |
 
 
-## this artist has no such title; the venue may have credited the wrong one (56)
-
-### Ola Svensson — 4
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 733 | Natalie | 51956 |
-| 734 | Sos | 51957 |
-| 923 | Love in stereo | 51958 |
-| 2469 | Unstoppable | 51959 |
-
-### Madonna — 3
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 566 | Here we are | 51408 |
-| 567 | Reach | 51409 |
-| 568 | It's too late | 51410 |
-
-### Aerosmith — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2281 | Mountain music | 47831 |
-
-### Aqua — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4078 | Happy boys and girls | 48024 |
-
-### Backstreet Boys — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3048 | I want to be with you | 48139 |
-
-### Barry White — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3551 | What am I going to do with you | 48214 |
-
-### Bette Midler — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3443 | That's the glory of love | 48305 |
-
-### Bloodhound Gang — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2974 | Another dick with no balls | 48423 |
-
-### Bon Jovi — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1939 | Living in the sun | 48538 |
-
-### Britney Spears — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1828 | What you see is what you get | 48619 |
-
-### Carola — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3008 | Det är bara vi | 48782 |
-
-### Creed — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5577 | Stand with me | 49140 |
-
-### Don Williams — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1970 | Gypsy woman | 49480 |
-
-### Drömhus — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5669 | Fantasi | 49537 |
-
-### Duffy — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4603 | Syrup and honey | 49554 |
-
-### Engelbert Humperdinck — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1904 | Am I easy to forget | 49814 |
-
-### Foo Fighters — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4662 | I'll be coming home next year | 50065 |
-
-### Garth Brooks — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2278 | Two of a full kind | 50147 |
-
-### Genesis — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3485 | Mirror man | 50168 |
-
-### Hair — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1139 | Easy to be hard | 50325 |
-
-### High school musical — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5746 | What time is | 50368 |
-
-### Iron Maiden — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4725 | Iron fist | 50476 |
-
-### Jennifer Hudson — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2517 | And I'm telling you | 50623 |
-
-### John Legend — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4750 | Hey girl | 50733 |
-
-### Johnny Nash — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2326 | The lion sleeps tonight | 50782 |
-
-### Journey — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2705 | Foolish heart | 50815 |
-
-### Keith Urban — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2893 | Wouldn't wanna be me | 50946 |
-
-### Kikki Danielsson — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 943 | Idag och imorgon | 50999 |
-
-### Louis Armstrong — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1888 | A kiss to build the dream | 51337 |
-
-### Luther Vandross — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2735 | If I ruled the world | 51363 |
-
-### Mariah Carey — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 620 | Lollipop | 51472 |
-
-### Marvin Gaye — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5700 | Nothing like the real thing | 51552 |
-
-### N Sync — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 334 | Fallen | 51778 |
-
-### Neil Diamond — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1790 | Grass won't pay no mind | 51817 |
-
-### No Doubt — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1665 | Come on Eileen | 51896 |
-
-### Prefab Sprout — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4015 | King of rock and roll | 52210 |
-
-### R Kelly — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2651 | Burning up | 52290 |
-
-### Rihanna — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 858 | Oh baby | 52433 |
-
-### Roxette — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 300 | Make it real | 52558 |
-
-### Samantha Fox — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3800 | I want to be have some fun | 52611 |
-
-### Samantha Mumba — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1837 | Body to body | 52615 |
-
-### Sanna Nielsen — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 931 | When the night comes falling | 52623 |
-
-### Sarah Dawn Finer — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 904 | I'm moving on | 52638 |
-
-### Sebastian — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 930 | Vågar du vågar jag | 52681 |
-
-### Shawn Mendes — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5605 | Nothing holding me back | 52751 |
-
-### Steely Dan — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4981 | My school | 52907 |
-
-### Taylor Swift — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3992 | If this were a movie | 53063 |
-
-### Trace Adkins — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3920 | Every light in the house is on | 53345 |
-
-### UB40 — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 2075 | Tears in my eyes | 53383 |
-
-### Ulf Lundell — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5678 | Oh  lalala jag vill ha dig | 53394 |
-
-### Whitney Houston — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5317 | Nobody Loves Me Like You | 53553 |
-
-
-## matched through the lead artist, which named fewer artists than the venue did (51)
+## matched through the lead artist, which named fewer artists than the venue did (50)
 
 ### Aerosmith And Run Dmc — 1
 
@@ -1078,12 +650,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | --- | -: |
 | 660 | Ska vi gå hem till dig | Miio – Ska vi gå hem till dig... | 51679 |
 
-### Mumford And Sons — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 5219 | Little Lion Man | Mumford & Sons – Little Lion Man | 51760 |
-
 ### Ozzy Osbourne & Lita Ford — 1
 
 | id | the venue's title | what we found | postId |
@@ -1187,7 +753,285 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 39 | Senza una donna | Zucchero – Senza una donna | 53609 |
 
 
-## weak match (27)
+## this artist has no such title; the venue may have credited the wrong one (50)
+
+### Ola Svensson — 4
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 733 | Natalie | 51956 |
+| 734 | Sos | 51957 |
+| 923 | Love in stereo | 51958 |
+| 2469 | Unstoppable | 51959 |
+
+### Madonna — 3
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 566 | Here we are | 51408 |
+| 567 | Reach | 51409 |
+| 568 | It's too late | 51410 |
+
+### Aerosmith — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2281 | Mountain music | 47831 |
+
+### Backstreet Boys — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3048 | I want to be with you | 48139 |
+
+### Barry White — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3551 | What am I going to do with you | 48214 |
+
+### Bette Midler — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3443 | That's the glory of love | 48305 |
+
+### Bloodhound Gang — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2974 | Another dick with no balls | 48423 |
+
+### Bon Jovi — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1939 | Living in the sun | 48538 |
+
+### Britney Spears — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1828 | What you see is what you get | 48619 |
+
+### Carola — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3008 | Det är bara vi | 48782 |
+
+### Creed — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5577 | Stand with me | 49140 |
+
+### Don Williams — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1970 | Gypsy woman | 49480 |
+
+### Drömhus — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5669 | Fantasi | 49537 |
+
+### Engelbert Humperdinck — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1904 | Am I easy to forget | 49814 |
+
+### Foo Fighters — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 4662 | I'll be coming home next year | 50065 |
+
+### Garth Brooks — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2278 | Two of a full kind | 50147 |
+
+### Genesis — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3485 | Mirror man | 50168 |
+
+### High school musical — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5746 | What time is | 50368 |
+
+### Iron Maiden — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 4725 | Iron fist | 50476 |
+
+### John Legend — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 4750 | Hey girl | 50733 |
+
+### Johnny Nash — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2326 | The lion sleeps tonight | 50782 |
+
+### Journey — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2705 | Foolish heart | 50815 |
+
+### Keith Urban — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2893 | Wouldn't wanna be me | 50946 |
+
+### Kikki Danielsson — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 943 | Idag och imorgon | 50999 |
+
+### Louis Armstrong — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1888 | A kiss to build the dream | 51337 |
+
+### Luther Vandross — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2735 | If I ruled the world | 51363 |
+
+### Mariah Carey — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 620 | Lollipop | 51472 |
+
+### Marvin Gaye — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5700 | Nothing like the real thing | 51552 |
+
+### N Sync — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 334 | Fallen | 51778 |
+
+### Neil Diamond — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1790 | Grass won't pay no mind | 51817 |
+
+### No Doubt — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1665 | Come on Eileen | 51896 |
+
+### Prefab Sprout — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 4015 | King of rock and roll | 52210 |
+
+### R Kelly — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2651 | Burning up | 52290 |
+
+### Rihanna — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 858 | Oh baby | 52433 |
+
+### Roxette — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 300 | Make it real | 52558 |
+
+### Samantha Fox — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3800 | I want to be have some fun | 52611 |
+
+### Samantha Mumba — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 1837 | Body to body | 52615 |
+
+### Sanna Nielsen — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 931 | When the night comes falling | 52623 |
+
+### Sarah Dawn Finer — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 904 | I'm moving on | 52638 |
+
+### Sebastian — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 930 | Vågar du vågar jag | 52681 |
+
+### Shawn Mendes — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5605 | Nothing holding me back | 52751 |
+
+### Taylor Swift — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3992 | If this were a movie | 53063 |
+
+### Trace Adkins — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 3920 | Every light in the house is on | 53345 |
+
+### UB40 — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 2075 | Tears in my eyes | 53383 |
+
+### Whitney Houston — 1
+
+| id | the venue's title | postId |
+| -: | --- | -: |
+| 5317 | Nobody Loves Me Like You | 53553 |
+
+
+## weak match (28)
 
 ### Fall out boy — 2
 
@@ -1231,6 +1075,12 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 4095 | Just the way you are (Amazing) | Bruno Mars – Just the Way You Are (Amazing) Vs. U Sure Do: Just the Way You Are (Amazing) / U Sure Do — matched by loose | 48697 |
+
+### BTS — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5728 | Blood sweat and tears | BTS – Blood Sweat & Tears Music Video — matched by loose | 48716 |
 
 ### Cher — 1
 

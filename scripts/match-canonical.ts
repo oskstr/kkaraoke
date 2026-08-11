@@ -76,6 +76,38 @@ type Rewrite = (typeof REWRITES)[number];
 const withoutAnnotation = (title: string): string => title.replace(/\s*[([][^()[\]]*[)\]]\s*$/, "").trim();
 
 /**
+ * Parentheses on the *artist* column are almost always the venue stuffing a film/show into
+ * the only field it had: `Enya (fellowship Of The Ring Soundtrack)`. Strip those so the real
+ * name can match, but leave clarifying performer notes alone — `Chess (Linda Eder)` is naming
+ * who sings, not a soundtrack credit.
+ */
+const ARTIST_ANNOTATION =
+    /\s*[([]([^()[\]]*(?:\bsoundtrack\b|\bfellowship\b|\bjungle book\b|\bdisney\b|\beurovision\b|\bfrom\b)[^()[\]]*)[)\]]\s*$/i;
+
+const withoutArtistAnnotation = (artist: string): string => artist.replace(ARTIST_ANNOTATION, "").trim();
+
+/**
+ * Turn the stripped artist annotation into a `from` value worth searching for.
+ * `fellowship Of The Ring Soundtrack` → `The Fellowship of the Ring`.
+ */
+function fromArtistAnnotation(artist: string): string | undefined {
+    const match = ARTIST_ANNOTATION.exec(artist);
+    if (match?.[1] === undefined) {
+        return undefined;
+    }
+    let raw = match[1]
+        .replace(/\bsoundtrack\b/gi, "")
+        .replace(/\boriginal motion picture\b/gi, "")
+        .replace(/\bthe movie\b/gi, "")
+        .replace(/^[\s"'“”‘’]+|[\s"'“”‘’]+$/g, "")
+        .trim();
+    if (/^fellowship of the ring$/i.test(raw)) {
+        raw = "The Fellowship of the Ring";
+    }
+    return raw.length > 0 ? raw : undefined;
+}
+
+/**
  * Words that make a trailing bracket a marker for one particular master rather than part of
  * the song's name. The distinction matters twice over: `Lady Marmalade (Thunderpuss club mix)`
  * is the wrong title to show for a karaoke track, and dating that recording dates the remix.
@@ -153,8 +185,9 @@ interface Form {
 /**
  * The key strips `&` rather than reading it, so a venue `&` and a MusicBrainz `and` fold to
  * different keys and never meet: `Belle & Sebastian` cannot reach `Belle and Sebastian`.
- * Spelling it out is the missing form. Only ever adds keys, and only for strings that have
- * an ampersand to spell.
+ * Spelling it out — and the other way, turning a venue `and` into `&` — is the missing form.
+ * `Head and heart` is how the venue writes Joel Corry's `Head & Heart`; without the reverse
+ * direction those never meet either. Only ever adds keys.
  */
 function spelledOut(forms: Form[]): Form[] {
     return [
@@ -165,13 +198,25 @@ function spelledOut(forms: Form[]): Form[] {
                 value: form.value.replaceAll("&", " and "),
                 rewrites: [...form.rewrites, "ampersand-spelled-out" as Rewrite],
             })),
+        ...forms
+            .filter((form) => /\sand\s/i.test(form.value))
+            .map((form) => ({
+                value: form.value.replace(/\sand\s/gi, " & "),
+                rewrites: [...form.rewrites, "ampersand-spelled-out" as Rewrite],
+            })),
     ];
 }
 
 function artistForms(artist: string): Form[] {
     const forms: Form[] = [{ value: artist, rewrites: [] }];
-    if (!LEADING_ARTICLE.test(artist)) {
-        forms.push({ value: `The ${artist}`, rewrites: ["artist-article-added"] });
+    const bare = withoutArtistAnnotation(artist);
+    if (bare !== artist && bare.length > 0) {
+        forms.push({ value: bare, rewrites: ["annotation-stripped"] });
+    }
+    for (const form of [...forms]) {
+        if (!LEADING_ARTICLE.test(form.value)) {
+            forms.push({ value: `The ${form.value}`, rewrites: [...form.rewrites, "artist-article-added"] });
+        }
     }
     return spelledOut(forms);
 }
@@ -996,9 +1041,10 @@ async function main(): Promise<void> {
         // `recording` stays MusicBrainz's own title; `title` is the one to publish and to
         // date, which differs only where the match landed on a particular master.
         const published = titleToUse(match.recording);
-        // A proposal's `from` wins over one extracted from the recording title: the proposer
-        // is naming the show the venue filed under, which is the one worth searching for.
-        const from = match.from ?? published.from;
+        // A proposal's `from` wins over one extracted from the recording title or from an
+        // artist-column soundtrack note: the proposer is naming the show the venue filed
+        // under, which is the one worth searching for.
+        const from = match.from ?? published.from ?? fromArtistAnnotation(song.artist);
         return {
             postId: song.postId,
             id: song.id,

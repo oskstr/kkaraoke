@@ -171,8 +171,8 @@
         {
             "postId": 49420,
             "artist": "Linda Hunt",
-            "title": "Listen with Your Heart",
-            "why": "Pocahontas; your, not you",
+            "title": "Listen With Your Heart",
+            "why": "Pocahontas; previous proposal may have wrong performer spelling",
             "from": "Pocahontas"
         },
         {
@@ -801,9 +801,9 @@
         },
         {
             "postId": 50406,
-            "artist": "Huey Lewis & Gwyneth Paltrow",
+            "artist": "Gwyneth Paltrow & Huey Lewis",
             "title": "Cruisin'",
-            "why": "exact credit"
+            "why": "dump bills Gwyneth first"
         },
         {
             "postId": 52229,
@@ -870,6 +870,141 @@
             "artist": "Cardi B, Bad Bunny & J Balvin",
             "title": "I Like It",
             "why": "Cardi B lead; venue had J Balvin ft Cardi B"
+        },
+        {
+            "postId": 49834,
+            "artist": "Enya",
+            "title": "May It Be",
+            "why": "soundtrack note belongs in from, not the artist name",
+            "from": "The Fellowship of the Ring"
+        },
+        {
+            "postId": 51147,
+            "artist": "Monica Törnell & Lasse Holm",
+            "title": "Är det det här du kallar kärlek",
+            "why": "Melodifestivalen 1986; dump bills Monica first; venue title is the Är-spelling of E' de'…"
+        },
+        {
+            "postId": 51267,
+            "artist": "Nathan Lane & Ernie Sabella",
+            "title": "Hakuna Matata",
+            "why": "Lion King OST; Timon and Pumbaa",
+            "from": "The Lion King"
+        },
+        {
+            "postId": 51298,
+            "artist": "Jodi Benson",
+            "title": "Part of Your World",
+            "why": "Ariel's singing voice",
+            "from": "The Little Mermaid"
+        },
+        {
+            "postId": 51342,
+            "artist": "Louis Prima",
+            "title": "I Wan'na Be Like You",
+            "why": "Louis Primer is Louis Prima; Jungle Book",
+            "from": "The Jungle Book"
+        },
+        {
+            "postId": 51090,
+            "artist": "Peggy Lee",
+            "title": "Bella Notte",
+            "why": "Lady and the Tramp soundtrack",
+            "from": "Lady and the Tramp"
+        },
+        {
+            "postId": 52120,
+            "artist": "Michael Crawford",
+            "title": "The Music of the Night",
+            "why": "Phantom of the Opera",
+            "from": "The Phantom of the Opera"
+        },
+        {
+            "postId": 50623,
+            "artist": "Jennifer Hudson",
+            "title": "And I Am Telling You I'm Not Going",
+            "why": "Dreamgirls film",
+            "from": "Dreamgirls"
+        },
+        {
+            "postId": 50325,
+            "artist": "Three Dog Night",
+            "title": "Easy to Be Hard",
+            "why": "Hair; popular recording",
+            "from": "Hair"
+        },
+        {
+            "postId": 51769,
+            "artist": "The Beatles",
+            "title": "Till There Was You",
+            "why": "Music Man number; Beatles popular recording",
+            "from": "The Music Man"
+        },
+        {
+            "postId": 49535,
+            "artist": "Drängarna",
+            "title": "Vill du bli min fru",
+            "why": "venue added Om"
+        },
+        {
+            "postId": 51952,
+            "artist": "Ohio Players",
+            "title": "Fire",
+            "why": "Ohio is Ohio Players"
+        },
+        {
+            "postId": 52850,
+            "artist": "The S.O.S. Band",
+            "title": "Take Your Time (Do It Right)",
+            "why": "Sos is The S.O.S. Band"
+        },
+        {
+            "postId": 52907,
+            "artist": "Steely Dan",
+            "title": "My Old School",
+            "why": "My school is My Old School"
+        },
+        {
+            "postId": 53394,
+            "artist": "Ulf Lundell",
+            "title": "(Oh la la) Jag vill ha dej",
+            "why": "Oh lalala jag vill ha dig"
+        },
+        {
+            "postId": 51121,
+            "artist": "Wale feat. Lady Gaga",
+            "title": "Chillin'",
+            "why": "Wale lead on the recording"
+        },
+        {
+            "postId": 50715,
+            "artist": "Joel Corry feat. MNEK",
+            "title": "Head & Heart",
+            "why": "Head and heart; dump uses & which folds differently from and"
+        },
+        {
+            "postId": 51512,
+            "artist": "Marina and the Diamonds",
+            "title": "I Am Not a Robot",
+            "why": "Robot is I Am Not a Robot"
+        },
+        {
+            "postId": 49015,
+            "artist": "Clarence Carter",
+            "title": "Strokin'",
+            "why": "Stroking is Strokin'"
+        },
+        {
+            "postId": 52209,
+            "artist": "Pras Michel feat. Ol' Dirty Bastard & Introducing Mýa",
+            "title": "Ghetto Supastar (That Is What You Are)",
+            "why": "Ghetto superstar"
+        },
+        {
+            "postId": 48716,
+            "artist": "BTS",
+            "title": "Blood Sweat & Tears",
+            "why": "may only exist as video/live in dump — try studio spelling"
         }
     ]
 }
