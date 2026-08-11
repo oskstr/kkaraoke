@@ -23,6 +23,7 @@ able to say so.
 | :-------------------------- | :---------------------- | :---------------------------------------------------------------- |
 | `data/songs.json`           | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
 | `data/resolved.json`        | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
+| `data/artist-names.json`    | humans only             | Catalogue-scoped display names per artist MBID.                   |
 | `data/overrides.json`       | humans only             | Review decisions and hand corrections. No script ever writes it.  |
 | `data/overrides-review.md`  | `pnpm build:resolved`   | Venue vs override side-by-side. Regenerable; do not edit.         |
 | `data/proposals.json`       | humans / agents         | Guesses put to the dump. Applies only when MusicBrainz agrees.    |
@@ -671,13 +672,14 @@ never displayed. Recovering the distinction properly means asking the web servic
 credits, which returns each artist with its join phrase; that is a later enrichment pass, not a
 parsing problem.
 
-### A name has to be typeable
+### A name has to be known for these songs
 
-MusicBrainz's canonical name is the artist's own preferred one, which for `Άννα Βίσση` and
-`鄭秀文` is written in a script nobody in the room can type. Where the canonical name has no
-Latin letters at all, a Latin alias is the usable name, and MusicBrainz lists Anna Vissi and
-Sammi Cheng among them. A symbol is not a script, so `98°`, `A★Teens` and `Florence + the
-Machine` keep theirs.
+MusicBrainz's primary is today's preferred form (`Ye`, `JAŸ-Z`), which is wrong for a room full
+of 2000s karaoke. `data/artist-names.json` maps artist MBIDs to the catalogue-scoped display
+name — what these songs are well known under (Kanye West, Jackson 5, Ian Dury & the Blockheads).
+The venue string is never consulted. Unmapped artists keep the primary, except that stylized
+letters prefer a plain alias (`JAŸ-Z` → `Jay-Z`) and symbols stay (`A★Teens`, `98°`). Where the
+primary has no Latin letters at all, a Latin alias is the usable name (Anna Vissi, Sammi Cheng).
 
 ## Reaching a collaboration through its lead
 

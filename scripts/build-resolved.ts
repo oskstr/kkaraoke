@@ -79,9 +79,6 @@ interface Resolved {
  * Genres are user tags, so a long tail of one-vote suggestions comes with them. Two votes
  * is enough to drop the noise while keeping the genres an artist is actually known for.
  */
-/** Where the venue joins several artists into one string, as the matcher splits it. */
-const JOIN = /\s+(?:feat\.?|ft\.?|featuring|with|duet with|med|vs\.?|versus|and|x)\s+|\s*[&,+/]\s*/i;
-
 const MIN_GENRE_VOTES = 2;
 /** When nobody has two votes, a single vote is still better than a blank genre column. */
 const FALLBACK_GENRE_VOTES = 1;
@@ -90,19 +87,17 @@ const MAX_GENRES = 3;
 const HAS_LATIN = /\p{Script=Latin}/u;
 
 /**
- * The name to show. MusicBrainz's canonical name is the artist's own preferred one, which for
- * `Άννα Βίσση` and `鄭秀文` is written in a script nobody in the room can type. Where the
- * primary name has letters but none of them are Latin, a Latin alias is the usable name.
- * Digit-only or symbolic names (`911`, `98°`, `A★Teens`) keep the primary — they are not a
- * foreign script, and the first Latin alias is often a wrong-country disambiguation that
- * someone parked in the alias list (`911 (US)` for the UK boy band).
+ * The name to show for an artist in this catalogue.
  *
- * When the matched credit line still uses an older or more familiar alias (`Kanye West` on a
- * 2008 recording whose artist is now filed as `Ye`), prefer that alias so the page names the
- * act the way the recording does.
+ * Order of preference:
+ * 1. A curated entry in `data/artist-names.json` — the name these karaoke songs are well
+ *    known under (Kanye West for the 2000s cuts, Jackson 5 for the Motown ones), never the
+ *    venue string and not blindly today's MusicBrainz primary.
+ * 2. Otherwise MusicBrainz's primary name, with: Latin alias when the primary is a foreign
+ *    script; plain ASCII alias when the primary uses stylized *letters* (`JAŸ-Z` → `Jay-Z`);
+ *    trademarks with stars / fancy hyphens kept (`A★Teens`, `a‐ha`).
  *
- * Stylized *letters* (`JAŸ-Z`) still prefer a plain alias (`Jay-Z`). Stylized *punctuation*
- * (`a‐ha`, `A★Teens`) must not — that wrongly became `A Ha` / `A Teens`.
+ * Digit-only names (`911`) keep the primary so a wrong-country alias (`911 (US)`) cannot win.
  */
 /** Fancy hyphens folded to ASCII so `a‐ha` can meet `a-ha` without changing the letters. */
 const normalizeFancyHyphens = (value: string): string => value.replace(/[\u2010-\u2015\u2212]/g, "-");
@@ -124,12 +119,10 @@ function hasStylizedLetters(value: string): boolean {
 }
 
 /** Prefer `Jay-Z` / `a-ha` / `A★Teens` over `Jay Z` / `A Ha` / `A Teens`. */
-function preferDisplayForm(a: string, b: string, fragment?: string): number {
+function preferDisplayForm(a: string, b: string): number {
     const aHyphen = normalizeFancyHyphens(a);
     const bHyphen = normalizeFancyHyphens(b);
     return (
-        // Prefer the fragment's own spelling when it is one of the options.
-        (fragment !== undefined && b === fragment ? 1 : 0) - (fragment !== undefined && a === fragment ? 1 : 0) ||
         // Keep symbolic stylization (`A★Teens`, `98°`) rather than an alias that dropped it —
         // before hyphen preference, or `A-Teens` beats the real primary.
         (/[★☆°]/.test(b) ? 1 : 0) - (/[★☆°]/.test(a) ? 1 : 0) ||
@@ -147,29 +140,13 @@ function preferDisplayForm(a: string, b: string, fragment?: string): number {
     );
 }
 
-function displayName(artist: Artist, credit?: string, venueArtist?: string): string {
-    const options = [artist.name, ...(artist.aliases ?? [])];
-    // Prefer a name form that still appears on the matched credit or the venue's string
-    // (Kanye West on a 2008 cut; Jay-Z when the venue wrote Jay Z rather than JAŸ-Z).
-    // Match whole credit fragments, not substrings — otherwise `Est'elle` wins over `Estelle`
-    // because both fold to `estelle` and the longer spelling sorts first.
-    // Venue before credit: the room's spelling is usually the familiar one (`Jay Z`, `Estelle`).
-    for (const source of [venueArtist, credit]) {
-        if (source === undefined) continue;
-        const fragments = source
-            .split(JOIN)
-            .map((part) => part.trim())
-            .filter((part) => part.length > 0);
-        for (const fragment of [...fragments, source]) {
-            const fragmentKey = nameKey(fragment);
-            if (fragmentKey.length < 2) continue;
-            const exact = options
-                .filter((option) => nameKey(option) === fragmentKey)
-                .sort((a, b) => preferDisplayForm(a, b, fragment))[0];
-            if (exact !== undefined) {
-                return normalizeFancyHyphens(exact);
-            }
-        }
+/** Catalogue-scoped overrides from `data/artist-names.json`, filled in `main`. */
+const artistDisplayNames = new Map<string, string>();
+
+function displayName(artist: Artist): string {
+    const curated = artistDisplayNames.get(artist.mbid);
+    if (curated !== undefined) {
+        return curated;
     }
     // Digit-only / symbolic primaries (`911`) keep the primary — the first Latin alias is often
     // a wrong-country disambiguation (`911 (US)` for the UK boy band).
@@ -183,10 +160,12 @@ function displayName(artist: Artist, credit?: string, venueArtist?: string): str
             const ascii = [...(artist.aliases ?? [])]
                 .filter(
                     (alias) =>
-                        isRawAscii(alias) && HAS_LATIN.test(alias) && nameKey(alias) === nameKey(artist.name),
+                        isRawAscii(normalizeFancyHyphens(alias)) &&
+                        HAS_LATIN.test(alias) &&
+                        nameKey(alias) === nameKey(artist.name),
                 )
                 .sort((a, b) => preferDisplayForm(a, b))[0];
-            if (ascii !== undefined) return ascii;
+            if (ascii !== undefined) return normalizeFancyHyphens(ascii);
         }
         return normalizeFancyHyphens(artist.name);
     }
@@ -235,6 +214,7 @@ async function main(): Promise<void> {
         options: {
             matches: { type: "string", default: "data/canonical-matches.json" },
             artists: { type: "string", default: "data/artists.json" },
+            "artist-names": { type: "string", default: "data/artist-names.json" },
             recordings: { type: "string", default: "data/recordings.json" },
             works: { type: "string", default: "data/works.json" },
             proposals: { type: "string", default: "data/proposals.json" },
@@ -268,6 +248,16 @@ async function main(): Promise<void> {
     const artists = new Map((artistFile?.artists ?? []).map((artist) => [artist.mbid, artist]));
     if (artistFile === undefined) {
         console.warn(`No ${values.artists} yet, so artist names and genres will be left alone.`);
+    }
+    const artistNamesFile = await readJson<{
+        artists: Record<string, { name: string; why?: string }>;
+    }>(values["artist-names"]);
+    artistDisplayNames.clear();
+    for (const [mbid, entry] of Object.entries(artistNamesFile?.artists ?? {})) {
+        artistDisplayNames.set(mbid, entry.name);
+    }
+    if (artistDisplayNames.size > 0) {
+        console.log(`${artistDisplayNames.size} catalogue display names from artist-names.json`);
     }
 
     // An array rather than an object keyed by id: five thousand keys in a JSON module
@@ -435,14 +425,13 @@ async function main(): Promise<void> {
 
         const credited = mbids.map((mbid) => artists.get(mbid)).filter((artist) => artist !== undefined);
         const lead = credited[0];
-        const creditLine = match.artistCredit;
 
-        // Each distinct artist, comma separated. Prefer the name form that still appears on
-        // the matched credit (Kanye West on a 2008 cut whose artist is now Ye) over today's
-        // primary name, and never a wrong-country alias parked on a digit-only act.
+        // Each distinct artist, comma separated. Names come from artist-names.json when we
+        // have a catalogue-scoped choice, otherwise the MusicBrainz primary (with stylization
+        // rules) — never the venue string.
         const canonical =
             credited.length === mbids.length && credited.length > 0
-                ? credited.map((artist) => displayName(artist, creditLine, match.artist)).join(", ")
+                ? credited.map((artist) => displayName(artist)).join(", ")
                 : match.artistCredit;
 
         // MusicBrainz files songs with no identifiable performer under placeholder
@@ -495,7 +484,7 @@ async function main(): Promise<void> {
         if (credited.length > 0) {
             resolved.artists = credited.map((artist) => ({
                 mbid: artist.mbid,
-                name: displayName(artist, creditLine, match.artist),
+                name: displayName(artist),
             }));
         }
         // MusicBrainz distinguishes a guest from an equal billing, and the dump flattens that
