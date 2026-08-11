@@ -55,6 +55,12 @@ const { page } = Astro.props;
                                     {song.from !== undefined && (
                                         <span class="block text-sm text-gray-500">{song.from}</span>
                                     )}
+                                    {/* Traditional buckets (Christmas, birthday, hymns) live
+                                        here rather than as invented performers in the artist
+                                        column. */}
+                                    {song.category !== undefined && (
+                                        <span class="block text-sm text-gray-500">{song.category}</span>
+                                    )}
                                 </td>
                                 {/* Genre is here to make bad data visible while the catalogue is
                                     being corrected, not as a finished column. The year is

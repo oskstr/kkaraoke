@@ -159,10 +159,11 @@ so the resolution path is a proposal that names the karaoke-standard performer a
 in the catalogue get the same language code from the MusicBrainz works pass, not only this venue bucket.
 
 **Christmas (19, filed under `Julsång`).** Mostly traditional or 19th-century works — `Stilla natt`,
-`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. Where a single karaoke performer is clear, propose
-that artist and keep a Christmas category separately from `from`. Most of these have no canonical performer —
-`O helga natt` has a composer but not one singer — so inventing one would be worse than leaving them unmatched.
-`Jul medley` is not a single work at all.
+`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. These have no single performer to find —
+`O helga natt` has a composer but not one singer — so inventing Carola or Bing Crosby would be worse than
+omitting the artist. They belong in `data/overrides.json` with `category: "Christmas"` and an empty artist,
+not under the venue label `Julsång` and not under a cover singer. The same rule covers midsummer songs,
+birthday songs, hymns, and Irish traditionals. `Jul medley` is not a single work at all.
 
 **Films and musicals (28 values, 66 songs).** `Disney` (13 songs), `Chicago` (5), `Sound of Music` (4),
 `High school musical` (4), `Grease` (3), `Frozen II` (3), `Moulin Rouge` (3), plus `Blues Brothers`,
@@ -624,8 +625,10 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
 - **The traditional repertoire.** `Julsång` (19 songs) is mostly carols with no single performer to find —
   dump credits for `Stilla natt` or `Santa Claus Is Coming to Town` run to hundreds or thousands of artists.
-  Inventing one would be worse than leaving the label alone; these want a Christmas category, not a singer.
-  Italian and Finnish venue buckets were resolvable to real singers with `language: "ita"` / `"fin"`.
+  Inventing one — or leaving the artist column as `Julsång` — is worse than omitting the artist; these live
+  in `data/overrides.json` with a Christmas `category`. The same for midsummer, birthday, hymn, and
+  traditional buckets. Italian and Finnish venue buckets were resolvable to real singers with
+  `language: "ita"` / `"fin"`.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
 `data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
@@ -730,10 +733,10 @@ and web service agree. Regenerated counts live in `data/review.md` and the match
 
 Still to do:
 
-9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — especially `Julsång`,
-   which wants a Christmas category rather than an invented performer, and the wrong-attribution bucket —
-   into `data/proposals.json` where the dump can confirm a real artist, and into `data/overrides.json`
-   where it cannot.
+9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — into
+   `data/proposals.json` where the dump can confirm a real artist, and into `data/overrides.json`
+   where it cannot. Traditional buckets (`Julsång` and the like) already use overrides with a
+   `category` and an omitted artist; do not re-propose cover singers for them.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
 11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
@@ -741,8 +744,9 @@ Still to do:
     required. Prefer a works dump when one is available; the API pass is correct but slow. Language
     already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
     `from` stays reserved for shows and films; broader buckets such as Disney films, Bond themes,
-    Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` (and a
-    future Christmas category for `Julsång`), not as fake performers.
+    Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` /
+    `category` (Christmas and other traditionals already use `category` in overrides), not as
+    fake performers.
 12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
