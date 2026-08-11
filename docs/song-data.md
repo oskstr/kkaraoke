@@ -517,7 +517,9 @@ other trusted song to fuzzy-match from. A title-first pass, lead indexing from m
 second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
 `Finsk musik` rows (real performers, `language: "fin"` — not `from`, which is for shows and films).
 Italian proposals use `language: "ita"` the same way. A library-wide MusicBrainz works pass fills
-`language` for every trusted recording that has a linked work. The queue is down from 460 to **208**:
+`language` for every trusted recording that has a linked work. The queue is down from 460 to **3**:
+two dump-key edge cases (Ayumi Hamasaki’s non-Latin lookup; an unlocateable Debbie Smith-Tebay cut)
+and one Carola title that is not in the canonical dump under that credit.
 
 | Songs | What it is                                                                                                                                              |
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |

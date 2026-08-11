@@ -213,6 +213,7 @@ async function main(): Promise<void> {
             artists: { type: "string", default: "data/artists.json" },
             recordings: { type: "string", default: "data/recordings.json" },
             works: { type: "string", default: "data/works.json" },
+            proposals: { type: "string", default: "data/proposals.json" },
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
         },
@@ -222,6 +223,8 @@ async function main(): Promise<void> {
     if (matches === undefined) {
         throw new Error(`Could not read ${values.matches}. Run \`pnpm match:canonical\` first.`);
     }
+    const proposalFile = await readJson<{ proposals: { postId: number }[] }>(values.proposals);
+    const proposed = new Set((proposalFile?.proposals ?? []).map((p) => p.postId));
     // Enrichment is optional so that the titles can be applied before the artist lookups,
     // which take an hour, have finished.
     const artistFile = await readJson<{ artists: Artist[] }>(values.artists);
@@ -341,7 +344,11 @@ async function main(): Promise<void> {
             artistOnlyCorrection(match);
             continue;
         }
-        if (match.trusted !== true) {
+        // A `loose` how is normally untrusted, but a confirmed proposal already decided this
+        // is the right song — truncated venue titles often only reach the master loosely.
+        // (`match.proposed` is only set when a proposal key won; the proposals file still
+        // covers cases where the venue's own loose key found the same master.)
+        if (match.trusted !== true && match.proposed === undefined && !proposed.has(match.postId)) {
             review.push({
                 ...pick(match),
                 reason: match.placeholder === true ? "matched a placeholder entity" : "weak match",
@@ -360,7 +367,10 @@ async function main(): Promise<void> {
         // and nothing here is worth applying on the strength of a namesake.
         // A proposal is exempt, because disagreeing with the artist string is the whole point
         // of making one: nine of the venue's `Spice Girls` songs are solo singles.
-        const dominant = match.proposed === undefined ? soleArtist.get(match.artist) : undefined;
+        const dominant =
+            match.proposed === undefined && !proposed.has(match.postId)
+                ? soleArtist.get(match.artist)
+                : undefined;
         const found = artists.get(mbids[0] ?? "");
         if (
             mbids.length === 1 &&
@@ -408,17 +418,8 @@ async function main(): Promise<void> {
         // Scoping a search to the lead can land on the lead's solo recording, so `Ashanti & Ja
         // Rule – Happy` becomes Ashanti alone. Title-first can do the same when it accepts a
         // credit headed by the venue's lead. The canonical names, year and genres are still
-        // a gain over the venue's string, so this is applied and noted rather than withheld.
-        if (
-            (match.how === "lead-scoped" || match.how === "title-first" || match.how === "collab-scoped") &&
-            credited.length < match.artist.split(JOIN).length
-        ) {
-            review.push({
-                ...pick(match),
-                reason: "matched through the lead artist, which named fewer artists than the venue did",
-                suggestion: `${canonical ?? ""} – ${match.title ?? ""}`,
-            });
-        }
+        // applied. Incomplete collaboration credits are fixed via proposals rather than queued
+        // here — the review list is for misses and wrong attributions, not already-usable songs.
 
         const resolved: Resolved = { postId: match.postId };
         if (match.from !== undefined) resolved.from = match.from;

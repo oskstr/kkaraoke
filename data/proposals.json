@@ -90,8 +90,10 @@
         },
         {
             "postId": 48868,
-            "artist": "Glen Weston",
-            "why": "from the 1968 Romeo and Juliet"
+            "artist": "Nino Rota",
+            "title": "What Is a Youth",
+            "from": "Romeo and Juliet",
+            "why": "Film theme"
         },
         {
             "postId": 50269,
@@ -449,8 +451,8 @@
         {
             "postId": 48619,
             "artist": "Britney Spears",
-            "title": "What You See (Is What You Get)",
-            "why": "What you see is what you get"
+            "title": "What U See (Is What U Get)",
+            "why": "Canonical"
         },
         {
             "postId": 48314,
@@ -710,8 +712,8 @@
         {
             "postId": 52751,
             "artist": "Shawn Mendes",
-            "title": "There's Nothing Holding Me Back",
-            "why": "venue dropped There's"
+            "title": "There’s Nothing Holdin’ Me Back",
+            "why": "Full title"
         },
         {
             "postId": 53559,
@@ -763,9 +765,9 @@
         },
         {
             "postId": 50782,
-            "artist": "Johnny Nash",
+            "artist": "The Tokens",
             "title": "The Lion Sleeps Tonight",
-            "why": "full title"
+            "why": "Tokens not Johnny Nash"
         },
         {
             "postId": 49952,
@@ -942,7 +944,7 @@
             "postId": 52850,
             "artist": "The S.O.S. Band",
             "title": "Take Your Time (Do It Right)",
-            "why": "Sos is The S.O.S. Band"
+            "why": "Full title"
         },
         {
             "postId": 52907,
@@ -982,15 +984,15 @@
         },
         {
             "postId": 52209,
-            "artist": "Pras Michel feat. Ol' Dirty Bastard & Introducing Mýa",
+            "artist": "Pras Michel featuring Ol’ Dirty Bastard and introducing Mýa",
             "title": "Ghetto Supastar (That Is What You Are)",
-            "why": "Ghetto superstar"
+            "why": "Full credit"
         },
         {
             "postId": 48716,
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
-            "why": "may only exist as video/live in dump — try studio spelling"
+            "why": "BTS hit"
         },
         {
             "postId": 49959,
@@ -1463,7 +1465,7 @@
             "postId": 51160,
             "artist": "LeAnn Rimes",
             "title": "How Do I Live",
-            "why": "drop (original) master marker"
+            "why": "Drop original MIX"
         },
         {
             "postId": 48005,
@@ -1516,10 +1518,10 @@
         },
         {
             "postId": 50370,
-            "artist": "High School Musical",
-            "title": "We're All in This Together",
+            "artist": "High School Musical Cast",
+            "title": "We’re All in This Together",
             "from": "High School Musical",
-            "why": "HSM; keep from as the film"
+            "why": "Cast not [Disney]"
         },
         {
             "postId": 49410,
@@ -1576,6 +1578,1163 @@
             "title": "Bibbidi-Bobbidi-Boo",
             "from": "Cinderella",
             "why": "Cinderella fairy godmother"
+        },
+        {
+            "postId": 50840,
+            "artist": "Carola",
+            "title": "Bjällerklang",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50841,
+            "artist": "Carola",
+            "title": "Gläns över sjö och strand",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50842,
+            "artist": "Carola",
+            "title": "Hej mitt vinterland",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50843,
+            "artist": "Mora Träsk",
+            "title": "Nu är det jul igen",
+            "why": "Venue shortened the title"
+        },
+        {
+            "postId": 50844,
+            "artist": "Carola",
+            "title": "Jul, jul strålande jul",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50845,
+            "artist": "Bjursåsflickorna",
+            "title": "Lusse Lelle",
+            "why": "Traditional Swedish recording"
+        },
+        {
+            "postId": 50846,
+            "artist": "The Playtones",
+            "title": "Julmedley",
+            "why": "Swedish Julmedley recording"
+        },
+        {
+            "postId": 50847,
+            "artist": "Carola",
+            "title": "Nu tändas tusen juleljus",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50848,
+            "artist": "Carola",
+            "title": "När det lider mot jul",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50849,
+            "artist": "Carola",
+            "title": "När juldagsmorgon glimmar",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50850,
+            "artist": "Carola",
+            "title": "O helga natt",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50851,
+            "artist": "The Real Group",
+            "title": "Sankta Lucia",
+            "why": "Swedish Christmas recording"
+        },
+        {
+            "postId": 50852,
+            "artist": "Tommy Körberg",
+            "title": "Ser du stjärnan i det blå",
+            "why": "Swedish Christmas recording"
+        },
+        {
+            "postId": 50853,
+            "artist": "Leif \"Loket\" Olsson",
+            "title": "Staffansvisan",
+            "why": "Swedish Christmas recording"
+        },
+        {
+            "postId": 50854,
+            "artist": "Carola",
+            "title": "Stilla natt",
+            "why": "Swedish Christmas standard"
+        },
+        {
+            "postId": 50855,
+            "artist": "Bing Crosby",
+            "title": "Santa Claus Is Coming to Town",
+            "why": "Christmas standard"
+        },
+        {
+            "postId": 50856,
+            "artist": "Bing Crosby",
+            "title": "We Wish You a Merry Christmas",
+            "why": "Christmas standard"
+        },
+        {
+            "postId": 50857,
+            "artist": "Bing Crosby",
+            "title": "Silent Night, Holy Night",
+            "why": "Christmas standard"
+        },
+        {
+            "postId": 50858,
+            "artist": "Bing Crosby",
+            "title": "Jingle Bells",
+            "why": "Christmas standard"
+        },
+        {
+            "postId": 48867,
+            "artist": "Johnny Nash",
+            "title": "The Voice of Love",
+            "why": "Century Oldies category"
+        },
+        {
+            "postId": 47902,
+            "artist": "Alice Babs",
+            "title": "Ekorr’n satt i granen",
+            "why": "Alice Tegnér song; Babs recording"
+        },
+        {
+            "postId": 47944,
+            "artist": "Amanda Fondell",
+            "title": "All This Way",
+            "why": "Correct title"
+        },
+        {
+            "postId": 48328,
+            "artist": "Billie Piper",
+            "title": "She Wants You",
+            "why": "Bill truncated Billie"
+        },
+        {
+            "postId": 48654,
+            "artist": "Joslin Grove Choral Society",
+            "title": "Face to Face With Christ My Savior",
+            "why": "Broadman Hymnal category"
+        },
+        {
+            "postId": 49258,
+            "artist": "David Shutrick",
+            "title": "Container",
+            "why": "Venue added Blå"
+        },
+        {
+            "postId": 49294,
+            "artist": "Deniece Williams",
+            "title": "Let’s Hear It for the Boy",
+            "why": "Correct preposition"
+        },
+        {
+            "postId": 49483,
+            "artist": "Donna Fargo",
+            "title": "The Happiest Girl in the Whole U.S.A.",
+            "why": "Full title"
+        },
+        {
+            "postId": 49663,
+            "artist": "Electric Boys",
+            "title": "All Lips ’n’ Hips",
+            "why": "Canonical title"
+        },
+        {
+            "postId": 49856,
+            "artist": "Eric Amarillo",
+            "title": "Om sanningen ska fram (Vill du ligga med mig?)",
+            "why": "Erik→Eric; full title"
+        },
+        {
+            "postId": 49858,
+            "artist": "Erik Linder",
+            "title": "Hur kan jag tro på kärlek",
+            "why": "Canonical drops -en"
+        },
+        {
+            "postId": 49860,
+            "artist": "Orup & Anders Glenmark",
+            "title": "Upp över mina öron",
+            "why": "Correct credit"
+        },
+        {
+            "postId": 50005,
+            "artist": "Flamingokvintetten",
+            "title": "Hon är sexton år idag",
+            "why": "Venue omitted Hon är"
+        },
+        {
+            "postId": 50116,
+            "artist": "Elvis Presley",
+            "title": "Danny Boy",
+            "why": "Weatherly wrote it; Elvis karaoke standard"
+        },
+        {
+            "postId": 50124,
+            "artist": "Sebastian Fronda",
+            "title": "Ingen mår så bra som jag",
+            "why": "Full artist credit"
+        },
+        {
+            "postId": 50135,
+            "artist": "Louise Andersson Bodin",
+            "title": "Ja Må Du Leva",
+            "why": "Swedish birthday song"
+        },
+        {
+            "postId": 50266,
+            "artist": "Gracie Fields",
+            "title": "Wish Me Luck As You Wave Me Goodbye",
+            "why": "Correct title"
+        },
+        {
+            "postId": 50272,
+            "artist": "John Travolta & Olivia Newton‐John",
+            "title": "The Grease Megamix",
+            "from": "Grease",
+            "why": "Grease Mega Mix is category"
+        },
+        {
+            "postId": 50361,
+            "artist": "Barbra Streisand",
+            "title": "Don’t Rain on My Parade",
+            "from": "Funny Girl",
+            "why": "Funny Girl not Hello Dolly"
+        },
+        {
+            "postId": 50438,
+            "artist": "Inger Lise Rypdal",
+            "title": "Nyforelsket 70 år",
+            "language": "nor",
+            "why": "Nyorelsket typo"
+        },
+        {
+            "postId": 50695,
+            "artist": "Jimmie Rodgers",
+            "title": "English Country Garden",
+            "why": "Jimmie not Jimmy"
+        },
+        {
+            "postId": 50704,
+            "artist": "Thåström",
+            "title": "Märk Hur Vår Skugga",
+            "why": "Canonical solo credit"
+        },
+        {
+            "postId": 50790,
+            "artist": "Jonas Gardell",
+            "title": "Aldrig ska jag sluta älska dig",
+            "why": "ska not skall"
+        },
+        {
+            "postId": 50912,
+            "artist": "Kardinal Offishall feat. Akon",
+            "title": "Dangerous",
+            "why": "Kardinall typo"
+        },
+        {
+            "postId": 51015,
+            "artist": "Kim",
+            "title": "3 Floors Down",
+            "why": "Dump credits Kim"
+        },
+        {
+            "postId": 51604,
+            "artist": "The Merseybeats",
+            "title": "Wishin’ and Hopin’",
+            "why": "Canonical"
+        },
+        {
+            "postId": 51674,
+            "artist": "Michael W. Smith",
+            "title": "I Will Be Here for You",
+            "why": "I Will not I’ll"
+        },
+        {
+            "postId": 51678,
+            "artist": "Mora Träsk",
+            "title": "Små grodorna",
+            "why": "Swedish midsummer"
+        },
+        {
+            "postId": 51720,
+            "artist": "Moa Lignell",
+            "title": "When I Held Ya",
+            "why": "Parenthetical was the title"
+        },
+        {
+            "postId": 51757,
+            "artist": "Mister Rogers",
+            "title": "Won’t You Be My Neighbor?",
+            "why": "Canonical"
+        },
+        {
+            "postId": 51906,
+            "artist": "England Dan & John Ford Coley",
+            "title": "Just Tell Me You Love Me",
+            "why": "Norieve R18 not performer"
+        },
+        {
+            "postId": 51963,
+            "artist": "Lionel Bart",
+            "title": "Consider Yourself",
+            "from": "Oliver!",
+            "why": "Oliver! soundtrack"
+        },
+        {
+            "postId": 51986,
+            "artist": "Jaa9 & OnklP",
+            "title": "Kjendisparty",
+            "language": "nor",
+            "why": "Canonical order"
+        },
+        {
+            "postId": 52028,
+            "artist": "Dave Dee, Dozy, Beaky, Mick & Tich",
+            "title": "Here's a Heart",
+            "why": "Past Oldies category"
+        },
+        {
+            "postId": 52105,
+            "artist": "Peter Cetera",
+            "title": "The Next Time I Fall",
+            "why": "Cetera/Grant hit; prefer Cetera key"
+        },
+        {
+            "postId": 52134,
+            "artist": "Frank Sinatra",
+            "title": "Happy Birthday to You",
+            "why": "Birthday singalong"
+        },
+        {
+            "postId": 52167,
+            "artist": "David Essex",
+            "title": "Corner of the Sky",
+            "from": "Pippin",
+            "why": "Pippen→Pippin"
+        },
+        {
+            "postId": 52342,
+            "artist": "Mats Rådberg & Rankarna",
+            "title": "Det är inte lätt att vara ödmjuk",
+            "why": "Full credit"
+        },
+        {
+            "postId": 52358,
+            "artist": "Reba",
+            "title": "Now You Tell Me",
+            "why": "Canonical Reba"
+        },
+        {
+            "postId": 52392,
+            "artist": "Rex Smith",
+            "title": "You Take My Breath Away",
+            "why": "Venue omitted You"
+        },
+        {
+            "postId": 52531,
+            "artist": "Roger Pontare",
+            "title": "När vindarna viskar mitt namn",
+            "why": "Venue omitted När"
+        },
+        {
+            "postId": 52857,
+            "artist": "Mitzi Gaynor",
+            "title": "I'm Gonna Wash That Man Right Out of My Hair",
+            "from": "South Pacific",
+            "why": "South Pacific"
+        },
+        {
+            "postId": 52922,
+            "artist": "Steve & Eydie",
+            "title": "This Could Be the Start of Something Big",
+            "why": "Steve Lawrence & Eydie"
+        },
+        {
+            "postId": 53138,
+            "artist": "Jerry Orbach",
+            "title": "Try to Remember",
+            "from": "The Fantasticks",
+            "why": "Fantasticks cast"
+        },
+        {
+            "postId": 53156,
+            "artist": "The Moniker",
+            "title": "Oh My God!",
+            "why": "Monkier typo"
+        },
+        {
+            "postId": 53476,
+            "artist": "Merle Haggard",
+            "title": "Okie From Muskogee",
+            "why": "Muskogie typo; Merle not Waylon"
+        },
+        {
+            "postId": 53491,
+            "artist": "Larry Kert",
+            "title": "Maria",
+            "from": "West Side Story",
+            "why": "Original cast"
+        },
+        {
+            "postId": 51956,
+            "artist": "Ola",
+            "title": "Natalie",
+            "why": "MB credits Ola not Ola Svensson"
+        },
+        {
+            "postId": 51957,
+            "artist": "Ola",
+            "title": "S.O.S.",
+            "why": "MB credits Ola"
+        },
+        {
+            "postId": 51958,
+            "artist": "Ola",
+            "title": "Love in Stereo",
+            "why": "MB credits Ola"
+        },
+        {
+            "postId": 51959,
+            "artist": "Ola",
+            "title": "Unstoppable",
+            "why": "MB credits Ola"
+        },
+        {
+            "postId": 51408,
+            "artist": "Gloria Estefan",
+            "title": "Here We Are",
+            "why": "Gloria not Madonna"
+        },
+        {
+            "postId": 51409,
+            "artist": "Gloria Estefan",
+            "title": "Reach",
+            "why": "Gloria not Madonna"
+        },
+        {
+            "postId": 51410,
+            "artist": "Gloria Estefan",
+            "title": "It’s Too Late",
+            "why": "Gloria not Madonna"
+        },
+        {
+            "postId": 47831,
+            "artist": "Alabama",
+            "title": "Mountain Music",
+            "why": "Alabama not Aerosmith"
+        },
+        {
+            "postId": 48139,
+            "artist": "Backstreet Boys",
+            "title": "I Wanna Be With You",
+            "why": "Wanna"
+        },
+        {
+            "postId": 48214,
+            "artist": "Barry White",
+            "title": "What Am I Gonna Do With You",
+            "why": "Gonna"
+        },
+        {
+            "postId": 48305,
+            "artist": "Bette Midler",
+            "title": "The Glory of Love",
+            "why": "Drop That’s"
+        },
+        {
+            "postId": 48423,
+            "artist": "Bloodhound Gang",
+            "title": "Right Turn Clyde",
+            "why": "Lyric used as title"
+        },
+        {
+            "postId": 48538,
+            "artist": "Bon Jovi",
+            "title": "Living in Sin",
+            "why": "Sun→Sin typo"
+        },
+        {
+            "postId": 49140,
+            "artist": "Creed",
+            "title": "Stand Here With Me",
+            "why": "Venue omitted Here"
+        },
+        {
+            "postId": 49480,
+            "artist": "Don Williams",
+            "title": "I Recall a Gypsy Woman",
+            "why": "Full title"
+        },
+        {
+            "postId": 49537,
+            "artist": "Freestyle",
+            "title": "Fantasi",
+            "why": "Freestyle not Drömhus"
+        },
+        {
+            "postId": 49814,
+            "artist": "Engelbert Humperdinck",
+            "title": "Am I That Easy to Forget",
+            "why": "Omitted That"
+        },
+        {
+            "postId": 50065,
+            "artist": "Foo Fighters",
+            "title": "Next Year",
+            "why": "Lyric as title"
+        },
+        {
+            "postId": 50147,
+            "artist": "Garth Brooks",
+            "title": "Two of a Kind, Workin’ on a Full House",
+            "why": "Full title"
+        },
+        {
+            "postId": 50168,
+            "artist": "The Human League",
+            "title": "Mirror Man",
+            "why": "Not Genesis"
+        },
+        {
+            "postId": 50368,
+            "artist": "The High School Musical Cast",
+            "title": "What Time Is It?",
+            "from": "High School Musical 2",
+            "why": "HSM2"
+        },
+        {
+            "postId": 50733,
+            "artist": "Estelle feat. John Legend",
+            "title": "You Are",
+            "why": "Hey girl was lyric"
+        },
+        {
+            "postId": 50815,
+            "artist": "Steve Perry",
+            "title": "Foolish Heart",
+            "why": "Perry solo not Journey"
+        },
+        {
+            "postId": 50946,
+            "artist": "Keith Urban",
+            "title": "Who Wouldn’t Wanna Be Me",
+            "why": "Full title"
+        },
+        {
+            "postId": 50999,
+            "artist": "Kikki Danielsson",
+            "title": "Idag & imorgon",
+            "why": "Ampersand"
+        },
+        {
+            "postId": 51337,
+            "artist": "Louis Armstrong",
+            "title": "A Kiss to Build a Dream On",
+            "why": "Omitted On"
+        },
+        {
+            "postId": 51472,
+            "artist": "MIKA",
+            "title": "Lollipop",
+            "why": "MIKA not Mariah"
+        },
+        {
+            "postId": 51552,
+            "artist": "Marvin Gaye & Tammi Terrell",
+            "title": "Ain’t Nothing Like the Real Thing",
+            "why": "Duet"
+        },
+        {
+            "postId": 51778,
+            "artist": "*NSYNC",
+            "title": "Falling",
+            "why": "Fallen→Falling"
+        },
+        {
+            "postId": 51817,
+            "artist": "Neil Diamond",
+            "title": "And the Grass Won’t Pay No Mind",
+            "why": "Full title"
+        },
+        {
+            "postId": 51896,
+            "artist": "Dexys Midnight Runners",
+            "title": "Come On Eileen",
+            "why": "Not No Doubt"
+        },
+        {
+            "postId": 52210,
+            "artist": "Prefab Sprout",
+            "title": "The King of Rock ’n’ Roll",
+            "why": "Full title"
+        },
+        {
+            "postId": 52290,
+            "artist": "R. Kelly",
+            "title": "Burn It Up",
+            "why": "Burning→Burn It"
+        },
+        {
+            "postId": 52433,
+            "artist": "Rhianna",
+            "title": "Oh Baby",
+            "why": "British Rhianna not Rihanna"
+        },
+        {
+            "postId": 52558,
+            "artist": "The Jets",
+            "title": "Make It Real",
+            "why": "Jets not Roxette"
+        },
+        {
+            "postId": 52611,
+            "artist": "Samantha Fox",
+            "title": "I Wanna Have Some Fun",
+            "why": "Correct title"
+        },
+        {
+            "postId": 52615,
+            "artist": "Samantha Mumba",
+            "title": "Body II Body",
+            "why": "Roman numerals"
+        },
+        {
+            "postId": 52623,
+            "artist": "Sebastian Karlsson",
+            "title": "When the Night Comes Falling",
+            "why": "Swedish Sebastian; swapped with Sanna"
+        },
+        {
+            "postId": 52638,
+            "artist": "Sarah Dawn Finer",
+            "title": "Moving On",
+            "why": "Drop I’m"
+        },
+        {
+            "postId": 52681,
+            "artist": "Sanna Nielsen",
+            "title": "Vågar du, vågar jag",
+            "why": "Swapped with Sebastian"
+        },
+        {
+            "postId": 53063,
+            "artist": "Taylor Swift",
+            "title": "If This Was a Movie",
+            "why": "Was not Were"
+        },
+        {
+            "postId": 53345,
+            "artist": "Trace Adkins",
+            "title": "Every Light in the House",
+            "why": "Drop is on"
+        },
+        {
+            "postId": 53383,
+            "artist": "UB40",
+            "title": "Tears From My Eyes",
+            "why": "From not in"
+        },
+        {
+            "postId": 53553,
+            "artist": "Whitney Houston duet with Jermaine Jackson",
+            "title": "Nobody Loves Me Like You Do",
+            "why": "Full duet credit"
+        },
+        {
+            "postId": 49943,
+            "artist": "Fall Out Boy",
+            "title": "I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)",
+            "why": "Full title"
+        },
+        {
+            "postId": 49945,
+            "artist": "Fall Out Boy",
+            "title": "A Little Less Sixteen Candles, a Little More “Touch Me”",
+            "why": "Full title"
+        },
+        {
+            "postId": 47761,
+            "artist": "ABBA",
+            "title": "I Do, I Do, I Do, I Do, I Do",
+            "why": "Fifth I Do"
+        },
+        {
+            "postId": 48288,
+            "artist": "The Bellamy Brothers",
+            "title": "If I Said You Had a Beautiful Body Would You Hold It Against Me",
+            "why": "Truncated venue title"
+        },
+        {
+            "postId": 48472,
+            "artist": "Bob Dylan",
+            "title": "Don’t Think Twice, It’s All Right",
+            "why": "Full title beats loose"
+        },
+        {
+            "postId": 48521,
+            "artist": "Bobby Vee",
+            "title": "Venus in Blue Jeans",
+            "why": "Jeans"
+        },
+        {
+            "postId": 48650,
+            "artist": "Britney Spears",
+            "title": "Do Somethin’",
+            "why": "Canonical beats remix loose"
+        },
+        {
+            "postId": 47839,
+            "artist": "Run‐D.M.C. feat. Aerosmith",
+            "title": "Walk This Way",
+            "why": "Full 1986 credit"
+        },
+        {
+            "postId": 48067,
+            "artist": "Ashanti feat. Ja Rule",
+            "title": "Happy",
+            "why": "Both credits"
+        },
+        {
+            "postId": 48101,
+            "artist": "Avicii feat. Robbie Williams",
+            "title": "The Days",
+            "why": "Both credits"
+        },
+        {
+            "postId": 48217,
+            "artist": "Tina Turner",
+            "title": "In Your Wildest Dreams",
+            "why": "Tina lead with Barry"
+        },
+        {
+            "postId": 48434,
+            "artist": "Blue feat. Elton John",
+            "title": "Sorry Seems to Be the Hardest Word",
+            "why": "Both"
+        },
+        {
+            "postId": 48701,
+            "artist": "Travie McCoy feat. Bruno Mars",
+            "title": "Billionaire",
+            "why": "Correct lead"
+        },
+        {
+            "postId": 48702,
+            "artist": "Bruno Mars",
+            "title": "Finesse",
+            "why": "Cardi remix; prefer Bruno Mars Finesse"
+        },
+        {
+            "postId": 48752,
+            "artist": "Captain & Tennille",
+            "title": "Love Will Keep Us Together",
+            "why": "Tennille spelling"
+        },
+        {
+            "postId": 48941,
+            "artist": "Chief Keef",
+            "title": "Hate Bein’ Sober",
+            "why": "Lead match OK; keep Chief Keef"
+        },
+        {
+            "postId": 49251,
+            "artist": "David Crosby",
+            "title": "Hero",
+            "why": "With Phil Collins"
+        },
+        {
+            "postId": 49516,
+            "artist": "Dr. Dre feat. Snoop Doggy Dogg",
+            "title": "Nuthin’ but a “G” Thang",
+            "why": "Both"
+        },
+        {
+            "postId": 49767,
+            "artist": "Elvis vs. JXL",
+            "title": "A Little Less Conversation",
+            "why": "JXL remix"
+        },
+        {
+            "postId": 49826,
+            "artist": "England Dan & John Ford Coley",
+            "title": "I’d Really Love to See You Tonight",
+            "why": "Full name"
+        },
+        {
+            "postId": 50071,
+            "artist": "Fort Minor",
+            "title": "Where’d You Go",
+            "why": "Holly Brook feature"
+        },
+        {
+            "postId": 50108,
+            "artist": "Frankie Valli & The Four Seasons",
+            "title": "December 1963 (Oh, What a Night)",
+            "why": "Full group"
+        },
+        {
+            "postId": 50432,
+            "artist": "Imany",
+            "title": "Don’t Be So Shy",
+            "why": "Filatov & Karas remix"
+        },
+        {
+            "postId": 50610,
+            "artist": "JAY-Z",
+            "title": "I Know",
+            "why": "feat Pharrell"
+        },
+        {
+            "postId": 50833,
+            "artist": "Juanes",
+            "title": "Hoy me voy",
+            "why": "with Colbie"
+        },
+        {
+            "postId": 50874,
+            "artist": "Justin Bieber feat. Rascal Flatts",
+            "title": "That Should Be Me",
+            "why": "Both"
+        },
+        {
+            "postId": 50893,
+            "artist": "Ciara feat. Justin Timberlake",
+            "title": "Love Sex Magic",
+            "why": "Correct lead"
+        },
+        {
+            "postId": 50977,
+            "artist": "Loggins & Messina",
+            "title": "Your Mama Don’t Dance",
+            "why": "Jim Messina not Jo Dee"
+        },
+        {
+            "postId": 51001,
+            "artist": "Kikki, Bettan & Lotta",
+            "title": "Vem e det du vill ha",
+            "why": "Trio Melodifestivalen"
+        },
+        {
+            "postId": 51139,
+            "artist": "Lars Winnerbäck",
+            "title": "Hum hum från Humlegården",
+            "why": "with Hovet"
+        },
+        {
+            "postId": 51236,
+            "artist": "Lighthouse Family",
+            "title": "High",
+            "why": "Drop inverted The"
+        },
+        {
+            "postId": 51385,
+            "artist": "Macklemore & Ryan Lewis",
+            "title": "White Walls",
+            "why": "feat Schoolboy Q"
+        },
+        {
+            "postId": 51679,
+            "artist": "Miio",
+            "title": "Ska vi gå hem till dig...",
+            "why": "feat Ayo"
+        },
+        {
+            "postId": 52003,
+            "artist": "Lita Ford",
+            "title": "Close My Eyes Forever",
+            "why": "with Ozzy"
+        },
+        {
+            "postId": 52385,
+            "artist": "The Rembrandts",
+            "title": "I’ll Be There for You",
+            "why": "Article"
+        },
+        {
+            "postId": 52489,
+            "artist": "Robbie Williams",
+            "title": "Somethin’ Stupid",
+            "why": "with Nicole Kidman"
+        },
+        {
+            "postId": 52557,
+            "artist": "Rosie & the Originals",
+            "title": "Angel Baby",
+            "why": "Group credit"
+        },
+        {
+            "postId": 52583,
+            "artist": "Rudimental feat. James Arthur",
+            "title": "Sun Comes Up",
+            "why": "Both"
+        },
+        {
+            "postId": 52826,
+            "artist": "Snoop Dogg feat. Justin Timberlake",
+            "title": "Signs",
+            "why": "Both"
+        },
+        {
+            "postId": 52827,
+            "artist": "Snoop Dogg feat. Pharrell",
+            "title": "Drop It Like It’s Hot",
+            "why": "Both"
+        },
+        {
+            "postId": 52919,
+            "artist": "Steve Harley & Cockney Rebel",
+            "title": "Make Me Smile (Come Up and See Me)",
+            "why": "Full band"
+        },
+        {
+            "postId": 53021,
+            "artist": "Swedish House Mafia",
+            "title": "Save the World",
+            "why": "feat John Martin"
+        },
+        {
+            "postId": 53023,
+            "artist": "Swedish House Mafia",
+            "title": "One",
+            "why": "feat Pharrell"
+        },
+        {
+            "postId": 53207,
+            "artist": "Thomas Jack",
+            "title": "Rivers",
+            "why": "feat Nico & Vinz"
+        },
+        {
+            "postId": 53237,
+            "artist": "Tina Arena",
+            "title": "I Want to Spend My Lifetime Loving You",
+            "why": "with Marc Anthony"
+        },
+        {
+            "postId": 53474,
+            "artist": "Warren G & Nate Dogg",
+            "title": "Regulate",
+            "why": "Both"
+        },
+        {
+            "postId": 53579,
+            "artist": "Wolfman",
+            "title": "For Lovers",
+            "why": "feat Pete Doherty"
+        },
+        {
+            "postId": 53609,
+            "artist": "Zucchero & Paul Young",
+            "title": "Senza una donna (Without a Woman)",
+            "why": "Zuchero typo; full duet"
+        },
+        {
+            "postId": 48444,
+            "artist": "The Blues Brothers",
+            "title": "Everybody Needs Somebody to Love",
+            "why": "Film band not namesake"
+        },
+        {
+            "postId": 51686,
+            "artist": "MIKA",
+            "title": "Relax (Take It Easy)",
+            "why": "Force MIKA over Austrian Mika namesake"
+        },
+        {
+            "postId": 52140,
+            "artist": "P!nk",
+            "title": "So What",
+            "why": "P!nk not Pink namesake"
+        },
+        {
+            "postId": 52878,
+            "artist": "Melanie C",
+            "title": "Ga Ga",
+            "why": "Solo not Spice Girls"
+        },
+        {
+            "postId": 48697,
+            "artist": "Bruno Mars",
+            "title": "Just the Way You Are",
+            "why": "Drop Amazing mashup"
+        },
+        {
+            "postId": 48917,
+            "artist": "Cher",
+            "title": "Body to Body, Heart to Heart",
+            "why": "Full title"
+        },
+        {
+            "postId": 48954,
+            "artist": "Chris Brown",
+            "title": "Yo (Excuse Me Miss)",
+            "why": "Full title"
+        },
+        {
+            "postId": 49323,
+            "artist": "Depeche Mode",
+            "title": "Blasphemous Rumours",
+            "why": "Full title"
+        },
+        {
+            "postId": 49941,
+            "artist": "Fall Out Boy",
+            "title": "My Songs Know What You Did in the Dark (Light Em Up)",
+            "why": "Full title"
+        },
+        {
+            "postId": 50143,
+            "artist": "Garth Brooks",
+            "title": "Ain’t Goin’ Down (’Til the Sun Comes Up)",
+            "why": "Full title"
+        },
+        {
+            "postId": 51142,
+            "artist": "Las Ketchup",
+            "title": "The Ketchup Song (Aserejé)",
+            "why": "Full title"
+        },
+        {
+            "postId": 51239,
+            "artist": "Lil Uzi Vert",
+            "title": "XO Tour Llif3",
+            "why": "Canonical"
+        },
+        {
+            "postId": 51393,
+            "artist": "Madonna",
+            "title": "Secret",
+            "why": "Singular studio"
+        },
+        {
+            "postId": 51673,
+            "artist": "Michael McDonald",
+            "title": "Signed, Sealed, Delivered I’m Yours",
+            "why": "Full title"
+        },
+        {
+            "postId": 52225,
+            "artist": "Prince",
+            "title": "The Most Beautiful Girl in the World",
+            "why": "Full title"
+        },
+        {
+            "postId": 52307,
+            "artist": "Rachel Stevens",
+            "title": "Sweet Dreams My LA Ex",
+            "why": "Full title"
+        },
+        {
+            "postId": 52729,
+            "artist": "Shania Twain",
+            "title": "(If You’re Not in It for Love) I’m Outta Here!",
+            "why": "Full title"
+        },
+        {
+            "postId": 52752,
+            "artist": "Shawn Mendes",
+            "title": "I Know What You Did Last Summer",
+            "why": "Full title"
+        },
+        {
+            "postId": 52904,
+            "artist": "Steely Dan",
+            "title": "FM (No Static at All)",
+            "why": "Full title"
+        },
+        {
+            "postId": 53254,
+            "artist": "Toby Keith",
+            "title": "Does That Blue Moon Ever Shine on You",
+            "why": "Full title"
+        },
+        {
+            "postId": 53377,
+            "artist": "U2",
+            "title": "Pride (In the Name of Love)",
+            "why": "Full title"
+        },
+        {
+            "postId": 53488,
+            "artist": "Weezer",
+            "title": "(If You’re Wondering If I Want You To) I Want You To",
+            "why": "Full title"
+        },
+        {
+            "postId": 48038,
+            "artist": "Are og Odin",
+            "title": "Klapp klapp",
+            "why": "Canonical duo"
+        },
+        {
+            "postId": 51363,
+            "artist": "Nas",
+            "title": "If I Ruled the World (Imagine That)",
+            "why": "Nas hit; venue wrongly credited Luther"
+        },
+        {
+            "postId": 48782,
+            "artist": "Carola Häggkvist",
+            "title": "Det är bara vi",
+            "why": "Try full Carola name"
+        },
+        {
+            "postId": 50082,
+            "artist": "Frank Marino",
+            "title": "I’m a King Bee / Excerpt From ’Back Door Man’ (live)",
+            "why": "Exact dump medley title"
+        },
+        {
+            "postId": 50241,
+            "artist": "Goo Goo Dolls",
+            "title": "Bullet Proof",
+            "why": "Studio title"
+        },
+        {
+            "postId": 52424,
+            "artist": "Ricky Martin",
+            "title": "María",
+            "why": "Spanish title"
+        },
+        {
+            "postId": 52817,
+            "artist": "Smash Mouth",
+            "title": "You Are My Number One",
+            "why": "Studio cut"
+        },
+        {
+            "postId": 53147,
+            "artist": "The Isley Brothers",
+            "title": "Fight the Power, Parts 1 & 2",
+            "why": "Full title"
+        },
+        {
+            "postId": 50113,
+            "artist": "Freddie Bell & the Bellboys",
+            "title": "Giddy Up a Ding Dong",
+            "why": "Venue put group in title field"
+        },
+        {
+            "postId": 52840,
+            "artist": "Son of a Plumber",
+            "title": "Jo-Anna Says",
+            "why": "Per Gessle project; venue filed C'mon/Jo-Anna as medley"
+        },
+        {
+            "postId": 48108,
+            "artist": "浜崎あゆみ",
+            "title": "walking proud",
+            "language": "jpn",
+            "why": "Canonical MB artist credit; dump key uses special romanization"
         }
     ]
 }

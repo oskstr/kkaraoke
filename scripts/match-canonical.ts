@@ -807,7 +807,14 @@ async function main(): Promise<void> {
                     attributionUpgrade = true;
                 }
             }
-            if (!studioUpgrade && !variantUpgrade && !attributionUpgrade) {
+            // A proposal that reaches a better how than the venue's own strings must be
+            // allowed to win even at PROPOSED_RANK. Otherwise a truncated title that only
+            // `loose`-matches a remix (`Don't think twice` → wrong Dylan master) permanently
+            // blocks the proposal that names the real studio cut.
+            const proposalUpgrade =
+                entry.proposed !== undefined &&
+                HOWS.indexOf(how) < HOWS.indexOf(existing.how);
+            if (!studioUpgrade && !variantUpgrade && !attributionUpgrade && !proposalUpgrade) {
                 if (rank > existing.rank) return;
                 if (rank === existing.rank) {
                     const order = HOWS.indexOf(how) - HOWS.indexOf(existing.how);
@@ -1212,6 +1219,9 @@ async function main(): Promise<void> {
         const from =
             proposal?.from ?? match.from ?? published.from ?? fromArtistAnnotation(song.artist);
         const language = proposal?.language ?? match.language;
+        // A confirmed proposal means a person already decided this row is the song — even a
+        // `loose` how that only reached the right master through a truncated venue title.
+        const trusted = match.trusted || proposal !== undefined;
         return {
             postId: song.postId,
             id: song.id,
@@ -1220,6 +1230,7 @@ async function main(): Promise<void> {
             matched: true as const,
             ...rest,
             title,
+            trusted,
             ...(from === undefined ? {} : { from }),
             ...(language === undefined ? {} : { language }),
             ...(placeholder ? { placeholder: true as const, trusted: false } : {}),

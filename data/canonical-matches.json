@@ -164,13 +164,16 @@
       "artistMbids": [
         "79239441-bfd5-4981-a70c-55c3f15c1287"
       ],
-      "recording": "Secret (Some Bizarre mix)",
-      "recordingMbid": "cf287250-d5e7-4b95-adeb-de0178da5c4e",
-      "release": "Secret",
-      "score": 2264440,
-      "how": "loose",
+      "recording": "Secret (DiFrankz' 2003 Confidential Chill Out Mix)",
+      "recordingMbid": "6dcfc578-8bfa-4111-983d-1ee325f7b8e3",
+      "release": "Chill Out",
+      "score": 4474335,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Singular studio",
+      "venueArtist": "Madonna",
+      "proposalArtist": "Madonna",
+      "trusted": true,
       "title": "Secret"
     },
     {
@@ -738,18 +741,24 @@
       "artist": "Zuchero & Paul Young",
       "song": "Senza una donna",
       "matched": true,
-      "artistCredit": "Zucchero",
+      "artistCredit": "Zucchero & Paul Young",
       "artistMbids": [
-        "00ed154e-8679-42f0-8f42-e59bd7e185af"
+        "00ed154e-8679-42f0-8f42-e59bd7e185af",
+        "967002b0-58ef-4b22-a58c-fbc631ff695c"
       ],
       "recording": "Senza una donna",
-      "recordingMbid": "c4617ea7-6620-45b1-a83b-474cf95505b2",
-      "release": "Live at the Kremlin",
-      "score": 4516889,
-      "how": "title-first",
-      "rewrites": [],
+      "recordingMbid": "270f3699-17ef-421e-b7e1-98b470e38eae",
+      "release": "Senza una donna (Without a Woman)",
+      "score": 3596159,
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "proposed": "Zuchero typo; full duet",
+      "venueArtist": "Zuchero & Paul Young",
+      "proposalArtist": "Zucchero & Paul Young",
       "trusted": true,
-      "title": "Senza una donna"
+      "title": "Senza una donna (Without a Woman)"
     },
     {
       "postId": 49241,
@@ -1371,7 +1380,22 @@
       "id": 72,
       "artist": "Bill",
       "song": "She wants you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Billie Piper",
+      "artistMbids": [
+        "77e6c304-599d-46e0-8ba3-238207a43668"
+      ],
+      "recording": "She Wants You (Cevin Fisher Instinctive club mix)",
+      "recordingMbid": "503bbb0a-a0f0-4cba-8549-fdd3e650d4a9",
+      "release": "The Best Club Anthems 99 …Ever!",
+      "score": 5444118,
+      "how": "version",
+      "rewrites": [],
+      "proposed": "Bill truncated Billie",
+      "venueArtist": "Bill",
+      "proposalArtist": "Billie Piper",
+      "trusted": true,
+      "title": "She Wants You"
     },
     {
       "postId": 53249,
@@ -1920,16 +1944,20 @@
       "artist": "Elvis Presley feat. JXL Remix",
       "song": "A little less conversation",
       "matched": true,
-      "artistCredit": "Elvis Presley",
+      "artistCredit": "Elvis vs. JXL",
       "artistMbids": [
-        "01809552-4f87-45b0-afff-2c6f0730a3be"
+        "01809552-4f87-45b0-afff-2c6f0730a3be",
+        "eb3f70ce-f226-428f-8d7f-046c8dbfd98f"
       ],
       "recording": "A Little Less Conversation",
-      "recordingMbid": "eee65b9a-6806-4428-9700-f1e47887b1cb",
-      "release": "A Little Less Conversation",
-      "score": 2314800,
-      "how": "lead-scoped",
+      "recordingMbid": "6867bc47-f5a0-4df5-a7d0-df1c7b3b4f08",
+      "release": "Body Combat 15",
+      "score": 5466561,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "JXL remix",
+      "venueArtist": "Elvis Presley feat. JXL Remix",
+      "proposalArtist": "Elvis vs. JXL",
       "trusted": true,
       "title": "A Little Less Conversation"
     },
@@ -2442,16 +2470,16 @@
       "artistMbids": [
         "5c6f6348-15b5-4eb5-a8ae-d8a3ee3354a1"
       ],
-      "recording": "The Ketchup Song (Asereje) 92 BPM",
-      "recordingMbid": "510c8934-eea1-4369-8159-aa742b87697d",
-      "release": "Mastermix DJ Beats, Vol. 152",
-      "score": 5593928,
-      "how": "loose",
+      "recording": "The Ketchup Song",
+      "recordingMbid": "ae88a30d-7ca9-4d37-97c7-b8ee7629f008",
+      "release": "Grandmaster 2002",
+      "score": 4877126,
+      "how": "exact",
       "rewrites": [
         "title-article-added"
       ],
-      "trusted": false,
-      "title": "The Ketchup Song (Asereje) 92 BPM"
+      "trusted": true,
+      "title": "The Ketchup Song (Aserejé)"
     },
     {
       "postId": 53568,
@@ -3384,16 +3412,20 @@
       "artist": "Blue & Elton John",
       "song": "Sorry seems to be the hardest word",
       "matched": true,
-      "artistCredit": "Blue",
+      "artistCredit": "Blue feat. Elton John",
       "artistMbids": [
-        "9c79224c-70cd-4367-8d90-35ca99401b75"
+        "9c79224c-70cd-4367-8d90-35ca99401b75",
+        "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
       "recording": "Sorry Seems to Be the Hardest Word",
-      "recordingMbid": "09f82918-19ad-492c-aa90-73e03b391657",
-      "release": "One Love",
-      "score": 313782,
-      "how": "lead-scoped",
+      "recordingMbid": "8c4dee02-e11a-47ae-ae08-2f55b5177d04",
+      "release": "Sorry Seems to Be the Hardest Word",
+      "score": 2318605,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Blue & Elton John",
+      "proposalArtist": "Blue feat. Elton John",
       "trusted": true,
       "title": "Sorry Seems to Be the Hardest Word"
     },
@@ -3403,16 +3435,20 @@
       "artist": "Ashanti & Ja Rule",
       "song": "Happy",
       "matched": true,
-      "artistCredit": "Ashanti",
+      "artistCredit": "Ashanti feat. Ja Rule",
       "artistMbids": [
-        "a47ed6d5-480e-428c-8ce9-d7a6a571e857"
+        "a47ed6d5-480e-428c-8ce9-d7a6a571e857",
+        "b504f625-4ef6-4a5a-81e8-870a61e8dc9c"
       ],
       "recording": "Happy",
-      "recordingMbid": "410a54c4-7f79-4273-bc68-2c2fab67f9c4",
-      "release": "Ashanti",
-      "score": 304204,
-      "how": "lead-scoped",
+      "recordingMbid": "57d4a724-d10d-494c-8f84-bac83c9485f1",
+      "release": "Happy",
+      "score": 3498080,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both credits",
+      "venueArtist": "Ashanti & Ja Rule",
+      "proposalArtist": "Ashanti feat. Ja Rule",
       "trusted": true,
       "title": "Happy"
     },
@@ -4694,10 +4730,13 @@
       "recordingMbid": "d421ad38-1e23-486b-af3b-572c418a6118",
       "release": "Funky Dory",
       "score": 340380,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "Sweet Dreams My L.A. Ex"
+      "proposed": "Full title",
+      "venueArtist": "Rachel Stevens",
+      "proposalArtist": "Rachel Stevens",
+      "trusted": true,
+      "title": "Sweet Dreams My LA Ex"
     },
     {
       "postId": 52465,
@@ -5462,8 +5501,11 @@
       "recordingMbid": "230083f4-f768-4c4e-a899-18a4a6371ccd",
       "release": "Nights Are Forever",
       "score": 421203,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Full name",
+      "venueArtist": "England Dan & John Ford",
+      "proposalArtist": "England Dan & John Ford Coley",
       "trusted": true,
       "title": "I’d Really Love to See You Tonight"
     },
@@ -5741,7 +5783,22 @@
       "id": 300,
       "artist": "Roxette",
       "song": "Make it real",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Jets",
+      "artistMbids": [
+        "92a415d7-4478-4091-9f23-81b61b80b9b2"
+      ],
+      "recording": "Make It Real",
+      "recordingMbid": "bd47ce46-794e-49d8-aea1-bc7f9265183c",
+      "release": "Magic",
+      "score": 20217,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Jets not Roxette",
+      "venueArtist": "Roxette",
+      "proposalArtist": "The Jets",
+      "trusted": true,
+      "title": "Make It Real"
     },
     {
       "postId": 48370,
@@ -6368,7 +6425,22 @@
       "id": 334,
       "artist": "N Sync",
       "song": "Fallen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "*NSYNC",
+      "artistMbids": [
+        "603ba565-3967-4be1-931e-9cb945394e86"
+      ],
+      "recording": "Falling",
+      "recordingMbid": "f98a3da8-20d6-4a33-812b-8543ab1d3398",
+      "release": "Celebrity",
+      "score": 280088,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Fallen→Falling",
+      "venueArtist": "N Sync",
+      "proposalArtist": "*NSYNC",
+      "trusted": true,
+      "title": "Falling"
     },
     {
       "postId": 53220,
@@ -6394,7 +6466,22 @@
       "id": 336,
       "artist": "Michael W. Smith",
       "song": "I'll be here for you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Michael W. Smith",
+      "artistMbids": [
+        "1f444240-5397-4e63-a3e8-a3eac2aace32"
+      ],
+      "recording": "I Will Be Here for You",
+      "recordingMbid": "5637873b-fe19-4e3a-90bb-f5e6d29b5fd1",
+      "release": "Change Your World",
+      "score": 83932,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "I Will not I’ll",
+      "venueArtist": "Michael W. Smith",
+      "proposalArtist": "Michael W. Smith",
+      "trusted": true,
+      "title": "I Will Be Here for You"
     },
     {
       "postId": 51089,
@@ -8138,8 +8225,11 @@
       "recordingMbid": "4ed997f1-9fa0-4086-9a44-66b6023a8140",
       "release": "In Deep",
       "score": 202555,
-      "how": "lead-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "with Marc Anthony",
+      "venueArtist": "Tina Arena & Marc",
+      "proposalArtist": "Tina Arena",
       "trusted": true,
       "title": "I Want to Spend My Lifetime Loving You"
     },
@@ -8345,7 +8435,22 @@
       "id": 436,
       "artist": "Century Oldies",
       "song": "The voice of love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Johnny Nash",
+      "artistMbids": [
+        "0efaa6e3-3ef1-4481-bc01-aa3d5901dbdc"
+      ],
+      "recording": "The Voice of Love",
+      "recordingMbid": "0ed68eee-ab38-4183-980d-dab5c073f9c3",
+      "release": "As Time Goes By / The Voice of Love",
+      "score": 3515071,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Century Oldies category",
+      "venueArtist": "Century Oldies",
+      "proposalArtist": "Johnny Nash",
+      "trusted": true,
+      "title": "The Voice of Love"
     },
     {
       "postId": 51573,
@@ -8929,7 +9034,22 @@
       "id": 467,
       "artist": "Past Oldies",
       "song": "Here's a heart",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dave Dee, Dozy, Beaky, Mick & Tich",
+      "artistMbids": [
+        "dbd34abc-6c52-4850-bf73-7abaa146b621"
+      ],
+      "recording": "Here's a Heart",
+      "recordingMbid": "727420f2-f0d2-4b2f-8427-34d54a5ab8f6",
+      "release": "Dave Dee, Dozy, Beaky, Mick & Tich",
+      "score": 353985,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Past Oldies category",
+      "venueArtist": "Past Oldies",
+      "proposalArtist": "Dave Dee, Dozy, Beaky, Mick & Tich",
+      "trusted": true,
+      "title": "Here's a Heart"
     },
     {
       "postId": 48609,
@@ -9379,7 +9499,23 @@
       "id": 491,
       "artist": "Century Oldies",
       "song": "What is youth",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Nino Rota",
+      "artistMbids": [
+        "d52ac009-4ed5-4d01-97d5-8280bb7dd460"
+      ],
+      "recording": "What Is A Youth",
+      "recordingMbid": "8a577af2-5b52-4dbc-b0d3-bbe858d90009",
+      "release": "Romeo & Juliet",
+      "score": 4365804,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Film theme",
+      "from": "Romeo and Juliet",
+      "venueArtist": "Century Oldies",
+      "proposalArtist": "Nino Rota",
+      "trusted": true,
+      "title": "What Is a Youth"
     },
     {
       "postId": 48276,
@@ -9522,7 +9658,22 @@
       "id": 499,
       "artist": "Norieve R18",
       "song": "Just tell me you love me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "England Dan & John Ford Coley",
+      "artistMbids": [
+        "2bca31d7-0cba-45da-a8e6-3d6e3a0fa10f"
+      ],
+      "recording": "Just Tell Me You Love Me",
+      "recordingMbid": "9c518fa6-c1e1-46af-b3bc-607e60311661",
+      "release": "Forever Love Songs",
+      "score": 918538,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Norieve R18 not performer",
+      "venueArtist": "Norieve R18",
+      "proposalArtist": "England Dan & John Ford Coley",
+      "trusted": true,
+      "title": "Just Tell Me You Love Me"
     },
     {
       "postId": 48611,
@@ -10796,21 +10947,66 @@
       "id": 566,
       "artist": "Madonna",
       "song": "Here we are",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gloria Estefan",
+      "artistMbids": [
+        "becd8cc6-a453-4183-af88-dedaaec859a6"
+      ],
+      "recording": "Here We Are",
+      "recordingMbid": "82d4a15b-9c81-40a3-8d38-d5de770a0c4d",
+      "release": "Cuts Both Ways",
+      "score": 32742,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Gloria not Madonna",
+      "venueArtist": "Madonna",
+      "proposalArtist": "Gloria Estefan",
+      "trusted": true,
+      "title": "Here We Are"
     },
     {
       "postId": 51409,
       "id": 567,
       "artist": "Madonna",
       "song": "Reach",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gloria Estefan",
+      "artistMbids": [
+        "becd8cc6-a453-4183-af88-dedaaec859a6"
+      ],
+      "recording": "Reach",
+      "recordingMbid": "928f4534-a079-4a79-a840-172e0341dddd",
+      "release": "Destiny",
+      "score": 152397,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Gloria not Madonna",
+      "venueArtist": "Madonna",
+      "proposalArtist": "Gloria Estefan",
+      "trusted": true,
+      "title": "Reach"
     },
     {
       "postId": 51410,
       "id": 568,
       "artist": "Madonna",
       "song": "It's too late",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gloria Estefan",
+      "artistMbids": [
+        "becd8cc6-a453-4183-af88-dedaaec859a6"
+      ],
+      "recording": "It’s Too Late",
+      "recordingMbid": "154c1088-8827-4ddd-b754-c5e023cfda9e",
+      "release": "Hold Me, Thrill Me, Kiss Me",
+      "score": 110989,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Gloria not Madonna",
+      "venueArtist": "Madonna",
+      "proposalArtist": "Gloria Estefan",
+      "trusted": true,
+      "title": "It’s Too Late"
     },
     {
       "postId": 48178,
@@ -11796,7 +11992,22 @@
       "id": 620,
       "artist": "Mariah Carey",
       "song": "Lollipop",
-      "matched": false
+      "matched": true,
+      "artistCredit": "MIKA",
+      "artistMbids": [
+        "8a9ac1cb-faae-434e-8d60-b139a3707dfc"
+      ],
+      "recording": "Lollipop",
+      "recordingMbid": "69d1f492-2fef-41a2-b696-e4e7c49a0f3d",
+      "release": "Life In Cartoon Motion",
+      "score": 463557,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "MIKA not Mariah",
+      "venueArtist": "Mariah Carey",
+      "proposalArtist": "MIKA",
+      "trusted": true,
+      "title": "Lollipop"
     },
     {
       "postId": 48277,
@@ -12559,8 +12770,11 @@
       "recordingMbid": "c8242f46-0e27-4e8f-9fd4-c687338cdffa",
       "release": "Ska vi gå hem till dig...",
       "score": 2324036,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "feat Ayo",
+      "venueArtist": "Miio feat. Ayo",
+      "proposalArtist": "Miio",
       "trusted": true,
       "title": "Ska vi gå hem till dig..."
     },
@@ -13950,14 +14164,44 @@
       "id": 733,
       "artist": "Ola Svensson",
       "song": "Natalie",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ola",
+      "artistMbids": [
+        "6be1e020-559a-410b-9f03-1b429dd42b86"
+      ],
+      "recording": "Natalie",
+      "recordingMbid": "d1b2673a-d508-4fbf-b521-14c35128ccef",
+      "release": "Good Enough",
+      "score": 479886,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "MB credits Ola not Ola Svensson",
+      "venueArtist": "Ola Svensson",
+      "proposalArtist": "Ola",
+      "trusted": true,
+      "title": "Natalie"
     },
     {
       "postId": 51957,
       "id": 734,
       "artist": "Ola Svensson",
       "song": "Sos",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ola",
+      "artistMbids": [
+        "6be1e020-559a-410b-9f03-1b429dd42b86"
+      ],
+      "recording": "S.O.S.",
+      "recordingMbid": "b810ef54-567d-42c0-ab3a-98d0fb4a3182",
+      "release": "Good Enough",
+      "score": 479886,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "MB credits Ola",
+      "venueArtist": "Ola Svensson",
+      "proposalArtist": "Ola",
+      "trusted": true,
+      "title": "S.O.S."
     },
     {
       "postId": 52083,
@@ -14098,16 +14342,19 @@
       "artist": "Pink",
       "song": "So what",
       "matched": true,
-      "artistCredit": "Pink",
+      "artistCredit": "P!nk",
       "artistMbids": [
-        "8d53ba6e-968c-4f72-9571-4a4f3ed4b3f0"
+        "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
       "recording": "So What",
-      "recordingMbid": "85121de2-33f7-4881-a55d-e069ce31cd53",
-      "release": "100 tubes pour courir",
-      "score": 5542433,
+      "recordingMbid": "505f8d89-64af-4bcd-800a-e39cb91598a1",
+      "release": "Funhouse",
+      "score": 518813,
       "how": "exact",
       "rewrites": [],
+      "proposed": "P!nk not Pink namesake",
+      "venueArtist": "Pink",
+      "proposalArtist": "P!nk",
       "trusted": true,
       "title": "So What"
     },
@@ -14329,7 +14576,22 @@
       "id": 754,
       "artist": "Electric Boys",
       "song": "All lips and hips",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Electric Boys",
+      "artistMbids": [
+        "49cfde3d-2824-457e-997b-6955bae2db88"
+      ],
+      "recording": "All Lips ’n’ Hips",
+      "recordingMbid": "5538db50-24e9-43f7-9a74-0948cfc58c44",
+      "release": "Funk-O-Metal Carpet Ride",
+      "score": 38154,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical title",
+      "venueArtist": "Electric Boys",
+      "proposalArtist": "Electric Boys",
+      "trusted": true,
+      "title": "All Lips ’n’ Hips"
     },
     {
       "postId": 51128,
@@ -14604,7 +14866,23 @@
       "id": 769,
       "artist": "OnklP & Jaa9",
       "song": "Kjendisparty",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jaa9 & OnklP",
+      "artistMbids": [
+        "766dbbe6-3a6d-4323-a6a9-e51da0fc8535"
+      ],
+      "recording": "Kjendisparty",
+      "recordingMbid": "b0562404-4df8-449c-aa59-0a10c1cf3876",
+      "release": "Sjåre brymæ",
+      "score": 371037,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical order",
+      "language": "nor",
+      "venueArtist": "OnklP & Jaa9",
+      "proposalArtist": "Jaa9 & OnklP",
+      "trusted": true,
+      "title": "Kjendisparty"
     },
     {
       "postId": 48522,
@@ -14853,8 +15131,11 @@
       "recordingMbid": "951d8508-5c68-4ba3-8207-921182f9aaff",
       "release": "Bæ to da Bone",
       "score": 397116,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Canonical duo",
+      "venueArtist": "Are & Odin",
+      "proposalArtist": "Are og Odin",
       "trusted": true,
       "title": "Klapp klapp"
     },
@@ -14882,7 +15163,23 @@
       "id": 784,
       "artist": "Inger Lise Rypdal",
       "song": "Nyorelsket 70 År",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Inger Lise Rypdal",
+      "artistMbids": [
+        "9d83a321-e3b6-4834-b4a4-067112a49a37"
+      ],
+      "recording": "Nyforelsket 70 år",
+      "recordingMbid": "c89fd7b0-7c6e-4a9e-84e3-2990fb54cb1d",
+      "release": "Fra 4 til 70",
+      "score": 869426,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Nyorelsket typo",
+      "language": "nor",
+      "venueArtist": "Inger Lise Rypdal",
+      "proposalArtist": "Inger Lise Rypdal",
+      "trusted": true,
+      "title": "Nyforelsket 70 år"
     },
     {
       "postId": 53332,
@@ -15136,7 +15433,22 @@
       "id": 798,
       "artist": "Flamingokvintetten",
       "song": "Sexton år idag",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Flamingokvintetten",
+      "artistMbids": [
+        "a128750d-bdb4-42b9-93f0-5c124070def2"
+      ],
+      "recording": "Hon är sexton år idag",
+      "recordingMbid": "17206d71-28a2-4d49-a274-9a571319aa04",
+      "release": "Da Capo",
+      "score": 4755092,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue omitted Hon är",
+      "venueArtist": "Flamingokvintetten",
+      "proposalArtist": "Flamingokvintetten",
+      "trusted": true,
+      "title": "Hon är sexton år idag"
     },
     {
       "postId": 51144,
@@ -15438,8 +15750,11 @@
       "recordingMbid": "3bbdc2c8-b95a-4d66-81aa-ce4bf4bea2c2",
       "release": "Svenska Karaokefabriken Ett - Svenska Schlager 2002",
       "score": 5355079,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Trio Melodifestivalen",
+      "venueArtist": "Kikki, Bettan och Lotta",
+      "proposalArtist": "Kikki, Bettan & Lotta",
       "trusted": true,
       "title": "Vem e det du vill ha"
     },
@@ -15486,7 +15801,22 @@
       "id": 817,
       "artist": "Son of a plumber",
       "song": "C'mon/Jo-Anna Says",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Son of a Plumber",
+      "artistMbids": [
+        "843238f1-ecfa-4a26-9e47-ce52e4ea1e31"
+      ],
+      "recording": "Jo‐Anna Says",
+      "recordingMbid": "c24f967a-8367-4689-8aa9-4e6861daa20a",
+      "release": "Son of a Plumber",
+      "score": 408343,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Per Gessle project; venue filed C'mon/Jo-Anna as medley",
+      "venueArtist": "Son of a plumber",
+      "proposalArtist": "Son of a Plumber",
+      "trusted": true,
+      "title": "Jo-Anna Says"
     },
     {
       "postId": 52680,
@@ -16253,7 +16583,22 @@
       "id": 858,
       "artist": "Rihanna",
       "song": "Oh baby",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rhianna",
+      "artistMbids": [
+        "db36a76f-4cdf-43ac-8cd0-5e48092d2bae"
+      ],
+      "recording": "Oh Baby",
+      "recordingMbid": "8e673efb-869c-4054-8114-15496c232a58",
+      "release": "Get On",
+      "score": 309692,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "British Rhianna not Rihanna",
+      "venueArtist": "Rihanna",
+      "proposalArtist": "Rhianna",
+      "trusted": true,
+      "title": "Oh Baby"
     },
     {
       "postId": 52593,
@@ -17125,7 +17470,22 @@
       "id": 904,
       "artist": "Sarah Dawn Finer",
       "song": "I'm moving on",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sarah Dawn Finer",
+      "artistMbids": [
+        "c24216ce-6762-4974-94cd-48024377d543"
+      ],
+      "recording": "Moving On",
+      "recordingMbid": "a86c4b5e-2989-4689-ab76-01b3ef04d771",
+      "release": "Moving On",
+      "score": 551882,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Drop I’m",
+      "venueArtist": "Sarah Dawn Finer",
+      "proposalArtist": "Sarah Dawn Finer",
+      "trusted": true,
+      "title": "Moving On"
     },
     {
       "postId": 47845,
@@ -17457,14 +17817,44 @@
       "id": 922,
       "artist": "Fronda",
       "song": "Ingen mår så bra som jag",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sebastian Fronda",
+      "artistMbids": [
+        "8f067041-871c-496c-8fd7-fc577b563f88"
+      ],
+      "recording": "Ingen mår så bra som jag",
+      "recordingMbid": "49763bdb-f471-411d-b9ca-ac07c0a4d3e4",
+      "release": "Melodifestivalen 2008",
+      "score": 5498611,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full artist credit",
+      "venueArtist": "Fronda",
+      "proposalArtist": "Sebastian Fronda",
+      "trusted": true,
+      "title": "Ingen mår så bra som jag"
     },
     {
       "postId": 51958,
       "id": 923,
       "artist": "Ola Svensson",
       "song": "Love in stereo",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ola",
+      "artistMbids": [
+        "6be1e020-559a-410b-9f03-1b429dd42b86"
+      ],
+      "recording": "Love in Stereo",
+      "recordingMbid": "3c6ad088-e505-4a03-a664-af92d24759f1",
+      "release": "Good Enough (The Feelgood Edition)",
+      "score": 500087,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "MB credits Ola",
+      "venueArtist": "Ola Svensson",
+      "proposalArtist": "Ola",
+      "trusted": true,
+      "title": "Love in Stereo"
     },
     {
       "postId": 53104,
@@ -17585,14 +17975,44 @@
       "id": 930,
       "artist": "Sebastian",
       "song": "Vågar du vågar jag",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sanna Nielsen",
+      "artistMbids": [
+        "cc253e41-2b61-4853-aea2-cf5633645205"
+      ],
+      "recording": "Vågar du, vågar jag",
+      "recordingMbid": "17146657-70a5-4458-a702-9b29ab6c4494",
+      "release": "Sanna 11-22",
+      "score": 466181,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swapped with Sebastian",
+      "venueArtist": "Sebastian",
+      "proposalArtist": "Sanna Nielsen",
+      "trusted": true,
+      "title": "Vågar du, vågar jag"
     },
     {
       "postId": 52623,
       "id": 931,
       "artist": "Sanna Nielsen",
       "song": "When the night comes falling",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Sebastian Karlsson",
+      "artistMbids": [
+        "52c0151f-87ae-455b-94e2-b1a66c0169aa"
+      ],
+      "recording": "When the Night Comes Falling",
+      "recordingMbid": "1c8a733f-55c9-458f-9640-23bcfa7f2f70",
+      "release": "The Vintage Virgin",
+      "score": 465647,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Sebastian; swapped with Sanna",
+      "venueArtist": "Sanna Nielsen",
+      "proposalArtist": "Sebastian Karlsson",
+      "trusted": true,
+      "title": "When the Night Comes Falling"
     },
     {
       "postId": 47995,
@@ -17810,7 +18230,22 @@
       "id": 943,
       "artist": "Kikki Danielsson",
       "song": "Idag och imorgon",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kikki Danielsson",
+      "artistMbids": [
+        "52d0c873-11b8-4868-8771-09c44bcc1933"
+      ],
+      "recording": "Idag & imorgon",
+      "recordingMbid": "d8c37bf3-867a-4e11-a555-42275eae12c4",
+      "release": "Kikkis bästa",
+      "score": 4807764,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Ampersand",
+      "venueArtist": "Kikki Danielsson",
+      "proposalArtist": "Kikki Danielsson",
+      "trusted": true,
+      "title": "Idag & imorgon"
     },
     {
       "postId": 51546,
@@ -18822,7 +19257,23 @@
       "id": 996,
       "artist": "Eriksson & Glennmark",
       "song": "Upp över mina öron",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Orup & Anders Glenmark",
+      "artistMbids": [
+        "d30ada67-1b32-4b70-a07e-0f9aaaa345dc",
+        "91eaa91f-de20-48fa-ab6e-749039187463"
+      ],
+      "recording": "Upp över mina öron",
+      "recordingMbid": "416399ce-8728-49eb-bd94-d566e30c75e4",
+      "release": "2",
+      "score": 31987,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Correct credit",
+      "venueArtist": "Eriksson & Glennmark",
+      "proposalArtist": "Orup & Anders Glenmark",
+      "trusted": true,
+      "title": "Upp över mina öron"
     },
     {
       "postId": 47996,
@@ -19057,7 +19508,22 @@
       "id": 1009,
       "artist": "Roger Pontare",
       "song": "Vindarna viskar mitt namn",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Roger Pontare",
+      "artistMbids": [
+        "7de38172-2c22-4ff2-bf11-c3c62fb058e6"
+      ],
+      "recording": "När Vindarna Viskar Mitt Namn",
+      "recordingMbid": "a5deeda7-58ab-4bdc-b422-f7c184fb2d6a",
+      "release": "I Vargens Spår",
+      "score": 2202040,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue omitted När",
+      "venueArtist": "Roger Pontare",
+      "proposalArtist": "Roger Pontare",
+      "trusted": true,
+      "title": "När vindarna viskar mitt namn"
     },
     {
       "postId": 51857,
@@ -19121,7 +19587,23 @@
       "id": 1013,
       "artist": "Rankarna",
       "song": "Det är inte så lätt att va ödmjuk",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mats Rådberg & Rankarna",
+      "artistMbids": [
+        "d7191e83-f93f-42db-9287-e337d82fe4cb",
+        "cae9ded3-7238-4071-87ce-f47d3690edf1"
+      ],
+      "recording": "Det är inte lätt att vara ödmjuk",
+      "recordingMbid": "d17ffff2-76d8-4725-8d78-2d971c20b35f",
+      "release": "Hundra Procent",
+      "score": 4769955,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full credit",
+      "venueArtist": "Rankarna",
+      "proposalArtist": "Mats Rådberg & Rankarna",
+      "trusted": true,
+      "title": "Det är inte lätt att vara ödmjuk"
     },
     {
       "postId": 48378,
@@ -19271,7 +19753,7 @@
       "recordingMbid": "7439787d-e35d-467a-b829-cd09495e659b",
       "release": "Take Me to the Country",
       "score": 1989,
-      "how": "title-first",
+      "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
       "title": "Peta in en pinne i brasan"
@@ -19606,7 +20088,22 @@
       "id": 1039,
       "artist": "David Shutrick",
       "song": "Blå container",
-      "matched": false
+      "matched": true,
+      "artistCredit": "David Shutrick",
+      "artistMbids": [
+        "fde0994a-fb18-4ea9-9250-f1528a3af076"
+      ],
+      "recording": "Container",
+      "recordingMbid": "3b0bea8b-a022-46d9-89cb-4e06ccd196ed",
+      "release": "Finland",
+      "score": 82295,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue added Blå",
+      "venueArtist": "David Shutrick",
+      "proposalArtist": "David Shutrick",
+      "trusted": true,
+      "title": "Container"
     },
     {
       "postId": 48001,
@@ -20092,14 +20589,44 @@
       "id": 1065,
       "artist": "Födelsedagssång",
       "song": "Ja må du leva",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Louise Andersson Bodin",
+      "artistMbids": [
+        "a4895458-e22b-4ea5-aaaf-7e9ebcfd6f22"
+      ],
+      "recording": "Ja Må Du Leva",
+      "recordingMbid": "8c985eef-63b0-44a9-b982-c871a3ab57df",
+      "release": "Ja Må Du Leva",
+      "score": 3260292,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish birthday song",
+      "venueArtist": "Födelsedagssång",
+      "proposalArtist": "Louise Andersson Bodin",
+      "trusted": true,
+      "title": "Ja Må Du Leva"
     },
     {
       "postId": 50790,
       "id": 1066,
       "artist": "Jonas Gardell",
       "song": "Aldrig skall jag sluta älska dig",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jonas Gardell",
+      "artistMbids": [
+        "6e398c9d-83d5-41fe-9fd7-92cf4de61015"
+      ],
+      "recording": "Aldrig ska jag sluta älska dig",
+      "recordingMbid": "0f2e51d8-3fb0-4e6c-b24c-caf70888443a",
+      "release": "Nästan vackra",
+      "score": 1720343,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "ska not skall",
+      "venueArtist": "Jonas Gardell",
+      "proposalArtist": "Jonas Gardell",
+      "trusted": true,
+      "title": "Aldrig ska jag sluta älska dig"
     },
     {
       "postId": 49192,
@@ -20137,8 +20664,11 @@
       "recordingMbid": "8ec7ca45-8c3a-4bb5-b1fa-10a1d7ea03b3",
       "release": "Hum hum från Humlegården",
       "score": 3380456,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "with Hovet",
+      "venueArtist": "Lars Winnerbäck & Hovet",
+      "proposalArtist": "Lars Winnerbäck",
       "trusted": true,
       "title": "Hum hum från Humlegården"
     },
@@ -20242,7 +20772,22 @@
       "id": 1074,
       "artist": "Joakim Thåström",
       "song": "Märk hur vår skugga",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Thåström",
+      "artistMbids": [
+        "dc21a218-daca-4ada-95c6-746cac1560e8"
+      ],
+      "recording": "Märk Hur Vår Skugga",
+      "recordingMbid": "999d3046-c2df-4ba6-9ae3-2a7553c57390",
+      "release": "Zinken",
+      "score": 524727,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical solo credit",
+      "venueArtist": "Joakim Thåström",
+      "proposalArtist": "Thåström",
+      "trusted": true,
+      "title": "Märk Hur Vår Skugga"
     },
     {
       "postId": 48780,
@@ -20626,9 +21171,12 @@
       "recordingMbid": "945e970d-6658-4d3b-ab89-7332057e1638",
       "release": "ABBA",
       "score": 9305,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Fifth I Do",
+      "venueArtist": "Abba",
+      "proposalArtist": "ABBA",
+      "trusted": true,
       "title": "I Do, I Do, I Do, I Do, I Do"
     },
     {
@@ -23540,7 +24088,23 @@
       "id": 1246,
       "artist": "Hello Dolly",
       "song": "Don't rain on my parade",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Barbra Streisand",
+      "artistMbids": [
+        "56cd15a1-0d74-438b-8244-c96ffe1cae03"
+      ],
+      "recording": "Don’t Rain on My Parade",
+      "recordingMbid": "6d966dc2-8577-4743-b3fb-3ca1ee9b1042",
+      "release": "Barbra Streisand … and Other Musical Instruments",
+      "score": 33717,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Funny Girl not Hello Dolly",
+      "from": "Funny Girl",
+      "venueArtist": "Hello Dolly",
+      "proposalArtist": "Barbra Streisand",
+      "trusted": true,
+      "title": "Don’t Rain on My Parade"
     },
     {
       "postId": 50767,
@@ -25637,7 +26201,22 @@
       "id": 1357,
       "artist": "Fredric Weatherly",
       "song": "Danny boy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Elvis Presley",
+      "artistMbids": [
+        "01809552-4f87-45b0-afff-2c6f0730a3be"
+      ],
+      "recording": "Danny Boy",
+      "recordingMbid": "037ef856-caca-4b12-af16-0fee72c4f34f",
+      "release": "From Elvis Presley Boulevard, Memphis, Tennessee",
+      "score": 105401,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Weatherly wrote it; Elvis karaoke standard",
+      "venueArtist": "Fredric Weatherly",
+      "proposalArtist": "Elvis Presley",
+      "trusted": true,
+      "title": "Danny Boy"
     },
     {
       "postId": 51728,
@@ -25878,18 +26457,21 @@
       "artist": "Blues Brothers",
       "song": "Everybody needs somebody",
       "matched": true,
-      "artistCredit": "Blues Brothers",
+      "artistCredit": "The Blues Brothers",
       "artistMbids": [
-        "7252abc2-dfc8-4aa6-889f-2d168b265403"
+        "165d17a9-c8aa-41bf-9db2-adefce5cefd9"
       ],
-      "recording": "Everybody Needs Somebody",
-      "recordingMbid": "e49d4e77-bc15-4cb9-8530-4ac753bcde8f",
-      "release": "Radio Contact Top 15 (88-89)",
-      "score": 5420980,
+      "recording": "Everybody Needs Somebody to Love",
+      "recordingMbid": "b50f2ca6-36c7-4485-9fa3-c463f943fcd8",
+      "release": "‘TPH Production’ Perform a Tribute to the Blues Brothers",
+      "score": 1026718,
       "how": "exact",
       "rewrites": [],
+      "proposed": "Film band not namesake",
+      "venueArtist": "Blues Brothers",
+      "proposalArtist": "The Blues Brothers",
       "trusted": true,
-      "title": "Everybody Needs Somebody"
+      "title": "Everybody Needs Somebody to Love"
     },
     {
       "postId": 53076,
@@ -26814,7 +27396,22 @@
       "id": 1419,
       "artist": "Deniece Williams",
       "song": "Let's hear it from the boy",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Deniece Williams",
+      "artistMbids": [
+        "f28dc56d-0bd4-485f-92a2-5c3e0e9b57cd"
+      ],
+      "recording": "Let’s Hear It for the Boy",
+      "recordingMbid": "7ebc2426-9419-4555-a865-e665998d76fa",
+      "release": "Let’s Hear It for the Boy",
+      "score": 615143,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Correct preposition",
+      "venueArtist": "Deniece Williams",
+      "proposalArtist": "Deniece Williams",
+      "trusted": true,
+      "title": "Let’s Hear It for the Boy"
     },
     {
       "postId": 49265,
@@ -27060,11 +27657,12 @@
       "recordingMbid": "a92bb77b-3815-4c52-ae6b-fd0ec2053674",
       "release": "The Gold Experience",
       "score": 129020,
-      "how": "loose",
-      "rewrites": [
-        "title-article-added"
-      ],
-      "trusted": false,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Prince",
+      "proposalArtist": "Prince",
+      "trusted": true,
       "title": "The Most Beautiful Girl in the World"
     },
     {
@@ -27556,14 +28154,17 @@
       "artistMbids": [
         "db4624cf-0e44-481e-a9dc-2142b833ec2f"
       ],
-      "recording": "Something Stupid",
-      "recordingMbid": "1e957ec3-99dd-452c-a4e0-8cb714b67e8f",
-      "release": "Swing When You’re Winning (piano/vocal/guitar)",
-      "score": 329979,
-      "how": "lead-scoped",
+      "recording": "Somethin’ Stupid",
+      "recordingMbid": "fcb5ac36-93e5-40f6-83cf-6d2d0e4f9f3b",
+      "release": "Swing When You’re Winning - Alto Saxophone",
+      "score": 911888,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "with Nicole Kidman",
+      "venueArtist": "Robbie Williams & Nicole Kidman",
+      "proposalArtist": "Robbie Williams",
       "trusted": true,
-      "title": "Something Stupid"
+      "title": "Somethin’ Stupid"
     },
     {
       "postId": 47858,
@@ -31520,7 +32121,22 @@
       "id": 1665,
       "artist": "No Doubt",
       "song": "Come on Eileen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Dexys Midnight Runners",
+      "artistMbids": [
+        "ccce2053-7007-4c36-b1e7-f8fcf5023a12"
+      ],
+      "recording": "Come On Eileen",
+      "recordingMbid": "91447d49-f5bc-45eb-a943-a820b8706b26",
+      "release": "Too-Rye-Ay",
+      "score": 166577,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Not No Doubt",
+      "venueArtist": "No Doubt",
+      "proposalArtist": "Dexys Midnight Runners",
+      "trusted": true,
+      "title": "Come On Eileen"
     },
     {
       "postId": 53452,
@@ -32703,14 +33319,18 @@
       "matched": true,
       "artistCredit": "Steve Harley & Cockney Rebel",
       "artistMbids": [
-        "9a07b4ae-7c2f-4473-b019-c63c3d5db45c"
+        "58177b75-d725-45e1-9b35-df18f1fd15c2",
+        "827dec20-90f0-4ef5-90a0-af0a7095782d"
       ],
-      "recording": "Make Me Smile (Come Up and See Me)",
-      "recordingMbid": "67f80f32-4ae5-4477-9b63-915380739e4d",
-      "release": "The Best Years of Our Lives",
-      "score": 67096,
-      "how": "title-first",
+      "recording": "Make Me Smile (Come up and See Me) - 2014 Remaster",
+      "recordingMbid": "2709bac4-6f9d-4c51-9c05-95109fd84fb3",
+      "release": "Best Dad In The World Ever",
+      "score": 5559914,
+      "how": "loose",
       "rewrites": [],
+      "proposed": "Full band",
+      "venueArtist": "Steve Harley & Cockney Rebe",
+      "proposalArtist": "Steve Harley & Cockney Rebel",
       "trusted": true,
       "title": "Make Me Smile (Come Up and See Me)"
     },
@@ -32970,7 +33590,22 @@
       "id": 1741,
       "artist": "Jimmy Rogers",
       "song": "English country garden",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jimmie Rodgers",
+      "artistMbids": [
+        "d5bc8537-5bc5-4e37-915a-008c88436092"
+      ],
+      "recording": "English Country Garden",
+      "recordingMbid": "1226a31c-9d31-4a20-a5d7-509f86616e8e",
+      "release": "The Folk Song World of Jimmie Rodgers",
+      "score": 1902391,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Jimmie not Jimmy",
+      "venueArtist": "Jimmy Rogers",
+      "proposalArtist": "Jimmie Rodgers",
+      "trusted": true,
+      "title": "English Country Garden"
     },
     {
       "postId": 50072,
@@ -33903,7 +34538,22 @@
       "id": 1790,
       "artist": "Neil Diamond",
       "song": "Grass won't pay no mind",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Neil Diamond",
+      "artistMbids": [
+        "a42d3fd5-55de-4206-86c3-4fbb5404018f"
+      ],
+      "recording": "And the Grass Won’t Pay No Mind",
+      "recordingMbid": "ae42dc65-c79e-427e-b04f-44983d063ad8",
+      "release": "Sweet Caroline",
+      "score": 45738,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Neil Diamond",
+      "proposalArtist": "Neil Diamond",
+      "trusted": true,
+      "title": "And the Grass Won’t Pay No Mind"
     },
     {
       "postId": 52091,
@@ -33957,9 +34607,12 @@
       "recordingMbid": "f47692fe-3d60-4b26-be35-f51e0329a7e7",
       "release": "30 Big Hits of the 60s",
       "score": 4985065,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Jeans",
+      "venueArtist": "Bobby Vee",
+      "proposalArtist": "Bobby Vee",
+      "trusted": true,
       "title": "Venus in Blue Jeans"
     },
     {
@@ -34026,14 +34679,44 @@
       "id": 1797,
       "artist": "Gracie Fields",
       "song": "Wish me good luck as you wave me goodbye",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Gracie Fields",
+      "artistMbids": [
+        "e4a0e9ed-a318-4396-9f23-1d68ec924241"
+      ],
+      "recording": "Wish Me Luck As You Wave Me Goodbye",
+      "recordingMbid": "08dfedf2-0a57-4572-a5d1-f7041a97aa49",
+      "release": "Sally and Other Favourites",
+      "score": 143200,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Correct title",
+      "venueArtist": "Gracie Fields",
+      "proposalArtist": "Gracie Fields",
+      "trusted": true,
+      "title": "Wish Me Luck As You Wave Me Goodbye"
     },
     {
       "postId": 51604,
       "id": 1798,
       "artist": "Merseybeats",
       "song": "Wishin' and a hopin'",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Merseybeats",
+      "artistMbids": [
+        "43c4fe8f-84d8-4922-835f-ffeed8a1d7b4"
+      ],
+      "recording": "Wishin’ and Hopin’ (rerecorded)",
+      "recordingMbid": "bbd4574f-5dd0-43f7-b8e0-8aa6758c91d5",
+      "release": "100 Hits of the Swingin’ Sixties",
+      "score": 5596041,
+      "how": "version",
+      "rewrites": [],
+      "proposed": "Canonical",
+      "venueArtist": "Merseybeats",
+      "proposalArtist": "The Merseybeats",
+      "trusted": true,
+      "title": "Wishin’ and Hopin’"
     },
     {
       "postId": 49568,
@@ -34596,7 +35279,22 @@
       "id": 1828,
       "artist": "Britney Spears",
       "song": "What you see is what you get",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Britney Spears",
+      "artistMbids": [
+        "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
+      ],
+      "recording": "What U See (Is What U Get)",
+      "recordingMbid": "f19b823b-686a-482d-8514-c8dd3084d79d",
+      "release": "Oops!…I Did It Again",
+      "score": 250709,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical",
+      "venueArtist": "Britney Spears",
+      "proposalArtist": "Britney Spears",
+      "trusted": true,
+      "title": "What U See (Is What U Get)"
     },
     {
       "postId": 48620,
@@ -34755,7 +35453,22 @@
       "id": 1837,
       "artist": "Samantha Mumba",
       "song": "Body to body",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Samantha Mumba",
+      "artistMbids": [
+        "7d137f81-27a6-4c65-bf78-186116368860"
+      ],
+      "recording": "Body II Body",
+      "recordingMbid": "deaebd5a-df6e-4a8b-9771-a1ebd7011aa8",
+      "release": "Gotta Tell You",
+      "score": 266961,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Roman numerals",
+      "venueArtist": "Samantha Mumba",
+      "proposalArtist": "Samantha Mumba",
+      "trusted": true,
+      "title": "Body II Body"
     },
     {
       "postId": 52616,
@@ -35598,8 +36311,11 @@
       "recordingMbid": "88500537-26fe-4677-874e-a329f01df0cd",
       "release": "Northern Star",
       "score": 228626,
-      "how": "artist-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Solo not Spice Girls",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Melanie C",
       "trusted": true,
       "title": "Ga Ga"
     },
@@ -35789,7 +36505,22 @@
       "id": 1888,
       "artist": "Louis Armstrong",
       "song": "A kiss to build the dream",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Louis Armstrong",
+      "artistMbids": [
+        "eea8a864-fcda-4602-9569-38ab446decd6"
+      ],
+      "recording": "A Kiss to Build a Dream On",
+      "recordingMbid": "41f42fbc-808e-4266-9811-576f8aad2fd3",
+      "release": "Hello, Dolly!",
+      "score": 111971,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Omitted On",
+      "venueArtist": "Louis Armstrong",
+      "proposalArtist": "Louis Armstrong",
+      "trusted": true,
+      "title": "A Kiss to Build a Dream On"
     },
     {
       "postId": 50683,
@@ -36085,7 +36816,22 @@
       "id": 1904,
       "artist": "Engelbert Humperdinck",
       "song": "Am I easy to forget",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Engelbert Humperdinck",
+      "artistMbids": [
+        "62c28bc0-f696-4c50-8e54-5f8e9120bdb8"
+      ],
+      "recording": "Am I That Easy to Forget",
+      "recordingMbid": "a64712b8-46a1-41df-80cc-e2615c99258a",
+      "release": "Engelbert",
+      "score": 257398,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Omitted That",
+      "venueArtist": "Engelbert Humperdinck",
+      "proposalArtist": "Engelbert Humperdinck",
+      "trusted": true,
+      "title": "Am I That Easy to Forget"
     },
     {
       "postId": 49815,
@@ -36738,7 +37484,22 @@
       "id": 1939,
       "artist": "Bon Jovi",
       "song": "Living in the sun",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bon Jovi",
+      "artistMbids": [
+        "5dcdb5eb-cb72-4e6e-9e63-b7bace604965"
+      ],
+      "recording": "Living in Sin",
+      "recordingMbid": "24551ec3-083d-4dfb-87f1-c013d4ca0d11",
+      "release": "New Jersey",
+      "score": 23275,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Sun→Sin typo",
+      "venueArtist": "Bon Jovi",
+      "proposalArtist": "Bon Jovi",
+      "trusted": true,
+      "title": "Living in Sin"
     },
     {
       "postId": 48539,
@@ -37319,42 +38080,132 @@
       "id": 1970,
       "artist": "Don Williams",
       "song": "Gypsy woman",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Don Williams",
+      "artistMbids": [
+        "741bd697-e595-4e47-a97d-688b4b9e0df2"
+      ],
+      "recording": "I Recall a Gypsy Woman",
+      "recordingMbid": "4927f914-4f34-4126-85d9-8d23f4f745eb",
+      "release": "Country Legends",
+      "score": 916488,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Don Williams",
+      "proposalArtist": "Don Williams",
+      "trusted": true,
+      "title": "I Recall a Gypsy Woman"
     },
     {
       "postId": 50840,
       "id": 1971,
       "artist": "Julsång",
       "song": "Bjällerklang",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Bjällerklang",
+      "recordingMbid": "f4464614-90c6-459d-958f-15d1bfc255b3",
+      "release": "Jul i Betlehem",
+      "score": 342808,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Bjällerklang"
     },
     {
       "postId": 50841,
       "id": 1972,
       "artist": "Julsång",
       "song": "Gläns över sjö och strand",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Gläns över sjö och strand",
+      "recordingMbid": "7e5eb227-1f87-42fe-aa78-6f147bb8b4d5",
+      "release": "Jul i Betlehem",
+      "score": 230283,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Gläns över sjö och strand"
     },
     {
       "postId": 50842,
       "id": 1973,
       "artist": "Julsång",
       "song": "Hej mitt vinterland",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Hej mitt vinterland",
+      "recordingMbid": "8d8c929c-bd89-4677-a8f9-c9efd54585c9",
+      "release": "Jul i Betlehem",
+      "score": 342808,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Hej mitt vinterland"
     },
     {
       "postId": 50843,
       "id": 1974,
       "artist": "Julsång",
       "song": "Jul igen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mora Träsk",
+      "artistMbids": [
+        "17c75486-3253-4359-a5a1-baec06650ebd"
+      ],
+      "recording": "Nu är det jul igen",
+      "recordingMbid": "b5d5e696-cf96-48fd-9c18-0530f495fe74",
+      "release": "Jul Tajm",
+      "score": 717186,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue shortened the title",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Mora Träsk",
+      "trusted": true,
+      "title": "Nu är det jul igen"
     },
     {
       "postId": 50844,
       "id": 1975,
       "artist": "Julsång",
       "song": "Jul jul strålande jul",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Jul, jul strålande jul",
+      "recordingMbid": "157bd602-3e29-4738-9f9b-1002d9c89bdc",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Jul, jul strålande jul"
     },
     {
       "postId": 50184,
@@ -37380,70 +38231,220 @@
       "id": 1977,
       "artist": "Julsång",
       "song": "Lusse lelle",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bjursåsflickorna",
+      "artistMbids": [
+        "07a82dcb-3e0a-4ec8-aaab-3b0d7bd20501"
+      ],
+      "recording": "Lusse Lelle",
+      "recordingMbid": "d1d88276-26a7-4878-add5-e037e0107a67",
+      "release": "Våra Mest Älskade Julsånger",
+      "score": 5332165,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Traditional Swedish recording",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Bjursåsflickorna",
+      "trusted": true,
+      "title": "Lusse Lelle"
     },
     {
       "postId": 50846,
       "id": 1978,
       "artist": "Julsång",
       "song": "Jul medley",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Playtones",
+      "artistMbids": [
+        "2583b024-b1f2-46b7-9259-701305a7a070"
+      ],
+      "recording": "Julmedley",
+      "recordingMbid": "e7050ad7-f062-4922-ad38-2358a9d31171",
+      "release": "Rock'n'Roll Christmas Party",
+      "score": 592130,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Julmedley recording",
+      "venueArtist": "Julsång",
+      "proposalArtist": "The Playtones",
+      "trusted": true,
+      "title": "Julmedley"
     },
     {
       "postId": 50847,
       "id": 1979,
       "artist": "Julsång",
       "song": "Nu tändas tusen juleljus",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Nu tändas tusen juleljus",
+      "recordingMbid": "b6716924-568a-49c8-80fc-85f6c4201fe4",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Nu tändas tusen juleljus"
     },
     {
       "postId": 50848,
       "id": 1980,
       "artist": "Julsång",
       "song": "När det lider mot jul",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "När det lider mot jul",
+      "recordingMbid": "23cada1d-29dd-4baf-960a-e515ed370a25",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "När det lider mot jul"
     },
     {
       "postId": 50849,
       "id": 1981,
       "artist": "Julsång",
       "song": "När juldagsmorgon glimmar",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "När juldagsmorgon glimmar",
+      "recordingMbid": "3664789f-4c09-472d-ad26-b408cf4693dd",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "När juldagsmorgon glimmar"
     },
     {
       "postId": 50850,
       "id": 1982,
       "artist": "Julsång",
       "song": "O helga natt",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "O helga natt",
+      "recordingMbid": "692c588c-0834-41fc-a093-d96bfa52d316",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "O helga natt"
     },
     {
       "postId": 50851,
       "id": 1983,
       "artist": "Julsång",
       "song": "Sankta Lucia",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Real Group",
+      "artistMbids": [
+        "52ec4b88-d05b-48a0-8191-98d005fccbb3"
+      ],
+      "recording": "Sankta Lucia",
+      "recordingMbid": "8a5c66de-1990-405b-bdba-488a2166e7ba",
+      "release": "En riktig jul",
+      "score": 188907,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas recording",
+      "venueArtist": "Julsång",
+      "proposalArtist": "The Real Group",
+      "trusted": true,
+      "title": "Sankta Lucia"
     },
     {
       "postId": 50852,
       "id": 1984,
       "artist": "Julsång",
       "song": "Ser du stjärnan i det blå",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Tommy Körberg",
+      "artistMbids": [
+        "3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0"
+      ],
+      "recording": "Ser du stjärnan I det blå",
+      "recordingMbid": "48e8177a-6e7f-40a9-af25-a854a619ae7f",
+      "release": "Julen är här",
+      "score": 99833,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas recording",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Tommy Körberg",
+      "trusted": true,
+      "title": "Ser du stjärnan i det blå"
     },
     {
       "postId": 50853,
       "id": 1985,
       "artist": "Julsång",
       "song": "Staffansvisan",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Leif \"Loket\" Olsson",
+      "artistMbids": [
+        "029a7eb4-a9cb-4699-bc77-5c24d8557500"
+      ],
+      "recording": "Staffansvisan",
+      "recordingMbid": "8c4146ba-5166-41e2-af8a-036f55838f32",
+      "release": "God Jul",
+      "score": 5302783,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas recording",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Leif \"Loket\" Olsson",
+      "trusted": true,
+      "title": "Staffansvisan"
     },
     {
       "postId": 50854,
       "id": 1986,
       "artist": "Julsång",
       "song": "Stilla natt",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Carola",
+      "artistMbids": [
+        "1a21747b-7b43-4e97-849b-db5ab664583e"
+      ],
+      "recording": "Stilla natt",
+      "recordingMbid": "d81d4322-2cd4-4d14-8665-997193135ab4",
+      "release": "Jul",
+      "score": 66482,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Carola",
+      "trusted": true,
+      "title": "Stilla natt"
     },
     {
       "postId": 50190,
@@ -37615,8 +38616,11 @@
       "recordingMbid": "991ad754-6319-419d-9710-fac30a223186",
       "release": "Angel Baby / Give Me Love",
       "score": 3516606,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Group credit",
+      "venueArtist": "Rosie/Originals",
+      "proposalArtist": "Rosie & the Originals",
       "trusted": true,
       "title": "Angel Baby"
     },
@@ -37693,8 +38697,11 @@
       "score": 4789393,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
-      "title": "Ain’t Goin’ Down (’til the Sun Comes Up) - Intro"
+      "proposed": "Full title",
+      "venueArtist": "Garth Brooks",
+      "proposalArtist": "Garth Brooks",
+      "trusted": true,
+      "title": "Ain’t Goin’ Down (’Til the Sun Comes Up)"
     },
     {
       "postId": 53328,
@@ -39002,8 +40009,8 @@
       "score": 4533324,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
-      "title": "If I Said You Had a Beautiful Body Would You Hold It Against Me?"
+      "trusted": true,
+      "title": "If I Said You Had a Beautiful Body Would You Hold It Against Me"
     },
     {
       "postId": 47927,
@@ -39145,7 +40152,22 @@
       "id": 2075,
       "artist": "UB40",
       "song": "Tears in my eyes",
-      "matched": false
+      "matched": true,
+      "artistCredit": "UB40",
+      "artistMbids": [
+        "7113aab7-628f-4050-ae49-dbecac110ca8"
+      ],
+      "recording": "Tears From My Eyes",
+      "recordingMbid": "48e7ece8-592d-47cb-a009-16a7208e8be4",
+      "release": "Labour of Love II",
+      "score": 34182,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "From not in",
+      "venueArtist": "UB40",
+      "proposalArtist": "UB40",
+      "trusted": true,
+      "title": "Tears From My Eyes"
     },
     {
       "postId": 48502,
@@ -39611,7 +40633,22 @@
       "id": 2100,
       "artist": "Broadman Hymnal",
       "song": "Face to face",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Joslin Grove Choral Society",
+      "artistMbids": [
+        "eae3ad77-2272-4741-839d-845c5d6970ec"
+      ],
+      "recording": "Face to Face With Christ My Savior",
+      "recordingMbid": "b5981892-4090-45be-bbc0-f12cec6d65f7",
+      "release": "Best Loved Hymns - Sweet Hour Of Prayer",
+      "score": 298939,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Broadman Hymnal category",
+      "venueArtist": "Broadman Hymnal",
+      "proposalArtist": "Joslin Grove Choral Society",
+      "trusted": true,
+      "title": "Face to Face With Christ My Savior"
     },
     {
       "postId": 51650,
@@ -41514,7 +42551,7 @@
       "recordingMbid": "d4f9c333-e374-4ac9-8cf9-0386f0743fab",
       "release": "På vårt sätt",
       "score": 343055,
-      "how": "title-first",
+      "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
       "title": "Fantasi"
@@ -42843,16 +43880,19 @@
       "artist": "Kenny Loggins & Jo Dee Messina",
       "song": "Your mama don't dance",
       "matched": true,
-      "artistCredit": "Kenny Loggins",
+      "artistCredit": "Loggins & Messina",
       "artistMbids": [
-        "15042d2b-2d4c-4451-a96a-6f547642de13"
+        "aef6e491-3121-4048-b035-4704a9ce0716"
       ],
       "recording": "Your Mama Don’t Dance",
-      "recordingMbid": "70bbdae6-7cb1-419d-9158-0695e81ff804",
-      "release": "Outside From The Redwoods",
-      "score": 4521750,
-      "how": "lead-scoped",
+      "recordingMbid": "666c8005-35be-4b2a-8cc4-d0e651024c97",
+      "release": "Loggins and Messina",
+      "score": 32786,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Jim Messina not Jo Dee",
+      "venueArtist": "Kenny Loggins & Jo Dee Messina",
+      "proposalArtist": "Loggins & Messina",
       "trusted": true,
       "title": "Your Mama Don’t Dance"
     },
@@ -43189,7 +44229,22 @@
       "id": 2278,
       "artist": "Garth Brooks",
       "song": "Two of a full kind",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Garth Brooks",
+      "artistMbids": [
+        "b76645c5-78b0-4e4c-8f95-003f40013a45"
+      ],
+      "recording": "Two of a Kind, Workin’ on a Full House",
+      "recordingMbid": "ce476463-a3d1-41a8-a687-5f30a3c0c14d",
+      "release": "No Fences",
+      "score": 44900,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Garth Brooks",
+      "proposalArtist": "Garth Brooks",
+      "trusted": true,
+      "title": "Two of a Kind, Workin’ on a Full House"
     },
     {
       "postId": 50334,
@@ -43234,14 +44289,44 @@
       "id": 2281,
       "artist": "Aerosmith",
       "song": "Mountain music",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alabama",
+      "artistMbids": [
+        "7ac055fa-e357-4890-9098-010b8094a900"
+      ],
+      "recording": "Mountain Music",
+      "recordingMbid": "f58dd19b-c6b1-4948-adba-87b7f4eec61d",
+      "release": "Mountain Music",
+      "score": 490,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Alabama not Aerosmith",
+      "venueArtist": "Aerosmith",
+      "proposalArtist": "Alabama",
+      "trusted": true,
+      "title": "Mountain Music"
     },
     {
       "postId": 53476,
       "id": 2282,
       "artist": "Waylon Jennings",
       "song": "Okie from Muskogie",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Merle Haggard",
+      "artistMbids": [
+        "deb2448c-6fdf-4d31-921e-757630515dbd"
+      ],
+      "recording": "Okie From Muskogee",
+      "recordingMbid": "ab410f1c-8777-4778-b92b-593af9764b7a",
+      "release": "Greatest Hits Finest Performances",
+      "score": 144284,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Muskogie typo; Merle not Waylon",
+      "venueArtist": "Waylon Jennings",
+      "proposalArtist": "Merle Haggard",
+      "trusted": true,
+      "title": "Okie From Muskogee"
     },
     {
       "postId": 48374,
@@ -43719,8 +44804,11 @@
       "recordingMbid": "8f3bb719-ed33-4d2a-8e3c-4400d7c8bfed",
       "release": "Love Will Keep Us Together",
       "score": 15285,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Tennille spelling",
+      "venueArtist": "Captain & Tenille",
+      "proposalArtist": "Captain & Tennille",
       "trusted": true,
       "title": "Love Will Keep Us Together"
     },
@@ -44079,7 +45167,22 @@
       "id": 2326,
       "artist": "Johnny Nash",
       "song": "The lion sleeps tonight",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Tokens",
+      "artistMbids": [
+        "7f64a5ed-b0d6-4686-9567-6ccf0915c06d"
+      ],
+      "recording": "The Lion Sleeps Tonight",
+      "recordingMbid": "49bd1dae-6c65-4294-a6c8-3a3533a54823",
+      "release": "Both Sides Now",
+      "score": 537036,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Tokens not Johnny Nash",
+      "venueArtist": "Johnny Nash",
+      "proposalArtist": "The Tokens",
+      "trusted": true,
+      "title": "The Lion Sleeps Tonight"
     },
     {
       "postId": 51312,
@@ -44241,18 +45344,24 @@
       "artist": "Frankie Valli & Four Seasons",
       "song": "December -63 (Oh what a night)",
       "matched": true,
-      "artistCredit": "Frankie Valli",
+      "artistCredit": "Frankie Valli & The Four Seasons",
       "artistMbids": [
-        "3c714102-94d8-42f4-9005-fb8a75c2766d"
+        "3c714102-94d8-42f4-9005-fb8a75c2766d",
+        "3f64d38c-1ad4-4fb0-941e-7f4b51d4c9e6"
       ],
-      "recording": "December ’63 (Oh What a Night)",
-      "recordingMbid": "eaab0276-1c71-4817-8273-73bfd6adfe14",
-      "release": "Simply the Best Party Hits",
-      "score": 5644839,
-      "how": "lead-scoped",
-      "rewrites": [],
+      "recording": "December, 1963 (remix '88 Oh, What a Night)",
+      "recordingMbid": "0659ad52-de02-48a6-80b6-e512cb9f2f6c",
+      "release": "The Best of Frankie Valli and the Four Seasons - 18 Greatest Hits",
+      "score": 966592,
+      "how": "version",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "proposed": "Full group",
+      "venueArtist": "Frankie Valli & Four Seasons",
+      "proposalArtist": "Frankie Valli & The Four Seasons",
       "trusted": true,
-      "title": "December ’63 (Oh What a Night)"
+      "title": "December 1963 (Oh, What a Night)"
     },
     {
       "postId": 48514,
@@ -44283,7 +45392,22 @@
       "id": 2337,
       "artist": "Mr Rogers",
       "song": "Won't you be my neighbour",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mister Rogers",
+      "artistMbids": [
+        "87467525-3724-412d-ad3e-595ecb6a3bfd"
+      ],
+      "recording": "Won’t You Be My Neighbor?",
+      "recordingMbid": "38fe3bcf-f028-4183-83c2-dc6bc1e79f24",
+      "release": "Bedtime",
+      "score": 823051,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical",
+      "venueArtist": "Mr Rogers",
+      "proposalArtist": "Mister Rogers",
+      "trusted": true,
+      "title": "Won’t You Be My Neighbor?"
     },
     {
       "postId": 50271,
@@ -44663,13 +45787,15 @@
       "artistMbids": [
         "9092d8e1-9b38-4372-a96d-000b8561a8bc"
       ],
-      "recording": "How Do I Live (original MIX) (extended version)",
-      "recordingMbid": "62703191-e930-4529-96f2-d3ece93623b7",
-      "release": "How Do I Live (dance MIX)",
-      "score": 2292034,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
+      "recording": "How Do I Live (Re-Imagined)",
+      "recordingMbid": "f26b4e9f-fb03-4ba2-99fa-7964dc711997",
+      "release": "How Do I Live (Re-Imagined)",
+      "score": 2647389,
+      "how": "version",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": true,
       "title": "How Do I Live"
     },
     {
@@ -46759,7 +47885,22 @@
       "id": 2466,
       "artist": "Kim Fransson",
       "song": "3 floors down",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kim",
+      "artistMbids": [
+        "2f4211a1-e3a5-4925-b003-beaef5b2d961"
+      ],
+      "recording": "3 Floors Down",
+      "recordingMbid": "96235a62-d6a1-41a0-95ae-76c43faae5e1",
+      "release": "Music from STIM 2009",
+      "score": 5338754,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Dump credits Kim",
+      "venueArtist": "Kim Fransson",
+      "proposalArtist": "Kim",
+      "trusted": true,
+      "title": "3 Floors Down"
     },
     {
       "postId": 49877,
@@ -46804,7 +47945,22 @@
       "id": 2469,
       "artist": "Ola Svensson",
       "song": "Unstoppable",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Ola",
+      "artistMbids": [
+        "6be1e020-559a-410b-9f03-1b429dd42b86"
+      ],
+      "recording": "Unstoppable",
+      "recordingMbid": "24932364-94f5-4080-8970-68b99c6c4c82",
+      "release": "Ola",
+      "score": 588307,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "MB credits Ola",
+      "venueArtist": "Ola Svensson",
+      "proposalArtist": "Ola",
+      "trusted": true,
+      "title": "Unstoppable"
     },
     {
       "postId": 52088,
@@ -46985,7 +48141,22 @@
       "id": 2479,
       "artist": "Erik Linder",
       "song": "Hur kan jag tro på kärleken",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Erik Linder",
+      "artistMbids": [
+        "43876897-25da-4d02-81c1-92f338548e8a"
+      ],
+      "recording": "Hur kan jag tro på kärlek",
+      "recordingMbid": "b43b2fe2-94fd-4d04-b416-c09c5f4831a7",
+      "release": "Schlager SM 2010 – Karaoke Festival",
+      "score": 5355189,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical drops -en",
+      "venueArtist": "Erik Linder",
+      "proposalArtist": "Erik Linder",
+      "trusted": true,
+      "title": "Hur kan jag tro på kärlek"
     },
     {
       "postId": 52060,
@@ -50253,18 +51424,23 @@
       "artist": "Goo Goo Dolls",
       "song": "Bullet proof",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
-      "recording": "Bulletproofangel",
-      "recordingMbid": "1cfec8f0-1e91-458c-9bb2-94012b4ebdda",
-      "release": "Magnetic",
-      "score": 674817,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
-      "title": "Bulletproofangel"
+      "recording": "Bullet Proof",
+      "recordingMbid": "43e04416-0005-4705-aa0d-3db371715bed",
+      "release": "Dizzy Up the Girl",
+      "score": 202536,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
+      "proposed": "Studio title",
+      "venueArtist": "Goo Goo Dolls",
+      "proposalArtist": "Goo Goo Dolls",
+      "trusted": true,
+      "title": "Bullet Proof"
     },
     {
       "postId": 52318,
@@ -50309,7 +51485,22 @@
       "id": 2651,
       "artist": "R Kelly",
       "song": "Burning up",
-      "matched": false
+      "matched": true,
+      "artistCredit": "R. Kelly",
+      "artistMbids": [
+        "c2d25856-a09a-4d15-b404-77dd19c19e63"
+      ],
+      "recording": "Burn It Up",
+      "recordingMbid": "e2739400-8854-4082-b1e8-348e71e11509",
+      "release": "Burn It Up",
+      "score": 2336917,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Burning→Burn It",
+      "venueArtist": "R Kelly",
+      "proposalArtist": "R. Kelly",
+      "trusted": true,
+      "title": "Burn It Up"
     },
     {
       "postId": 52121,
@@ -51070,7 +52261,22 @@
       "id": 2691,
       "artist": "Alice Tegnér",
       "song": "Ekorrn satt i granen",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Alice Babs",
+      "artistMbids": [
+        "6ae56e30-d394-4d18-8118-6a0a2b77eaaf"
+      ],
+      "recording": "Ekorr’n satt i granen",
+      "recordingMbid": "91eb0430-9ca9-4c78-bef1-60f249858f81",
+      "release": "Sjung med oss mamma: Sånger av Alice Tegnér",
+      "score": 250443,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Alice Tegnér song; Babs recording",
+      "venueArtist": "Alice Tegnér",
+      "proposalArtist": "Alice Babs",
+      "trusted": true,
+      "title": "Ekorr’n satt i granen"
     },
     {
       "postId": 51369,
@@ -51335,7 +52541,22 @@
       "id": 2705,
       "artist": "Journey",
       "song": "Foolish heart",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Steve Perry",
+      "artistMbids": [
+        "88b0ef74-9da8-4998-8e3b-70687575588c"
+      ],
+      "recording": "Foolish Heart",
+      "recordingMbid": "c0b723ab-1df5-434f-bfed-6a9041557a0e",
+      "release": "Street Talk",
+      "score": 2859,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Perry solo not Journey",
+      "venueArtist": "Journey",
+      "proposalArtist": "Steve Perry",
+      "trusted": true,
+      "title": "Foolish Heart"
     },
     {
       "postId": 51165,
@@ -51899,7 +53120,24 @@
       "id": 2735,
       "artist": "Luther Vandross",
       "song": "If I ruled the world",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Nas",
+      "artistMbids": [
+        "cfbc0924-0035-4d6c-8197-f024653af823"
+      ],
+      "recording": "If I Ruled The World",
+      "recordingMbid": "2e782b7c-6571-4f54-bc9f-704c3170f46c",
+      "release": "Da Bomb Volume 1",
+      "score": 216898,
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "proposed": "Nas hit; venue wrongly credited Luther",
+      "venueArtist": "Luther Vandross",
+      "proposalArtist": "Nas",
+      "trusted": true,
+      "title": "If I Ruled the World (Imagine That)"
     },
     {
       "postId": 51364,
@@ -53129,7 +54367,7 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Relax"
+      "title": "Relax (Take It Easy)"
     },
     {
       "postId": 52320,
@@ -54934,7 +56172,22 @@
       "id": 2893,
       "artist": "Keith Urban",
       "song": "Wouldn't wanna be me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Keith Urban",
+      "artistMbids": [
+        "f45da029-7b00-4bf3-962c-0eeb20309cc4"
+      ],
+      "recording": "Who Wouldn’t Wanna Be Me",
+      "recordingMbid": "a8a31e7b-19b6-4302-b6af-2c61eafffe54",
+      "release": "Golden Road",
+      "score": 310783,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Keith Urban",
+      "proposalArtist": "Keith Urban",
+      "trusted": true,
+      "title": "Who Wouldn’t Wanna Be Me"
     },
     {
       "postId": 52047,
@@ -55181,9 +56434,12 @@
       "recordingMbid": "f1114d87-0081-4c2a-9aba-2ccebad2527b",
       "release": "Blue Moon",
       "score": 151633,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Toby Keith",
+      "proposalArtist": "Toby Keith",
+      "trusted": true,
       "title": "Does That Blue Moon Ever Shine on You"
     },
     {
@@ -55682,8 +56938,8 @@
       "score": 5642280,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
-      "title": "Pride (In the Name of Love) / City of Blinding Lights"
+      "trusted": true,
+      "title": "Pride (In the Name of Love)"
     },
     {
       "postId": 53083,
@@ -55710,16 +56966,22 @@
       "artist": "Warren G & Nate Dog",
       "song": "Regulate",
       "matched": true,
-      "artistCredit": "Warren G",
+      "artistCredit": "Warren G And Nate Dogg",
       "artistMbids": [
-        "85d7666c-d3ce-4e2c-8b1b-f20db7cdae4f"
+        "85d7666c-d3ce-4e2c-8b1b-f20db7cdae4f",
+        "405528df-2632-4730-80fc-83e775a97651"
       ],
       "recording": "Regulate",
-      "recordingMbid": "5d1c3d6c-2b48-43a6-8808-37a61d76ad14",
-      "release": "L’original clando (Numéro 8)",
-      "score": 1007344,
-      "how": "title-first",
-      "rewrites": [],
+      "recordingMbid": "7354a9de-d9df-4858-bf8b-9de31aa6ccfb",
+      "release": "Die Hit-Giganten: Best Of Hip Hop & Rap",
+      "score": 5531578,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "Both",
+      "venueArtist": "Warren G & Nate Dog",
+      "proposalArtist": "Warren G & Nate Dogg",
       "trusted": true,
       "title": "Regulate"
     },
@@ -56472,7 +57734,22 @@
       "id": 2974,
       "artist": "Bloodhound Gang",
       "song": "Another dick with no balls",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bloodhound Gang",
+      "artistMbids": [
+        "b2dbfc09-b332-408b-a235-1850e41971c5"
+      ],
+      "recording": "Right Turn Clyde",
+      "recordingMbid": "02293f99-8b44-4d24-ad49-5d7d6fa6046a",
+      "release": "Hooray for Boobies",
+      "score": 234402,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Lyric used as title",
+      "venueArtist": "Bloodhound Gang",
+      "proposalArtist": "Bloodhound Gang",
+      "trusted": true,
+      "title": "Right Turn Clyde"
     },
     {
       "postId": 48841,
@@ -56756,9 +58033,12 @@
       "recordingMbid": "75e2089d-4d9b-4379-923f-c4a95347a175",
       "release": "Living Proof",
       "score": 283799,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Cher",
+      "proposalArtist": "Cher",
+      "trusted": true,
       "title": "Body to Body, Heart to Heart"
     },
     {
@@ -57180,14 +58460,17 @@
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
-      "recording": "Don’t Think Twice It It’s Alright",
-      "recordingMbid": "4c43ee9d-1cbc-4b3f-ba9b-08c872d8e83b",
-      "release": "Let My Poor Voice Be Heard: Publishing Demos",
-      "score": 5145148,
-      "how": "loose",
+      "recording": "Don't Think Twice, It's All Right (live at Town Hall, Birmingham, England - May 5, 1965)",
+      "recordingMbid": "01820bc6-5891-4edf-a8d9-c64ba760c2ba",
+      "release": "50th Anniversary Collection: 1965",
+      "score": 5204179,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "Don’t Think Twice It It’s Alright"
+      "proposed": "Full title beats loose",
+      "venueArtist": "Bob Dylan",
+      "proposalArtist": "Bob Dylan",
+      "trusted": true,
+      "title": "Don’t Think Twice, It’s All Right"
     },
     {
       "postId": 48950,
@@ -57865,7 +59148,22 @@
       "id": 3048,
       "artist": "Backstreet Boys",
       "song": "I want to be with you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Backstreet Boys",
+      "artistMbids": [
+        "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
+      ],
+      "recording": "I Wanna Be With You",
+      "recordingMbid": "5a113f48-e728-41bf-a7cc-c600e22ec167",
+      "release": "Backstreet Boys",
+      "score": 151810,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Wanna",
+      "venueArtist": "Backstreet Boys",
+      "proposalArtist": "Backstreet Boys",
+      "trusted": true,
+      "title": "I Wanna Be With You"
     },
     {
       "postId": 48851,
@@ -59930,18 +61228,18 @@
       "matched": true,
       "artistCredit": "Chris Brown",
       "artistMbids": [
-        "a9e9d82e-4ebd-4227-91c1-567fd15e5391"
+        "c234fa42-e6a6-443e-937e-2f4b073538a3"
       ],
-      "recording": "You Say",
-      "recordingMbid": "1a3a0807-b75e-40c5-aa78-9a6b436d758e",
-      "release": "Anchor",
-      "score": 718860,
-      "how": "loose",
+      "recording": "Yo",
+      "recordingMbid": "6f73110c-3f11-4b86-bc6d-8717290cdb99",
+      "release": "The R&B Model Edition, Part 2 (Mixed by DJ Kay Slay) (Hosted by Brandy Chenell)",
+      "score": 4988048,
+      "how": "exact",
       "rewrites": [
         "annotation-stripped"
       ],
-      "trusted": false,
-      "title": "You Say"
+      "trusted": true,
+      "title": "Yo (Excuse Me Miss)"
     },
     {
       "postId": 47921,
@@ -61885,7 +63183,22 @@
       "id": 3259,
       "artist": "The Monkier",
       "song": "Oh my God!",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Moniker",
+      "artistMbids": [
+        "4d6e8ff1-b241-4cc5-b9ad-2c5beb37e8a9"
+      ],
+      "recording": "Oh My God!",
+      "recordingMbid": "d8e43ff3-7354-4df9-b2f6-86ef5c4dcc20",
+      "release": "Maktub",
+      "score": 943329,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Monkier typo",
+      "venueArtist": "The Monkier",
+      "proposalArtist": "The Moniker",
+      "trusted": true,
+      "title": "Oh My God!"
     },
     {
       "postId": 52784,
@@ -64074,14 +65387,44 @@
       "id": 3374,
       "artist": "Julsång",
       "song": "Santa Claus is coming to town",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bing Crosby",
+      "artistMbids": [
+        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
+      ],
+      "recording": "Santa Claus Is Coming to Town",
+      "recordingMbid": "fb5b104e-295d-44f1-aa67-4b1e4e6dcefa",
+      "release": "The Christmas Album",
+      "score": 385064,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Bing Crosby",
+      "trusted": true,
+      "title": "Santa Claus Is Coming to Town"
     },
     {
       "postId": 50856,
       "id": 3375,
       "artist": "Julsång",
       "song": "We wish you a merry christmas",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bing Crosby",
+      "artistMbids": [
+        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
+      ],
+      "recording": "We Wish You a Merry Christmas",
+      "recordingMbid": "b11d5b98-364f-4029-b6c7-eaf3bf9dc087",
+      "release": "The Christmas Album: The Original Recordings (deluxe edition)",
+      "score": 4915058,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Bing Crosby",
+      "trusted": true,
+      "title": "We Wish You a Merry Christmas"
     },
     {
       "postId": 49236,
@@ -64265,14 +65608,44 @@
       "id": 3385,
       "artist": "Julsång",
       "song": "Silent night, holy night",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bing Crosby",
+      "artistMbids": [
+        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
+      ],
+      "recording": "Silent Night, Holy Night",
+      "recordingMbid": "b4579442-1116-4b8e-97c1-ef143ddbf2ae",
+      "release": "Christmas With Bing",
+      "score": 38379,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Bing Crosby",
+      "trusted": true,
+      "title": "Silent Night, Holy Night"
     },
     {
       "postId": 50858,
       "id": 3386,
       "artist": "Julsång",
       "song": "Jingle bells",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bing Crosby",
+      "artistMbids": [
+        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
+      ],
+      "recording": "Jingle Bells",
+      "recordingMbid": "0920477a-f365-4b0c-bcb5-24153b50a540",
+      "release": "White Christmas",
+      "score": 142477,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Christmas standard",
+      "venueArtist": "Julsång",
+      "proposalArtist": "Bing Crosby",
+      "trusted": true,
+      "title": "Jingle Bells"
     },
     {
       "postId": 48976,
@@ -65357,7 +66730,22 @@
       "id": 3443,
       "artist": "Bette Midler",
       "song": "That's the glory of love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Bette Midler",
+      "artistMbids": [
+        "ed333e8b-d18a-49fc-b361-4ec9731dfdba"
+      ],
+      "recording": "The Glory of Love",
+      "recordingMbid": "a705a331-1ccb-4ba4-8b91-335510e49855",
+      "release": "Beaches: Original Soundtrack Recording",
+      "score": 4352775,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Drop That’s",
+      "venueArtist": "Bette Midler",
+      "proposalArtist": "Bette Midler",
+      "trusted": true,
+      "title": "The Glory of Love"
     },
     {
       "postId": 48769,
@@ -65615,16 +67003,19 @@
       "artist": "Ozzy Osbourne & Lita Ford",
       "song": "Close my eyes forever",
       "matched": true,
-      "artistCredit": "Ozzy Osbourne",
+      "artistCredit": "Lita Ford",
       "artistMbids": [
-        "8aa5b65a-5b3c-4029-92bf-47a544356934"
+        "f20ba447-269a-445a-9347-c1ec8632c455"
       ],
       "recording": "Close My Eyes Forever",
-      "recordingMbid": "e4839615-de53-4661-ba17-e87abb24cefd",
-      "release": "No More Tears",
-      "score": 898894,
-      "how": "lead-scoped",
+      "recordingMbid": "94fdd60e-57a7-4998-a486-1e31aab54f49",
+      "release": "Lita",
+      "score": 21965,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "with Ozzy",
+      "venueArtist": "Ozzy Osbourne & Lita Ford",
+      "proposalArtist": "Lita Ford",
       "trusted": true,
       "title": "Close My Eyes Forever"
     },
@@ -66131,14 +67522,44 @@
       "id": 3484,
       "artist": "Frank Marino",
       "song": "I'm a king be/Back door man medley",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Frank Marino",
+      "artistMbids": [
+        "837d85bc-0764-4a08-90a4-61fb3c3c7a0a"
+      ],
+      "recording": "I’m a King Bee / Excerpt From ’Back Door Man’ (live)",
+      "recordingMbid": "0acc48f6-4155-46d4-a1ce-d06715a861b1",
+      "release": "Stories of a Hero",
+      "score": 4744961,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Exact dump medley title",
+      "venueArtist": "Frank Marino",
+      "proposalArtist": "Frank Marino",
+      "trusted": true,
+      "title": "I’m a King Bee / Excerpt From ’Back Door Man’"
     },
     {
       "postId": 50168,
       "id": 3485,
       "artist": "Genesis",
       "song": "Mirror man",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Human League",
+      "artistMbids": [
+        "7adaabfb-acfb-47bc-8c7c-59471c2f0db8"
+      ],
+      "recording": "Mirror Man",
+      "recordingMbid": "f62ad4a4-5cbf-4596-a29e-df0e1a855d93",
+      "release": "Mirror Man",
+      "score": 3364602,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Not Genesis",
+      "venueArtist": "Genesis",
+      "proposalArtist": "The Human League",
+      "trusted": true,
+      "title": "Mirror Man"
     },
     {
       "postId": 50920,
@@ -66496,9 +67917,12 @@
       "recordingMbid": "57c367f1-c1b9-4508-92c8-eb7a954bdb8c",
       "release": "The Woman in Me",
       "score": 127460,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Shania Twain",
+      "proposalArtist": "Shania Twain",
+      "trusted": true,
       "title": "(If You’re Not in It for Love) I’m Outta Here!"
     },
     {
@@ -66948,10 +68372,10 @@
       "rewrites": [
         "annotation-stripped"
       ],
-      "proposed": "Sos is The S.O.S. Band",
+      "proposed": "Full title",
       "venueArtist": "Sos",
       "proposalArtist": "The S.O.S. Band",
-      "trusted": false,
+      "trusted": true,
       "title": "Take Your Time (Do It Right)"
     },
     {
@@ -67131,7 +68555,22 @@
       "id": 3537,
       "artist": "Steve Lawrence & Edie Gorme",
       "song": "This could be the start to something big",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Steve & Eydie",
+      "artistMbids": [
+        "d138bc4c-0f52-4801-a45b-69e59649ca82"
+      ],
+      "recording": "This Could Be the Start of Something Big",
+      "recordingMbid": "bcba5626-da77-4c14-a58d-027e2596fcaf",
+      "release": "Sing More Golden Hits",
+      "score": 147606,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Steve Lawrence & Eydie",
+      "venueArtist": "Steve Lawrence & Edie Gorme",
+      "proposalArtist": "Steve & Eydie",
+      "trusted": true,
+      "title": "This Could Be the Start of Something Big"
     },
     {
       "postId": 53279,
@@ -67386,7 +68825,22 @@
       "id": 3551,
       "artist": "Barry White",
       "song": "What am I going to do with you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Barry White",
+      "artistMbids": [
+        "b904d624-9e05-4398-8f4f-88fbcf022f79"
+      ],
+      "recording": "What Am I Gonna Do With You",
+      "recordingMbid": "38084eb1-b24f-4e1a-8b18-28b8404d7b34",
+      "release": "Just Another Way to Say I Love You",
+      "score": 167243,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Gonna",
+      "venueArtist": "Barry White",
+      "proposalArtist": "Barry White",
+      "trusted": true,
+      "title": "What Am I Gonna Do With You"
     },
     {
       "postId": 48215,
@@ -67432,16 +68886,19 @@
       "artist": "Barry White & Tina Turner",
       "song": "In your wildest dreams",
       "matched": true,
-      "artistCredit": "Barry White",
+      "artistCredit": "Tina Turner",
       "artistMbids": [
-        "b904d624-9e05-4398-8f4f-88fbcf022f79"
+        "9072df14-b61e-42e2-b4f4-6bbb7fdb5586"
       ],
       "recording": "In Your Wildest Dreams",
-      "recordingMbid": "9b60642d-cc55-4577-847c-8635fd6eb2cf",
-      "release": "Greatest Hits",
-      "score": 4982558,
-      "how": "lead-scoped",
+      "recordingMbid": "36f5f0ff-53e4-4383-a898-5d7902931e14",
+      "release": "Wildest Dreams",
+      "score": 151444,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Tina lead with Barry",
+      "venueArtist": "Barry White & Tina Turner",
+      "proposalArtist": "Tina Turner",
       "trusted": true,
       "title": "In Your Wildest Dreams"
     },
@@ -67450,7 +68907,22 @@
       "id": 3555,
       "artist": "Midsommarsång",
       "song": "Små grodorna",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mora Träsk",
+      "artistMbids": [
+        "17c75486-3253-4359-a5a1-baec06650ebd"
+      ],
+      "recording": "Små grodorna",
+      "recordingMbid": "47ac3c4c-da41-4762-b85a-8d2f38c75b43",
+      "release": "Sjung och lek med Mora Träsk",
+      "score": 22593,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Swedish midsummer",
+      "venueArtist": "Midsommarsång",
+      "proposalArtist": "Mora Träsk",
+      "trusted": true,
+      "title": "Små grodorna"
     },
     {
       "postId": 53187,
@@ -68911,7 +70383,22 @@
       "id": 3631,
       "artist": "Rex Smith",
       "song": "Take my breath away",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Rex Smith",
+      "artistMbids": [
+        "00f0ff72-8789-470c-a52c-bc14e600e1be"
+      ],
+      "recording": "You Take My Breath Away",
+      "recordingMbid": "218b0cfd-b283-4e03-8700-14747d46ff06",
+      "release": "Sooner or Later",
+      "score": 1974321,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue omitted You",
+      "venueArtist": "Rex Smith",
+      "proposalArtist": "Rex Smith",
+      "trusted": true,
+      "title": "You Take My Breath Away"
     },
     {
       "postId": 52923,
@@ -69211,35 +70698,115 @@
       "id": 3645,
       "artist": "Oliver",
       "song": "Consider yourself",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Lionel Bart",
+      "artistMbids": [
+        "d679f260-95f6-4b4e-8ec0-e3c64065e493"
+      ],
+      "recording": "Consider Yourself",
+      "recordingMbid": "6eb6837a-d2c6-4730-8722-e3e9657b163d",
+      "release": "Oliver!",
+      "score": 531943,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Oliver! soundtrack",
+      "from": "Oliver!",
+      "venueArtist": "Oliver",
+      "proposalArtist": "Lionel Bart",
+      "trusted": true,
+      "title": "Consider Yourself"
     },
     {
       "postId": 52167,
       "id": 3646,
       "artist": "Pippen",
       "song": "Corner of the sky",
-      "matched": false
+      "matched": true,
+      "artistCredit": "David Essex",
+      "artistMbids": [
+        "822e180a-061a-4da0-a1f3-35e8bdf5f240"
+      ],
+      "recording": "Corner of the Sky",
+      "recordingMbid": "a2a278a7-2007-4ca5-b907-7ab86b62b5ba",
+      "release": "Centre Stage",
+      "score": 11734,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Pippen→Pippin",
+      "from": "Pippin",
+      "venueArtist": "Pippen",
+      "proposalArtist": "David Essex",
+      "trusted": true,
+      "title": "Corner of the Sky"
     },
     {
       "postId": 52857,
       "id": 3647,
       "artist": "South Pacific",
       "song": "I'm gonna wash that man right out of my hair",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mitzi Gaynor",
+      "artistMbids": [
+        "d5500491-0676-4fa1-ba88-5e4bc0b74449"
+      ],
+      "recording": "I'm Gonna Wash That Man Right Out of My Hair",
+      "recordingMbid": "56a98cf6-781c-4759-88cb-fb7adcbdc602",
+      "release": "Stars of Musicals: The Greatest Musical Songs",
+      "score": 4840231,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "South Pacific",
+      "from": "South Pacific",
+      "venueArtist": "South Pacific",
+      "proposalArtist": "Mitzi Gaynor",
+      "trusted": true,
+      "title": "I'm Gonna Wash That Man Right Out of My Hair"
     },
     {
       "postId": 53138,
       "id": 3648,
       "artist": "The Fantastics",
       "song": "Try to remember",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Jerry Orbach",
+      "artistMbids": [
+        "c9f3fa43-fd15-4517-92e0-38f51eac447b"
+      ],
+      "recording": "Try to Remember",
+      "recordingMbid": "94a6f61d-6a21-4c41-8999-b390c4f46727",
+      "release": "The Fantasticks: Original Cast Album",
+      "score": 4351777,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Fantasticks cast",
+      "from": "The Fantasticks",
+      "venueArtist": "The Fantastics",
+      "proposalArtist": "Jerry Orbach",
+      "trusted": true,
+      "title": "Try to Remember"
     },
     {
       "postId": 53491,
       "id": 3649,
       "artist": "West Side Story",
       "song": "Maria",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Larry Kert",
+      "artistMbids": [
+        "70915017-c4f9-4e13-9564-6b8646d82eea"
+      ],
+      "recording": "Maria",
+      "recordingMbid": "0dd18212-b2a7-4006-ad0b-68fba38f686d",
+      "release": "West Side Story",
+      "score": 4352270,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Original cast",
+      "from": "West Side Story",
+      "venueArtist": "West Side Story",
+      "proposalArtist": "Larry Kert",
+      "trusted": true,
+      "title": "Maria"
     },
     {
       "postId": 48306,
@@ -70164,7 +71731,22 @@
       "id": 3698,
       "artist": "Reba McEntire",
       "song": "Now you tell me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Reba",
+      "artistMbids": [
+        "3ec17e85-9284-4f4c-8831-4e56c2354cdb"
+      ],
+      "recording": "Now You Tell Me",
+      "recordingMbid": "14328a7a-5518-4070-9412-604c082a07ac",
+      "release": "Rumor Has It",
+      "score": 44764,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Canonical Reba",
+      "venueArtist": "Reba McEntire",
+      "proposalArtist": "Reba",
+      "trusted": true,
+      "title": "Now You Tell Me"
     },
     {
       "postId": 52390,
@@ -71413,7 +72995,22 @@
       "id": 3764,
       "artist": "Peter Cetera & Amy Grant",
       "song": "Next time I fall in love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Peter Cetera",
+      "artistMbids": [
+        "cdcd53c9-f37c-48cc-b7e3-dfe34be22e92"
+      ],
+      "recording": "The Next Time I Fall",
+      "recordingMbid": "11ec5817-5aef-4af8-821b-f75778931c10",
+      "release": "Solitude/Solitaire",
+      "score": 9110,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Cetera/Grant hit; prefer Cetera key",
+      "venueArtist": "Peter Cetera & Amy Grant",
+      "proposalArtist": "Peter Cetera",
+      "trusted": true,
+      "title": "The Next Time I Fall"
     },
     {
       "postId": 52949,
@@ -71834,9 +73431,12 @@
       "recordingMbid": "87527ebf-ffc5-4e6e-8814-f4ce8c9b78ea",
       "release": "Motown",
       "score": 336454,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Michael McDonald",
+      "proposalArtist": "Michael McDonald",
+      "trusted": true,
       "title": "Signed, Sealed, Delivered I’m Yours"
     },
     {
@@ -72095,7 +73695,22 @@
       "id": 3800,
       "artist": "Samantha Fox",
       "song": "I want to be have some fun",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Samantha Fox",
+      "artistMbids": [
+        "ffdb2b8f-ecbf-427a-abc7-c47f4ebc8ae3"
+      ],
+      "recording": "I Wanna Have Some Fun",
+      "recordingMbid": "7aec1619-61f6-4a7e-861e-9bbf818a4bbf",
+      "release": "I Wanna Have Some Fun",
+      "score": 23928,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Correct title",
+      "venueArtist": "Samantha Fox",
+      "proposalArtist": "Samantha Fox",
+      "trusted": true,
+      "title": "I Wanna Have Some Fun"
     },
     {
       "postId": 52612,
@@ -72202,14 +73817,17 @@
       "artistMbids": [
         "70ea63ea-70dc-4b63-951a-2c249d2b3b0a"
       ],
-      "recording": "María (Spanish radio edit)",
-      "recordingMbid": "1cd9d1e8-241b-4267-9677-1b2cb8c7146d",
-      "release": "A medio vivir",
-      "score": 131997,
-      "how": "loose",
+      "recording": "Maria (Perc a pella mix)",
+      "recordingMbid": "7cb02e35-ea53-46d9-bbf9-89720a510307",
+      "release": "Maria (remixes)",
+      "score": 5013515,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "María (Spanish radio edit)"
+      "proposed": "Spanish title",
+      "venueArtist": "Ricky Martin",
+      "proposalArtist": "Ricky Martin",
+      "trusted": true,
+      "title": "María"
     },
     {
       "postId": 52132,
@@ -73388,15 +75006,15 @@
       "artist": "Whitney Houston & Jermaine Jackson",
       "song": "If you say my eyes are beautiful",
       "matched": true,
-      "artistCredit": "Whitney Houston with Jermaine Jackson",
+      "artistCredit": "Jermaine Jackson feat. Whitney Houston",
       "artistMbids": [
-        "0307edfc-437c-4b48-8700-80680e66a228",
-        "ccbdc2ab-1055-44d5-8417-a6b4898bf91b"
+        "ccbdc2ab-1055-44d5-8417-a6b4898bf91b",
+        "0307edfc-437c-4b48-8700-80680e66a228"
       ],
       "recording": "If You Say My Eyes Are Beautiful",
-      "recordingMbid": "89c2e01c-ed63-4a7b-9260-2418d9f87371",
-      "release": "I Wanna Dance With Somebody (The Movie: Whitney New, Classic and Reimagined)",
-      "score": 4429195,
+      "recordingMbid": "4aeb84ea-9d82-4293-827e-49a51d9e1a63",
+      "release": "Precious Moments",
+      "score": 13541,
       "how": "lead-scoped",
       "rewrites": [],
       "trusted": true,
@@ -74390,7 +76008,22 @@
       "id": 3920,
       "artist": "Trace Adkins",
       "song": "Every light in the house is on",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Trace Adkins",
+      "artistMbids": [
+        "3dc9c919-508f-4255-b05e-0eed6a28137d"
+      ],
+      "recording": "Every Light in the House",
+      "recordingMbid": "e60c2203-3c1d-454d-9df8-6103dae993dc",
+      "release": "Dreamin’ Out Loud",
+      "score": 1741813,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Drop is on",
+      "venueArtist": "Trace Adkins",
+      "proposalArtist": "Trace Adkins",
+      "trusted": true,
+      "title": "Every Light in the House"
     },
     {
       "postId": 52022,
@@ -75615,12 +77248,15 @@
       "artistMbids": [
         "99075985-0d80-4692-a15e-b16f78831792"
       ],
-      "recording": "Save the World",
-      "recordingMbid": "b1048dcb-76bf-498f-ae97-2867e96bf79c",
-      "release": "In the Club, Vol. 3",
-      "score": 4825595,
-      "how": "lead-scoped",
+      "recording": "Save the World (Futurebound vs. Metrik remix)",
+      "recordingMbid": "52afff0b-1e29-4ca0-9491-6009063be678",
+      "release": "Drum & Bass Summer Slammers 2011",
+      "score": 5560319,
+      "how": "version",
       "rewrites": [],
+      "proposed": "feat John Martin",
+      "venueArtist": "Swedish House Mafia & John Martin",
+      "proposalArtist": "Swedish House Mafia",
       "trusted": true,
       "title": "Save the World"
     },
@@ -75764,7 +77400,22 @@
       "id": 3992,
       "artist": "Taylor Swift",
       "song": "If this were a movie",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Taylor Swift",
+      "artistMbids": [
+        "20244d07-534f-4eff-b4d4-930878889970"
+      ],
+      "recording": "If This Was a Movie",
+      "recordingMbid": "a50eb062-ad7d-4861-8096-ea2dc8e26278",
+      "release": "Speak Now",
+      "score": 591019,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Was not Were",
+      "venueArtist": "Taylor Swift",
+      "proposalArtist": "Taylor Swift",
+      "trusted": true,
+      "title": "If This Was a Movie"
     },
     {
       "postId": 53513,
@@ -76189,7 +77840,22 @@
       "id": 4015,
       "artist": "Prefab Sprout",
       "song": "King of rock and roll",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Prefab Sprout",
+      "artistMbids": [
+        "1fd87f72-5fbf-4cad-bd9d-f2fec1359cfc"
+      ],
+      "recording": "The King of Rock ’n’ Roll",
+      "recordingMbid": "76564c6e-d056-4f6b-a7ee-92484870a8a4",
+      "release": "From Langley Park to Memphis",
+      "score": 22207,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Prefab Sprout",
+      "proposalArtist": "Prefab Sprout",
+      "trusted": true,
+      "title": "The King of Rock ’n’ Roll"
     },
     {
       "postId": 47950,
@@ -77012,10 +78678,13 @@
       "recordingMbid": "fdfc53ef-1a50-4783-8617-a22aaf49b6eb",
       "release": "Raditude",
       "score": 556793,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "(If You’re Wondering if I Want You to) I Want You To"
+      "proposed": "Full title",
+      "venueArtist": "Weezer",
+      "proposalArtist": "Weezer",
+      "trusted": true,
+      "title": "(If You’re Wondering If I Want You To) I Want You To"
     },
     {
       "postId": 52054,
@@ -77196,16 +78865,20 @@
       "artist": "Bruno Mars & Travie McCoy",
       "song": "Billionaire",
       "matched": true,
-      "artistCredit": "Bruno Mars",
+      "artistCredit": "Travie McCoy feat. Bruno Mars",
       "artistMbids": [
+        "76bf7aec-83f0-47a9-8964-eea180b99ac2",
         "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
       ],
       "recording": "Billionaire",
-      "recordingMbid": "906d0bc5-1ed7-4a63-bbc4-e35cb6b49ff9",
-      "release": "Club R&B 2",
-      "score": 4454904,
-      "how": "lead-scoped",
+      "recordingMbid": "324cb765-fd2c-49fc-9e1a-80d519391b0d",
+      "release": "Lazarus",
+      "score": 583044,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Correct lead",
+      "venueArtist": "Bruno Mars & Travie McCoy",
+      "proposalArtist": "Travie McCoy feat. Bruno Mars",
       "trusted": true,
       "title": "Billionaire"
     },
@@ -77717,14 +79390,16 @@
       "artistMbids": [
         "afb680f2-b6eb-4cd7-a70b-a63b25c763d5"
       ],
-      "recording": "Just the Way You Are (Amazing) Vs. U Sure Do: Just the Way You Are (Amazing) / U Sure Do",
-      "recordingMbid": "540bcacf-44c0-4764-bcba-f9a1f1fc8d92",
-      "release": "I Love Bruno Mars (Classic Mixes) (Volume 1)",
-      "score": 4943908,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
-      "title": "Just the Way You Are (Amazing) Vs. U Sure Do: Just the Way You Are (Amazing) / U Sure Do"
+      "recording": "Just the Way You Are (Manufactured Superstars and Jquintal remix)",
+      "recordingMbid": "cbefbed7-09b1-4c02-818c-10996a52e202",
+      "release": "Just the Way You Are (Remix)",
+      "score": 5016619,
+      "how": "version",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": true,
+      "title": "Just the Way You Are"
     },
     {
       "postId": 47722,
@@ -78880,8 +80555,11 @@
       "recordingMbid": "3e7dfa95-a25b-4a13-bf52-f8f58a28bc71",
       "release": "Virgin Radio: The Album",
       "score": 5620912,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "feat Pete Doherty",
+      "venueArtist": "Wolfman & Pete Doherty",
+      "proposalArtist": "Wolfman",
       "trusted": true,
       "title": "For Lovers"
     },
@@ -79116,10 +80794,13 @@
       "recordingMbid": "d69eefe9-00a8-43b7-afc2-a077185ee95d",
       "release": "Instrumental Album: The Rising Tied",
       "score": 1832666,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Holly Brook feature",
+      "venueArtist": "Fort Minor & Holly Brook",
+      "proposalArtist": "Fort Minor",
       "trusted": true,
-      "title": "Where'd You Go"
+      "title": "Where’d You Go"
     },
     {
       "postId": 51765,
@@ -79281,7 +80962,23 @@
       "id": 4177,
       "artist": "Kardinall Offishall",
       "song": "Dangerous",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Kardinal Offishall feat. Akon",
+      "artistMbids": [
+        "03647192-f55b-42b2-9a74-db28fcae8fd1",
+        "1138a764-2212-4d0a-b02d-0dc14df91e08"
+      ],
+      "recording": "Dangerous",
+      "recordingMbid": "5013febb-e842-4d3a-919b-1c910036aeb3",
+      "release": "Not 4 Sale",
+      "score": 515109,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Kardinall typo",
+      "venueArtist": "Kardinall Offishall",
+      "proposalArtist": "Kardinal Offishall feat. Akon",
+      "trusted": true,
+      "title": "Dangerous"
     },
     {
       "postId": 51618,
@@ -81248,16 +82945,20 @@
       "artist": "Justin Bieber & Rascal Flatts",
       "song": "That should be me",
       "matched": true,
-      "artistCredit": "Justin Bieber",
+      "artistCredit": "Justin Bieber feat. Rascal Flatts",
       "artistMbids": [
-        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+        "e0140a67-e4d1-4f13-8a01-364355bee46e",
+        "6e0ae159-8449-4262-bba5-18ec87fa529f"
       ],
       "recording": "That Should Be Me",
-      "recordingMbid": "f1054d79-dcd6-4db0-9e2b-7d650dc51b28",
-      "release": "My World 2.0",
-      "score": 577857,
-      "how": "lead-scoped",
+      "recordingMbid": "8fec3998-20ce-45e3-abcf-33da94414715",
+      "release": "Never Say Never: The Remixes",
+      "score": 4472016,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Justin Bieber & Rascal Flatts",
+      "proposalArtist": "Justin Bieber feat. Rascal Flatts",
       "trusted": true,
       "title": "That Should Be Me"
     },
@@ -81484,8 +83185,11 @@
       "recordingMbid": "a1a46b05-c029-48bf-840b-9ac8bb7afa27",
       "release": "La vida... es un ratico",
       "score": 480312,
-      "how": "lead-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "with Colbie",
+      "venueArtist": "Juanes & Colbie Caillat",
+      "proposalArtist": "Juanes",
       "trusted": true,
       "title": "Hoy me voy"
     },
@@ -81935,14 +83639,44 @@
       "id": 4316,
       "artist": "Amanda Fondell",
       "song": "Made it all this way",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Amanda Fondell",
+      "artistMbids": [
+        "3ff5de62-92a0-429a-b9a3-825fe7e329c7"
+      ],
+      "recording": "All This Way",
+      "recordingMbid": "f3098a93-6673-4d22-a4da-9f2d646622b3",
+      "release": "All This Way",
+      "score": 626986,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Correct title",
+      "venueArtist": "Amanda Fondell",
+      "proposalArtist": "Amanda Fondell",
+      "trusted": true,
+      "title": "All This Way"
     },
     {
       "postId": 51720,
       "id": 4317,
       "artist": "Moa Lignell",
       "song": "All I need is you (When I held ya)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Moa Lignell",
+      "artistMbids": [
+        "6950aab5-4e47-45d1-9e75-3773dc40e0fb"
+      ],
+      "recording": "When I Held Ya",
+      "recordingMbid": "6724a1eb-9000-40c7-9826-be5f13fd295f",
+      "release": "Different Path",
+      "score": 651673,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Parenthetical was the title",
+      "venueArtist": "Moa Lignell",
+      "proposalArtist": "Moa Lignell",
+      "trusted": true,
+      "title": "When I Held Ya"
     },
     {
       "postId": 49230,
@@ -83909,14 +85643,17 @@
       "artistMbids": [
         "45a663b5-b1cb-4a91-bff6-2bef7bbfdd76"
       ],
-      "recording": "Do Somethin (Graveyard Child Escape remix)",
-      "recordingMbid": "c01fa50f-adf4-41c3-9584-12841499ba17",
-      "release": "Rmx of Pop / Rock / Classical Old Songs",
-      "score": 5388345,
-      "how": "loose",
+      "recording": "Do Somethin’ (DJ Monks remix)",
+      "recordingMbid": "83db0314-db69-4a92-8a6e-a5475f0a1660",
+      "release": "Massive Dance",
+      "score": 5482316,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "Do Somethin"
+      "proposed": "Canonical beats remix loose",
+      "venueArtist": "Britney Spears",
+      "proposalArtist": "Britney Spears",
+      "trusted": true,
+      "title": "Do Somethin’"
     },
     {
       "postId": 48651,
@@ -84686,16 +86423,20 @@
       "artist": "Justin Timberlake & Ciara",
       "song": "Love sex magic",
       "matched": true,
-      "artistCredit": "Justin Timberlake",
+      "artistCredit": "Ciara Feat. Justin Timberlake",
       "artistMbids": [
+        "03172286-f7ed-4864-a4db-459cd5ca9790",
         "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
-      "recording": "Love Sex Magic",
-      "recordingMbid": "e3ea8667-2be6-46cb-ac16-b1b153bcbfa1",
-      "release": "Suite 806",
-      "score": 5277867,
-      "how": "lead-scoped",
+      "recording": "Love Sex Magic (Jason Nevins Sex club mix)",
+      "recordingMbid": "20f05e0d-a61c-44bb-ba78-da1c88ce109c",
+      "release": "CD Club Promo Only June 2009 Part 1",
+      "score": 5507302,
+      "how": "version",
       "rewrites": [],
+      "proposed": "Correct lead",
+      "venueArtist": "Justin Timberlake & Ciara",
+      "proposalArtist": "Ciara feat. Justin Timberlake",
       "trusted": true,
       "title": "Love Sex Magic"
     },
@@ -86451,13 +88192,16 @@
       "artistMbids": [
         "8538e728-ca0b-4321-b7e5-cff6565dd4c0"
       ],
-      "recording": "Blasphemous Rumours",
-      "recordingMbid": "3b51de17-0fb6-473d-adfe-a20e0abd7a68",
-      "release": "Some Great Reward",
-      "score": 3044,
-      "how": "loose",
+      "recording": "Blasphemous Rumours (Sixteen Candles dub edit)",
+      "recordingMbid": "0cb0829b-9b88-451e-a7fe-4394f979679a",
+      "release": "Beyond Remixes",
+      "score": 4484110,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Depeche Mode",
+      "proposalArtist": "Depeche Mode",
+      "trusted": true,
       "title": "Blasphemous Rumours"
     },
     {
@@ -87345,16 +89089,20 @@
       "artist": "Dr Dre, Snoop Doggy Dog",
       "song": "Nuthin' but a 'G' thang",
       "matched": true,
-      "artistCredit": "Dr. Dre",
+      "artistCredit": "Dr. Dre Feat. Snoop Doggy Dogg",
       "artistMbids": [
-        "5f6ab597-f57a-40da-be9e-adad48708203"
+        "5f6ab597-f57a-40da-be9e-adad48708203",
+        "f90e8b26-9e52-4669-a5c9-e28529c47894"
       ],
-      "recording": "Nuthin’ but a “G” Thang",
-      "recordingMbid": "85fd26d3-c92f-40c1-8d9d-169ddc7ca1ab",
-      "release": "The Chronic",
-      "score": 76254,
-      "how": "lead-scoped",
+      "recording": "Nuthin' But A 'G' Thang",
+      "recordingMbid": "76cb6594-7641-4c58-99c3-0efadb85268d",
+      "release": "Death Row Dayz",
+      "score": 493776,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Dr Dre, Snoop Doggy Dog",
+      "proposalArtist": "Dr. Dre feat. Snoop Doggy Dogg",
       "trusted": true,
       "title": "Nuthin’ but a “G” Thang"
     },
@@ -87846,7 +89594,22 @@
       "id": 4626,
       "artist": "Erik Amarillo",
       "song": "Om sanningen ska fram",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Eric Amarillo",
+      "artistMbids": [
+        "7cc8ba06-4714-4b87-8264-70949d46d107"
+      ],
+      "recording": "Om sanningen ska fram (Vill du ligga med mig?)",
+      "recordingMbid": "633826f3-f01c-45b3-a95a-08dab32bf4c7",
+      "release": "Om sanningen ska fram (Vill du ligga med mig?)",
+      "score": 2462871,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Erik→Eric; full title",
+      "venueArtist": "Erik Amarillo",
+      "proposalArtist": "Eric Amarillo",
+      "trusted": true,
+      "title": "Om sanningen ska fram (Vill du ligga med mig?)"
     },
     {
       "postId": 49867,
@@ -88521,7 +90284,22 @@
       "id": 4662,
       "artist": "Foo Fighters",
       "song": "I'll be coming home next year",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Foo Fighters",
+      "artistMbids": [
+        "67f66c07-6e61-4026-ade5-7e782fad3a5d"
+      ],
+      "recording": "Next Year",
+      "recordingMbid": "262e97b2-aaa1-4256-a343-aa52c379c653",
+      "release": "There Is Nothing Left to Lose",
+      "score": 229230,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Lyric as title",
+      "venueArtist": "Foo Fighters",
+      "proposalArtist": "Foo Fighters",
+      "trusted": true,
+      "title": "Next Year"
     },
     {
       "postId": 50076,
@@ -90160,8 +91938,11 @@
       "recordingMbid": "c5f440c7-43da-47e7-a9b6-9c91a106a894",
       "release": "American Gangster",
       "score": 481808,
-      "how": "lead-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "feat Pharrell",
+      "venueArtist": "Jay Z feat Pharrell",
+      "proposalArtist": "JAY-Z",
       "trusted": true,
       "title": "I Know"
     },
@@ -90208,7 +91989,23 @@
       "id": 4750,
       "artist": "John Legend",
       "song": "Hey girl",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Estelle feat. John Legend",
+      "artistMbids": [
+        "4c7a5854-6b75-4623-a684-6a3d785d9015",
+        "75a72702-a5ef-4513-bca5-c5b944903546"
+      ],
+      "recording": "You Are",
+      "recordingMbid": "c5f97f17-285b-417b-bb21-257c9f019150",
+      "release": "Shine",
+      "score": 505155,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Hey girl was lyric",
+      "venueArtist": "John Legend",
+      "proposalArtist": "Estelle feat. John Legend",
+      "trusted": true,
+      "title": "You Are"
     },
     {
       "postId": 50736,
@@ -92992,7 +94789,22 @@
       "id": 4896,
       "artist": "Piano singalong",
       "song": "Happy Birthday",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Frank Sinatra",
+      "artistMbids": [
+        "197450cd-0124-4164-b723-3c22dd16494d"
+      ],
+      "recording": "Happy Birthday to You",
+      "recordingMbid": "7e4cb65b-9b56-453f-bb19-4544109f1134",
+      "release": "Pro Series Plus, Volume 137",
+      "score": 5626396,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Birthday singalong",
+      "venueArtist": "Piano singalong",
+      "proposalArtist": "Frank Sinatra",
+      "trusted": true,
+      "title": "Happy Birthday to You"
     },
     {
       "postId": 52175,
@@ -93132,7 +94944,24 @@
       "id": 4904,
       "artist": "Pras Michel, Obd & Mya",
       "song": "Ghetto superstar (duet)",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Pras Michel featuring Ol’ Dirty Bastard and introducing Mýa",
+      "artistMbids": [
+        "f607e1fd-4ae2-41c1-912d-4ad6e9eec279",
+        "d50548a0-3cfd-4d7a-964b-0aef6545d819",
+        "7c5e39c3-7645-4e37-968d-a4e45cd38c5d"
+      ],
+      "recording": "Ghetto Supastar (That Is What You Are)",
+      "recordingMbid": "e90aca5f-17ad-4107-a89b-c07b8454682f",
+      "release": "Ghetto Supastar",
+      "score": 203074,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full credit",
+      "venueArtist": "Pras Michel, Obd & Mya",
+      "proposalArtist": "Pras Michel featuring Ol’ Dirty Bastard and introducing Mýa",
+      "trusted": true,
+      "title": "Ghetto Supastar (That Is What You Are)"
     },
     {
       "postId": 52230,
@@ -94337,8 +96166,8 @@
       "score": 2324929,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
-      "title": "You Are My Number One (Eric Kupper Deep mix)"
+      "trusted": true,
+      "title": "You Are My Number One"
     },
     {
       "postId": 52826,
@@ -94346,16 +96175,20 @@
       "artist": "Snoop Dog & Justin Timberlake",
       "song": "Signs",
       "matched": true,
-      "artistCredit": "Snoop Dogg",
+      "artistCredit": "Snoop Dogg feat. Justin Timberlake",
       "artistMbids": [
-        "f90e8b26-9e52-4669-a5c9-e28529c47894"
+        "f90e8b26-9e52-4669-a5c9-e28529c47894",
+        "596ffa74-3d08-44ef-b113-765d43d12738"
       ],
       "recording": "Signs",
-      "recordingMbid": "e854db0c-b0e7-4e77-b255-5e98f5a6a6f9",
-      "release": "Live 8: One Day One Concert One World",
-      "score": 5392664,
-      "how": "title-first",
+      "recordingMbid": "1170e65c-96c8-437e-a393-49121f88886a",
+      "release": "Collaborations",
+      "score": 4888170,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Snoop Dog & Justin Timberlake",
+      "proposalArtist": "Snoop Dogg feat. Justin Timberlake",
       "trusted": true,
       "title": "Signs"
     },
@@ -94365,16 +96198,20 @@
       "artist": "Snoop Dog & Pharrell",
       "song": "Drop it like it's hot",
       "matched": true,
-      "artistCredit": "Snoop Dogg",
+      "artistCredit": "Snoop Dogg feat. Pharrell",
       "artistMbids": [
-        "f90e8b26-9e52-4669-a5c9-e28529c47894"
+        "f90e8b26-9e52-4669-a5c9-e28529c47894",
+        "149f91ef-1287-46da-9a8e-87fee02f1471"
       ],
-      "recording": "Drop It Like It’s Hot",
-      "recordingMbid": "3371ac20-d005-4a6f-addd-6eecf25b9f70",
-      "release": "Drop It Like It’s Hot",
-      "score": 4549203,
-      "how": "title-first",
+      "recording": "Drop It Like It's Hot",
+      "recordingMbid": "7563b364-e7d8-4f8b-9bf4-755f91489531",
+      "release": "Neptunes Instrumentals Part 3",
+      "score": 4863877,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Snoop Dog & Pharrell",
+      "proposalArtist": "Snoop Dogg feat. Pharrell",
       "trusted": true,
       "title": "Drop It Like It’s Hot"
     },
@@ -94550,8 +96387,8 @@
       "rewrites": [
         "annotation-stripped"
       ],
-      "trusted": false,
-      "title": "FM Jam Reprise"
+      "trusted": true,
+      "title": "FM (No Static at All)"
     },
     {
       "postId": 52905,
@@ -95532,8 +97369,8 @@
       "score": 5624086,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
-      "title": "Fight the Power, Pts 1 & 2"
+      "trusted": true,
+      "title": "Fight the Power, Parts 1 & 2"
     },
     {
       "postId": 53148,
@@ -96024,16 +97861,20 @@
       "artist": "Aerosmith And Run Dmc",
       "song": "Walk This Way",
       "matched": true,
-      "artistCredit": "Aerosmith",
+      "artistCredit": "Run‐D.M.C. feat. Aerosmith",
       "artistMbids": [
+        "5ecc3f72-20a6-47a0-8dc5-fb0b3dadeea0",
         "3d2b98e5-556f-4451-a3ff-c50ea18d57cb"
       ],
       "recording": "Walk This Way",
-      "recordingMbid": "84c487bc-7614-4c8f-87ec-a5a6e6903e8c",
-      "release": "Toys in the Attic",
-      "score": 10515,
-      "how": "lead-scoped",
+      "recordingMbid": "322a8ac9-6216-4dd9-b59c-11683450b8b6",
+      "release": "Walk This Way",
+      "score": 3585139,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Full 1986 credit",
+      "venueArtist": "Aerosmith And Run Dmc",
+      "proposalArtist": "Run‐D.M.C. feat. Aerosmith",
       "trusted": true,
       "title": "Walk This Way"
     },
@@ -98725,12 +100566,15 @@
       "artistMbids": [
         "3ebe18d1-dfb6-41eb-8447-4a7693f79d9a"
       ],
-      "recording": "High",
-      "recordingMbid": "ab5d1724-45ce-4133-8b24-d2070740f25f",
-      "release": "Postcards From Heaven",
-      "score": 178637,
-      "how": "lead-scoped",
+      "recording": "High (Itaal Shur's Beautiful Urban dub mix)",
+      "recordingMbid": "d4adc3ba-ae43-4f2b-a5e9-a6324799172f",
+      "release": "A Taste of the UK Music Scene, CD 1",
+      "score": 5630659,
+      "how": "version",
       "rewrites": [],
+      "proposed": "Drop inverted The",
+      "venueArtist": "Lighthouse Family, The",
+      "proposalArtist": "Lighthouse Family",
       "trusted": true,
       "title": "High"
     },
@@ -101106,7 +102950,23 @@
       "id": 5317,
       "artist": "Whitney Houston",
       "song": "Nobody Loves Me Like You",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Whitney Houston duet with Jermaine Jackson",
+      "artistMbids": [
+        "0307edfc-437c-4b48-8700-80680e66a228",
+        "ccbdc2ab-1055-44d5-8417-a6b4898bf91b"
+      ],
+      "recording": "Nobody Loves Me Like You Do",
+      "recordingMbid": "81a5cc14-2474-49b3-b6c8-b9832e19cd6d",
+      "release": "Whitney Houston",
+      "score": 5223,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full duet credit",
+      "venueArtist": "Whitney Houston",
+      "proposalArtist": "Whitney Houston duet with Jermaine Jackson",
+      "trusted": true,
+      "title": "Nobody Loves Me Like You Do"
     },
     {
       "postId": 53554,
@@ -101448,16 +103308,20 @@
       "artist": "Avicii Ft. Robbie Williams",
       "song": "The Days",
       "matched": true,
-      "artistCredit": "Avicii",
+      "artistCredit": "Avicii Feat. Robbie Williams",
       "artistMbids": [
-        "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5"
+        "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
+        "db4624cf-0e44-481e-a9dc-2142b833ec2f"
       ],
       "recording": "The Days",
-      "recordingMbid": "14c0942d-e311-4a6a-9361-136118521da5",
-      "release": "Stories",
-      "score": 726568,
-      "how": "lead-scoped",
+      "recordingMbid": "7b64707b-6854-4ed4-aba0-489f480b3285",
+      "release": "Hot Party Winter 2015",
+      "score": 5523378,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both credits",
+      "venueArtist": "Avicii Ft. Robbie Williams",
+      "proposalArtist": "Avicii feat. Robbie Williams",
       "trusted": true,
       "title": "The Days"
     },
@@ -102191,10 +104055,15 @@
       "recordingMbid": "9b386557-ba07-467d-95f9-843c2e4abad5",
       "release": "FUCT: The Lost Songs",
       "score": 4506282,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
-      "title": "My Songs Know What You Did In The Dark"
+      "how": "exact",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "proposed": "Full title",
+      "venueArtist": "Fall Out Boy",
+      "proposalArtist": "Fall Out Boy",
+      "trusted": true,
+      "title": "My Songs Know What You Did in the Dark (Light Em Up)"
     },
     {
       "postId": 49942,
@@ -102305,8 +104174,11 @@
       "recordingMbid": "e643ff71-e4a9-4554-b4f8-5ca85b5b5215",
       "release": "The Wrong Kind of War",
       "score": 753477,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Filatov & Karas remix",
+      "venueArtist": "Imany Ft. Filatov & Karas",
+      "proposalArtist": "Imany",
       "trusted": true,
       "title": "Don’t Be So Shy"
     },
@@ -103147,16 +105019,19 @@
       "artist": "Rembrandts, The",
       "song": "I'll Be There For You",
       "matched": true,
-      "artistCredit": "Rembrandts",
+      "artistCredit": "The Rembrandts",
       "artistMbids": [
         "9363f65f-64c6-4711-a86c-7cba56d9a456"
       ],
       "recording": "I’ll Be There for You",
-      "recordingMbid": "341c328b-9be1-46f8-a461-ec1e5bcee1b4",
-      "release": "Kiss FM Hits: Suosikkisi 80 & 90 Luvuilta",
-      "score": 5448450,
-      "how": "title-first",
+      "recordingMbid": "4672c57c-63a2-48d9-8759-70016d677aab",
+      "release": "L.P.",
+      "score": 129502,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Article",
+      "venueArtist": "Rembrandts, The",
+      "proposalArtist": "The Rembrandts",
       "trusted": true,
       "title": "I’ll Be There for You"
     },
@@ -103539,12 +105414,15 @@
       "artistMbids": [
         "99075985-0d80-4692-a15e-b16f78831792"
       ],
-      "recording": "One",
-      "recordingMbid": "0637055f-84ec-4634-97e6-410192cd4c4e",
-      "release": "One (Your Name)",
-      "score": 2449814,
-      "how": "lead-scoped",
+      "recording": "One (White Noise vs. Apocalypse remix)",
+      "recordingMbid": "5028afa2-57f4-4831-944d-e6f543dda31f",
+      "release": "Remixes",
+      "score": 5307836,
+      "how": "version",
       "rewrites": [],
+      "proposed": "feat Pharrell",
+      "venueArtist": "Swedish House Mafia And Pharrell",
+      "proposalArtist": "Swedish House Mafia",
       "trusted": true,
       "title": "One"
     },
@@ -105280,16 +107158,20 @@
       "artist": "Rudimental Ft James Arthur",
       "song": "Sun comes up",
       "matched": true,
-      "artistCredit": "Rudimental",
+      "artistCredit": "Rudimental feat. James Arthur",
       "artistMbids": [
-        "b09ced80-aa65-43c1-9aa7-58b1e982eada"
+        "b09ced80-aa65-43c1-9aa7-58b1e982eada",
+        "56f62fe8-d3a0-46e0-b5df-a64a8b4b4274"
       ],
       "recording": "Sun Comes Up",
-      "recordingMbid": "d99c8edc-1e86-4757-9aa7-e6dab8ca0744",
-      "release": "In the Summertime: Ultimate Summer Anthems",
-      "score": 5546672,
-      "how": "title-first",
+      "recordingMbid": "988190e4-2ac0-4a56-81b8-563c6ba4db49",
+      "release": "Toast to Our Differences",
+      "score": 805353,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Both",
+      "venueArtist": "Rudimental Ft James Arthur",
+      "proposalArtist": "Rudimental feat. James Arthur",
       "trusted": true,
       "title": "Sun Comes Up"
     },
@@ -106169,7 +108051,22 @@
       "id": 5577,
       "artist": "Creed",
       "song": "Stand with me",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Creed",
+      "artistMbids": [
+        "4b1a830b-0a1f-42e5-b8d5-1d6743912e99"
+      ],
+      "recording": "Stand Here With Me",
+      "recordingMbid": "c92e1159-16c0-48ad-a489-8229aad3268d",
+      "release": "Weathered",
+      "score": 274100,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Venue omitted Here",
+      "venueArtist": "Creed",
+      "proposalArtist": "Creed",
+      "trusted": true,
+      "title": "Stand Here With Me"
     },
     {
       "postId": 49141,
@@ -106689,7 +108586,22 @@
       "id": 5605,
       "artist": "Shawn Mendes",
       "song": "Nothing holding me back",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Shawn Mendes",
+      "artistMbids": [
+        "b7d92248-97e3-4450-8057-6fe06738f735"
+      ],
+      "recording": "There’s Nothing Holdin’ Me Back",
+      "recordingMbid": "d2555d82-571d-406c-8e96-21562753cebc",
+      "release": "Illuminate",
+      "score": 770991,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Full title",
+      "venueArtist": "Shawn Mendes",
+      "proposalArtist": "Shawn Mendes",
+      "trusted": true,
+      "title": "There’s Nothing Holdin’ Me Back"
     },
     {
       "postId": 52752,
@@ -106705,9 +108617,12 @@
       "recordingMbid": "b8d40bb6-1ccb-430d-aea2-1988b10183cc",
       "release": "Handwritten (Revisited)",
       "score": 735837,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Shawn Mendes",
+      "proposalArtist": "Shawn Mendes",
+      "trusted": true,
       "title": "I Know What You Did Last Summer"
     },
     {
@@ -107924,7 +109839,22 @@
       "id": 5669,
       "artist": "Drömhus",
       "song": "Fantasi",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Freestyle",
+      "artistMbids": [
+        "773efcd3-bdf4-43ac-9b6e-50a19db9aa91"
+      ],
+      "recording": "Fantasi",
+      "recordingMbid": "a5fcd35c-0d01-4583-8c86-d785316eca78",
+      "release": "Fantasi",
+      "score": 1985460,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Freestyle not Drömhus",
+      "venueArtist": "Drömhus",
+      "proposalArtist": "Freestyle",
+      "trusted": true,
+      "title": "Fantasi"
     },
     {
       "postId": 53388,
@@ -108442,18 +110372,23 @@
       "artist": "Freddie Bell",
       "song": "The Bell boys",
       "matched": true,
-      "artistCredit": "Freddie Bell & the Bellboys",
+      "artistCredit": "Freddie Bell and the Bell Boys",
       "artistMbids": [
         "dba406d9-1720-4603-9dd4-e16baaacef46"
       ],
-      "recording": "Go Go Go",
-      "recordingMbid": "603fe6d5-ed04-442e-86d2-85c04eeea311",
-      "release": "Rock ’n’ Roll Radio Australia 1957",
-      "score": 4542084,
-      "how": "loose",
-      "rewrites": [],
-      "trusted": false,
-      "title": "Go Go Go"
+      "recording": "Giddy Up a Ding Dong",
+      "recordingMbid": "cabffc13-5546-4acd-88e2-edb182b123d7",
+      "release": "Rock & Roll...All Flavors",
+      "score": 1898480,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "Venue put group in title field",
+      "venueArtist": "Freddie Bell",
+      "proposalArtist": "Freddie Bell & the Bellboys",
+      "trusted": true,
+      "title": "Giddy Up a Ding Dong"
     },
     {
       "postId": 50613,
@@ -108479,7 +110414,24 @@
       "id": 5698,
       "artist": "Grease Mega Mix",
       "song": "Grease MIX",
-      "matched": false
+      "matched": true,
+      "artistCredit": "John Travolta & Olivia Newton‐John",
+      "artistMbids": [
+        "94f4c61e-5cf3-4cba-ab3e-9bd5be99f6ab",
+        "10ccb5d8-f9d5-4954-9441-3419b522a214"
+      ],
+      "recording": "The Grease Megamix",
+      "recordingMbid": "e6171d6d-2db6-4e8a-83a1-e4292a784b63",
+      "release": "The Grease Megamix",
+      "score": 2251149,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Grease Mega Mix is category",
+      "from": "Grease",
+      "venueArtist": "Grease Mega Mix",
+      "proposalArtist": "John Travolta & Olivia Newton‐John",
+      "trusted": true,
+      "title": "The Grease Megamix"
     },
     {
       "postId": 50911,
@@ -108505,7 +110457,23 @@
       "id": 5700,
       "artist": "Marvin Gaye",
       "song": "Nothing like the real thing",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Marvin Gaye & Tammi Terrell",
+      "artistMbids": [
+        "afdb7919-059d-43c1-b668-ba1d265e7e42",
+        "ce4582b6-aee7-4da1-b841-3c619d4fb5a5"
+      ],
+      "recording": "Ain’t Nothing Like the Real Thing (The Rurals Cool mix)",
+      "recordingMbid": "45299d39-9807-43b1-8970-b059518d9f79",
+      "release": "Motown Remixed",
+      "score": 5388081,
+      "how": "version",
+      "rewrites": [],
+      "proposed": "Duet",
+      "venueArtist": "Marvin Gaye",
+      "proposalArtist": "Marvin Gaye & Tammi Terrell",
+      "trusted": true,
+      "title": "Ain’t Nothing Like the Real Thing"
     },
     {
       "postId": 51548,
@@ -109001,8 +110969,11 @@
       "recordingMbid": "159c9d87-a6f9-4722-87b6-20c307b5e0be",
       "release": "XXIVK Magic",
       "score": 758068,
-      "how": "lead-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Cardi remix; prefer Bruno Mars Finesse",
+      "venueArtist": "Bruno Mars ft Cardi B",
+      "proposalArtist": "Bruno Mars",
       "trusted": true,
       "title": "Finesse"
     },
@@ -109044,7 +111015,7 @@
       "rewrites": [
         "ampersand-spelled-out"
       ],
-      "trusted": false,
+      "trusted": true,
       "title": "Blood Sweat & Tears"
     },
     {
@@ -109116,13 +111087,13 @@
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "recording": "I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)",
-      "recordingMbid": "2c761688-4736-407b-9113-687f9c6d81b0",
-      "release": "Infinity on High",
-      "score": 463515,
+      "recording": "I’m Like a Lawyer… (Me & You) (Kevin Osmond remix) (WIP as of 12/20/21 version)",
+      "recordingMbid": "152dd5b4-cb9d-4ac5-b04f-9cfa6fc250d6",
+      "release": "Rarities, Unreleased Tracks, and Looks Toward the Future",
+      "score": 5268104,
       "how": "loose",
       "rewrites": [],
-      "trusted": false,
+      "trusted": true,
       "title": "I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)"
     },
     {
@@ -109387,7 +111358,23 @@
       "id": 5746,
       "artist": "High school musical",
       "song": "What time is",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The High School Musical Cast",
+      "artistMbids": [
+        "869b594f-c4f5-4747-ad57-cc9463fef491"
+      ],
+      "recording": "What Time Is It?",
+      "recordingMbid": "6cae8676-4b4a-49d6-b170-0fd34a034dec",
+      "release": "Twister Moves: High School Musical 2 Edition",
+      "score": 5241363,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "HSM2",
+      "from": "High School Musical 2",
+      "venueArtist": "High school musical",
+      "proposalArtist": "The High School Musical Cast",
+      "trusted": true,
+      "title": "What Time Is It?"
     },
     {
       "postId": 50369,
@@ -109601,9 +111588,12 @@
       "recordingMbid": "cb1bc23b-2904-42dd-aee6-6d12417e3cdc",
       "release": "From Under the Cork Tree",
       "score": 397439,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
+      "proposed": "Full title",
+      "venueArtist": "Fall out boy",
+      "proposalArtist": "Fall Out Boy",
+      "trusted": true,
       "title": "A Little Less Sixteen Candles, a Little More “Touch Me”"
     },
     {
@@ -110708,10 +112698,13 @@
       "recordingMbid": "2ab6fd32-ae11-43e6-8f4d-086e4bec2fc3",
       "release": "Finally Rich",
       "score": 2078126,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Lead match OK; keep Chief Keef",
+      "venueArtist": "Chief keef ft 50 cent",
+      "proposalArtist": "Chief Keef",
       "trusted": true,
-      "title": "Hate Bein' Sober"
+      "title": "Hate Bein’ Sober"
     },
     {
       "postId": 51080,
@@ -110767,10 +112760,13 @@
       "recordingMbid": "82a56563-aa5f-4b8a-9c5b-fa193d9246c7",
       "release": "Luv Is Rage 2",
       "score": 779318,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "XO TOUR Llif3"
+      "proposed": "Canonical",
+      "venueArtist": "Lil Uzi Vert",
+      "proposalArtist": "Lil Uzi Vert",
+      "trusted": true,
+      "title": "XO Tour Llif3"
     },
     {
       "postId": 50066,
@@ -110892,7 +112888,24 @@
       "id": 5823,
       "artist": "Donna Fargo",
       "song": "Happiest girl in the while U.S",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Donna Fargo",
+      "artistMbids": [
+        "9ce777de-7e3f-40fe-8c9e-415955fc49d8"
+      ],
+      "recording": "Happiest Girl in the Whole USA",
+      "recordingMbid": "0900ca78-9adc-4ae0-97ff-cbfec35de958",
+      "release": "Winners",
+      "score": 12881,
+      "how": "exact",
+      "rewrites": [
+        "title-article-dropped"
+      ],
+      "proposed": "Full title",
+      "venueArtist": "Donna Fargo",
+      "proposalArtist": "Donna Fargo",
+      "trusted": true,
+      "title": "The Happiest Girl in the Whole U.S.A."
     },
     {
       "postId": 49251,
@@ -110908,8 +112921,11 @@
       "recordingMbid": "253a3f80-8fa0-463a-8efa-ab78e40f5f01",
       "release": "Naked In The Rain",
       "score": 117640,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "With Phil Collins",
+      "venueArtist": "David Crosby ft Phil Collins",
+      "proposalArtist": "David Crosby",
       "trusted": true,
       "title": "Hero"
     },
@@ -111194,8 +113210,11 @@
       "recordingMbid": "6c367366-3203-40b6-a5db-8f265ad6c509",
       "release": "Rivers",
       "score": 2546962,
-      "how": "title-first",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "feat Nico & Vinz",
+      "venueArtist": "Thomas Jack ft Nico",
+      "proposalArtist": "Thomas Jack",
       "trusted": true,
       "title": "Rivers"
     },
@@ -111262,19 +113281,24 @@
       "artist": "High school musical",
       "song": "Were all in this together",
       "matched": true,
-      "artistCredit": "High School Musical",
+      "artistCredit": "The High School Musical Cast",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "869b594f-c4f5-4747-ad57-cc9463fef491"
       ],
-      "recording": "We’re All in This Together",
-      "recordingMbid": "8eb65771-0f8a-4068-b5c8-f822ba89a073",
-      "release": "FabricLive.39 (radio mix)",
-      "score": 4943142,
+      "recording": "We're All In This Together",
+      "recordingMbid": "d1a18ae6-e97c-475d-93d5-68de28e67ca8",
+      "release": "High School Musical",
+      "score": 4886355,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
+      "proposed": "Cast not [Disney]",
+      "from": "High School Musical",
+      "venueArtist": "High school musical",
+      "proposalArtist": "High School Musical Cast",
       "trusted": true,
-      "title": "We're All in This Together",
-      "from": "High School Musical"
+      "title": "We’re All in This Together"
     },
     {
       "postId": 49946,
