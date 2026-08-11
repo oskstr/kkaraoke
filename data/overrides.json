@@ -29,6 +29,14 @@
             "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
         },
         {
+            "postId": 50116,
+            "artist": "",
+            "sortAs": "Irish traditional",
+            "category": "Irish traditional",
+            "title": "Danny Boy",
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
+        },
+        {
             "postId": 50135,
             "category": "Birthday",
             "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
