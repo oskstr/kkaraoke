@@ -307,6 +307,401 @@
             "artist": "2Pac feat. K-Ci & JoJo",
             "title": "How Do U Want It",
             "why": "the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo"
+        },
+        {
+            "postId": 47938,
+            "artist": "Aloe Blacc",
+            "title": "I Need a Dollar",
+            "why": "doollar is Dollar with an extra o"
+        },
+        {
+            "postId": 48093,
+            "artist": "Aventura",
+            "title": "Obsesión",
+            "why": "Obsecion is Obsesión"
+        },
+        {
+            "postId": 48987,
+            "artist": "Chris Stapleton",
+            "title": "Tennessee Whiskey",
+            "why": "Whickey is Whiskey"
+        },
+        {
+            "postId": 48058,
+            "artist": "Ariana Grande & Victoria Monét",
+            "title": "Monopoly",
+            "why": "Monolpoly is Monopoly"
+        },
+        {
+            "postId": 51079,
+            "artist": "Kygo & Whitney Houston",
+            "title": "Higher Love",
+            "why": "Kygo's cover with Houston"
+        },
+        {
+            "postId": 49215,
+            "artist": "Jon Secada",
+            "title": "Angel",
+            "why": "Dana Secada is Jon Secada"
+        },
+        {
+            "postId": 48461,
+            "artist": "B.o.B & Bruno Mars",
+            "title": "Nothin' on You",
+            "why": "Bob is B.o.B"
+        },
+        {
+            "postId": 48514,
+            "artist": "Bobby \"Boris\" Pickett",
+            "title": "Monster Mash",
+            "why": "Picket is Pickett"
+        },
+        {
+            "postId": 53387,
+            "artist": "Ulf Neidemar",
+            "why": "Uffe is Ulf"
+        },
+        {
+            "postId": 53388,
+            "artist": "Ulf Neidemar",
+            "why": "Uffe is Ulf; duplicate listing"
+        },
+        {
+            "postId": 52692,
+            "artist": "Selena",
+            "title": "Dreaming of You",
+            "why": "Selina is Selena"
+        },
+        {
+            "postId": 52698,
+            "artist": "Sertab Erener",
+            "title": "Everyway That I Can",
+            "why": "Sertab; every way that l can"
+        },
+        {
+            "postId": 50496,
+            "artist": "Domenico Modugno",
+            "title": "Nel blu dipinto di blu",
+            "why": "Volare",
+            "from": "Italian"
+        },
+        {
+            "postId": 50497,
+            "artist": "Dean Martin",
+            "title": "That's Amore",
+            "why": "Dean Martin",
+            "from": "Italian"
+        },
+        {
+            "postId": 50502,
+            "artist": "Luciano Pavarotti",
+            "title": "O sole mio",
+            "why": "Neapolitan standard",
+            "from": "Italian"
+        },
+        {
+            "postId": 50503,
+            "artist": "Lucio Dalla",
+            "title": "Caruso",
+            "why": "Dalla",
+            "from": "Italian"
+        },
+        {
+            "postId": 50498,
+            "artist": "Riccardo Cocciante",
+            "title": "Bella senz'anima",
+            "why": "Cocciante",
+            "from": "Italian"
+        },
+        {
+            "postId": 50499,
+            "artist": "José Feliciano",
+            "title": "Che sarà",
+            "why": "Feliciano",
+            "from": "Italian"
+        },
+        {
+            "postId": 50500,
+            "artist": "Luciano Pavarotti",
+            "title": "Funiculì, Funiculà",
+            "why": "Neapolitan standard",
+            "from": "Italian"
+        },
+        {
+            "postId": 50501,
+            "artist": "Renato Carosone",
+            "title": "Malafemmena",
+            "why": "Carosone",
+            "from": "Italian"
+        },
+        {
+            "postId": 50495,
+            "artist": "Luciano Pavarotti",
+            "title": "Torna a Surriento",
+            "why": "Neapolitan standard",
+            "from": "Italian"
+        },
+        {
+            "postId": 50493,
+            "artist": "Elvis Presley",
+            "title": "Santa Lucia",
+            "why": "common karaoke version",
+            "from": "Italian"
+        },
+        {
+            "postId": 48637,
+            "artist": "Britney Spears",
+            "title": "I'm a Slave 4 U",
+            "why": "Slave for you"
+        },
+        {
+            "postId": 48618,
+            "artist": "Britney Spears",
+            "title": "Don't Go Knockin' on My Door",
+            "why": "Don't go knocking"
+        },
+        {
+            "postId": 48619,
+            "artist": "Britney Spears",
+            "title": "What You See (Is What You Get)",
+            "why": "What you see is what you get"
+        },
+        {
+            "postId": 48314,
+            "artist": "Beyoncé",
+            "title": "Single Ladies (Put a Ring on It)",
+            "why": "All the single ladies"
+        },
+        {
+            "postId": 49586,
+            "artist": "Glenn Frey",
+            "title": "The Heat Is On",
+            "why": "Glenn Frey, not the Eagles"
+        },
+        {
+            "postId": 49688,
+            "artist": "Lionel Richie",
+            "title": "Truly",
+            "why": "Lionel Richie, not Elton John"
+        },
+        {
+            "postId": 52398,
+            "artist": "Chris de Burgh",
+            "title": "The Lady in Red",
+            "why": "de Burgh, not Richard Marx"
+        },
+        {
+            "postId": 49347,
+            "artist": "Toni Braxton",
+            "title": "Un-Break My Heart",
+            "why": "Braxton, not Destiny's Child"
+        },
+        {
+            "postId": 52051,
+            "artist": "The Skyliners",
+            "title": "Since I Don't Have You",
+            "why": "Skyliners 1958"
+        },
+        {
+            "postId": 52052,
+            "artist": "Bob Dylan",
+            "title": "The Times They Are A-Changin'",
+            "why": "Dylan, not Simon & Garfunkel"
+        },
+        {
+            "postId": 47753,
+            "artist": "A*Teens",
+            "title": "Upside Down",
+            "why": "Bouncing off the ceiling is Upside Down"
+        },
+        {
+            "postId": 48128,
+            "artist": "Backstreet Boys",
+            "title": "If You Want It to Be Good Girl (Get Yourself a Bad Boy)",
+            "why": "full title"
+        },
+        {
+            "postId": 50010,
+            "artist": "Fleetwood Mac",
+            "title": "Sara",
+            "why": "Fleetwod is Fleetwood"
+        },
+        {
+            "postId": 49530,
+            "artist": "Jennifer Hudson",
+            "title": "One Night Only",
+            "why": "Dreamgirls film",
+            "from": "Dreamgirls"
+        },
+        {
+            "postId": 49531,
+            "artist": "Beyoncé",
+            "title": "Move Your Body",
+            "why": "Dreamgirls; may not match",
+            "from": "Dreamgirls"
+        },
+        {
+            "postId": 48006,
+            "artist": "Ethel Merman",
+            "title": "There's No Business Like Show Business",
+            "why": "Annie Get Your Gun",
+            "from": "Annie Get Your Gun"
+        },
+        {
+            "postId": 48007,
+            "artist": "Ethel Merman",
+            "title": "Anything You Can Do (I Can Do Better)",
+            "why": "Annie Get Your Gun",
+            "from": "Annie Get Your Gun"
+        },
+        {
+            "postId": 48737,
+            "artist": "Liza Minnelli",
+            "title": "Money, Money",
+            "why": "Cabaret",
+            "from": "Cabaret"
+        },
+        {
+            "postId": 48738,
+            "artist": "Liza Minnelli",
+            "title": "Cabaret",
+            "why": "title number; venue spelled Caberet",
+            "from": "Cabaret"
+        },
+        {
+            "postId": 50125,
+            "artist": "Idina Menzel",
+            "title": "Let It Go",
+            "why": "Frozen",
+            "from": "Frozen"
+        },
+        {
+            "postId": 50126,
+            "artist": "Kristen Bell, Agatha Lee Monn & Katie Lopez",
+            "title": "Do You Want to Build a Snowman?",
+            "why": "Frozen",
+            "from": "Frozen"
+        },
+        {
+            "postId": 48735,
+            "artist": "Dick Van Dyke",
+            "title": "Put On a Happy Face",
+            "why": "Bye Bye Birdie",
+            "from": "Bye Bye Birdie"
+        },
+        {
+            "postId": 48930,
+            "artist": "Elaine Paige & Barbara Dickson",
+            "title": "I Know Him So Well",
+            "why": "Chess",
+            "from": "Chess"
+        },
+        {
+            "postId": 48931,
+            "artist": "Linda Eder",
+            "title": "Anthem",
+            "why": "Chess",
+            "from": "Chess"
+        },
+        {
+            "postId": 49955,
+            "artist": "Topol",
+            "title": "If I Were a Rich Man",
+            "why": "Fiddler on the Roof",
+            "from": "Fiddler on the Roof"
+        },
+        {
+            "postId": 50207,
+            "artist": "Maurice Chevalier",
+            "title": "Thank Heaven for Little Girls",
+            "why": "Gigi",
+            "from": "Gigi"
+        },
+        {
+            "postId": 50794,
+            "artist": "Jason Donovan",
+            "title": "Any Dream Will Do",
+            "why": "Joseph and the Amazing Technicolor Dreamcoat",
+            "from": "Joseph"
+        },
+        {
+            "postId": 50330,
+            "artist": "Lin-Manuel Miranda",
+            "title": "Alexander Hamilton",
+            "why": "opening number; cast credit not in dump",
+            "from": "Hamilton"
+        },
+        {
+            "postId": 49647,
+            "artist": "Eddy Grant",
+            "title": "Gimme Hope Jo'anna",
+            "why": "Eddie is Eddy"
+        },
+        {
+            "postId": 48070,
+            "artist": "ATC",
+            "title": "Around the World (La La La La La)",
+            "why": "Atc casing; title"
+        },
+        {
+            "postId": 47957,
+            "artist": "Amy Macdonald",
+            "title": "This Is the Life",
+            "why": "McDonald is Macdonald"
+        },
+        {
+            "postId": 50182,
+            "artist": "Ben E. King",
+            "title": "I (Who Have Nothing)",
+            "why": "King popularised it; also Tom Jones — trying King"
+        },
+        {
+            "postId": 47972,
+            "artist": "Andrea Bocelli & Sarah Brightman",
+            "title": "Time to Say Goodbye",
+            "why": "Sara is Sarah"
+        },
+        {
+            "postId": 49014,
+            "artist": "Clair Marlo",
+            "title": "Till They Take My Heart Away",
+            "why": "Marlow is Marlo"
+        },
+        {
+            "postId": 48898,
+            "artist": "Chas & Dave",
+            "title": "Ain't No Pleasing You",
+            "why": "No pleasing you"
+        },
+        {
+            "postId": 47925,
+            "artist": "Jack White & Alicia Keys",
+            "title": "Another Way to Die",
+            "why": "dump credits Jack White first; venue had Alicia Keys & Jack White"
+        },
+        {
+            "postId": 48955,
+            "artist": "Chris Brown feat. Justin Bieber",
+            "title": "Next to You",
+            "why": "Next 2 you; dump uses feat."
+        },
+        {
+            "postId": 48324,
+            "artist": "Justin Timberlake & Beyoncé",
+            "title": "Until the End of Time",
+            "why": "Timberlake lead on the recording"
+        },
+        {
+            "postId": 49060,
+            "artist": "Common",
+            "title": "Go!",
+            "why": "Common; John Mayer features"
+        },
+        {
+            "postId": 48045,
+            "artist": "Ariana Grande feat. Mac Miller",
+            "title": "The Way",
+            "why": "Grand is Grande"
         }
     ]
 }

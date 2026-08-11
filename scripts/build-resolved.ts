@@ -314,9 +314,13 @@ async function main(): Promise<void> {
         }
 
         // Scoping a search to the lead can land on the lead's solo recording, so `Ashanti & Ja
-        // Rule – Happy` becomes Ashanti alone. The canonical names, year and genres are still
+        // Rule – Happy` becomes Ashanti alone. Title-first can do the same when it accepts a
+        // credit headed by the venue's lead. The canonical names, year and genres are still
         // a gain over the venue's string, so this is applied and noted rather than withheld.
-        if (match.how === "lead-scoped" && credited.length < match.artist.split(JOIN).length) {
+        if (
+            (match.how === "lead-scoped" || match.how === "title-first") &&
+            credited.length < match.artist.split(JOIN).length
+        ) {
             review.push({
                 ...pick(match),
                 reason: "matched through the lead artist, which named fewer artists than the venue did",

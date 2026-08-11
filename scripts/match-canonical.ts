@@ -81,21 +81,45 @@ const withoutAnnotation = (title: string): string => title.replace(/\s*[([][^()[
  * is the wrong title to show for a karaoke track, and dating that recording dates the remix.
  * Anything else in brackets is left alone, because `Exhale (Shoop Shoop)` and `The Ketchup
  * Song (Aserejé)` really are called that.
+ *
+ * `from` is here because MusicBrainz often folds the soundtrack credit into the recording
+ * title — `Girls Talk Boys (from "Ghostbusters" original motion picture soundtrack)` — and
+ * that is annotation, not the song's name. Without it, a prefix match grades as a version
+ * and then publishes the contaminated title.
  */
 const VERSION_MARKER =
-    /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single)\b/i;
+    /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from)\b/i;
+
+/**
+ * Pull the show or film out of a `(from "…")` / `(from … soundtrack)` suffix, when that is
+ * what the bracket is doing. Returns undefined for every other kind of bracket.
+ */
+function fromAnnotation(recording: string): string | undefined {
+    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
+    if (bracket?.[1] === undefined || !/\bfrom\b/i.test(bracket[1])) {
+        return undefined;
+    }
+    const raw = bracket[1]
+        .replace(/^\s*from\s+/i, "")
+        .replace(/\s*(?:original\s+)?(?:motion\s+picture\s+)?soundtrack\s*$/i, "")
+        .replace(/^[\s"'“”‘’]+|[\s"'“”‘’]+$/g, "")
+        .trim();
+    return raw.length > 0 ? raw : undefined;
+}
 
 /**
  * The title to publish, which is MusicBrainz's exact recording title unless that title only
- * differs by naming a master we did not ask about.
+ * differs by naming a master we did not ask about — or by naming the film it is from.
  */
-function titleToUse(recording: string): string {
+function titleToUse(recording: string): { title: string; from?: string } {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] === undefined || !VERSION_MARKER.test(bracket[1])) {
-        return recording;
+        return { title: recording };
     }
     const base = withoutAnnotation(recording);
-    return base.length > 0 ? base : recording;
+    const title = base.length > 0 ? base : recording;
+    const from = fromAnnotation(recording);
+    return from === undefined ? { title } : { title, from };
 }
 
 const LEADING_ARTICLE = /^(the|a|an)\s+/i;
@@ -193,12 +217,17 @@ function keysFor(artist: string, title: string): { key: string; rewrites: Rewrit
  * almost certainly the same song, two trailing letters is almost certainly a spelling
  * variant, and anything else may be a coincidence — `Secrets` reaches Madonna's
  * `Secret (Some Bizarre mix)` that way.
+ *
+ * `title-first` is the pass that starts from an exact title and asks whether the credit is
+ * close enough to the venue's artist string. It is weaker than scoping by a known artist
+ * id, but it is what reaches a misspelled artist who has no other trusted song yet —
+ * `Zara Larssn`, `Colby Caillat`, `Nanne Grönwall`.
  */
-const HOWS = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "near", "loose"] as const;
+const HOWS = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "title-first", "near", "loose"] as const;
 type How = (typeof HOWS)[number];
 
 /** All but `loose`, which is the bucket for matches that could be coincidence. */
-const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "near"];
+const TRUSTED: readonly How[] = ["exact", "version", "spelling", "artist-scoped", "lead-scoped", "title-first", "near"];
 
 /**
  * Whether two keys are within `limit` edits of each other, abandoning the calculation as
@@ -261,6 +290,74 @@ function transposed(a: string, b: string): boolean {
 /** Close enough to be the same title, given how much room a key of this length has. */
 const nearlySame = (candidate: string, key: string): boolean =>
     tolerance(key) === 0 ? transposed(candidate, key) : within(candidate, key, tolerance(key));
+
+/**
+ * Whether a dump credit is close enough to the venue's artist string to accept a title-first
+ * match. Exact and near-edit matches count, as do a lead that heads the credit, and a credit
+ * that is a prefix of the venue's name (`Nanne` for `Nanne Grönwall` — MusicBrainz files her
+ * under the mononym and keeps Grönvall only as disambiguation, so the dump never says the
+ * surname).
+ */
+function artistCloseEnough(venue: string, credit: string): boolean {
+    const venueKey = combinedLookup(venue);
+    const creditKey = combinedLookup(credit);
+    if (venueKey.length === 0 || creditKey.length === 0) {
+        return false;
+    }
+    if (venueKey === creditKey || nearlySame(venueKey, creditKey)) {
+        return true;
+    }
+    // Mononym / longer-name: both sides long enough that a shared prefix is not `A` vs `ABBA`.
+    if (
+        venueKey.length >= 5 &&
+        creditKey.length >= 5 &&
+        (venueKey.startsWith(creditKey) || creditKey.startsWith(venueKey))
+    ) {
+        return true;
+    }
+    const lead = leadArtist(venue);
+    if (lead !== undefined) {
+        const leadKey = combinedLookup(lead);
+        if (leadKey.length === 0) {
+            return false;
+        }
+        if (creditKey === leadKey || creditKey.startsWith(leadKey) || nearlySame(creditKey, leadKey)) {
+            return true;
+        }
+        const creditLead = leadArtist(credit) ?? credit.split(",")[0]?.trim() ?? credit;
+        const creditLeadKey = combinedLookup(creditLead);
+        if (creditLeadKey.length > 0 && (leadKey === creditLeadKey || nearlySame(leadKey, creditLeadKey))) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Short titles collide constantly (`Go`, `Stay`, `Hero`), so a title-first accept there
+ * needs the artist itself to be an exact or near match, not merely a lead prefix.
+ */
+function acceptTitleFirst(venue: string, credit: string, titleKey: string): boolean {
+    if (!artistCloseEnough(venue, credit)) {
+        return false;
+    }
+    if (titleKey.length >= 8) {
+        return true;
+    }
+    const venueKey = combinedLookup(venue);
+    const creditKey = combinedLookup(credit);
+    if (venueKey === creditKey || nearlySame(venueKey, creditKey)) {
+        return true;
+    }
+    const lead = leadArtist(venue);
+    if (lead === undefined) {
+        return false;
+    }
+    const creditLead = leadArtist(credit) ?? credit.split(",")[0]?.trim() ?? credit;
+    const leadKey = combinedLookup(lead);
+    const creditLeadKey = combinedLookup(creditLead);
+    return leadKey.length > 0 && (leadKey === creditLeadKey || nearlySame(leadKey, creditLeadKey));
+}
 
 interface Row {
     artistCredit: string;
@@ -531,13 +628,23 @@ async function main(): Promise<void> {
     // `P!nk` never match a combined key, but their other songs did, so the artist is
     // known and the title alone is enough to place the rest.
     const mbidsByArtist = new Map<string, Set<string>>();
+    const remember = (artistKey: string, mbids: Iterable<string>): void => {
+        const set = mbidsByArtist.get(artistKey) ?? new Set<string>();
+        for (const mbid of mbids) set.add(mbid);
+        mbidsByArtist.set(artistKey, set);
+    };
     for (const song of catalogue.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
-        const key = combinedLookup(song.artist);
-        const set = mbidsByArtist.get(key) ?? new Set<string>();
-        for (const mbid of match.artistMbids) set.add(mbid);
-        mbidsByArtist.set(key, set);
+        remember(combinedLookup(song.artist), match.artistMbids);
+        // A collaboration matched under its full venue string still identifies its lead:
+        // `Clean Bandit feat. Sean Paul & Anne-Marie` is how we learn who Clean Bandit is,
+        // and without that, `Clean Bandit ft Zara Larssn` has nobody to scope by.
+        const lead = leadArtist(song.artist);
+        const leadMbid = match.artistMbids[0];
+        if (lead !== undefined && leadMbid !== undefined) {
+            remember(combinedLookup(lead), [leadMbid]);
+        }
     }
 
     const byTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
@@ -590,29 +697,145 @@ async function main(): Promise<void> {
         console.log(`  recovered ${best.size - afterFirst} more songs`);
     }
 
-    // A third pass, for the songs whose artist we can reach but whose title we cannot. The
+    // A title-first pass, for artists the earlier passes cannot reach at all: the venue's
+    // only song by them is misspelled (`Zara Larssn`, `Colby Caillat`, `Alannah Miles`), or
+    // MusicBrainz files them under a mononym the dump does not alias (`Nanne`). Fuzzy-matching
+    // every artist credit in the dump would be expensive; anchoring on an exact title keeps
+    // the search space to the rows that share that title, then asking whether the credit is
+    // reasonably close.
+    const beforeTitleFirst = best.size;
+    const titleFirst = new Map<string, { postId: number; artist: string }[]>();
+    for (const song of catalogue.songs) {
+        if (best.has(song.postId)) continue;
+        for (const title of new Set([song.song, withoutAnnotation(song.song)])) {
+            const key = combinedLookup(title);
+            if (key.length < 4) continue;
+            const entry = { postId: song.postId, artist: song.artist };
+            const existing = titleFirst.get(key);
+            if (existing === undefined) titleFirst.set(key, [entry]);
+            else existing.push(entry);
+        }
+    }
+
+    if (titleFirst.size > 0) {
+        console.log(`pass 3: ${titleFirst.size} titles looking for a close-enough artist credit`);
+        const tails = affixIndex(titleFirst.keys(), "tail");
+        await scan(values.csv, (key, line) => {
+            for (const titleKey of tails(key)) {
+                const entries = titleFirst.get(titleKey);
+                if (entries === undefined) continue;
+                let row: Row | undefined;
+                for (const entry of entries) {
+                    if (best.has(entry.postId)) continue;
+                    row ??= toRow(line);
+                    if (row === undefined) return;
+                    // Exact title only — the point of anchoring. Annotation-stripped equals
+                    // count too, so a soundtrack suffix on MusicBrainz's side does not block us.
+                    const recordingKey = combinedLookup(row.recording);
+                    const bareKey = combinedLookup(withoutAnnotation(row.recording));
+                    if (recordingKey !== titleKey && bareKey !== titleKey) continue;
+                    if (!acceptTitleFirst(entry.artist, row.artistCredit, titleKey)) continue;
+                    consider({ postId: entry.postId, rank: 0, rewrites: [] }, "title-first", row);
+                }
+            }
+        });
+        console.log(`  recovered ${best.size - beforeTitleFirst} more songs`);
+    }
+
+    // Title-first may have just identified artists the earlier scoped pass could not see —
+    // Kygo only appeared as `Kygo Ft. …` until Firestone matched — so a second scoped pass
+    // places the rest of their catalogue (`Kygo – Higher love`) now that the lead is known.
+    const beforeRescope = best.size;
+    const mbidsAfterTitle = new Map<string, Set<string>>();
+    const rememberAfter = (artistKey: string, mbids: Iterable<string>): void => {
+        const set = mbidsAfterTitle.get(artistKey) ?? new Set<string>();
+        for (const mbid of mbids) set.add(mbid);
+        mbidsAfterTitle.set(artistKey, set);
+    };
+    for (const song of catalogue.songs) {
+        const match = best.get(song.postId);
+        if (match === undefined || !match.trusted) continue;
+        rememberAfter(combinedLookup(song.artist), match.artistMbids);
+        const lead = leadArtist(song.artist);
+        const leadMbid = match.artistMbids[0];
+        if (lead !== undefined && leadMbid !== undefined) {
+            rememberAfter(combinedLookup(lead), [leadMbid]);
+        }
+        // A title-first hit on a misspelled solo string (`Rozallo` → Rozalla) also teaches us
+        // the credit's own name, so later songs filed under the canonical spelling can find it.
+        if (match.how === "title-first" && match.artistMbids[0] !== undefined) {
+            rememberAfter(combinedLookup(match.artistCredit), match.artistMbids);
+        }
+    }
+    const rescopeByTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
+    for (const song of catalogue.songs) {
+        if (best.has(song.postId)) continue;
+        const own = mbidsAfterTitle.get(combinedLookup(song.artist));
+        const lead = leadArtist(song.artist);
+        const viaLead = own === undefined || own.size === 0;
+        const mbids = viaLead ? (lead === undefined ? undefined : mbidsAfterTitle.get(combinedLookup(lead))) : own;
+        if (mbids === undefined || mbids.size === 0) continue;
+        for (const title of new Set([song.song, withoutAnnotation(song.song)])) {
+            const key = combinedLookup(title);
+            if (key.length === 0) continue;
+            const entry = { postId: song.postId, mbids, viaLead };
+            const existing = rescopeByTitle.get(key);
+            if (existing === undefined) rescopeByTitle.set(key, [entry]);
+            else existing.push(entry);
+        }
+    }
+    if (rescopeByTitle.size > 0) {
+        console.log(`pass 3b: ${rescopeByTitle.size} titles re-scoped to artists title-first identified`);
+        const tails = affixIndex(rescopeByTitle.keys(), "tail");
+        await scan(values.csv, (key, line) => {
+            for (const titleKey of tails(key)) {
+                const entries = rescopeByTitle.get(titleKey);
+                if (entries === undefined) continue;
+                let row: Row | undefined;
+                for (const entry of entries) {
+                    if (best.has(entry.postId)) continue;
+                    row ??= toRow(line);
+                    if (row === undefined) return;
+                    if (combinedLookup(row.recording) !== titleKey) continue;
+                    const credited = entry.viaLead ? row.artistMbids.slice(0, 1) : row.artistMbids;
+                    if (!credited.some((mbid) => entry.mbids.has(mbid))) continue;
+                    consider(
+                        { postId: entry.postId, rank: 0, rewrites: [] },
+                        entry.viaLead ? "lead-scoped" : "artist-scoped",
+                        row,
+                    );
+                }
+            }
+        });
+        console.log(`  recovered ${best.size - beforeRescope} more songs`);
+    }
+
+    // A fourth pass, for the songs whose artist we can reach but whose title we cannot. The
     // venue misspells titles as well as artists — `Wannabee`, `Fleetwod mac` — and a typo
     // is invisible to a key comparison however the key is built. Scoped to the artist's own
     // recordings and bounded by how far a key of that length may stray, a near match is
     // safe in a way that a global fuzzy search would not be.
-    const beforeThird = best.size;
+    const beforeNear = best.size;
     const creditsByArtistKey = new Map<string, { credits: Set<string>; mbids: Set<string> }>();
+    const rememberCredits = (artistKey: string, credit: string, mbids: Iterable<string>): void => {
+        const entry = creditsByArtistKey.get(artistKey) ?? { credits: new Set<string>(), mbids: new Set<string>() };
+        entry.credits.add(combinedLookup(credit));
+        for (const mbid of mbids) entry.mbids.add(mbid);
+        creditsByArtistKey.set(artistKey, entry);
+    };
     for (const song of catalogue.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
-        const key = combinedLookup(song.artist);
-        const entry = creditsByArtistKey.get(key) ?? { credits: new Set<string>(), mbids: new Set<string>() };
-        entry.credits.add(combinedLookup(match.artistCredit));
-        for (const mbid of match.artistMbids) entry.mbids.add(mbid);
-        creditsByArtistKey.set(key, entry);
+        rememberCredits(combinedLookup(song.artist), match.artistCredit, match.artistMbids);
+        const lead = leadArtist(song.artist);
+        const leadMbid = match.artistMbids[0];
+        if (lead !== undefined && leadMbid !== undefined) {
+            rememberCredits(combinedLookup(lead), match.artistCredit, [leadMbid]);
+        }
     }
 
     const nearWanted = new Map<string, { postId: number; titleKey: string; mbids: Set<string> }[]>();
-    for (const song of catalogue.songs) {
-        if (best.has(song.postId)) continue;
-        const artistKey = combinedLookup(song.artist);
-        // The artist string may itself be misspelled, so reach for the trusted spellings
-        // that are within an edit or two of it as well as for an exact match.
+    const addNear = (artistKey: string, postId: number, titleKey: string): void => {
         const spelled = creditsByArtistKey.get(artistKey);
         const slack = tolerance(artistKey);
         const reachable =
@@ -623,22 +846,32 @@ async function main(): Promise<void> {
                   : [...creditsByArtistKey.entries()]
                         .filter(([key]) => within(key, artistKey, slack))
                         .map(([, entry]) => entry);
-        const titleKey = combinedLookup(withoutAnnotation(song.song));
-        // A key too short for an edit is still worth reaching for on a transposition alone.
-        if (titleKey.length < 4) continue;
         for (const entry of reachable) {
             for (const credit of entry.credits) {
                 const bucket = nearWanted.get(credit);
-                const wantedEntry = { postId: song.postId, titleKey, mbids: entry.mbids };
+                const wantedEntry = { postId, titleKey, mbids: entry.mbids };
                 if (bucket === undefined) nearWanted.set(credit, [wantedEntry]);
                 else bucket.push(wantedEntry);
             }
+        }
+    };
+    for (const song of catalogue.songs) {
+        if (best.has(song.postId)) continue;
+        const titleKey = combinedLookup(withoutAnnotation(song.song));
+        // A key too short for an edit is still worth reaching for on a transposition alone.
+        if (titleKey.length < 4) continue;
+        addNear(combinedLookup(song.artist), song.postId, titleKey);
+        // Collaborations whose lead we know but whose title is misspelled (`Monolpoly`,
+        // `Next 2 you`) never reach the lead through the full artist string.
+        const lead = leadArtist(song.artist);
+        if (lead !== undefined) {
+            addNear(combinedLookup(lead), song.postId, titleKey);
         }
     }
 
     if (nearWanted.size > 0) {
         const songsReached = new Set([...nearWanted.values()].flat().map((entry) => entry.postId)).size;
-        console.log(`pass 3: ${songsReached} songs whose artist we know but whose title did not match`);
+        console.log(`pass 4: ${songsReached} songs whose artist we know but whose title did not match`);
         const credits = affixIndex(nearWanted.keys(), "head");
         await scan(values.csv, (key, line) => {
             for (const credit of credits(key)) {
@@ -656,7 +889,7 @@ async function main(): Promise<void> {
                 }
             }
         });
-        console.log(`  recovered ${best.size - beforeThird} more songs`);
+        console.log(`  recovered ${best.size - beforeNear} more songs`);
     }
 
     const results = catalogue.songs.map((song) => {
@@ -670,7 +903,10 @@ async function main(): Promise<void> {
         const placeholder = /^\[.*\]$/.test(match.artistCredit);
         // `recording` stays MusicBrainz's own title; `title` is the one to publish and to
         // date, which differs only where the match landed on a particular master.
-        const title = titleToUse(match.recording);
+        const published = titleToUse(match.recording);
+        // A proposal's `from` wins over one extracted from the recording title: the proposer
+        // is naming the show the venue filed under, which is the one worth searching for.
+        const from = match.from ?? published.from;
         return {
             postId: song.postId,
             id: song.id,
@@ -678,7 +914,8 @@ async function main(): Promise<void> {
             song: song.song,
             matched: true as const,
             ...rest,
-            title,
+            title: published.title,
+            ...(from === undefined ? {} : { from }),
             ...(placeholder ? { placeholder: true as const, trusted: false } : {}),
         };
     });

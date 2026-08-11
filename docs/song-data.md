@@ -509,21 +509,41 @@ wrong, because those are different jobs, and within that by the venue's artist s
 one decision about `Finsk musik` settles thirty-nine songs and one about `Rozallo` settles one. Each row carries
 the `postId` a proposal is keyed by and the `id` on the wall.
 
-460 songs remain, and only a minority of them are string problems:
+Most of what used to look like “obvious typos of famous artists” in that queue were real matching gaps, not
+judgement failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit because the lead was only known from
+other collaborations, `Nanne Grönwall` is filed by MusicBrainz as the mononym `Nanne`, and `Colby Caillat` has no
+other trusted song to fuzzy-match from. A title-first pass, lead indexing from matched collaborations, and a
+second scoped pass after title-first now clear those. The queue is down from 460 to **317**:
 
-| Songs | What it is                                                                                                                                                                              |
-| ----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   308 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15) — categories used where a performer should be, which want the same treatment as the shows below. |
-|    83 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                                                  |
-|    27 | A prefix match too weak to apply.                                                                                                                                                       |
-|    26 | Matched through the lead artist, with a collaborator dropped.                                                                                                                           |
-|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                |
-|     3 | Credited to a namesake.                                                                                                                                                                 |
+| Songs | What it is                                                                                                                                              |
+| ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   157 | The artist string is not an artist. `Finsk musik` (39) and `Julsång` (19) still dominate; Italian and several shows were proposed and mostly confirmed. |
+|    64 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                  |
+|    53 | Matched through the lead artist (or title-first via the lead), with a collaborator dropped.                                                             |
+|    27 | A prefix match too weak to apply.                                                                                                                       |
+|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                |
+|     3 | Credited to a namesake.                                                                                                                                 |
 
-The 83 are the interesting group and the reason the review reasons distinguish them. No amount of
-better string matching reaches them, because the strings are not wrong — the attribution is.
-Fixing one means identifying the song some other way and then overruling the venue, which is what
-the proposal layer below is for.
+The interesting residual group is still wrong attribution — the strings are fine, the performer is not — which is
+what the proposal layer below is for.
+
+## Titles that name the film they came from
+
+A prefix match onto `Girls Talk Boys (from "Ghostbusters" original motion picture soundtrack)` was grading as a
+version match and then publishing the soundtrack annotation as the title. `from` is now treated as a version
+marker alongside mix/remix/live, so the published title is `Girls Talk Boys` and the film is recorded in `from`.
+
+## Title-first, for artists with no other trusted song
+
+Pass 2 can only scope by an artist it has already identified. A misspelled solo artist with one song —
+`Alannah Miles`, `Colby Caillat`, `Art Garfunkle` — never gets there. The title-first pass starts from an exact
+title and asks whether the dump credit is close enough to the venue's artist string (edit distance, shared
+prefix for mononyms like `Nanne`, or a lead that heads the credit). Short titles stay stricter, because `Go` and
+`Stay` collide constantly.
+
+Matched collaborations now also teach their lead: once `Clean Bandit feat. Sean Paul & Anne-Marie` matches,
+`Clean Bandit ft Zara Larssn` can be lead-scoped. After title-first identifies new artists, a second scoped pass
+picks up the rest of their catalogue — that is how `Kygo – Higher love` lands once Firestone has named Kygo.
 
 ## Who works the review queue
 
@@ -683,18 +703,24 @@ Done, and live on the site:
 6. **Reach a collaboration through its lead**, where the venue wrote several artists into one string. 95 songs, and
    it corrects the venue inside the collaboration too: `Wyclef Sean` is Wyclef Jean.
 7. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
-   confirmed and applied; the 6 that were not changed nothing.
+   confirmed and applied; the 6 that were not changed nothing. A later pass added further proposals for remaining
+   review-queue songs (title typos, wrong attributions, shows filed as artists); the dump confirmed most of them.
+8. **Title-first and re-scope.** Exact title plus a close-enough artist credit recovers misspelled artists with no
+   other trusted song; indexing leads from matched collaborations and re-scoping after title-first recovers the
+   rest of those artists' catalogues. Soundtrack `(from …)` suffixes are stripped from published titles.
 
-That places 5589 of 5915 songs: 4098 corrected titles, 1383 corrected artist names, 4757 with genres, 5436 dated.
+That places the large majority of the catalogue: corrected titles and artists, genres, and dates where the dump
+and web service agree. Regenerated counts live in `data/review.md` and the matcher's own summary.
 
 Still to do:
 
-8. Work [`data/review.md`](../data/review.md), biggest group first, into `data/proposals.json` where the dump can
-   confirm a guess and into `data/overrides.json` where it cannot.
-9. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
-   phrase rather than by parsing the flattened credit line the dump provides.
-10. Works and composers, for the songs where the writer matters more than the performer.
-11. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
+9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — especially `Finsk musik` and
+   `Julsång`, which want a category rather than an invented performer — into `data/proposals.json` where the dump
+   can confirm a guess and into `data/overrides.json` where it cannot.
+10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
+    phrase rather than by parsing the flattened credit line the dump provides.
+11. Works and composers, for the songs where the writer matters more than the performer.
+12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
