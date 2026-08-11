@@ -100,29 +100,49 @@ const HAS_LATIN = /\p{Script=Latin}/u;
  * When the matched credit line still uses an older or more familiar alias (`Kanye West` on a
  * 2008 recording whose artist is now filed as `Ye`), prefer that alias so the page names the
  * act the way the recording does.
+ *
+ * Stylized *letters* (`JAŸ-Z`) still prefer a plain alias (`Jay-Z`). Stylized *punctuation*
+ * (`a‐ha`, `A★Teens`) must not — that wrongly became `A Ha` / `A Teens`.
  */
-/** Fancy hyphens / accents folded so `Jay‐Z` and `JAŸ-Z` can be ranked as plain Latin. */
-const plainLatin = (value: string): string =>
-    value
-        .normalize("NFKD")
-        .replace(/\p{M}+/gu, "")
-        .replace(/[\u2010-\u2015\u2212]/g, "-");
+/** Fancy hyphens folded to ASCII so `a‐ha` can meet `a-ha` without changing the letters. */
+const normalizeFancyHyphens = (value: string): string => value.replace(/[\u2010-\u2015\u2212]/g, "-");
 
-const isPlainAscii = (value: string): boolean => /^[\x00-\x7F]+$/.test(plainLatin(value));
+const isRawAscii = (value: string): boolean => /^[\x00-\x7F]+$/.test(value);
 
-/** Prefer `Jay-Z` / `Jay Z` over `Jay - Z` or stylized `JAŸ-Z`. */
+/**
+ * Non-ASCII that is a letter (or decomposes to one): `Ÿ` yes, `★` / `‐` / `°` no. Those
+ * trademarks stay; only letter stylization seeks a plain alias.
+ */
+function hasStylizedLetters(value: string): boolean {
+    for (const ch of value) {
+        if (isRawAscii(ch)) continue;
+        if (/\p{Letter}/u.test(ch)) return true;
+        const base = ch.normalize("NFKD").replace(/\p{M}+/gu, "");
+        if ([...base].some((part) => /\p{Letter}/u.test(part))) return true;
+    }
+    return false;
+}
+
+/** Prefer `Jay-Z` / `a-ha` / `A★Teens` over `Jay Z` / `A Ha` / `A Teens`. */
 function preferDisplayForm(a: string, b: string, fragment?: string): number {
+    const aHyphen = normalizeFancyHyphens(a);
+    const bHyphen = normalizeFancyHyphens(b);
     return (
         // Prefer the fragment's own spelling when it is one of the options.
         (fragment !== undefined && b === fragment ? 1 : 0) - (fragment !== undefined && a === fragment ? 1 : 0) ||
-        // Prefer plain ASCII (Jay-Z) over stylized primaries (JAŸ-Z) and unicode hyphens.
-        (isPlainAscii(b) ? 1 : 0) - (isPlainAscii(a) ? 1 : 0) ||
+        // Keep symbolic stylization (`A★Teens`, `98°`) rather than an alias that dropped it —
+        // before hyphen preference, or `A-Teens` beats the real primary.
+        (/[★☆°]/.test(b) ? 1 : 0) - (/[★☆°]/.test(a) ? 1 : 0) ||
+        // Trademark hyphenation beats a spaced alias (`a-ha` over `A Ha`, `Jay-Z` over `Jay Z`).
+        (/^[^\s]+-[^\s]+$/.test(bHyphen) ? 1 : 0) - (/^[^\s]+-[^\s]+$/.test(aHyphen) ? 1 : 0) ||
+        // Plain ASCII beats stylized letters (`Jay-Z` over `JAŸ-Z`), not fancy hyphens alone.
+        (isRawAscii(bHyphen) && hasStylizedLetters(a) ? 1 : 0) -
+            (isRawAscii(aHyphen) && hasStylizedLetters(b) ? 1 : 0) ||
         // Prefer `Jay-Z` over the odd `Jay - Z` alias.
         (/\s-\s/.test(a) ? 1 : 0) - (/\s-\s/.test(b) ? 1 : 0) ||
-        // Prefer spaced forms (Kanye West) over jammed ones (KanYeWest).
-        (b.includes(" ") && !/\s-\s/.test(b) ? 1 : 0) - (a.includes(" ") && !/\s-\s/.test(a) ? 1 : 0) ||
-        // Prefer a real hyphenated trademark form (Jay-Z) over a spaced one (Jay Z), when both ASCII.
-        (/^[^\s]+-[^\s]+$/.test(b) ? 1 : 0) - (/^[^\s]+-[^\s]+$/.test(a) ? 1 : 0) ||
+        // Spaced readable forms only when neither side is hyphenated (`Kanye West` vs `KanYeWest`).
+        (!aHyphen.includes("-") && !bHyphen.includes("-") && b.includes(" ") ? 1 : 0) -
+            (!aHyphen.includes("-") && !bHyphen.includes("-") && a.includes(" ") ? 1 : 0) ||
         a.length - b.length
     );
 }
@@ -147,7 +167,7 @@ function displayName(artist: Artist, credit?: string, venueArtist?: string): str
                 .filter((option) => nameKey(option) === fragmentKey)
                 .sort((a, b) => preferDisplayForm(a, b, fragment))[0];
             if (exact !== undefined) {
-                return exact;
+                return normalizeFancyHyphens(exact);
             }
         }
     }
@@ -157,14 +177,18 @@ function displayName(artist: Artist, credit?: string, venueArtist?: string): str
         return artist.name;
     }
     if (HAS_LATIN.test(artist.name)) {
-        // Stylized Latin primaries (JAŸ-Z) still prefer a plain ASCII alias when one exists.
-        if (!isPlainAscii(artist.name)) {
+        // Stylized Latin *letters* (JAŸ-Z) prefer a plain ASCII alias. Stars and fancy hyphens
+        // stay with the primary (`A★Teens`, `a‐ha`).
+        if (hasStylizedLetters(artist.name)) {
             const ascii = [...(artist.aliases ?? [])]
-                .filter((alias) => isPlainAscii(alias) && HAS_LATIN.test(alias) && nameKey(alias) === nameKey(artist.name))
+                .filter(
+                    (alias) =>
+                        isRawAscii(alias) && HAS_LATIN.test(alias) && nameKey(alias) === nameKey(artist.name),
+                )
                 .sort((a, b) => preferDisplayForm(a, b))[0];
             if (ascii !== undefined) return ascii;
         }
-        return artist.name;
+        return normalizeFancyHyphens(artist.name);
     }
     return (artist.aliases ?? []).find((alias) => HAS_LATIN.test(alias)) ?? artist.name;
 }
@@ -690,7 +714,7 @@ function proposalsReview(
     const cell = (value: string): string => value.replace(/\|/g, "\\|").replace(/\n/g, " ");
     const shown = (value: string | undefined, fallback: string): string =>
         value === undefined ? fallback : value === "" ? "*(empty)*" : value;
-    const dumpStatus = (proposal: ProposalRecord, venue: MatchRecord | undefined): string => {
+    const dumpStatus = (_proposal: ProposalRecord, venue: MatchRecord | undefined): string => {
         if (venue === undefined || !venue.matched) return "no";
         if (venue.proposed !== undefined) return "yes";
         // Proposal exists but another key won — still applied for from/language/title overlay

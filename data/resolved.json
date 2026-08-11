@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T18:03:10.918Z",
+  "generatedAt": "2026-08-11T18:27:05.008Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -742,7 +742,7 @@
       "postId": 50269,
       "from": "Grease",
       "language": "eng",
-      "artist": "John Travolta, Olivia Newton‐John",
+      "artist": "John Travolta, Olivia Newton-John",
       "sortAs": "Travolta, John",
       "title": "Summer Nights",
       "artistMbids": [
@@ -756,7 +756,7 @@
         },
         {
           "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
-          "name": "Olivia Newton‐John"
+          "name": "Olivia Newton-John"
         }
       ],
       "credit": "John Travolta & Olivia Newton‐John",
@@ -1493,7 +1493,7 @@
     },
     {
       "postId": 47934,
-      "artist": "All 4 One, Sammi Cheng",
+      "artist": "All-4-One, Sammi Cheng",
       "sortAs": "All‐4‐One",
       "title": "I Cross My Heart",
       "artistMbids": [
@@ -1503,7 +1503,7 @@
       "artists": [
         {
           "mbid": "ef9df4c9-0e76-451b-b174-2244bcc31f0c",
-          "name": "All 4 One"
+          "name": "All-4-One"
         },
         {
           "mbid": "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e",
@@ -1639,7 +1639,7 @@
     {
       "postId": 53249,
       "language": "eng",
-      "artist": "TLC -",
+      "artist": "TLC",
       "sortAs": "TLC",
       "title": "No Scrub",
       "artistMbids": [
@@ -1648,7 +1648,7 @@
       "artists": [
         {
           "mbid": "99790314-885a-4975-8614-9c5bc890364d",
-          "name": "TLC -"
+          "name": "TLC"
         }
       ],
       "recordingMbid": "499be56c-17e6-45bf-84e0-f91c4c192e76",
@@ -3236,7 +3236,6 @@
     {
       "postId": 52848,
       "language": "eng",
-      "artist": "Sophie Ellis‐Bextor",
       "sortAs": "Ellis‐Bextor, Sophie",
       "title": "Get Over You",
       "artistMbids": [
@@ -3245,7 +3244,7 @@
       "artists": [
         {
           "mbid": "c4b87e45-c07a-460f-9c58-8d15328e2964",
-          "name": "Sophie Ellis‐Bextor"
+          "name": "Sophie Ellis-Bextor"
         }
       ],
       "recordingMbid": "60c5e41a-61d4-4710-ace6-61839d5d57ac",
@@ -8250,7 +8249,7 @@
     {
       "postId": 47935,
       "language": "eng",
-      "artist": "All 4 One",
+      "artist": "All-4-One",
       "sortAs": "All‐4‐One",
       "title": "I Swear",
       "artistMbids": [
@@ -8259,7 +8258,7 @@
       "artists": [
         {
           "mbid": "ef9df4c9-0e76-451b-b174-2244bcc31f0c",
-          "name": "All 4 One"
+          "name": "All-4-One"
         }
       ],
       "recordingMbid": "faa8bef2-b4fe-4258-a57c-516130c5378b",
@@ -14097,7 +14096,6 @@
     },
     {
       "postId": 53010,
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "title": "Två Mörka Ögon",
       "artistMbids": [
@@ -14106,7 +14104,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "8394a79d-d5a6-4a14-8314-6b195c1d7214",
@@ -14808,7 +14806,7 @@
     {
       "postId": 49437,
       "language": "eng",
-      "artist": "DJ Ötzi",
+      "artist": "Dj Otzi",
       "sortAs": "Ötzi, DJ",
       "title": "Hey Baby",
       "artistMbids": [
@@ -14817,7 +14815,7 @@
       "artists": [
         {
           "mbid": "8d6a4455-1ae8-4e51-a481-08a85cb0141a",
-          "name": "DJ Ötzi"
+          "name": "Dj Otzi"
         }
       ],
       "recordingMbid": "6716972d-4756-4fc0-87b2-8d07b1d6bdc2",
@@ -15059,7 +15057,6 @@
     },
     {
       "postId": 51915,
-      "artist": "O-ZONE",
       "sortAs": "O‐Zone",
       "artistMbids": [
         "5cb608ea-bd36-4a33-b9a5-822c7fc4194d"
@@ -15067,7 +15064,7 @@
       "artists": [
         {
           "mbid": "5cb608ea-bd36-4a33-b9a5-822c7fc4194d",
-          "name": "O-ZONE"
+          "name": "O-Zone"
         }
       ],
       "recordingMbid": "9375922e-d522-4916-9dae-0ee749a891dc",
@@ -17281,7 +17278,6 @@
     },
     {
       "postId": 53011,
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "artistMbids": [
         "fddb98dc-d74e-4ab2-893c-a628f237bffe"
@@ -17289,7 +17285,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "35d652cc-bd9c-4a42-99b5-777bbc40a727",
@@ -17360,7 +17356,6 @@
     {
       "postId": 53012,
       "language": "swe",
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "artistMbids": [
         "fddb98dc-d74e-4ab2-893c-a628f237bffe"
@@ -17368,7 +17363,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "fbb74c32-e375-4b82-9ea9-85b89ed761cf",
@@ -17441,7 +17436,6 @@
     {
       "postId": 53013,
       "language": "swe",
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "title": "Säg inte nej, säg kanske",
       "artistMbids": [
@@ -17450,7 +17444,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "0e90ee54-b37d-4e67-9e29-b7aa2d97e88a",
@@ -17482,7 +17476,6 @@
     },
     {
       "postId": 53014,
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "artistMbids": [
         "fddb98dc-d74e-4ab2-893c-a628f237bffe"
@@ -17490,7 +17483,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "915b90dd-04e4-4607-9d0c-e14932afdd57",
@@ -17632,7 +17625,7 @@
     },
     {
       "postId": 47840,
-      "artist": "Afro‐dite",
+      "artist": "Afro-dite",
       "sortAs": "Afro‐dite",
       "title": "Aqua Playa",
       "artistMbids": [
@@ -17641,7 +17634,7 @@
       "artists": [
         {
           "mbid": "e2804a00-90b7-4b8c-bf5d-ef59db2fb549",
-          "name": "Afro‐dite"
+          "name": "Afro-dite"
         }
       ],
       "recordingMbid": "592cac6c-0d52-4bb8-8956-47da8b4a3e8a",
@@ -17712,7 +17705,7 @@
     {
       "postId": 47841,
       "language": "eng",
-      "artist": "Afro‐dite",
+      "artist": "Afro-dite",
       "sortAs": "Afro‐dite",
       "title": "Never Let It Go",
       "artistMbids": [
@@ -17721,7 +17714,7 @@
       "artists": [
         {
           "mbid": "e2804a00-90b7-4b8c-bf5d-ef59db2fb549",
-          "name": "Afro‐dite"
+          "name": "Afro-dite"
         }
       ],
       "recordingMbid": "36283998-eed7-48ec-aa27-c40d37e88d30",
@@ -18431,7 +18424,6 @@
     {
       "postId": 51807,
       "language": "eng",
-      "artist": "Ne Yo",
       "sortAs": "Ne‐Yo",
       "title": "So Sick",
       "artistMbids": [
@@ -18440,7 +18432,7 @@
       "artists": [
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "recordingMbid": "c0ea7aa7-2cab-40d9-8d96-830b8fab2d77",
@@ -18455,7 +18447,6 @@
     {
       "postId": 51808,
       "language": "eng",
-      "artist": "Ne Yo",
       "sortAs": "Ne‐Yo",
       "artistMbids": [
         "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7"
@@ -18463,7 +18454,7 @@
       "artists": [
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "recordingMbid": "34bb4161-8c39-4fad-8a75-32733b1bb732",
@@ -18478,7 +18469,6 @@
     {
       "postId": 51809,
       "language": "eng",
-      "artist": "Ne Yo",
       "sortAs": "Ne‐Yo",
       "title": "Because of You",
       "artistMbids": [
@@ -18487,7 +18477,7 @@
       "artists": [
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "recordingMbid": "9987faaf-5d1c-45eb-a46f-b2e48724c5f2",
@@ -19571,7 +19561,7 @@
     {
       "postId": 52792,
       "language": "eng",
-      "artist": "Sir MixaLot",
+      "artist": "Sir-Mix-A-Lot",
       "sortAs": "Sir Mix‐A‐Lot",
       "title": "Baby Got Back",
       "artistMbids": [
@@ -19580,7 +19570,7 @@
       "artists": [
         {
           "mbid": "05539fb8-b7a5-4012-97a9-5e27ddc031fb",
-          "name": "Sir MixaLot"
+          "name": "Sir-Mix-A-Lot"
         }
       ],
       "recordingMbid": "ad8d1cf5-eae7-4de5-8713-4ac0d0a8f950",
@@ -20915,7 +20905,7 @@
     },
     {
       "postId": 48000,
-      "artist": "Annelie Rydé",
+      "artist": "Anne-Lie Ryde",
       "sortAs": "Rydé, Anne‐Lie",
       "title": "Säg Att Du Har Ångrat Dig",
       "artistMbids": [
@@ -20924,7 +20914,7 @@
       "artists": [
         {
           "mbid": "18986d60-32ef-4388-9691-d23f8679419c",
-          "name": "Annelie Rydé"
+          "name": "Anne-Lie Ryde"
         }
       ],
       "recordingMbid": "a8b028d6-9b5c-440a-9347-030b70f2e403",
@@ -21212,7 +21202,7 @@
     {
       "postId": 49655,
       "language": "swe",
-      "artist": "Edin‐Ådahl",
+      "artist": "Edin-Ådahl",
       "sortAs": "Edin‐Ådahl",
       "artistMbids": [
         "a399277e-2638-4262-b94c-d88c2a3f030b"
@@ -21220,7 +21210,7 @@
       "artists": [
         {
           "mbid": "a399277e-2638-4262-b94c-d88c2a3f030b",
-          "name": "Edin‐Ådahl"
+          "name": "Edin-Ådahl"
         }
       ],
       "recordingMbid": "4273019c-bf69-4d2c-bf10-0ff6ddf4e36e",
@@ -22150,7 +22140,6 @@
     {
       "postId": 52704,
       "language": "swe",
-      "artist": "Sha‐Boom",
       "sortAs": "Sha‐Boom",
       "title": "R.O.C.K.",
       "artistMbids": [
@@ -22159,7 +22148,7 @@
       "artists": [
         {
           "mbid": "b501c516-2026-4683-b2a0-4d0f8b534bde",
-          "name": "Sha‐Boom"
+          "name": "Sha-Boom"
         }
       ],
       "recordingMbid": "35116df1-0e08-413d-9516-2f350ab78eb4",
@@ -22408,7 +22397,7 @@
     },
     {
       "postId": 48001,
-      "artist": "Annelie Rydé",
+      "artist": "Anne-Lie Ryde",
       "sortAs": "Rydé, Anne‐Lie",
       "title": "En så’n karl",
       "artistMbids": [
@@ -22417,7 +22406,7 @@
       "artists": [
         {
           "mbid": "18986d60-32ef-4388-9691-d23f8679419c",
-          "name": "Annelie Rydé"
+          "name": "Anne-Lie Ryde"
         }
       ],
       "recordingMbid": "5117510d-5dc1-4ee8-bccd-3d17e65cf223",
@@ -22742,7 +22731,6 @@
     },
     {
       "postId": 51242,
-      "artist": "Lillbabs",
       "sortAs": "Lill‐Babs",
       "artistMbids": [
         "790fecd6-0fcc-4c74-a5fd-3ba400a98d16"
@@ -22750,7 +22738,7 @@
       "artists": [
         {
           "mbid": "790fecd6-0fcc-4c74-a5fd-3ba400a98d16",
-          "name": "Lillbabs"
+          "name": "Lill-Babs"
         }
       ],
       "recordingMbid": "b532e94f-b519-463c-b6b0-5dce86237790",
@@ -30010,7 +29998,6 @@
     {
       "postId": 51964,
       "language": "eng",
-      "artist": "Olivia Newton‐John",
       "sortAs": "Newton‐John, Olivia",
       "title": "Hopelessly Devoted to You",
       "artistMbids": [
@@ -30019,7 +30006,7 @@
       "artists": [
         {
           "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
-          "name": "Olivia Newton‐John"
+          "name": "Olivia Newton-John"
         }
       ],
       "recordingMbid": "91278fb3-9a3c-42d9-8770-0dfac36089fd",
@@ -32479,7 +32466,7 @@
       "postId": 50270,
       "from": "Grease",
       "language": "eng",
-      "artist": "John Travolta, Olivia Newton‐John",
+      "artist": "John Travolta, Olivia Newton-John",
       "sortAs": "Travolta, John",
       "title": "You’re the One That I Want",
       "artistMbids": [
@@ -32493,7 +32480,7 @@
         },
         {
           "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
-          "name": "Olivia Newton‐John"
+          "name": "Olivia Newton-John"
         }
       ],
       "credit": "John Travolta & Olivia Newton‐John",
@@ -32895,7 +32882,6 @@
     {
       "postId": 53015,
       "language": "swe",
-      "artist": "Sven Ingvars",
       "sortAs": "Sven‐Ingvars",
       "artistMbids": [
         "fddb98dc-d74e-4ab2-893c-a628f237bffe"
@@ -32903,7 +32889,7 @@
       "artists": [
         {
           "mbid": "fddb98dc-d74e-4ab2-893c-a628f237bffe",
-          "name": "Sven Ingvars"
+          "name": "Sven-Ingvars"
         }
       ],
       "recordingMbid": "efea471e-1d3c-408f-928f-fe34fdad2832",
@@ -36856,7 +36842,7 @@
     {
       "postId": 47789,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "For Those About to Rock",
       "artistMbids": [
@@ -36865,7 +36851,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "d68fe28d-5393-4ee1-9da3-4f8bdcd6c6e2",
@@ -36880,7 +36866,7 @@
     {
       "postId": 47790,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Highway to Hell",
       "artistMbids": [
@@ -36889,7 +36875,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "5935ec91-8124-42ff-937f-f31a20ffe58f",
@@ -37107,7 +37093,7 @@
     {
       "postId": 47791,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Back in Black",
       "artistMbids": [
@@ -37116,7 +37102,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "ef71afb6-5e51-41df-999b-9e7c7306063a",
@@ -45649,7 +45635,7 @@
     {
       "postId": 50985,
       "language": "eng",
-      "artist": "Keri Hilson, Kanye West, Ne Yo",
+      "artist": "Keri Hilson, Kanye West, Ne-Yo",
       "sortAs": "Hilson, Keri",
       "title": "Knock You Down",
       "artistMbids": [
@@ -45668,7 +45654,7 @@
         },
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "credit": "Keri Hilson feat. Kanye West & Ne‐Yo",
@@ -50728,7 +50714,7 @@
     {
       "postId": 53250,
       "language": "eng",
-      "artist": "TLC -",
+      "artist": "TLC",
       "sortAs": "TLC",
       "artistMbids": [
         "99790314-885a-4975-8614-9c5bc890364d"
@@ -50736,7 +50722,7 @@
       "artists": [
         {
           "mbid": "99790314-885a-4975-8614-9c5bc890364d",
-          "name": "TLC -"
+          "name": "TLC"
         }
       ],
       "recordingMbid": "84643916-a2a6-4bbb-9ceb-80851c84143b",
@@ -51478,7 +51464,6 @@
     {
       "postId": 52849,
       "language": "eng",
-      "artist": "Sophie Ellis‐Bextor",
       "sortAs": "Ellis‐Bextor, Sophie",
       "title": "Murder on the Dancefloor",
       "artistMbids": [
@@ -51487,7 +51472,7 @@
       "artists": [
         {
           "mbid": "c4b87e45-c07a-460f-9c58-8d15328e2964",
-          "name": "Sophie Ellis‐Bextor"
+          "name": "Sophie Ellis-Bextor"
         }
       ],
       "recordingMbid": "f3269c13-ca32-4115-bfab-5dc6082ed9e0",
@@ -52568,7 +52553,7 @@
     {
       "postId": 52599,
       "language": "eng",
-      "artist": "Salt N Pepa",
+      "artist": "Salt-N-Pepa",
       "sortAs": "Salt‐N‐Pepa",
       "artistMbids": [
         "26bcd35d-56a3-4e4d-8ad7-7bc5787c3af1"
@@ -52576,7 +52561,7 @@
       "artists": [
         {
           "mbid": "26bcd35d-56a3-4e4d-8ad7-7bc5787c3af1",
-          "name": "Salt N Pepa"
+          "name": "Salt-N-Pepa"
         }
       ],
       "recordingMbid": "65db8463-2716-46e4-98ba-ee9450ce54e6",
@@ -55948,7 +55933,7 @@
     {
       "postId": 47792,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Stiff Upper Lip",
       "artistMbids": [
@@ -55957,7 +55942,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "d84428fe-ec19-4c17-96bd-ef5aa3186cef",
@@ -56016,7 +56001,7 @@
     {
       "postId": 47749,
       "language": "eng",
-      "artist": "A Ha",
+      "artist": "a-ha",
       "sortAs": "a‐ha",
       "title": "Take On Me",
       "artistMbids": [
@@ -56025,7 +56010,7 @@
       "artists": [
         {
           "mbid": "7364dea6-ca9a-48e3-be01-b44ad0d19897",
-          "name": "A Ha"
+          "name": "a-ha"
         }
       ],
       "recordingMbid": "12f65dca-de8f-43fe-a65d-f12a02aaadf3",
@@ -56353,7 +56338,7 @@
     {
       "postId": 47793,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "You Shook Me All Night Long",
       "artistMbids": [
@@ -56362,7 +56347,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "877c7bff-2485-4a6d-b831-e251e6eeefa0",
@@ -58925,7 +58910,7 @@
     {
       "postId": 52453,
       "language": "eng",
-      "artist": "Rihanna, Ne Yo",
+      "artist": "Rihanna, Ne-Yo",
       "sortAs": "Rihanna",
       "title": "Hate That I Love You",
       "artistMbids": [
@@ -58939,7 +58924,7 @@
         },
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "credit": "Rihanna feat. Ne‐Yo",
@@ -64966,7 +64951,7 @@
     {
       "postId": 47794,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Big Gun",
       "artistMbids": [
@@ -64975,7 +64960,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "0588b976-c15a-4ca4-89fc-46ca10dac2da",
@@ -65056,7 +65041,7 @@
     {
       "postId": 47753,
       "language": "eng",
-      "artist": "A Teens",
+      "artist": "A★Teens",
       "sortAs": "A‐Teens",
       "title": "Upside Down",
       "artistMbids": [
@@ -65065,7 +65050,7 @@
       "artists": [
         {
           "mbid": "69d9cb53-5b8f-41b0-ac84-49eabea535b2",
-          "name": "A Teens"
+          "name": "A★Teens"
         }
       ],
       "recordingMbid": "b4bbf37f-d67c-4858-9d94-97fda171fd01",
@@ -65496,7 +65481,7 @@
     {
       "postId": 47795,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Dirty Deeds Done Dirt Cheap",
       "artistMbids": [
@@ -65505,7 +65490,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "eddb11cc-3b32-4c66-8e26-5eeda0bedeeb",
@@ -65716,7 +65701,7 @@
     },
     {
       "postId": 47754,
-      "artist": "A Teens",
+      "artist": "A★Teens",
       "sortAs": "A‐Teens",
       "title": "Floorfiller",
       "artistMbids": [
@@ -65725,7 +65710,7 @@
       "artists": [
         {
           "mbid": "69d9cb53-5b8f-41b0-ac84-49eabea535b2",
-          "name": "A Teens"
+          "name": "A★Teens"
         }
       ],
       "recordingMbid": "7c8baac0-e9ad-4c1b-b046-9485dc11af71",
@@ -65857,7 +65842,7 @@
     {
       "postId": 47796,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Girls Got Rhythm",
       "artistMbids": [
@@ -65866,7 +65851,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "325d309c-dc9a-4a13-89d0-68985fb3448b",
@@ -66084,7 +66069,7 @@
     {
       "postId": 47797,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
@@ -66092,7 +66077,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "639aa56d-d857-43ce-9fcd-ce29d301cec2",
@@ -66107,7 +66092,7 @@
     {
       "postId": 47798,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Hells Bells",
       "artistMbids": [
@@ -66116,7 +66101,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "c7c25302-69ab-4a9d-b967-23cbc6793854",
@@ -66153,7 +66138,7 @@
     {
       "postId": 47799,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "High Voltage",
       "artistMbids": [
@@ -66162,7 +66147,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "04d0da1f-25e6-431b-aff1-9ead7d38a21b",
@@ -66539,7 +66524,7 @@
     },
     {
       "postId": 47800,
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll) (St. Albans High School, Australia, March 1976)",
       "artistMbids": [
@@ -66548,7 +66533,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "e97e4b09-3653-4685-a45a-292efdd032ef",
@@ -66585,7 +66570,7 @@
     {
       "postId": 47801,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
@@ -66593,7 +66578,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "504f65ef-8f44-4fcc-8d53-cc51086fa97a",
@@ -66722,7 +66707,7 @@
     {
       "postId": 47802,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Let There Be Rock",
       "artistMbids": [
@@ -66731,7 +66716,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "54d4e036-0c12-409e-b8d6-56b6a6b33e96",
@@ -67061,7 +67046,7 @@
     {
       "postId": 47803,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
@@ -67069,7 +67054,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "e8ba7f51-1e5a-4b81-b9fd-9551e7ac14ec",
@@ -67084,7 +67069,7 @@
     {
       "postId": 47804,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Moneytalks",
       "artistMbids": [
@@ -67093,7 +67078,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "4169edd9-7494-44fd-ab76-2748e7bd347d",
@@ -67684,7 +67669,7 @@
     {
       "postId": 47755,
       "language": "eng",
-      "artist": "A Teens",
+      "artist": "A★Teens",
       "sortAs": "A‐Teens",
       "title": "I Promised Myself",
       "artistMbids": [
@@ -67693,7 +67678,7 @@
       "artists": [
         {
           "mbid": "69d9cb53-5b8f-41b0-ac84-49eabea535b2",
-          "name": "A Teens"
+          "name": "A★Teens"
         }
       ],
       "recordingMbid": "c677b9dd-42d2-42a6-ba77-81106f995a54",
@@ -68023,7 +68008,7 @@
     {
       "postId": 47805,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Shoot to Thrill",
       "artistMbids": [
@@ -68032,7 +68017,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "5c953788-6ae9-4905-88b6-e25a06647af8",
@@ -68524,7 +68509,7 @@
     {
       "postId": 47806,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
@@ -68532,7 +68517,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "6d19aaa7-1eb5-4488-a54d-fe07d0621a7f",
@@ -68732,7 +68717,7 @@
     {
       "postId": 47807,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Whole Lotta Rosie",
       "artistMbids": [
@@ -68741,7 +68726,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "7578ce92-8b92-4232-b754-84bc1cb47bf4",
@@ -74407,7 +74392,6 @@
     {
       "postId": 51965,
       "language": "eng",
-      "artist": "Olivia Newton‐John",
       "sortAs": "Newton‐John, Olivia",
       "title": "Country Roads",
       "artistMbids": [
@@ -74416,7 +74400,7 @@
       "artists": [
         {
           "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
-          "name": "Olivia Newton‐John"
+          "name": "Olivia Newton-John"
         }
       ],
       "recordingMbid": "27764d21-11b4-4e69-aa1c-381e05bad9f0",
@@ -77202,7 +77186,7 @@
     {
       "postId": 47808,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "T.N.T.",
       "artistMbids": [
@@ -77211,7 +77195,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "6f51468d-f161-41cf-8414-cd58b370bdf8",
@@ -78436,7 +78420,7 @@
     },
     {
       "postId": 53029,
-      "artist": "T Pain, Chris Brown",
+      "artist": "T-Pain, Chris Brown",
       "sortAs": "T‐Pain",
       "artistMbids": [
         "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
@@ -78445,7 +78429,7 @@
       "artists": [
         {
           "mbid": "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
-          "name": "T Pain"
+          "name": "T-Pain"
         },
         {
           "mbid": "c234fa42-e6a6-443e-937e-2f4b073538a3",
@@ -81808,7 +81792,7 @@
     },
     {
       "postId": 51444,
-      "artist": "Manfred Manns Earthband",
+      "artist": "Manfred Mann’s Earth Band",
       "sortAs": "Mann, Manfred, Earth Band",
       "title": "Davy’s on the Road Again",
       "artistMbids": [
@@ -81817,7 +81801,7 @@
       "artists": [
         {
           "mbid": "83e9c775-84ea-4cf6-abdf-b9ffa8c3d060",
-          "name": "Manfred Manns Earthband"
+          "name": "Manfred Mann’s Earth Band"
         }
       ],
       "recordingMbid": "de7bdd8a-28c1-4b1f-b00f-9e66c03756e5",
@@ -84168,7 +84152,7 @@
     {
       "postId": 47750,
       "language": "eng",
-      "artist": "A Ha",
+      "artist": "a-ha",
       "sortAs": "a‐ha",
       "title": "The Living Daylights",
       "artistMbids": [
@@ -84177,7 +84161,7 @@
       "artists": [
         {
           "mbid": "7364dea6-ca9a-48e3-be01-b44ad0d19897",
-          "name": "A Ha"
+          "name": "a-ha"
         }
       ],
       "recordingMbid": "c7b24ad9-9dad-4c5d-9e5f-892d6f41f54b",
@@ -84322,7 +84306,6 @@
     {
       "postId": 51911,
       "language": "eng",
-      "artist": "o town",
       "sortAs": "O‐Town",
       "title": "All or Nothing",
       "artistMbids": [
@@ -84331,7 +84314,7 @@
       "artists": [
         {
           "mbid": "5b5b5410-29d7-478a-94ca-bffa06c73579",
-          "name": "o town"
+          "name": "O-Town"
         }
       ],
       "recordingMbid": "14cbdec6-18a4-4085-9d12-540e0e07dc63",
@@ -84391,7 +84374,6 @@
     {
       "postId": 51912,
       "language": "eng",
-      "artist": "o town",
       "sortAs": "O‐Town",
       "title": "Liquid Dreams",
       "artistMbids": [
@@ -84400,7 +84382,7 @@
       "artists": [
         {
           "mbid": "5b5b5410-29d7-478a-94ca-bffa06c73579",
-          "name": "o town"
+          "name": "O-Town"
         }
       ],
       "recordingMbid": "f2d17fc9-006c-448d-9f5d-f91aca8db919",
@@ -84510,7 +84492,6 @@
     },
     {
       "postId": 51913,
-      "artist": "o town",
       "sortAs": "O‐Town",
       "title": "These Are the Days",
       "artistMbids": [
@@ -84519,7 +84500,7 @@
       "artists": [
         {
           "mbid": "5b5b5410-29d7-478a-94ca-bffa06c73579",
-          "name": "o town"
+          "name": "O-Town"
         }
       ],
       "recordingMbid": "f53671c8-7a93-401a-a4ab-4964d628eaf6",
@@ -87746,7 +87727,7 @@
     {
       "postId": 47751,
       "language": "eng",
-      "artist": "A Ha",
+      "artist": "a-ha",
       "sortAs": "a‐ha",
       "title": "Hunting High and Low",
       "artistMbids": [
@@ -87755,7 +87736,7 @@
       "artists": [
         {
           "mbid": "7364dea6-ca9a-48e3-be01-b44ad0d19897",
-          "name": "A Ha"
+          "name": "a-ha"
         }
       ],
       "recordingMbid": "da291a7e-3d71-4bcf-b5dd-0727d3deb95a",
@@ -88193,7 +88174,7 @@
     {
       "postId": 47752,
       "language": "eng",
-      "artist": "A Ha",
+      "artist": "a-ha",
       "sortAs": "a‐ha",
       "title": "The Sun Always Shines on T.V.",
       "artistMbids": [
@@ -88202,7 +88183,7 @@
       "artists": [
         {
           "mbid": "7364dea6-ca9a-48e3-be01-b44ad0d19897",
-          "name": "A Ha"
+          "name": "a-ha"
         }
       ],
       "recordingMbid": "9efc9217-d8cc-4f3b-b019-4a53a81e37b0",
@@ -89659,7 +89640,7 @@
     {
       "postId": 47722,
       "language": "eng",
-      "artist": "2 Pac, K‐Ci & JoJo",
+      "artist": "2 Pac, K-Ci & JoJo",
       "sortAs": "2Pac",
       "title": "How Do U Want It",
       "artistMbids": [
@@ -89673,7 +89654,7 @@
         },
         {
           "mbid": "23d1dfc6-0281-488a-8e32-ef7ddc279fbc",
-          "name": "K‐Ci & JoJo"
+          "name": "K-Ci & JoJo"
         }
       ],
       "credit": "2Pac feat. K‐Ci & JoJo",
@@ -92032,7 +92013,7 @@
     {
       "postId": 52174,
       "language": "eng",
-      "artist": "Pitbull, Ne Yo, Afrojack, Nayer",
+      "artist": "Pitbull, Ne-Yo, Afrojack, Nayer",
       "sortAs": "Pitbull",
       "title": "Give Me Everything",
       "artistMbids": [
@@ -92048,7 +92029,7 @@
         },
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         },
         {
           "mbid": "a3ee920f-4e7f-4993-8aca-4b8538cfaa4a",
@@ -94857,7 +94838,7 @@
     {
       "postId": 47809,
       "language": "eng",
-      "artist": "AC DC",
+      "artist": "AC-DC",
       "sortAs": "AC/DC",
       "title": "Safe in New York City",
       "artistMbids": [
@@ -94866,7 +94847,7 @@
       "artists": [
         {
           "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
-          "name": "AC DC"
+          "name": "AC-DC"
         }
       ],
       "recordingMbid": "e2b121c3-a18b-4dbc-adf9-81cc5ff569cc",
@@ -96496,7 +96477,7 @@
     {
       "postId": 48549,
       "language": "eng",
-      "artist": "Bone Thugs‐n‐Harmony",
+      "artist": "Bone Thugs-n-Harmony",
       "sortAs": "Bone Thugs‐n‐Harmony",
       "title": "1st of tha Month",
       "artistMbids": [
@@ -96505,7 +96486,7 @@
       "artists": [
         {
           "mbid": "2fa45bbb-0efb-4950-9d40-94bf23cbfec1",
-          "name": "Bone Thugs‐n‐Harmony"
+          "name": "Bone Thugs-n-Harmony"
         }
       ],
       "recordingMbid": "704ac8b9-5ee6-4c36-ab5d-5a72332b52e7",
@@ -105909,7 +105890,7 @@
     {
       "postId": 51309,
       "language": "eng",
-      "artist": "The Lonely Island, T Pain",
+      "artist": "The Lonely Island, T-Pain",
       "sortAs": "Lonely Island, The",
       "title": "I’m on a Boat",
       "artistMbids": [
@@ -105923,7 +105904,7 @@
         },
         {
           "mbid": "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
-          "name": "T Pain"
+          "name": "T-Pain"
         }
       ],
       "credit": "The Lonely Island feat. T‐Pain",
@@ -107218,7 +107199,7 @@
     },
     {
       "postId": 51842,
-      "artist": "N. E. R. D.",
+      "artist": "N-E-R-D",
       "sortAs": "N.E.R.D",
       "artistMbids": [
         "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5"
@@ -107226,7 +107207,7 @@
       "artists": [
         {
           "mbid": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5",
-          "name": "N. E. R. D."
+          "name": "N-E-R-D"
         }
       ],
       "recordingMbid": "facf1ab7-2618-4321-ac66-18b73be7a727",
@@ -107241,7 +107222,7 @@
     {
       "postId": 51843,
       "language": "eng",
-      "artist": "N. E. R. D.",
+      "artist": "N-E-R-D",
       "sortAs": "N.E.R.D",
       "artistMbids": [
         "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5"
@@ -107249,7 +107230,7 @@
       "artists": [
         {
           "mbid": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5",
-          "name": "N. E. R. D."
+          "name": "N-E-R-D"
         }
       ],
       "recordingMbid": "384e98af-9f4d-412c-a5fe-9b614c002e67",
@@ -107263,7 +107244,7 @@
     },
     {
       "postId": 51844,
-      "artist": "N. E. R. D.",
+      "artist": "N-E-R-D",
       "sortAs": "N.E.R.D",
       "artistMbids": [
         "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5"
@@ -107271,7 +107252,7 @@
       "artists": [
         {
           "mbid": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5",
-          "name": "N. E. R. D."
+          "name": "N-E-R-D"
         }
       ],
       "recordingMbid": "d9e6974d-f2c8-4e10-a715-48c7105e50d2",
@@ -107356,7 +107337,7 @@
     {
       "postId": 51851,
       "language": "eng",
-      "artist": "New Kids OnThe Block, Ne Yo",
+      "artist": "New Kids OnThe Block, Ne-Yo",
       "sortAs": "New Kids on the Block",
       "artistMbids": [
         "090dafe5-818c-4bba-9ebf-7e3a651a5c43",
@@ -107369,7 +107350,7 @@
         },
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "credit": "New Kids on the Block & Ne‐Yo",
@@ -107593,7 +107574,6 @@
     {
       "postId": 51914,
       "language": "eng",
-      "artist": "o town",
       "sortAs": "O‐Town",
       "title": "We Fit Together",
       "artistMbids": [
@@ -107602,7 +107582,7 @@
       "artists": [
         {
           "mbid": "5b5b5410-29d7-478a-94ca-bffa06c73579",
-          "name": "o town"
+          "name": "O-Town"
         }
       ],
       "recordingMbid": "3511c749-6a41-4de5-9d9e-1d7713b624de",
@@ -108349,7 +108329,7 @@
     },
     {
       "postId": 52292,
-      "artist": "R Kelly, Tyrese, Robin Thicke, The‐Dream",
+      "artist": "R Kelly, Tyrese, Robin Thicke, The-Dream",
       "sortAs": "Kelly, R.",
       "artistMbids": [
         "c2d25856-a09a-4d15-b404-77dd19c19e63",
@@ -108372,7 +108352,7 @@
         },
         {
           "mbid": "66a4b9d2-d5a6-40b8-93d5-0bdd1dbb4b43",
-          "name": "The‐Dream"
+          "name": "The-Dream"
         }
       ],
       "credit": "R. Kelly feat. Tyrese, Robin Thicke & The‐Dream",
@@ -108552,7 +108532,7 @@
     },
     {
       "postId": 52301,
-      "artist": "R Kelly, T Pain",
+      "artist": "R Kelly, T-Pain",
       "sortAs": "Kelly, R.",
       "title": "I’m a Flirt",
       "artistMbids": [
@@ -108566,7 +108546,7 @@
         },
         {
           "mbid": "ce55e49a-32f4-4757-9849-bf04d06d5fcc",
-          "name": "T Pain"
+          "name": "T-Pain"
         }
       ],
       "credit": "R. Kelly & T‐Pain",
@@ -109136,7 +109116,7 @@
     },
     {
       "postId": 52600,
-      "artist": "Salt N Pepa",
+      "artist": "Salt-N-Pepa",
       "sortAs": "Salt‐N‐Pepa",
       "title": "Push It",
       "artistMbids": [
@@ -109145,7 +109125,7 @@
       "artists": [
         {
           "mbid": "26bcd35d-56a3-4e4d-8ad7-7bc5787c3af1",
-          "name": "Salt N Pepa"
+          "name": "Salt-N-Pepa"
         }
       ],
       "recordingMbid": "7f120ab9-82c5-4a4c-b8a4-df931a1e8445",
@@ -109182,7 +109162,7 @@
     {
       "postId": 52630,
       "language": "eng",
-      "artist": "Santana, Eagle‐Eye Cherry",
+      "artist": "Santana, Eagle-Eye Cherry",
       "sortAs": "Santana",
       "title": "Wishing It Was",
       "artistMbids": [
@@ -109196,7 +109176,7 @@
         },
         {
           "mbid": "4a5777b3-f55b-437c-8b23-d9ee7791c7fc",
-          "name": "Eagle‐Eye Cherry"
+          "name": "Eagle-Eye Cherry"
         }
       ],
       "credit": "Santana featuring Eagle‐Eye Cherry",
@@ -115254,7 +115234,7 @@
     {
       "postId": 51787,
       "language": "eng",
-      "artist": "N. E. R. D.",
+      "artist": "N-E-R-D",
       "sortAs": "N.E.R.D",
       "title": "She Wants to Move",
       "artistMbids": [
@@ -115263,7 +115243,7 @@
       "artists": [
         {
           "mbid": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5",
-          "name": "N. E. R. D."
+          "name": "N-E-R-D"
         }
       ],
       "recordingMbid": "6641168f-5088-40ef-a793-e3641b67983a",
@@ -115982,7 +115962,7 @@
     {
       "postId": 52173,
       "language": "eng",
-      "artist": "Pitbull, Ne Yo",
+      "artist": "Pitbull, Ne-Yo",
       "sortAs": "Pitbull",
       "title": "Time of Our Lives",
       "artistMbids": [
@@ -115996,7 +115976,7 @@
         },
         {
           "mbid": "a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7",
-          "name": "Ne Yo"
+          "name": "Ne-Yo"
         }
       ],
       "credit": "Pitbull feat. Ne‐Yo",
@@ -118107,7 +118087,7 @@
     {
       "postId": 49022,
       "language": "eng",
-      "artist": "Clean Bandit, Sean Paul, Anne‐Marie",
+      "artist": "Clean Bandit, Sean Paul, Anne-Marie",
       "sortAs": "Clean Bandit",
       "artistMbids": [
         "dacc2d64-7e59-42a8-87a9-10c53919aff2",
@@ -118125,7 +118105,7 @@
         },
         {
           "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
-          "name": "Anne‐Marie"
+          "name": "Anne-Marie"
         }
       ],
       "credit": "Clean Bandit feat. Sean Paul & Anne‐Marie",
@@ -119095,7 +119075,7 @@
     {
       "postId": 50614,
       "language": "eng",
-      "artist": "jay z, Justin Timberlake",
+      "artist": "JAY-Z, Justin Timberlake",
       "sortAs": "Jay‐Z",
       "artistMbids": [
         "f82bcf78-5b69-4622-a5ef-73800768d9ac",
@@ -119104,7 +119084,7 @@
       "artists": [
         {
           "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
-          "name": "jay z"
+          "name": "JAY-Z"
         },
         {
           "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
@@ -119539,7 +119519,7 @@
     {
       "postId": 51455,
       "language": "eng",
-      "artist": "Måns Zelmerlöw",
+      "artist": "mans zelmerlow",
       "sortAs": "Zelmerlöw, Måns",
       "artistMbids": [
         "9a21832f-5104-42fa-b881-17a1ca66bfdb"
@@ -119547,7 +119527,7 @@
       "artists": [
         {
           "mbid": "9a21832f-5104-42fa-b881-17a1ca66bfdb",
-          "name": "Måns Zelmerlöw"
+          "name": "mans zelmerlow"
         }
       ],
       "recordingMbid": "7432c13a-aa8c-47c7-9b00-dc784e4264b7",
@@ -121223,7 +121203,6 @@
     {
       "postId": 48002,
       "language": "eng",
-      "artist": "Anne‐Marie",
       "sortAs": "Anne‐Marie",
       "title": "Ciao Adiós",
       "artistMbids": [
@@ -121232,7 +121211,7 @@
       "artists": [
         {
           "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
-          "name": "Anne‐Marie"
+          "name": "Anne-Marie"
         }
       ],
       "recordingMbid": "44acc83f-f5b0-4569-b84b-05a2d7140a60",
@@ -121702,7 +121681,7 @@
     {
       "postId": 51544,
       "language": "eng",
-      "artist": "Marshmello, Anne‐Marie",
+      "artist": "Marshmello, Anne-Marie",
       "sortAs": "Marshmello",
       "artistMbids": [
         "301b45a4-b8b9-410e-8344-4b4eaf96691a",
@@ -121715,7 +121694,7 @@
         },
         {
           "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
-          "name": "Anne‐Marie"
+          "name": "Anne-Marie"
         }
       ],
       "credit": "Marshmello & Anne‐Marie",
@@ -122323,7 +122302,7 @@
     },
     {
       "postId": 51698,
-      "artist": "Mike WiLL Made‐It, Miley Cyrus, Wiz Khalifa, Juicy J",
+      "artist": "Mike WiLL Made-It, Miley Cyrus, Wiz Khalifa, Juicy J",
       "sortAs": "Mike WiLL Made‐It",
       "artistMbids": [
         "5a2071aa-0787-49fb-931c-fa85ba86e681",
@@ -122334,7 +122313,7 @@
       "artists": [
         {
           "mbid": "5a2071aa-0787-49fb-931c-fa85ba86e681",
-          "name": "Mike WiLL Made‐It"
+          "name": "Mike WiLL Made-It"
         },
         {
           "mbid": "7e9bd05a-117f-4cce-87bc-e011527a8b18",
@@ -122844,7 +122823,7 @@
     {
       "postId": 50330,
       "from": "Hamilton",
-      "artist": "Lin‐Manuel Miranda",
+      "artist": "Lin-Manuel Miranda",
       "sortAs": "Miranda, Lin‐Manuel",
       "artistMbids": [
         "925c7673-0e85-410f-b7e4-d9705a7aa619"
@@ -122852,7 +122831,7 @@
       "artists": [
         {
           "mbid": "925c7673-0e85-410f-b7e4-d9705a7aa619",
-          "name": "Lin‐Manuel Miranda"
+          "name": "Lin-Manuel Miranda"
         }
       ],
       "recordingMbid": "835265f0-187f-4d99-9059-6b0b9f329321",
@@ -126116,7 +126095,7 @@
     },
     {
       "postId": 50613,
-      "artist": "jay z",
+      "artist": "JAY-Z",
       "sortAs": "Jay‐Z",
       "title": "Hard Knock Life",
       "artistMbids": [
@@ -126125,7 +126104,7 @@
       "artists": [
         {
           "mbid": "f82bcf78-5b69-4622-a5ef-73800768d9ac",
-          "name": "jay z"
+          "name": "JAY-Z"
         }
       ],
       "recordingMbid": "7ca6a650-3bb4-465f-9a7d-f5b541564a80",
@@ -126140,7 +126119,7 @@
     {
       "postId": 50272,
       "from": "Grease",
-      "artist": "John Travolta, Olivia Newton‐John",
+      "artist": "John Travolta, Olivia Newton-John",
       "sortAs": "Travolta, John",
       "title": "The Grease Megamix",
       "artistMbids": [
@@ -126154,7 +126133,7 @@
         },
         {
           "mbid": "10ccb5d8-f9d5-4954-9441-3419b522a214",
-          "name": "Olivia Newton‐John"
+          "name": "Olivia Newton-John"
         }
       ],
       "credit": "John Travolta & Olivia Newton‐John",
@@ -127610,7 +127589,7 @@
     {
       "postId": 48003,
       "language": "eng",
-      "artist": "Anne‐Marie, Doja Cat",
+      "artist": "Anne-Marie, Doja Cat",
       "sortAs": "Anne‐Marie",
       "title": "To Be Young",
       "artistMbids": [
@@ -127620,7 +127599,7 @@
       "artists": [
         {
           "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
-          "name": "Anne‐Marie"
+          "name": "Anne-Marie"
         },
         {
           "mbid": "5df62a88-cac9-490a-b62c-c7c88f4020f4",
@@ -128392,7 +128371,7 @@
     {
       "postId": 51543,
       "language": "eng",
-      "artist": "Marshmello, Anne‐Marie",
+      "artist": "Marshmello, Anne-Marie",
       "sortAs": "Marshmello",
       "artistMbids": [
         "301b45a4-b8b9-410e-8344-4b4eaf96691a",
@@ -128405,7 +128384,7 @@
         },
         {
           "mbid": "e3d5b5ec-101a-4529-9f2d-01dca64cf44e",
-          "name": "Anne‐Marie"
+          "name": "Anne-Marie"
         }
       ],
       "credit": "Marshmello & Anne‐Marie",
