@@ -20589,22 +20589,7 @@
       "id": 1065,
       "artist": "Födelsedagssång",
       "song": "Ja må du leva",
-      "matched": true,
-      "artistCredit": "Louise Andersson Bodin",
-      "artistMbids": [
-        "a4895458-e22b-4ea5-aaaf-7e9ebcfd6f22"
-      ],
-      "recording": "Ja Må Du Leva",
-      "recordingMbid": "8c985eef-63b0-44a9-b982-c871a3ab57df",
-      "release": "Ja Må Du Leva",
-      "score": 3260292,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish birthday song",
-      "venueArtist": "Födelsedagssång",
-      "proposalArtist": "Louise Andersson Bodin",
-      "trusted": true,
-      "title": "Ja Må Du Leva"
+      "matched": false
     },
     {
       "postId": 50790,
@@ -38102,110 +38087,35 @@
       "id": 1971,
       "artist": "Julsång",
       "song": "Bjällerklang",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Bjällerklang",
-      "recordingMbid": "f4464614-90c6-459d-958f-15d1bfc255b3",
-      "release": "Jul i Betlehem",
-      "score": 342808,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Bjällerklang"
+      "matched": false
     },
     {
       "postId": 50841,
       "id": 1972,
       "artist": "Julsång",
       "song": "Gläns över sjö och strand",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Gläns över sjö och strand",
-      "recordingMbid": "7e5eb227-1f87-42fe-aa78-6f147bb8b4d5",
-      "release": "Jul i Betlehem",
-      "score": 230283,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Gläns över sjö och strand"
+      "matched": false
     },
     {
       "postId": 50842,
       "id": 1973,
       "artist": "Julsång",
       "song": "Hej mitt vinterland",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Hej mitt vinterland",
-      "recordingMbid": "8d8c929c-bd89-4677-a8f9-c9efd54585c9",
-      "release": "Jul i Betlehem",
-      "score": 342808,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Hej mitt vinterland"
+      "matched": false
     },
     {
       "postId": 50843,
       "id": 1974,
       "artist": "Julsång",
       "song": "Jul igen",
-      "matched": true,
-      "artistCredit": "Mora Träsk",
-      "artistMbids": [
-        "17c75486-3253-4359-a5a1-baec06650ebd"
-      ],
-      "recording": "Nu är det jul igen",
-      "recordingMbid": "b5d5e696-cf96-48fd-9c18-0530f495fe74",
-      "release": "Jul Tajm",
-      "score": 717186,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Venue shortened the title",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Mora Träsk",
-      "trusted": true,
-      "title": "Nu är det jul igen"
+      "matched": false
     },
     {
       "postId": 50844,
       "id": 1975,
       "artist": "Julsång",
       "song": "Jul jul strålande jul",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Jul, jul strålande jul",
-      "recordingMbid": "157bd602-3e29-4738-9f9b-1002d9c89bdc",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Jul, jul strålande jul"
+      "matched": false
     },
     {
       "postId": 50184,
@@ -38231,220 +38141,70 @@
       "id": 1977,
       "artist": "Julsång",
       "song": "Lusse lelle",
-      "matched": true,
-      "artistCredit": "Bjursåsflickorna",
-      "artistMbids": [
-        "07a82dcb-3e0a-4ec8-aaab-3b0d7bd20501"
-      ],
-      "recording": "Lusse Lelle",
-      "recordingMbid": "d1d88276-26a7-4878-add5-e037e0107a67",
-      "release": "Våra Mest Älskade Julsånger",
-      "score": 5332165,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Traditional Swedish recording",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Bjursåsflickorna",
-      "trusted": true,
-      "title": "Lusse Lelle"
+      "matched": false
     },
     {
       "postId": 50846,
       "id": 1978,
       "artist": "Julsång",
       "song": "Jul medley",
-      "matched": true,
-      "artistCredit": "The Playtones",
-      "artistMbids": [
-        "2583b024-b1f2-46b7-9259-701305a7a070"
-      ],
-      "recording": "Julmedley",
-      "recordingMbid": "e7050ad7-f062-4922-ad38-2358a9d31171",
-      "release": "Rock'n'Roll Christmas Party",
-      "score": 592130,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Julmedley recording",
-      "venueArtist": "Julsång",
-      "proposalArtist": "The Playtones",
-      "trusted": true,
-      "title": "Julmedley"
+      "matched": false
     },
     {
       "postId": 50847,
       "id": 1979,
       "artist": "Julsång",
       "song": "Nu tändas tusen juleljus",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Nu tändas tusen juleljus",
-      "recordingMbid": "b6716924-568a-49c8-80fc-85f6c4201fe4",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Nu tändas tusen juleljus"
+      "matched": false
     },
     {
       "postId": 50848,
       "id": 1980,
       "artist": "Julsång",
       "song": "När det lider mot jul",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "När det lider mot jul",
-      "recordingMbid": "23cada1d-29dd-4baf-960a-e515ed370a25",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "När det lider mot jul"
+      "matched": false
     },
     {
       "postId": 50849,
       "id": 1981,
       "artist": "Julsång",
       "song": "När juldagsmorgon glimmar",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "När juldagsmorgon glimmar",
-      "recordingMbid": "3664789f-4c09-472d-ad26-b408cf4693dd",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "När juldagsmorgon glimmar"
+      "matched": false
     },
     {
       "postId": 50850,
       "id": 1982,
       "artist": "Julsång",
       "song": "O helga natt",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "O helga natt",
-      "recordingMbid": "692c588c-0834-41fc-a093-d96bfa52d316",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "O helga natt"
+      "matched": false
     },
     {
       "postId": 50851,
       "id": 1983,
       "artist": "Julsång",
       "song": "Sankta Lucia",
-      "matched": true,
-      "artistCredit": "The Real Group",
-      "artistMbids": [
-        "52ec4b88-d05b-48a0-8191-98d005fccbb3"
-      ],
-      "recording": "Sankta Lucia",
-      "recordingMbid": "8a5c66de-1990-405b-bdba-488a2166e7ba",
-      "release": "En riktig jul",
-      "score": 188907,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas recording",
-      "venueArtist": "Julsång",
-      "proposalArtist": "The Real Group",
-      "trusted": true,
-      "title": "Sankta Lucia"
+      "matched": false
     },
     {
       "postId": 50852,
       "id": 1984,
       "artist": "Julsång",
       "song": "Ser du stjärnan i det blå",
-      "matched": true,
-      "artistCredit": "Tommy Körberg",
-      "artistMbids": [
-        "3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0"
-      ],
-      "recording": "Ser du stjärnan I det blå",
-      "recordingMbid": "48e8177a-6e7f-40a9-af25-a854a619ae7f",
-      "release": "Julen är här",
-      "score": 99833,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas recording",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Tommy Körberg",
-      "trusted": true,
-      "title": "Ser du stjärnan i det blå"
+      "matched": false
     },
     {
       "postId": 50853,
       "id": 1985,
       "artist": "Julsång",
       "song": "Staffansvisan",
-      "matched": true,
-      "artistCredit": "Leif \"Loket\" Olsson",
-      "artistMbids": [
-        "029a7eb4-a9cb-4699-bc77-5c24d8557500"
-      ],
-      "recording": "Staffansvisan",
-      "recordingMbid": "8c4146ba-5166-41e2-af8a-036f55838f32",
-      "release": "God Jul",
-      "score": 5302783,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas recording",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Leif \"Loket\" Olsson",
-      "trusted": true,
-      "title": "Staffansvisan"
+      "matched": false
     },
     {
       "postId": 50854,
       "id": 1986,
       "artist": "Julsång",
       "song": "Stilla natt",
-      "matched": true,
-      "artistCredit": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "recording": "Stilla natt",
-      "recordingMbid": "d81d4322-2cd4-4d14-8665-997193135ab4",
-      "release": "Jul",
-      "score": 66482,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Carola",
-      "trusted": true,
-      "title": "Stilla natt"
+      "matched": false
     },
     {
       "postId": 50190,
@@ -40633,22 +40393,7 @@
       "id": 2100,
       "artist": "Broadman Hymnal",
       "song": "Face to face",
-      "matched": true,
-      "artistCredit": "Joslin Grove Choral Society",
-      "artistMbids": [
-        "eae3ad77-2272-4741-839d-845c5d6970ec"
-      ],
-      "recording": "Face to Face With Christ My Savior",
-      "recordingMbid": "b5981892-4090-45be-bbc0-f12cec6d65f7",
-      "release": "Best Loved Hymns - Sweet Hour Of Prayer",
-      "score": 298939,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Broadman Hymnal category",
-      "venueArtist": "Broadman Hymnal",
-      "proposalArtist": "Joslin Grove Choral Society",
-      "trusted": true,
-      "title": "Face to Face With Christ My Savior"
+      "matched": false
     },
     {
       "postId": 51650,
@@ -52261,22 +52006,7 @@
       "id": 2691,
       "artist": "Alice Tegnér",
       "song": "Ekorrn satt i granen",
-      "matched": true,
-      "artistCredit": "Alice Babs",
-      "artistMbids": [
-        "6ae56e30-d394-4d18-8118-6a0a2b77eaaf"
-      ],
-      "recording": "Ekorr’n satt i granen",
-      "recordingMbid": "91eb0430-9ca9-4c78-bef1-60f249858f81",
-      "release": "Sjung med oss mamma: Sånger av Alice Tegnér",
-      "score": 250443,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Alice Tegnér song; Babs recording",
-      "venueArtist": "Alice Tegnér",
-      "proposalArtist": "Alice Babs",
-      "trusted": true,
-      "title": "Ekorr’n satt i granen"
+      "matched": false
     },
     {
       "postId": 51369,
@@ -65387,44 +65117,14 @@
       "id": 3374,
       "artist": "Julsång",
       "song": "Santa Claus is coming to town",
-      "matched": true,
-      "artistCredit": "Bing Crosby",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "recording": "Santa Claus Is Coming to Town",
-      "recordingMbid": "fb5b104e-295d-44f1-aa67-4b1e4e6dcefa",
-      "release": "The Christmas Album",
-      "score": 385064,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Bing Crosby",
-      "trusted": true,
-      "title": "Santa Claus Is Coming to Town"
+      "matched": false
     },
     {
       "postId": 50856,
       "id": 3375,
       "artist": "Julsång",
       "song": "We wish you a merry christmas",
-      "matched": true,
-      "artistCredit": "Bing Crosby",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "recording": "We Wish You a Merry Christmas",
-      "recordingMbid": "b11d5b98-364f-4029-b6c7-eaf3bf9dc087",
-      "release": "The Christmas Album: The Original Recordings (deluxe edition)",
-      "score": 4915058,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Bing Crosby",
-      "trusted": true,
-      "title": "We Wish You a Merry Christmas"
+      "matched": false
     },
     {
       "postId": 49236,
@@ -65608,44 +65308,14 @@
       "id": 3385,
       "artist": "Julsång",
       "song": "Silent night, holy night",
-      "matched": true,
-      "artistCredit": "Bing Crosby",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "recording": "Silent Night, Holy Night",
-      "recordingMbid": "b4579442-1116-4b8e-97c1-ef143ddbf2ae",
-      "release": "Christmas With Bing",
-      "score": 38379,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Bing Crosby",
-      "trusted": true,
-      "title": "Silent Night, Holy Night"
+      "matched": false
     },
     {
       "postId": 50858,
       "id": 3386,
       "artist": "Julsång",
       "song": "Jingle bells",
-      "matched": true,
-      "artistCredit": "Bing Crosby",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "recording": "Jingle Bells",
-      "recordingMbid": "0920477a-f365-4b0c-bcb5-24153b50a540",
-      "release": "White Christmas",
-      "score": 142477,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Christmas standard",
-      "venueArtist": "Julsång",
-      "proposalArtist": "Bing Crosby",
-      "trusted": true,
-      "title": "Jingle Bells"
+      "matched": false
     },
     {
       "postId": 48976,
@@ -68907,22 +68577,7 @@
       "id": 3555,
       "artist": "Midsommarsång",
       "song": "Små grodorna",
-      "matched": true,
-      "artistCredit": "Mora Träsk",
-      "artistMbids": [
-        "17c75486-3253-4359-a5a1-baec06650ebd"
-      ],
-      "recording": "Små grodorna",
-      "recordingMbid": "47ac3c4c-da41-4762-b85a-8d2f38c75b43",
-      "release": "Sjung och lek med Mora Träsk",
-      "score": 22593,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Swedish midsummer",
-      "venueArtist": "Midsommarsång",
-      "proposalArtist": "Mora Träsk",
-      "trusted": true,
-      "title": "Små grodorna"
+      "matched": false
     },
     {
       "postId": 53187,
@@ -72820,22 +72475,7 @@
       "id": 3755,
       "artist": "Irish traditional song",
       "song": "Wild rover",
-      "matched": true,
-      "artistCredit": "The Dubliners",
-      "artistMbids": [
-        "d201e6c0-103d-4a9a-9969-909bd421ddad"
-      ],
-      "recording": "The Wild Rover",
-      "recordingMbid": "341f6b0a-2664-4509-b2ae-da67b26f7106",
-      "release": "The Dubliners with Luke Kelly",
-      "score": 175609,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Irish traditional; Dubliners karaoke standard",
-      "venueArtist": "Irish traditional song",
-      "proposalArtist": "The Dubliners",
-      "trusted": true,
-      "title": "The Wild Rover"
+      "matched": false
     },
     {
       "postId": 52486,
@@ -94789,22 +94429,7 @@
       "id": 4896,
       "artist": "Piano singalong",
       "song": "Happy Birthday",
-      "matched": true,
-      "artistCredit": "Frank Sinatra",
-      "artistMbids": [
-        "197450cd-0124-4164-b723-3c22dd16494d"
-      ],
-      "recording": "Happy Birthday to You",
-      "recordingMbid": "7e4cb65b-9b56-453f-bb19-4544109f1134",
-      "release": "Pro Series Plus, Volume 137",
-      "score": 5626396,
-      "how": "exact",
-      "rewrites": [],
-      "proposed": "Birthday singalong",
-      "venueArtist": "Piano singalong",
-      "proposalArtist": "Frank Sinatra",
-      "trusted": true,
-      "title": "Happy Birthday to You"
+      "matched": false
     },
     {
       "postId": 52175,

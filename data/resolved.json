@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T15:00:20.593Z",
+  "generatedAt": "2026-08-11T15:14:07.393Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -22889,23 +22889,6 @@
       "how": "exact"
     },
     {
-      "postId": 50135,
-      "artist": "Louise Andersson Bodin",
-      "sortAs": "Bodin, Andersson, Louise",
-      "title": "Ja Må Du Leva",
-      "artistMbids": [
-        "a4895458-e22b-4ea5-aaaf-7e9ebcfd6f22"
-      ],
-      "artists": [
-        {
-          "mbid": "a4895458-e22b-4ea5-aaaf-7e9ebcfd6f22",
-          "name": "Louise Andersson Bodin"
-        }
-      ],
-      "recordingMbid": "8c985eef-63b0-44a9-b982-c871a3ab57df",
-      "how": "exact"
-    },
-    {
       "postId": 50790,
       "sortAs": "Gardell, Jonas",
       "title": "Aldrig ska jag sluta älska dig",
@@ -42829,108 +42812,6 @@
       "how": "exact"
     },
     {
-      "postId": 50840,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "f4464614-90c6-459d-958f-15d1bfc255b3",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50841,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "7e5eb227-1f87-42fe-aa78-6f147bb8b4d5",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50842,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "8d8c929c-bd89-4677-a8f9-c9efd54585c9",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50843,
-      "artist": "Mora Träsk",
-      "sortAs": "Mora Träsk",
-      "title": "Nu är det jul igen",
-      "artistMbids": [
-        "17c75486-3253-4359-a5a1-baec06650ebd"
-      ],
-      "artists": [
-        {
-          "mbid": "17c75486-3253-4359-a5a1-baec06650ebd",
-          "name": "Mora Träsk"
-        }
-      ],
-      "recordingMbid": "b5d5e696-cf96-48fd-9c18-0530f495fe74",
-      "genres": [
-        "children's music",
-        "pop rock"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50844,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "title": "Jul, jul strålande jul",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "157bd602-3e29-4738-9f9b-1002d9c89bdc",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
       "postId": 50184,
       "language": "eng",
       "sortAs": "Michael, George",
@@ -42951,195 +42832,6 @@
         "pop rock"
       ],
       "year": 1995,
-      "how": "exact"
-    },
-    {
-      "postId": 50845,
-      "artist": "Bjursåsflickorna",
-      "sortAs": "Bjursåsflickorna",
-      "title": "Lusse Lelle",
-      "artistMbids": [
-        "07a82dcb-3e0a-4ec8-aaab-3b0d7bd20501"
-      ],
-      "artists": [
-        {
-          "mbid": "07a82dcb-3e0a-4ec8-aaab-3b0d7bd20501",
-          "name": "Bjursåsflickorna"
-        }
-      ],
-      "recordingMbid": "d1d88276-26a7-4878-add5-e037e0107a67",
-      "how": "exact"
-    },
-    {
-      "postId": 50846,
-      "artist": "The Playtones",
-      "sortAs": "Playtones, The",
-      "title": "Julmedley",
-      "artistMbids": [
-        "2583b024-b1f2-46b7-9259-701305a7a070"
-      ],
-      "artists": [
-        {
-          "mbid": "2583b024-b1f2-46b7-9259-701305a7a070",
-          "name": "The Playtones"
-        }
-      ],
-      "recordingMbid": "e7050ad7-f062-4922-ad38-2358a9d31171",
-      "genres": [
-        "rock and roll",
-        "rockabilly"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50847,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "b6716924-568a-49c8-80fc-85f6c4201fe4",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50848,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "23cada1d-29dd-4baf-960a-e515ed370a25",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50849,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "3664789f-4c09-472d-ad26-b408cf4693dd",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50850,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "692c588c-0834-41fc-a093-d96bfa52d316",
-      "genres": [
-        "europop",
-        "pop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50851,
-      "artist": "The Real Group",
-      "sortAs": "Real Group, The",
-      "artistMbids": [
-        "52ec4b88-d05b-48a0-8191-98d005fccbb3"
-      ],
-      "artists": [
-        {
-          "mbid": "52ec4b88-d05b-48a0-8191-98d005fccbb3",
-          "name": "The Real Group"
-        }
-      ],
-      "recordingMbid": "8a5c66de-1990-405b-bdba-488a2166e7ba",
-      "genres": [
-        "jazz"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50852,
-      "artist": "Tommy Körberg",
-      "sortAs": "Körberg, Tommy",
-      "artistMbids": [
-        "3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0"
-      ],
-      "artists": [
-        {
-          "mbid": "3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0",
-          "name": "Tommy Körberg"
-        }
-      ],
-      "recordingMbid": "48e8177a-6e7f-40a9-af25-a854a619ae7f",
-      "how": "exact"
-    },
-    {
-      "postId": 50853,
-      "artist": "Leif \"Loket\" Olsson",
-      "sortAs": "Olsson, Leif \"Loket\"",
-      "artistMbids": [
-        "029a7eb4-a9cb-4699-bc77-5c24d8557500"
-      ],
-      "artists": [
-        {
-          "mbid": "029a7eb4-a9cb-4699-bc77-5c24d8557500",
-          "name": "Leif \"Loket\" Olsson"
-        }
-      ],
-      "recordingMbid": "8c4146ba-5166-41e2-af8a-036f55838f32",
-      "how": "exact"
-    },
-    {
-      "postId": 50854,
-      "artist": "Carola",
-      "sortAs": "Carola",
-      "artistMbids": [
-        "1a21747b-7b43-4e97-849b-db5ab664583e"
-      ],
-      "artists": [
-        {
-          "mbid": "1a21747b-7b43-4e97-849b-db5ab664583e",
-          "name": "Carola"
-        }
-      ],
-      "recordingMbid": "d81d4322-2cd4-4d14-8665-997193135ab4",
-      "genres": [
-        "europop",
-        "pop"
-      ],
       "how": "exact"
     },
     {
@@ -45652,23 +45344,6 @@
         "classic country"
       ],
       "year": 1947,
-      "how": "exact"
-    },
-    {
-      "postId": 48654,
-      "artist": "Joslin Grove Choral Society",
-      "sortAs": "Joslin Grove Choral Society",
-      "title": "Face to Face With Christ My Savior",
-      "artistMbids": [
-        "eae3ad77-2272-4741-839d-845c5d6970ec"
-      ],
-      "artists": [
-        {
-          "mbid": "eae3ad77-2272-4741-839d-845c5d6970ec",
-          "name": "Joslin Grove Choral Society"
-        }
-      ],
-      "recordingMbid": "b5981892-4090-45be-bbc0-f12cec6d65f7",
       "how": "exact"
     },
     {
@@ -58655,26 +58330,6 @@
         "pop",
         "dance-pop",
         "electropop"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 47902,
-      "artist": "Alice Babs",
-      "sortAs": "Babs, Alice",
-      "title": "Ekorr’n satt i granen",
-      "artistMbids": [
-        "6ae56e30-d394-4d18-8118-6a0a2b77eaaf"
-      ],
-      "artists": [
-        {
-          "mbid": "6ae56e30-d394-4d18-8118-6a0a2b77eaaf",
-          "name": "Alice Babs"
-        }
-      ],
-      "recordingMbid": "91eb0430-9ca9-4c78-bef1-60f249858f81",
-      "genres": [
-        "pop"
       ],
       "how": "exact"
     },
@@ -74028,50 +73683,6 @@
       "how": "exact"
     },
     {
-      "postId": 50855,
-      "artist": "Bing Crosby",
-      "sortAs": "Crosby, Bing",
-      "title": "Santa Claus Is Coming to Town",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "artists": [
-        {
-          "mbid": "2437980f-513a-44fc-80f1-b90d9d7fcf8f",
-          "name": "Bing Crosby"
-        }
-      ],
-      "recordingMbid": "fb5b104e-295d-44f1-aa67-4b1e4e6dcefa",
-      "genres": [
-        "jazz",
-        "pop",
-        "vocal jazz"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50856,
-      "artist": "Bing Crosby",
-      "sortAs": "Crosby, Bing",
-      "title": "We Wish You a Merry Christmas",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "artists": [
-        {
-          "mbid": "2437980f-513a-44fc-80f1-b90d9d7fcf8f",
-          "name": "Bing Crosby"
-        }
-      ],
-      "recordingMbid": "b11d5b98-364f-4029-b6c7-eaf3bf9dc087",
-      "genres": [
-        "jazz",
-        "pop",
-        "vocal jazz"
-      ],
-      "how": "exact"
-    },
-    {
       "postId": 49236,
       "language": "eng",
       "sortAs": "Love, Darlene",
@@ -74271,50 +73882,6 @@
         "brill building"
       ],
       "year": 1963,
-      "how": "exact"
-    },
-    {
-      "postId": 50857,
-      "artist": "Bing Crosby",
-      "sortAs": "Crosby, Bing",
-      "title": "Silent Night, Holy Night",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "artists": [
-        {
-          "mbid": "2437980f-513a-44fc-80f1-b90d9d7fcf8f",
-          "name": "Bing Crosby"
-        }
-      ],
-      "recordingMbid": "b4579442-1116-4b8e-97c1-ef143ddbf2ae",
-      "genres": [
-        "jazz",
-        "pop",
-        "vocal jazz"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 50858,
-      "artist": "Bing Crosby",
-      "sortAs": "Crosby, Bing",
-      "title": "Jingle Bells",
-      "artistMbids": [
-        "2437980f-513a-44fc-80f1-b90d9d7fcf8f"
-      ],
-      "artists": [
-        {
-          "mbid": "2437980f-513a-44fc-80f1-b90d9d7fcf8f",
-          "name": "Bing Crosby"
-        }
-      ],
-      "recordingMbid": "0920477a-f365-4b0c-bcb5-24153b50a540",
-      "genres": [
-        "jazz",
-        "pop",
-        "vocal jazz"
-      ],
       "how": "exact"
     },
     {
@@ -77992,26 +77559,6 @@
       "genres": [
         "soul",
         "pop",
-        "pop rock"
-      ],
-      "how": "exact"
-    },
-    {
-      "postId": 51678,
-      "artist": "Mora Träsk",
-      "sortAs": "Mora Träsk",
-      "artistMbids": [
-        "17c75486-3253-4359-a5a1-baec06650ebd"
-      ],
-      "artists": [
-        {
-          "mbid": "17c75486-3253-4359-a5a1-baec06650ebd",
-          "name": "Mora Träsk"
-        }
-      ],
-      "recordingMbid": "47ac3c4c-da41-4762-b85a-8d2f38c75b43",
-      "genres": [
-        "children's music",
         "pop rock"
       ],
       "how": "exact"
@@ -82391,27 +81938,6 @@
         "neue deutsche welle"
       ],
       "year": 1985,
-      "how": "exact"
-    },
-    {
-      "postId": 50466,
-      "artist": "The Dubliners",
-      "sortAs": "Dubliners, The",
-      "title": "The Wild Rover",
-      "artistMbids": [
-        "d201e6c0-103d-4a9a-9969-909bd421ddad"
-      ],
-      "artists": [
-        {
-          "mbid": "d201e6c0-103d-4a9a-9969-909bd421ddad",
-          "name": "The Dubliners"
-        }
-      ],
-      "recordingMbid": "341f6b0a-2664-4509-b2ae-da67b26f7106",
-      "genres": [
-        "folk",
-        "irish folk"
-      ],
       "how": "exact"
     },
     {
@@ -108269,28 +107795,6 @@
         "rock"
       ],
       "year": 2009,
-      "how": "exact"
-    },
-    {
-      "postId": 52134,
-      "artist": "Frank Sinatra",
-      "sortAs": "Sinatra, Frank",
-      "title": "Happy Birthday to You",
-      "artistMbids": [
-        "197450cd-0124-4164-b723-3c22dd16494d"
-      ],
-      "artists": [
-        {
-          "mbid": "197450cd-0124-4164-b723-3c22dd16494d",
-          "name": "Frank Sinatra"
-        }
-      ],
-      "recordingMbid": "7e4cb65b-9b56-453f-bb19-4544109f1134",
-      "genres": [
-        "jazz",
-        "swing",
-        "traditional pop"
-      ],
       "how": "exact"
     },
     {
