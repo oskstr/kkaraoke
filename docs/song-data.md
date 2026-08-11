@@ -517,7 +517,7 @@ other trusted song to fuzzy-match from. A title-first pass, lead indexing from m
 second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
 `Finsk musik` rows (real performers, `language: "fin"` — not `from`, which is for shows and films).
 Italian proposals use `language: "ita"` the same way. A library-wide MusicBrainz works pass fills
-`language` for every trusted recording that has a linked work. The queue is down from 460 to **226**:
+`language` for every trusted recording that has a linked work. The queue is down from 460 to **208**:
 
 | Songs | What it is                                                                                                                                              |
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -734,9 +734,13 @@ Still to do:
    where it cannot.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
-11. **Works, composers, and languages.** `pnpm fetch:works` looks up each trusted recording's MusicBrainz work
-    and stores the ISO 639-3 lyrics language; composers follow the same work link. Language already exists on
-    songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
+11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
+    canonical recording dump — so a full works dump (or `pnpm fetch:works` against recording MBIDs) is
+    required. Prefer a works dump when one is available; the API pass is correct but slow. Language
+    already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
+    `from` stays reserved for shows and films; broader buckets such as Disney films, Bond themes,
+    Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` (and a
+    future Christmas category for `Julsång`), not as fake performers.
 12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 

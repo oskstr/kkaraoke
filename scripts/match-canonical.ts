@@ -69,6 +69,7 @@ const REWRITES = [
     "title-article-dropped",
     "annotation-stripped",
     "ampersand-spelled-out",
+    "title-contraction",
 ] as const;
 type Rewrite = (typeof REWRITES)[number];
 
@@ -122,6 +123,10 @@ function fromArtistAnnotation(artist: string): string | undefined {
 const VERSION_MARKER =
     /\b(?:mix|remix|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from)\b/i;
 
+/** A language in the bracket is why the venue wrote it — keep `Du hast (English version)`. */
+const LANGUAGE_VERSION =
+    /\b(?:english|swedish|finnish|german|spanish|french|italian|norwegian|danish|dutch|portuguese)\b/i;
+
 /**
  * Pull the show or film out of a `(from "…")` / `(from … soundtrack)` suffix, when that is
  * what the bracket is doing. Returns undefined for every other kind of bracket.
@@ -146,6 +151,17 @@ function fromAnnotation(recording: string): string | undefined {
 function titleToUse(recording: string): { title: string; from?: string } {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] === undefined || !VERSION_MARKER.test(bracket[1])) {
+        return { title: recording };
+    }
+    // Language versions are the song the venue meant, not a master to strip away.
+    if (LANGUAGE_VERSION.test(bracket[1])) {
+        const language = LANGUAGE_VERSION.exec(bracket[1])?.[0];
+        if (language !== undefined) {
+            const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
+            return {
+                title: recording.replace(new RegExp(language, "i"), capitalized).replace(/\s+/g, " ").trim(),
+            };
+        }
         return { title: recording };
     }
     const base = withoutAnnotation(recording);
@@ -223,9 +239,29 @@ function artistForms(artist: string): Form[] {
 
 function titleForms(title: string): Form[] {
     const forms: Form[] = [{ value: title, rewrites: [] }];
-    const bare = withoutAnnotation(title);
-    if (bare !== title && bare.length > 0) {
-        forms.push({ value: bare, rewrites: ["annotation-stripped"] });
+    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(title);
+    // `Du hast (english)` must not strip to `Du hast` or it prefers the German master.
+    // Keep the language tag, and add the MusicBrainz-shaped `English version` form.
+    if (bracket?.[1] !== undefined && LANGUAGE_VERSION.test(bracket[1])) {
+        const language = LANGUAGE_VERSION.exec(bracket[1])?.[0];
+        if (language !== undefined) {
+            const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
+            const normalized = title.replace(new RegExp(language, "i"), capitalized).replace(/\s+/g, " ").trim();
+            if (normalized !== title) {
+                forms.push({ value: normalized, rewrites: [] });
+            }
+            if (!/\bversion\b/i.test(bracket[1])) {
+                forms.push({
+                    value: `${withoutAnnotation(title)} (${capitalized} version)`,
+                    rewrites: [],
+                });
+            }
+        }
+    } else {
+        const bare = withoutAnnotation(title);
+        if (bare !== title && bare.length > 0) {
+            forms.push({ value: bare, rewrites: ["annotation-stripped"] });
+        }
     }
     // Both directions, since the venue drops articles far more often than it adds them but
     // does both. Applied to the annotation-stripped form too, so `Winner takes it all
@@ -243,6 +279,22 @@ function titleForms(title: string): Form[] {
                     rewrites: [...form.rewrites, "title-article-added"],
                 });
             }
+        }
+    }
+    // `Lying Eyes` / `Lyin' Eyes` — the venue often expands the contraction and then matches
+    // a live bootleg titled that way instead of the studio cut.
+    for (const form of [...forms]) {
+        if (/\blying\b/i.test(form.value)) {
+            forms.push({
+                value: form.value.replace(/\blying\b/gi, "lyin'"),
+                rewrites: [...form.rewrites, "title-contraction"],
+            });
+        }
+        if (/\blyin'?\b/i.test(form.value)) {
+            forms.push({
+                value: form.value.replace(/\blyin'?\b/gi, "lying"),
+                rewrites: [...form.rewrites, "title-contraction"],
+            });
         }
     }
     return spelledOut(forms);
@@ -451,6 +503,10 @@ interface Wanted {
     from?: string;
     /** ISO 639-3 lyrics language, where a proposal names one (never a show or film). */
     language?: string;
+    /** Venue artist string, so a wrong-attribution proposal can beat a hit on the mistake. */
+    venueArtist?: string;
+    /** Artist the proposal named, when that differs from the venue. */
+    proposalArtist?: string;
 }
 
 interface Match extends Row {
@@ -463,6 +519,9 @@ interface Match extends Row {
     from?: string;
     /** ISO 639-3 lyrics language from a proposal, until a works lookup confirms one. */
     language?: string;
+    /** Venue / proposal artists, kept so a later venue hit cannot undo a wrong-attribution fix. */
+    venueArtist?: string;
+    proposalArtist?: string;
     trusted: boolean;
 }
 
@@ -504,12 +563,30 @@ function toRow(line: string): Row | undefined {
     }
     return {
         artistCredit: fields[3] ?? "",
-        artistMbids: (fields[2] ?? "").split(/[,\s]+/).filter((mbid) => mbid.length > 0),
+        artistMbids: [...new Set((fields[2] ?? "").split(/[,\s]+/).filter((mbid) => mbid.length > 0))],
         recording: fields[7] ?? "",
         recordingMbid: fields[6] ?? "",
         release: fields[5] ?? "",
         score: Number(fields[9]),
     };
+}
+
+/** Concert bootlegs in the dump often outscore the studio cut on the same misspelled title. */
+function isLiveRelease(release: string): boolean {
+    return /^\d{4}-\d{2}-\d{2}\s*:/.test(release) || /\blive\b/i.test(release);
+}
+
+/** Remix / acoustic / club masters should not beat the plain studio cut the karaoke track imitates. */
+function isVariantRecording(recording: string): boolean {
+    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
+    if (bracket?.[1] !== undefined) {
+        // Language versions are the song; every other annotation is a particular master.
+        if (LANGUAGE_VERSION.test(bracket[1])) return false;
+        return true;
+    }
+    return /\b(?:remix|mix|club|dub|mash(?:[- ]?up)?|bootleg|acoustic|instrumental|karaoke)\b/i.test(
+        recording,
+    );
 }
 
 /**
@@ -603,9 +680,18 @@ interface Proposal {
     why: string;
 }
 
+/** Punctuation, case and diacritics removed for comparing credit lines to proposals. */
+const nameKey = (value: string): string =>
+    value
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/\p{M}+/gu, "")
+        .replace(/[^a-z0-9]/g, "");
+
 /**
- * Worse than any rewriting, so that a proposal can only win where nothing else matched at
- * all. Guessing must never be able to overrule the catalogue's own strings.
+ * Worse than any rewriting for ordinary collisions, so a speculative proposal cannot
+ * overrule the catalogue's own strings. Wrong-attribution proposals are exempt in
+ * `consider` when the existing hit is clearly the mistaken venue artist.
  */
 const PROPOSED_RANK = 99;
 
@@ -651,6 +737,8 @@ async function main(): Promise<void> {
                     rank: PROPOSED_RANK,
                     rewrites,
                     proposed: proposal.why,
+                    venueArtist: song.artist,
+                    ...(proposal.artist === undefined ? {} : { proposalArtist: proposal.artist }),
                     ...(proposal.from === undefined ? {} : { from: proposal.from }),
                     ...(proposal.language === undefined ? {} : { language: proposal.language }),
                 });
@@ -665,11 +753,67 @@ async function main(): Promise<void> {
         const { postId, rank } = entry;
         const existing = best.get(postId);
         if (existing !== undefined) {
-            if (rank > existing.rank) return;
-            if (rank === existing.rank) {
-                const order = HOWS.indexOf(how) - HOWS.indexOf(existing.how);
-                if (order > 0) return;
-                if (order === 0 && !(row.score < existing.score)) return;
+            // A confirmed wrong-attribution proposal must not be stolen back by an exact hit
+            // on the mistaken venue artist (scan order otherwise prefers the mistake).
+            if (
+                existing.proposalArtist !== undefined &&
+                entry.proposalArtist === undefined &&
+                existing.venueArtist !== undefined
+            ) {
+                const venueKey = nameKey(existing.venueArtist);
+                const proposedKey = nameKey(existing.proposalArtist);
+                const newKey = nameKey(row.artistCredit);
+                if (
+                    venueKey.length > 0 &&
+                    newKey.includes(venueKey.slice(0, Math.min(venueKey.length, 12))) &&
+                    !newKey.includes(proposedKey.slice(0, Math.min(proposedKey.length, 12)))
+                ) {
+                    return;
+                }
+            }
+            const existingLive = isLiveRelease(existing.release);
+            const newLive = isLiveRelease(row.release);
+            // A studio cut reached by one title contraction beats a concert bootleg that
+            // matched the venue's misspelling exactly (`Lying Eyes` live vs `Lyin' Eyes`).
+            // Proposals may use a worse rank; still let them pull the studio master.
+            // Do not treat an acoustic/remix as "studio" just because its release is not live —
+            // that is how `I'm Just Ken (acoustic)` stole the live plain-title master.
+            const studioUpgrade =
+                existingLive &&
+                !newLive &&
+                !isVariantRecording(row.recording) &&
+                (rank <= existing.rank + 1 || entry.proposed !== undefined);
+            const variantUpgrade =
+                isVariantRecording(existing.recording) &&
+                !isVariantRecording(row.recording) &&
+                (rank <= existing.rank + 1 || entry.proposed !== undefined);
+            // Wrong-attribution proposals: the venue string matched someone else who happens
+            // to have a recording of that title (`Dynamite` the band, solo `Steve Miller`).
+            // Prefer the dump hit on the artist the proposal named.
+            let attributionUpgrade = false;
+            if (entry.proposalArtist !== undefined && entry.venueArtist !== undefined) {
+                const venueKey = nameKey(entry.venueArtist);
+                const proposedKey = nameKey(entry.proposalArtist);
+                const existingKey = nameKey(existing.artistCredit);
+                const newKey = nameKey(row.artistCredit);
+                if (
+                    venueKey.length > 0 &&
+                    proposedKey.length > 0 &&
+                    venueKey !== proposedKey &&
+                    existingKey.includes(venueKey.slice(0, Math.min(venueKey.length, 12))) &&
+                    (newKey.includes(proposedKey.slice(0, Math.min(proposedKey.length, 12))) ||
+                        proposedKey.includes(newKey.slice(0, Math.min(newKey.length, 12))))
+                ) {
+                    attributionUpgrade = true;
+                }
+            }
+            if (!studioUpgrade && !variantUpgrade && !attributionUpgrade) {
+                if (rank > existing.rank) return;
+                if (rank === existing.rank) {
+                    const order = HOWS.indexOf(how) - HOWS.indexOf(existing.how);
+                    if (order > 0) return;
+                    if (order === 0 && !(row.score < existing.score)) return;
+                }
             }
         }
         best.set(postId, {
@@ -679,6 +823,8 @@ async function main(): Promise<void> {
             ...(entry.proposed === undefined ? {} : { proposed: entry.proposed }),
             ...(entry.from === undefined ? {} : { from: entry.from }),
             ...(entry.language === undefined ? {} : { language: entry.language }),
+            ...(entry.venueArtist === undefined ? {} : { venueArtist: entry.venueArtist }),
+            ...(entry.proposalArtist === undefined ? {} : { proposalArtist: entry.proposalArtist }),
             rank,
             trusted: TRUSTED.includes(how),
         });
@@ -1044,6 +1190,7 @@ async function main(): Promise<void> {
 
     const results = catalogue.songs.map((song) => {
         const match = best.get(song.postId);
+        const proposal = proposals.get(song.postId);
         if (match === undefined) {
             return { postId: song.postId, id: song.id, artist: song.artist, song: song.song, matched: false as const };
         }
@@ -1054,10 +1201,17 @@ async function main(): Promise<void> {
         // `recording` stays MusicBrainz's own title; `title` is the one to publish and to
         // date, which differs only where the match landed on a particular master.
         const published = titleToUse(match.recording);
+        // A proposal's title wins when it names the work more carefully than the matched
+        // master (`FourFiveSeconds` vs a remix titled with spaces; `Du hast (English version)`).
+        const title =
+            proposal?.title !== undefined ? titleToUse(proposal.title).title : published.title;
         // A proposal's `from` wins over one extracted from the recording title or from an
         // artist-column soundtrack note: the proposer is naming the show the venue filed
-        // under, which is the one worth searching for.
-        const from = match.from ?? published.from ?? fromArtistAnnotation(song.artist);
+        // under, which is the one worth searching for. Apply even when a non-proposal key
+        // won the recording match — `from` / `language` are not competing artist strings.
+        const from =
+            proposal?.from ?? match.from ?? published.from ?? fromArtistAnnotation(song.artist);
+        const language = proposal?.language ?? match.language;
         return {
             postId: song.postId,
             id: song.id,
@@ -1065,9 +1219,9 @@ async function main(): Promise<void> {
             song: song.song,
             matched: true as const,
             ...rest,
-            title: published.title,
+            title,
             ...(from === undefined ? {} : { from }),
-            ...(match.language === undefined ? {} : { language: match.language }),
+            ...(language === undefined ? {} : { language }),
             ...(placeholder ? { placeholder: true as const, trusted: false } : {}),
         };
     });

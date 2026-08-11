@@ -127,9 +127,10 @@
         },
         {
             "postId": 52852,
-            "artist": "Christopher Plummer",
-            "why": "von Trapp sings it in the film",
-            "from": "The Sound of Music"
+            "artist": "Julie Andrews",
+            "why": "Sound of Music; restore from",
+            "from": "The Sound of Music",
+            "title": "Edelweiss"
         },
         {
             "postId": 52854,
@@ -170,10 +171,10 @@
         },
         {
             "postId": 49420,
-            "artist": "Linda Hunt",
+            "artist": "Linda Hunt & Bobbi Page",
             "title": "Listen With Your Heart",
-            "why": "Pocahontas; previous proposal may have wrong performer spelling",
-            "from": "Pocahontas"
+            "from": "Pocahontas",
+            "why": "Pocahontas; Linda Hunt & Bobbi Page soundtrack"
         },
         {
             "postId": 50127,
@@ -1263,6 +1264,318 @@
             "title": "Linda Linda",
             "why": "Frederik's Finnish Linda Linda",
             "language": "fin"
+        },
+        {
+            "postId": 49570,
+            "artist": "Ms. Dynamite",
+            "title": "Dy-Na-Mi-Tee",
+            "why": "venue Dynamite/Dy-na-mi-te is Ms. Dynamite's Dy-Na-Mi-Tee"
+        },
+        {
+            "postId": 49600,
+            "artist": "Eagles",
+            "title": "Lyin' Eyes",
+            "why": "venue Lying eyes; studio title is Lyin' Eyes"
+        },
+        {
+            "postId": 50476,
+            "artist": "Motörhead",
+            "title": "Iron Fist",
+            "why": "Iron Fist is Motörhead, not Iron Maiden"
+        },
+        {
+            "postId": 52924,
+            "artist": "Steve Miller Band",
+            "title": "The Joker",
+            "why": "The Joker is Steve Miller Band, not solo Steve Miller"
+        },
+        {
+            "postId": 53119,
+            "artist": "Cartoons",
+            "title": "DooDah",
+            "why": "Danish Cartoons; title is DooDah"
+        },
+        {
+            "postId": 52912,
+            "artist": "Svenne & Lotta",
+            "title": "Bang en boomerang",
+            "why": "Svenne & Lotta Swedish hit"
+        },
+        {
+            "postId": 48385,
+            "artist": "Blue Swede",
+            "title": "Hooked on a Feeling",
+            "why": "Blue Swede; not the later choir arrangement"
+        },
+        {
+            "postId": 48184,
+            "artist": "Donna Summer & Barbra Streisand",
+            "title": "No More Tears (Enough Is Enough)",
+            "why": "classic duet; avoid 2017 remix masters"
+        },
+        {
+            "postId": 51698,
+            "artist": "Mike WiLL Made-It feat. Miley Cyrus, Wiz Khalifa & Juicy J",
+            "title": "23",
+            "why": "Mike WMI is Mike WiLL Made-It; 23 is the full featured credit"
+        },
+        {
+            "postId": 52454,
+            "artist": "Kanye West feat. Rihanna & Paul McCartney",
+            "title": "FourFiveSeconds",
+            "why": "studio OneWord title; dump files Kanye first on the non-remix master"
+        },
+        {
+            "postId": 52452,
+            "artist": "Kanye West feat. Rihanna & Paul McCartney",
+            "title": "FourFiveSeconds",
+            "why": "same song; prefer studio FourFiveSeconds over DJ Mustard remix"
+        },
+        {
+            "postId": 50329,
+            "artist": "Daryl Hall & John Oates",
+            "title": "You Make My Dreams",
+            "why": "studio Voices cut; avoid live Park West master"
+        },
+        {
+            "postId": 49418,
+            "artist": "Julie Andrews",
+            "title": "Supercalifragilisticexpialidocious",
+            "from": "Mary Poppins",
+            "why": "Mary Poppins; venue truncated Supercalifragilist"
+        },
+        {
+            "postId": 49419,
+            "artist": "Joe York",
+            "title": "Never Smile at a Crocodile",
+            "from": "Peter Pan",
+            "why": "Peter Pan / Disney karaoke vocal; avoid [Disney] placeholder"
+        },
+        {
+            "postId": 51394,
+            "artist": "Madonna",
+            "title": "Die Another Day",
+            "from": "Die Another Day",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 53238,
+            "artist": "Tina Turner",
+            "title": "GoldenEye",
+            "from": "GoldenEye",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 49558,
+            "artist": "Duran Duran",
+            "title": "A View to a Kill",
+            "from": "A View to a Kill",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 48771,
+            "artist": "Carly Simon",
+            "title": "Nobody Does It Better",
+            "from": "The Spy Who Loved Me",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 53280,
+            "artist": "Tom Jones",
+            "title": "Thunderball",
+            "from": "Thunderball",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 50218,
+            "artist": "Gladys Knight & the Pips",
+            "title": "Licence to Kill",
+            "from": "Licence to Kill",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 52769,
+            "artist": "Shirley Bassey",
+            "title": "Goldfinger",
+            "from": "Goldfinger",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 52760,
+            "artist": "Sheena Easton",
+            "title": "For Your Eyes Only",
+            "from": "For Your Eyes Only",
+            "why": "James Bond theme"
+        },
+        {
+            "postId": 50494,
+            "artist": "Luciano Pavarotti",
+            "title": "Ave Maria",
+            "language": "ita",
+            "why": "Italian bucket Ah Maria is almost certainly Ave Maria"
+        },
+        {
+            "postId": 50490,
+            "artist": "Emilio Pericoli",
+            "title": "Al di là",
+            "language": "ita",
+            "why": "Italian standard"
+        },
+        {
+            "postId": 50491,
+            "artist": "Andy Williams",
+            "title": "Speak Softly Love",
+            "language": "ita",
+            "why": "Speak Softly, Love under Italian"
+        },
+        {
+            "postId": 50622,
+            "artist": "Colm Wilkinson",
+            "title": "This Is the Moment",
+            "from": "Jekyll & Hyde",
+            "why": "Jekyll & Hyde the musical (venue Hide typo)"
+        },
+        {
+            "postId": 50421,
+            "artist": "Idol Allstars 2010",
+            "title": "All I Need Is You",
+            "why": "Idolgänget 2010 is Idol Allstars 2010"
+        },
+        {
+            "postId": 50466,
+            "artist": "The Dubliners",
+            "title": "The Wild Rover",
+            "why": "Irish traditional; Dubliners karaoke standard"
+        },
+        {
+            "postId": 48744,
+            "artist": "Åsa Jinder & CajsaStina Åkerström",
+            "title": "Av längtan till dig",
+            "why": "duet; title-first had wrongly attached a choir"
+        },
+        {
+            "postId": 52329,
+            "artist": "Rammstein",
+            "title": "Du hast (English version)",
+            "why": "English version of Du hast"
+        },
+        {
+            "postId": 51160,
+            "artist": "LeAnn Rimes",
+            "title": "How Do I Live",
+            "why": "drop (original) master marker"
+        },
+        {
+            "postId": 48005,
+            "artist": "Andrea McArdle",
+            "title": "Tomorrow",
+            "from": "Annie",
+            "why": "Annie; not a tour-cast entity"
+        },
+        {
+            "postId": 51630,
+            "artist": "Michael Bolton",
+            "title": "Go the Distance",
+            "from": "Hercules",
+            "why": "from Hercules"
+        },
+        {
+            "postId": 52589,
+            "artist": "Ryan Gosling",
+            "title": "I'm Just Ken",
+            "from": "Barbie",
+            "why": "from Barbie (2023)"
+        },
+        {
+            "postId": 52515,
+            "artist": "Richard O’Brien",
+            "title": "Time Warp",
+            "from": "The Rocky Horror Picture Show",
+            "why": "Rocky Horror; from not cast-as-artist"
+        },
+        {
+            "postId": 53329,
+            "artist": "Tooji",
+            "title": "Stay",
+            "from": "Eurovision",
+            "why": "Eurovision as category; not Eurovision 2012 Norway"
+        },
+        {
+            "postId": 50367,
+            "artist": "Zac Efron & Vanessa Hudgens",
+            "title": "Breaking Free",
+            "from": "High School Musical",
+            "why": "HSM cast"
+        },
+        {
+            "postId": 50369,
+            "artist": "Ashley Tisdale & Lucas Grabeel",
+            "title": "What I've Been Looking For",
+            "from": "High School Musical",
+            "why": "venue typo What iv'e; HSM"
+        },
+        {
+            "postId": 50370,
+            "artist": "High School Musical",
+            "title": "We're All in This Together",
+            "from": "High School Musical",
+            "why": "HSM; keep from as the film"
+        },
+        {
+            "postId": 49410,
+            "artist": "Jason Weaver",
+            "title": "I Just Can't Wait to Be King",
+            "from": "The Lion King",
+            "why": "Lion King"
+        },
+        {
+            "postId": 49421,
+            "artist": "Jason Weaver",
+            "title": "I Just Can't Wait to Be King",
+            "from": "The Lion King",
+            "why": "duplicate Lion King row"
+        },
+        {
+            "postId": 49411,
+            "artist": "Louis Prima",
+            "title": "I Wan'na Be Like You",
+            "from": "The Jungle Book",
+            "why": "Jungle Book"
+        },
+        {
+            "postId": 49413,
+            "artist": "Phil Harris",
+            "title": "The Bare Necessities",
+            "from": "The Jungle Book",
+            "why": "Jungle Book"
+        },
+        {
+            "postId": 49414,
+            "artist": "Samuel E. Wright",
+            "title": "Under the Sea",
+            "from": "The Little Mermaid",
+            "why": "Little Mermaid"
+        },
+        {
+            "postId": 49415,
+            "artist": "Angela Lansbury & Jerry Orbach",
+            "title": "Be Our Guest",
+            "from": "Beauty and the Beast",
+            "why": "Beauty and the Beast"
+        },
+        {
+            "postId": 49416,
+            "artist": "Ilene Woods",
+            "title": "A Dream Is a Wish Your Heart Makes",
+            "from": "Cinderella",
+            "why": "Cinderella"
+        },
+        {
+            "postId": 49417,
+            "artist": "Verna Felton",
+            "title": "Bibbidi-Bobbidi-Boo",
+            "from": "Cinderella",
+            "why": "Cinderella fairy godmother"
         }
     ]
 }

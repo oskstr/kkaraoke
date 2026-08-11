@@ -48,14 +48,16 @@
       "artistMbids": [
         "81bac815-97c5-4723-8f0b-4d8edfad1010"
       ],
-      "recording": "Jump (for My Love)",
-      "recordingMbid": "dd954fca-e86e-404a-955d-306d2bf5fb87",
-      "release": "Superstars of the 80’s: Things Can Only Get Better",
-      "score": 5485631,
+      "recording": "Jump",
+      "recordingMbid": "7d6191f4-ccbb-46c2-b986-ec478e1bb877",
+      "release": "All Night Disco",
+      "score": 5494057,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Jump (for My Love)"
+      "title": "Jump"
     },
     {
       "postId": 51016,
@@ -340,6 +342,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Simple Minds, 1995",
+      "venueArtist": "Elton John",
+      "proposalArtist": "Simple Minds",
       "trusted": true,
       "title": "She’s a River"
     },
@@ -647,6 +651,8 @@
       "rewrites": [],
       "proposed": "the duet from Grease",
       "from": "Grease",
+      "venueArtist": "Grease",
+      "proposalArtist": "John Travolta & Olivia Newton-John",
       "trusted": true,
       "title": "Summer Nights"
     },
@@ -1803,14 +1809,14 @@
       "artistMbids": [
         "90c7177f-4be5-413d-aabd-d228934c2b9b"
       ],
-      "recording": "Kiss (When the Sun Don’t Shine)",
-      "recordingMbid": "58e45486-bfca-4c19-88d9-a87a282866b0",
-      "release": "The Platinum Album",
-      "score": 248776,
-      "how": "exact",
+      "recording": "Kiss 'When the Sun Don't Shine' (Airscape mix)",
+      "recordingMbid": "2fd3fd79-c3af-48de-aa61-16046b2472de",
+      "release": "Club Beats (Series 3 Volume 3)",
+      "score": 5443690,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Kiss (When the Sun Don’t Shine)"
+      "title": "Kiss 'When the Sun Don't Shine'"
     },
     {
       "postId": 48605,
@@ -1965,7 +1971,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Die Another Day"
+      "title": "Die Another Day",
+      "from": "Die Another Day"
     },
     {
       "postId": 53436,
@@ -2435,14 +2442,16 @@
       "artistMbids": [
         "5c6f6348-15b5-4eb5-a8ae-d8a3ee3354a1"
       ],
-      "recording": "Ketchup Song (Asereje)",
-      "recordingMbid": "9a3dbcce-5b6b-4251-a5d7-9efe20170630",
-      "release": "Clubland II - The Ride Of Your Life",
-      "score": 5464459,
-      "how": "version",
-      "rewrites": [],
-      "trusted": true,
-      "title": "Ketchup Song (Asereje)"
+      "recording": "The Ketchup Song (Asereje) 92 BPM",
+      "recordingMbid": "510c8934-eea1-4369-8159-aa742b87697d",
+      "release": "Mastermix DJ Beats, Vol. 152",
+      "score": 5593928,
+      "how": "loose",
+      "rewrites": [
+        "title-article-added"
+      ],
+      "trusted": false,
+      "title": "The Ketchup Song (Asereje) 92 BPM"
     },
     {
       "postId": 53568,
@@ -3257,13 +3266,15 @@
       "artistMbids": [
         "78e98e0e-f873-4e5e-b4b7-88b7293fd713"
       ],
-      "recording": "AM to PM",
-      "recordingMbid": "8fd0ce50-ed62-4866-bcc2-b1d17643875b",
-      "release": "Christina Milian",
-      "score": 282611,
-      "how": "exact",
+      "recording": "AM to PM (mainstream version without intro)",
+      "recordingMbid": "34548598-c897-425e-b28c-005134cb6bb3",
+      "release": "Promo Only: Mainstream Radio, August 2001",
+      "score": 5620033,
+      "how": "version",
       "rewrites": [],
       "proposed": "one l too many",
+      "venueArtist": "Christina Millian",
+      "proposalArtist": "Christina Milian",
       "trusted": true,
       "title": "AM to PM"
     },
@@ -3273,18 +3284,21 @@
       "artist": "Dynamite",
       "song": "Dy-na-mi-te",
       "matched": true,
-      "artistCredit": "Dynamite",
+      "artistCredit": "Ms. Dynamite",
       "artistMbids": [
-        "66371c60-0446-4f18-a994-8934d3b6dc14"
+        "c0c5e158-d61d-4043-a0eb-dc6cc1e0a539"
       ],
-      "recording": "Dynamite",
-      "recordingMbid": "37f8bd66-dd13-4724-bcd6-f85e5736c8cb",
-      "release": "Lock n Load",
-      "score": 955932,
-      "how": "exact",
+      "recording": "Dy-Na-Mi-Tee (album version)",
+      "recordingMbid": "07e7334e-91cf-45c5-b4d1-77004c29ad12",
+      "release": "Just the Hits: Girl Power",
+      "score": 5533207,
+      "how": "version",
       "rewrites": [],
+      "proposed": "venue Dynamite/Dy-na-mi-te is Ms. Dynamite's Dy-Na-Mi-Tee",
+      "venueArtist": "Dynamite",
+      "proposalArtist": "Ms. Dynamite",
       "trusted": true,
-      "title": "Dynamite"
+      "title": "Dy-Na-Mi-Tee"
     },
     {
       "postId": 52246,
@@ -4676,8 +4690,8 @@
       "artistMbids": [
         "2585d166-6514-43c3-886f-a92ebddebc81"
       ],
-      "recording": "Sweet Dreams My L.A. Ex (Bimbo Jones club mix)",
-      "recordingMbid": "3d022fa9-34b2-4dae-a52a-5f1bc9c4b2c4",
+      "recording": "Sweet Dreams My L.A. Ex",
+      "recordingMbid": "d421ad38-1e23-486b-af3b-572c418a6118",
       "release": "Funky Dory",
       "score": 340380,
       "how": "loose",
@@ -4949,8 +4963,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Dana Secada is Jon Secada",
+      "venueArtist": "Dana Secada",
+      "proposalArtist": "Jon Secada",
       "trusted": true,
-      "title": "Ángel"
+      "title": "Angel"
     },
     {
       "postId": 48600,
@@ -6164,6 +6180,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Simply Red, 1992",
+      "venueArtist": "Paul Young",
+      "proposalArtist": "Simply Red",
       "trusted": true,
       "title": "For Your Babies"
     },
@@ -6453,6 +6471,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Marlow is Marlo",
+      "venueArtist": "Clair Marlow",
+      "proposalArtist": "Clair Marlo",
       "trusted": true,
       "title": "Till They Take My Heart Away"
     },
@@ -8375,14 +8395,14 @@
       "artistMbids": [
         "3943ae31-40b4-4de5-a4d6-819d9f3de72e"
       ],
-      "recording": "That’s Why (You Go Away)",
-      "recordingMbid": "dcaba97a-81a0-4c69-bfcb-9182c2e7e910",
-      "release": "Played on Pepper",
-      "score": 131229,
-      "how": "exact",
+      "recording": "That's Why (You Go Away) (Live)",
+      "recordingMbid": "fbdf27ae-1fb3-460d-8e9a-63ea61039692",
+      "release": "The Best Of Michael Learns To Rock Live",
+      "score": 4551045,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "That’s Why (You Go Away)"
+      "title": "That's Why (You Go Away)"
     },
     {
       "postId": 53440,
@@ -8553,6 +8573,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the 1965 hit",
+      "venueArtist": "Past Oldies",
+      "proposalArtist": "The Toys",
       "trusted": true,
       "title": "A Lover’s Concerto"
     },
@@ -8707,6 +8729,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Medeiros 1986; nothing to do with George Harrison",
+      "venueArtist": "George Harrison",
+      "proposalArtist": "Glenn Medeiros",
       "trusted": true,
       "title": "Nothing’s Gonna Change My Love for You"
     },
@@ -9152,6 +9176,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Selina is Selena",
+      "venueArtist": "Selina",
+      "proposalArtist": "Selena",
       "trusted": true,
       "title": "Dreaming of You"
     },
@@ -9839,7 +9865,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "GoldenEye"
+      "title": "GoldenEye",
+      "from": "GoldenEye"
     },
     {
       "postId": 51235,
@@ -10200,6 +10227,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Franklin, 1967",
+      "venueArtist": "Celine Dion",
+      "proposalArtist": "Aretha Franklin",
       "trusted": true,
       "title": "(You Make Me Feel Like) A Natural Woman"
     },
@@ -10315,6 +10344,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Bacharach and David; Warwick is the standard",
+      "venueArtist": "Phil Collins",
+      "proposalArtist": "Dionne Warwick",
       "trusted": true,
       "title": "I’ll Never Fall in Love Again"
     },
@@ -10411,8 +10442,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "King popularised it; also Tom Jones — trying King",
+      "venueArtist": "George Michael",
+      "proposalArtist": "Ben E. King",
       "trusted": true,
-      "title": "I Who Have Nothing"
+      "title": "I (Who Have Nothing)"
     },
     {
       "postId": 51624,
@@ -11408,6 +11441,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "de Burgh, not Richard Marx",
+      "venueArtist": "Richard Marx",
+      "proposalArtist": "Chris de Burgh",
       "trusted": true,
       "title": "The Lady in Red"
     },
@@ -11618,6 +11653,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Lionel Richie, not Elton John",
+      "venueArtist": "Elton John",
+      "proposalArtist": "Lionel Richie",
       "trusted": true,
       "title": "Truly"
     },
@@ -12120,7 +12157,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Go the Distance"
+      "title": "Go the Distance",
+      "from": "Hercules"
     },
     {
       "postId": 51411,
@@ -12360,13 +12398,15 @@
       "artistMbids": [
         "d138302b-4f57-4d1d-83e3-47f95cb51774"
       ],
-      "recording": "Everyway That I Can",
-      "recordingMbid": "84cf85f0-6593-4f52-b563-e9299846ea2a",
-      "release": "Everyway That I Can",
-      "score": 3705605,
-      "how": "exact",
+      "recording": "Everyway That I Can (remix)",
+      "recordingMbid": "fe0425b4-2605-4d1c-ba85-9db782bcc122",
+      "release": "Arabian Sweet Pop Mix",
+      "score": 5622914,
+      "how": "version",
       "rewrites": [],
       "proposed": "Sertab; every way that l can",
+      "venueArtist": "Sertab",
+      "proposalArtist": "Sertab Erener",
       "trusted": true,
       "title": "Everyway That I Can"
     },
@@ -13108,13 +13148,15 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Lena Anthem",
-      "recordingMbid": "750b126e-ecbd-46d8-ac11-651cc97ad312",
-      "release": "Det gör ont en stund på natten men inget på dan",
-      "score": 368867,
-      "how": "exact",
+      "recording": "Lena Anthem (album version)",
+      "recordingMbid": "68a742f5-c423-4284-b605-447609222221",
+      "release": "Lena Anthem",
+      "score": 2327967,
+      "how": "version",
       "rewrites": [],
       "proposed": "Lena PH is how the venue abbreviates Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "Lena Anthem"
     },
@@ -13173,6 +13215,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "På gatan där jag bor"
     },
@@ -14199,6 +14243,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the band is Daughtry; Chris is its singer",
+      "venueArtist": "Chris Daughtry",
+      "proposalArtist": "Daughtry",
       "trusted": true,
       "title": "Home"
     },
@@ -14698,7 +14744,22 @@
       "id": 777,
       "artist": "Stein og Inger Lise",
       "song": "Bang en boomerang",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Svenne & Lotta",
+      "artistMbids": [
+        "8f2a69ac-7250-438d-b099-4280e54fd42e"
+      ],
+      "recording": "Bang en boomerang",
+      "recordingMbid": "94615014-19ad-4baa-9cd4-a6951ef641b8",
+      "release": "2",
+      "score": 1945661,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Svenne & Lotta Swedish hit",
+      "venueArtist": "Stein og Inger Lise",
+      "proposalArtist": "Svenne & Lotta",
+      "trusted": true,
+      "title": "Bang en boomerang"
     },
     {
       "postId": 49367,
@@ -17973,13 +18034,15 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Det gör ont",
-      "recordingMbid": "17af4b39-adbb-4f38-a8e3-c0e8949f60f9",
-      "release": "Det gör ont en stund på natten men inget på dan",
-      "score": 368867,
-      "how": "exact",
+      "recording": "Det gör ont (Filterfokker remix)",
+      "recordingMbid": "b5cdc4a8-aa51-4a84-a767-6442d752e212",
+      "release": "Det gör ont",
+      "score": 3478833,
+      "how": "version",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "Det gör ont"
     },
@@ -18259,13 +18322,15 @@
       "artistMbids": [
         "fba3e876-68f1-4a1f-99d9-c604480202ba"
       ],
-      "recording": "Dansa i neon",
-      "recordingMbid": "6363d6f2-a91e-4b49-86e7-f47615ea20ea",
-      "release": "Dansa i neon",
-      "score": 18278,
-      "how": "exact",
+      "recording": "Dansa i neon (Bäcklin remix)",
+      "recordingMbid": "9a1c0754-6277-4cfb-88ab-e323d388401d",
+      "release": "Schooldays: 20 lektioner i musik",
+      "score": 5450291,
+      "how": "version",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "Dansa i neon"
     },
@@ -18400,6 +18465,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "Kärleken är evig"
     },
@@ -18536,6 +18603,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Melodifestivalen 1986; dump bills Monica first; venue title is the Är-spelling of E' de'…",
+      "venueArtist": "Lasse Holm & Monica Törnell",
+      "proposalArtist": "Monica Törnell & Lasse Holm",
       "trusted": true,
       "title": "Är det det här du kallar kärlek"
     },
@@ -19841,6 +19910,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Uffe is Ulf",
+      "venueArtist": "Uffe Neidemar",
+      "proposalArtist": "Ulf Neidemar",
       "trusted": true,
       "title": "Häng me' på party"
     },
@@ -20047,8 +20118,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Burning is Burnin'",
+      "venueArtist": "Cue",
+      "proposalArtist": "Cue",
       "trusted": true,
-      "title": "Burnin’"
+      "title": "Burnin'"
     },
     {
       "postId": 51139,
@@ -20253,20 +20326,22 @@
       "artist": "Cajsa Stina Åkerström",
       "song": "Av längtan till dig",
       "matched": true,
-      "artistCredit": "CajsaStina Åkerström, Kör, Symfoniorkester",
+      "artistCredit": "Åsa Jinder & CajsaStina Åkerström",
       "artistMbids": [
-        "9e8838f3-69a6-4994-82a1-2a3829ca2689",
-        "e7b12974-79d5-427b-99ab-c11fbfb0b8fd",
-        "66a728aa-e27a-443e-9b59-4a5061599792"
+        "b6eaede3-3006-41d7-838f-5c2b0a17e41c",
+        "9e8838f3-69a6-4994-82a1-2a3829ca2689"
       ],
-      "recording": "Av Längtan Till Dig",
-      "recordingMbid": "ee992878-eb55-4150-89c3-dc084b3d109c",
-      "release": "Sånger För Livet 9 (Live I Globen)",
-      "score": 493435,
-      "how": "title-first",
+      "recording": "Av längtan till dig",
+      "recordingMbid": "d72753cd-ab9b-4c9c-8f6c-5d17b179ff80",
+      "release": "25 år som riksspelman: Åsa Jinders bästa",
+      "score": 4779762,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "duet; title-first had wrongly attached a choir",
+      "venueArtist": "Cajsa Stina Åkerström",
+      "proposalArtist": "Åsa Jinder & CajsaStina Åkerström",
       "trusted": true,
-      "title": "Av Längtan Till Dig"
+      "title": "Av längtan till dig"
     },
     {
       "postId": 51996,
@@ -20430,15 +20505,17 @@
       "artistMbids": [
         "bf5c2247-e48d-4e48-8783-220c5a175821"
       ],
-      "recording": "Ooh – I Like It!",
-      "recordingMbid": "7b14032b-7d6f-445b-9abb-fa89389b3bb9",
-      "release": "Blue Tomato",
-      "score": 51180,
-      "how": "exact",
+      "recording": "Ooh I Like It! (Jazzy Breakdown)",
+      "recordingMbid": "7a05fe24-2edd-4395-bb07-c944dfd1bb4b",
+      "release": "Ooh I Like It",
+      "score": 3757351,
+      "how": "version",
       "rewrites": [],
       "proposed": "Creeps is The Creeps; Oh is Ooh",
+      "venueArtist": "Creeps",
+      "proposalArtist": "The Creeps",
       "trusted": true,
-      "title": "Ooh – I Like It!"
+      "title": "Ooh I Like It!"
     },
     {
       "postId": 51505,
@@ -21072,8 +21149,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "dump bills Gwyneth first",
+      "venueArtist": "Huey Lewis & Gwyneth Paltrow",
+      "proposalArtist": "Gwyneth Paltrow & Huey Lewis",
       "trusted": true,
-      "title": "Cruisin’"
+      "title": "Cruisin'"
     },
     {
       "postId": 52590,
@@ -21416,6 +21495,8 @@
       "rewrites": [],
       "proposed": "Hair; popular recording",
       "from": "Hair",
+      "venueArtist": "Hair",
+      "proposalArtist": "Three Dog Night",
       "trusted": true,
       "title": "Easy to Be Hard"
     },
@@ -21628,6 +21709,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "these two songs are The Go-Go's, not Goo Goo Dolls",
+      "venueArtist": "Goo Goo's",
+      "proposalArtist": "The Go-Go's",
       "trusted": true,
       "title": "Our Lips Are Sealed"
     },
@@ -22241,6 +22324,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Iron man black",
+      "venueArtist": "Black Sabbath",
+      "proposalArtist": "Black Sabbath",
       "trusted": true,
       "title": "Iron Man"
     },
@@ -22463,14 +22548,14 @@
       "artistMbids": [
         "20ff3303-4fe2-4a47-a1b6-291e26aa3438"
       ],
-      "recording": "I Got You (I Feel Good)",
-      "recordingMbid": "bf9984ff-64e4-43b7-aac8-86768d6cc7d4",
-      "release": "Millennium Edition",
-      "score": 273136,
-      "how": "exact",
+      "recording": "I Got You (I Feel Good) (bass)",
+      "recordingMbid": "1a708fcb-ff33-4661-aa35-a006d0bf7948",
+      "release": "The Funkmasters: The Great James Brown Rhythm Sections, 1960-1973",
+      "score": 5141959,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I Got You (I Feel Good)"
+      "title": "I Got You (I Feel Good) (bass)"
     },
     {
       "postId": 49240,
@@ -22797,6 +22882,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "The Go-Go's, 1981",
+      "venueArtist": "Goo Goo's",
+      "proposalArtist": "The Go-Go's",
       "trusted": true,
       "title": "We Got the Beat"
     },
@@ -23382,11 +23469,11 @@
       "artistMbids": [
         "5dfdca28-9ddc-4853-933c-8bc97d87beec"
       ],
-      "recording": "Sweet Dreams (Are Made of This)",
-      "recordingMbid": "b123feea-8ae8-4932-b090-4cea1a185858",
-      "release": "Sweet Dreams (Bootleg)",
-      "score": 190896,
-      "how": "exact",
+      "recording": "Sweet Dreams (Are Made of This) (Cyric remix)",
+      "recordingMbid": "88aeb40f-a59c-4050-a6c5-4cf0a035b826",
+      "release": "From Highway to Hell: The Ultimate Cover Collection",
+      "score": 4764339,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Sweet Dreams (Are Made of This)"
@@ -23530,6 +23617,8 @@
       "rewrites": [],
       "proposed": "Mary Magdalene on the 1970 album",
       "from": "Jesus Christ Superstar",
+      "venueArtist": "Jesus Christ Superstar",
+      "proposalArtist": "Yvonne Elliman",
       "trusted": true,
       "title": "I Don’t Know How to Love Him"
     },
@@ -24809,6 +24898,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Sandy is Sandie",
+      "venueArtist": "Sandy Shaw",
+      "proposalArtist": "Sandie Shaw",
       "trusted": true,
       "title": "Puppet on a String"
     },
@@ -25023,7 +25114,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "A View to a Kill"
+      "title": "A View to a Kill",
+      "from": "A View to a Kill"
     },
     {
       "postId": 51275,
@@ -25969,6 +26061,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Santana lead on the recording",
+      "venueArtist": "Michelle Branch feat. Santana",
+      "proposalArtist": "Santana feat. Michelle Branch",
       "trusted": true,
       "title": "The Game of Love"
     },
@@ -26937,16 +27031,18 @@
       "artist": "Blues Brothers",
       "song": "Minnie the moocher",
       "matched": true,
-      "artistCredit": "Blues Brothers",
+      "artistCredit": "The Blues Brothers",
       "artistMbids": [
-        "7252abc2-dfc8-4aa6-889f-2d168b265403"
+        "165d17a9-c8aa-41bf-9db2-adefce5cefd9"
       ],
-      "recording": "Minnie the Moocher (backing track)",
-      "recordingMbid": "6c3d886a-6a51-498f-8966-1867f541910e",
-      "release": "Take the Lead",
-      "score": 5160170,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Minnie the Moocher",
+      "recordingMbid": "b155986e-7d01-430a-aac5-8e5d4c2df76f",
+      "release": "‘TPH Production’ Perform a Tribute to the Blues Brothers",
+      "score": 1026718,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Minnie the Moocher"
     },
@@ -28294,6 +28390,8 @@
       "rewrites": [],
       "proposed": "the duet from Grease",
       "from": "Grease",
+      "venueArtist": "Grease",
+      "proposalArtist": "John Travolta & Olivia Newton-John",
       "trusted": true,
       "title": "You’re the One That I Want"
     },
@@ -30197,8 +30295,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Eddie is Eddy",
+      "venueArtist": "Eddie Grant",
+      "proposalArtist": "Eddy Grant",
       "trusted": true,
-      "title": "Gimme Hope Jo’Anna"
+      "title": "Gimme Hope Jo'anna"
     },
     {
       "postId": 49245,
@@ -30257,6 +30357,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Skinner & Baddiel",
+      "venueArtist": "Skinner & Baddiel",
+      "proposalArtist": "Baddiel, Skinner & The Lightning Seeds",
       "trusted": true,
       "title": "Three Lions"
     },
@@ -30391,6 +30493,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Vidaloo is Vindaloo",
+      "venueArtist": "Fat Les",
+      "proposalArtist": "Fat Les",
       "trusted": true,
       "title": "Vindaloo"
     },
@@ -31015,15 +31119,19 @@
       "artistMbids": [
         "88d6db37-0d87-4e84-a949-9cf8e8879505"
       ],
-      "recording": "Slam Dunk (da Funk)",
-      "recordingMbid": "efbfab60-a5b0-46b8-90b7-bca6f27031e1",
-      "release": "Five",
-      "score": 200284,
+      "recording": "Slam Dunk",
+      "recordingMbid": "c90920e8-6205-443b-968c-bdbe770f9079",
+      "release": "Hit Explosion ’98, Volume 2",
+      "score": 5432309,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "proposed": "Slam dunk the funk",
+      "venueArtist": "Five",
+      "proposalArtist": "Five",
       "trusted": true,
-      "title": "Slam Dunk (da Funk)"
+      "title": "Slam Dunk (Da Funk)"
     },
     {
       "postId": 50215,
@@ -33182,11 +33290,11 @@
       "artistMbids": [
         "5c0d53a1-daa6-4afe-bf2d-b324f0602e26"
       ],
-      "recording": "I Understand (Just How You Feel)",
-      "recordingMbid": "279bd145-e579-4b65-aead-e1121e28bed7",
-      "release": "The Best Of",
-      "score": 4990687,
-      "how": "exact",
+      "recording": "I Understand (Just How You Feel) (rerecorded)",
+      "recordingMbid": "f855f976-21e6-4a0e-868f-92945bac87d7",
+      "release": "100 Hits of the Swingin’ Sixties",
+      "score": 5596041,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "I Understand (Just How You Feel)"
@@ -33474,8 +33582,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "No pleasing you",
+      "venueArtist": "Chas & Dave",
+      "proposalArtist": "Chas & Dave",
       "trusted": true,
-      "title": "Ain’t No Pleasing You"
+      "title": "Ain't No Pleasing You"
     },
     {
       "postId": 50913,
@@ -33658,14 +33768,16 @@
       "artistMbids": [
         "20ff3303-4fe2-4a47-a1b6-291e26aa3438"
       ],
-      "recording": "Say It Loud – I’m Black and I’m Proud",
-      "recordingMbid": "99d799fe-dc78-4c7c-a07e-8b9626597da9",
-      "release": "Say It Live and Loud (Live in Dallas 08.26.68)",
-      "score": 4530197,
+      "recording": "Say It Loud, I’m Black I’m Proud",
+      "recordingMbid": "e54e2073-8798-42a1-b7ce-43e50a07b3f0",
+      "release": "The Complete Works: The Very Best of Music",
+      "score": 4866615,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
       "trusted": true,
-      "title": "Say It Loud – I’m Black and I’m Proud"
+      "title": "Say It Loud, I’m Black I’m Proud"
     },
     {
       "postId": 51816,
@@ -33733,16 +33845,18 @@
       "artist": "Blues Brothers",
       "song": "Soul man",
       "matched": true,
-      "artistCredit": "Blues Brothers",
+      "artistCredit": "The Blues Brothers",
       "artistMbids": [
-        "7252abc2-dfc8-4aa6-889f-2d168b265403"
+        "165d17a9-c8aa-41bf-9db2-adefce5cefd9"
       ],
       "recording": "Soul Man",
-      "recordingMbid": "2757a193-ae98-476b-9483-45b598a65d55",
-      "release": "Live",
-      "score": 887692,
+      "recordingMbid": "a520477b-547b-49a2-a9ec-0cec47ada38f",
+      "release": "‘TPH Production’ Perform a Tribute to the Blues Brothers",
+      "score": 1026718,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Soul Man"
     },
@@ -34472,8 +34586,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Don't go knocking",
+      "venueArtist": "Britney Spears",
+      "proposalArtist": "Britney Spears",
       "trusted": true,
-      "title": "Don’t Go Knockin’ on My Door"
+      "title": "Don't Go Knockin' on My Door"
     },
     {
       "postId": 48619,
@@ -34950,14 +35066,46 @@
       "id": 1854,
       "artist": "Italian",
       "song": "Al di la",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Emilio Pericoli",
+      "artistMbids": [
+        "7a3126a9-7942-4329-988c-59e85f512454"
+      ],
+      "recording": "Al di là",
+      "recordingMbid": "c9850d0f-ed8f-4c42-873e-e66403282029",
+      "release": "Al di là' / Sassi",
+      "score": 4245300,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Italian standard",
+      "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Emilio Pericoli",
+      "trusted": true,
+      "title": "Al di là"
     },
     {
       "postId": 50491,
       "id": 1855,
       "artist": "Italian",
       "song": "Speak softly love",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Andy Williams",
+      "artistMbids": [
+        "57cb4257-9855-4a42-b1be-bfba1d9b520d"
+      ],
+      "recording": "Speak Softly Love",
+      "recordingMbid": "34287c98-617a-4499-8a3a-e9fdec8c2fea",
+      "release": "Love Standard",
+      "score": 4681774,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Speak Softly, Love under Italian",
+      "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Andy Williams",
+      "trusted": true,
+      "title": "Speak Softly Love"
     },
     {
       "postId": 50492,
@@ -34996,6 +35144,8 @@
       "rewrites": [],
       "proposed": "common karaoke version",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Elvis Presley",
       "trusted": true,
       "title": "Santa Lucia"
     },
@@ -35004,7 +35154,23 @@
       "id": 1858,
       "artist": "Italian",
       "song": "Ah Maria",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Luciano Pavarotti",
+      "artistMbids": [
+        "705076ef-a0c5-472f-bebd-3e72174fcaf4"
+      ],
+      "recording": "Ave Maria",
+      "recordingMbid": "85466ea7-c8c3-4e78-a632-999640729d3b",
+      "release": "O Holy Night",
+      "score": 4315,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Italian bucket Ah Maria is almost certainly Ave Maria",
+      "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Luciano Pavarotti",
+      "trusted": true,
+      "title": "Ave Maria"
     },
     {
       "postId": 50495,
@@ -35024,8 +35190,10 @@
       "rewrites": [],
       "proposed": "Neapolitan standard",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Luciano Pavarotti",
       "trusted": true,
-      "title": "Torna A Surriento"
+      "title": "Torna a Surriento"
     },
     {
       "postId": 50496,
@@ -35045,6 +35213,8 @@
       "rewrites": [],
       "proposed": "Volare",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Domenico Modugno",
       "trusted": true,
       "title": "Nel blu dipinto di blu"
     },
@@ -35066,6 +35236,8 @@
       "rewrites": [],
       "proposed": "Dean Martin",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Dean Martin",
       "trusted": true,
       "title": "That's Amore"
     },
@@ -35087,8 +35259,10 @@
       "rewrites": [],
       "proposed": "Cocciante",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Riccardo Cocciante",
       "trusted": true,
-      "title": "Bella senz’anima"
+      "title": "Bella senz'anima"
     },
     {
       "postId": 50499,
@@ -35108,8 +35282,10 @@
       "rewrites": [],
       "proposed": "Feliciano",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "José Feliciano",
       "trusted": true,
-      "title": "Che Sara’"
+      "title": "Che sarà"
     },
     {
       "postId": 50500,
@@ -35129,8 +35305,10 @@
       "rewrites": [],
       "proposed": "Neapolitan standard",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Luciano Pavarotti",
       "trusted": true,
-      "title": "Funiculì, funiculà"
+      "title": "Funiculì, Funiculà"
     },
     {
       "postId": 50501,
@@ -35150,6 +35328,8 @@
       "rewrites": [],
       "proposed": "Carosone",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Renato Carosone",
       "trusted": true,
       "title": "Malafemmena"
     },
@@ -35171,8 +35351,10 @@
       "rewrites": [],
       "proposed": "Neapolitan standard",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Luciano Pavarotti",
       "trusted": true,
-      "title": "O Sole Mio"
+      "title": "O sole mio"
     },
     {
       "postId": 50503,
@@ -35192,6 +35374,8 @@
       "rewrites": [],
       "proposed": "Dalla",
       "language": "ita",
+      "venueArtist": "Italian",
+      "proposalArtist": "Lucio Dalla",
       "trusted": true,
       "title": "Caruso"
     },
@@ -35307,6 +35491,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Halliwell solo, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Geri Halliwell",
       "trusted": true,
       "title": "Mi chico latino"
     },
@@ -35327,6 +35513,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Halliwell solo, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Geri Halliwell",
       "trusted": true,
       "title": "Lift Me Up"
     },
@@ -35347,6 +35535,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Halliwell solo, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Geri Halliwell",
       "trusted": true,
       "title": "Look at Me"
     },
@@ -35367,6 +35557,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Halliwell solo, 2000",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Geri Halliwell",
       "trusted": true,
       "title": "Bag It Up"
     },
@@ -35387,6 +35579,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Melanie C solo, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Melanie C",
       "trusted": true,
       "title": "Northern Star"
     },
@@ -35426,6 +35620,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Melanie C solo, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Melanie C",
       "trusted": true,
       "title": "Goin’ Down"
     },
@@ -35447,6 +35643,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Bunton with Tin Tin Out, 1999",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Tin Tin Out & Emma Bunton",
       "trusted": true,
       "title": "What I Am"
     },
@@ -35467,6 +35665,8 @@
       "how": "version",
       "rewrites": [],
       "proposed": "Melanie B with Missy Elliott, 1998",
+      "venueArtist": "Spice Girls",
+      "proposalArtist": "Melanie B",
       "trusted": true,
       "title": "I Want You Back"
     },
@@ -35831,14 +36031,16 @@
       "artistMbids": [
         "62c28bc0-f696-4c50-8e54-5f8e9120bdb8"
       ],
-      "recording": "There's a Kind of Hush (All Over the World)",
-      "recordingMbid": "1f8ed0db-826c-4b6c-bf95-224d336f4b13",
-      "release": "The Complete Decca Studio Albums: Release Me",
-      "score": 785383,
+      "recording": "There's a Kind of Hush",
+      "recordingMbid": "adf52f05-1dec-40a2-9556-d4d529808868",
+      "release": "Live in Japan",
+      "score": 4526835,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "There's a Kind of Hush (All Over the World)"
+      "title": "There's a Kind of Hush"
     },
     {
       "postId": 49812,
@@ -36856,14 +37058,14 @@
       "artistMbids": [
         "e18709d6-dcd1-4db2-9c4c-0d8d1d431ab6"
       ],
-      "recording": "I Love the Nightlife (Disco Round)",
-      "recordingMbid": "3abafa96-abe3-4b86-b26f-2938d23972b7",
-      "release": "I Love the Night Life",
-      "score": 112485,
-      "how": "exact",
+      "recording": "I Love the Nightlife (Disco 'Round) (Real Rapino 7\" mix)",
+      "recordingMbid": "9cf731c8-dc4f-4228-a75f-3e164d1735ef",
+      "release": "I Love the Nightlife (disco ’round)",
+      "score": 4996902,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "I Love the Nightlife (Disco Round)"
+      "title": "I Love the Nightlife (Disco 'Round)"
     },
     {
       "postId": 50931,
@@ -37318,6 +37520,8 @@
       "rewrites": [],
       "proposed": "Doolittle's number",
       "from": "My Fair Lady",
+      "venueArtist": "My Fair Lady",
+      "proposalArtist": "Stanley Holloway",
       "trusted": true,
       "title": "Get Me to the Church on Time"
     },
@@ -37483,14 +37687,14 @@
       "artistMbids": [
         "b76645c5-78b0-4e4c-8f95-003f40013a45"
       ],
-      "recording": "Ain’t Goin’ Down (’til the Sun Comes Up)",
-      "recordingMbid": "34ffc7f7-c825-42e1-9e47-d6b656e8eb84",
-      "release": "Double Live",
-      "score": 4530156,
-      "how": "version",
+      "recording": "Ain’t Goin’ Down (’til the Sun Comes Up) - Intro",
+      "recordingMbid": "12894f90-b262-4fe9-9b26-ae9335006d8b",
+      "release": "The Limited Series",
+      "score": 4789393,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Ain’t Goin’ Down (’til the Sun Comes Up)"
+      "trusted": false,
+      "title": "Ain’t Goin’ Down (’til the Sun Comes Up) - Intro"
     },
     {
       "postId": 53328,
@@ -37509,6 +37713,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Tony!Tony!Tony!",
+      "venueArtist": "Tony!Tony!Tony!",
+      "proposalArtist": "Tony! Toni! Toné!",
       "trusted": true,
       "title": "Anniversary"
     },
@@ -37548,6 +37754,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "leeroy is Leroy",
+      "venueArtist": "Jim Croce",
+      "proposalArtist": "Jim Croce",
       "trusted": true,
       "title": "Bad, Bad Leroy Brown"
     },
@@ -37759,11 +37967,11 @@
       "artistMbids": [
         "0307edfc-437c-4b48-8700-80680e66a228"
       ],
-      "recording": "I Wanna Dance With Somebody (Who Loves Me)",
-      "recordingMbid": "900c26eb-e3a4-481d-9c3b-dd8963a7c185",
-      "release": "Whitney",
-      "score": 14415,
-      "how": "exact",
+      "recording": "I Wanna Dance With Somebody (Who Loves Me) (DJ edit)",
+      "recordingMbid": "e1ee9495-c349-470b-99be-229ba9fdee9a",
+      "release": "DJ Edits Collection: 80s",
+      "score": 5597643,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "I Wanna Dance With Somebody (Who Loves Me)"
@@ -38272,11 +38480,11 @@
       "artistMbids": [
         "084308bd-1654-436f-ba03-df6697104e19"
       ],
-      "recording": "Good Riddance (Time of Your Life)",
-      "recordingMbid": "91398240-3c6b-4222-b897-7f9f3a96983b",
-      "release": "nimrod.",
-      "score": 178902,
-      "how": "exact",
+      "recording": "Good Riddance (Time of Your Life) (live at Makuhari Messe, Tokyo, Japan, March 18, 2001)",
+      "recordingMbid": "a58b0348-d8fd-4204-8f06-de72d65b0718",
+      "release": "Warning",
+      "score": 1695059,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Good Riddance (Time of Your Life)"
@@ -38902,14 +39110,16 @@
       "artistMbids": [
         "c296e10c-110a-4103-9e77-47bfebb7fb2e"
       ],
-      "recording": "Them Belly Full (but We Hungry)",
-      "recordingMbid": "7d9e7167-4328-48dc-aca3-7da7fb904d36",
-      "release": "Dreams of Freedom: Ambient Translations of Bob Marley in Dub",
-      "score": 4468428,
+      "recording": "Them Belly Full",
+      "recordingMbid": "8e6467ee-df5c-4d30-a99d-fd469cc6b96c",
+      "release": "Bob Marley: The 420 Edition",
+      "score": 4881697,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Them Belly Full (but We Hungry)"
+      "title": "Them Belly Full"
     },
     {
       "postId": 52017,
@@ -39087,6 +39297,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "full title",
+      "venueArtist": "Backstreet Boys",
+      "proposalArtist": "Backstreet Boys",
       "trusted": true,
       "title": "If You Want It to Be Good Girl (Get Yourself a Bad Boy)"
     },
@@ -39860,6 +40072,8 @@
       "rewrites": [],
       "proposed": "venue filed under Finsk musik; Kari Tapio's 1995 hit",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Kari Tapio",
       "trusted": true,
       "title": "Myrskyn jälkeen"
     },
@@ -39881,6 +40095,8 @@
       "rewrites": [],
       "proposed": "Jari Sillanpää, 1996; language label not an artist",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Jari Sillanpää",
       "trusted": true,
       "title": "Kaduilla tuulee"
     },
@@ -39902,6 +40118,8 @@
       "rewrites": [],
       "proposed": "Juha Watt Vainio, 1981",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Juha Vainio",
       "trusted": true,
       "title": "Matkalla pohjoiseen"
     },
@@ -39923,6 +40141,8 @@
       "rewrites": [],
       "proposed": "Kake Randelin iskelmä standard",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Kake Randelin",
       "trusted": true,
       "title": "Kuin joutsenlaulu"
     },
@@ -39944,6 +40164,8 @@
       "rewrites": [],
       "proposed": "Juice Leskinen Slam, 1980; earlier Dingo guess was wrong",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Juice Leskinen Slam",
       "trusted": true,
       "title": "Viidestoista yö"
     },
@@ -39965,6 +40187,8 @@
       "rewrites": [],
       "proposed": "Antti Huovila",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Antti Huovila",
       "trusted": true,
       "title": "Vaskikellot"
     },
@@ -39986,6 +40210,8 @@
       "rewrites": [],
       "proposed": "Frederik's Finnish Titanic, not Celine Dion",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Frederik",
       "trusted": true,
       "title": "Titanic"
     },
@@ -40007,6 +40233,8 @@
       "rewrites": [],
       "proposed": "Irwin Goodman; venue spelling missed the period",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Irwin Goodman",
       "trusted": true,
       "title": "St. Pauli ja Reeperbahn"
     },
@@ -40028,6 +40256,8 @@
       "rewrites": [],
       "proposed": "Rainer Friman",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Rainer Friman",
       "trusted": true,
       "title": "Linnut"
     },
@@ -40049,6 +40279,8 @@
       "rewrites": [],
       "proposed": "Agents recording of the standard",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Agents",
       "trusted": true,
       "title": "Illan varjoon himmeään"
     },
@@ -40070,8 +40302,10 @@
       "rewrites": [],
       "proposed": "Jippu",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Jippu",
       "trusted": true,
-      "title": "Eva (Kielletyllä iholla)"
+      "title": "Eva"
     },
     {
       "postId": 49970,
@@ -40091,6 +40325,8 @@
       "rewrites": [],
       "proposed": "Janne Tulkki",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Janne Tulkki",
       "trusted": true,
       "title": "Sinisen taivaan sateenkaari"
     },
@@ -40112,6 +40348,8 @@
       "rewrites": [],
       "proposed": "Mika Sundqvist, 1980",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Mika Sundqvist",
       "trusted": true,
       "title": "Moottoripyörä on moottoripyörä"
     },
@@ -40133,6 +40371,8 @@
       "rewrites": [],
       "proposed": "Solistiyhtye Suomi",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Solistiyhtye Suomi",
       "trusted": true,
       "title": "Mahtava peräsin ja pulleat purjeet"
     },
@@ -40154,6 +40394,8 @@
       "rewrites": [],
       "proposed": "Finlanders; venue appended -karakum-",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Finlanders",
       "trusted": true,
       "title": "Kaikki tytöt"
     },
@@ -40175,6 +40417,8 @@
       "rewrites": [],
       "proposed": "Four Cats Finnish take on You Can Have Her",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Four Cats",
       "trusted": true,
       "title": "Kaikki muuttuu"
     },
@@ -40196,6 +40440,8 @@
       "rewrites": [],
       "proposed": "Tomi Markkola",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Tomi Markkola",
       "trusted": true,
       "title": "Aurinko, kuu ja tähdet"
     },
@@ -40217,6 +40463,8 @@
       "rewrites": [],
       "proposed": "Ahti Lampi, 1980",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Ahti Lampi",
       "trusted": true,
       "title": "Elämän valttikortit"
     },
@@ -40238,6 +40486,8 @@
       "rewrites": [],
       "proposed": "Hector, 1990",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Hector",
       "trusted": true,
       "title": "Juodaan viinaa"
     },
@@ -40259,6 +40509,8 @@
       "rewrites": [],
       "proposed": "Matti & Teppo",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Matti & Teppo",
       "trusted": true,
       "title": "Kaiken takana on nainen"
     },
@@ -40280,6 +40532,8 @@
       "rewrites": [],
       "proposed": "Tuula Amberla",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Tuula Amberla",
       "trusted": true,
       "title": "Lulu"
     },
@@ -40301,6 +40555,8 @@
       "rewrites": [],
       "proposed": "Pekka Ruuska, 1990",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Pekka Ruuska",
       "trusted": true,
       "title": "Rafaelin enkeli"
     },
@@ -40322,6 +40578,8 @@
       "rewrites": [],
       "proposed": "Maarit",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Maarit",
       "trusted": true,
       "title": "Jäätelökesä"
     },
@@ -40343,6 +40601,8 @@
       "rewrites": [],
       "proposed": "Juice Leskinen, 1975",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Juice Leskinen",
       "trusted": true,
       "title": "Syksyn sävel"
     },
@@ -40364,8 +40624,10 @@
       "rewrites": [],
       "proposed": "Muska's Finnish Crocodile Rock",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Muska",
       "trusted": true,
-      "title": "Krokotiili rock"
+      "title": "Krokotiilirock"
     },
     {
       "postId": 49984,
@@ -40385,6 +40647,8 @@
       "rewrites": [],
       "proposed": "Anssi Kela",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Anssi Kela",
       "trusted": true,
       "title": "Nummela"
     },
@@ -40406,6 +40670,8 @@
       "rewrites": [],
       "proposed": "Pelle Miljoona & 1980",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Pelle Miljoona & 1980",
       "trusted": true,
       "title": "Tahdon rakastella sinua"
     },
@@ -40427,6 +40693,8 @@
       "rewrites": [],
       "proposed": "Leevi and the Leavings, 1988",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Leevi and the Leavings",
       "trusted": true,
       "title": "Teuvo, maanteiden kuningas"
     },
@@ -40448,6 +40716,8 @@
       "rewrites": [],
       "proposed": "Tavaramarkkinat",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Tavaramarkkinat",
       "trusted": true,
       "title": "Kevät"
     },
@@ -40469,6 +40739,8 @@
       "rewrites": [],
       "proposed": "Dingo, 1984",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Dingo",
       "trusted": true,
       "title": "Autiotalo"
     },
@@ -40490,6 +40762,8 @@
       "rewrites": [],
       "proposed": "Rauli Badding Somerjoki",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Rauli Badding Somerjoki",
       "trusted": true,
       "title": "Bensaa suonissa"
     },
@@ -40511,6 +40785,8 @@
       "rewrites": [],
       "proposed": "Essi Wuorela",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Essi Wuorela",
       "trusted": true,
       "title": "Märkää rakkautta"
     },
@@ -40532,6 +40808,8 @@
       "rewrites": [],
       "proposed": "J. Karjalainen",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "J. Karjalainen",
       "trusted": true,
       "title": "Doris"
     },
@@ -40553,6 +40831,8 @@
       "rewrites": [],
       "proposed": "Yö",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Yö",
       "trusted": true,
       "title": "Joutsenlaulu"
     },
@@ -40574,6 +40854,8 @@
       "rewrites": [],
       "proposed": "Markku Aro; Finnish I'll Meet You at Midnight",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Markku Aro",
       "trusted": true,
       "title": "Keskiyön aikaan"
     },
@@ -40595,6 +40877,8 @@
       "rewrites": [],
       "proposed": "Tuomari Nurmio",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Tuomari Nurmio",
       "trusted": true,
       "title": "Valo yössä"
     },
@@ -40616,6 +40900,8 @@
       "rewrites": [],
       "proposed": "Nisa Soraya original; Kikka covered it later",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Nisa Soraya",
       "trusted": true,
       "title": "Huone 105"
     },
@@ -40637,6 +40923,8 @@
       "rewrites": [],
       "proposed": "Markku Aro; Finnish Crazy",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Markku Aro",
       "trusted": true,
       "title": "Jestas sentään"
     },
@@ -40658,6 +40946,8 @@
       "rewrites": [],
       "proposed": "Frederik's Finnish Linda Linda",
       "language": "fin",
+      "venueArtist": "Finsk musik",
+      "proposalArtist": "Frederik",
       "trusted": true,
       "title": "Linda Linda"
     },
@@ -40895,6 +41185,8 @@
       ],
       "proposed": "the duet",
       "from": "Moulin Rouge!",
+      "venueArtist": "Moulin Rouge",
+      "proposalArtist": "Nicole Kidman & Ewan McGregor",
       "trusted": true,
       "title": "Come What May"
     },
@@ -40916,6 +41208,8 @@
       "rewrites": [],
       "proposed": "McGregor sings it in the film",
       "from": "Moulin Rouge!",
+      "venueArtist": "Moulin Rouge",
+      "proposalArtist": "Ewan McGregor",
       "trusted": true,
       "title": "Your Song"
     },
@@ -41104,10 +41398,8 @@
       "recordingMbid": "0d50e1d8-00b4-4913-a76d-d3805bf8b845",
       "release": "La Vie en rose / Édith Piaf Sings in English",
       "score": 2053359,
-      "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "how": "artist-scoped",
+      "rewrites": [],
       "trusted": true,
       "title": "No Regrets"
     },
@@ -41309,20 +41601,21 @@
       "artist": "Björn Skifs/Blue Swede",
       "song": "Hooked on a feeling",
       "matched": true,
-      "artistCredit": "Björn Skifs, Kör, Orkester",
+      "artistCredit": "Blue Swede",
       "artistMbids": [
-        "b3c8a465-9081-41ef-b845-43fbf24e15e0",
-        "e7b12974-79d5-427b-99ab-c11fbfb0b8fd",
-        "66a728aa-e27a-443e-9b59-4a5061599792"
+        "f98a61b4-394d-4e1f-a5f3-f747b9494e5a"
       ],
-      "recording": "Hooked On A Feeling",
-      "recordingMbid": "8bc9a05d-890d-4030-8595-78410745ba02",
-      "release": "Sånger För Livet 9 (Live I Globen)",
-      "score": 493435,
-      "how": "lead-scoped",
+      "recording": "Hooked on a Feeling",
+      "recordingMbid": "27697708-3c75-4da4-9d04-7594b99498c4",
+      "release": "Pinewood Rally",
+      "score": 82399,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Blue Swede; not the later choir arrangement",
+      "venueArtist": "Björn Skifs/Blue Swede",
+      "proposalArtist": "Blue Swede",
       "trusted": true,
-      "title": "Hooked On A Feeling"
+      "title": "Hooked on a Feeling"
     },
     {
       "postId": 50488,
@@ -42142,11 +42435,11 @@
       "artistMbids": [
         "2ddd167f-5b8a-4372-b350-6ad50493bac0"
       ],
-      "recording": "Over My Head (Cable Car)",
-      "recordingMbid": "d77db5e1-15ba-4e37-87bf-34a6537b341c",
-      "release": "How to Save a Life",
-      "score": 401402,
-      "how": "exact",
+      "recording": "Over My Head (Cable Car) (live acoustic)",
+      "recordingMbid": "673df59f-115a-4731-a852-dbf186bb79e5",
+      "release": "Acoustic Café",
+      "score": 5528618,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Over My Head (Cable Car)"
@@ -42473,13 +42766,15 @@
       "artistMbids": [
         "16fdd9af-467f-47ce-bd29-3413b445b90f"
       ],
-      "recording": "Margaritaville",
-      "recordingMbid": "4679c870-3d32-4009-bca1-7088a86f00ba",
-      "release": "Changes in Latitudes, Changes in Attitudes",
-      "score": 7719,
-      "how": "exact",
+      "recording": "Margaritaville (Reprise)",
+      "recordingMbid": "2de26fc8-b50c-430e-94d7-439d7ca1c2bc",
+      "release": "2002‐06‐20: Tweeter Center Tinley Park, IL",
+      "score": 5223292,
+      "how": "version",
       "rewrites": [],
       "proposed": "one t short",
+      "venueArtist": "Jimmy Buffet",
+      "proposalArtist": "Jimmy Buffett",
       "trusted": true,
       "title": "Margaritaville"
     },
@@ -43174,6 +43469,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Doo wha diddy",
+      "venueArtist": "Manfred Mann",
+      "proposalArtist": "Manfred Mann",
       "trusted": true,
       "title": "Do Wah Diddy Diddy"
     },
@@ -43650,13 +43947,15 @@
       "artistMbids": [
         "16fdd9af-467f-47ce-bd29-3413b445b90f"
       ],
-      "recording": "Changes in Latitudes, Changes in Attitudes",
-      "recordingMbid": "5d33301f-58a8-4851-93c5-19cf43e7c5ff",
-      "release": "Changes in Latitudes, Changes in Attitudes",
-      "score": 7719,
-      "how": "exact",
+      "recording": "Changes in Latitudes, Changes in Attitudes (LP version)",
+      "recordingMbid": "8031ccd2-874e-47f0-8679-634616f8a1bf",
+      "release": "TM Century: GoldDisc 312",
+      "score": 5542066,
+      "how": "version",
       "rewrites": [],
       "proposed": "both words are plural",
+      "venueArtist": "Jimmy Buffet",
+      "proposalArtist": "Jimmy Buffett",
       "trusted": true,
       "title": "Changes in Latitudes, Changes in Attitudes"
     },
@@ -43792,14 +44091,16 @@
       "artistMbids": [
         "21387249-8a66-4839-903f-9f5376715320"
       ],
-      "recording": "Brandy (You’re a Fine Girl)",
-      "recordingMbid": "accad857-6d36-410a-8859-3e456a08b1ac",
-      "release": "Looking Glass",
-      "score": 1080005,
+      "recording": "Brandy",
+      "recordingMbid": "f7bfc398-8824-42ff-b816-73732ea955fb",
+      "release": "All The Hits - The Back Catalogue 2",
+      "score": 5416667,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Brandy (You’re a Fine Girl)"
+      "title": "Brandy"
     },
     {
       "postId": 49757,
@@ -43963,13 +44264,17 @@
       "artistMbids": [
         "58dd5fa6-6eed-432a-90a5-6df1ae8d2b8d"
       ],
-      "recording": "Monster Mash",
-      "recordingMbid": "73e0238c-5944-4299-91e3-799f9447ab35",
-      "release": "Monster Mash",
-      "score": 1089857,
+      "recording": "The Monster Mash",
+      "recordingMbid": "e6e24c96-23c7-4179-b91b-58b561a332bd",
+      "release": "The Ultimate Party Survival Kit",
+      "score": 5418899,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "title-article-added"
+      ],
       "proposed": "Picket is Pickett",
+      "venueArtist": "Bobby Boris Picket",
+      "proposalArtist": "Bobby \"Boris\" Pickett",
       "trusted": true,
       "title": "Monster Mash"
     },
@@ -43998,6 +44303,8 @@
       "rewrites": [],
       "proposed": "Travolta's number; the title is elided",
       "from": "Grease",
+      "venueArtist": "Grease",
+      "proposalArtist": "John Travolta",
       "trusted": true,
       "title": "Greased Lightnin'"
     },
@@ -44363,7 +44670,7 @@
       "how": "loose",
       "rewrites": [],
       "trusted": false,
-      "title": "How Do I Live (original MIX)"
+      "title": "How Do I Live"
     },
     {
       "postId": 52169,
@@ -44652,6 +44959,8 @@
       "rewrites": [],
       "proposed": "Chess",
       "from": "Chess",
+      "venueArtist": "Chess",
+      "proposalArtist": "Elaine Paige & Barbara Dickson",
       "trusted": true,
       "title": "I Know Him So Well"
     },
@@ -47098,6 +47407,8 @@
       "rewrites": [],
       "proposed": "Lion King OST; Timon and Pumbaa",
       "from": "The Lion King",
+      "venueArtist": "Lion King",
+      "proposalArtist": "Nathan Lane & Ernie Sabella",
       "trusted": true,
       "title": "Hakuna Matata"
     },
@@ -47409,8 +47720,10 @@
       "rewrites": [],
       "proposed": "Dreamgirls film",
       "from": "Dreamgirls",
+      "venueArtist": "Jennifer Hudson",
+      "proposalArtist": "Jennifer Hudson",
       "trusted": true,
-      "title": "And I Am Telling You I’m Not Going"
+      "title": "And I Am Telling You I'm Not Going"
     },
     {
       "postId": 50940,
@@ -47546,6 +47859,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "dump credits Jack White first; venue had Alicia Keys & Jack White",
+      "venueArtist": "Alicia Keys & Jack White",
+      "proposalArtist": "Jack White & Alicia Keys",
       "trusted": true,
       "title": "Another Way to Die"
     },
@@ -47909,14 +48224,14 @@
       "artistMbids": [
         "847e8a0c-cc20-4213-9e16-975515c2a926"
       ],
-      "recording": "Goodbye’s (The Saddest Word)",
-      "recordingMbid": "0cb05d58-e067-4953-8659-b98087359144",
-      "release": "A New Day Has Come",
-      "score": 303791,
-      "how": "exact",
+      "recording": "Goodbye's (The Saddest Word) (Radio Edit)",
+      "recordingMbid": "3744a7f1-8f36-4258-8e43-39b304d65463",
+      "release": "Goodbye's (The Saddest Word)",
+      "score": 2319052,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Goodbye’s (The Saddest Word)"
+      "title": "Goodbye's (The Saddest Word)"
     },
     {
       "postId": 48313,
@@ -48137,11 +48452,11 @@
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
-      "recording": "Independent Woman",
-      "recordingMbid": "a8f752c7-8adf-4492-ba41-f459e7fc7c95",
-      "release": "Live in Atlanta",
-      "score": 4547551,
-      "how": "exact",
+      "recording": "Independent Woman (Maurice remix)",
+      "recordingMbid": "8d7ec74f-48fd-4d73-8c84-d17813f91088",
+      "release": "DMC DJ Only 21",
+      "score": 5447366,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Independent Woman"
@@ -48656,13 +48971,17 @@
       "artistMbids": [
         "859d0860-d480-4efd-970c-c05d5f1776b8"
       ],
-      "recording": "Single Ladies (Put a Ring on It)",
-      "recordingMbid": "67dc066b-d84e-444c-b250-82917db7281e",
-      "release": "I Am… Sasha Fierce",
-      "score": 520328,
+      "recording": "Single Ladies",
+      "recordingMbid": "e9fd7c60-8bd2-49d8-a5ff-56ee8f8bcd98",
+      "release": "Your Girls Favorite Mixtape (Fall Edition 2)",
+      "score": 4453666,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "proposed": "All the single ladies",
+      "venueArtist": "Beyonce",
+      "proposalArtist": "Beyoncé",
       "trusted": true,
       "title": "Single Ladies (Put a Ring on It)"
     },
@@ -48759,8 +49078,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Stroking is Strokin'",
+      "venueArtist": "Clarence Carter",
+      "proposalArtist": "Clarence Carter",
       "trusted": true,
-      "title": "Strokin’"
+      "title": "Strokin'"
     },
     {
       "postId": 49346,
@@ -48908,14 +49229,14 @@
       "artistMbids": [
         "81435053-e1a2-48a4-adfd-e89f310c7b38"
       ],
-      "recording": "Time (Clock of the Heart)",
-      "recordingMbid": "6ccd7479-73ee-4817-ac8e-5192780433bd",
-      "release": "Colour by Numbers",
-      "score": 3930,
-      "how": "exact",
+      "recording": "Time (Clock of the Heart) (DJ Turbo's Disco Groove)",
+      "recordingMbid": "ffa7b416-631b-420f-9e0f-b9ff1a3b1d7b",
+      "release": "Greatest Moments: The Best Of Boy George & Culture Club",
+      "score": 4744660,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Time (Clock of the Heart)"
+      "title": "Time (Clock of the Heart) (DJ Turbo's Disco Groove)"
     },
     {
       "postId": 49206,
@@ -48953,8 +49274,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Braxton, not Destiny's Child",
+      "venueArtist": "Destiny's Child",
+      "proposalArtist": "Toni Braxton",
       "trusted": true,
-      "title": "Un‐Break My Heart"
+      "title": "Un-Break My Heart"
     },
     {
       "postId": 47960,
@@ -49101,14 +49424,14 @@
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
-      "recording": "You’ll Never Get to Heaven (If You Break My Heart)",
-      "recordingMbid": "5be84fd4-ea1d-437e-92eb-0da6d6af1655",
-      "release": "An Evening With Dionne Warwick",
-      "score": 391007,
-      "how": "exact",
+      "recording": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)",
+      "recordingMbid": "33373290-7c0a-4f3e-a6e7-3c9d9c4e4e81",
+      "release": "Odds & Ends: Scepter Records Rarities",
+      "score": 4847806,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "You’ll Never Get to Heaven (If You Break My Heart)"
+      "title": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)"
     },
     {
       "postId": 49125,
@@ -49890,16 +50213,18 @@
       "artist": "Goo Goo Dolls",
       "song": "Broadway",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
       "recording": "Broadway",
-      "recordingMbid": "ceead83d-75a3-405c-8cea-cf7c4cfad96b",
-      "release": "Let Love In - Live and Intimate (Tour Edition DVD)",
-      "score": 1869162,
+      "recordingMbid": "7487e1db-b678-4320-a25f-9236c8d37efb",
+      "release": "Dizzy Up the Girl",
+      "score": 202536,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Broadway"
     },
@@ -50156,8 +50481,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Wale lead on the recording",
+      "venueArtist": "Lady Gaga & Wale",
+      "proposalArtist": "Wale feat. Lady Gaga",
       "trusted": true,
-      "title": "Chillin’"
+      "title": "Chillin'"
     },
     {
       "postId": 50744,
@@ -50309,8 +50636,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "D'y'mak'er",
+      "venueArtist": "Led Zeppelin",
+      "proposalArtist": "Led Zeppelin",
       "trusted": true,
-      "title": "D’yer Mak’er"
+      "title": "D'yer Mak'er"
     },
     {
       "postId": 52572,
@@ -50706,8 +51035,12 @@
       "recordingMbid": "97d392aa-8ec1-4f36-8683-ab2f9a1327a5",
       "release": "Broadway: The Music of Richard Rodgers",
       "score": 110780,
-      "how": "artist-scoped",
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Sound of Music; restore from",
+      "from": "The Sound of Music",
+      "venueArtist": "Sound of Music",
+      "proposalArtist": "Julie Andrews",
       "trusted": true,
       "title": "Edelweiss"
     },
@@ -50721,14 +51054,16 @@
       "artistMbids": [
         "650e7db6-b795-4eb5-a702-5ea2fc46c848"
       ],
-      "recording": "Eh, Eh (Nothing Else I Can Say)",
-      "recordingMbid": "d10a1cd1-0caa-405a-817a-111e2a1d8064",
-      "release": "The Fame",
-      "score": 513770,
+      "recording": "Eh, Eh",
+      "recordingMbid": "f44fdf6f-55d4-4328-a182-bd0f068ae3c1",
+      "release": "NRJ Dance",
+      "score": 5506613,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Eh, Eh (Nothing Else I Can Say)"
+      "title": "Eh, Eh"
     },
     {
       "postId": 47902,
@@ -50782,21 +51117,22 @@
       "artist": "Barbra Streisand & Donna Summer",
       "song": "Enough is enough (no more tears)",
       "matched": true,
-      "artistCredit": "Barbra Streisand & Donna Summer",
+      "artistCredit": "Donna Summer & Barbra Streisand",
       "artistMbids": [
-        "56cd15a1-0d74-438b-8244-c96ffe1cae03",
-        "b60527cc-54f3-4bbe-a01b-dcf34c95ae14"
+        "b60527cc-54f3-4bbe-a01b-dcf34c95ae14",
+        "56cd15a1-0d74-438b-8244-c96ffe1cae03"
       ],
-      "recording": "Enough Is Enough 2017 (Tweaka Turner Eternal club mix)",
-      "recordingMbid": "0ae27f62-1d15-4949-97b8-0605763eb7d2",
-      "release": "Enough Is Enough Remixes",
-      "score": 3485305,
-      "how": "loose",
-      "rewrites": [
-        "annotation-stripped"
-      ],
-      "trusted": false,
-      "title": "Enough Is Enough 2017"
+      "recording": "No More Tears (Enough Is Enough) (remix)",
+      "recordingMbid": "59eddb14-43a6-4941-b227-bf60818fe79c",
+      "release": "DGTL: Laurent Garnier at DGTL Amsterdam, 2018",
+      "score": 5200875,
+      "how": "version",
+      "rewrites": [],
+      "proposed": "classic duet; avoid 2017 remix masters",
+      "venueArtist": "Barbra Streisand & Donna Summer",
+      "proposalArtist": "Donna Summer & Barbra Streisand",
+      "trusted": true,
+      "title": "No More Tears (Enough Is Enough)"
     },
     {
       "postId": 52073,
@@ -50848,14 +51184,16 @@
       "artistMbids": [
         "d3b2711f-2baa-441a-be95-14945ca7e6ea"
       ],
-      "recording": "Fading Like a Flower (Every Time You Leave)",
-      "recordingMbid": "77ae826b-98be-4f96-b4a1-aa7a812aaef7",
-      "release": "Joyride",
-      "score": 57752,
+      "recording": "Fading Like a Flower",
+      "recordingMbid": "2282e411-9649-4e95-a026-3913b77c414b",
+      "release": "Opportunity Nox",
+      "score": 2319754,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Fading Like a Flower (Every Time You Leave)"
+      "title": "Fading Like a Flower"
     },
     {
       "postId": 50814,
@@ -51073,8 +51411,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Common; John Mayer features",
+      "venueArtist": "Common & John Mayer",
+      "proposalArtist": "Common",
       "trusted": true,
-      "title": "GO!"
+      "title": "Go!"
     },
     {
       "postId": 51166,
@@ -52271,6 +52611,8 @@
       "rewrites": [],
       "proposed": "American spelling",
       "from": "The Sound of Music",
+      "venueArtist": "Sound of Music",
+      "proposalArtist": "Julie Andrews",
       "trusted": true,
       "title": "My Favorite Things"
     },
@@ -53055,8 +53397,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Sexy motherfucker",
+      "venueArtist": "Prince",
+      "proposalArtist": "Prince",
       "trusted": true,
-      "title": "Sexy M.F."
+      "title": "Sexy MF"
     },
     {
       "postId": 52067,
@@ -53153,8 +53497,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Skyliners 1958",
+      "venueArtist": "Paul Simon & Art Garfunkel",
+      "proposalArtist": "The Skyliners",
       "trusted": true,
-      "title": "Since I Don’t Have You"
+      "title": "Since I Don't Have You"
     },
     {
       "postId": 49510,
@@ -53231,6 +53577,8 @@
       "rewrites": [],
       "proposed": "the children's number, led by Andrews on the soundtrack",
       "from": "The Sound of Music",
+      "venueArtist": "Sound of Music",
+      "proposalArtist": "Julie Andrews",
       "trusted": true,
       "title": "So Long, Farewell"
     },
@@ -53613,11 +53961,11 @@
       "artistMbids": [
         "b4d32cff-f19e-455f-86c4-f347d824ca61"
       ],
-      "recording": "Sweet Dreams (Are Made of This)",
-      "recordingMbid": "bf8e28bb-b4ef-4b9a-bc64-8f58dd4ff5dd",
-      "release": "Sweet Dreams (Are Made of This)",
-      "score": 1996,
-      "how": "exact",
+      "recording": "Sweet Dreams (Are Made of This) (Costel Van Dein remix)",
+      "recordingMbid": "36f14c37-42f5-45e0-87ae-3aeb9c3ebec5",
+      "release": "Knife Party at EDC Las Vegas 2021: Cosmic Meadow Stage",
+      "score": 4612654,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Sweet Dreams (Are Made of This)"
@@ -53869,6 +54217,8 @@
       "rewrites": [],
       "proposed": "the title number",
       "from": "The Sound of Music",
+      "venueArtist": "Sound of Music",
+      "proposalArtist": "Julie Andrews",
       "trusted": true,
       "title": "The Sound of Music"
     },
@@ -53889,6 +54239,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "The strand is Do the Strand",
+      "venueArtist": "Roxy Music",
+      "proposalArtist": "Roxy Music",
       "trusted": true,
       "title": "Do the Strand"
     },
@@ -53959,11 +54311,11 @@
       "artistMbids": [
         "ffdb2b8f-ecbf-427a-abc7-c47f4ebc8ae3"
       ],
-      "recording": "Touch Me (I Want Your Body)",
-      "recordingMbid": "e3a37173-4d1a-46ef-b833-a929f666f7bc",
-      "release": "Touch Me",
-      "score": 9794,
-      "how": "exact",
+      "recording": "Touch Me (I Want Your Body) (clean version)",
+      "recordingMbid": "ac1cd96c-4b0d-453f-a4e6-8b516fc0b866",
+      "release": "RFM Party 80 La Compilation Best of",
+      "score": 5516142,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Touch Me (I Want Your Body)"
@@ -55324,14 +55676,14 @@
       "artistMbids": [
         "a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432"
       ],
-      "recording": "Pride (In the Name of Love)",
-      "recordingMbid": "697c8b18-6e25-460b-a4ba-e861b1649359",
-      "release": "The Unforgettable Fire",
-      "score": 2996,
-      "how": "exact",
+      "recording": "Pride (In the Name of Love) / City of Blinding Lights",
+      "recordingMbid": "ef7b50f5-393d-4ce1-95aa-117bfe7ca402",
+      "release": "The Official Inaugural Celebration",
+      "score": 5642280,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Pride (In the Name of Love)"
+      "trusted": false,
+      "title": "Pride (In the Name of Love) / City of Blinding Lights"
     },
     {
       "postId": 53083,
@@ -56426,6 +56778,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Bouncing off the ceiling is Upside Down",
+      "venueArtist": "A-teens",
+      "proposalArtist": "A*Teens",
       "trusted": true,
       "title": "Upside Down"
     },
@@ -56826,14 +57180,14 @@
       "artistMbids": [
         "72c536dc-7137-4477-a521-567eeb840fa8"
       ],
-      "recording": "Don't Think Twice",
-      "recordingMbid": "2533bc4f-0dfb-4d28-8acf-2f8b6f1bf167",
-      "release": "Live in Newport 1965",
-      "score": 4514011,
-      "how": "exact",
+      "recording": "Don’t Think Twice It It’s Alright",
+      "recordingMbid": "4c43ee9d-1cbc-4b3f-ba9b-08c872d8e83b",
+      "release": "Let My Poor Voice Be Heard: Publishing Demos",
+      "score": 5145148,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Don't Think Twice"
+      "trusted": false,
+      "title": "Don’t Think Twice It It’s Alright"
     },
     {
       "postId": 48950,
@@ -57016,14 +57370,14 @@
       "artistMbids": [
         "2f569e60-0a1b-4fb9-95a4-3dc1525d1aad"
       ],
-      "recording": "Get Down (You’re the One for Me)",
-      "recordingMbid": "393c4024-7259-43da-a9c0-01b3631c28db",
-      "release": "Backstreet Boys",
-      "score": 151810,
-      "how": "exact",
+      "recording": "Get Down (You're the One for Me) (vocal Journey radio edit)",
+      "recordingMbid": "ee878422-ca90-4959-83bf-46dc4836e648",
+      "release": "Dance Now! Vol. 15",
+      "score": 5421852,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Get Down (You’re the One for Me)"
+      "title": "Get Down (You're the One for Me)"
     },
     {
       "postId": 49584,
@@ -57271,6 +57625,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Glenn Frey, not the Eagles",
+      "venueArtist": "Eagles",
+      "proposalArtist": "Glenn Frey",
       "trusted": true,
       "title": "The Heat Is On"
     },
@@ -57654,14 +58010,14 @@
       "artistMbids": [
         "66c662b6-6e2f-4930-8610-912e24c63ed1"
       ],
-      "recording": "It’s a Long Way to the Top (If You Wanna Rock ’n’ Roll)",
-      "recordingMbid": "fcb8c560-ae73-4947-b2c9-96e7e4c864f8",
-      "release": "T.N.T.",
-      "score": 9327,
-      "how": "exact",
+      "recording": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll) (St. Albans High School, Australia, March 1976)",
+      "recordingMbid": "e97e4b09-3653-4685-a45a-292efdd032ef",
+      "release": "Plug Me In",
+      "score": 5201882,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "It’s a Long Way to the Top (If You Wanna Rock ’n’ Roll)"
+      "title": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll) (St. Albans High School, Australia, March 1976)"
     },
     {
       "postId": 48475,
@@ -59574,16 +59930,18 @@
       "matched": true,
       "artistCredit": "Chris Brown",
       "artistMbids": [
-        "c234fa42-e6a6-443e-937e-2f4b073538a3"
+        "a9e9d82e-4ebd-4227-91c1-567fd15e5391"
       ],
-      "recording": "Yo (Excuse Me Miss)",
-      "recordingMbid": "5452b647-8957-4fb0-895b-dd6e2b34e779",
-      "release": "Chris Brown",
-      "score": 408726,
+      "recording": "You Say",
+      "recordingMbid": "1a3a0807-b75e-40c5-aa78-9a6b436d758e",
+      "release": "Anchor",
+      "score": 718860,
       "how": "loose",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": false,
-      "title": "Yo (Excuse Me Miss)"
+      "title": "You Say"
     },
     {
       "postId": 47921,
@@ -60252,6 +60610,8 @@
       "rewrites": [],
       "proposed": "Louis Primer is Louis Prima; Jungle Book",
       "from": "The Jungle Book",
+      "venueArtist": "Louis Primer (The Jungle book)",
+      "proposalArtist": "Louis Prima",
       "trusted": true,
       "title": "I Wan'na Be Like You"
     },
@@ -60789,6 +61149,8 @@
       "rewrites": [],
       "proposed": "Dreamgirls film",
       "from": "Dreamgirls",
+      "venueArtist": "Dreamgirls",
+      "proposalArtist": "Jennifer Hudson",
       "trusted": true,
       "title": "One Night Only"
     },
@@ -60954,11 +61316,11 @@
       "artistMbids": [
         "614e3804-7d34-41ba-857f-811bad7c2b7a"
       ],
-      "recording": "Romeo & Juliet",
-      "recordingMbid": "c5cba329-f127-4023-811a-536ee7c7428b",
-      "release": "Straiting Out Things - Live at Wembley 1985",
-      "score": 4516541,
-      "how": "exact",
+      "recording": "Romeo & Juliet (5.1 mix)",
+      "recordingMbid": "4a4d4e76-809e-425f-9024-73415283902f",
+      "release": "Alchemy: Dire Straits Live",
+      "score": 4647169,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Romeo & Juliet"
@@ -61663,7 +62025,22 @@
       "id": 3267,
       "artist": "Idolgänget 2010",
       "song": "All I need is you",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Idol Allstars 2010",
+      "artistMbids": [
+        "e985b77e-d042-44ba-9905-27a0d220ba01"
+      ],
+      "recording": "All I Need Is You",
+      "recordingMbid": "2f669ed0-143f-4930-8f1f-2b28ef9ddd25",
+      "release": "Idol Box",
+      "score": 5598500,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Idolgänget 2010 is Idol Allstars 2010",
+      "venueArtist": "Idolgänget 2010",
+      "proposalArtist": "Idol Allstars 2010",
+      "trusted": true,
+      "title": "All I Need Is You"
     },
     {
       "postId": 49669,
@@ -63262,11 +63639,11 @@
         "22c5cef9-80e8-48d2-acd3-6d16f6c8a16d",
         "94204786-d86d-40ab-ba91-ef8e6c640e07"
       ],
-      "recording": "Stay (I Missed You)",
-      "recordingMbid": "cf4f2106-63f0-4504-bc55-5a1543ff70f7",
-      "release": "Tails",
-      "score": 131879,
-      "how": "exact",
+      "recording": "Stay (I Missed You) (Living Room mix)",
+      "recordingMbid": "3fa00771-2e43-4b62-97b6-d2798eea3a53",
+      "release": "Stay (I Missed You)",
+      "score": 2263718,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Stay (I Missed You)"
@@ -63491,14 +63868,16 @@
       "artistMbids": [
         "12be5b16-915f-44bc-978a-8ddfab235b79"
       ],
-      "recording": "You Are Loved (Don’t Give Up)",
-      "recordingMbid": "94931a83-c4d0-4236-9a5b-38da3f3acf5f",
-      "release": "Awake",
-      "score": 443645,
+      "recording": "You Are Loved",
+      "recordingMbid": "caee3ca9-d7ed-4a67-860d-c10aa93b1b07",
+      "release": "2008-10-26: Bridge School Benefit, Shoreline Amphitheatre, Mountain View, CA, USA",
+      "score": 5393780,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "You Are Loved (Don’t Give Up)"
+      "title": "You Are Loved"
     },
     {
       "postId": 50803,
@@ -63771,14 +64150,14 @@
       "artistMbids": [
         "4d5447d7-c61c-4120-ba1b-d7f471d385b9"
       ],
-      "recording": "Happy Xmas (War Is Over)",
-      "recordingMbid": "f18ea8da-2718-43b8-95e6-a8bd59eb0ac0",
-      "release": "Imagine",
-      "score": 796958,
-      "how": "exact",
+      "recording": "Happy Xmas (War Is Over) [Studio Outtake]",
+      "recordingMbid": "fd632071-622a-4aaa-ac30-63076eb8f87a",
+      "release": "After The Remember",
+      "score": 4739369,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Happy Xmas (War Is Over)"
+      "title": "Happy Xmas (War Is Over) [Studio Outtake]"
     },
     {
       "postId": 50778,
@@ -63836,6 +64215,8 @@
       "rewrites": [],
       "proposed": "Lady and the Tramp soundtrack",
       "from": "Lady and the Tramp",
+      "venueArtist": "Lady & The Tramp",
+      "proposalArtist": "Peggy Lee",
       "trusted": true,
       "title": "Bella Notte"
     },
@@ -63941,14 +64322,16 @@
       "artistMbids": [
         "c707b37e-cb5c-4694-be4d-46beefcb2475"
       ],
-      "recording": "Fool (If You Think It’s Over)",
-      "recordingMbid": "b36f59a4-89c9-4707-8e9b-8ed963aa3ee4",
-      "release": "Whatever Happened to Benny Santini?",
-      "score": 11169,
+      "recording": "Fool",
+      "recordingMbid": "d549d4b3-db6e-43c6-9e2a-b2c733ec53cc",
+      "release": "Romantic Popsongs",
+      "score": 5394364,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Fool (If You Think It’s Over)"
+      "title": "Fool"
     },
     {
       "postId": 48979,
@@ -64093,14 +64476,16 @@
       "artistMbids": [
         "c707b37e-cb5c-4694-be4d-46beefcb2475"
       ],
-      "recording": "The Road to Hell (Part 2)",
-      "recordingMbid": "5811942e-587b-4d4d-98c8-8ef57469f0b1",
-      "release": "The Road to Hell (Part 2) / He Should Know Better",
-      "score": 3593174,
-      "how": "exact",
-      "rewrites": [],
+      "recording": "The Road to Hell (U.K. edit)",
+      "recordingMbid": "cddf032e-b105-4900-b6f3-192d5ec8f2cd",
+      "release": "Cities 97 Sampler, Volume 3 (Songs for the Earth)",
+      "score": 5618495,
+      "how": "version",
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "The Road to Hell (Part 2)"
+      "title": "The Road to Hell"
     },
     {
       "postId": 52894,
@@ -64400,11 +64785,11 @@
       "artistMbids": [
         "b83bc61f-8451-4a5d-8b8e-7e9ed295e822"
       ],
-      "recording": "Sad Songs (Say So Much)",
-      "recordingMbid": "4029b9eb-2077-4875-b8d2-f9cdca79770b",
-      "release": "Breaking Hearts",
-      "score": 3396,
-      "how": "exact",
+      "recording": "Sad Songs (Say So Much) (remastered)",
+      "recordingMbid": "e55ed700-4c95-4d3a-8370-11761e8499d6",
+      "release": "Diamonds (Deluxe)",
+      "score": 4932453,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Sad Songs (Say So Much)"
@@ -64542,6 +64927,8 @@
       "rewrites": [],
       "proposed": "Chess",
       "from": "Chess",
+      "venueArtist": "Chess (Linda Eder)",
+      "proposalArtist": "Linda Eder",
       "trusted": true,
       "title": "Anthem"
     },
@@ -65027,7 +65414,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Nobody Does It Better"
+      "title": "Nobody Does It Better",
+      "from": "The Spy Who Loved Me"
     },
     {
       "postId": 48772,
@@ -66484,17 +66872,21 @@
       "artist": "Ohio",
       "song": "Fire",
       "matched": true,
-      "artistCredit": "Ohio Players",
+      "artistCredit": "The Ohio Players",
       "artistMbids": [
         "81e07550-d0e2-467e-bc71-44b5d52de8f4"
       ],
       "recording": "Fire",
-      "recordingMbid": "1b07acdb-9b8c-4115-bcec-b2c593f6161a",
-      "release": "Fire",
-      "score": 57961,
+      "recordingMbid": "70d8d3d9-67a2-43ee-9db5-ee2e3a94444c",
+      "release": "Best of Musikladen 1970-1983 Vol. 14",
+      "score": 5393147,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "proposed": "Ohio is Ohio Players",
+      "venueArtist": "Ohio",
+      "proposalArtist": "Ohio Players",
       "trusted": true,
       "title": "Fire"
     },
@@ -66548,14 +66940,18 @@
       "artistMbids": [
         "39515237-2d70-436a-800c-fcbac974bec4"
       ],
-      "recording": "Take Your Time (Do It Right)",
-      "recordingMbid": "b1d3da4b-fb0e-4ba9-8e69-864d29b1dc88",
-      "release": "S.O.S.",
-      "score": 34481,
-      "how": "exact",
-      "rewrites": [],
+      "recording": "Take Your Time (Serg Sniper ReDrum) (Clean)",
+      "recordingMbid": "8f89baca-a3b7-4e83-a7a1-9fca0252c3b2",
+      "release": "205 DJ Loaded: Travellers Worldly",
+      "score": 5586217,
+      "how": "loose",
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "proposed": "Sos is The S.O.S. Band",
-      "trusted": true,
+      "venueArtist": "Sos",
+      "proposalArtist": "The S.O.S. Band",
+      "trusted": false,
       "title": "Take Your Time (Do It Right)"
     },
     {
@@ -66773,7 +67169,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Thunderball"
+      "title": "Thunderball",
+      "from": "Thunderball"
     },
     {
       "postId": 47808,
@@ -68522,16 +68919,14 @@
       "artist": "Steve Miller",
       "song": "Space cowboy",
       "matched": true,
-      "artistCredit": "William Shatner feat. Brad Paisley & Steve Miller",
+      "artistCredit": "The Steve Miller Band",
       "artistMbids": [
-        "a406a684-7c88-442b-836d-3b9b67bbc91d",
-        "6cfd7ffc-824f-4219-8e27-4b9417700f44",
-        "a54d9cd2-1359-4ea3-98a1-fe068fc66814"
+        "e57f0cac-4f56-473c-8d7e-d93f753fd586"
       ],
       "recording": "Space Cowboy",
-      "recordingMbid": "fb25f600-b463-4b48-9f57-9c45ba8f9c8c",
-      "release": "Seeking Major Tom",
-      "score": 622513,
+      "recordingMbid": "af6fe7ab-1fb5-4806-820a-afeda6973ab4",
+      "release": "Brave New World",
+      "score": 41520,
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
@@ -68562,16 +68957,20 @@
       "artist": "Annie",
       "song": "Tomorrow",
       "matched": true,
-      "artistCredit": "Annie: The Broadway Musical 30th Anniversary Tour Cast",
+      "artistCredit": "Andrea McArdle",
       "artistMbids": [
-        "49fe41fa-3dc2-4e3e-8ebf-f0589e8fbd9a"
+        "204ce22e-cc95-4eb4-aadb-79274e0d10bb"
       ],
       "recording": "Tomorrow",
-      "recordingMbid": "08ccf4db-b819-4b8e-9a41-e2490d8a4f9c",
-      "release": "Annie: The Broadway Musical - World Premiere Complete Recording (30th Anniversary Production)",
-      "score": 4813068,
-      "how": "title-first",
+      "recordingMbid": "7378533b-00d0-4508-b980-795df4dbe857",
+      "release": "On Broadway",
+      "score": 2202535,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Annie; not a tour-cast entity",
+      "from": "Annie",
+      "venueArtist": "Annie",
+      "proposalArtist": "Andrea McArdle",
       "trusted": true,
       "title": "Tomorrow"
     },
@@ -68593,8 +68992,10 @@
       "rewrites": [],
       "proposed": "Annie Get Your Gun",
       "from": "Annie Get Your Gun",
+      "venueArtist": "Annie get your gun",
+      "proposalArtist": "Ethel Merman",
       "trusted": true,
-      "title": "There’s No Business Like Show Business"
+      "title": "There's No Business Like Show Business"
     },
     {
       "postId": 48007,
@@ -68616,8 +69017,10 @@
       ],
       "proposed": "Annie Get Your Gun",
       "from": "Annie Get Your Gun",
+      "venueArtist": "Annie get your gun",
+      "proposalArtist": "Ethel Merman",
       "trusted": true,
-      "title": "Anything You Can Do"
+      "title": "Anything You Can Do (I Can Do Better)"
     },
     {
       "postId": 48735,
@@ -68637,6 +69040,8 @@
       "rewrites": [],
       "proposed": "Bye Bye Birdie",
       "from": "Bye Bye Birdie",
+      "venueArtist": "Bye Bye Birdie",
+      "proposalArtist": "Dick Van Dyke",
       "trusted": true,
       "title": "Put On a Happy Face"
     },
@@ -68658,8 +69063,10 @@
       "rewrites": [],
       "proposed": "Cabaret",
       "from": "Cabaret",
+      "venueArtist": "Caberet",
+      "proposalArtist": "Liza Minnelli",
       "trusted": true,
-      "title": "Money Money"
+      "title": "Money, Money"
     },
     {
       "postId": 48738,
@@ -68679,6 +69086,8 @@
       "rewrites": [],
       "proposed": "title number; venue spelled Caberet",
       "from": "Cabaret",
+      "venueArtist": "Caberet",
+      "proposalArtist": "Liza Minnelli",
       "trusted": true,
       "title": "Cabaret"
     },
@@ -68700,6 +69109,8 @@
       "rewrites": [],
       "proposed": "Fiddler on the Roof",
       "from": "Fiddler on the Roof",
+      "venueArtist": "Fiddler on the roof",
+      "proposalArtist": "Topol",
       "trusted": true,
       "title": "If I Were a Rich Man"
     },
@@ -68721,6 +69132,8 @@
       "rewrites": [],
       "proposed": "Gigi",
       "from": "Gigi",
+      "venueArtist": "Gigi",
+      "proposalArtist": "Maurice Chevalier",
       "trusted": true,
       "title": "Thank Heaven for Little Girls"
     },
@@ -68742,6 +69155,8 @@
       "rewrites": [],
       "proposed": "Joseph and the Amazing Technicolor Dreamcoat",
       "from": "Joseph",
+      "venueArtist": "Joseph",
+      "proposalArtist": "Jason Donovan",
       "trusted": true,
       "title": "Any Dream Will Do"
     },
@@ -68763,6 +69178,8 @@
       "rewrites": [],
       "proposed": "Music Man number; Beatles popular recording",
       "from": "The Music Man",
+      "venueArtist": "Music Man",
+      "proposalArtist": "The Beatles",
       "trusted": true,
       "title": "Till There Was You"
     },
@@ -68784,6 +69201,8 @@
       "rewrites": [],
       "proposed": "Damone's hit version",
       "from": "My Fair Lady",
+      "venueArtist": "My Fair Lady",
+      "proposalArtist": "Vic Damone",
       "trusted": true,
       "title": "On the Street Where You Live"
     },
@@ -69463,14 +69882,14 @@
       "artistMbids": [
         "9a883a69-436b-4d17-9ffd-122a9bf4419a"
       ],
-      "recording": "Don’t Let Go (Love)",
-      "recordingMbid": "b6728b18-9795-49f6-8f84-eb9df17b7b3b",
-      "release": "EV3",
-      "score": 175902,
-      "how": "exact",
+      "recording": "Don't Let Go (Love) (2000 Watts remix)",
+      "recordingMbid": "1a3a4ee2-c4c1-4373-97e8-652868da45d6",
+      "release": "Don't Let Go (Love)",
+      "score": 2280329,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Don’t Let Go (Love)"
+      "title": "Don't Let Go (Love)"
     },
     {
       "postId": 50665,
@@ -70819,7 +71238,22 @@
       "id": 3755,
       "artist": "Irish traditional song",
       "song": "Wild rover",
-      "matched": false
+      "matched": true,
+      "artistCredit": "The Dubliners",
+      "artistMbids": [
+        "d201e6c0-103d-4a9a-9969-909bd421ddad"
+      ],
+      "recording": "The Wild Rover",
+      "recordingMbid": "341f6b0a-2664-4509-b2ae-da67b26f7106",
+      "release": "The Dubliners with Luke Kelly",
+      "score": 175609,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Irish traditional; Dubliners karaoke standard",
+      "venueArtist": "Irish traditional song",
+      "proposalArtist": "The Dubliners",
+      "trusted": true,
+      "title": "The Wild Rover"
     },
     {
       "postId": 52486,
@@ -71252,7 +71686,23 @@
       "id": 3779,
       "artist": "Jekyll & Hide",
       "song": "This is the moment",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Colm Wilkinson",
+      "artistMbids": [
+        "994ece75-737c-4ff6-bfd8-cfc1f721683b"
+      ],
+      "recording": "This Is the Moment",
+      "recordingMbid": "dde9b3db-b917-4208-a11b-d4c90ddddc17",
+      "release": "Broadway and Beyond: The Concert Songs",
+      "score": 595955,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Jekyll & Hyde the musical (venue Hide typo)",
+      "from": "Jekyll & Hyde",
+      "venueArtist": "Jekyll & Hide",
+      "proposalArtist": "Colm Wilkinson",
+      "trusted": true,
+      "title": "This Is the Moment"
     },
     {
       "postId": 52487,
@@ -71567,16 +72017,19 @@
       "artist": "Steve Miller",
       "song": "The joker",
       "matched": true,
-      "artistCredit": "Steve Miller",
+      "artistCredit": "Steve Miller Band",
       "artistMbids": [
-        "a54d9cd2-1359-4ea3-98a1-fe068fc66814"
+        "e57f0cac-4f56-473c-8d7e-d93f753fd586"
       ],
-      "recording": "The Joker",
-      "recordingMbid": "5cb695e6-b87f-4b86-a3e6-7674c1d1c62f",
-      "release": "Top '93",
-      "score": 5407748,
-      "how": "exact",
+      "recording": "The Joker [live Don Kirshner's Rock Concert, 1973]",
+      "recordingMbid": "050ce1db-99fc-4cff-b058-b8b014fe2a5c",
+      "release": "Welcome to the Vault",
+      "score": 4850801,
+      "how": "version",
       "rewrites": [],
+      "proposed": "The Joker is Steve Miller Band, not solo Steve Miller",
+      "venueArtist": "Steve Miller",
+      "proposalArtist": "Steve Miller Band",
       "trusted": true,
       "title": "The Joker"
     },
@@ -71756,7 +72209,7 @@
       "how": "loose",
       "rewrites": [],
       "trusted": false,
-      "title": "María"
+      "title": "María (Spanish radio edit)"
     },
     {
       "postId": 52132,
@@ -71977,14 +72430,14 @@
       "artistMbids": [
         "f90e8b26-9e52-4669-a5c9-e28529c47894"
       ],
-      "recording": "What’s My Name",
-      "recordingMbid": "f218826a-497b-4f35-9f83-de3f1a32fe7e",
-      "release": "Live at Coachella 2012",
-      "score": 4562637,
-      "how": "exact",
+      "recording": "What's My Name? (clean radio version)",
+      "recordingMbid": "141709e4-4079-4f94-8850-338ca4c50bde",
+      "release": "Bravo Hits: Best of 94",
+      "score": 5409917,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "What’s My Name"
+      "title": "What's My Name?"
     },
     {
       "postId": 52861,
@@ -72049,18 +72502,20 @@
       "artist": "Rocky horror picture show",
       "song": "Timewarp",
       "matched": true,
-      "artistCredit": "The Rocky Horror Picture Show",
+      "artistCredit": "Richard O’Brien",
       "artistMbids": [
-        "3966a549-8d4f-431c-b645-572ec1f0c392"
+        "ff693144-69be-4ec5-9150-cb3c5652e430"
       ],
       "recording": "Time Warp",
-      "recordingMbid": "04d6b79e-c9f9-4dd9-b4e0-344c07461374",
-      "release": "Le canzoni del secolo, Volume 14",
-      "score": 5449444,
+      "recordingMbid": "b7046ae6-08ea-4fa6-8fc7-d5cfce839b82",
+      "release": "The Rocky Horror Show",
+      "score": 4352465,
       "how": "exact",
-      "rewrites": [
-        "artist-article-added"
-      ],
+      "rewrites": [],
+      "proposed": "Rocky Horror; from not cast-as-artist",
+      "from": "The Rocky Horror Picture Show",
+      "venueArtist": "Rocky horror picture show",
+      "proposalArtist": "Richard O’Brien",
       "trusted": true,
       "title": "Time Warp"
     },
@@ -72089,20 +72544,20 @@
       "artist": "Proclaimers",
       "song": "I'm gonna be (500 miles)",
       "matched": true,
-      "artistCredit": "The Proclaimers",
+      "artistCredit": "Proclaimers",
       "artistMbids": [
         "1303b976-b862-4f04-94fd-a8d444e06714"
       ],
-      "recording": "I’m Gonna Be (500 Miles)",
-      "recordingMbid": "e3cf7cc1-2b38-4c46-acd9-c5cd6f602320",
-      "release": "Sunshine on Leith",
-      "score": 24042,
+      "recording": "I’m Gonna Be",
+      "recordingMbid": "777f3b0b-8762-4b06-aee6-870aae7943d7",
+      "release": "The Ultimate Music Collection",
+      "score": 5416896,
       "how": "exact",
       "rewrites": [
-        "artist-article-added"
+        "annotation-stripped"
       ],
       "trusted": true,
-      "title": "I’m Gonna Be (500 Miles)"
+      "title": "I’m Gonna Be"
     },
     {
       "postId": 48291,
@@ -72159,8 +72614,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Dylan, not Simon & Garfunkel",
+      "venueArtist": "Paul Simon & Art Garfunkel",
+      "proposalArtist": "Bob Dylan",
       "trusted": true,
-      "title": "The Times They Are A‐Changin’"
+      "title": "The Times They Are A-Changin'"
     },
     {
       "postId": 52097,
@@ -72495,14 +72952,16 @@
       "artistMbids": [
         "5a8e07d5-d932-4484-a7f7-e700793a9c94"
       ],
-      "recording": "Do You Know (What It Takes)",
-      "recordingMbid": "f0d61dea-5f8f-4de0-b5e2-d225c2bd3171",
-      "release": "Robyn Is Here",
-      "score": 132271,
+      "recording": "Do You Know",
+      "recordingMbid": "47b483a4-ab7b-4588-8ed4-a7b1c8fd05bb",
+      "release": "More Hits Made Famous By The Music Factory 5",
+      "score": 5426515,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Do You Know (What It Takes)"
+      "title": "Do You Know"
     },
     {
       "postId": 52648,
@@ -72667,14 +73126,14 @@
       "artistMbids": [
         "177fde26-5a95-46d9-922f-0933940d97e5"
       ],
-      "recording": "I Do (Cherish You)",
-      "recordingMbid": "b279624d-8d5f-4af6-9202-82dece964679",
-      "release": "98° and Rising",
-      "score": 203475,
+      "recording": "I Do",
+      "recordingMbid": "a98de674-446b-4e29-ae25-3b77692f6ff5",
+      "release": "Hit Explosion ’99, Volume 12",
+      "score": 5442920,
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "I Do (Cherish You)"
+      "title": "I Do"
     },
     {
       "postId": 52101,
@@ -73389,18 +73848,19 @@
       "artist": "Pink",
       "song": "U and ur hand",
       "matched": true,
-      "artistCredit": "Pink",
+      "artistCredit": "P!nk",
       "artistMbids": [
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63"
       ],
-      "recording": "U + Ur Hand (Bimbo Jones mix)",
-      "recordingMbid": "592b9fe0-776f-454e-bac9-b94ecee22e50",
-      "release": "Promo Only: Mainstream Club, April 2007",
-      "score": 5497744,
-      "how": "version",
-      "rewrites": [
-        "ampersand-spelled-out"
-      ],
+      "recording": "U + Ur Hand",
+      "recordingMbid": "f3805a9e-9ece-41fe-bed8-6a9169d3fa42",
+      "release": "I’m Not Dead",
+      "score": 429800,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "U and ur hand",
+      "venueArtist": "Pink",
+      "proposalArtist": "P!nk",
       "trusted": true,
       "title": "U + Ur Hand"
     },
@@ -73785,6 +74245,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Obsecion is Obsesión",
+      "venueArtist": "Aventura",
+      "proposalArtist": "Aventura",
       "trusted": true,
       "title": "Obsesión"
     },
@@ -74035,11 +74497,11 @@
       "artistMbids": [
         "01e60eba-52df-4694-8f09-39f43abe54e9"
       ],
-      "recording": "Right Here (Departed)",
-      "recordingMbid": "41f90c49-62e3-43ad-865d-fee4cd5e5e71",
+      "recording": "Right Here (Departed) (Mad Decent Right Mad mix)",
+      "recordingMbid": "35065bda-aec6-4eaa-b7a8-303c6f3cab9b",
       "release": "Human",
-      "score": 521948,
-      "how": "exact",
+      "score": 1053996,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Right Here (Departed)"
@@ -74711,6 +75173,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Bob is B.o.B",
+      "venueArtist": "Bob & Bruno Mars",
+      "proposalArtist": "B.o.B & Bruno Mars",
       "trusted": true,
       "title": "Nothin' on You"
     },
@@ -75559,14 +76023,14 @@
       "artistMbids": [
         "3d2b98e5-556f-4451-a3ff-c50ea18d57cb"
       ],
-      "recording": "Dude (Looks Like a Lady)",
-      "recordingMbid": "b62424dd-1498-4642-874a-7bea46e5a51d",
-      "release": "Permanent Vacation",
-      "score": 14891,
-      "how": "exact",
+      "recording": "Dude (Looks Like a Lady) (1987)",
+      "recordingMbid": "73322183-8d1e-4ffc-8bb0-4239e73b3385",
+      "release": "History (Golden Hits) 1973-1997",
+      "score": 4735198,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
-      "title": "Dude (Looks Like a Lady)"
+      "title": "Dude (Looks Like a Lady) (1987)"
     },
     {
       "postId": 47868,
@@ -76222,6 +76686,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "McDonald is Macdonald",
+      "venueArtist": "Amy McDonald",
+      "proposalArtist": "Amy Macdonald",
       "trusted": true,
       "title": "This Is the Life"
     },
@@ -76368,14 +76834,16 @@
       "artistMbids": [
         "d570bb31-b9ca-45a4-a2d9-11b186d9c159"
       ],
-      "recording": "Wham Rap! (Enjoy What You Do?)",
-      "recordingMbid": "1a6cb6c5-8671-45c8-96e6-c269addd4a88",
-      "release": "Fantastic",
-      "score": 1273,
+      "recording": "Wham Rap!",
+      "recordingMbid": "c5b1a054-ec6e-4886-b84d-7d613ffd03f5",
+      "release": "Time Trip: Hits of the 70s, 80s and 90s",
+      "score": 5422949,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Wham Rap! (Enjoy What You Do?)"
+      "title": "Wham Rap!"
     },
     {
       "postId": 53400,
@@ -77196,10 +77664,10 @@
       "recordingMbid": "573fb33b-b6d3-40b8-817c-bdcd47ef27a8",
       "release": "Sehnsucht",
       "score": 190876,
-      "how": "loose",
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "Du hast"
+      "trusted": true,
+      "title": "Du hast (English version)"
     },
     {
       "postId": 53620,
@@ -77276,6 +77744,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo",
+      "venueArtist": "2 Pac feat. KC & Jo Jo",
+      "proposalArtist": "2Pac feat. K-Ci & JoJo",
       "trusted": true,
       "title": "How Do U Want It"
     },
@@ -77355,6 +77825,8 @@
       "rewrites": [],
       "proposed": "Ariel's singing voice",
       "from": "The Little Mermaid",
+      "venueArtist": "Little Mermaid",
+      "proposalArtist": "Jodi Benson",
       "trusted": true,
       "title": "Part of Your World"
     },
@@ -77491,7 +77963,8 @@
       "how": "artist-scoped",
       "rewrites": [],
       "trusted": true,
-      "title": "Move"
+      "title": "Move Your Body",
+      "from": "Dreamgirls"
     },
     {
       "postId": 51017,
@@ -78741,6 +79214,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "the band is Daughtry",
+      "venueArtist": "Chris Daughtry",
+      "proposalArtist": "Daughtry",
       "trusted": true,
       "title": "Over You"
     },
@@ -79227,6 +79702,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Next 2 you; dump uses feat.",
+      "venueArtist": "Chris Brown & Justin Bieber",
+      "proposalArtist": "Chris Brown feat. Justin Bieber",
       "trusted": true,
       "title": "Next to You"
     },
@@ -79346,10 +79823,8 @@
       "recordingMbid": "ad2b9a72-59fd-4e7e-9bb5-495920f95d76",
       "release": "99 Luftballons",
       "score": 1353938,
-      "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "how": "title-first",
+      "rewrites": [],
       "trusted": true,
       "title": "99 Red Balloons"
     },
@@ -79847,7 +80322,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Licence to Kill"
+      "title": "Licence to Kill",
+      "from": "Licence to Kill"
     },
     {
       "postId": 50018,
@@ -80818,10 +81294,8 @@
       "recordingMbid": "f4655387-c676-4b07-9a27-f560ba254170",
       "release": "Nena",
       "score": 1572,
-      "how": "exact",
-      "rewrites": [
-        "annotation-stripped"
-      ],
+      "how": "title-first",
+      "rewrites": [],
       "trusted": true,
       "title": "99 Luftballons"
     },
@@ -81222,7 +81696,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Goldfinger"
+      "title": "Goldfinger",
+      "from": "Goldfinger"
     },
     {
       "postId": 53018,
@@ -81431,6 +81906,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "abbreviation of Lena Philipsson",
+      "venueArtist": "Lena PH",
+      "proposalArtist": "Lena Philipsson",
       "trusted": true,
       "title": "Vem kan man lita på?"
     },
@@ -82728,6 +83205,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Timberlake lead on the recording",
+      "venueArtist": "Beyonce & Justin Timberlake",
+      "proposalArtist": "Justin Timberlake & Beyoncé",
       "trusted": true,
       "title": "Until the End of Time"
     },
@@ -83064,14 +83543,16 @@
       "artistMbids": [
         "9960700d-2017-40bd-b2d4-1d365d668c81"
       ],
-      "recording": "Comeback Kid (That’s My Dog)",
-      "recordingMbid": "17bdeb1a-5a46-4302-b538-2b74a4ec60f6",
-      "release": "Loverboy",
-      "score": 611999,
+      "recording": "Comeback Kid",
+      "recordingMbid": "94570782-c210-422d-8787-c4df870974de",
+      "release": "Live From Studio M, Volume 7",
+      "score": 5391757,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Comeback Kid (That’s My Dog)"
+      "title": "Comeback Kid"
     },
     {
       "postId": 48632,
@@ -83185,8 +83666,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Slave for you",
+      "venueArtist": "Britney Spears",
+      "proposalArtist": "Britney Spears",
       "trusted": true,
-      "title": "I’m a Slave 4 U"
+      "title": "I'm a Slave 4 U"
     },
     {
       "postId": 48638,
@@ -84741,11 +85224,11 @@
       "artistMbids": [
         "a3c60d26-90d6-4788-ba9b-a89693fc396d"
       ],
-      "recording": "The Image of Me",
-      "recordingMbid": "43077272-ccde-40cd-9fe2-b9ae7610a462",
-      "release": "Michael & Tre Twitty Live!",
-      "score": 913017,
-      "how": "exact",
+      "recording": "The Image of Me (live)",
+      "recordingMbid": "29c10049-0549-4d4a-8c7e-27abb4b93ecb",
+      "release": "Turn Back the Years (live Oslo ’70)",
+      "score": 4629006,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "The Image of Me"
@@ -86997,18 +87480,21 @@
       "artist": "Eagles",
       "song": "Lying eyes",
       "matched": true,
-      "artistCredit": "Eagles",
+      "artistCredit": "The Eagles",
       "artistMbids": [
         "f46bd570-5768-462e-b84c-c7c993bbf47e"
       ],
-      "recording": "Lying Eyes",
-      "recordingMbid": "52555af7-2b36-4ce8-857a-a5e3e1db8c6c",
-      "release": "2004-10-20: Hong Kong Coliseum, Hong Kong",
-      "score": 4675337,
-      "how": "exact",
-      "rewrites": [],
+      "recording": "Lyin’ Eyes (edited, mono)",
+      "recordingMbid": "28c29c1d-a5e5-45ac-b9c0-6c5c9e21a693",
+      "release": "Lyin’ Eyes",
+      "score": 3550391,
+      "how": "version",
+      "rewrites": [
+        "artist-article-added",
+        "title-contraction"
+      ],
       "trusted": true,
-      "title": "Lying Eyes"
+      "title": "Lyin' Eyes"
     },
     {
       "postId": 49698,
@@ -88043,18 +88529,20 @@
       "artist": "Four Tops",
       "song": "I can't help myself",
       "matched": true,
-      "artistCredit": "Four Tops",
+      "artistCredit": "The Four Tops",
       "artistMbids": [
         "0d21b01f-21f2-419b-8d98-4158ba0c0aa4"
       ],
-      "recording": "I Can’t Help Myself",
-      "recordingMbid": "73170cab-0253-4071-8198-e5401ba2b653",
-      "release": "Four Tops Live",
-      "score": 4519751,
+      "recording": "I Can't Help Myself",
+      "recordingMbid": "1d3a2c7e-9e8a-4579-a6d3-1358a5e7b5d6",
+      "release": "Their Greatest Hits",
+      "score": 4877722,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "I Can’t Help Myself"
+      "title": "I Can't Help Myself"
     },
     {
       "postId": 50077,
@@ -88430,18 +88918,20 @@
       "artist": "Goo Goo Dolls",
       "song": "Before it's too late",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
-      "recording": "Before It's Too Late (Sam and Mikaela's Theme)",
-      "recordingMbid": "aec58f97-5852-4cf4-97a5-49f60d3d0bf9",
-      "release": "2007-06-27: Red Rocks Amphitheatre, CO, USA",
-      "score": 4589024,
-      "how": "version",
-      "rewrites": [],
+      "recording": "Before It’s Too Late",
+      "recordingMbid": "9d6bb96c-0076-4b51-8474-e5f42e2a353b",
+      "release": "Before It's Too Late",
+      "score": 3362397,
+      "how": "exact",
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
-      "title": "Before It's Too Late (Sam and Mikaela's Theme)"
+      "title": "Before It’s Too Late"
     },
     {
       "postId": 50248,
@@ -88468,16 +88958,18 @@
       "artist": "Goo Goo Dolls",
       "song": "Here is gone",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
       "recording": "Here Is Gone",
-      "recordingMbid": "bf314b2b-38e3-43cf-b7b3-33f078ddcce8",
-      "release": "Let Love In - Live and Intimate (Tour Edition DVD)",
-      "score": 1869162,
+      "recordingMbid": "45294873-f340-4172-ada4-a1b2a9ed055d",
+      "release": "Gutterflower",
+      "score": 304433,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Here Is Gone"
     },
@@ -88487,16 +88979,18 @@
       "artist": "Goo Goo Dolls",
       "song": "Stay with you",
       "matched": true,
-      "artistCredit": "Goo Goo Dolls",
+      "artistCredit": "The Goo Goo Dolls",
       "artistMbids": [
         "e2c00c56-8365-4160-9f40-a64682917633"
       ],
       "recording": "Stay With You",
-      "recordingMbid": "3896a6df-f22a-4e4e-b152-4e8e17021e84",
-      "release": "Let Love In - Live and Intimate (Tour Edition DVD)",
-      "score": 1869162,
+      "recordingMbid": "02359ee7-817a-48e0-9959-e14a86aefe38",
+      "release": "Let Love In",
+      "score": 431096,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "artist-article-added"
+      ],
       "trusted": true,
       "title": "Stay With You"
     },
@@ -89229,7 +89723,22 @@
       "id": 4725,
       "artist": "Iron Maiden",
       "song": "Iron fist",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Motörhead",
+      "artistMbids": [
+        "57961a97-3796-4bf7-9f02-a985a8979ae9"
+      ],
+      "recording": "Iron Fist",
+      "recordingMbid": "90ddd03c-010c-4fb5-ac65-b5b31aed7c51",
+      "release": "Iron Fist",
+      "score": 18541,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Iron Fist is Motörhead, not Iron Maiden",
+      "venueArtist": "Iron Maiden",
+      "proposalArtist": "Motörhead",
+      "trusted": true,
+      "title": "Iron Fist"
     },
     {
       "postId": 50477,
@@ -89317,14 +89826,16 @@
       "artistMbids": [
         "82eb8936-7bf6-4577-8320-a2639465206d"
       ],
-      "recording": "The Remedy (I Won’t Worry)",
-      "recordingMbid": "063a7fe1-1614-43a0-9440-108cc5cef2f1",
-      "release": "Waiting for My Rocket to Come",
-      "score": 311053,
+      "recording": "The Remedy",
+      "recordingMbid": "6737ab9d-0aab-4c80-8320-faaaf3f834f0",
+      "release": "Beautiful Mess - Live on Earth",
+      "score": 4555391,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "The Remedy (I Won’t Worry)"
+      "title": "The Remedy"
     },
     {
       "postId": 50590,
@@ -89602,15 +90113,15 @@
       "artist": "Jay Z",
       "song": "Izzo (hOVA)",
       "matched": true,
-      "artistCredit": "Jay‐Z",
+      "artistCredit": "Jay-Z",
       "artistMbids": [
         "f82bcf78-5b69-4622-a5ef-73800768d9ac"
       ],
-      "recording": "Izzo (H.O.V.A.)",
-      "recordingMbid": "64ea3615-a07e-42f6-9ecd-fa6ec6d014b4",
-      "release": "The Blueprint",
-      "score": 281459,
-      "how": "exact",
+      "recording": "Izzo (H.O.V.A.) (instrumental)",
+      "recordingMbid": "066b86b3-53b2-4276-839e-3a0a5c676e69",
+      "release": "Izzo (H.O.V.A.)",
+      "score": 2313414,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Izzo (H.O.V.A.)"
@@ -90323,14 +90834,16 @@
       "artistMbids": [
         "5a5eeab3-e4b7-42e9-8ae9-b90eeb210b96"
       ],
-      "recording": "Searching (For Someone Like You)",
-      "recordingMbid": "0e4f97e6-abdb-442b-a16b-359953370f41",
-      "release": "The Country Music Hall of Fame",
-      "score": 4699944,
+      "recording": "Searching",
+      "recordingMbid": "6c0f3b78-c789-4c4b-b203-78e31b8a1461",
+      "release": "Twenty Great Hits",
+      "score": 4882569,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Searching (For Someone Like You)"
+      "title": "Searching"
     },
     {
       "postId": 51070,
@@ -91011,14 +91524,16 @@
       "artistMbids": [
         "494e8d09-f85b-4543-892f-a5096aed1cd4"
       ],
-      "recording": "Can’t Take That Away (Mariah’s theme)",
-      "recordingMbid": "e99de9ae-6d00-485f-9f13-eb2aec492351",
-      "release": "Rainbow",
-      "score": 228576,
+      "recording": "Can’t Take That Away",
+      "recordingMbid": "1cfc19e0-bba8-4258-9b3e-fa868b58bbfe",
+      "release": "Divas 2000: A Tribute to Diana Ross",
+      "score": 5393859,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "trusted": true,
-      "title": "Can’t Take That Away (Mariah’s theme)"
+      "title": "Can’t Take That Away"
     },
     {
       "postId": 51487,
@@ -91914,6 +92429,8 @@
       "rewrites": [],
       "proposed": "the duet",
       "from": "Moulin Rouge!",
+      "venueArtist": "Moulin Rouge",
+      "proposalArtist": "Nicole Kidman & Ewan McGregor",
       "trusted": true,
       "title": "Elephant Love Medley"
     },
@@ -92079,11 +92596,11 @@
       "artistMbids": [
         "090dafe5-818c-4bba-9ebf-7e3a651a5c43"
       ],
-      "recording": "You Got It (The Right Stuff)",
-      "recordingMbid": "a2145a12-6eb1-4f9b-bfd8-619240f848c6",
-      "release": "Hangin’ Tough",
-      "score": 24060,
-      "how": "exact",
+      "recording": "You Got It (The Right Stuff) (The New Kids in the House mix)",
+      "recordingMbid": "43ef2093-afc3-4638-abc3-ae9ed216a241",
+      "release": "Fantastic 80s! Extended",
+      "score": 5487933,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "You Got It (The Right Stuff)"
@@ -94025,14 +94542,16 @@
       "artistMbids": [
         "e01c3376-15fa-40d7-b747-5f219bdefdd7"
       ],
-      "recording": "FM (No Static at All)",
-      "recordingMbid": "24c09593-a4f6-4261-87a2-cfab91aa9451",
-      "release": "FM (No Static at All)",
-      "score": 3557036,
-      "how": "exact",
-      "rewrites": [],
-      "trusted": true,
-      "title": "FM (No Static at All)"
+      "recording": "FM Jam Reprise",
+      "recordingMbid": "199c209a-3b82-4403-b05d-0cd34af49017",
+      "release": "1996-07-21: Nissan Pavilion, Bristow, VA, USA",
+      "score": 4672189,
+      "how": "loose",
+      "rewrites": [
+        "annotation-stripped"
+      ],
+      "trusted": false,
+      "title": "FM Jam Reprise"
     },
     {
       "postId": 52905,
@@ -94089,6 +94608,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "My school is My Old School",
+      "venueArtist": "Steely Dan",
+      "proposalArtist": "Steely Dan",
       "trusted": true,
       "title": "My Old School"
     },
@@ -94292,11 +94813,11 @@
       "artistMbids": [
         "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e"
       ],
-      "recording": "Uptight (Everything’s Alright)",
-      "recordingMbid": "6ec3aded-2fb6-48dc-870d-e51ece0a1b48",
-      "release": "Up‐Tight (Everything’s Alright)",
-      "score": 215065,
-      "how": "exact",
+      "recording": "Uptight (Everything’s Alright) (extended mix)",
+      "recordingMbid": "a857d73d-805c-49b5-bc25-e30132031687",
+      "release": "The Motown Box",
+      "score": 5485684,
+      "how": "version",
       "rewrites": [],
       "trusted": true,
       "title": "Uptight (Everything’s Alright)"
@@ -95005,14 +95526,14 @@
       "artistMbids": [
         "4a76400d-283f-492e-9754-18ef41755f81"
       ],
-      "recording": "Fight the Power",
-      "recordingMbid": "4d76a027-b5ff-4141-8a46-e4838903cfac",
-      "release": "Live!",
-      "score": 4520291,
-      "how": "exact",
+      "recording": "Fight the Power, Pts 1 & 2",
+      "recordingMbid": "97e38e54-e158-49fa-8b80-4b7d6d385102",
+      "release": "DiscoSwede - Disco Delights Vol.17",
+      "score": 5624086,
+      "how": "loose",
       "rewrites": [],
-      "trusted": true,
-      "title": "Fight the Power"
+      "trusted": false,
+      "title": "Fight the Power, Pts 1 & 2"
     },
     {
       "postId": 53148,
@@ -95358,7 +95879,7 @@
       ],
       "trusted": true,
       "title": "Stay",
-      "from": "Eurovision 2012 Norway"
+      "from": "Eurovision"
     },
     {
       "postId": 53365,
@@ -97044,6 +97565,8 @@
       "rewrites": [],
       "proposed": "Frozen",
       "from": "Frozen",
+      "venueArtist": "Frozen",
+      "proposalArtist": "Idina Menzel",
       "trusted": true,
       "title": "Let It Go"
     },
@@ -97069,6 +97592,8 @@
       ],
       "proposed": "Frozen",
       "from": "Frozen",
+      "venueArtist": "Frozen",
+      "proposalArtist": "Kristen Bell, Agatha Lee Monn & Katie Lopez",
       "trusted": true,
       "title": "Do You Want to Build a Snowman?"
     },
@@ -97647,6 +98172,8 @@
       "rewrites": [],
       "proposed": "Judas on the 1970 album",
       "from": "Jesus Christ Superstar",
+      "venueArtist": "Jesus Christ Superstar",
+      "proposalArtist": "Murray Head",
       "trusted": true,
       "title": "Superstar"
     },
@@ -98770,6 +99297,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "New Kids On Block",
+      "venueArtist": "New Kids On Block",
+      "proposalArtist": "New Kids on the Block",
       "trusted": true,
       "title": "Step by Step"
     },
@@ -99231,6 +99760,8 @@
       "rewrites": [],
       "proposed": "Phantom of the Opera",
       "from": "The Phantom of the Opera",
+      "venueArtist": "Phantom Of The Opera",
+      "proposalArtist": "Michael Crawford",
       "trusted": true,
       "title": "The Music of the Night"
     },
@@ -99555,16 +100086,21 @@
       "artist": "Rihanna Feat Kanye West And Paul Mccartney",
       "song": "Four Five Seconds",
       "matched": true,
-      "artistCredit": "Rihanna",
+      "artistCredit": "Kanye West feat. Rihanna & Paul McCartney",
       "artistMbids": [
-        "73e5e69d-3554-40d8-8516-00cb38737a1c"
+        "164f0d73-1234-4e2c-8743-d77bf2191051",
+        "73e5e69d-3554-40d8-8516-00cb38737a1c",
+        "ba550d0e-adac-4864-b88b-407cab5e76af"
       ],
       "recording": "FourFiveSeconds",
-      "recordingMbid": "5d2f60da-95a5-47dd-a436-06f064e45227",
-      "release": "YE LIVE IN MEXICO (Part 1)",
-      "score": 1698361,
-      "how": "lead-scoped",
+      "recordingMbid": "b1e7bebd-0d36-4e4e-b419-e87bd5520933",
+      "release": "So Help Me God",
+      "score": 1225352,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "studio OneWord title; dump files Kanye first on the non-remix master",
+      "venueArtist": "Rihanna Feat Kanye West And Paul Mccartney",
+      "proposalArtist": "Kanye West feat. Rihanna & Paul McCartney",
       "trusted": true,
       "title": "FourFiveSeconds"
     },
@@ -99775,7 +100311,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "For Your Eyes Only"
+      "title": "For Your Eyes Only",
+      "from": "For Your Eyes Only"
     },
     {
       "postId": 52770,
@@ -100814,13 +101351,17 @@
       "artistMbids": [
         "408b2a33-d229-46a5-a361-0667bc616e34"
       ],
-      "recording": "Around the World (La La La La La)",
-      "recordingMbid": "bf04e25a-bcc2-4404-9491-7ce66a9d3abc",
-      "release": "Planet Pop",
-      "score": 257750,
+      "recording": "Around The World",
+      "recordingMbid": "c0b22639-b1d0-4fb6-871d-141ea0b07c04",
+      "release": "Ultimix 81",
+      "score": 5387498,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "proposed": "Atc casing; title",
+      "venueArtist": "Atc",
+      "proposalArtist": "ATC",
       "trusted": true,
       "title": "Around the World (La La La La La)"
     },
@@ -101122,19 +101663,22 @@
       "artist": "Disney",
       "song": "I Just Can't Wait To Be King",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Jason Weaver",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "013a28b2-22d9-4782-b98a-7db9f3693574"
       ],
       "recording": "I Just Can't Wait to Be King",
-      "recordingMbid": "476973c0-9302-4a96-a196-d9545a1a0daf",
-      "release": "Mickey's PhilharMagic",
-      "score": 4376741,
+      "recordingMbid": "6f921f85-4449-43a4-828d-d64379d3b74b",
+      "release": "O Rei Leão",
+      "score": 4356988,
       "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "I Just Can't Wait to Be King",
-      "placeholder": true
+      "proposed": "Lion King",
+      "from": "The Lion King",
+      "venueArtist": "Disney",
+      "proposalArtist": "Jason Weaver",
+      "trusted": true,
+      "title": "I Just Can't Wait to Be King"
     },
     {
       "postId": 49411,
@@ -101142,19 +101686,22 @@
       "artist": "Disney",
       "song": "I Wanna Be Like You",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Louis Prima",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "b5997eef-2516-491a-a10e-5cee842bbcdc"
       ],
-      "recording": "I Wanna Be Like You",
-      "recordingMbid": "31a684f3-cef8-4aac-a417-55f666067996",
-      "release": "Euro Disney: Feel The Magic",
-      "score": 4355160,
+      "recording": "I Wan'na Be Like You",
+      "recordingMbid": "4908f9c4-30a2-4de1-b3d6-457b8ba802bf",
+      "release": "The New Sounds of the Louis Prima Show",
+      "score": 325356,
       "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "I Wanna Be Like You",
-      "placeholder": true
+      "proposed": "Jungle Book",
+      "from": "The Jungle Book",
+      "venueArtist": "Disney",
+      "proposalArtist": "Louis Prima",
+      "trusted": true,
+      "title": "I Wan'na Be Like You"
     },
     {
       "postId": 49412,
@@ -101174,6 +101721,8 @@
       "rewrites": [],
       "proposed": "Osmond is Shang's singing voice in Mulan",
       "from": "Mulan",
+      "venueArtist": "Disney",
+      "proposalArtist": "Donny Osmond",
       "trusted": true,
       "title": "I’ll Make a Man out of You"
     },
@@ -101183,19 +101732,24 @@
       "artist": "Disney",
       "song": "The Bare Necessities",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Phil Harris",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "d10253ac-e1c5-47f3-846f-65cce388b7fb"
       ],
-      "recording": "The Bare Necessities",
-      "recordingMbid": "f8415f7a-ea92-4590-823a-830dba8d8878",
-      "release": "Sing Along - Duets",
-      "score": 461173,
+      "recording": "Bare Necessities",
+      "recordingMbid": "230d8d96-8d17-4f5a-974e-8883b05074c4",
+      "release": "Walt Disney's Happiest Songs",
+      "score": 5606123,
       "how": "exact",
-      "rewrites": [],
-      "trusted": false,
-      "title": "The Bare Necessities",
-      "placeholder": true
+      "rewrites": [
+        "title-article-dropped"
+      ],
+      "proposed": "Jungle Book",
+      "from": "The Jungle Book",
+      "venueArtist": "Disney",
+      "proposalArtist": "Phil Harris",
+      "trusted": true,
+      "title": "The Bare Necessities"
     },
     {
       "postId": 49414,
@@ -101203,19 +101757,22 @@
       "artist": "Disney",
       "song": "Under The Sea",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Samuel E. Wright",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "32c95bd9-68ee-4f64-923c-530de6b283a1"
       ],
       "recording": "Under the Sea",
-      "recordingMbid": "42517d68-9dc5-4444-acfd-5e9dbe5a018e",
-      "release": "Disney Princess Sing-Along",
-      "score": 4801783,
+      "recordingMbid": "6382ff4e-3309-4f86-8762-ae7c2d8b79d4",
+      "release": "The Little Mermaid: Original Motion Picture Soundtrack",
+      "score": 4353199,
       "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "Under the Sea",
-      "placeholder": true
+      "proposed": "Little Mermaid",
+      "from": "The Little Mermaid",
+      "venueArtist": "Disney",
+      "proposalArtist": "Samuel E. Wright",
+      "trusted": true,
+      "title": "Under the Sea"
     },
     {
       "postId": 49514,
@@ -101630,14 +102187,14 @@
       "artistMbids": [
         "516cef4d-0718-4007-9939-f9b38af3f784"
       ],
-      "recording": "My Songs Know What You Did in the Dark (Light ’Em Up)",
-      "recordingMbid": "8606a66d-cdd8-4dac-ae25-9d574488e050",
-      "release": "Save Rock and Roll",
-      "score": 672835,
+      "recording": "My Songs Know What You Did In The Dark",
+      "recordingMbid": "9b386557-ba07-467d-95f9-843c2e4abad5",
+      "release": "FUCT: The Lost Songs",
+      "score": 4506282,
       "how": "loose",
       "rewrites": [],
       "trusted": false,
-      "title": "My Songs Know What You Did in the Dark (Light ’Em Up)"
+      "title": "My Songs Know What You Did In The Dark"
     },
     {
       "postId": 49942,
@@ -102329,6 +102886,8 @@
         "ampersand-spelled-out"
       ],
       "proposed": "Robot is I Am Not a Robot",
+      "venueArtist": "Marina and The Diamonds",
+      "proposalArtist": "Marina and the Diamonds",
       "trusted": true,
       "title": "I Am Not a Robot"
     },
@@ -102645,20 +103204,23 @@
       "artist": "Rihanna & Kanye West & Paul Mccartney",
       "song": "Fourfiveseconds",
       "matched": true,
-      "artistCredit": "Rihanna, Kanye West & Paul McCartney",
+      "artistCredit": "Kanye West feat. Rihanna & Paul McCartney",
       "artistMbids": [
-        "73e5e69d-3554-40d8-8516-00cb38737a1c",
         "164f0d73-1234-4e2c-8743-d77bf2191051",
+        "73e5e69d-3554-40d8-8516-00cb38737a1c",
         "ba550d0e-adac-4864-b88b-407cab5e76af"
       ],
-      "recording": "Four Five Seconds (DJ Mustard remix)",
-      "recordingMbid": "27fde3c8-e555-44e2-add4-cc87ce4de06e",
-      "release": "Four Five Seconds (DJ Mustard remix)",
-      "score": 5021774,
-      "how": "version",
+      "recording": "FourFiveSeconds",
+      "recordingMbid": "b1e7bebd-0d36-4e4e-b419-e87bd5520933",
+      "release": "So Help Me God",
+      "score": 1225352,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "same song; prefer studio FourFiveSeconds over DJ Mustard remix",
+      "venueArtist": "Rihanna & Kanye West & Paul Mccartney",
+      "proposalArtist": "Kanye West feat. Rihanna & Paul McCartney",
       "trusted": true,
-      "title": "Four Five Seconds"
+      "title": "FourFiveSeconds"
     },
     {
       "postId": 52499,
@@ -102924,6 +103486,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Strokes, The",
+      "venueArtist": "Strokes, The",
+      "proposalArtist": "The Strokes",
       "trusted": true,
       "title": "Someday"
     },
@@ -103233,8 +103797,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Who, The; O'riley casing",
+      "venueArtist": "Who, The",
+      "proposalArtist": "The Who",
       "trusted": true,
-      "title": "Baba O’Riley"
+      "title": "Baba O'Riley"
     },
     {
       "postId": 53563,
@@ -103801,15 +104367,19 @@
       "artistMbids": [
         "d791111a-9fcc-4ebe-bb16-b785719a642b"
       ],
-      "recording": "Fuck It (I Don’t Want You Back)",
-      "recordingMbid": "d4b6a184-c08b-4bd4-ae97-fb42f478c23c",
-      "release": "I Don’t Want You Back",
-      "score": 364177,
+      "recording": "Fuck It",
+      "recordingMbid": "d53b2914-3221-4632-b5df-a36e4982963a",
+      "release": "Planète Rap 2004, Volume 2",
+      "score": 5474302,
       "how": "exact",
-      "rewrites": [],
+      "rewrites": [
+        "annotation-stripped"
+      ],
       "proposed": "title",
+      "venueArtist": "Eamon",
+      "proposalArtist": "Eamon",
       "trusted": true,
-      "title": "Fuck It (I Don’t Want You Back)"
+      "title": "Fuck It (I Don't Want You Back)"
     },
     {
       "postId": 49415,
@@ -103817,19 +104387,25 @@
       "artist": "Disney",
       "song": "Be our guest",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Angela Lansbury and Jerry Orbach",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "12b0c33b-37de-4c56-9041-d27f9466381b",
+        "c9f3fa43-fd15-4517-92e0-38f51eac447b"
       ],
       "recording": "Be Our Guest",
-      "recordingMbid": "2cef1487-e856-4d82-90e8-778dabbf11e6",
-      "release": "Mickey's PhilharMagic",
-      "score": 4376741,
+      "recordingMbid": "5ab3f01e-2204-4988-875d-867dedd5a9b3",
+      "release": "Disney’s Award Winning Classics",
+      "score": 5410105,
       "how": "exact",
-      "rewrites": [],
-      "trusted": false,
-      "title": "Be Our Guest",
-      "placeholder": true
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "Beauty and the Beast",
+      "from": "Beauty and the Beast",
+      "venueArtist": "Disney",
+      "proposalArtist": "Angela Lansbury & Jerry Orbach",
+      "trusted": true,
+      "title": "Be Our Guest"
     },
     {
       "postId": 49416,
@@ -103837,19 +104413,22 @@
       "artist": "Disney",
       "song": "A dream is a wish",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Ilene Woods",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "ffc3eb11-f4f7-46b3-9d99-0390c5c02845"
       ],
-      "recording": "A Dream Is A Wish Your Heart Makes",
-      "recordingMbid": "3f398a02-5329-4206-bb4c-57d4e3f6f04d",
-      "release": "Disney's Fairy Tale Weddings",
-      "score": 1862342,
-      "how": "loose",
+      "recording": "A Dream Is a Wish Your Heart Makes",
+      "recordingMbid": "b508aa2a-ee57-44d9-abfe-66b69ce18342",
+      "release": "Cinderella",
+      "score": 4437324,
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "A Dream Is A Wish Your Heart Makes",
-      "placeholder": true
+      "proposed": "Cinderella",
+      "from": "Cinderella",
+      "venueArtist": "Disney",
+      "proposalArtist": "Ilene Woods",
+      "trusted": true,
+      "title": "A Dream Is a Wish Your Heart Makes"
     },
     {
       "postId": 49417,
@@ -103857,19 +104436,22 @@
       "artist": "Disney",
       "song": "Bibbidi bobidi boo",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Verna Felton",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "9d053b32-5de6-4d1a-9ce2-d01fe74ff5f1"
       ],
-      "recording": "Bibbidi‐Bobbidi‐Boo",
-      "recordingMbid": "a412a1f8-6218-4745-b8ec-91c023918844",
-      "release": "Disney Sing‐Along: Disney Princess",
-      "score": 4842470,
-      "how": "near",
+      "recording": "Bibbidi‐Bobbidi‐Boo (The Magic Song)",
+      "recordingMbid": "daaa880d-5c1b-45ca-a2a2-86d1c4144eb1",
+      "release": "The Ultimate Disney Hits",
+      "score": 4827711,
+      "how": "version",
       "rewrites": [],
-      "trusted": false,
-      "title": "Bibbidi‐Bobbidi‐Boo",
-      "placeholder": true
+      "proposed": "Cinderella fairy godmother",
+      "from": "Cinderella",
+      "venueArtist": "Disney",
+      "proposalArtist": "Verna Felton",
+      "trusted": true,
+      "title": "Bibbidi-Bobbidi-Boo"
     },
     {
       "postId": 49418,
@@ -103877,19 +104459,22 @@
       "artist": "Disney",
       "song": "Supercalifragilist",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Julie Andrews",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "16bdc7b3-6bfc-4f1c-89ad-d0756af40327"
       ],
-      "recording": "Supercalifragilisticexpidelilicieux",
-      "recordingMbid": "2a6a022e-2df8-4258-af2d-b9136bb29123",
-      "release": "Mary Poppins: Toutes les chansons du film",
-      "score": 4442195,
-      "how": "loose",
+      "recording": "Supercalifragilisticexpialidocious",
+      "recordingMbid": "e00a7e5e-70dd-4c9a-a910-5cec449981de",
+      "release": "Mary Poppins Original Soundtrack",
+      "score": 4393638,
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "Supercalifragilisticexpidelilicieux",
-      "placeholder": true
+      "proposed": "Mary Poppins; venue truncated Supercalifragilist",
+      "from": "Mary Poppins",
+      "venueArtist": "Disney",
+      "proposalArtist": "Julie Andrews",
+      "trusted": true,
+      "title": "Supercalifragilisticexpialidocious"
     },
     {
       "postId": 49419,
@@ -103897,26 +104482,48 @@
       "artist": "Disney",
       "song": "Never smile at a crocodile",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Joe York",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "f1f42838-1567-45c6-a9ea-4c65e541613e"
       ],
-      "recording": "Never Smile At A Crocodile",
-      "recordingMbid": "9af3e1d7-d9c2-4bd1-bd78-d639c7492f83",
-      "release": "Jungle Book",
-      "score": 4495224,
+      "recording": "Never Smile at a Crocodile",
+      "recordingMbid": "005817b5-21f6-48de-9206-47bb1f2d962c",
+      "release": "The Jungle Book 2",
+      "score": 5373016,
       "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "Never Smile At A Crocodile",
-      "placeholder": true
+      "proposed": "Peter Pan / Disney karaoke vocal; avoid [Disney] placeholder",
+      "from": "Peter Pan",
+      "venueArtist": "Disney",
+      "proposalArtist": "Joe York",
+      "trusted": true,
+      "title": "Never Smile at a Crocodile"
     },
     {
       "postId": 49420,
       "id": 5491,
       "artist": "Disney",
       "song": "Listen with you heart",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Linda Hunt and Bobbi Page",
+      "artistMbids": [
+        "63ac4168-79fd-4032-afbc-55f85de11d73",
+        "c27b0cb1-d482-4f26-b1ba-805d3ea836fe"
+      ],
+      "recording": "Listen With Your Heart I",
+      "recordingMbid": "4cf285d2-205f-46e4-8096-eec416f13639",
+      "release": "Pocahontas: An Original Walt Disney Records Soundtrack",
+      "score": 4357377,
+      "how": "spelling",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "Pocahontas; Linda Hunt & Bobbi Page soundtrack",
+      "from": "Pocahontas",
+      "venueArtist": "Disney",
+      "proposalArtist": "Linda Hunt & Bobbi Page",
+      "trusted": true,
+      "title": "Listen With Your Heart"
     },
     {
       "postId": 49421,
@@ -103924,19 +104531,22 @@
       "artist": "Disney",
       "song": "I just can't wait to be king",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Jason Weaver",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "013a28b2-22d9-4782-b98a-7db9f3693574"
       ],
       "recording": "I Just Can't Wait to Be King",
-      "recordingMbid": "476973c0-9302-4a96-a196-d9545a1a0daf",
-      "release": "Mickey's PhilharMagic",
-      "score": 4376741,
+      "recordingMbid": "6f921f85-4449-43a4-828d-d64379d3b74b",
+      "release": "O Rei Leão",
+      "score": 4356988,
       "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "I Just Can't Wait to Be King",
-      "placeholder": true
+      "proposed": "duplicate Lion King row",
+      "from": "The Lion King",
+      "venueArtist": "Disney",
+      "proposalArtist": "Jason Weaver",
+      "trusted": true,
+      "title": "I Just Can't Wait to Be King"
     },
     {
       "postId": 49422,
@@ -103956,6 +104566,8 @@
       "rewrites": [],
       "proposed": "Mary Poppins; spoonful is one word",
       "from": "Mary Poppins",
+      "venueArtist": "Disney",
+      "proposalArtist": "Julie Andrews",
       "trusted": true,
       "title": "A Spoonful of Sugar"
     },
@@ -103984,17 +104596,19 @@
       "artist": "Hall & Oates",
       "song": "You make my dreams",
       "matched": true,
-      "artistCredit": "Hall& Oates",
+      "artistCredit": "Daryl Hall & John Oates",
       "artistMbids": [
-        "debabff3-2559-46e5-862d-ef2a906d7010",
         "debabff3-2559-46e5-862d-ef2a906d7010"
       ],
       "recording": "You Make My Dreams",
-      "recordingMbid": "cd617aaa-cdee-45d3-abb5-d20eb7248371",
-      "release": "Greatest Hits - Live (Park West, Chicago IL 27 Feb ‘83)",
-      "score": 4598847,
+      "recordingMbid": "199e17e5-0491-4826-a8bf-7e60bb3b3136",
+      "release": "Voices",
+      "score": 5868,
       "how": "exact",
       "rewrites": [],
+      "proposed": "studio Voices cut; avoid live Park West master",
+      "venueArtist": "Hall & Oates",
+      "proposalArtist": "Daryl Hall & John Oates",
       "trusted": true,
       "title": "You Make My Dreams"
     },
@@ -104111,6 +104725,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Kygo's cover with Houston",
+      "venueArtist": "Kygo ft. Selena Gomez",
+      "proposalArtist": "Kygo & Whitney Houston",
       "trusted": true,
       "title": "Higher Love"
     },
@@ -104638,7 +105254,25 @@
       "id": 5530,
       "artist": "Mike WMI ft Miley Cyrus",
       "song": "23",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Mike WiLL Made‐It feat. Miley Cyrus, Wiz Khalifa & Juicy J",
+      "artistMbids": [
+        "5a2071aa-0787-49fb-931c-fa85ba86e681",
+        "7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "f5dfa020-ad69-41cd-b3d4-fd7af0414e94",
+        "c45d161f-83ce-4464-ba41-44202e6916d9"
+      ],
+      "recording": "23",
+      "recordingMbid": "595e784e-434b-442a-8782-86afc2bfecad",
+      "release": "Bangerz",
+      "score": 2082179,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Mike WMI is Mike WiLL Made-It; 23 is the full featured credit",
+      "venueArtist": "Mike WMI ft Miley Cyrus",
+      "proposalArtist": "Mike WiLL Made-It feat. Miley Cyrus, Wiz Khalifa & Juicy J",
+      "trusted": true,
+      "title": "23"
     },
     {
       "postId": 52583,
@@ -104867,6 +105501,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Whickey is Whiskey",
+      "venueArtist": "Chris Stapleton",
+      "proposalArtist": "Chris Stapleton",
       "trusted": true,
       "title": "Tennessee Whiskey"
     },
@@ -105059,6 +105695,8 @@
       "rewrites": [],
       "proposed": "opening number; cast credit not in dump",
       "from": "Hamilton",
+      "venueArtist": "Hamilton",
+      "proposalArtist": "Lin-Manuel Miranda",
       "trusted": true,
       "title": "Alexander Hamilton"
     },
@@ -105175,6 +105813,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "backup; dump bills Eminem first",
+      "venueArtist": "Ed Sheeran Ft. Eminem",
+      "proposalArtist": "Eminem feat. Ed Sheeran",
       "trusted": true,
       "title": "River"
     },
@@ -105328,6 +105968,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "venue truncated the title",
+      "venueArtist": "The police",
+      "proposalArtist": "The Police",
       "trusted": true,
       "title": "De Do Do Do, De Da Da Da"
     },
@@ -106116,18 +106758,19 @@
       "matched": true,
       "artistCredit": "Ed Sheeran & Justin Bieber",
       "artistMbids": [
-        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
-        "e0140a67-e4d1-4f13-8a01-364355bee46e"
+        "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6"
       ],
-      "recording": "I Don’t Care",
-      "recordingMbid": "09fe14ca-7734-4fa0-9365-8159d236d7af",
-      "release": "No.6 Collaborations Project",
-      "score": 811894,
-      "how": "exact",
+      "recording": "I Don't Care (Chronixx & Koffee Remix)",
+      "recordingMbid": "07049a59-c206-4beb-8833-f4460e562ecb",
+      "release": "I Don’t Care (Chronixx & Koffee remix)",
+      "score": 5032369,
+      "how": "version",
       "rewrites": [],
       "proposed": "backup if collab-scoped misses; dump bills Sheeran first",
+      "venueArtist": "Justin Bieber ft Ed sheeran",
+      "proposalArtist": "Ed Sheeran & Justin Bieber",
       "trusted": true,
-      "title": "I Don’t Care"
+      "title": "I Don't Care"
     },
     {
       "postId": 51793,
@@ -106147,6 +106790,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "venue credited Nas; Lil Nas X",
+      "venueArtist": "Nas Ft Billy Ray Cyrus",
+      "proposalArtist": "Lil Nas X feat. Billy Ray Cyrus",
       "trusted": true,
       "title": "Old Town Road"
     },
@@ -106491,8 +107136,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Monolpoly is Monopoly",
+      "venueArtist": "Ariana Grande  & Victoria Monet",
+      "proposalArtist": "Ariana Grande & Victoria Monét",
       "trusted": true,
-      "title": "MONOPOLY"
+      "title": "Monopoly"
     },
     {
       "postId": 48045,
@@ -106512,6 +107159,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Grand is Grande",
+      "venueArtist": "Ariana  Grand ft Mac Miller",
+      "proposalArtist": "Ariana Grande feat. Mac Miller",
       "trusted": true,
       "title": "The Way"
     },
@@ -106956,6 +107605,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Cardi B lead; venue had J Balvin ft Cardi B",
+      "venueArtist": "J Balvin ft. Cardi B",
+      "proposalArtist": "Cardi B, Bad Bunny & J Balvin",
       "trusted": true,
       "title": "I Like It"
     },
@@ -107292,6 +107943,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Uffe is Ulf; duplicate listing",
+      "venueArtist": "Uffe Neidemar",
+      "proposalArtist": "Ulf Neidemar",
       "trusted": true,
       "title": "Häng med på party"
     },
@@ -107447,6 +108100,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Oh lalala jag vill ha dig",
+      "venueArtist": "Ulf Lundell",
+      "proposalArtist": "Ulf Lundell",
       "trusted": true,
       "title": "(Oh la la) Jag vill ha dej"
     },
@@ -107638,6 +108293,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "venue added Om",
+      "venueArtist": "Drängarna",
+      "proposalArtist": "Drängarna",
       "trusted": true,
       "title": "Vill du bli min fru"
     },
@@ -107684,7 +108341,22 @@
       "id": 5691,
       "artist": "The cartoons",
       "song": "Doo dah",
-      "matched": false
+      "matched": true,
+      "artistCredit": "Cartoons",
+      "artistMbids": [
+        "81b1c0b1-6735-4b20-911a-c738fdee2646"
+      ],
+      "recording": "DooDah",
+      "recordingMbid": "399e8287-0677-46e6-895f-c5d0d635f436",
+      "release": "Toonage",
+      "score": 207078,
+      "how": "exact",
+      "rewrites": [],
+      "proposed": "Danish Cartoons; title is DooDah",
+      "venueArtist": "The cartoons",
+      "proposalArtist": "Cartoons",
+      "trusted": true,
+      "title": "DooDah"
     },
     {
       "postId": 49012,
@@ -108373,7 +109045,7 @@
         "ampersand-spelled-out"
       ],
       "trusted": false,
-      "title": "Blood Sweat & Tears Music Video"
+      "title": "Blood Sweat & Tears"
     },
     {
       "postId": 49632,
@@ -108546,6 +109218,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Fleetwod is Fleetwood",
+      "venueArtist": "Fleetwod mac",
+      "proposalArtist": "Fleetwood Mac",
       "trusted": true,
       "title": "Sara"
     },
@@ -108688,19 +109362,25 @@
       "artist": "High school musical",
       "song": "Breaking free",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Zac Efron and Vanessa Hudgens",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "b25c6c3f-3861-4687-be1d-3c8d238cfb34",
+        "9da7ed18-20fa-4279-88c8-94299728236d"
       ],
       "recording": "Breaking Free",
-      "recordingMbid": "57566fac-e751-459a-aa94-66754d7ca042",
-      "release": "High School Musical Accompaniment (One-Act Edition)",
-      "score": 4369913,
-      "how": "artist-scoped",
-      "rewrites": [],
-      "trusted": false,
-      "title": "Breaking Free",
-      "placeholder": true
+      "recordingMbid": "4be9aa2a-7220-496e-9135-9ddee00c99fd",
+      "release": "Disney’s Karaoke Series: High School Musical",
+      "score": 4371356,
+      "how": "exact",
+      "rewrites": [
+        "ampersand-spelled-out"
+      ],
+      "proposed": "HSM cast",
+      "from": "High School Musical",
+      "venueArtist": "High school musical",
+      "proposalArtist": "Zac Efron & Vanessa Hudgens",
+      "trusted": true,
+      "title": "Breaking Free"
     },
     {
       "postId": 50368,
@@ -108715,19 +109395,23 @@
       "artist": "High school musical",
       "song": "What iv'e been looking for",
       "matched": true,
-      "artistCredit": "[Disney]",
+      "artistCredit": "Ashley Tisdale & Lucas Grabeel",
       "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
+        "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
+        "a4878ec4-ed11-4bdf-8f95-64ab2dc59b1b"
       ],
-      "recording": "What I've Been Looking For",
-      "recordingMbid": "9865271d-3a80-4162-a518-967a68ffd5a4",
-      "release": "High School Musical Accompaniment (One-Act Edition)",
-      "score": 4369913,
-      "how": "artist-scoped",
+      "recording": "What I’ve Been Looking For",
+      "recordingMbid": "0f8dd344-af30-493c-acc6-6c88afb8ee7f",
+      "release": "High School Musical",
+      "score": 4394194,
+      "how": "exact",
       "rewrites": [],
-      "trusted": false,
-      "title": "What I've Been Looking For",
-      "placeholder": true
+      "proposed": "venue typo What iv'e; HSM",
+      "from": "High School Musical",
+      "venueArtist": "High school musical",
+      "proposalArtist": "Ashley Tisdale & Lucas Grabeel",
+      "trusted": true,
+      "title": "What I've Been Looking For"
     },
     {
       "postId": 51745,
@@ -108977,6 +109661,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "doollar is Dollar with an extra o",
+      "venueArtist": "Aloe Blacc",
+      "proposalArtist": "Aloe Blacc",
       "trusted": true,
       "title": "I Need a Dollar"
     },
@@ -109327,6 +110013,8 @@
       "rewrites": [],
       "proposed": "Queen Iduna's lullaby",
       "from": "Frozen II",
+      "venueArtist": "Frozen II",
+      "proposalArtist": "Evan Rachel Wood",
       "trusted": true,
       "title": "All Is Found"
     },
@@ -109484,6 +110172,8 @@
       "rewrites": [],
       "proposed": "Olaf's number",
       "from": "Frozen II",
+      "venueArtist": "Frozen II",
+      "proposalArtist": "Josh Gad",
       "trusted": true,
       "title": "When I Am Older"
     },
@@ -109563,6 +110253,8 @@
       "rewrites": [],
       "proposed": "Anna's number",
       "from": "Frozen II",
+      "venueArtist": "Frozen II",
+      "proposalArtist": "Kristen Bell",
       "trusted": true,
       "title": "The Next Right Thing"
     },
@@ -109701,6 +110393,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Posion is Poison with two letters swapped",
+      "venueArtist": "Posion",
+      "proposalArtist": "Poison",
       "trusted": true,
       "title": "I Want Action"
     },
@@ -109721,6 +110415,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Posion is Poison; Unskinny Bop is theirs",
+      "venueArtist": "Posion",
+      "proposalArtist": "Poison",
       "trusted": true,
       "title": "Unskinny Bop"
     },
@@ -109741,8 +110437,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Poison covered it in 1989",
+      "venueArtist": "Posion",
+      "proposalArtist": "Poison",
       "trusted": true,
-      "title": "Your Mama Don’t Dance"
+      "title": "Your Mama Don't Dance"
     },
     {
       "postId": 52204,
@@ -109953,8 +110651,10 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Call me by your name",
+      "venueArtist": "Lil Naz X",
+      "proposalArtist": "Lil Nas X",
       "trusted": true,
-      "title": "MONTERO (Call Me by Your Name)"
+      "title": "Montero (Call Me by Your Name)"
     },
     {
       "postId": 52198,
@@ -110573,7 +111273,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "We’re All in This Together"
+      "title": "We're All in This Together",
+      "from": "High School Musical"
     },
     {
       "postId": 49946,
@@ -111147,6 +111848,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Head and heart; dump uses & which folds differently from and",
+      "venueArtist": "Joel Corry ft MNEK",
+      "proposalArtist": "Joel Corry feat. MNEK",
       "trusted": true,
       "title": "Head & Heart"
     },
@@ -111667,7 +112370,8 @@
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "I’m Just Ken"
+      "title": "I'm Just Ken",
+      "from": "Barbie"
     },
     {
       "postId": 47972,
@@ -111687,6 +112391,8 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Sara is Sarah",
+      "venueArtist": "Andrea Bocelli ft Sara Brightman",
+      "proposalArtist": "Andrea Bocelli & Sarah Brightman",
       "trusted": true,
       "title": "Time to Say Goodbye"
     },

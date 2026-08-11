@@ -83,25 +83,99 @@ interface Resolved {
 const JOIN = /\s+(?:feat\.?|ft\.?|featuring|with|duet with|med|vs\.?|versus|and|x)\s+|\s*[&,+/]\s*/i;
 
 const MIN_GENRE_VOTES = 2;
+/** When nobody has two votes, a single vote is still better than a blank genre column. */
+const FALLBACK_GENRE_VOTES = 1;
 const MAX_GENRES = 3;
 
 const HAS_LATIN = /\p{Script=Latin}/u;
 
 /**
  * The name to show. MusicBrainz's canonical name is the artist's own preferred one, which for
- * `Άννα Βίσση` and `鄭秀文` is written in a script nobody in the room can type. Where it has no
- * Latin letters at all, a Latin alias is the usable name; `98°` and `A★Teens` keep theirs,
- * because a symbol is not a script.
+ * `Άννα Βίσση` and `鄭秀文` is written in a script nobody in the room can type. Where the
+ * primary name has letters but none of them are Latin, a Latin alias is the usable name.
+ * Digit-only or symbolic names (`911`, `98°`, `A★Teens`) keep the primary — they are not a
+ * foreign script, and the first Latin alias is often a wrong-country disambiguation that
+ * someone parked in the alias list (`911 (US)` for the UK boy band).
+ *
+ * When the matched credit line still uses an older or more familiar alias (`Kanye West` on a
+ * 2008 recording whose artist is now filed as `Ye`), prefer that alias so the page names the
+ * act the way the recording does.
  */
-function displayName(artist: Artist): string {
+/** Fancy hyphens / accents folded so `Jay‐Z` and `JAŸ-Z` can be ranked as plain Latin. */
+const plainLatin = (value: string): string =>
+    value
+        .normalize("NFKD")
+        .replace(/\p{M}+/gu, "")
+        .replace(/[\u2010-\u2015\u2212]/g, "-");
+
+const isPlainAscii = (value: string): boolean => /^[\x00-\x7F]+$/.test(plainLatin(value));
+
+/** Prefer `Jay-Z` / `Jay Z` over `Jay - Z` or stylized `JAŸ-Z`. */
+function preferDisplayForm(a: string, b: string, fragment?: string): number {
+    return (
+        // Prefer the fragment's own spelling when it is one of the options.
+        (fragment !== undefined && b === fragment ? 1 : 0) - (fragment !== undefined && a === fragment ? 1 : 0) ||
+        // Prefer plain ASCII (Jay-Z) over stylized primaries (JAŸ-Z) and unicode hyphens.
+        (isPlainAscii(b) ? 1 : 0) - (isPlainAscii(a) ? 1 : 0) ||
+        // Prefer `Jay-Z` over the odd `Jay - Z` alias.
+        (/\s-\s/.test(a) ? 1 : 0) - (/\s-\s/.test(b) ? 1 : 0) ||
+        // Prefer spaced forms (Kanye West) over jammed ones (KanYeWest).
+        (b.includes(" ") && !/\s-\s/.test(b) ? 1 : 0) - (a.includes(" ") && !/\s-\s/.test(a) ? 1 : 0) ||
+        // Prefer a real hyphenated trademark form (Jay-Z) over a spaced one (Jay Z), when both ASCII.
+        (/^[^\s]+-[^\s]+$/.test(b) ? 1 : 0) - (/^[^\s]+-[^\s]+$/.test(a) ? 1 : 0) ||
+        a.length - b.length
+    );
+}
+
+function displayName(artist: Artist, credit?: string, venueArtist?: string): string {
+    const options = [artist.name, ...(artist.aliases ?? [])];
+    // Prefer a name form that still appears on the matched credit or the venue's string
+    // (Kanye West on a 2008 cut; Jay-Z when the venue wrote Jay Z rather than JAŸ-Z).
+    // Match whole credit fragments, not substrings — otherwise `Est'elle` wins over `Estelle`
+    // because both fold to `estelle` and the longer spelling sorts first.
+    // Venue before credit: the room's spelling is usually the familiar one (`Jay Z`, `Estelle`).
+    for (const source of [venueArtist, credit]) {
+        if (source === undefined) continue;
+        const fragments = source
+            .split(JOIN)
+            .map((part) => part.trim())
+            .filter((part) => part.length > 0);
+        for (const fragment of [...fragments, source]) {
+            const fragmentKey = nameKey(fragment);
+            if (fragmentKey.length < 2) continue;
+            const exact = options
+                .filter((option) => nameKey(option) === fragmentKey)
+                .sort((a, b) => preferDisplayForm(a, b, fragment))[0];
+            if (exact !== undefined) {
+                return exact;
+            }
+        }
+    }
+    // Digit-only / symbolic primaries (`911`) keep the primary — the first Latin alias is often
+    // a wrong-country disambiguation (`911 (US)` for the UK boy band).
+    if (!/\p{Letter}/u.test(artist.name)) {
+        return artist.name;
+    }
     if (HAS_LATIN.test(artist.name)) {
+        // Stylized Latin primaries (JAŸ-Z) still prefer a plain ASCII alias when one exists.
+        if (!isPlainAscii(artist.name)) {
+            const ascii = [...(artist.aliases ?? [])]
+                .filter((alias) => isPlainAscii(alias) && HAS_LATIN.test(alias) && nameKey(alias) === nameKey(artist.name))
+                .sort((a, b) => preferDisplayForm(a, b))[0];
+            if (ascii !== undefined) return ascii;
+        }
         return artist.name;
     }
     return (artist.aliases ?? []).find((alias) => HAS_LATIN.test(alias)) ?? artist.name;
 }
 
-/** Punctuation and case removed, so that `P!nk` and `Pink` can be told apart by name. */
-const nameKey = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+/** Punctuation, case and diacritics removed, so `JAŸ-Z` and `Jay-Z` can meet. */
+const nameKey = (value: string): string =>
+    value
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/\p{M}+/gu, "")
+        .replace(/[^a-z0-9]/g, "");
 
 /**
  * Whether two entities are the same act rather than two acts with confusable names. A band
@@ -118,10 +192,10 @@ function related(a: Artist | undefined, b: Artist | undefined): boolean {
 }
 
 function pickGenres(artist: Artist | undefined): string[] {
-    return (artist?.genres ?? [])
-        .filter((genre) => genre.count >= MIN_GENRE_VOTES)
-        .slice(0, MAX_GENRES)
-        .map((genre) => genre.name);
+    const genres = artist?.genres ?? [];
+    const preferred = genres.filter((genre) => genre.count >= MIN_GENRE_VOTES);
+    const pool = preferred.length > 0 ? preferred : genres.filter((genre) => genre.count >= FALLBACK_GENRE_VOTES);
+    return pool.slice(0, MAX_GENRES).map((genre) => genre.name);
 }
 
 async function readJson<T>(path: string): Promise<T | undefined> {
@@ -278,7 +352,7 @@ async function main(): Promise<void> {
             continue;
         }
 
-        const mbids = match.artistMbids ?? [];
+        const mbids = [...new Set(match.artistMbids ?? [])];
 
         // A solo match to anyone other than the act that dominates this artist string is a
         // different person who happens to share a name. The title it found is usually right —
@@ -308,14 +382,14 @@ async function main(): Promise<void> {
 
         const credited = mbids.map((mbid) => artists.get(mbid)).filter((artist) => artist !== undefined);
         const lead = credited[0];
+        const creditLine = match.artistCredit;
 
-        // Each distinct artist, comma separated, from their own canonical names. The dump's
-        // credit line is one flattened string of whatever the matched release printed, which
-        // makes two people look like a band with a long name and spells them differently from
-        // one release to the next. It is kept below as data, not shown.
+        // Each distinct artist, comma separated. Prefer the name form that still appears on
+        // the matched credit (Kanye West on a 2008 cut whose artist is now Ye) over today's
+        // primary name, and never a wrong-country alias parked on a digit-only act.
         const canonical =
             credited.length === mbids.length && credited.length > 0
-                ? credited.map(displayName).join(", ")
+                ? credited.map((artist) => displayName(artist, creditLine, match.artist)).join(", ")
                 : match.artistCredit;
 
         // MusicBrainz files songs with no identifiable performer under placeholder
@@ -375,7 +449,10 @@ async function main(): Promise<void> {
         // What the artist column is made of, so the page can link each name on its own rather
         // than parsing one back out of a string.
         if (credited.length > 0) {
-            resolved.artists = credited.map((artist) => ({ mbid: artist.mbid, name: displayName(artist) }));
+            resolved.artists = credited.map((artist) => ({
+                mbid: artist.mbid,
+                name: displayName(artist, creditLine, match.artist),
+            }));
         }
         // MusicBrainz distinguishes a guest from an equal billing, and the dump flattens that
         // distinction into this line: `feat.`, `duet with`, `vs.`. Keeping it means the

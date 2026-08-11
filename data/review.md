@@ -1,6 +1,6 @@
 # Songs still to review
 
-226 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
+208 songs, written by `pnpm build:resolved`. Regenerable, so do not edit it.
 
 A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only
 adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at
@@ -9,14 +9,14 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 ## Contents
 
-- no match, and this artist string is unknown to MusicBrainz — **82**
-- matched through the lead artist, which named fewer artists than the venue did — **50**
-- this artist has no such title; the venue may have credited the wrong one — **50**
-- weak match — **28**
-- matched a placeholder entity — **13**
-- credited to a namesake, not to this artist — **3**
+- no match, and this artist string is unknown to MusicBrainz — **72**
+- matched through the lead artist, which named fewer artists than the venue did — **49**
+- this artist has no such title; the venue may have credited the wrong one — **49**
+- weak match — **33**
+- credited to a namesake, not to this artist — **4**
+- matched a placeholder entity — **1**
 
-## no match, and this artist string is unknown to MusicBrainz (82)
+## no match, and this artist string is unknown to MusicBrainz (72)
 
 ### Julsång — 19
 
@@ -41,14 +41,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 3375 | We wish you a merry christmas | 50856 |
 | 3385 | Silent night, holy night | 50857 |
 | 3386 | Jingle bells | 50858 |
-
-### Italian — 3
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 1854 | Al di la | 50490 |
-| 1855 | Speak softly love | 50491 |
-| 1858 | Ah Maria | 50494 |
 
 ### Century Oldies — 2
 
@@ -104,12 +96,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 1419 | Let's hear it from the boy | 49294 |
-
-### Disney — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5491 | Listen with you heart | 49420 |
 
 ### Donna Fargo — 1
 
@@ -189,29 +175,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 1246 | Don't rain on my parade | 50361 |
 
-### Idolgänget 2010 — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3267 | All I need is you | 50421 |
-
 ### Inger Lise Rypdal — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 784 | Nyorelsket 70 År | 50438 |
-
-### Irish traditional song — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3755 | Wild rover | 50466 |
-
-### Jekyll & Hide — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 3779 | This is the moment | 50622 |
 
 ### Jimmy Rogers — 1
 
@@ -260,12 +228,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3555 | Små grodorna | 51678 |
-
-### Mike WMI ft Miley Cyrus — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5530 | 23 | 51698 |
 
 ### Moa Lignell — 1
 
@@ -363,23 +325,11 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | -: |
 | 3647 | I'm gonna wash that man right out of my hair | 52857 |
 
-### Stein og Inger Lise — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 777 | Bang en boomerang | 52912 |
-
 ### Steve Lawrence & Edie Gorme — 1
 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 3537 | This could be the start to something big | 52922 |
-
-### The cartoons — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 5691 | Doo dah | 53119 |
 
 ### The Fantastics — 1
 
@@ -406,7 +356,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 3649 | Maria | 53491 |
 
 
-## matched through the lead artist, which named fewer artists than the venue did (50)
+## matched through the lead artist, which named fewer artists than the venue did (49)
 
 ### Aerosmith And Run Dmc — 1
 
@@ -466,7 +416,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 2307 | Love will keep us together | Captain & Tennille – Love Will Keep Us Together | 48752 |
+| 2307 | Love will keep us together | Captain & Tenille – Love Will Keep Us Together | 48752 |
 
 ### Chief keef ft 50 cent — 1
 
@@ -490,7 +440,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 4600 | Nuthin' but a 'G' thang | Dr. Dre – Nuthin’ but a “G” Thang | 49516 |
+| 4600 | Nuthin' but a 'G' thang | Dr Dre – Nuthin’ but a “G” Thang | 49516 |
 
 ### Elvis Presley feat. JXL Remix — 1
 
@@ -538,7 +488,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 4747 | I know | JAŸ-Z – I Know | 50610 |
+| 4747 | I know | Jay Z – I Know | 50610 |
 
 ### Jimmy Somerville/Bronski Beat — 1
 
@@ -616,13 +566,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 5422 | I'll Be There For You | The Rembrandts – I’ll Be There for You | 52385 |
-
-### Rihanna Feat Kanye West And Paul Mccartney — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 5264 | Four Five Seconds | Rihanna – FourFiveSeconds | 52454 |
+| 5422 | I'll Be There For You | Rembrandts – I’ll Be There for You | 52385 |
 
 ### Robbie Williams & Nicole Kidman — 1
 
@@ -658,7 +602,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 1727 | Make me smile (Come up and see me) | Steve Harley & Cockney Rebel – Make Me Smile (Come Up and See Me) | 52919 |
+| 1727 | Make me smile (Come up and see me) | Cockney Rebel – Make Me Smile (Come Up and See Me) | 52919 |
 
 ### Swedish House Mafia & John Martin — 1
 
@@ -709,7 +653,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 39 | Senza una donna | Zucchero – Senza una donna | 53609 |
 
 
-## this artist has no such title; the venue may have credited the wrong one (50)
+## this artist has no such title; the venue may have credited the wrong one (49)
 
 ### Ola Svensson — 4
 
@@ -823,12 +767,6 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | postId |
 | -: | --- | -: |
 | 5746 | What time is | 50368 |
-
-### Iron Maiden — 1
-
-| id | the venue's title | postId |
-| -: | --- | -: |
-| 4725 | Iron fist | 50476 |
 
 ### John Legend — 1
 
@@ -987,7 +925,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 5317 | Nobody Loves Me Like You | 53553 |
 
 
-## weak match (28)
+## weak match (33)
 
 ### Fall out boy — 2
 
@@ -1002,17 +940,17 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | --- | -: |
 | 1094 | I do I do I do I do | ABBA – I Do, I Do, I Do, I Do, I Do — matched by loose | 47761 |
 
-### Barbra Streisand & Donna Summer — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 2694 | Enough is enough (no more tears) | Barbra Streisand & Donna Summer – Enough Is Enough 2017 (Tweaka Turner Eternal club mix) — matched by loose | 48184 |
-
 ### Bellamy Brothers — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 2067 | If I said you had a beautiful body | Bellamy Brothers – If I Said You Had a Beautiful Body Would You Hold It Against Me? — matched by loose | 48288 |
+
+### Bob Dylan — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 3012 | Don't think twice | Bob Dylan – Don’t Think Twice It It’s Alright — matched by loose | 48472 |
 
 ### Bobby Vee — 1
 
@@ -1048,7 +986,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 3157 | Yo (excuse me) | Chris Brown – Yo (Excuse Me Miss) — matched by loose | 48954 |
+| 3157 | Yo (excuse me) | Chris Brown – You Say — matched by loose | 48954 |
 
 ### Depeche Mode — 1
 
@@ -1060,7 +998,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 5372 | My Songs Know What You Did | Fall Out Boy – My Songs Know What You Did in the Dark (Light ’Em Up) — matched by loose | 49941 |
+| 5372 | My Songs Know What You Did | Fall Out Boy – My Songs Know What You Did In The Dark — matched by loose | 49941 |
 
 ### Freddie Bell — 1
 
@@ -1068,11 +1006,23 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | --- | -: |
 | 5696 | The Bell boys | Freddie Bell & the Bellboys – Go Go Go — matched by loose | 50113 |
 
+### Garth Brooks — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 1999 | Ain't goin' down | Garth Brooks – Ain’t Goin’ Down (’til the Sun Comes Up) - Intro — matched by loose | 50143 |
+
 ### Goo Goo Dolls — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 2648 | Bullet proof | Goo Goo Dolls – Bulletproofangel — matched by loose | 50241 |
+
+### Las Ketchup — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 128 | Ketchup song | Las Ketchup – The Ketchup Song (Asereje) 92 BPM — matched by loose | 51142 |
 
 ### LeAnn Rimes — 1
 
@@ -1108,13 +1058,7 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 245 | Sweet dreams | Rachel Stevens – Sweet Dreams My L.A. Ex (Bimbo Jones club mix) — matched by loose | 52307 |
-
-### Rammstein — 1
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 4092 | Du hast (english) | Rammstein – Du hast (English version) — matched by loose | 52329 |
+| 245 | Sweet dreams | Rachel Stevens – Sweet Dreams My L.A. Ex — matched by loose | 52307 |
 
 ### Ricky Martin — 1
 
@@ -1140,11 +1084,35 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | -: | --- | --- | -: |
 | 4967 | You are my number one | Smash Mouth – You Are My Number One (Eric Kupper Deep mix) (radio edit) — matched by loose | 52817 |
 
+### Sos — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 3527 | Take your time (do it right) | The S.O.S. Band – Take Your Time (Serg Sniper ReDrum) (Clean) — matched by loose | 52850 |
+
+### Steely Dan — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 4978 | Fm (no static at all) | Steely Dan – FM Jam Reprise — matched by loose | 52904 |
+
+### The Isley Brothers — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5029 | Fight the power | The Isley Brothers – Fight the Power, Pts 1 & 2 — matched by loose | 53147 |
+
 ### Toby Keith — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 2906 | Does that blue moon ever shine | Toby Keith – Does That Blue Moon Ever Shine on You — matched by loose | 53254 |
+
+### U2 — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 2932 | Pride in the name of love | U2 – Pride (In the Name of Love) / City of Blinding Lights — matched by loose | 53377 |
 
 ### Weezer — 1
 
@@ -1153,33 +1121,13 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | 4058 | If you're wondering if I want you to | Weezer – (If You’re Wondering if I Want You to) I Want You To — matched by loose | 53488 |
 
 
-## matched a placeholder entity (13)
+## credited to a namesake, not to this artist (4)
 
-### Disney — 10
-
-| id | the venue's title | what we found | postId |
-| -: | --- | --- | -: |
-| 5346 | I Just Can't Wait To Be King | [Disney] – I Just Can't Wait to Be King | 49410 |
-| 5347 | I Wanna Be Like You | [Disney] – I Wanna Be Like You | 49411 |
-| 5349 | The Bare Necessities | [Disney] – The Bare Necessities | 49413 |
-| 5350 | Under The Sea | [Disney] – Under the Sea | 49414 |
-| 5486 | Be our guest | [Disney] – Be Our Guest | 49415 |
-| 5487 | A dream is a wish | [Disney] – A Dream Is A Wish Your Heart Makes | 49416 |
-| 5488 | Bibbidi bobidi boo | [Disney] – Bibbidi‐Bobbidi‐Boo | 49417 |
-| 5489 | Supercalifragilist | [Disney] – Supercalifragilisticexpidelilicieux | 49418 |
-| 5490 | Never smile at a crocodile | [Disney] – Never Smile At A Crocodile | 49419 |
-| 5492 | I just can't wait to be king | [Disney] – I Just Can't Wait to Be King | 49421 |
-
-### High school musical — 3
+### Blues Brothers — 1
 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
-| 5745 | Breaking free | [Disney] – Breaking Free | 50367 |
-| 5747 | What iv'e been looking for | [Disney] – What I've Been Looking For | 50369 |
-| 5843 | Were all in this together | MusicBrainz files this under [Disney], which is an id but not a performer | 50370 |
-
-
-## credited to a namesake, not to this artist (3)
+| 1370 | Everybody needs somebody | Blues Brothers – Everybody Needs Somebody — MusicBrainz says Blues Brothers (blues/soul revivalist band with Dan Aykroyd), but this artist's other songs are by someone else | 48444 |
 
 ### Mika — 1
 
@@ -1198,3 +1146,12 @@ all if it does not — a wrong guess is cheap. Anything the dump cannot confirm 
 | id | the venue's title | what we found | postId |
 | -: | --- | --- | -: |
 | 1878 | Ga ga | Melanie C – Ga Ga — MusicBrainz says Melanie C, but this artist's other songs are by Spice Girls | 52878 |
+
+
+## matched a placeholder entity (1)
+
+### High school musical — 1
+
+| id | the venue's title | what we found | postId |
+| -: | --- | --- | -: |
+| 5843 | Were all in this together | MusicBrainz files this under [Disney], which is an id but not a performer | 50370 |
