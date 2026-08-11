@@ -152,16 +152,18 @@ covering 39 songs before an obscure single. Because the agent's confidence is it
 
 30 artist values covering **124 songs**, in three kinds that need different handling.
 
-**Finnish (39, filed under `Finsk musik`).** Real songs by real artists, filed under a language label. With no
-artist to scope the search by, a title-only lookup often cannot decide. _Tested:_ `Myrskyn jälkeen` returns four
-different artists all at score 100. These are `ambiguous` by construction, and that is the correct outcome
-rather than a failure.
+**Finnish (39, filed under `Finsk musik`).** Real songs by real artists, filed under a language label rather than
+a performer. Title-only lookup is ambiguous across the dump (`Myrskyn jälkeen` hits several artists at score 100),
+so the resolution path is a proposal that names the karaoke-standard performer and keeps the language bucket in
+`from` (same pattern as `Italian`) — e.g. Kari Tapio for `Myrskyn jälkeen`, Juice Leskinen Slam for
+`Viidestoista yö`. The common fact across the group is language, not a shared artist; until a dedicated language
+field exists, `from: "Finsk musik"` preserves what people search for.
 
 **Christmas (19, filed under `Julsång`).** Mostly traditional or 19th-century works — `Stilla natt`,
-`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. There is no performer to find, and `O helga natt`
-has a known composer but no canonical performer. These are `not-applicable`, and the data model has to allow a
-song to be a work without a performer rather than have a fake artist forced onto it. One of them, `Jul medley`,
-is not a single work at all.
+`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. Where a single karaoke performer is clear, propose
+that artist and keep the Christmas category in `from` (`Julsång`). Most of these have no canonical performer —
+`O helga natt` has a composer but not one singer — so inventing one would be worse than leaving the category
+alone. `Jul medley` is not a single work at all.
 
 **Films and musicals (28 values, 66 songs).** `Disney` (13 songs), `Chicago` (5), `Sound of Music` (4),
 `High school musical` (4), `Grease` (3), `Frozen II` (3), `Moulin Rouge` (3), plus `Blues Brothers`,

@@ -288,21 +288,6 @@
             "why": "Bacharach and David; Warwick is the standard"
         },
         {
-            "postId": 49960,
-            "artist": "Eppu Normaali",
-            "why": "low confidence"
-        },
-        {
-            "postId": 49959,
-            "artist": "Dingo",
-            "why": "low confidence"
-        },
-        {
-            "postId": 49963,
-            "artist": "Dingo",
-            "why": "low confidence"
-        },
-        {
             "postId": 47722,
             "artist": "2Pac feat. K-Ci & JoJo",
             "title": "How Do U Want It",
@@ -1005,6 +990,279 @@
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
             "why": "may only exist as video/live in dump — try studio spelling"
+        },
+        {
+            "postId": 49959,
+            "artist": "Kari Tapio",
+            "title": "Myrskyn jälkeen",
+            "from": "Finsk musik",
+            "why": "venue filed under Finsk musik; Kari Tapio's 1995 hit"
+        },
+        {
+            "postId": 49960,
+            "artist": "Jari Sillanpää",
+            "title": "Kaduilla tuulee",
+            "from": "Finsk musik",
+            "why": "Jari Sillanpää, 1996; language label not an artist"
+        },
+        {
+            "postId": 49961,
+            "artist": "Juha Vainio",
+            "title": "Matkalla pohjoiseen",
+            "from": "Finsk musik",
+            "why": "Juha Watt Vainio, 1981"
+        },
+        {
+            "postId": 49962,
+            "artist": "Kake Randelin",
+            "title": "Kuin joutsenlaulu",
+            "from": "Finsk musik",
+            "why": "Kake Randelin iskelmä standard"
+        },
+        {
+            "postId": 49963,
+            "artist": "Juice Leskinen Slam",
+            "title": "Viidestoista yö",
+            "from": "Finsk musik",
+            "why": "Juice Leskinen Slam, 1980; earlier Dingo guess was wrong"
+        },
+        {
+            "postId": 49964,
+            "artist": "Antti Huovila",
+            "title": "Vaskikellot",
+            "from": "Finsk musik",
+            "why": "Antti Huovila"
+        },
+        {
+            "postId": 49965,
+            "artist": "Frederik",
+            "title": "Titanic",
+            "from": "Finsk musik",
+            "why": "Frederik's Finnish Titanic, not Celine Dion"
+        },
+        {
+            "postId": 49966,
+            "artist": "Irwin Goodman",
+            "title": "St. Pauli ja Reeperbahn",
+            "from": "Finsk musik",
+            "why": "Irwin Goodman; venue spelling missed the period"
+        },
+        {
+            "postId": 49967,
+            "artist": "Rainer Friman",
+            "title": "Linnut",
+            "from": "Finsk musik",
+            "why": "Rainer Friman"
+        },
+        {
+            "postId": 49968,
+            "artist": "Agents",
+            "title": "Illan varjoon himmeään",
+            "from": "Finsk musik",
+            "why": "Agents recording of the standard"
+        },
+        {
+            "postId": 49969,
+            "artist": "Jippu",
+            "title": "Eva",
+            "from": "Finsk musik",
+            "why": "Jippu"
+        },
+        {
+            "postId": 49970,
+            "artist": "Janne Tulkki",
+            "title": "Sinisen taivaan sateenkaari",
+            "from": "Finsk musik",
+            "why": "Janne Tulkki"
+        },
+        {
+            "postId": 49971,
+            "artist": "Mika Sundqvist",
+            "title": "Moottoripyörä on moottoripyörä",
+            "from": "Finsk musik",
+            "why": "Mika Sundqvist, 1980"
+        },
+        {
+            "postId": 49972,
+            "artist": "Solistiyhtye Suomi",
+            "title": "Mahtava peräsin ja pulleat purjeet",
+            "from": "Finsk musik",
+            "why": "Solistiyhtye Suomi"
+        },
+        {
+            "postId": 49973,
+            "artist": "Finlanders",
+            "title": "Kaikki tytöt",
+            "from": "Finsk musik",
+            "why": "Finlanders; venue appended -karakum-"
+        },
+        {
+            "postId": 49974,
+            "artist": "Four Cats",
+            "title": "Kaikki muuttuu",
+            "from": "Finsk musik",
+            "why": "Four Cats Finnish take on You Can Have Her"
+        },
+        {
+            "postId": 49975,
+            "artist": "Tomi Markkola",
+            "title": "Aurinko, kuu ja tähdet",
+            "from": "Finsk musik",
+            "why": "Tomi Markkola"
+        },
+        {
+            "postId": 49976,
+            "artist": "Ahti Lampi",
+            "title": "Elämän valttikortit",
+            "from": "Finsk musik",
+            "why": "Ahti Lampi, 1980"
+        },
+        {
+            "postId": 49977,
+            "artist": "Hector",
+            "title": "Juodaan viinaa",
+            "from": "Finsk musik",
+            "why": "Hector, 1990"
+        },
+        {
+            "postId": 49978,
+            "artist": "Matti & Teppo",
+            "title": "Kaiken takana on nainen",
+            "from": "Finsk musik",
+            "why": "Matti & Teppo"
+        },
+        {
+            "postId": 49979,
+            "artist": "Tuula Amberla",
+            "title": "Lulu",
+            "from": "Finsk musik",
+            "why": "Tuula Amberla"
+        },
+        {
+            "postId": 49980,
+            "artist": "Pekka Ruuska",
+            "title": "Rafaelin enkeli",
+            "from": "Finsk musik",
+            "why": "Pekka Ruuska, 1990"
+        },
+        {
+            "postId": 49981,
+            "artist": "Maarit",
+            "title": "Jäätelökesä",
+            "from": "Finsk musik",
+            "why": "Maarit"
+        },
+        {
+            "postId": 49982,
+            "artist": "Juice Leskinen",
+            "title": "Syksyn sävel",
+            "from": "Finsk musik",
+            "why": "Juice Leskinen, 1975"
+        },
+        {
+            "postId": 49983,
+            "artist": "Muska",
+            "title": "Krokotiilirock",
+            "from": "Finsk musik",
+            "why": "Muska's Finnish Crocodile Rock"
+        },
+        {
+            "postId": 49984,
+            "artist": "Anssi Kela",
+            "title": "Nummela",
+            "from": "Finsk musik",
+            "why": "Anssi Kela"
+        },
+        {
+            "postId": 49985,
+            "artist": "Pelle Miljoona & 1980",
+            "title": "Tahdon rakastella sinua",
+            "from": "Finsk musik",
+            "why": "Pelle Miljoona & 1980"
+        },
+        {
+            "postId": 49986,
+            "artist": "Leevi and the Leavings",
+            "title": "Teuvo, maanteiden kuningas",
+            "from": "Finsk musik",
+            "why": "Leevi and the Leavings, 1988"
+        },
+        {
+            "postId": 49987,
+            "artist": "Tavaramarkkinat",
+            "title": "Kevät",
+            "from": "Finsk musik",
+            "why": "Tavaramarkkinat"
+        },
+        {
+            "postId": 49988,
+            "artist": "Dingo",
+            "title": "Autiotalo",
+            "from": "Finsk musik",
+            "why": "Dingo, 1984"
+        },
+        {
+            "postId": 49989,
+            "artist": "Rauli Badding Somerjoki",
+            "title": "Bensaa suonissa",
+            "from": "Finsk musik",
+            "why": "Rauli Badding Somerjoki"
+        },
+        {
+            "postId": 49990,
+            "artist": "Essi Wuorela",
+            "title": "Märkää rakkautta",
+            "from": "Finsk musik",
+            "why": "Essi Wuorela"
+        },
+        {
+            "postId": 49991,
+            "artist": "J. Karjalainen",
+            "title": "Doris",
+            "from": "Finsk musik",
+            "why": "J. Karjalainen"
+        },
+        {
+            "postId": 49992,
+            "artist": "Yö",
+            "title": "Joutsenlaulu",
+            "from": "Finsk musik",
+            "why": "Yö"
+        },
+        {
+            "postId": 49993,
+            "artist": "Markku Aro",
+            "title": "Keskiyön aikaan",
+            "from": "Finsk musik",
+            "why": "Markku Aro; Finnish I'll Meet You at Midnight"
+        },
+        {
+            "postId": 49994,
+            "artist": "Tuomari Nurmio",
+            "title": "Valo yössä",
+            "from": "Finsk musik",
+            "why": "Tuomari Nurmio"
+        },
+        {
+            "postId": 49995,
+            "artist": "Nisa Soraya",
+            "title": "Huone 105",
+            "from": "Finsk musik",
+            "why": "Nisa Soraya original; Kikka covered it later"
+        },
+        {
+            "postId": 49996,
+            "artist": "Markku Aro",
+            "title": "Jestas sentään",
+            "from": "Finsk musik",
+            "why": "Markku Aro; Finnish Crazy"
+        },
+        {
+            "postId": 49997,
+            "artist": "Frederik",
+            "title": "Linda Linda",
+            "from": "Finsk musik",
+            "why": "Frederik's Finnish Linda Linda"
         }
     ]
 }
