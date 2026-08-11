@@ -4,8 +4,10 @@
         {
             "postId": 47902,
             "category": "Children's song",
-            "why": "Traditional / category material filed under 'Alice Tegnér'; no single performer to invent",
-            "title": "Ekorr'n satt i granen"
+            "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
+            "title": "Ekorr'n satt i granen",
+            "artist": "",
+            "sortAs": "Children's song"
         },
         {
             "postId": 48108,

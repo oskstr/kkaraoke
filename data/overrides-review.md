@@ -26,7 +26,7 @@ means omit a category label rather than invent a performer.
 | 1985 | Julsång | Staffansvisan | *(empty)* | Staffansvisan | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50853 |
 | 1986 | Julsång | Stilla natt | *(empty)* | Stilla natt | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50854 |
 | 2100 | Broadman Hymnal | Face to face | *(empty)* | Face to Face | Hymn | Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent | 48654 |
-| 2691 | Alice Tegnér | Ekorrn satt i granen | Alice Tegnér | Ekorr'n satt i granen | Children's song | Traditional / category material filed under 'Alice Tegnér'; no single performer to invent | 47902 |
+| 2691 | Alice Tegnér | Ekorrn satt i granen | *(empty)* | Ekorr'n satt i granen | Children's song | Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy). | 47902 |
 | 3008 | Carola | Det är bara vi | Carola | Det är bara vi |  | Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit. | 48782 |
 | 3374 | Julsång | Santa Claus is coming to town | *(empty)* | Santa Claus Is Coming to Town | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50855 |
 | 3375 | Julsång | We wish you a merry christmas | *(empty)* | We Wish You a Merry Christmas | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50856 |
