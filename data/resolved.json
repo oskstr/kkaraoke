@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T19:17:54.960Z",
+  "generatedAt": "2026-08-11T22:41:50.543Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -15625,7 +15625,6 @@
     {
       "postId": 50359,
       "language": "eng",
-      "artist": "Helen Paparizou",
       "sortAs": "Paparizou, Helena",
       "title": "My Number One",
       "artistMbids": [
@@ -15634,7 +15633,7 @@
       "artists": [
         {
           "mbid": "28a40a67-ecd3-432a-be2f-51490a7743ec",
-          "name": "Helen Paparizou"
+          "name": "Helena Paparizou"
         }
       ],
       "recordingMbid": "9a7fa77a-a033-41c0-9305-b18ac9cdfbdd",
@@ -15875,7 +15874,6 @@
     },
     {
       "postId": 50360,
-      "artist": "Helen Paparizou",
       "sortAs": "Paparizou, Helena",
       "artistMbids": [
         "28a40a67-ecd3-432a-be2f-51490a7743ec"
@@ -15883,7 +15881,7 @@
       "artists": [
         {
           "mbid": "28a40a67-ecd3-432a-be2f-51490a7743ec",
-          "name": "Helen Paparizou"
+          "name": "Helena Paparizou"
         }
       ],
       "recordingMbid": "74f4422e-bdfd-4fb5-a153-02ffc1d9a010",
@@ -55600,7 +55598,7 @@
       "postId": 49338,
       "artist": "Destiny’s Child",
       "sortAs": "Destiny’s Child",
-      "title": "Independent Woman",
+      "title": "Independent Women",
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
@@ -55610,13 +55608,13 @@
           "name": "Destiny’s Child"
         }
       ],
-      "recordingMbid": "8d7ec74f-48fd-4d73-8c84-d17813f91088",
+      "recordingMbid": "31aeb524-8745-4fac-94da-16dd66cb0be0",
       "genres": [
         "pop",
         "contemporary r&b",
         "dance-pop"
       ],
-      "how": "version"
+      "how": "exact"
     },
     {
       "postId": 49339,
@@ -76650,19 +76648,22 @@
     },
     {
       "postId": 49648,
-      "sortAs": "Grant, Eddie",
+      "artist": "Eddy Grant",
+      "sortAs": "Grant, Eddy",
       "title": "Electric Avenue",
       "artistMbids": [
-        "dbb6fec3-8111-4c9e-8486-f0fef535e229"
+        "0cf0583a-fcfd-4f07-b573-95273ec4bdb5"
       ],
       "artists": [
         {
-          "mbid": "dbb6fec3-8111-4c9e-8486-f0fef535e229",
-          "name": "Eddie Grant"
+          "mbid": "0cf0583a-fcfd-4f07-b573-95273ec4bdb5",
+          "name": "Eddy Grant"
         }
       ],
-      "recordingMbid": "cabf09ce-7145-4916-bcfb-20731847c192",
-      "year": 1998,
+      "recordingMbid": "84e66d8b-e398-4af0-b008-821473774a04",
+      "genres": [
+        "reggae"
+      ],
       "how": "exact"
     },
     {

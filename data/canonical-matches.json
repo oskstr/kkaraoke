@@ -49342,14 +49342,17 @@
       "artistMbids": [
         "a796b92e-c137-4895-9c89-10f900617a4f"
       ],
-      "recording": "Independent Woman (Maurice remix)",
-      "recordingMbid": "8d7ec74f-48fd-4d73-8c84-d17813f91088",
-      "release": "DMC DJ Only 21",
-      "score": 5447366,
-      "how": "version",
+      "recording": "Independent Women",
+      "recordingMbid": "31aeb524-8745-4fac-94da-16dd66cb0be0",
+      "release": "Woman II",
+      "score": 5457115,
+      "how": "exact",
       "rewrites": [],
+      "proposed": "Canonical title is Independent Women; dump matched a Maurice remix titled Independent Woman",
+      "venueArtist": "Destiny's Child",
+      "proposalArtist": "Destiny's Child",
       "trusted": true,
-      "title": "Independent Woman"
+      "title": "Independent Women"
     },
     {
       "postId": 49339,
@@ -67325,16 +67328,19 @@
       "artist": "Eddie Grant",
       "song": "Electric avenue",
       "matched": true,
-      "artistCredit": "Eddie Grant",
+      "artistCredit": "Eddy Grant",
       "artistMbids": [
-        "dbb6fec3-8111-4c9e-8486-f0fef535e229"
+        "0cf0583a-fcfd-4f07-b573-95273ec4bdb5"
       ],
       "recording": "Electric Avenue",
-      "recordingMbid": "cabf09ce-7145-4916-bcfb-20731847c192",
-      "release": "The One & Only 80’s Album",
-      "score": 5434068,
+      "recordingMbid": "84e66d8b-e398-4af0-b008-821473774a04",
+      "release": "Killer on the Rampage",
+      "score": 929,
       "how": "exact",
       "rewrites": [],
+      "proposed": "Venue Eddie Grant matched the wrong MusicBrainz artist (1950s US organist); Electric Avenue is Eddy Grant",
+      "venueArtist": "Eddie Grant",
+      "proposalArtist": "Eddy Grant",
       "trusted": true,
       "title": "Electric Avenue"
     },

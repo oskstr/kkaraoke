@@ -107,14 +107,27 @@ function isRateLimited(check: SourceCheck | undefined): boolean {
     return /\bHTTP (?:403|429)\b/.test(note);
 }
 
-function displayArtist(song: SongRow, resolved: ResolvedRow | undefined): string {
+function displayArtist(
+    song: SongRow,
+    resolved: ResolvedRow | undefined,
+    override: { artist?: string } | undefined,
+): string {
+    // An override that clears the artist (traditionals / categories) has no performer to check.
+    if (override !== undefined && override.artist === "") return "";
     if (resolved?.artists !== undefined && resolved.artists.length > 0) {
         return resolved.artists.map((a) => a.name).join(" & ");
     }
-    return resolved?.artist ?? song.artist;
+    if (resolved?.artist !== undefined) return resolved.artist;
+    if (override?.artist !== undefined) return override.artist;
+    return song.artist;
 }
 
-function displayTitle(song: SongRow, resolved: ResolvedRow | undefined): string {
+function displayTitle(
+    song: SongRow,
+    resolved: ResolvedRow | undefined,
+    override: { title?: string } | undefined,
+): string {
+    if (override?.title !== undefined) return override.title;
     return resolved?.title ?? song.song;
 }
 
@@ -259,6 +272,7 @@ async function run(): Promise<void> {
         options: {
             resolved: { type: "string", default: "data/resolved.json" },
             songs: { type: "string", default: "data/songs.json" },
+            overrides: { type: "string", default: "data/overrides.json" },
             out: { type: "string", default: "data/corroboration.json" },
             fill: { type: "string", default: "data/corroboration.json" },
             limit: { type: "string" },
@@ -277,6 +291,10 @@ async function run(): Promise<void> {
     const songsFile = JSON.parse(await readFile(values.songs, "utf8")) as { songs: SongRow[] };
     const resolvedFile = await readJson<{ songs: ResolvedRow[] }>(values.resolved);
     const resolvedByPost = new Map((resolvedFile?.songs ?? []).map((row) => [row.postId, row]));
+    const overridesFile = await readJson<{ overrides: { postId: number; artist?: string; title?: string }[] }>(
+        values.overrides,
+    );
+    const overrideByPost = new Map((overridesFile?.overrides ?? []).map((row) => [row.postId, row]));
 
     const existing = await readJson<{ checks: LegacyCheck[] }>(values.fill);
     const byPost = new Map<number, Check>();
@@ -325,8 +343,9 @@ async function run(): Promise<void> {
     for (let index = 0; index < batch.length; index++) {
         const song = batch[index]!;
         const resolved = resolvedByPost.get(song.postId);
-        const artist = displayArtist(song, resolved);
-        const title = displayTitle(song, resolved);
+        const override = overrideByPost.get(song.postId);
+        const artist = displayArtist(song, resolved, override);
+        const title = displayTitle(song, resolved, override);
         // Traditional / category rows have no performer to corroborate.
         if (artist.trim().length === 0) {
             byPost.set(song.postId, {

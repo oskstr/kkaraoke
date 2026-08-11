@@ -1,6 +1,6 @@
 # Proposal review
 
-412 songs, written by `pnpm build:resolved` from `data/proposals.json` and
+414 songs, written by `pnpm build:resolved` from `data/proposals.json` and
 the venue scrape. Regenerable, so do not edit it — change the proposal instead.
 
 Each row is what the venue had, then what the proposal asked MusicBrainz to confirm.
@@ -214,6 +214,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2501 | Lion King | Hakuna matata | Nathan Lane & Ernie Sabella | Hakuna Matata | The Lion King |  | yes | Lion King OST; Timon and Pumbaa | 51267 |
 | 2517 | Jennifer Hudson | And I'm telling you | Jennifer Hudson | And I Am Telling You I'm Not Going | Dreamgirls |  | yes | Dreamgirls film | 50623 |
 | 2524 | Alicia Keys & Jack White | Another way to die | Jack White & Alicia Keys | Another Way to Die |  |  | yes | dump credits Jack White first; venue had Alicia Keys & Jack White | 47925 |
+| 2555 | Destiny's Child | Independent woman | Destiny's Child | Independent Women |  |  | yes | Canonical title is Independent Women; dump matched a Maurice remix titled Independent Woman | 49338 |
 | 2582 | Beyonce | All the single ladies | Beyoncé | Single Ladies (Put a Ring on It) |  |  | yes | All the single ladies | 48314 |
 | 2587 | Clarence Carter | Stroking | Clarence Carter | Strokin' |  |  | yes | Stroking is Strokin' | 49015 |
 | 2597 | Destiny's Child | Un-break my heart | Toni Braxton | Un-Break My Heart |  |  | yes | Braxton, not Destiny's Child | 49347 |
@@ -255,6 +256,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 3457 | Ozzy Osbourne & Lita Ford | Close my eyes forever | Lita Ford | Close My Eyes Forever |  |  | yes | with Ozzy | 52003 |
 | 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a King Bee |  |  | yes | Drop dump Excerpt From / live medley annotation; title is I'm a King Bee | 50082 |
 | 3485 | Genesis | Mirror man | The Human League | Mirror Man |  |  | yes | Not Genesis | 50168 |
+| 3493 | Eddie Grant | Electric avenue | Eddy Grant | Electric Avenue |  |  | yes | Venue Eddie Grant matched the wrong MusicBrainz artist (1950s US organist); Electric Avenue is Eddy Grant | 49648 |
 | 3504 | Shania Twain | If you're not in it for love | Shania Twain | (If You’re Not in It for Love) I’m Outta Here! |  |  | yes | Full title | 52729 |
 | 3524 | Ohio | Fire | Ohio Players | Fire |  |  | yes | Ohio is Ohio Players | 51952 |
 | 3527 | Sos | Take your time (do it right) | The S.O.S. Band | Take Your Time (Do It Right) |  |  | yes | Full title | 52850 |

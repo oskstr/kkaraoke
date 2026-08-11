@@ -626,6 +626,18 @@
             "why": "Eddie is Eddy"
         },
         {
+            "postId": 49648,
+            "artist": "Eddy Grant",
+            "title": "Electric Avenue",
+            "why": "Venue Eddie Grant matched the wrong MusicBrainz artist (1950s US organist); Electric Avenue is Eddy Grant"
+        },
+        {
+            "postId": 49338,
+            "artist": "Destiny's Child",
+            "title": "Independent Women",
+            "why": "Canonical title is Independent Women; dump matched a Maurice remix titled Independent Woman"
+        },
+        {
             "postId": 48070,
             "artist": "ATC",
             "title": "Around the World (La La La La La)",
