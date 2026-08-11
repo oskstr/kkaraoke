@@ -718,7 +718,7 @@ work links (covers of differently-named works, truncated `…` titles, renamed w
 When there is no usable work title, only mix/soundtrack-style markers are dropped from the
 recording string. Bare years and concert place/date brackets are **not** stripped by regex —
 those need a work title, an override, or a separate-source check (`pnpm corroborate:titles`
-against Discogs and iTunes). Subtitles that are part of the name stay:
+against Discogs and Deezer). Subtitles that are part of the name stay:
 `Exhale (Shoop Shoop)`, `The Ketchup Song (Aserejé)`.
 
 ## Order of work
@@ -770,9 +770,10 @@ Still to do:
     `category` (Christmas and other traditionals already use `category` in overrides), not as
     fake performers.
 12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
-    resolved song against iTunes Search and Discogs (both on
-    [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases)).
-    It writes `data/corroboration.json` and a review markdown for songs neither source agrees with —
+    resolved song against **Deezer** and **Discogs** (Discogs is on
+    [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases);
+    Deezer stands in where iTunes Search is blocked from this environment). It writes
+    `data/corroboration.json` and a review markdown for songs neither source agrees with —
     it never invents overrides. Use that list for open-web follow-up.
 13. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
