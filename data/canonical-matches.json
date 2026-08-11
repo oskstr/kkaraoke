@@ -34995,7 +34995,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "common karaoke version",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Santa Lucia"
     },
@@ -35023,7 +35023,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Neapolitan standard",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Torna A Surriento"
     },
@@ -35044,7 +35044,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Volare",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Nel blu dipinto di blu"
     },
@@ -35065,7 +35065,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Dean Martin",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "That's Amore"
     },
@@ -35086,7 +35086,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Cocciante",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Bella senz’anima"
     },
@@ -35107,7 +35107,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Feliciano",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Che Sara’"
     },
@@ -35128,7 +35128,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Neapolitan standard",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Funiculì, funiculà"
     },
@@ -35149,7 +35149,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Carosone",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Malafemmena"
     },
@@ -35170,7 +35170,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Neapolitan standard",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "O Sole Mio"
     },
@@ -35191,7 +35191,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Dalla",
-      "from": "Italian",
+      "language": "ita",
       "trusted": true,
       "title": "Caruso"
     },
@@ -39859,7 +39859,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "venue filed under Finsk musik; Kari Tapio's 1995 hit",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Myrskyn jälkeen"
     },
@@ -39880,7 +39880,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Jari Sillanpää, 1996; language label not an artist",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kaduilla tuulee"
     },
@@ -39901,7 +39901,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Juha Watt Vainio, 1981",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Matkalla pohjoiseen"
     },
@@ -39922,7 +39922,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Kake Randelin iskelmä standard",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kuin joutsenlaulu"
     },
@@ -39943,7 +39943,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Juice Leskinen Slam, 1980; earlier Dingo guess was wrong",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Viidestoista yö"
     },
@@ -39964,7 +39964,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Antti Huovila",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Vaskikellot"
     },
@@ -39985,7 +39985,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Frederik's Finnish Titanic, not Celine Dion",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Titanic"
     },
@@ -40006,7 +40006,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Irwin Goodman; venue spelling missed the period",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "St. Pauli ja Reeperbahn"
     },
@@ -40027,7 +40027,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Rainer Friman",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Linnut"
     },
@@ -40048,7 +40048,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Agents recording of the standard",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Illan varjoon himmeään"
     },
@@ -40069,7 +40069,7 @@
       "how": "version",
       "rewrites": [],
       "proposed": "Jippu",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Eva (Kielletyllä iholla)"
     },
@@ -40090,7 +40090,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Janne Tulkki",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Sinisen taivaan sateenkaari"
     },
@@ -40111,7 +40111,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Mika Sundqvist, 1980",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Moottoripyörä on moottoripyörä"
     },
@@ -40132,7 +40132,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Solistiyhtye Suomi",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Mahtava peräsin ja pulleat purjeet"
     },
@@ -40153,7 +40153,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Finlanders; venue appended -karakum-",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kaikki tytöt"
     },
@@ -40174,7 +40174,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Four Cats Finnish take on You Can Have Her",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kaikki muuttuu"
     },
@@ -40195,7 +40195,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Tomi Markkola",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Aurinko, kuu ja tähdet"
     },
@@ -40216,7 +40216,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Ahti Lampi, 1980",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Elämän valttikortit"
     },
@@ -40237,7 +40237,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Hector, 1990",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Juodaan viinaa"
     },
@@ -40258,7 +40258,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Matti & Teppo",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kaiken takana on nainen"
     },
@@ -40279,7 +40279,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Tuula Amberla",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Lulu"
     },
@@ -40300,7 +40300,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Pekka Ruuska, 1990",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Rafaelin enkeli"
     },
@@ -40321,7 +40321,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Maarit",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Jäätelökesä"
     },
@@ -40342,7 +40342,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Juice Leskinen, 1975",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Syksyn sävel"
     },
@@ -40363,7 +40363,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Muska's Finnish Crocodile Rock",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Krokotiili rock"
     },
@@ -40384,7 +40384,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Anssi Kela",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Nummela"
     },
@@ -40405,7 +40405,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Pelle Miljoona & 1980",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Tahdon rakastella sinua"
     },
@@ -40426,7 +40426,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Leevi and the Leavings, 1988",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Teuvo, maanteiden kuningas"
     },
@@ -40447,7 +40447,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Tavaramarkkinat",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Kevät"
     },
@@ -40468,7 +40468,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Dingo, 1984",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Autiotalo"
     },
@@ -40489,7 +40489,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Rauli Badding Somerjoki",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Bensaa suonissa"
     },
@@ -40510,7 +40510,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Essi Wuorela",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Märkää rakkautta"
     },
@@ -40531,7 +40531,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "J. Karjalainen",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Doris"
     },
@@ -40552,7 +40552,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Yö",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Joutsenlaulu"
     },
@@ -40573,7 +40573,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Markku Aro; Finnish I'll Meet You at Midnight",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Keskiyön aikaan"
     },
@@ -40594,7 +40594,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Tuomari Nurmio",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Valo yössä"
     },
@@ -40615,7 +40615,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Nisa Soraya original; Kikka covered it later",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Huone 105"
     },
@@ -40636,7 +40636,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Markku Aro; Finnish Crazy",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Jestas sentään"
     },
@@ -40657,7 +40657,7 @@
       "how": "exact",
       "rewrites": [],
       "proposed": "Frederik's Finnish Linda Linda",
-      "from": "Finsk musik",
+      "language": "fin",
       "trusted": true,
       "title": "Linda Linda"
     },

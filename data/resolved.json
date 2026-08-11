@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T08:19:53.753Z",
+  "generatedAt": "2026-08-11T08:32:52.446Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -37341,7 +37341,7 @@
     },
     {
       "postId": 50493,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Elvis Presley",
       "sortAs": "Presley, Elvis",
       "artistMbids": [
@@ -37364,7 +37364,7 @@
     },
     {
       "postId": 50495,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Luciano Pavarotti",
       "sortAs": "Pavarotti, Luciano",
       "title": "Torna A Surriento",
@@ -37387,7 +37387,7 @@
     },
     {
       "postId": 50496,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Domenico Modugno",
       "sortAs": "Modugno, Domenico",
       "artistMbids": [
@@ -37405,7 +37405,7 @@
     },
     {
       "postId": 50497,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Dean Martin",
       "sortAs": "Martin, Dean",
       "title": "That's Amore",
@@ -37429,7 +37429,7 @@
     },
     {
       "postId": 50498,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Riccardo Cocciante",
       "sortAs": "Cocciante, Riccardo",
       "title": "Bella senz’anima",
@@ -37448,7 +37448,7 @@
     },
     {
       "postId": 50499,
-      "from": "Italian",
+      "language": "ita",
       "artist": "José Feliciano",
       "sortAs": "Feliciano, José",
       "title": "Che Sara’",
@@ -37471,7 +37471,7 @@
     },
     {
       "postId": 50500,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Luciano Pavarotti",
       "sortAs": "Pavarotti, Luciano",
       "title": "Funiculì, funiculà",
@@ -37494,7 +37494,7 @@
     },
     {
       "postId": 50501,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Renato Carosone",
       "sortAs": "Carosone, Renato",
       "title": "Malafemmena",
@@ -37513,7 +37513,7 @@
     },
     {
       "postId": 50502,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Luciano Pavarotti",
       "sortAs": "Pavarotti, Luciano",
       "title": "O Sole Mio",
@@ -37536,7 +37536,7 @@
     },
     {
       "postId": 50503,
-      "from": "Italian",
+      "language": "ita",
       "artist": "Lucio Dalla",
       "sortAs": "Dalla, Lucio",
       "artistMbids": [
@@ -42544,7 +42544,7 @@
     },
     {
       "postId": 49959,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Kari Tapio",
       "sortAs": "Tapio, Kari",
       "artistMbids": [
@@ -42565,7 +42565,7 @@
     },
     {
       "postId": 49960,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Jari Sillanpää",
       "sortAs": "Sillanpää, Jari",
       "artistMbids": [
@@ -42583,7 +42583,7 @@
     },
     {
       "postId": 49961,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Juha Vainio",
       "sortAs": "Vainio, Juha",
       "artistMbids": [
@@ -42601,7 +42601,7 @@
     },
     {
       "postId": 49962,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Kake Randelin",
       "sortAs": "Randelin, Kake",
       "artistMbids": [
@@ -42619,7 +42619,7 @@
     },
     {
       "postId": 49963,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Juice Leskinen Slam",
       "sortAs": "Leskinen, Juice, Slam",
       "artistMbids": [
@@ -42637,7 +42637,7 @@
     },
     {
       "postId": 49964,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Antti Huovila",
       "sortAs": "Huovila, Antti",
       "artistMbids": [
@@ -42655,7 +42655,7 @@
     },
     {
       "postId": 49965,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Frederik",
       "sortAs": "Frederik",
       "artistMbids": [
@@ -42673,7 +42673,7 @@
     },
     {
       "postId": 49966,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Irwin Goodman",
       "sortAs": "Goodman, Irwin",
       "title": "St. Pauli ja Reeperbahn",
@@ -42692,7 +42692,7 @@
     },
     {
       "postId": 49967,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Rainer Friman",
       "sortAs": "Friman, Rainer",
       "artistMbids": [
@@ -42710,7 +42710,7 @@
     },
     {
       "postId": 49968,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Agents",
       "sortAs": "Agents",
       "artistMbids": [
@@ -42728,7 +42728,7 @@
     },
     {
       "postId": 49969,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Jippu",
       "sortAs": "Jippu",
       "title": "Eva (Kielletyllä iholla)",
@@ -42747,7 +42747,7 @@
     },
     {
       "postId": 49970,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Janne Tulkki",
       "sortAs": "Tulkki, Janne",
       "artistMbids": [
@@ -42765,7 +42765,7 @@
     },
     {
       "postId": 49971,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Mika Sundqvist",
       "sortAs": "Sundqvist, Mika",
       "artistMbids": [
@@ -42783,7 +42783,7 @@
     },
     {
       "postId": 49972,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Solistiyhtye Suomi",
       "sortAs": "Solistiyhtye Suomi",
       "artistMbids": [
@@ -42801,7 +42801,7 @@
     },
     {
       "postId": 49973,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Finlanders",
       "sortAs": "Finlanders",
       "title": "Kaikki tytöt",
@@ -42820,7 +42820,7 @@
     },
     {
       "postId": 49974,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Four Cats",
       "sortAs": "Four Cats",
       "title": "Kaikki muuttuu",
@@ -42839,7 +42839,7 @@
     },
     {
       "postId": 49975,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Tomi Markkola",
       "sortAs": "Markkola, Tomi",
       "artistMbids": [
@@ -42857,7 +42857,7 @@
     },
     {
       "postId": 49976,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Ahti Lampi",
       "sortAs": "Lampi, Ahti",
       "artistMbids": [
@@ -42875,7 +42875,7 @@
     },
     {
       "postId": 49977,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Hector",
       "sortAs": "Hector",
       "artistMbids": [
@@ -42893,7 +42893,7 @@
     },
     {
       "postId": 49978,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Matti ja Teppo",
       "sortAs": "Matti ja Teppo",
       "artistMbids": [
@@ -42911,7 +42911,7 @@
     },
     {
       "postId": 49979,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Tuula Amberla",
       "sortAs": "Amberla, Tuula",
       "artistMbids": [
@@ -42929,7 +42929,7 @@
     },
     {
       "postId": 49980,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Pekka Ruuska",
       "sortAs": "Ruuska, Pekka",
       "artistMbids": [
@@ -42947,7 +42947,7 @@
     },
     {
       "postId": 49981,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Maarit",
       "sortAs": "Maarit",
       "artistMbids": [
@@ -42965,7 +42965,7 @@
     },
     {
       "postId": 49982,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Juice Leskinen",
       "sortAs": "Leskinen, Juice",
       "artistMbids": [
@@ -42987,7 +42987,7 @@
     },
     {
       "postId": 49983,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Muska",
       "sortAs": "Muska",
       "title": "Krokotiili rock",
@@ -43006,7 +43006,7 @@
     },
     {
       "postId": 49984,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Anssi Kela",
       "sortAs": "Kela, Anssi",
       "artistMbids": [
@@ -43024,7 +43024,7 @@
     },
     {
       "postId": 49985,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Pelle Miljoona & 1980",
       "sortAs": "Pelle Miljoona & 1980",
       "artistMbids": [
@@ -43042,7 +43042,7 @@
     },
     {
       "postId": 49986,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Leevi and the Leavings",
       "sortAs": "Leevi and the Leavings",
       "artistMbids": [
@@ -43060,7 +43060,7 @@
     },
     {
       "postId": 49987,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Tavaramarkkinat",
       "sortAs": "Tavaramarkkinat",
       "artistMbids": [
@@ -43078,7 +43078,7 @@
     },
     {
       "postId": 49988,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Dingo",
       "sortAs": "Dingo",
       "artistMbids": [
@@ -43100,7 +43100,7 @@
     },
     {
       "postId": 49989,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Rauli Badding Somerjoki",
       "sortAs": "Somerjoki, Rauli Badding",
       "artistMbids": [
@@ -43118,7 +43118,7 @@
     },
     {
       "postId": 49990,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Essi Wuorela",
       "sortAs": "Wuorela, Essi",
       "artistMbids": [
@@ -43136,7 +43136,7 @@
     },
     {
       "postId": 49991,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "J. Karjalainen",
       "sortAs": "Karjalainen, Jukka",
       "artistMbids": [
@@ -43154,7 +43154,7 @@
     },
     {
       "postId": 49992,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Yö",
       "sortAs": "Yö",
       "artistMbids": [
@@ -43172,7 +43172,7 @@
     },
     {
       "postId": 49993,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Markku Aro",
       "sortAs": "Aro, Markku",
       "title": "Keskiyön aikaan",
@@ -43191,7 +43191,7 @@
     },
     {
       "postId": 49994,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Tuomari Nurmio",
       "sortAs": "Nurmio, Tuomari",
       "artistMbids": [
@@ -43209,7 +43209,7 @@
     },
     {
       "postId": 49995,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Nisa Soraya",
       "sortAs": "Soraya, Nisa",
       "artistMbids": [
@@ -43227,7 +43227,7 @@
     },
     {
       "postId": 49996,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Markku Aro",
       "sortAs": "Aro, Markku",
       "title": "Jestas sentään",
@@ -43246,7 +43246,7 @@
     },
     {
       "postId": 49997,
-      "from": "Finsk musik",
+      "language": "fin",
       "artist": "Frederik",
       "sortAs": "Frederik",
       "title": "Linda Linda",

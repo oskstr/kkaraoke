@@ -730,11 +730,13 @@ Still to do:
 
 9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — especially `Julsång`,
    which wants a Christmas category rather than an invented performer, and the wrong-attribution bucket —
-   into `data/proposals.json` where the dump can confirm a real artist.
-   can confirm a guess and into `data/overrides.json` where it cannot.
+   into `data/proposals.json` where the dump can confirm a real artist, and into `data/overrides.json`
+   where it cannot.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
-11. Works and composers, for the songs where the writer matters more than the performer.
+11. **Works, composers, and languages.** `pnpm fetch:works` looks up each trusted recording's MusicBrainz work
+    and stores the ISO 639-3 lyrics language; composers follow the same work link. Language already exists on
+    songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
 12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 

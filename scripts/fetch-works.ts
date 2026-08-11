@@ -53,14 +53,11 @@ function pickLanguage(relations: WorkRel[] | undefined): Omit<WorkLink, "recordi
         if (work === undefined) continue;
         const languages = (work.languages ?? []).filter((code) => code.length > 0);
         const language = work.language ?? languages[0];
-        if (language === undefined || language.length === 0) {
-            return { workMbid: work.id };
-        }
-        return {
-            workMbid: work.id,
-            language,
-            ...(languages.length > 1 ? { languages } : {}),
-        };
+        const result: Omit<WorkLink, "recordingMbid"> = {};
+        if (work.id !== undefined) result.workMbid = work.id;
+        if (language !== undefined && language.length > 0) result.language = language;
+        if (languages.length > 1) result.languages = languages;
+        return result;
     }
     return {};
 }
