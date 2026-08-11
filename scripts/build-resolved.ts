@@ -214,6 +214,7 @@ async function main(): Promise<void> {
             recordings: { type: "string", default: "data/recordings.json" },
             works: { type: "string", default: "data/works.json" },
             proposals: { type: "string", default: "data/proposals.json" },
+            overrides: { type: "string", default: "data/overrides.json" },
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
         },
@@ -225,6 +226,14 @@ async function main(): Promise<void> {
     }
     const proposalFile = await readJson<{ proposals: { postId: number }[] }>(values.proposals);
     const proposed = new Set((proposalFile?.proposals ?? []).map((p) => p.postId));
+    // Overrides are hand decisions that already settled a song — category buckets with no
+    // performer, spelling the dump cannot confirm, and so on. They must not reappear in the
+    // review queue just because the matcher has nothing to match.
+    const overrideFile = await readJson<{ overrides: { postId: number }[] }>(values.overrides);
+    const overridden = new Set((overrideFile?.overrides ?? []).map((o) => o.postId));
+    if (overrideFile !== undefined && overridden.size > 0) {
+        console.log(`${overridden.size} songs already settled in overrides; skipping them in the review queue`);
+    }
     // Enrichment is optional so that the titles can be applied before the artist lookups,
     // which take an hour, have finished.
     const artistFile = await readJson<{ artists: Artist[] }>(values.artists);
@@ -295,6 +304,12 @@ async function main(): Promise<void> {
     const songs: Resolved[] = [];
     const review: ReviewEntry[] = [];
 
+    /** Hand-settled songs stay out of the queue; re-listing them is how Julsång came back. */
+    const enqueue = (entry: ReviewEntry): void => {
+        if (overridden.has(entry.postId)) return;
+        review.push(entry);
+    };
+
     let titleFixes = 0;
     let artistFixes = 0;
     let genreCount = 0;
@@ -335,7 +350,7 @@ async function main(): Promise<void> {
             // `Nothing's gonna change my love for you` is filed under George Harrison — while
             // not knowing the artist usually means the string is not an artist at all, but a
             // category such as `Julsång`, `Finsk musik` or a show name.
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: soleArtist.has(match.artist)
                     ? "this artist has no such title; the venue may have credited the wrong one"
@@ -349,7 +364,7 @@ async function main(): Promise<void> {
         // (`match.proposed` is only set when a proposal key won; the proposals file still
         // covers cases where the venue's own loose key found the same master.)
         if (match.trusted !== true && match.proposed === undefined && !proposed.has(match.postId)) {
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: match.placeholder === true ? "matched a placeholder entity" : "weak match",
                 ...(match.placeholder === true ? {} : { detail: `matched by ${match.how}` }),
@@ -378,7 +393,7 @@ async function main(): Promise<void> {
             mbids[0] !== dominant &&
             !related(found, artists.get(dominant))
         ) {
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: "credited to a namesake, not to this artist",
                 detail: `MusicBrainz says ${found?.name ?? "another artist"}${
@@ -408,7 +423,7 @@ async function main(): Promise<void> {
         // venue's own string is the better one to show and to sort under.
         const anonymous = canonical !== undefined && /^\[.*\]$/.test(canonical);
         if (anonymous) {
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: "matched a placeholder entity",
                 detail: `MusicBrainz files this under ${canonical}, which is an id but not a performer`,
@@ -541,7 +556,7 @@ function reviewQueue(review: ReviewEntry[]): string {
         "A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only",
         "adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at",
         "all if it does not — a wrong guess is cheap. Anything the dump cannot confirm belongs in",
-        "`data/overrides.json` instead.",
+        "`data/overrides.json` instead. Songs already listed there are omitted from this queue.",
         "",
         "## Contents",
         "",
