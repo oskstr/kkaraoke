@@ -94,6 +94,10 @@ interface Correction {
  * venue category label (`Julsång`, …) when there is no original artist and the venue did
  * not name a rendition — not an invitation to invent Carola or Bing Crosby. When the
  * venue already credited a performer's version of a traditional song, that credit stays.
+ *
+ * `year` / `genres` are for dump-blind corrections (or when a namesake match's enrichment
+ * must be replaced). They win when set. Otherwise the compose step keeps the resolver's
+ * year and genres unless the override clearly invalidates that match.
  */
 interface Override {
     postId: number;
@@ -103,6 +107,8 @@ interface Override {
     from?: string;
     category?: string;
     language?: string;
+    year?: number;
+    genres?: string[];
     /**
      * When an override names performers the dump never confirmed, these ids still let the
      * song list link them. Absent when the override only corrects a display string.
@@ -221,6 +227,80 @@ function creditedArtists(
     return named.length > 0 ? named : undefined;
 }
 
+function correctionArtistMbids(correction: Correction | undefined): Set<string> {
+    const mbids = new Set<string>();
+    for (const mbid of correction?.artistMbids ?? []) {
+        mbids.add(mbid);
+    }
+    for (const artist of correction?.artists ?? []) {
+        mbids.add(artist.mbid);
+    }
+    return mbids;
+}
+
+/**
+ * Year and genres come from whoever the dump matched. Keep them when an override only
+ * fixes a credit string or replaces a placeholder — the recording date is still that
+ * song's. Drop them when the override clears the performer, or when it names different
+ * MusicBrainz artists than the dump (namesake / wrong-match cases). An explicit
+ * override `year` / `genres` always wins.
+ */
+function enrichmentFor(
+    correction: Correction | undefined,
+    override: Override | undefined,
+): { year?: number; genres?: string[] } {
+    const keep = keepCorrectionEnrichment(correction, override);
+    const year =
+        override !== undefined && "year" in override
+            ? override.year
+            : keep
+              ? correction?.year
+              : undefined;
+    const genres =
+        override !== undefined && "genres" in override
+            ? override.genres
+            : keep
+              ? correction?.genres
+              : undefined;
+    return {
+        ...(year === undefined ? {} : { year }),
+        ...(genres === undefined ? {} : { genres }),
+    };
+}
+
+function keepCorrectionEnrichment(
+    correction: Correction | undefined,
+    override: Override | undefined,
+): boolean {
+    if (override === undefined) {
+        return true;
+    }
+    // Traditional / category material with no performer — dump enrichment hitchhiked on a
+    // lyricist, placeholder, or invented credit and must not stay.
+    if ("artist" in override && (override.artist ?? "") === "") {
+        return false;
+    }
+    const overrideMbids = new Set((override.artists ?? []).map((artist) => artist.mbid));
+    if (overrideMbids.size === 0) {
+        // Display-string or dump-blind credit with no ids: keep enrichment when the dump
+        // had any (same act, missing title) and drop nothing solely for setting `artist`.
+        return true;
+    }
+    const matched = correctionArtistMbids(correction);
+    if (matched.size === 0) {
+        // Dump had a recording/year but no real performer (e.g. [Disney] placeholder).
+        // Replacing the credit keeps the recording's year.
+        return true;
+    }
+    for (const mbid of overrideMbids) {
+        if (matched.has(mbid)) {
+            return true;
+        }
+    }
+    // Override names a different act than the dump matched — namesake / wrong recording.
+    return false;
+}
+
 const composedWithoutSlugs = catalogue.songs.map((song) => {
     const correction = corrections.get(song.postId);
     const override = overrides.get(song.postId);
@@ -235,14 +315,7 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
     const category = override?.category;
     const language = override?.language ?? correction?.language;
     const artists = creditedArtists(correction, override);
-    // Year and genres come from whoever the dump matched. When an override replaces the
-    // artist (namesake, placeholder, dump-blind hit), those enrichment fields belong to
-    // the wrong recording and must not hitch a ride.
-    const artistOverridden =
-        (override !== undefined && "artist" in override) ||
-        (override?.artists !== undefined && override.artists.length > 0);
-    const genres = artistOverridden ? undefined : correction?.genres;
-    const year = artistOverridden ? undefined : correction?.year;
+    const { year, genres } = enrichmentFor(correction, override);
     return {
         id: song.id,
         postId: song.postId,

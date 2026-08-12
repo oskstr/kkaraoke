@@ -1,5 +1,5 @@
 {
-    "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file.",
+    "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file. Optional year/genres win when set; otherwise compose keeps resolver enrichment unless the override clears the performer or replaces a matched artist identity.",
     "overrides": [
         {
             "postId": 47902,
@@ -14,6 +14,7 @@
             "artist": "Ayumi Hamasaki",
             "title": "walking proud",
             "language": "jpn",
+            "year": 2004,
             "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
         },
         {
@@ -28,6 +29,7 @@
             "postId": 48782,
             "artist": "Carola",
             "title": "Det är bara vi",
+            "year": 2010,
             "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
         },
         {
@@ -214,6 +216,7 @@
             "postId": 48716,
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
+            "year": 2016,
             "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
         },
         {
