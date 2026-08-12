@@ -1,6 +1,6 @@
 # Override review
 
-28 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+31 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -36,3 +36,6 @@ means omit a category label rather than invent a performer.
 | 3755 | Irish traditional song | Wild rover | *(empty)* | The Wild Rover | Irish traditional | Traditional / category material filed under 'Irish traditional song'; no single performer to invent | 50466 |
 | 4158 | Ayumi Hamasaki | Walking proud | Ayumi Hamasaki | walking proud |  | Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it. | 48108 |
 | 4896 | Piano singalong | Happy Birthday | *(empty)* | Happy Birthday to You | Birthday | Traditional / category material filed under 'Piano singalong'; no single performer to invent | 52134 |
+| 5728 | BTS | Blood sweat and tears | BTS | Blood Sweat & Tears |  | Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick. | 48716 |
+| 5747 | High school musical | What iv'e been looking for | Ashley Tisdale, Lucas Grabeel | What I've Been Looking For |  | HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. | 50369 |
+| 5843 | High school musical | Were all in this together | The High School Musical Cast | We're All in This Together |  | Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. | 50370 |

@@ -18,6 +18,9 @@ data/resolved.json
 # The review queue, written by `pnpm build:resolved`. Generated already-formatted; letting
 # Prettier realign its tables would only make every regeneration a diff.
 data/review.md
+data/overrides-review.md
+data/proposals-review.md
+data/artist-slugs-review.md
 
 # Artist lookups, written by `pnpm fetch:artists`.
 data/artists.json

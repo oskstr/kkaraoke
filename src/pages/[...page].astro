@@ -35,7 +35,7 @@ const { page } = Astro.props;
                     <tr>
                         <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
                         <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Artist</th>
-                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Titel</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Title</th>
                         <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">Genre</th>
                     </tr>
                 </thead>
@@ -46,7 +46,23 @@ const { page } = Astro.props;
                                 {/* The number people actually punch into the machine, so it
                                     stays on one line and never gets dropped for space. */}
                                 <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">{song.id}</td>
-                                <td class="px-3 py-2 sm:px-6 sm:py-4">{song.artist}</td>
+                                <td class="px-3 py-2 sm:px-6 sm:py-4">
+                                    {/* Link from the id list, never by splitting the credit
+                                        string — ampersands can be part of a name. */}
+                                    {song.artists !== undefined && song.artists.length > 0
+                                        ? song.artists.map((credited, index) => (
+                                              <>
+                                                  {index > 0 && ", "}
+                                                  <a
+                                                      href={`/artists/${credited.slug}`}
+                                                      class="underline-offset-2 hover:underline"
+                                                  >
+                                                      {credited.name}
+                                                  </a>
+                                              </>
+                                          ))
+                                        : song.artist}
+                                </td>
                                 <td class="px-3 py-2 sm:px-6 sm:py-4">
                                     {song.song}
                                     {/* The show, for the songs the venue filed under one. Beside

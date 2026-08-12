@@ -496,10 +496,11 @@ async function main(): Promise<void> {
             resolved.title = canonicalTitle;
             titleFixes++;
         }
-        if (mbids.length > 0) resolved.artistMbids = mbids;
+        if (!anonymous && mbids.length > 0) resolved.artistMbids = mbids;
         // What the artist column is made of, so the page can link each name on its own rather
-        // than parsing one back out of a string.
-        if (credited.length > 0) {
+        // than parsing one back out of a string. Placeholder entities stay out: [Disney] is an
+        // id for matching, not a performer to put on an artist page.
+        if (!anonymous && credited.length > 0) {
             resolved.artists = credited.map((artist) => ({
                 mbid: artist.mbid,
                 name: displayName(artist),

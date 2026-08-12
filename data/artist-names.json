@@ -1,5 +1,5 @@
 {
-    "note": "Catalogue-scoped display names, keyed by MusicBrainz artist MBID. Use the name these songs are well known under in this karaoke catalogue — not the venue string, not necessarily today's primary, and not a generic 'most famous ever' label. Humans only; no script writes this file. Unmapped artists fall back to the MusicBrainz primary (with stylization rules in build-resolved).",
+    "note": "Catalogue-scoped display names, keyed by MusicBrainz artist MBID. Use the name these songs are well known under in this karaoke catalogue — not the venue string, not necessarily today's primary, and not a generic 'most famous ever' label. Optional `slug` overrides the URL path when slugifying the display name would be awkward (P!nk → pink). The same slug on two MBIDs merges them onto one artist page: for leader+band splits the page is the front figure, while song rows keep the full credit. Humans only; no script writes this file. Unmapped artists fall back to the MusicBrainz primary (with stylization rules in build-resolved).",
     "artists": {
         "164f0d73-1234-4e2c-8743-d77bf2191051": {
             "name": "Kanye West",
@@ -11,7 +11,8 @@
         },
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63": {
             "name": "P!nk",
-            "why": "Stylized brand on the catalogue's 2000s–2020s hits"
+            "slug": "pink",
+            "why": "Stylized brand on the catalogue's 2000s–2020s hits; slug is the readable form, not p-nk"
         },
         "fab34286-b8e1-4879-bce3-194e1358fbd2": {
             "name": "Kesha",
@@ -33,9 +34,15 @@
             "name": "Jackson 5",
             "why": "Catalogue Motown-era songs (I Want You Back, I'll Be There, …) are known as Jackson 5"
         },
+        "3d5c6889-2471-43c4-b853-08fc5fda810a": {
+            "name": "Ian Dury",
+            "slug": "ian-dury",
+            "why": "Front figure for the Blockheads merge; page is Ian Dury"
+        },
         "d4675794-9ad3-48eb-bcd4-b98be183b396": {
             "name": "Ian Dury & the Blockheads",
-            "why": "Hit Me With Your Rhythm Stick is from while Ian Dury fronted the band; not the later The Blockheads"
+            "slug": "ian-dury",
+            "why": "Hit Me With Your Rhythm Stick is from while Ian Dury fronted the band; not the later The Blockheads. Merged onto /artists/ian-dury; song rows keep the full credit"
         },
         "070d193a-845c-479f-980e-bef15710653e": {
             "name": "Prince",
@@ -44,6 +51,106 @@
         "28a40a67-ecd3-432a-be2f-51490a7743ec": {
             "name": "Helena Paparizou",
             "why": "Known here as Helena Paparizou; MusicBrainz primary is Greek script and the first Latin alias is Helen"
+        },
+        "4d7928cd-7ed2-4282-8c29-c0c9f966f1bd": {
+            "name": "Alice Cooper",
+            "slug": "alice-cooper",
+            "why": "Band era (School's Out, …). Same stage persona as the solo artist — one catalogue page, like Spotify"
+        },
+        "ee58c59f-8e7f-4430-b8ca-236c4d3745ae": {
+            "name": "Alice Cooper",
+            "slug": "alice-cooper",
+            "why": "Solo era (Poison, …). Merged with the band-era MBID onto /artists/alice-cooper"
+        },
+        "025df4dd-aaab-46e2-ba0c-6c6909a4ffe6": {
+            "name": "Emilia",
+            "slug": "emilia",
+            "why": "Big Big World–era performance name; same person as Emilia Mitiku — one catalogue page"
+        },
+        "54370132-ba55-4425-bb64-df202f489a27": {
+            "name": "Emilia",
+            "slug": "emilia",
+            "why": "Post-2012 performance name (Emilia Mitiku on MusicBrainz); show as Emilia and merge with the earlier name"
+        },
+        "ed2ac1e9-d51d-4eff-a2c2-85e81abd6360": {
+            "name": "Bob Marley",
+            "slug": "bob-marley",
+            "why": "Front figure for the Wailers merge; page is Bob Marley"
+        },
+        "c296e10c-110a-4103-9e77-47bfebb7fb2e": {
+            "name": "Bob Marley & The Wailers",
+            "slug": "bob-marley",
+            "why": "Merged onto /artists/bob-marley; song rows keep the Wailers credit"
+        },
+        "5ca3f318-d028-4151-ac73-78e2b2d6cdcc": {
+            "name": "Tom Petty",
+            "slug": "tom-petty",
+            "why": "Front figure for the Heartbreakers merge; page is Tom Petty"
+        },
+        "f93dbc64-6f08-4033-bcc7-8a0bb4689849": {
+            "name": "Tom Petty and the Heartbreakers",
+            "slug": "tom-petty",
+            "why": "Merged onto /artists/tom-petty; song rows keep the Heartbreakers credit"
+        },
+        "4382b934-64c3-47ac-98db-65f26d845c48": {
+            "name": "Bob Seger",
+            "slug": "bob-seger",
+            "why": "Front figure for the Silver Bullet Band merge; page is Bob Seger"
+        },
+        "aeea3060-05ba-4dda-8c92-3dc899e24ce8": {
+            "name": "Bob Seger & the Silver Bullet Band",
+            "slug": "bob-seger",
+            "why": "Merged onto /artists/bob-seger; song rows keep the Silver Bullet Band credit"
+        },
+        "b0b6393a-a5fb-4246-921e-33e0c20371cf": {
+            "name": "Huey Lewis",
+            "slug": "huey-lewis",
+            "why": "Front figure for the News merge; page is Huey Lewis"
+        },
+        "2be6ae30-d220-4419-80da-2a46813ed872": {
+            "name": "Huey Lewis and the News",
+            "slug": "huey-lewis",
+            "why": "Merged onto /artists/huey-lewis; song rows keep the News credit"
+        },
+        "e60dbba7-6f55-429a-bd22-5e9c6a87ae70": {
+            "name": "Bruce Hornsby",
+            "slug": "bruce-hornsby",
+            "why": "Front figure for the Range merge; page is Bruce Hornsby"
+        },
+        "b548040e-b631-4bdd-ab75-045293e448b7": {
+            "name": "Bruce Hornsby & the Range",
+            "slug": "bruce-hornsby",
+            "why": "Merged onto /artists/bruce-hornsby; song rows keep the Range credit"
+        },
+        "89efeadd-8080-4cf9-af33-2e68a173df02": {
+            "name": "Dion",
+            "slug": "dion",
+            "why": "Front figure for the Belmonts merge; page is Dion"
+        },
+        "236459d6-f9ea-4f89-9239-21c0bedaaf25": {
+            "name": "Dion & The Belmonts",
+            "slug": "dion",
+            "why": "Merged onto /artists/dion; song rows keep the Belmonts credit"
+        },
+        "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e": {
+            "name": "Sammi Cheng",
+            "slug": "sammi-cheng",
+            "why": "Catalogue credit is Sammi Cheng; MusicBrainz primary is Chinese script 鄭秀文"
+        },
+        "a2cab261-63cc-4ccf-8023-6b6e8588bb62": {
+            "name": "Jacky Cheung",
+            "slug": "jacky-cheung",
+            "why": "Known internationally as Jacky Cheung; MusicBrainz primary is Chinese script 張學友 (venue had Cheung Hok Yau)"
+        },
+        "8b86576e-1cf5-46c8-970a-a79d13c2e0f0": {
+            "name": "Dima Bilan",
+            "slug": "dima-bilan",
+            "why": "Catalogue credit is Dima Bilan; MusicBrainz primary is Cyrillic Дима Билан"
+        },
+        "e2b96b55-35c4-45b9-8d7b-726ac927982f": {
+            "name": "Anna Vissi",
+            "slug": "anna-vissi",
+            "why": "Latin form people search for; MusicBrainz primary is Greek Άννα Βίσση (dump had alias Anna Vishy)"
         }
     }
 }

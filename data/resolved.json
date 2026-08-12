@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T00:07:08.352Z",
+  "generatedAt": "2026-08-12T07:07:29.941Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -203,6 +203,7 @@
         "dance-pop",
         "art pop"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -887,6 +888,7 @@
       "genres": [
         "pop rock"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -1645,6 +1647,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -2037,6 +2040,7 @@
         "contemporary r&b",
         "dance-pop"
       ],
+      "year": 2001,
       "how": "artist-scoped"
     },
     {
@@ -2331,6 +2335,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1968,
       "how": "exact"
     },
     {
@@ -2931,6 +2936,7 @@
       "genres": [
         "pop"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -2996,6 +3002,7 @@
         "r&b",
         "neo soul"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -3727,6 +3734,7 @@
         "dance-pop",
         "r&b"
       ],
+      "year": 2002,
       "how": "artist-scoped"
     },
     {
@@ -3927,6 +3935,7 @@
         "hip hop",
         "r&b"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -4056,6 +4065,7 @@
       "genres": [
         "pop"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -4084,6 +4094,7 @@
         "contemporary r&b",
         "pop soul"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -4260,6 +4271,7 @@
         "pop",
         "latin pop"
       ],
+      "year": 2001,
       "how": "artist-scoped"
     },
     {
@@ -4500,6 +4512,7 @@
         "dance-pop",
         "contemporary r&b"
       ],
+      "year": 2002,
       "how": "artist-scoped"
     },
     {
@@ -4605,6 +4618,7 @@
         }
       ],
       "recordingMbid": "6a836fc1-01a3-4cf5-8023-2f3891528169",
+      "year": 2003,
       "how": "exact"
     },
     {
@@ -5163,6 +5177,7 @@
         "pop rock",
         "dance-pop"
       ],
+      "year": 2001,
       "how": "artist-scoped"
     },
     {
@@ -5586,6 +5601,7 @@
       "genres": [
         "pop"
       ],
+      "year": 2003,
       "how": "exact"
     },
     {
@@ -6475,6 +6491,7 @@
         "rock",
         "pop rock"
       ],
+      "year": 1983,
       "how": "exact"
     },
     {
@@ -6560,6 +6577,7 @@
       "genres": [
         "soul"
       ],
+      "year": 1981,
       "how": "artist-scoped"
     },
     {
@@ -6793,6 +6811,7 @@
         "dance-pop",
         "minneapolis sound"
       ],
+      "year": 1987,
       "how": "exact"
     },
     {
@@ -7528,6 +7547,7 @@
         "dance-pop",
         "teen pop"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -7570,6 +7590,7 @@
       "genres": [
         "contemporary christian"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -7645,6 +7666,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 1992,
       "how": "version"
     },
     {
@@ -7940,6 +7962,7 @@
         "dance-pop",
         "disco"
       ],
+      "year": 1999,
       "how": "artist-scoped"
     },
     {
@@ -10137,7 +10160,7 @@
     {
       "postId": 50522,
       "language": "eng",
-      "artist": "Cheung Hok Yau, Regine Velasquez",
+      "artist": "Jacky Cheung, Regine Velasquez",
       "sortAs": "Cheung, Jacky",
       "title": "In Love With You",
       "artistMbids": [
@@ -10147,7 +10170,7 @@
       "artists": [
         {
           "mbid": "a2cab261-63cc-4ccf-8023-6b6e8588bb62",
-          "name": "Cheung Hok Yau"
+          "name": "Jacky Cheung"
         },
         {
           "mbid": "b7efc324-d12b-40b5-87a8-b67ffb34a91d",
@@ -19864,7 +19887,6 @@
     },
     {
       "postId": 49773,
-      "artist": "Emilia Mitiku",
       "sortAs": "Mitiku, Emilia",
       "title": "You're My World",
       "artistMbids": [
@@ -19873,7 +19895,7 @@
       "artists": [
         {
           "mbid": "54370132-ba55-4425-bb64-df202f489a27",
-          "name": "Emilia Mitiku"
+          "name": "Emilia"
         }
       ],
       "recordingMbid": "96c2df79-d5bc-4b88-b754-675e9ba2da11",
@@ -24337,7 +24359,6 @@
     {
       "postId": 47997,
       "language": "eng",
-      "artist": "Anna Vishy",
       "sortAs": "Vissi, Anna",
       "artistMbids": [
         "e2b96b55-35c4-45b9-8d7b-726ac927982f"
@@ -24345,7 +24366,7 @@
       "artists": [
         {
           "mbid": "e2b96b55-35c4-45b9-8d7b-726ac927982f",
-          "name": "Anna Vishy"
+          "name": "Anna Vissi"
         }
       ],
       "recordingMbid": "89491a64-af48-4aaf-9188-e2f9fd141e9a",
@@ -61087,19 +61108,24 @@
     },
     {
       "postId": 51686,
-      "sortAs": "Mika",
-      "title": "Relax (Take It Easy)",
+      "artist": "MIKA",
+      "sortAs": "MIKA",
+      "title": "Relax, Take It Easy",
       "artistMbids": [
-        "e11051f9-0098-41aa-9edb-8dacd8f1c6b5"
+        "8a9ac1cb-faae-434e-8d60-b139a3707dfc"
       ],
       "artists": [
         {
-          "mbid": "e11051f9-0098-41aa-9edb-8dacd8f1c6b5",
-          "name": "Mika"
+          "mbid": "8a9ac1cb-faae-434e-8d60-b139a3707dfc",
+          "name": "MIKA"
         }
       ],
-      "recordingMbid": "eda5e9e7-f769-41a8-af43-77858e650ec1",
-      "year": 2011,
+      "recordingMbid": "4ab862ea-e6da-4ced-8f9a-6f14ae8d9732",
+      "genres": [
+        "pop",
+        "dance-pop"
+      ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -127880,15 +127906,6 @@
       "postId": 50369,
       "from": "High School Musical",
       "title": "What I've Been Looking For",
-      "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
-      ],
-      "artists": [
-        {
-          "mbid": "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49",
-          "name": "[Disney]"
-        }
-      ],
       "recordingMbid": "9865271d-3a80-4162-a518-967a68ffd5a4",
       "how": "artist-scoped"
     },
@@ -130184,15 +130201,6 @@
       "postId": 50370,
       "from": "High School Musical",
       "title": "We’re All in This Together",
-      "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
-      ],
-      "artists": [
-        {
-          "mbid": "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49",
-          "name": "[Disney]"
-        }
-      ],
       "recordingMbid": "8eb65771-0f8a-4068-b5c8-f822ba89a073",
       "year": 2005,
       "how": "exact"
