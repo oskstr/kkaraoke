@@ -164,15 +164,15 @@ in the catalogue get the same language code from the MusicBrainz works pass, not
 
 **Christmas (19, filed under `Julsång`) and other traditional / category buckets.** Three rules, in order:
 
-1. **If we can establish who originally made the song**, credit that artist (and still keep a `category`
-   such as Christmas when the venue filed it under a bucket).
+1. **If we can establish who originally made the song**, credit that artist (and still keep a
+   `categories` entry such as Christmas when the venue filed it under a bucket).
 2. **If the venue already names a particular artist's rendition** of a traditional song — `Metallica` on
    `Whiskey in the Jar`, `Stevie Wonder` on `Happy Birthday`, `Louis Armstrong` on `When the Saints` — keep
    that artist. The track is most likely their version; do not replace it with a “more famous” cover or strip
    it because the work is traditional.
 3. **If it is traditional and neither of the above applies**, omit the artist. Do not invent Carola or Bing
    Crosby for `Stilla natt`, and do not leave the artist column as `Julsång`. Use `data/overrides.json` with
-   `category: "Christmas"` (or Midsummer, Birthday, Hymn, Irish traditional, …) and an empty artist.
+   `categories: ["Christmas"]` (or Midsummer, Birthday, Hymn, Irish traditional, …) and an empty artist.
 
 `Jul medley` is not a single work at all. The same three rules cover midsummer songs, birthday songs, hymns,
 and Irish traditionals filed under category labels.
@@ -636,8 +636,9 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
 - **Which cover to invent for a traditional work.** Dump credits for `Stilla natt` run to hundreds of artists.
-  Picking one is not a lookup. Category buckets like `Julsång` get an empty artist and a `category` in
-  overrides. When the venue already named a rendition, that name stays. When the original artist is
+  Picking one is not a lookup. Category buckets like `Julsång` get an empty artist and
+  `categories` in overrides. When the venue already named a rendition, that name stays. When the
+  original artist is
   dump-confirmable, that name is used. Italian and Finnish venue buckets were resolvable to real singers with
   `language: "ita"` / `"fin"`.
 
@@ -757,7 +758,7 @@ Still to do:
    the open web (Wikipedia, press, Spotify, Discogs, …) before treating them as unresolvable.
    `Det är bara vi` (Carola, 2010 royal wedding) and `walking proud` (Ayumi Hamasaki) are real and
    live in overrides for exactly that reason. Traditional buckets (`Julsång` and the like) already
-   use overrides with a `category` and an omitted artist; do not re-propose cover singers for them.
+   use overrides with `categories` and an omitted artist; do not re-propose cover singers for them.
 10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
     phrase rather than by parsing the flattened credit line the dump provides.
 11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
@@ -766,13 +767,12 @@ Still to do:
     already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
     Work **titles** from the same pass are preferred over dump recording titles when they name the
     same song. `from` stays reserved for shows and films; broader buckets such as Disney films, Bond
-    themes, Eurovision, Melodifestivalen, and Christmas are search categories built from `from` /
-    `category` / `categories`, not fake performers. Christmas (traditionals and credited hits)
-    uses `category` in overrides. Disney, James Bond, and Musical are derived in
-    `src/lib/categories.ts` from known `from` values. Melodifestivalen and Eurovision are
-    tagged via `categories` in overrides (a Swedish winner that also represented Sweden at
-    ESC carries both). A song can sit in more than one umbrella while still keeping its
-    specific film/show under Film & musical.
+    themes, Eurovision, Melodifestivalen, and Christmas are search `categories`, not fake performers.
+    `from` and `categories` are independent (a Bond theme has both its film and James Bond). Christmas
+    and contest labels are set in overrides. Disney, James Bond, and Musical are also derived in
+    `src/lib/categories.ts` from known `from` values. Melodifestivalen and Eurovision are both
+    tags when a Swedish winner actually competed at ESC — Melodifestivalen entries that did not
+    represent Sweden stay Melodifestivalen-only.
 12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
     resolved song against **Deezer** and **Discogs** (Discogs is on
     [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases);

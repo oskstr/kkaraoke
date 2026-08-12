@@ -41,20 +41,16 @@ export interface Song {
      * The show or film the song is from, where the venue filed it under that instead of a
      * performer. `Grease` is what someone would search for, so it must not be lost when the
      * artist column starts naming the cast. Not for language labels — see `language`.
+     * Independent of `categories`: a Disney song keeps its film here and still belongs to
+     * the Disney category.
      */
     from?: string;
     /**
-     * A search category that is not a show and not a performer — Christmas carols filed
-     * under `Julsång`, birthday songs, hymns, and so on. Prefer this (and an empty artist)
-     * over inventing a cover singer for traditional material. Umbrella browse categories
-     * such as Disney / James Bond / Musical are also derived from `from` — see
-     * `src/lib/categories.ts`. Melodifestivalen / Eurovision (and songs in both) use
-     * `categories` when more than one label applies.
-     */
-    category?: string;
-    /**
-     * Extra search categories beyond `category` — used when a song belongs to more than
-     * one (e.g. a Melodifestivalen winner that also went to Eurovision).
+     * Search categories — Christmas, Melodifestivalen, Eurovision, Birthday, … Not a show
+     * (`from`) and not a performer. Plural: a Melodifestivalen winner that also competed
+     * at Eurovision carries both. Prefer this (and an empty artist) over inventing a cover
+     * singer for traditional material. Umbrellas such as Disney / James Bond / Musical are
+     * also derived from `from` — see `src/lib/categories.ts`.
      */
     categories?: string[];
     /** ISO 639-3 lyrics language from the MusicBrainz work, where known. */
@@ -113,8 +109,7 @@ interface Override {
     sortAs?: string;
     title?: string;
     from?: string;
-    category?: string;
-    /** One or more search categories; merged with `category` at compose time. */
+    /** Search categories (Christmas, Melodifestivalen, Eurovision, …). Plural by design. */
     categories?: string[];
     language?: string;
     year?: number;
@@ -326,7 +321,6 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
         override !== undefined && "from" in override
             ? override.from || undefined
             : correction?.from;
-    const category = override?.category;
     const categories = override?.categories;
     const language = override?.language ?? correction?.language;
     const artists = creditedArtists(correction, override);
@@ -342,12 +336,10 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
         ...(genres === undefined ? {} : { genres }),
         ...(year === undefined ? {} : { year }),
         ...(from === undefined ? {} : { from }),
-        ...(category === undefined ? {} : { category }),
         ...(categories === undefined || categories.length === 0 ? {} : { categories }),
         ...(language === undefined ? {} : { language }),
         ...(artist === song.artist &&
         title === song.song &&
-        category === undefined &&
         (categories === undefined || categories.length === 0) &&
         from === undefined
             ? {}

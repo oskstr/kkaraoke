@@ -1,11 +1,10 @@
 /**
- * Umbrella search categories built from `from` (specific show/film) and/or explicit
- * `category` / `categories` on a song. Disney, Bond themes, musicals, Melodifestivalen,
- * Eurovision, and Christmas are browse categories — not fake performers, and not a
- * substitute for a specific film/show in `from`.
+ * Search categories on a song (`categories`) plus umbrellas derived from `from`.
  *
- * A song may belong to more than one category (Disney + Musical, or Melodifestivalen +
- * Eurovision when a Swedish winner also represented Sweden at ESC).
+ * `from` and `categories` are independent: a Bond theme has `from: "Goldfinger"` and
+ * also belongs to the James Bond category; a Melodifestivalen winner that went to ESC
+ * has both contest labels and usually no `from`. Do not treat every Melodifestivalen
+ * entry as Eurovision — only songs that actually competed at Eurovision get that label.
  */
 
 /** Films / shows that belong under the Disney category. */
@@ -119,21 +118,21 @@ export function categoryFromShow(from: string | undefined): string[] {
     return out;
 }
 
-/** Every browse category a song belongs to (explicit + derived from `from`). */
-export function categoriesForSong(song: {
-    category?: string;
-    categories?: string[];
-    from?: string;
-}): string[] {
+/** Every browse category a song belongs to (explicit `categories` + derived from `from`). */
+export function categoriesForSong(song: { categories?: string[]; from?: string }): string[] {
     const set = new Set<string>();
-    if (song.category) set.add(song.category);
     for (const cat of song.categories ?? []) set.add(cat);
     for (const cat of categoryFromShow(song.from)) set.add(cat);
     return [...set];
 }
 
+/** Display label when there is no performer — joined explicit categories. */
+export function categoriesLabel(song: { categories?: string[] }): string {
+    return (song.categories ?? []).join(", ");
+}
+
 export function songBelongsToCategory(
-    song: { category?: string; categories?: string[]; from?: string },
+    song: { categories?: string[]; from?: string },
     key: string,
 ): boolean {
     return categoriesForSong(song).includes(key);

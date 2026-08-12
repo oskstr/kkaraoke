@@ -6,7 +6,7 @@ the venue scrape. Regenerable, so do not edit it — change the override instead
 Each row is what the venue had, then what we show after the override. An empty artist
 means omit a category label rather than invent a performer.
 
-| id | venue artist | venue title | → artist | → title | category | why | postId |
+| id | venue artist | venue title | → artist | → title | categories | why | postId |
 | -: | --- | --- | --- | --- | --- | --- | -: |
 | 75 | Phil Collins | You'll be in my heart | Phil Collins | You'll be in my heart |  | Phil Collins Disney/Tarzan hit; from was missing | 52123 |
 | 135 | Avril Lavigne | Sk8ter boi | Avril Lavigne | Sk8ter boi |  | Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go). | 48102 |

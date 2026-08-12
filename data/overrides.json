@@ -31,11 +31,13 @@
         },
         {
             "postId": 47902,
-            "category": "Children's song",
             "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
             "title": "Ekorr'n satt i granen",
             "artist": "",
-            "sortAs": "Children's song"
+            "sortAs": "Children's song",
+            "categories": [
+                "Children's song"
+            ]
         },
         {
             "postId": 47994,
@@ -52,8 +54,10 @@
         },
         {
             "postId": 48057,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48065,
@@ -84,8 +88,10 @@
         },
         {
             "postId": 48165,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Band Aid – Do They Know It’s Christmas?). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Band Aid – Do They Know It’s Christmas?). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48171,
@@ -122,8 +128,10 @@
         },
         {
             "postId": 48375,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48380,
@@ -159,18 +167,24 @@
         },
         {
             "postId": 48545,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Bon Jovi – Please Come Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Bon Jovi – Please Come Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48552,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Boney M. – Mary’s Boy Child / Oh My Lord). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Boney M. – Mary’s Boy Child / Oh My Lord). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48553,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Boney M. – Feliz Navidad). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Boney M. – Feliz Navidad). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48592,
@@ -182,11 +196,13 @@
         },
         {
             "postId": 48654,
-            "category": "Hymn",
             "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
             "artist": "",
             "sortAs": "Hymn",
-            "title": "Face to Face"
+            "title": "Face to Face",
+            "categories": [
+                "Hymn"
+            ]
         },
         {
             "postId": 48656,
@@ -261,8 +277,10 @@
         },
         {
             "postId": 48864,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48893,
@@ -298,8 +316,10 @@
         },
         {
             "postId": 48977,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Chris Rea – Driving Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Chris Rea – Driving Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 48993,
@@ -322,13 +342,17 @@
         },
         {
             "postId": 49236,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Darlene Love – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Darlene Love – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49267,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Dean Martin – Let It Snow! Let It Snow! Let It Snow!). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Dean Martin – Let It Snow! Let It Snow! Let It Snow!). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49348,
@@ -347,8 +371,10 @@
         },
         {
             "postId": 49471,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49485,
@@ -358,8 +384,10 @@
         },
         {
             "postId": 49638,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49655,
@@ -381,8 +409,10 @@
         },
         {
             "postId": 49759,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49768,
@@ -412,8 +442,10 @@
         },
         {
             "postId": 49809,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49855,
@@ -446,9 +478,11 @@
             "postId": 50116,
             "artist": "",
             "sortAs": "Irish traditional",
-            "category": "Irish traditional",
             "title": "Danny Boy",
-            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting.",
+            "categories": [
+                "Irish traditional"
+            ]
         },
         {
             "postId": 50118,
@@ -483,16 +517,20 @@
         },
         {
             "postId": 50135,
-            "category": "Birthday",
             "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
             "artist": "",
             "sortAs": "Birthday",
-            "title": "Ja må du leva"
+            "title": "Ja må du leva",
+            "categories": [
+                "Birthday"
+            ]
         },
         {
             "postId": 50184,
-            "category": "Christmas",
-            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50208,
@@ -544,11 +582,13 @@
         },
         {
             "postId": 50466,
-            "category": "Irish traditional",
             "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
             "artist": "",
             "sortAs": "Irish traditional",
-            "title": "The Wild Rover"
+            "title": "The Wild Rover",
+            "categories": [
+                "Irish traditional"
+            ]
         },
         {
             "postId": 50539,
@@ -585,8 +625,10 @@
         },
         {
             "postId": 50739,
-            "category": "Christmas",
-            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50776,
@@ -597,8 +639,10 @@
         },
         {
             "postId": 50778,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Johnny Mathis – Have Yourself a Merry Little Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Johnny Mathis – Have Yourself a Merry Little Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50802,
@@ -608,154 +652,196 @@
         },
         {
             "postId": 50840,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50841,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50842,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50843,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Nu är det jul igen"
+            "title": "Nu är det jul igen",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50844,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Jul, jul strålande jul"
+            "title": "Jul, jul strålande jul",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50845,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Lusse Lelle"
+            "title": "Lusse Lelle",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50846,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Julmedley"
+            "title": "Julmedley",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50847,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50848,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50849,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50850,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50851,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50852,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50853,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50854,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50855,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Santa Claus Is Coming to Town"
+            "title": "Santa Claus Is Coming to Town",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50856,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "We Wish You a Merry Christmas"
+            "title": "We Wish You a Merry Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50857,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Silent Night, Holy Night"
+            "title": "Silent Night, Holy Night",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50858,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Jingle Bells"
+            "title": "Jingle Bells",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50864,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50983,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 51000,
@@ -775,8 +861,10 @@
         },
         {
             "postId": 51013,
-            "category": "Christmas",
-            "why": "Credited Christmas song (The Killers – Don’t Shoot Me Santa). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (The Killers – Don’t Shoot Me Santa). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 51022,
@@ -855,8 +943,10 @@
         },
         {
             "postId": 51427,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 51430,
@@ -875,8 +965,10 @@
         },
         {
             "postId": 51479,
-            "category": "Christmas",
-            "why": "Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 51504,
@@ -910,10 +1002,12 @@
         },
         {
             "postId": 51678,
-            "category": "Midsummer",
             "why": "Traditional / category material filed under 'Midsommarsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Midsummer"
+            "sortAs": "Midsummer",
+            "categories": [
+                "Midsummer"
+            ]
         },
         {
             "postId": 51829,
@@ -958,16 +1052,20 @@
         },
         {
             "postId": 52134,
-            "category": "Birthday",
             "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent",
             "artist": "",
             "sortAs": "Birthday",
-            "title": "Happy Birthday to You"
+            "title": "Happy Birthday to You",
+            "categories": [
+                "Birthday"
+            ]
         },
         {
             "postId": 52185,
-            "category": "Christmas",
-            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 52252,
@@ -990,8 +1088,10 @@
         },
         {
             "postId": 52553,
-            "category": "Christmas",
-            "why": "Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1)."
+            "why": "Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 52621,

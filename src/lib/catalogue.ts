@@ -1,8 +1,11 @@
 import {
     categoriesForSong,
+    categoriesLabel,
     songBelongsToCategory,
 } from "./categories";
 import { getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
+
+export { categoriesForSong, categoriesLabel, songBelongsToCategory } from "./categories";
 
 /** Swedish collation — å, ä, ö after z. */
 export const collator = new Intl.Collator("sv");
@@ -368,7 +371,7 @@ export function sortSongs(songs: Song[], sort: SortKey): Song[] {
     if (sort === "artist") {
         return copy.sort(
             (a, b) =>
-                collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
+                collator.compare(a.artist || categoriesLabel(a), b.artist || categoriesLabel(b)) ||
                 collator.compare(a.song, b.song) ||
                 a.id - b.id,
         );
@@ -388,7 +391,7 @@ export interface SongVariant extends Song {
 }
 
 function variantKey(song: Song): string {
-    return `${(song.artist || song.category || "").toLowerCase()}\0${song.song.toLowerCase()}`;
+    return `${(song.artist || categoriesLabel(song)).toLowerCase()}\0${song.song.toLowerCase()}`;
 }
 
 function enrichmentScore(song: Song): number {
@@ -398,7 +401,7 @@ function enrichmentScore(song: Song): number {
     if (song.artists && song.artists.length > 0) score += 2;
     if (song.genres && song.genres.length > 0) score += 1;
     if (song.language) score += 1;
-    if (song.category) score += 1;
+    if (song.categories && song.categories.length > 0) score += 1;
     return score;
 }
 
@@ -430,7 +433,7 @@ export function sortSongVariants(songs: SongVariant[], sort: SortKey): SongVaria
     if (sort === "artist") {
         return copy.sort(
             (a, b) =>
-                collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
+                collator.compare(a.artist || categoriesLabel(a), b.artist || categoriesLabel(b)) ||
                 collator.compare(a.song, b.song) ||
                 a.ids[0]! - b.ids[0]!,
         );
@@ -451,7 +454,10 @@ export function parseSort(value: string | null | undefined): SortKey {
 export function songSubtitle(song: Song): string {
     const bits: string[] = [];
     if (song.artist) bits.push(song.artist);
-    else if (song.category) bits.push(song.category);
+    else {
+        const cats = categoriesLabel(song);
+        if (cats) bits.push(cats);
+    }
     if (song.from) bits.push(song.from);
     if (song.year) bits.push(String(song.year));
     return bits.join(" · ");
@@ -501,7 +507,6 @@ export interface SearchSong {
     title: string;
     artist: string;
     from?: string;
-    category?: string;
     /** Explicit + derived umbrella categories (Disney, James Bond, Musical, …). */
     categories?: string[];
     year?: number;
@@ -520,12 +525,6 @@ export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
             title: song.song,
             artist: song.artist,
             ...(song.from === undefined ? {} : { from: song.from }),
-            // Prefer the explicit category for display; fall back to a derived umbrella.
-            ...(song.category !== undefined
-                ? { category: song.category }
-                : categories[0] !== undefined
-                  ? { category: categories[0] }
-                  : {}),
             ...(categories.length > 0 ? { categories } : {}),
             ...(song.year === undefined ? {} : { year: song.year }),
             ...(song.genres === undefined || song.genres.length === 0 ? {} : { genres: song.genres }),
@@ -545,14 +544,7 @@ export function matchesQuery(song: SearchSong, query: string): boolean {
     if (/^\d+$/.test(q) && song.ids.some((id) => String(id).startsWith(q))) {
         return true;
     }
-    return [
-        song.title,
-        song.artist,
-        song.from,
-        song.category,
-        ...(song.categories ?? []),
-        ...(song.genres ?? []),
-    ]
+    return [song.title, song.artist, song.from, ...(song.categories ?? []), ...(song.genres ?? [])]
         .filter(Boolean)
         .join(" ")
         .toLowerCase()

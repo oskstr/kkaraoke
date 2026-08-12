@@ -582,7 +582,6 @@ interface OverrideRecord {
     sortAs?: string;
     title?: string;
     from?: string;
-    category?: string;
     categories?: string[];
     language?: string;
     year?: number;
@@ -687,7 +686,7 @@ function overridesReview(
         "Each row is what the venue had, then what we show after the override. An empty artist",
         "means omit a category label rather than invent a performer.",
         "",
-        "| id | venue artist | venue title | → artist | → title | category | why | postId |",
+        "| id | venue artist | venue title | → artist | → title | categories | why | postId |",
         "| -: | --- | --- | --- | --- | --- | --- | -: |",
     ];
 
@@ -697,24 +696,19 @@ function overridesReview(
         return (left?.id ?? a.postId) - (right?.id ?? b.postId);
     });
 
-    const categoryCell = (override: OverrideRecord): string => {
-        const labels = [
-            ...(override.category ? [override.category] : []),
-            ...(override.categories ?? []),
-        ];
-        return [...new Set(labels)].join(", ");
-    };
+    const categoriesCell = (override: OverrideRecord): string =>
+        [...new Set(override.categories ?? [])].join(", ");
 
     for (const override of rows) {
         const venue = byPostId.get(override.postId);
         if (venue === undefined) {
             lines.push(
-                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(categoryCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
+                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(categoriesCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
             );
             continue;
         }
         lines.push(
-            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(categoryCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(categoriesCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
         );
     }
 

@@ -25,7 +25,7 @@ function SongSubtitle({ song }: { song: SearchSong }) {
             </>
         );
     }
-    const bits = [song.category, ...meta].filter(Boolean);
+    const bits = [(song.categories ?? []).join(", ") || null, ...meta].filter(Boolean);
     return bits.length > 0 ? <>{bits.join(" · ")}</> : null;
 }
 
