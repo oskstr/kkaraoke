@@ -1,0 +1,26 @@
+---
+interface Props {
+    id: string;
+    autofocus?: boolean;
+}
+
+const { id, autofocus = false } = Astro.props;
+---
+
+{/* 16px minimum — iOS zooms inputs smaller than that. */}
+<input
+    id={id}
+    type="search"
+    name="q"
+    placeholder="Songs, artists, films"
+    class="min-w-0 flex-1 border-0 bg-transparent text-base leading-normal text-cream outline-none placeholder:text-muted"
+    style="font-size: 16px;"
+    autocomplete="off"
+    autocorrect="off"
+    spellcheck="false"
+    enterkeyhint="search"
+    data-search-input
+    transition:persist="catalogue-search-input"
+    aria-label="Search songs, artists, films"
+    autofocus={autofocus || undefined}
+/>

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SearchResults from "../components/SearchResults";
+import SearchInput from "../components/SearchInput.astro";
 import { collectionLabel, collectionPath, collator } from "../lib/catalogue";
 import { categoriesForSong } from "../lib/categories";
 import { getSongs } from "../lib/songs";
@@ -32,46 +33,34 @@ const inputId = "catalogue-search-input";
 ---
 
 <Layout title="Search · kkaraoke">
-    <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
-            <div class="flex items-center gap-2.5">
-                <label
-                    class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3.5"
-                    for={inputId}
+    <div class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-3">
+        <div class="flex items-center gap-2.5">
+            <label
+                class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3.5"
+                for={inputId}
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="none"
+                    stroke="#8B8278"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    aria-hidden="true"
+                    class="pointer-events-none"
+                    ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
                 >
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="17"
-                        height="17"
-                        fill="none"
-                        stroke="#8B8278"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                        aria-hidden="true"
-                        ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
-                    >
-                    <input
-                        id={inputId}
-                        type="search"
-                        name="q"
-                        placeholder="Songs, artists, films"
-                        class="min-w-0 flex-1 border-0 bg-transparent text-base leading-normal text-cream outline-none placeholder:text-muted"
-                        style="font-size: 16px;"
-                        autocomplete="off"
-                        autocorrect="off"
-                        spellcheck="false"
-                        enterkeyhint="search"
-                        autofocus
-                        data-search-input
-                    />
-                </label>
-                <a
-                    href="/"
-                    data-smart-back
-                    class="bg-transparent px-1 py-1 text-base text-[#9A9086] no-underline hover:text-[#C6BDB1]"
-                >
-                    Cancel
-                </a>
-            </div>
+                <SearchInput id={inputId} autofocus />
+            </label>
+            <a
+                href="/"
+                data-smart-back
+                class="bg-transparent px-1 py-1 text-base text-[#9A9086] no-underline hover:text-[#C6BDB1]"
+            >
+                Cancel
+            </a>
         </div>
-        <SearchResults client:load suggestions={suggestions} inputId={inputId} />
+    </div>
+    <SearchResults client:load suggestions={suggestions} inputId={inputId} />
 </Layout>

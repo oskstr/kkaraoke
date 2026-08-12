@@ -1,10 +1,11 @@
 /** In-app back + search focus. Scroll restore is Astro ClientRouter’s job
  *  (window scroll). We only help windowed song lists grow tall enough on back. */
 
-export {};
+import { navigate } from "astro:transitions/client";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
+const SEARCH_PERSIST = "catalogue-search-input";
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -45,24 +46,81 @@ function markNavigated(): void {
     sessionStorage.setItem(NAVIGATED_KEY, "1");
 }
 
-function focusSearchInput(): void {
-    if (!location.pathname.startsWith("/search")) return;
-    const input = document.querySelector<HTMLInputElement>("[data-search-input]");
-    if (!input) return;
-    input.focus({ preventScroll: true });
+function searchInputEl(): HTMLInputElement | null {
+    return document.querySelector<HTMLInputElement>("[data-search-input]");
 }
 
-function scheduleSearchFocus(): void {
+function focusSearchInput(): boolean {
+    if (!location.pathname.startsWith("/search")) return false;
+    const input = searchInputEl();
+    if (!input) return false;
+    if (document.activeElement !== input) {
+        input.focus({ preventScroll: true });
+    }
+    return document.activeElement === input;
+}
+
+async function waitForViewTransitions(): Promise<void> {
+    const animations = document.getAnimations?.() ?? [];
+    const pending = animations.filter((animation) => animation.playState !== "finished");
+    if (pending.length === 0) return;
+    await Promise.all(pending.map((animation) => animation.finished.catch(() => undefined)));
+}
+
+async function scheduleSearchFocus(): Promise<void> {
     if (!location.pathname.startsWith("/search")) return;
     focusSearchInput();
-    requestAnimationFrame(() => focusSearchInput());
+    requestAnimationFrame(() => {
+        focusSearchInput();
+    });
+    await waitForViewTransitions();
+    focusSearchInput();
 }
 
-function onSearchLaunch(event: Event): void {
+function wantsSearchFocus(): boolean {
+    if (!location.pathname.startsWith("/search")) return false;
+    if (sessionStorage.getItem(FOCUS_SEARCH_KEY) === "1") return true;
+    // Don't pop the keyboard when returning to a previous search.
+    if (lastNavDirection === "back") return false;
+    return true;
+}
+
+function resetBrowseSearchInput(): void {
+    const input = searchInputEl();
+    if (!input) return;
+    if (document.activeElement === input) input.blur();
+    if (input.value !== "") {
+        input.value = "";
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+}
+
+let openingSearch = false;
+
+function keepSearchInput(pathname: string): boolean {
+    return pathname.startsWith("/search") || pathname === "/" || pathname.startsWith("/browse");
+}
+
+/** Open /search from the browse field without dropping caret/keyboard. */
+function openSearchFromBrowse(event: Event): void {
+    if (location.pathname.startsWith("/search") || openingSearch) return;
     const target = event.target;
     if (!(target instanceof Element)) return;
-    if (!target.closest("[data-search-launch]")) return;
+    const launch = target.closest<HTMLElement>("[data-search-launch]");
+    if (!launch) return;
+    if (event instanceof PointerEvent && event.button !== 0) return;
+
+    // Mark before focus() — focusin fires synchronously and would otherwise
+    // start a second navigate().
+    openingSearch = true;
     sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
+
+    const input = launch.querySelector<HTMLInputElement>("[data-search-input]") ?? searchInputEl();
+    input?.focus({ preventScroll: true });
+
+    void navigate("/search").finally(() => {
+        openingSearch = false;
+    });
 }
 
 /** Remember which song row was clicked so windowed lists can expand to it on back. */
@@ -77,6 +135,7 @@ function onSongArtistPointerDown(event: Event): void {
 
 type PreparationEvent = Event & {
     direction?: "forward" | "back";
+    to?: URL;
 };
 
 /**
@@ -109,9 +168,7 @@ function expandWindowedListForBack(): void {
         );
 
         if (untilId) {
-            const el = document.querySelector<HTMLElement>(
-                `.song-row[data-id="${CSS.escape(untilId)}"]`,
-            );
+            const el = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
             if (el) {
                 const top = el.getBoundingClientRect().top + window.scrollY;
                 if (Math.abs(window.scrollY - top) > 48) {
@@ -142,11 +199,20 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
-    document.addEventListener("pointerdown", onSearchLaunch, true);
+    // focusin: keyboard / label activation. pointerdown: start the fetch as
+    // soon as the finger lands, while the input is focused in the same gesture.
+    document.addEventListener("pointerdown", openSearchFromBrowse, true);
+    document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
 
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
+        const dest = (event as PreparationEvent).to?.pathname ?? "";
+        if (!keepSearchInput(dest)) {
+            searchInputEl()?.removeAttribute("data-astro-transition-persist");
+        } else {
+            searchInputEl()?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
+        }
     });
 
     document.addEventListener("astro:after-swap", () => {
@@ -154,12 +220,11 @@ if (!window.__kkaraokeNavInit) {
         if (lastNavDirection === "back") {
             expandWindowedListForBack();
         }
-        if (
-            sessionStorage.getItem(FOCUS_SEARCH_KEY) === "1" ||
-            location.pathname.startsWith("/search")
-        ) {
+        if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
-            scheduleSearchFocus();
+            void scheduleSearchFocus();
+        } else if (!location.pathname.startsWith("/search")) {
+            resetBrowseSearchInput();
         }
     });
 
@@ -168,12 +233,9 @@ if (!window.__kkaraokeNavInit) {
             expandWindowedListForBack();
             requestAnimationFrame(expandWindowedListForBack);
         }
-        if (
-            sessionStorage.getItem(FOCUS_SEARCH_KEY) === "1" ||
-            location.pathname.startsWith("/search")
-        ) {
+        if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
-            scheduleSearchFocus();
+            void scheduleSearchFocus();
         }
     });
 
