@@ -132,13 +132,21 @@ const overrides = new Map(
     (overridesFile.overrides as Override[]).map((entry) => [entry.postId, entry]),
 );
 
+interface ArtistNameEntry {
+    name: string;
+    /** Optional URL slug when slugifying `name` would be awkward (`P!nk` → `pink`). */
+    slug?: string;
+    why?: string;
+}
+
 const artistRecords = new Map<string, ArtistRecord>(
     (artistsFile.artists as ArtistRecord[]).map((artist) => [artist.mbid, artist]),
 );
+const artistNameEntries = new Map<string, ArtistNameEntry>(
+    Object.entries((artistNamesFile.artists ?? {}) as Record<string, ArtistNameEntry>),
+);
 const artistDisplayNames = new Map<string, string>(
-    Object.entries(
-        (artistNamesFile.artists ?? {}) as Record<string, { name: string; why?: string }>,
-    ).map(([mbid, entry]) => [mbid, entry.name]),
+    [...artistNameEntries].map(([mbid, entry]) => [mbid, entry.name]),
 );
 
 function displayNameFor(mbid: string, fallback?: string): string | undefined {
@@ -227,13 +235,36 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
 });
 
 /**
- * Unique slugs for every artist that appears on a song. Prefer the bare name; when two
- * catalogue artists share a slug, fall back to type, then MusicBrainz disambiguation,
- * then a short id suffix — never leave two pages fighting over one URL.
+ * Unique slugs for every artist that appears on a song. Curated `slug` entries in
+ * artist-names.json win first. Otherwise prefer the bare name; when two catalogue
+ * artists share a slug, fall back to type, then MusicBrainz disambiguation, then a
+ * short id suffix — never leave two pages fighting over one URL.
  */
 function assignSlugs(mbids: Iterable<string>): Map<string, string> {
-    const byBase = new Map<string, string[]>();
+    const slugByMbid = new Map<string, string>();
+    const used = new Set<string>();
+    const remaining: string[] = [];
+
+    const claim = (mbid: string, candidate: string): void => {
+        let slug = candidate;
+        if (used.has(slug)) {
+            slug = `${candidate}-${mbid.slice(0, 8)}`;
+        }
+        used.add(slug);
+        slugByMbid.set(mbid, slug);
+    };
+
     for (const mbid of mbids) {
+        const curated = artistNameEntries.get(mbid)?.slug;
+        if (curated !== undefined && curated.length > 0) {
+            claim(mbid, slugify(curated));
+        } else {
+            remaining.push(mbid);
+        }
+    }
+
+    const byBase = new Map<string, string[]>();
+    for (const mbid of remaining) {
         const name = displayNameFor(mbid);
         if (name === undefined) {
             continue;
@@ -247,20 +278,8 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
         }
     }
 
-    const slugByMbid = new Map<string, string>();
-    const used = new Set<string>();
-
-    const claim = (mbid: string, candidate: string): void => {
-        let slug = candidate;
-        if (used.has(slug)) {
-            slug = `${candidate}-${mbid.slice(0, 8)}`;
-        }
-        used.add(slug);
-        slugByMbid.set(mbid, slug);
-    };
-
     for (const [base, group] of byBase) {
-        if (group.length === 1) {
+        if (group.length === 1 && !used.has(base)) {
             claim(group[0]!, base);
             continue;
         }
@@ -272,11 +291,13 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
                     ? slugify(record.disambiguation)
                     : undefined;
             const candidate =
-                typeSlug !== undefined && !used.has(`${base}-${typeSlug}`)
-                    ? `${base}-${typeSlug}`
-                    : disambiguationSlug !== undefined && !used.has(`${base}-${disambiguationSlug}`)
-                      ? `${base}-${disambiguationSlug}`
-                      : `${base}-${mbid.slice(0, 8)}`;
+                !used.has(base) && group.length === 1
+                    ? base
+                    : typeSlug !== undefined && !used.has(`${base}-${typeSlug}`)
+                      ? `${base}-${typeSlug}`
+                      : disambiguationSlug !== undefined && !used.has(`${base}-${disambiguationSlug}`)
+                        ? `${base}-${disambiguationSlug}`
+                        : `${base}-${mbid.slice(0, 8)}`;
             claim(mbid, candidate);
         }
     }
