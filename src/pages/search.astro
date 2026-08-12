@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SearchResults from "../components/SearchResults";
-import { collectionPath, collator } from "../lib/catalogue";
+import { collectionLabel, collectionPath, collator } from "../lib/catalogue";
 import { getSongs } from "../lib/songs";
 
 const songs = getSongs();
@@ -23,8 +23,8 @@ const cats = [...new Set(songs.map((s) => s.category).filter((c): c is string =>
 
 const suggestions = [
     { label: "Artists, A–Z", href: "/artists" },
-    ...genres.map((g) => ({ label: g, href: collectionPath("genre", g) })),
-    ...cats.map((c) => ({ label: c, href: collectionPath("category", c) })),
+    ...genres.map((g) => ({ label: collectionLabel("genre", g), href: collectionPath("genre", g) })),
+    ...cats.map((c) => ({ label: collectionLabel("category", c), href: collectionPath("category", c) })),
     { label: "80s", href: collectionPath("decade", "1980") },
     { label: "90s", href: collectionPath("decade", "1990") },
 ];
