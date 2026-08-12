@@ -1,8 +1,8 @@
-import catalogue from "../../data/songs.json";
-import resolved from "../../data/resolved.json";
-import overridesFile from "../../data/overrides.json";
-import artistsFile from "../../data/artists.json";
-import artistNamesFile from "../../data/artist-names.json";
+import catalogue from "../../data/songs.json" with { type: "json" };
+import resolved from "../../data/resolved.json" with { type: "json" };
+import overridesFile from "../../data/overrides.json" with { type: "json" };
+import artistsFile from "../../data/artists.json" with { type: "json" };
+import artistNamesFile from "../../data/artist-names.json" with { type: "json" };
 
 /**
  * One credited performer on a song. Collaborations carry several of these so each name
