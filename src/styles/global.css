@@ -38,12 +38,20 @@ body {
     box-sizing: border-box;
 }
 
+/* Don't force gold on every anchor — selected pills need cream/dark contrast. */
 a {
-    color: var(--color-gold);
     text-decoration: none;
 }
 
-a:hover {
+a.link-accent,
+p a,
+.prose a {
+    color: var(--color-gold);
+}
+
+a.link-accent:hover,
+p a:hover,
+.prose a:hover {
     color: var(--color-gold-soft);
 }
 
@@ -64,6 +72,11 @@ input {
     display: none;
 }
 
+.song-row {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 68px;
+}
+
 @keyframes rise {
     from {
         transform: translateY(12px);
@@ -77,6 +90,12 @@ input {
 
 .rise {
     animation: rise 0.45s ease both;
+}
+
+/* Morphing shared collection elements — longer easing than the root fade. */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 260ms;
 }
 
 @media (prefers-reduced-motion: reduce) {

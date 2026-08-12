@@ -8,16 +8,16 @@ interface Props {
 const { active } = Astro.props;
 ---
 
-<div class="hd mt-3 flex gap-1.5 overflow-x-auto" transition:name="facet-tabs">
+<div class="hd mt-3 flex gap-1.5 overflow-x-auto">
     {
         FACETS.map((facet) => (
             <a
                 href={facet.href}
                 class:list={[
-                    "shrink-0 rounded-full border px-3.5 py-2 text-[13.5px] font-semibold",
+                    "shrink-0 rounded-full border px-3.5 py-2 text-[13.5px] font-semibold no-underline",
                     facet.key === active
-                        ? "border-cream bg-cream text-[#14120F]"
-                        : "border-line-strong bg-panel text-[#9A9086]",
+                        ? "border-[#F2EDE4] bg-[#F2EDE4] text-[#14120F] hover:text-[#14120F]"
+                        : "border-[#2A2724] bg-[#1A1917] text-[#9A9086] hover:text-[#C6BDB1]",
                 ]}
             >
                 {facet.label}

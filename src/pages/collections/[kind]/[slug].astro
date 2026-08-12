@@ -5,7 +5,9 @@ import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
     collectionKinds,
+    primaryArtistHref,
     resolveCollection,
+    songSubtitle,
     songsInCollection,
     sortSongs,
     type CollectionKind,
@@ -49,24 +51,126 @@ if (collection === undefined) {
 }
 
 const rows = sortSongs(songsInCollection(songs, collection.kind, collection.key), "az");
+/** Keep the first paint small so View Transitions + back-navigation stay responsive. */
+const INITIAL = 100;
+const initialRows = rows.slice(0, INITIAL);
+const moreRows = rows.slice(INITIAL).map((song) => {
+    const href = primaryArtistHref(song);
+    return {
+        id: song.id,
+        title: song.song,
+        subtitle: songSubtitle(song),
+        artist: song.artist || song.category || "",
+        year: song.year !== undefined ? String(song.year) : "",
+        ...(href === undefined ? {} : { href }),
+    };
+});
 ---
 
 <Layout title={`${collection.label} · kkaraoke`}>
     <header
-        class="px-[18px] pt-[22px] pb-0"
+        class="collection-header px-[18px] pt-[22px] pb-0"
         style={`background:${collection.tint}`}
-        transition:name={`collection-${kind}-${slug}`}
+        transition:name={collection.transitionName}
+        transition:animate="none"
     >
         <BackLink href="/" label="← BACK" light />
         <h1
-            class="mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
-            transition:name={`title-${kind}-${slug}`}
+            class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
+            transition:name={collection.titleTransitionName}
+            transition:animate="none"
         >
             {collection.label}
         </h1>
     </header>
     <SortTabs tint={collection.tint} />
-    <main class="hd flex-1 overflow-y-auto bg-surface px-[18px] pt-1.5 pb-6" transition:animate="slide">
-        <SongList songs={rows} sortable />
+    <main class="hd flex-1 overflow-y-auto bg-surface px-[18px] pt-1.5 pb-6">
+        <SongList songs={initialRows} sortable />
+        {
+            moreRows.length > 0 && (
+                <div class="py-4" data-more-songs-root>
+                    <script
+                        is:inline
+                        type="application/json"
+                        data-more-songs
+                        set:html={JSON.stringify(moreRows)}
+                    />
+                    <button
+                        type="button"
+                        data-show-more
+                        class="w-full rounded-xl border border-line-strong bg-panel px-4 py-3 text-[14px] font-semibold text-cream-soft"
+                    >
+                        Show {moreRows.length} more
+                    </button>
+                </div>
+            )
+        }
     </main>
 </Layout>
+
+<script>
+    type MoreSong = {
+        id: number;
+        title: string;
+        subtitle: string;
+        artist: string;
+        year: string;
+        href?: string;
+    };
+
+    function rowHtml(song: MoreSong): string {
+        const title = escapeHtml(song.title);
+        const subtitle = escapeHtml(song.subtitle);
+        const body = song.href
+            ? `<a href="${escapeAttr(song.href)}" class="flex min-h-11 flex-1 flex-col justify-center text-left no-underline">
+            <div class="text-[15.5px] leading-snug text-cream">${title}</div>
+            <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>
+          </a>`
+            : `<div class="flex min-h-11 flex-1 flex-col justify-center">
+            <div class="text-[15.5px] leading-snug text-cream">${title}</div>
+            <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>
+          </div>`;
+        return `<div class="song-row flex items-center gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}">
+        ${body}
+        <button type="button" data-fav-toggle="${song.id}" class="min-w-11 bg-transparent px-1 py-2.5 text-[17px]" style="border:0;color:#3B3733" aria-label="Add to favorites" aria-pressed="false">♥</button>
+      </div>`;
+    }
+
+    function escapeHtml(value: string): string {
+        return value
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;");
+    }
+
+    function escapeAttr(value: string): string {
+        return escapeHtml(value).replaceAll("'", "&#39;");
+    }
+
+    function bindShowMore() {
+        const root = document.querySelector("[data-more-songs-root]");
+        const list = document.querySelector("[data-song-list]");
+        const btn = document.querySelector("[data-show-more]");
+        const json = document.querySelector("[data-more-songs]");
+        if (!root || !list || !btn || !json) return;
+
+        btn.addEventListener(
+            "click",
+            () => {
+                try {
+                    const more = JSON.parse(json.textContent || "[]") as MoreSong[];
+                    list.insertAdjacentHTML("beforeend", more.map(rowHtml).join(""));
+                    root.remove();
+                    window.dispatchEvent(new Event("kkaraoke:favorites"));
+                } catch {
+                    root.remove();
+                }
+            },
+            { once: true },
+        );
+    }
+
+    bindShowMore();
+    document.addEventListener("astro:page-load", bindShowMore);
+</script>

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import FavoriteButton, { useFavorites } from "./FavoriteButton";
 import type { SearchSong } from "../lib/catalogue";
+import { getSearchIndex } from "../lib/search-index";
 
 function subtitle(song: SearchSong): string {
     const bits: string[] = [];
@@ -19,11 +20,7 @@ export default function FavoritesApp() {
 
     useEffect(() => {
         let cancelled = false;
-        fetch("/search-index.json")
-            .then((r) => {
-                if (!r.ok) throw new Error("bad status");
-                return r.json() as Promise<{ songs: SearchSong[] }>;
-            })
+        getSearchIndex()
             .then((data) => {
                 if (!cancelled) setSongs(data.songs);
             })
@@ -54,7 +51,7 @@ export default function FavoritesApp() {
                 </p>
                 <a
                     href="/"
-                    className="inline-block rounded-[10px] bg-gold px-[18px] py-3 text-[14.5px] font-semibold text-[#14120F] no-underline"
+                    className="inline-block rounded-[10px] bg-gold px-[18px] py-3 text-[14.5px] font-semibold text-[#14120F] no-underline hover:text-[#14120F]"
                 >
                     Start browsing
                 </a>
@@ -68,9 +65,9 @@ export default function FavoritesApp() {
                 <div key={song.id} className="flex items-center gap-2.5 border-b border-line py-3">
                     <a
                         href={song.artistSlug ? `/artists/${song.artistSlug}` : "/"}
-                        className="flex min-h-11 flex-1 flex-col justify-center text-left no-underline"
+                        className="flex min-h-11 flex-1 flex-col justify-center text-left text-cream no-underline hover:text-cream"
                     >
-                        <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
+                        <div className="text-[15.5px] leading-snug">{song.title}</div>
                         <div className="mt-0.5 text-[13px] text-muted">{subtitle(song)}</div>
                     </a>
                     <FavoriteButton songId={song.id} />

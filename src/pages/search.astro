@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SearchApp from "../components/SearchApp";
+import SearchResults from "../components/SearchResults";
 import { collectionPath, collator } from "../lib/catalogue";
 import { getSongs } from "../lib/songs";
 
@@ -28,8 +28,81 @@ const suggestions = [
     { label: "80s", href: collectionPath("decade", "1980") },
     { label: "90s", href: collectionPath("decade", "1990") },
 ];
+
+const inputId = "catalogue-search-input";
 ---
 
 <Layout title="Search · kkaraoke">
-    <SearchApp client:load suggestions={suggestions} />
+    <div class="flex min-h-0 flex-1 flex-col">
+        <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
+            <div class="flex items-center gap-2.5">
+                <div
+                    class="flex flex-1 items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3"
+                    transition:name="search-field"
+                    transition:animate="none"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="17"
+                        height="17"
+                        fill="none"
+                        stroke="#8B8278"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        aria-hidden="true"
+                        ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+                    >
+                    <input
+                        id={inputId}
+                        type="search"
+                        name="q"
+                        placeholder="Songs, artists, films"
+                        class="flex-1 border-0 bg-transparent text-[15px] text-cream outline-none placeholder:text-muted"
+                        autocomplete="off"
+                        autocorrect="off"
+                        spellcheck="false"
+                        enterkeyhint="search"
+                        data-search-input
+                    />
+                </div>
+                <a
+                    href="/"
+                    class="bg-transparent px-1 py-1 text-[14.5px] text-[#9A9086] no-underline hover:text-[#C6BDB1]"
+                >
+                    Cancel
+                </a>
+            </div>
+        </div>
+        <SearchResults client:load suggestions={suggestions} inputId={inputId} />
+    </div>
 </Layout>
+
+<script>
+    function focusSearch() {
+        if (!location.pathname.startsWith("/search")) return;
+        const input = document.querySelector<HTMLInputElement>("[data-search-input]");
+        if (!input) return;
+        requestAnimationFrame(() => {
+            input.focus({ preventScroll: true });
+            const len = input.value.length;
+            try {
+                input.setSelectionRange(len, len);
+            } catch {
+                /* type=search may not support selection in every browser */
+            }
+        });
+    }
+
+    declare global {
+        interface Window {
+            __kkaraokeSearchFocus?: boolean;
+        }
+    }
+
+    focusSearch();
+    if (!window.__kkaraokeSearchFocus) {
+        window.__kkaraokeSearchFocus = true;
+        document.addEventListener("astro:page-load", focusSearch);
+        document.addEventListener("astro:after-swap", focusSearch);
+    }
+</script>
