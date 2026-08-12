@@ -44,48 +44,36 @@ export const JAMES_BOND_FROM = new Set([
 ]);
 
 /**
- * Stage musicals and film musicals. Soundtrack cues from non-musical films (Bond,
- * Ghostbusters, LOTR, etc.) stay out — those remain under Film only.
+ * Stage musicals and clear live-action film musicals (Grease, HSM, Mary Poppins, …).
+ * Disney animated features with songs stay under Disney only — having musical numbers
+ * is not enough to count as a Musical here. Soundtrack cues from non-musical films
+ * (Bond, Ghostbusters, LOTR, etc.) stay out entirely.
  */
 export const MUSICAL_FROM = new Set([
-    "Aladdin",
     "Annie",
     "Annie Get Your Gun",
-    "Beauty and the Beast",
     "Bye Bye Birdie",
     "Cabaret",
     "Chess",
-    "Cinderella",
     "Dreamgirls",
     "Fiddler on the Roof",
-    "Frozen",
-    "Frozen II",
     "Funny Girl",
     "Gigi",
     "Grease",
     "Hair",
     "Hamilton",
-    "Hercules",
     "High School Musical",
     "High School Musical 2",
     "Jekyll & Hyde",
     "Jesus Christ Superstar",
     "Joseph",
-    "Lady and the Tramp",
     "Mary Poppins",
     "Moulin Rouge!",
-    "Mulan",
     "My Fair Lady",
     "Oliver!",
-    "Peter Pan",
     "Pippin",
-    "Pocahontas",
     "South Pacific",
-    "Tarzan",
     "The Fantasticks",
-    "The Jungle Book",
-    "The Lion King",
-    "The Little Mermaid",
     "The Music Man",
     "The Phantom of the Opera",
     "The Rocky Horror Picture Show",
