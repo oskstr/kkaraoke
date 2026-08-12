@@ -25,7 +25,7 @@ Everyone else is `slugify(display name)`.
 | 98° | 98 | 3 |  | `177fde26-5a95-46d9-922f-0933940d97e5` |
 | a‐ha | a-ha | 4 |  | `7364dea6-ca9a-48e3-be01-b44ad0d19897` |
 | A★Teens | a-teens | 3 |  | `69d9cb53-5b8f-41b0-ac84-49eabea535b2` |
-| A$AP Rocky | a-ap-rocky | 1 |  | `25b7b584-d952-4662-a8b9-dd8cdfbfeb64` |
+| A$AP Rocky | asap-rocky | 1 |  | `25b7b584-d952-4662-a8b9-dd8cdfbfeb64` |
 | A1 | a1 | 1 |  | `dfd8ee47-6169-403a-be9e-31c75293280e` |
 | Aaron Neville | aaron-neville | 1 |  | `2f53411b-ec29-4979-aa46-62786a2bb377` |
 | ABBA | abba | 32 |  | `d87e52c5-bb8d-4da8-b941-9f4928627dc8` |
@@ -42,7 +42,7 @@ Everyone else is `slugify(display name)`.
 | Afroman | afroman | 1 |  | `8c332797-2784-45a7-9b5c-3b86f07a03de` |
 | After Dark | after-dark | 1 |  | `f83494c8-387c-4017-9c8f-9d83fce56374` |
 | Agatha Lee Monn | agatha-lee-monn | 1 |  | `31d4f7c3-3554-4fe4-9364-f405636e89bc` |
-| Åge Aleksandersen | åge-aleksandersen | 1 |  | `012c856b-d7d6-4eca-b6c7-e81586dc164c` |
+| Åge Aleksandersen | age-aleksandersen | 1 |  | `012c856b-d7d6-4eca-b6c7-e81586dc164c` |
 | Agents | agents | 1 |  | `8fa7b39a-6faa-49ab-8a62-8dc6b71c1947` |
 | Agnes | agnes | 5 |  | `54e93235-2034-478d-b47b-a985828193b7` |
 | Ahti Lampi | ahti-lampi | 1 |  | `3cc6c33e-4b45-4a66-8e07-95dd3da13494` |
@@ -91,13 +91,13 @@ Everyone else is `slugify(display name)`.
 | Anders Ekborg | anders-ekborg | 1 |  | `8de1f841-53cc-4ca3-b841-a92d7fb84c81` |
 | Anders Glenmark | anders-glenmark | 1 |  | `91eaa91f-de20-48fa-ab6e-749039187463` |
 | Andra generationen | andra-generationen | 2 |  | `7137cdc7-5152-4ba9-8343-d9f6611a3a1f` |
-| André 3000 | andré-3000 | 1 |  | `f563a1a9-069b-41ed-8b3b-e1b1a6f5b34b` |
+| André 3000 | andre-3000 | 1 |  | `f563a1a9-069b-41ed-8b3b-e1b1a6f5b34b` |
 | Andrea Bocelli | andrea-bocelli | 2 |  | `c5a0a216-c33c-42dc-92b8-4b60236f8dad` |
 | Andrea McArdle | andrea-mcardle | 1 |  | `204ce22e-cc95-4eb4-aadb-79274e0d10bb` |
 | Andreas Da Man | andreas-da-man | 1 |  | `601db3a8-51fe-4b53-9f00-958c0138f630` |
 | Andreas Johnson | andreas-johnson | 5 |  | `25a5763e-a6e1-4491-8a89-fdc00f0697dc` |
 | Andreas Lundstedt | andreas-lundstedt | 1 |  | `8f15e2c1-4cd1-4509-9282-3864eb0d903c` |
-| Andrés Esteche | andrés-esteche | 1 |  | `dc9baeb0-b832-4949-9c8b-9978b39190bc` |
+| Andrés Esteche | andres-esteche | 1 |  | `dc9baeb0-b832-4949-9c8b-9978b39190bc` |
 | Andrew Lloyd Webber | andrew-lloyd-webber | 1 |  | `980ee2d8-2ee9-407b-b48e-48360fbc7437` |
 | Andy Kim | andy-kim | 1 |  | `a6d3a1bf-ee78-4a6d-96b3-1bd9769128c4` |
 | Andy Williams | andy-williams | 3 |  | `57cb4257-9855-4a42-b1be-bfba1d9b520d` |
@@ -111,14 +111,14 @@ Everyone else is `slugify(display name)`.
 | Anita Lindblom | anita-lindblom | 1 |  | `f2247bd5-491d-49ef-b6a6-2f08cdd8cd41` |
 | Anita Ward | anita-ward | 1 |  | `5ffe7875-614f-4823-879b-1fd66574a36d` |
 | Ann Wilson | ann-wilson | 1 |  | `5d8a6a6f-44ae-4421-865f-470600f4db65` |
-| Ann-Christine Bärnsten | ann-christine-bärnsten | 1 |  | `200d54af-6078-427c-af3c-943b2c255b0b` |
+| Ann-Christine Bärnsten | ann-christine-barnsten | 1 |  | `200d54af-6078-427c-af3c-943b2c255b0b` |
 | Ann-Louise Hanson | ann-louise-hanson | 1 |  | `cda648a7-44c6-4e1a-8f1d-2953db08751b` |
 | Anna Bergendahl | anna-bergendahl | 1 |  | `1cce195c-0d80-45ce-bcc6-ae9bd30b4207` |
 | Anna Book | anna-book | 2 |  | `6ad8535d-0a2f-4b23-883e-0d32621d36d9` |
 | Anna Maria Espinosa | anna-maria-espinosa | 1 |  | `2c10fef5-5cc9-48e0-9277-87797704a96a` |
 | Anna McMurphy | anna-mcmurphy | 1 |  | `c8b58f72-9f52-4235-80ee-accd2fe2e0af` |
 | Anne Murray | anne-murray | 1 |  | `cff63c14-b081-4686-9357-eea84d5348fc` |
-| Anne‐Lie Rydé | anne-lie-rydé | 2 |  | `18986d60-32ef-4388-9691-d23f8679419c` |
+| Anne‐Lie Rydé | anne-lie-ryde | 2 |  | `18986d60-32ef-4388-9691-d23f8679419c` |
 | Anne‐Marie | anne-marie | 5 |  | `e3d5b5ec-101a-4529-9f2d-01dca64cf44e` |
 | Annie | annie | 1 |  | `2a9ea5bf-fc08-4fbc-ab73-17afa7906a52` |
 | Annie Lennox | annie-lennox | 6 |  | `3e30aebd-0557-4cfd-8fb9-3945afa5d72b` |
@@ -136,7 +136,7 @@ Everyone else is `slugify(display name)`.
 | Arrow | arrow | 1 |  | `2ddfac74-e28c-4041-8810-fee1e45ec508` |
 | Art Garfunkel | art-garfunkel | 1 |  | `fc0a5289-4b77-4246-9c8d-857c8b617f5d` |
 | Arvingarna | arvingarna | 1 |  | `e37bfc6d-869d-4cbd-9f1d-573af306c93e` |
-| Åsa Jinder | åsa-jinder | 1 |  | `b6eaede3-3006-41d7-838f-5c2b0a17e41c` |
+| Åsa Jinder | asa-jinder | 1 |  | `b6eaede3-3006-41d7-838f-5c2b0a17e41c` |
 | Ashanti | ashanti | 2 |  | `a47ed6d5-480e-428c-8ce9-d7a6a571e857` |
 | Asher Roth | asher-roth | 1 |  | `c7d35b71-961e-4713-b65d-35a98591204a` |
 | Ashley Tisdale | ashley-tisdale | 1 |  | `1fa14a96-c25c-4bb7-b94d-ff453519eab3` |
@@ -191,7 +191,7 @@ Everyone else is `slugify(display name)`.
 | Bertie Higgins | bertie-higgins | 1 |  | `438ec4fc-57f7-401a-a188-2ffecd020728` |
 | Bette Midler | bette-midler | 10 |  | `ed333e8b-d18a-49fc-b361-4ec9731dfdba` |
 | Beverley Craven | beverley-craven | 1 |  | `996417f3-5457-4b9f-9bd7-2cfb3d338d49` |
-| Beyoncé | beyoncé | 22 |  | `859d0860-d480-4efd-970c-c05d5f1776b8` |
+| Beyoncé | beyonce | 22 |  | `859d0860-d480-4efd-970c-c05d5f1776b8` |
 | Big Mountain | big-mountain | 1 |  | `bc6c4055-043d-4987-b6bd-4d4298284dff` |
 | Big Sean | big-sean | 1 |  | `942a9807-9c1a-4a0e-a285-1fde2c5be9d1` |
 | Bill Haley and His Comets | bill-haley-and-his-comets | 2 |  | `4458d70d-c215-4f06-beea-ebd448dad6ac` |
@@ -209,10 +209,10 @@ Everyone else is `slugify(display name)`.
 | Billy Vera & The Beaters | billy-vera-and-the-beaters | 1 |  | `112af184-678f-4787-9035-a6b17aeb0a3e` |
 | Bing Crosby | bing-crosby | 1 |  | `2437980f-513a-44fc-80f1-b90d9d7fcf8f` |
 | Biz Markie | biz-markie | 1 |  | `48b48175-5ffd-49a2-88e2-ca84118544ca` |
-| Björk | björk | 1 |  | `87c5dedd-371d-4a53-9f7f-80522fb7f3cb` |
-| Björn Afzelius | björn-afzelius | 2 |  | `48b7ec64-c8d0-4783-92f8-c26d89dace0d` |
-| Björn Kjellman | björn-kjellman | 1 |  | `9cb17c2c-7fc1-4acf-80da-92e7500a1403` |
-| Björn Skifs | björn-skifs | 5 |  | `b3c8a465-9081-41ef-b845-43fbf24e15e0` |
+| Björk | bjork | 1 |  | `87c5dedd-371d-4a53-9f7f-80522fb7f3cb` |
+| Björn Afzelius | bjorn-afzelius | 2 |  | `48b7ec64-c8d0-4783-92f8-c26d89dace0d` |
+| Björn Kjellman | bjorn-kjellman | 1 |  | `9cb17c2c-7fc1-4acf-80da-92e7500a1403` |
+| Björn Skifs | bjorn-skifs | 5 |  | `b3c8a465-9081-41ef-b845-43fbf24e15e0` |
 | Black Eyed Peas | black-eyed-peas | 5 |  | `d5be5333-4171-427e-8e12-732087c6b78e` |
 | Black Jack | black-jack | 2 |  | `46536573-9dda-42af-b11e-27e17b8dfaa2` |
 | Black Sabbath | black-sabbath | 9 |  | `5182c1d9-c7d2-4dad-afa0-ccfeada921a8` |
@@ -228,7 +228,7 @@ Everyone else is `slugify(display name)`.
 | Blue | blue | 6 |  | `9c79224c-70cd-4367-8d90-35ca99401b75` |
 | Blue Lagoon | blue-lagoon | 2 |  | `61cdf28b-d30f-42dc-8aa5-9203f47ad721` |
 | Blue October | blue-october | 3 |  | `d6a3eeec-cde0-4c10-89b2-93e0bd5f34e6` |
-| Blue Öyster Cult | blue-öyster-cult | 3 |  | `c7423e0c-ab3e-4ab4-be10-cdff5a9d3062` |
+| Blue Öyster Cult | blue-oyster-cult | 3 |  | `c7423e0c-ab3e-4ab4-be10-cdff5a9d3062` |
 | Blue Swede | blue-swede | 1 |  | `f98a61b4-394d-4e1f-a5f3-f747b9494e5a` |
 | Blues Traveler | blues-traveler | 1 |  | `6b28ecf0-94e6-48bb-aa2a-5ede325b675b` |
 | Blur | blur | 13 |  | `ba853904-ae25-4ebb-89d6-c44cfbd71bd2` |
@@ -265,7 +265,7 @@ Everyone else is `slugify(display name)`.
 | Boz Scaggs | boz-scaggs | 2 |  | `18a33653-bbaf-4aa7-884c-73f02a7a4515` |
 | Brad Paisley | brad-paisley | 2 |  | `6cfd7ffc-824f-4219-8e27-4b9417700f44` |
 | Bradley Cooper | bradley-cooper | 2 |  | `cbe7746f-d4b4-4f0d-a435-1aa181d97b1b` |
-| Brandsta City Släckers | brandsta-city-släckers | 1 |  | `3b9d5742-4404-46f8-89f1-a8149235b859` |
+| Brandsta City Släckers | brandsta-city-slackers | 1 |  | `3b9d5742-4404-46f8-89f1-a8149235b859` |
 | Brandy | brandy | 7 |  | `01e60eba-52df-4694-8f09-39f43abe54e9` |
 | Bread | bread | 2 |  | `e3bcf587-a354-4723-a2d3-1c679d6571ea` |
 | Brenda Lee | brenda-lee | 1 |  | `6ca4886a-8f77-4133-b404-46fb3908e24a` |
@@ -292,7 +292,7 @@ Everyone else is `slugify(display name)`.
 | BWO | bwo | 4 |  | `3ae2b4db-bdf7-4c97-9953-8e8229f61573` |
 | Caesars | caesars | 1 |  | `2f1e4ada-2b9a-4834-90fa-88d61b73082f` |
 | CAGNET | cagnet | 3 |  | `23a914d3-2e6e-49f5-b914-c32a4e2446a7` |
-| CajsaStina Åkerström | cajsastina-åkerström | 1 |  | `9e8838f3-69a6-4994-82a1-2a3829ca2689` |
+| CajsaStina Åkerström | cajsastina-akerstrom | 1 |  | `9e8838f3-69a6-4994-82a1-2a3829ca2689` |
 | Calvin Harris | calvin-harris | 5 |  | `8dd98bdc-80ec-4e93-8509-2f46bafc09a7` |
 | Cameo | cameo | 1 |  | `ef4d808a-2113-44c3-9b44-1b31f026ef1e` |
 | Camila Cabello | camila-cabello | 1 |  | `01b8b5bf-06cb-45da-85fb-61ada72fcd69` |
@@ -318,13 +318,13 @@ Everyone else is `slugify(display name)`.
 | CeCe Winans | cece-winans | 1 |  | `5a5d32e1-f3d2-4fde-8b41-24a78e696b83` |
 | Cecilia Vennersten | cecilia-vennersten | 1 |  | `281ef2ea-f41a-4a72-8b54-0e507fcd3c85` |
 | CeeLo Green | ceelo-green | 1 |  | `2c69465c-0f76-45ce-90a2-1ed0fdacc997` |
-| Céline Dion | céline-dion | 51 |  | `847e8a0c-cc20-4213-9e16-975515c2a926` |
+| Céline Dion | celine-dion | 51 |  | `847e8a0c-cc20-4213-9e16-975515c2a926` |
 | Chad Kroeger | chad-kroeger | 2 |  | `a59edb65-fae2-4344-b77a-5232516d4d7a` |
 | Chairmen of the Board | chairmen-of-the-board | 1 |  | `0174d942-39da-4dcd-aa48-d0f3fb4f218d` |
 | Chaka Demus & Pliers | chaka-demus-and-pliers | 1 |  | `449f264b-1a94-4ef8-b601-2ffccbbedefa` |
 | Chaka Khan | chaka-khan | 8 |  | `900e9144-019d-4043-86cb-ec0e127c39d0` |
 | Chance the Rapper | chance-the-rapper | 1 |  | `373a4c98-a46b-48e4-86ec-f6ca65b4f438` |
-| Chanté Moore | chanté-moore | 1 |  | `17e359d0-966e-4c2a-a632-3e5c7de0a1d4` |
+| Chanté Moore | chante-moore | 1 |  | `17e359d0-966e-4c2a-a632-3e5c7de0a1d4` |
 | Charlene | charlene | 1 |  | `4390edc5-d79f-4694-ab34-fd445734de65` |
 | Charlene Soraia | charlene-soraia | 1 |  | `49228331-d9d1-44b8-9bda-d45d8dededaf` |
 | Charles & Eddie | charles-and-eddie | 2 |  | `07eaca09-98e9-421a-ac3e-cc007550b2f5` |
@@ -354,7 +354,7 @@ Everyone else is `slugify(display name)`.
 | Chris Norman | chris-norman | 1 |  | `197889a0-15b6-40bc-89b1-8859137bf823` |
 | Chris Rea | chris-rea | 11 |  | `c707b37e-cb5c-4694-be4d-46beefcb2475` |
 | Chris Stapleton | chris-stapleton | 4 |  | `71d58182-aa37-4c04-b21a-efe46ea0f221` |
-| Christer Sjögren | christer-sjögren | 1 |  | `90575cc6-1c25-4b35-96ae-e5cb7e73822b` |
+| Christer Sjögren | christer-sjogren | 1 |  | `90575cc6-1c25-4b35-96ae-e5cb7e73822b` |
 | Christian Walz | christian-walz | 1 |  | `b72b59d9-5f8a-4dcd-a9d7-507e9319aa12` |
 | Christina Aguilera | christina-aguilera | 17 |  | `b202beb7-99bd-47e7-8b72-195c8d72ebdd` |
 | Christina Lindberg | christina-lindberg | 1 |  | `143d2aa1-9112-4af2-8a37-403f3c84729f` |
@@ -362,7 +362,7 @@ Everyone else is `slugify(display name)`.
 | Christina Perri | christina-perri | 2 |  | `38d363c7-fdcb-4308-9474-a0d14ab8d9b7` |
 | Chuck Berry | chuck-berry | 3 |  | `592a3b6d-c42b-4567-99c9-ecf63bd66499` |
 | Ciara | ciara | 1 |  | `03172286-f7ed-4864-a4db-459cd5ca9790` |
-| Claes-Göran Hederström | claes-göran-hederström | 1 |  | `059b4216-3f90-4c70-9f1e-a258588d94d3` |
+| Claes-Göran Hederström | claes-goran-hederstrom | 1 |  | `059b4216-3f90-4c70-9f1e-a258588d94d3` |
 | Clair Marlo | clair-marlo | 1 |  | `d5bb7d04-6c1c-4d8c-86ba-a4db48f953a6` |
 | Clarence Carter | clarence-carter | 1 |  | `d24bd0d5-0bfe-43ca-9ddd-d731abda89d7` |
 | Clay Aiken | clay-aiken | 1 |  | `a25f3156-ef58-4c07-9927-ce18bd6e103b` |
@@ -418,7 +418,7 @@ Everyone else is `slugify(display name)`.
 | Dan Hartman | dan-hartman | 1 |  | `4682d640-819a-4f71-9e7f-84be13a5e76a` |
 | Dan Hill | dan-hill | 1 |  | `4ae674ef-2f80-4fbc-8d10-1cc50cbae7de` |
 | Daniel Bedingfield | daniel-bedingfield | 4 |  | `9169bdc6-5725-45ec-bba5-e9df75dbe8cc` |
-| Daniel Lindström | daniel-lindström | 1 |  | `e7324e43-cc01-498d-bfd2-b620b90e239d` |
+| Daniel Lindström | daniel-lindstrom | 1 |  | `e7324e43-cc01-498d-bfd2-b620b90e239d` |
 | Daniel Merriweather | daniel-merriweather | 1 |  | `535401f6-2fd0-4f3b-a58a-5dba94f915f6` |
 | Daniel Powter | daniel-powter | 1 |  | `32cfbaf8-87aa-466b-9c1a-331ad9075ea2` |
 | Danny Saucedo | danny-saucedo | 2 |  | `a47d9a1e-19e8-4a2c-9b03-43bb466c709d` |
@@ -486,10 +486,10 @@ Everyone else is `slugify(display name)`.
 | Disturbed | disturbed | 6 |  | `4bb4e4e4-5f66-4509-98af-62dbb90c45c5` |
 | Divinyls | divinyls | 1 |  | `01d8f486-874f-4914-a455-48446b7de51d` |
 | DJ Khaled | dj-khaled | 1 |  | `081a2d60-9791-4e05-a075-f1890355eeee` |
-| DJ Ötzi | dj-ötzi | 1 |  | `8d6a4455-1ae8-4e51-a481-08a85cb0141a` |
+| DJ Ötzi | dj-otzi | 1 |  | `8d6a4455-1ae8-4e51-a481-08a85cb0141a` |
 | DJ Sammy | dj-sammy | 2 |  | `c43e35b8-8234-408b-9a25-07f2fcbeb317` |
 | Do | do | 1 |  | `16907f68-6858-4d64-8ab7-d33495e4e1a5` |
-| Docent Död | docent-död | 1 |  | `6403a7f1-1f6f-4333-afb7-4310b16aa55b` |
+| Docent Död | docent-dod | 1 |  | `6403a7f1-1f6f-4333-afb7-4310b16aa55b` |
 | Dogge Doggelito | dogge-doggelito | 1 |  | `7d1075af-82c9-4963-b553-6c59907bd7a8` |
 | Doja Cat | doja-cat | 6 |  | `5df62a88-cac9-490a-b62c-c7c88f4020f4` |
 | Dolly Parton | dolly-parton | 33 |  | `1d543e07-d0d2-4834-a8db-d65c50c2a856` |
@@ -508,9 +508,9 @@ Everyone else is `slugify(display name)`.
 | Dr. Dre | dr-dre | 8 |  | `5f6ab597-f57a-40da-be9e-adad48708203` |
 | Dr. Hook | dr-hook | 3 |  | `1c893468-37a9-4fb7-909f-929751a8ebed` |
 | Drake | drake | 10 |  | `9fff2f8a-21e6-47de-a2b8-7f449929d43f` |
-| Drängarna | drängarna | 1 |  | `eab69289-45ca-4e2a-bb66-080a2a1f3d4b` |
+| Drängarna | drangarna | 1 |  | `eab69289-45ca-4e2a-bb66-080a2a1f3d4b` |
 | Dreamhouse | dreamhouse | 1 |  | `d8efce7e-7532-46e8-a245-00dd5680e020` |
-| Drömhus | drömhus | 1 |  | `99316403-6f15-454a-b73c-4481011d8f30` |
+| Drömhus | dromhus | 1 |  | `99316403-6f15-454a-b73c-4481011d8f30` |
 | Drowning Pool | drowning-pool | 1 |  | `87a73cf0-ebdf-483d-8b5a-3db1e5e72122` |
 | Dru Hill | dru-hill | 1 |  | `2d7d0a67-ae5d-4ac0-93aa-aa52ef3a976a` |
 | Dschinghis Khan | dschinghis-khan | 1 |  | `5898a370-5c9e-4924-97b1-c72b7e0452ca` |
@@ -527,15 +527,15 @@ Everyone else is `slugify(display name)`.
 | Eamon | eamon | 1 |  | `d791111a-9fcc-4ebe-bb16-b785719a642b` |
 | Earth, Wind & Fire | earth-wind-and-fire | 1 |  | `535afeda-2538-435d-9dd1-5e10be586774` |
 | East 17 | east-17 | 1 |  | `ee20d564-25ca-4ef5-aba7-93a39f78ed60` |
-| Ebba Grön | ebba-grön | 3 |  | `4a41bce5-f225-4e0e-91d8-bf49ebbd83c2` |
+| Ebba Grön | ebba-gron | 3 |  | `4a41bce5-f225-4e0e-91d8-bf49ebbd83c2` |
 | Ed Sheeran | ed-sheeran | 38 |  | `b8a7c51f-362c-4dcb-a259-bc6e0095f0a6` |
 | Eddie Cochran | eddie-cochran | 3 |  | `17995d1c-5b3c-4ee9-98f5-105ee3b4ada1` |
 | Eddie Money | eddie-money | 1 |  | `0e990816-cb3e-4930-a2eb-77909e42cd66` |
 | Eddie Rabbitt | eddie-rabbitt | 5 |  | `486d04cf-355f-4afb-a694-a895918c45ac` |
 | Eddy Grant | eddy-grant | 2 |  | `0cf0583a-fcfd-4f07-b573-95273ec4bdb5` |
-| Edin‐Ådahl | edin-ådahl | 1 |  | `a399277e-2638-4262-b94c-d88c2a3f030b` |
+| Edin‐Ådahl | edin-adahl | 1 |  | `a399277e-2638-4262-b94c-d88c2a3f030b` |
 | Edison Lighthouse | edison-lighthouse | 1 |  | `5528ebce-9a4e-4e16-8e75-211e475928d6` |
-| Édith Piaf | édith-piaf | 2 |  | `4f8ef4a3-40fa-46b5-8773-97686a8424f4` |
+| Édith Piaf | edith-piaf | 2 |  | `4f8ef4a3-40fa-46b5-8773-97686a8424f4` |
 | Edward Maya | edward-maya | 1 |  | `257891db-1f69-4660-894d-075e355431a8` |
 | Edwin Starr | edwin-starr | 1 |  | `9eace815-06f3-487c-bf3a-1a817e248056` |
 | Edwyn Collins | edwyn-collins | 1 |  | `14c0c282-e0c1-46fe-acd1-9a015ba721c5` |
@@ -574,7 +574,7 @@ Everyone else is `slugify(display name)`.
 | Eric Hutchinson | eric-hutchinson | 1 |  | `3347dae7-1a86-4630-844e-e631f969c252` |
 | Eric Saade | eric-saade | 2 |  | `17865a2c-2ae2-4ef2-b2b7-acbba56e8a19` |
 | Eric Turner | eric-turner | 1 |  | `df2f7876-e731-4bde-965c-bd4a67b3fadd` |
-| Erik Grönwall | erik-grönwall | 1 |  | `436dacc1-04d4-480e-9a3a-3f2dba509151` |
+| Erik Grönwall | erik-gronwall | 1 |  | `436dacc1-04d4-480e-9a3a-3f2dba509151` |
 | Erik Linder | erik-linder | 1 |  | `43876897-25da-4d02-81c1-92f338548e8a` |
 | Erik Segerstedt | erik-segerstedt | 1 |  | `ca646777-4f40-4e58-a70f-bd6326642941` |
 | Ernie Sabella | ernie-sabella | 1 |  | `dcd0cef2-9e39-485b-ba39-e10e6c2707a6` |
@@ -657,7 +657,7 @@ Everyone else is `slugify(display name)`.
 | Freshlyground | freshlyground | 1 |  | `fc318255-d27e-4e85-bfe5-46657eaef734` |
 | Frida | frida | 1 |  | `e95db429-06c3-410e-b381-2a86c5d5903e` |
 | Friends | friends | 2 |  | `30bc543b-547e-4722-a63c-8f103a28b4b7` |
-| Frispråkarn | frispråkarn | 1 |  | `f185667d-3292-45b5-87b3-7370ba441154` |
+| Frispråkarn | frisprakarn | 1 |  | `f185667d-3292-45b5-87b3-7370ba441154` |
 | Fronda | fronda | 1 |  | `8f067041-871c-496c-8fd7-fc577b563f88` |
 | Fugees | fugees | 3 |  | `ea321799-9b1d-4e74-a074-a5facf597d82` |
 | Fun | fun | 2 |  | `136c4166-85b3-4994-aa04-59857c434199` |
@@ -710,10 +710,10 @@ Everyone else is `slugify(display name)`.
 | Grass Roots | grass-roots | 1 |  | `acaed5f7-47b4-4b77-b6ee-c5bc5f660b8e` |
 | Green Day | green-day | 16 |  | `084308bd-1654-436f-ba03-df6697104e19` |
 | Gretchen Wilson | gretchen-wilson | 1 |  | `11d9fc14-e6ac-4c50-81e7-062dd82566ce` |
-| Grönwalls | grönwalls | 1 |  | `6a5284d8-f4c3-4446-9656-ff23b3b9d8ca` |
+| Grönwalls | gronwalls | 1 |  | `6a5284d8-f4c3-4446-9656-ff23b3b9d8ca` |
 | Gucci Mane | gucci-mane | 2 |  | `36494952-f434-45d8-a958-8b4acdbcf8a8` |
 | Guns N’ Roses | guns-n-roses | 11 |  | `eeb1195b-f213-4ce1-b28c-8565211f8e43` |
-| Günther | günther | 3 |  | `131fda77-140a-49e6-86ea-2e6f8d815080` |
+| Günther | gunther | 3 |  | `131fda77-140a-49e6-86ea-2e6f8d815080` |
 | Gwen Stefani | gwen-stefani | 11 |  | `2e41ae9c-afd2-4f20-8f1e-17281ce9b472` |
 | Gwyneth Paltrow | gwyneth-paltrow | 1 |  | `dc71c08e-3ee5-409d-ae0d-f4fd9050e170` |
 | Gyllene Tider | gyllene-tider | 5 |  | `dc767c6e-74d1-45fc-be31-bda00253fbda` |
@@ -721,7 +721,7 @@ Everyone else is `slugify(display name)`.
 | H.E.A.T | h-e-a-t | 1 |  | `7f666ada-e2af-433a-8351-374643b3fe9c` |
 | Haddaway | haddaway | 3 |  | `6508cf1d-4da2-4d71-81ec-0e072338991f` |
 | Hair | hair | 1 |  | `133aee13-0a4a-48df-9a74-a1bea889a0e0` |
-| Håkan Hellström | håkan-hellström | 1 |  | `6ee8668b-b4e1-48cf-ba25-a6f7c8bf864d` |
+| Håkan Hellström | hakan-hellstrom | 1 |  | `6ee8668b-b4e1-48cf-ba25-a6f7c8bf864d` |
 | Hank Williams | hank-williams | 4 |  | `906bddec-bc73-49f8-ac1e-eaee691c6cf9` |
 | Hank Williams, Jr. | hank-williams-jr | 1 |  | `1d8010a0-b642-4c8f-9c8d-8dc66b7bb81a` |
 | Hanna | hanna | 1 |  | `cb6036be-08d9-4b3e-a2aa-2a0bc6078ff4` |
@@ -739,7 +739,7 @@ Everyone else is `slugify(display name)`.
 | Hear’Say | hear-say | 1 |  | `7e95e908-bc59-4881-a5f6-b545acc56154` |
 | Heart | heart | 2 |  | `bdbd48f5-abf3-4a4f-9a21-4551dbc3fde9` |
 | Hector | hector | 1 |  | `600bec42-17d9-432b-949c-9ec362b13348` |
-| Helen Sjöholm | helen-sjöholm | 2 |  | `053cfc8d-cdec-4be8-a099-3e6305e15066` |
+| Helen Sjöholm | helen-sjoholm | 2 |  | `053cfc8d-cdec-4be8-a099-3e6305e15066` |
 | Helena Paparizou | helena-paparizou | 2 |  | `28a40a67-ecd3-432a-be2f-51490a7743ec` |
 | Herman’s Hermits | herman-s-hermits | 1 |  | `fc9ec2b3-b44a-4dad-8bc3-ff3738ee02ae` |
 | Hermes House Band | hermes-house-band | 2 |  | `6d2f839e-b871-4b6c-bbf8-da73553d203e` |
@@ -806,12 +806,12 @@ Everyone else is `slugify(display name)`.
 | Jamie Benson | jamie-benson | 1 |  | `9dfd2e92-5214-4469-9eee-3115f29df936` |
 | Jamiroquai | jamiroquai | 15 |  | `f4857fb9-e255-4dc6-bd01-e4ca7cc68544` |
 | Jan Johansen | jan-johansen | 3 |  | `3f77eb40-5ff5-4e3a-bca8-749734cb1246` |
-| Janelle Monáe | janelle-monáe | 1 |  | `ee190f6b-7d98-43ec-b924-da5f8018eca0` |
+| Janelle Monáe | janelle-monae | 1 |  | `ee190f6b-7d98-43ec-b924-da5f8018eca0` |
 | Janet Jackson | janet-jackson | 9 |  | `6be2828f-6c0d-4059-99d4-fa18acf1a296` |
 | Janis Joplin | janis-joplin | 2 |  | `76c9a186-75bd-436a-85c0-823e3efddb7f` |
 | Janne Lucas | janne-lucas | 1 |  | `96ce69b9-64d3-4cfd-a05d-60180f21b899` |
 | Janne Tulkki | janne-tulkki | 1 |  | `14b8a691-008b-49df-b9d8-234914a2ea36` |
-| Jari Sillanpää | jari-sillanpää | 1 |  | `973c00fb-ebdf-4436-a36b-8565fa32b82b` |
+| Jari Sillanpää | jari-sillanpaa | 1 |  | `973c00fb-ebdf-4436-a36b-8565fa32b82b` |
 | Jars of Clay | jars-of-clay | 1 |  | `ca1ca0e3-8506-40b4-ac29-dbfb60c5a0bd` |
 | Jason Derulo | jason-derulo | 7 |  | `6de0f914-3e60-4418-be3b-42e0feb6eb4d` |
 | Jason Donovan | jason-donovan | 2 |  | `e2f73100-bd6d-4891-9e1d-5de68a76e484` |
@@ -851,7 +851,7 @@ Everyone else is `slugify(display name)`.
 | Jim Brickman | jim-brickman | 2 |  | `e573ad8c-d829-4c68-a9be-0d4460cca073` |
 | Jim Croce | jim-croce | 1 |  | `fcfa9543-e113-4ef9-9ef6-455ba4cbe7af` |
 | Jim Reeves | jim-reeves | 1 |  | `2c05faf7-5cc8-4476-9daa-d177ad75cd34` |
-| Jim Stärk | jim-stärk | 1 |  | `0b2a0c1d-9eb2-45c3-9853-99ed3bf839dd` |
+| Jim Stärk | jim-stark | 1 |  | `0b2a0c1d-9eb2-45c3-9853-99ed3bf839dd` |
 | Jimi Hendrix | jimi-hendrix | 2 |  | `06fb1c8b-566e-4cb2-985b-b467c90781d4` |
 | Jimi Jamison | jimi-jamison | 1 |  | `6e1df868-7304-47c5-b609-f3173f8670f7` |
 | Jimmie Rodgers | jimmie-rodgers | 1 |  | `d5bc8537-5bc5-4e37-915a-008c88436092` |
@@ -907,7 +907,7 @@ Everyone else is `slugify(display name)`.
 | Jonas Blue | jonas-blue | 1 |  | `17678771-5799-4017-851a-319f25b6948d` |
 | Jonas Gardell | jonas-gardell | 1 |  | `6e398c9d-83d5-41fe-9fd7-92cf4de61015` |
 | Jordin Sparks | jordin-sparks | 2 |  | `5508631d-697f-4839-a669-06637e5bcb90` |
-| José Feliciano | josé-feliciano | 1 |  | `3c004c98-aab6-4b63-a2df-e07c98e73b0a` |
+| José Feliciano | jose-feliciano | 1 |  | `3c004c98-aab6-4b63-a2df-e07c98e73b0a` |
 | Josefin Nilsson | josefin-nilsson | 1 |  | `fbe58abd-937a-4d57-8ba6-495fd0db5638` |
 | Josh Gad | josh-gad | 1 |  | `fde548d0-4dc4-4331-8f1c-ca342911e5ea` |
 | Josh Groban | josh-groban | 10 |  | `12be5b16-915f-44bc-978a-8ddfab235b79` |
@@ -999,7 +999,7 @@ Everyone else is `slugify(display name)`.
 | Lara Fabian | lara-fabian | 3 |  | `7a1daf7f-b972-4808-bc03-2e1e3a79dce0` |
 | Larry Kert | larry-kert | 1 |  | `70915017-c4f9-4e13-9564-6b8646d82eea` |
 | Lars Berghagen | lars-berghagen | 3 |  | `caf8eb3e-f894-48c8-a7f3-ab54cf860296` |
-| Lars Winnerbäck | lars-winnerbäck | 2 |  | `1723c867-d5c5-4a61-a40b-8c04fa7acf1b` |
+| Lars Winnerbäck | lars-winnerback | 2 |  | `1723c867-d5c5-4a61-a40b-8c04fa7acf1b` |
 | Larz-Kristerz | larz-kristerz | 1 |  | `f8b22c83-384a-4f93-8f87-fbda813de358` |
 | Las Ketchup | las-ketchup | 1 |  | `5c6f6348-15b5-4eb5-a8ae-d8a3ee3354a1` |
 | Lasgo | lasgo | 1 |  | `361b282b-c7ac-4c50-a115-cf54e9e788f7` |
@@ -1070,7 +1070,7 @@ Everyone else is `slugify(display name)`.
 | Lordi | lordi | 1 |  | `b5b4ba6e-6e34-4669-a33b-0d813b4c3d83` |
 | Loreen | loreen | 3 |  | `1e234774-8e37-4378-b01d-b7dd6ced769c` |
 | Loretta Lynn | loretta-lynn | 4 |  | `613260c3-d620-4645-94cd-33cd55f29b1e` |
-| Los del Río | los-del-río | 1 |  | `c152ed9f-7a4c-4006-af2d-ed8b7126b0a0` |
+| Los del Río | los-del-rio | 1 |  | `c152ed9f-7a4c-4006-af2d-ed8b7126b0a0` |
 | Los Lonely Boys | los-lonely-boys | 1 |  | `98fe243c-3685-4491-8135-edc713963be4` |
 | Lost Bayou Ramblers | lost-bayou-ramblers | 1 |  | `ced874ac-f431-4f88-8e79-ed521b91cdef` |
 | Lost Frequencies | lost-frequencies | 1 |  | `ea7260de-e1b1-43f1-bb11-f78274a36308` |
@@ -1111,18 +1111,18 @@ Everyone else is `slugify(display name)`.
 | Madness | madness | 7 |  | `5f58803e-8c4c-478e-8b51-477f38483ede` |
 | Madonna | madonna | 34 |  | `79239441-bfd5-4981-a70c-55c3f15c1287` |
 | MAGIC! | magic | 1 |  | `53fa616a-e2b4-4982-bef8-6362b44054f0` |
-| Magnus Bäcklund | magnus-bäcklund | 1 |  | `c3954722-206b-4392-999e-bb63d81aa9ab` |
+| Magnus Bäcklund | magnus-backlund | 1 |  | `c3954722-206b-4392-999e-bb63d81aa9ab` |
 | Magnus Carlsson | magnus-carlsson | 1 |  | `f93a8128-4bb2-480d-8a10-41fc4154b67d` |
 | Magnus Uggla | magnus-uggla | 6 |  | `af45b4e2-eaf8-4a2f-a661-395911c1b256` |
 | Majid Jordan | majid-jordan | 1 |  | `abaa7001-0d80-4e58-be5d-d2d246fd9d87` |
 | Major Lazer | major-lazer | 1 |  | `75be165a-ad83-4d12-bd28-f589a15c479f` |
 | Malena Ernman | malena-ernman | 1 |  | `bcfa2a05-90f6-469a-b25d-b485838f1401` |
-| Måneskin | måneskin | 2 |  | `3862342a-43c4-4cdb-8250-bfdbfb5e1419` |
+| Måneskin | maneskin | 2 |  | `3862342a-43c4-4cdb-8250-bfdbfb5e1419` |
 | Manfred Mann | manfred-mann | 1 |  | `06b6f280-8787-4a3d-8ab6-c6487b465320` |
 | Manfred Mann’s Earth Band | manfred-mann-s-earth-band | 1 |  | `83e9c775-84ea-4cf6-abdf-b9ffa8c3d060` |
 | Manic Street Preachers | manic-street-preachers | 8 |  | `32efea44-6cb5-4b4f-bdaa-c8b8f6cef981` |
 | Manowar | manowar | 1 |  | `00eeed6b-5897-4359-8347-b8cd28375331` |
-| Måns Zelmerlöw | måns-zelmerlöw | 4 |  | `9a21832f-5104-42fa-b881-17a1ca66bfdb` |
+| Måns Zelmerlöw | mans-zelmerlow | 4 |  | `9a21832f-5104-42fa-b881-17a1ca66bfdb` |
 | Marc Anthony | marc-anthony | 2 |  | `25607613-aceb-445a-8519-83a2ee0f8402` |
 | Maria Arredondo | maria-arredondo | 1 |  | `a11800db-b0fd-4b3f-9928-8f571f35b9af` |
 | Maria Haukaas Mittet | maria-haukaas-mittet | 1 |  | `5c7b2657-08b9-4b52-ad44-cca5625aada2` |
@@ -1157,7 +1157,7 @@ Everyone else is `slugify(display name)`.
 | Matchbox | matchbox | 1 |  | `06a93515-1590-4d15-b3f9-50c8cadd9bda` |
 | Matchbox Twenty | matchbox-twenty | 3 |  | `75af9d25-cf32-49c0-9192-60bd8e9784e6` |
 | Matisyahu | matisyahu | 1 |  | `e8993e9d-9313-4447-ad23-791459a3790d` |
-| Mats Rådberg | mats-rådberg | 2 |  | `d7191e83-f93f-42db-9287-e337d82fe4cb` |
+| Mats Rådberg | mats-radberg | 2 |  | `d7191e83-f93f-42db-9287-e337d82fe4cb` |
 | Matt Monro | matt-monro | 7 |  | `6965a0f4-6e7b-4feb-8709-508f83c1af93` |
 | Matthew Santos | matthew-santos | 1 |  | `dfc6e55b-a31e-4dd7-aa38-784ca1415e84` |
 | Matthew Wilder | matthew-wilder | 1 |  | `471e21ab-7a14-4190-a9d2-f95197616df4` |
@@ -1182,7 +1182,7 @@ Everyone else is `slugify(display name)`.
 | MGMT | mgmt | 3 |  | `c485632c-b784-4ee9-8ea1-c5fb365681fc` |
 | Miami Sound Machine | miami-sound-machine | 1 |  | `72b3b981-92b7-4b5c-8a83-35717358b76e` |
 | Michael Bolton | michael-bolton | 11 |  | `e8bee5d1-a3a5-4c1a-ada4-f1ca22101e84` |
-| Michael Bublé | michael-bublé | 4 |  | `611700cf-27f0-4dc9-ae80-c513a767853e` |
+| Michael Bublé | michael-buble | 4 |  | `611700cf-27f0-4dc9-ae80-c513a767853e` |
 | Michael Crawford | michael-crawford | 1 |  | `2c654643-cdbd-4634-be26-c4d1a90cfabd` |
 | Michael Cretu | michael-cretu | 1 |  | `ac82b7db-5910-41c2-9d10-f02df4f4e1e1` |
 | Michael Damian | michael-damian | 2 |  | `21840e91-fe96-44ee-886f-bdb6a1a563c3` |
@@ -1220,17 +1220,17 @@ Everyone else is `slugify(display name)`.
 | Modern English | modern-english | 1 |  | `78605d0c-7454-456d-934c-51eb46122566` |
 | Modern Talking | modern-talking | 1 |  | `98913495-8867-43b3-aa8d-db88ee4d4cdc` |
 | Molly Hatchet | molly-hatchet | 1 |  | `b69d82f9-ade6-4f45-88e5-953353aad2b3` |
-| Molly Sandén | molly-sandén | 3 |  | `9cb7843d-62b1-4a49-8296-1f504b7e6323` |
+| Molly Sandén | molly-sanden | 3 |  | `9cb7843d-62b1-4a49-8296-1f504b7e6323` |
 | Monica | monica | 1 |  | `af84073d-3b6d-4390-9d3f-bf65a91c824f` |
-| Monica Törnell | monica-törnell | 1 |  | `831fca4a-093a-4f82-9b57-c2c5e994401e` |
+| Monica Törnell | monica-tornell | 1 |  | `831fca4a-093a-4f82-9b57-c2c5e994401e` |
 | Montell Jordan | montell-jordan | 1 |  | `cc1f4763-a306-4ae7-8ba7-331872199f9e` |
 | Montrose | montrose | 1 |  | `d68063aa-620e-4cf5-8d8c-c2fc8bd1800b` |
-| Montserrat Caballé | montserrat-caballé | 1 |  | `a96e61bc-1da0-45d0-816d-ebd00b70ff9d` |
+| Montserrat Caballé | montserrat-caballe | 1 |  | `a96e61bc-1da0-45d0-816d-ebd00b70ff9d` |
 | Monty Python | monty-python | 1 |  | `4a5c8526-f8ec-43f1-97af-49722ad88394` |
 | Morrissey | morrissey | 4 |  | `013fa897-86db-41d3-8e9f-386c8a34f4e6` |
 | Mother’s Finest | mother-s-finest | 1 |  | `7b38a145-7137-4c61-8d04-89ade521a6fc` |
-| Mötley Crüe | mötley-crüe | 10 |  | `26f07661-e115-471d-a930-206f5c89d17c` |
-| Motörhead | motörhead | 2 |  | `57961a97-3796-4bf7-9f02-a985a8979ae9` |
+| Mötley Crüe | motley-crue | 10 |  | `26f07661-e115-471d-a930-206f5c89d17c` |
+| Motörhead | motorhead | 2 |  | `57961a97-3796-4bf7-9f02-a985a8979ae9` |
 | Mott the Hoople | mott-the-hoople | 1 |  | `435f1441-0f43-479d-92db-a506449a686b` |
 | Mr. Big | mr-big | 2 |  | `bd1180c4-4252-461f-94dc-543906c02522` |
 | Mr. President | mr-president | 2 |  | `6255d25c-8231-4ff5-9b49-e26d760d6466` |
@@ -1244,7 +1244,7 @@ Everyone else is `slugify(display name)`.
 | Muse | muse | 6 |  | `9c9f1380-2516-4fc9-a3e6-f9f61941d090` |
 | Muska | muska | 1 |  | `8021d7c0-c61c-430b-a082-ae7f6122d59c` |
 | My Chemical Romance | my-chemical-romance | 1 |  | `c07f0676-9143-4217-8a9f-4c26bd636f13` |
-| Mýa | mýa | 2 |  | `7c5e39c3-7645-4e37-968d-a4e45cd38c5d` |
+| Mýa | mya | 2 |  | `7c5e39c3-7645-4e37-968d-a4e45cd38c5d` |
 | N.W.A | n-w-a | 2 |  | `3a54bffa-2314-44a2-927b-60144119c780` |
 | N*E*R*D | n-e-r-d | 4 |  | `3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5` |
 | Nanci Griffith | nanci-griffith | 1 |  | `b9ffd0e7-7f95-46db-bc1c-8094d459f084` |
@@ -1287,7 +1287,7 @@ Everyone else is `slugify(display name)`.
 | Nicki Minaj | nicki-minaj | 7 |  | `1036b808-f58c-4a3e-b461-a2c4492ecf1b` |
 | Nicole Kidman | nicole-kidman | 2 |  | `08d9ce40-ebd2-4d81-894c-84655e3f851a` |
 | Nightwish | nightwish | 1 |  | `00a9f935-ba93-4fc8-a33a-993abe9c936b` |
-| Niklas Strömstedt | niklas-strömstedt | 2 |  | `43d77ef9-add9-46dc-8c79-f3ec31482e2f` |
+| Niklas Strömstedt | niklas-stromstedt | 2 |  | `43d77ef9-add9-46dc-8c79-f3ec31482e2f` |
 | Nina & Kim | nina-and-kim | 2 |  | `dc0edee8-91a2-437d-9038-f7921925356f` |
 | Nine Stories | nine-stories | 2 |  | `94204786-d86d-40ab-ba91-ef8e6c640e07` |
 | Nirvana | nirvana | 6 |  | `5b11f4ce-a62d-471e-81fc-a69a8278c7da` |
@@ -1321,11 +1321,11 @@ Everyone else is `slugify(display name)`.
 | Orange Juice | orange-juice | 1 |  | `e598d30e-4ce1-402e-94a7-6f44779da6b7` |
 | Orup | orup | 4 |  | `d30ada67-1b32-4b70-a07e-0f9aaaa345dc` |
 | Oskar Linnros | oskar-linnros | 1 |  | `21f7073f-cf3e-4cfe-9587-3f4e62c3ec19` |
-| Östen med Resten | östen-med-resten | 2 |  | `2844b5b7-284b-4fc3-8bd4-0b3297938ee4` |
+| Östen med Resten | osten-med-resten | 2 |  | `2844b5b7-284b-4fc3-8bd4-0b3297938ee4` |
 | Otis Redding | otis-redding | 1 |  | `82b1f5fd-cd31-41a9-b5d4-7e33f0eb9751` |
 | OutKast | outkast | 1 |  | `73fdb566-a9b1-494c-9f32-51768ec9fd27` |
 | Outlandish | outlandish | 1 |  | `442e5e86-6151-41a4-bb6d-2e97b62f5e38` |
-| Owe Thörnqvist | owe-thörnqvist | 1 |  | `ba13c432-0d46-4e26-9b13-af0e6bd341df` |
+| Owe Thörnqvist | owe-thornqvist | 1 |  | `ba13c432-0d46-4e26-9b13-af0e6bd341df` |
 | Owl City | owl-city | 3 |  | `ad279295-653f-42e1-9aaa-b731df2e78ba` |
 | Ozzy Osbourne | ozzy-osbourne | 3 |  | `8aa5b65a-5b3c-4029-92bf-47a544356934` |
 | P!nk | pink | 23 | curated (`p-nk` → `pink`) | `f4d5cc07-3bc9-4836-9b15-88a08359bc63` |
@@ -1371,7 +1371,7 @@ Everyone else is `slugify(display name)`.
 | Peter Bjorn and John | peter-bjorn-and-john | 1 |  | `32a83250-7e26-422d-b9ac-f4564343e9ce` |
 | Peter Cetera | peter-cetera | 3 |  | `cdcd53c9-f37c-48cc-b7e3-dfe34be22e92` |
 | Peter Gabriel | peter-gabriel | 5 |  | `8e66ea2b-b57b-47d9-8df0-df4630aeb8e5` |
-| Peter Jöback | peter-jöback | 2 |  | `22a58080-7e0d-44c5-a148-03f5ee5ffeb9` |
+| Peter Jöback | peter-joback | 2 |  | `22a58080-7e0d-44c5-a148-03f5ee5ffeb9` |
 | Peter Lundblad | peter-lundblad | 1 |  | `cd996aed-776c-4e68-a991-39593cb1106b` |
 | Peter, Paul and Mary | peter-paul-and-mary | 2 |  | `3d621c94-2356-4532-ad52-79e0ef73e20c` |
 | Petra | petra | 1 |  | `a2da9a16-4f14-4fe6-84e0-ff882fc1664f` |
@@ -1407,10 +1407,10 @@ Everyone else is `slugify(display name)`.
 | Puff Daddy | puff-daddy | 3 |  | `cabb4fcf-4067-4ba5-908d-76ee66fcf0c6` |
 | Pulp | pulp | 9 |  | `76b2e842-5e85-4c97-ab62-d5bc315595b5` |
 | Pussycat | pussycat | 1 |  | `af76ce12-29ff-4c8f-a6b1-1b5bfaf33f79` |
-| Py Bäckman | py-bäckman | 1 |  | `71bf12d8-f8c5-4333-9b40-0ae07fb8be79` |
+| Py Bäckman | py-backman | 1 |  | `71bf12d8-f8c5-4333-9b40-0ae07fb8be79` |
 | Quavo | quavo | 1 |  | `6143403a-df6c-429e-8ee6-ef869896b0da` |
 | Queen | queen | 21 |  | `0383dadf-2a4e-4d10-a46a-e9e041da8eb3` |
-| Queensrÿche | queensrÿche | 3 |  | `deeea939-7f89-4762-b09f-79269cd70d3b` |
+| Queensrÿche | queensryche | 3 |  | `deeea939-7f89-4762-b09f-79269cd70d3b` |
 | R. Kelly | r-kelly | 16 |  | `c2d25856-a09a-4d15-b404-77dd19c19e63` |
 | R.E.M. | r-e-m | 12 |  | `ea4dfa26-f633-4da6-a52a-f49ea4897b58` |
 | Rachel Stevens | rachel-stevens | 1 |  | `2585d166-6514-43c3-886f-a92ebddebc81` |
@@ -1522,7 +1522,7 @@ Everyone else is `slugify(display name)`.
 | Santa Esmeralda | santa-esmeralda | 1 |  | `b233a9a9-2538-4c5b-986a-5843650e2611` |
 | Santana | santana | 7 |  | `9a3bf45c-347d-4630-894d-7cf3e8e0b632` |
 | Sara Evans | sara-evans | 1 |  | `773af101-792f-48b8-a588-09a07cff5e53` |
-| Sara Löfgren | sara-löfgren | 2 |  | `1acba49d-b100-45fa-b8d9-e4c4a781734c` |
+| Sara Löfgren | sara-lofgren | 2 |  | `1acba49d-b100-45fa-b8d9-e4c4a781734c` |
 | Sara Varga | sara-varga | 1 |  | `4dd7b4a8-9f50-47de-b9dd-6dbfb7df7cf7` |
 | Sarah Brightman | sarah-brightman | 1 |  | `896f0194-8ab2-4278-81e0-c56a0444b569` |
 | Sarah Dawn Finer | sarah-dawn-finer | 2 |  | `c24216ce-6762-4974-94cd-48024377d543` |
@@ -1574,9 +1574,9 @@ Everyone else is `slugify(display name)`.
 | Simon Forsberg | simon-forsberg | 1 |  | `075799e8-09f1-41fa-93ba-859d90b44756` |
 | Simple Minds | simple-minds | 3 |  | `f41490ce-fe39-435d-86c0-ab5ce098b423` |
 | Simply Red | simply-red | 5 |  | `a9100753-f539-43cf-bcc9-579566fb512e` |
-| Sinéad O’Connor | sinéad-o-connor | 1 |  | `c78a77fa-507c-4c07-947a-0355029453bd` |
+| Sinéad O’Connor | sinead-o-connor | 1 |  | `c78a77fa-507c-4c07-947a-0355029453bd` |
 | Sir Mix‐A‐Lot | sir-mix-a-lot | 1 |  | `05539fb8-b7a5-4012-97a9-5e27ddc031fb` |
-| Sisqó | sisqó | 1 |  | `25e0497c-faa4-4765-b232-baa20e5e35a7` |
+| Sisqó | sisqo | 1 |  | `25e0497c-faa4-4765-b232-baa20e5e35a7` |
 | Sister Sledge | sister-sledge | 1 |  | `1ed00158-c6a3-45cd-819c-2f91997fc480` |
 | Siw Malmkvist | siw-malmkvist | 1 |  | `a5be578c-864a-4de8-be45-c2cb6891c051` |
 | Sixpence None the Richer | sixpence-none-the-richer | 1 |  | `c2c70ed6-5f10-445c-969f-2c16bc9a4c2e` |
@@ -1600,7 +1600,7 @@ Everyone else is `slugify(display name)`.
 | Solistiyhtye Suomi | solistiyhtye-suomi | 1 |  | `8b49d89a-cd3d-4766-aebb-0a5e1dd2d7a5` |
 | Son of Dork | son-of-dork | 2 |  | `efb6b5f8-c14a-4c6d-aeda-941ea56aee07` |
 | Sonia | sonia | 1 |  | `e7281e91-dfa9-4938-bdc2-979cb003ddd0` |
-| Sonja Aldén | sonja-aldén | 3 |  | `3d9fc666-882c-4d30-85a7-a8fd47e06c35` |
+| Sonja Aldén | sonja-alden | 3 |  | `3d9fc666-882c-4d30-85a7-a8fd47e06c35` |
 | Sonny & Cher | sonny-and-cher | 1 |  | `3d6e4b6d-2700-458c-9722-9021965a8164` |
 | Sophie Ellis‐Bextor | sophie-ellis-bextor | 2 |  | `c4b87e45-c07a-460f-9c58-8d15328e2964` |
 | Soul II Soul | soul-ii-soul | 1 |  | `9350241a-d698-4489-92bf-41794f383ff3` |
@@ -1678,7 +1678,7 @@ Everyone else is `slugify(display name)`.
 | Taylor Swift | taylor-swift | 18 |  | `20244d07-534f-4eff-b4d4-930878889970` |
 | Tears for Fears | tears-for-fears | 7 |  | `7c7f9c94-dee8-4903-892b-6cf44652e2de` |
 | Technotronic | technotronic | 1 |  | `62173ce5-37ef-41b1-86cd-45401a8955fc` |
-| Ted Gärdestad | ted-gärdestad | 5 |  | `22dfb355-7b66-4fbf-adcb-8b8fa6440839` |
+| Ted Gärdestad | ted-gardestad | 5 |  | `22dfb355-7b66-4fbf-adcb-8b8fa6440839` |
 | Ten Sharp | ten-sharp | 1 |  | `678bd323-a298-45b0-825f-441bf6c0bb96` |
 | Tenacious D | tenacious-d | 3 |  | `148ddea2-6839-4354-8e2c-5dfadf136b7f` |
 | Tennessee Ernie Ford | tennessee-ernie-ford | 1 |  | `947163f5-f306-4d78-a316-8c3fb317ae50` |
@@ -1687,7 +1687,7 @@ Everyone else is `slugify(display name)`.
 | Terry Jacks | terry-jacks | 1 |  | `d8ae63c6-6fce-41b2-98ba-e570bc4007ca` |
 | Texas | texas | 1 |  | `7289d10d-d8d2-41ff-8308-c56ec9346e07` |
 | Texas Lightning | texas-lightning | 1 |  | `e1abe140-803d-436b-97c3-c36fbd2324e0` |
-| Thåström | thåström | 1 |  | `dc21a218-daca-4ada-95c6-746cac1560e8` |
+| Thåström | thastrom | 1 |  | `dc21a218-daca-4ada-95c6-746cac1560e8` |
 | The Allman Brothers Band | the-allman-brothers-band | 2 |  | `72359492-22be-4ed9-aaa0-efa434fb2b01` |
 | The Amboy Dukes | the-amboy-dukes | 1 |  | `1a03f20c-26dd-4c26-bbe8-426e05ea46d5` |
 | The Animals | the-animals | 1 |  | `4d8afa16-4018-4ca8-8b5e-ede8f9314562` |
@@ -1841,7 +1841,7 @@ Everyone else is `slugify(display name)`.
 | Thorleifs | thorleifs | 1 |  | `047a76c0-8e6e-4825-8dea-9cb257d691ab` |
 | Three Days Grace | three-days-grace | 6 |  | `fabb37f8-eb2a-4cc1-a72a-b56935bbb72d` |
 | Three Dog Night | three-dog-night | 2 |  | `1a48176d-1414-4a18-9792-50ba585d4d59` |
-| Tiësto | tiësto | 3 |  | `aabb1d9f-be12-45b3-a84d-a1fc3e8181fd` |
+| Tiësto | tiesto | 3 |  | `aabb1d9f-be12-45b3-a84d-a1fc3e8181fd` |
 | Tiffany | tiffany | 2 |  | `d29c21c5-8ee7-474f-b5fd-55ac9f459d08` |
 | Tim Deluxe | tim-deluxe | 1 |  | `54d86cc6-2c30-47b4-bb68-cf5d82560e5c` |
 | Tim McGraw | tim-mcgraw | 1 |  | `7e5cfc9a-e9e1-46f1-b81a-861b12049488` |
@@ -1866,7 +1866,7 @@ Everyone else is `slugify(display name)`.
 | Tomas Ledin | tomas-ledin | 15 |  | `a3534292-7820-48df-8a9c-6b363aff43ed` |
 | Tomi Markkola | tomi-markkola | 1 |  | `92e40fbd-5a7c-43d8-8254-e8b98c3f14f1` |
 | Tommy James | tommy-james | 1 |  | `a159ba9e-8be9-4d42-9796-efa37b48cb8a` |
-| Tommy Körberg | tommy-körberg | 2 |  | `3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0` |
+| Tommy Körberg | tommy-korberg | 2 |  | `3d142b46-bf4b-4f71-97ee-1c1ae4dbf2a0` |
 | Tommy Nilsson | tommy-nilsson | 4 |  | `54b87024-8b4e-4bb8-a92e-c565bc54b68f` |
 | Tommy Roe | tommy-roe | 2 |  | `01e708f5-bb89-44b5-84db-df544cff636d` |
 | Tommy Shane Steiner | tommy-shane-steiner | 1 |  | `0a53342c-f875-4c34-bf48-3246b28afcee` |
@@ -1875,7 +1875,7 @@ Everyone else is `slugify(display name)`.
 | Toni Braxton | toni-braxton | 6 |  | `3c8a8696-e176-4c46-a2d3-48b6b1525c7f` |
 | Tony Bennett | tony-bennett | 2 |  | `8be0594f-8c13-46bb-ab06-f93ffba5c776` |
 | Tony Christie | tony-christie | 2 |  | `fa737b46-90a1-4e68-93a0-6425bbaa353e` |
-| Tony! Toni! Toné! | tony-toni-toné | 1 |  | `511562a6-c381-44df-9bc4-27be779716b8` |
+| Tony! Toni! Toné! | tony-toni-tone | 1 |  | `511562a6-c381-44df-9bc4-27be779716b8` |
 | Tooji | tooji | 1 |  | `723dfb38-ebd5-4139-8af1-dc0987c8f048` |
 | Toploader | toploader | 1 |  | `3bdf9667-3205-4c5b-865b-ca3bb33fc5ac` |
 | Topol | topol | 1 |  | `e23e3e0e-7327-48ce-96a3-481896b26ca1` |
@@ -1898,7 +1898,7 @@ Everyone else is `slugify(display name)`.
 | Tuula Amberla | tuula-amberla | 1 |  | `fe6f777a-86ed-4684-944f-f5ce64b239a9` |
 | Tweet | tweet | 1 |  | `db21a231-40ee-4c18-9604-bd7508a05998` |
 | Twisted Sister | twisted-sister | 1 |  | `c6122fee-089f-41c4-a34f-e5f7e5607b05` |
-| Ty Dolla $ign | ty-dolla-ign | 1 |  | `7bd66c18-cb33-49aa-9279-140acedbdb49` |
+| Ty Dolla $ign | ty-dolla-sign | 1 |  | `7bd66c18-cb33-49aa-9279-140acedbdb49` |
 | Tyrese | tyrese | 1 |  | `975d94b4-7ca8-4eec-ae48-1aa4660995d3` |
 | Tyrone Davis | tyrone-davis | 1 |  | `c48ab37a-e9ee-491c-b370-e4cb8061ebb7` |
 | U2 | u2 | 16 |  | `a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432` |
@@ -1927,7 +1927,7 @@ Everyone else is `slugify(display name)`.
 | Verna Felton | verna-felton | 1 |  | `9d053b32-5de6-4d1a-9ce2-d01fe74ff5f1` |
 | Veronica Maggio | veronica-maggio | 2 |  | `a04e7da2-998b-4e36-abaa-014c00b93622` |
 | Vic Damone | vic-damone | 1 |  | `423066e2-4dcb-4014-b824-cc55933f0bf0` |
-| Victoria Monét | victoria-monét | 1 |  | `28d83274-26ab-4a6a-b9ff-340f4784e7dd` |
+| Victoria Monét | victoria-monet | 1 |  | `28d83274-26ab-4a6a-b9ff-340f4784e7dd` |
 | Vika Jigulina | vika-jigulina | 1 |  | `2cb3ebf3-09fb-45fe-8267-9a45d15796df` |
 | Vikingarna | vikingarna | 6 |  | `a1a92a82-1577-43fb-aa58-84c14789feec` |
 | Village People | village-people | 2 |  | `f19d3d49-be22-4ca6-9903-64d86984fbf2` |
@@ -1971,7 +1971,7 @@ Everyone else is `slugify(display name)`.
 | Yazoo | yazoo | 5 |  | `42922db2-2e80-44b8-9cdf-0b3a6634c124` |
 | Yazz | yazz | 1 |  | `6041bca6-d070-4894-8019-da9538f2c33d` |
 | Ylvis | ylvis | 1 |  | `18e9528e-a4af-4e09-9a35-ea11c7a7ae43` |
-| Yö | yö | 1 |  | `a35d2112-4137-4c14-89fb-58e02036c326` |
+| Yö | yo | 1 |  | `a35d2112-4137-4c14-89fb-58e02036c326` |
 | Yo Gotti | yo-gotti | 1 |  | `b02ec63e-e78d-43e5-a594-462e95036e8d` |
 | Yolanda Adams | yolanda-adams | 2 |  | `4fac8f5d-0e44-4efa-b518-7f8a8f02c162` |
 | Yolanda Be Cool | yolanda-be-cool | 1 |  | `bd90e308-9904-48fb-9318-918d3f595d73` |
@@ -1984,7 +1984,7 @@ Everyone else is `slugify(display name)`.
 | Zedd | zedd | 1 |  | `56c4b861-0922-4c3a-a9b9-3bfcb00f8274` |
 | Zucchero | zucchero | 1 |  | `00ed154e-8679-42f0-8f42-e59bd7e185af` |
 | ZZ Top | zz-top | 11 |  | `a81259a0-a2f5-464b-866e-71220f2739f1` |
-| Άννα Βίσση | άννα-βίσση | 1 |  | `e2b96b55-35c4-45b9-8d7b-726ac927982f` |
+| Άννα Βίσση | αννα-βισση | 1 |  | `e2b96b55-35c4-45b9-8d7b-726ac927982f` |
 | Дима Билан | дима-билан | 1 |  | `8b86576e-1cf5-46c8-970a-a79d13c2e0f0` |
 | 張學友 | 張學友 | 1 |  | `a2cab261-63cc-4ccf-8023-6b6e8588bb62` |
 | 鄭秀文 | 鄭秀文 | 1 |  | `5f3c4fe0-fc71-4455-99e6-abd0e8c4462e` |

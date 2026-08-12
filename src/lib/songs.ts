@@ -159,15 +159,17 @@ function displayNameFor(mbid: string, fallback?: string): string | undefined {
 }
 
 /**
- * URL slug from a display name. Keeps letters from any script so non-Latin names stay
- * readable; punctuation becomes hyphens. `&` becomes `and` so Hall & Oates is
- * `hall-and-oates` rather than a bare join.
+ * URL slug from a display name. Latin diacritics fold to ASCII (`å`→`a`, `ö`→`o`) so
+ * paths stay easy to type; other scripts are kept. `$` becomes `s` (A$AP → asap).
+ * `&` becomes `and`. Remaining punctuation becomes hyphens.
  */
 export function slugify(name: string): string {
     return (
         name
-            .normalize("NFC")
+            .normalize("NFKD")
+            .replace(/\p{M}/gu, "")
             .toLowerCase()
+            .replace(/\$/g, "s")
             .replace(/&/g, " and ")
             .replace(/[^\p{L}\p{N}]+/gu, "-")
             .replace(/^-+|-+$/g, "") || "artist"
