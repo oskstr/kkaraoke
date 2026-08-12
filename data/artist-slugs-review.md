@@ -1,10 +1,10 @@
 # Artist slug review
 
-1977 artists, written by `pnpm review:artist-slugs` from the composed
+1976 artists, written by `pnpm review:artist-slugs` from the composed
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
-1 curated slug override(s), 1 merged page(s), 0 collision disambiguation(s).
+1 curated slug override(s), 2 merged page(s), 0 collision disambiguation(s).
 Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz entities onto one page.
 
 | name | slug | songs | note | mbid |
@@ -554,8 +554,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Elvis Presley | elvis-presley | 50 |  | `01809552-4f87-45b0-afff-2c6f0730a3be` |
 | Emerson, Lake & Palmer | emerson-lake-and-palmer | 2 |  | `ad996aef-cc1c-42ac-af5c-619c370f4b8a` |
 | EMF | emf | 1 |  | `26f94a6a-d60a-4bcc-a130-ce0e77122bd7` |
-| Emilia | emilia | 1 |  | `025df4dd-aaab-46e2-ba0c-6c6909a4ffe6` |
-| Emilia Mitiku | emilia-mitiku | 1 |  | `54370132-ba55-4425-bb64-df202f489a27` |
+| Emilia | emilia | 2 | merged 2 MusicBrainz ids onto `emilia` | `025df4dd-aaab-46e2-ba0c-6c6909a4ffe6` |
 | Emilio Pericoli | emilio-pericoli | 1 |  | `7a3126a9-7942-4329-988c-59e85f512454` |
 | Eminem | eminem | 29 |  | `b95ce3ff-3d05-4e87-9e01-c97b66af13d4` |
 | Emma Bunton | emma-bunton | 2 |  | `71b03238-e53d-4e1e-9b3a-6ce1dcdf2894` |

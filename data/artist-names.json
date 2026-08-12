@@ -55,6 +55,16 @@
             "name": "Alice Cooper",
             "slug": "alice-cooper",
             "why": "Solo era (Poison, …). Merged with the band-era MBID onto /artists/alice-cooper"
+        },
+        "025df4dd-aaab-46e2-ba0c-6c6909a4ffe6": {
+            "name": "Emilia",
+            "slug": "emilia",
+            "why": "Big Big World–era performance name; same person as Emilia Mitiku — one catalogue page"
+        },
+        "54370132-ba55-4425-bb64-df202f489a27": {
+            "name": "Emilia",
+            "slug": "emilia",
+            "why": "Post-2012 performance name (Emilia Mitiku on MusicBrainz); show as Emilia and merge with the earlier name"
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T06:41:09.964Z",
+  "generatedAt": "2026-08-12T06:50:52.461Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -19887,7 +19887,6 @@
     },
     {
       "postId": 49773,
-      "artist": "Emilia Mitiku",
       "sortAs": "Mitiku, Emilia",
       "title": "You're My World",
       "artistMbids": [
@@ -19896,7 +19895,7 @@
       "artists": [
         {
           "mbid": "54370132-ba55-4425-bb64-df202f489a27",
-          "name": "Emilia Mitiku"
+          "name": "Emilia"
         }
       ],
       "recordingMbid": "96c2df79-d5bc-4b88-b754-675e9ba2da11",
