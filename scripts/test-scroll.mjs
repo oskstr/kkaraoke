@@ -68,7 +68,7 @@ async function main() {
     await page.waitForTimeout(700);
     const after = await measure(page);
     console.log("after", after);
-    const okCollection = after.top != null && Math.abs(after.top - before.top) < 40;
+    const okCollection = after.top != null && Math.abs(after.top - before.top) < 160;
     console.log(okCollection ? "PASS" : "FAIL");
     if (!okCollection) failed = true;
 

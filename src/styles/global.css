@@ -76,11 +76,6 @@ input {
     display: none;
 }
 
-.song-row {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 68px;
-}
-
 ::view-transition-old(root),
 ::view-transition-new(root) {
     animation-duration: 200ms;

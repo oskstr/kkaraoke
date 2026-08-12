@@ -89,15 +89,6 @@ function firstVisibleAnchor(root: HTMLElement): string | undefined {
             return `id:${node.dataset.id}`;
         }
     }
-    const artists = root.querySelectorAll<HTMLAnchorElement>(":scope > section a[href^='/artists/'], :scope > a[href^='/artists/']");
-    for (const node of artists) {
-        const rect = node.getBoundingClientRect();
-        if (rect.bottom > rootBox.top + 8 && rect.top < rootBox.bottom) {
-            const href = node.getAttribute("href");
-            if (href) return `href:${href}`;
-        }
-    }
-    // Artists page nests links in sections — broader fallback without song-row artist chips.
     if (songs.length === 0) {
         for (const node of root.querySelectorAll<HTMLAnchorElement>("a[href^='/artists/']")) {
             if (node.closest(".song-row")) continue;
@@ -111,59 +102,92 @@ function firstVisibleAnchor(root: HTMLElement): string | undefined {
     return undefined;
 }
 
-function captureScrollPayload(): ScrollPayload | null {
+function captureScrollPayload(preferredAnchor?: string): ScrollPayload | null {
     const root = getScrollRoot();
     if (!root) return null;
-    const anchor = firstVisibleAnchor(root);
+    const anchor = preferredAnchor ?? firstVisibleAnchor(root);
     return {
         top: root.scrollTop,
         ...(anchor ? { anchor } : {}),
     };
 }
 
-/** Persist onto the current history entry + sessionStorage for reload/bfcache. */
-function persistCurrentScroll(): void {
-    const payload = captureScrollPayload();
-    if (!payload) return;
-    // Skip useless overwrites when the root isn't the active scroller yet.
-    writeSessionPayload(location.pathname, payload);
+function persistPayload(payload: ScrollPayload, pathname = location.pathname): void {
+    writeSessionPayload(pathname, payload);
     const state = (history.state ?? {}) as NonNullable<HistoryState>;
     history.replaceState({ ...state, kkScroll: payload }, "");
 }
 
-function applyScroll(root: HTMLElement, payload: ScrollPayload): void {
-    root.scrollTop = payload.top;
+/** Persist onto the current history entry + sessionStorage for reload/bfcache. */
+function persistCurrentScroll(preferredAnchor?: string): void {
+    const payload = captureScrollPayload(preferredAnchor);
+    if (!payload) return;
+    persistPayload(payload);
+}
 
-    if (payload.anchor?.startsWith("id:")) {
-        const id = payload.anchor.slice(3);
-        const el = root.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(id)}"]`);
+function songIdFromAnchor(anchor: string | undefined): string | undefined {
+    if (!anchor?.startsWith("id:")) return undefined;
+    return anchor.slice(3);
+}
+
+function ensureScrollContent(root: HTMLElement, payload: ScrollPayload): void {
+    const untilId = songIdFromAnchor(payload.anchor);
+    document.dispatchEvent(
+        new CustomEvent("kkaraoke:ensure-scroll-height", {
+            bubbles: true,
+            detail: {
+                minHeight: payload.top + root.clientHeight + 80,
+                root,
+                ...(untilId ? { untilId } : {}),
+            },
+        }),
+    );
+}
+
+function applyScroll(root: HTMLElement, payload: ScrollPayload): void {
+    ensureScrollContent(root, payload);
+
+    const untilId = songIdFromAnchor(payload.anchor);
+    if (untilId) {
+        const el = root.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
         if (el) {
-            const rootTop = root.getBoundingClientRect().top;
-            const elTop = el.getBoundingClientRect().top;
-            root.scrollTop += elTop - rootTop;
+            // Align the anchored song to the top of the list scroller.
+            // Do this twice — inserting windowed rows can shift layout once.
+            for (let i = 0; i < 2; i++) {
+                const delta = el.getBoundingClientRect().top - root.getBoundingClientRect().top;
+                if (Math.abs(delta) < 1) break;
+                root.scrollTop += delta;
+            }
+            return;
         }
-    } else if (payload.anchor?.startsWith("href:")) {
+    }
+
+    if (payload.anchor?.startsWith("href:")) {
         const href = payload.anchor.slice(5);
         const el = [...root.querySelectorAll<HTMLAnchorElement>("a[href]")].find(
             (a) => a.getAttribute("href") === href && !a.closest(".song-row"),
         );
         if (el) {
-            const rootTop = root.getBoundingClientRect().top;
-            const elTop = el.getBoundingClientRect().top;
-            root.scrollTop += elTop - rootTop - 8;
+            const delta = el.getBoundingClientRect().top - root.getBoundingClientRect().top - 8;
+            root.scrollTop += delta;
+            return;
         }
     }
 
-    // Pixel target wins when content height matches what we left.
-    if (root.scrollHeight >= payload.top + root.clientHeight - 1) {
-        root.scrollTop = payload.top;
-    }
+    root.scrollTop = payload.top;
 }
 
-function ensureScrollHeight(root: HTMLElement, minHeight: number): void {
-    window.dispatchEvent(
-        new CustomEvent("kkaraoke:ensure-scroll-height", { detail: { minHeight, root } }),
-    );
+function anchorIsSettled(payload: ScrollPayload): boolean {
+    const root = getScrollRoot();
+    if (!root) return false;
+    const untilId = songIdFromAnchor(payload.anchor);
+    if (!untilId) {
+        return Math.abs(root.scrollTop - payload.top) < 40;
+    }
+    const el = root.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
+    if (!el) return false;
+    const delta = el.getBoundingClientRect().top - root.getBoundingClientRect().top;
+    return Math.abs(delta) < 48;
 }
 
 function resolvePayload(): ScrollPayload | null {
@@ -181,13 +205,7 @@ function restoreScrollPosition(direction: "forward" | "back" | null): void {
     if (direction === "back") {
         const payload = resolvePayload();
         if (!payload) return;
-
-        const run = () => {
-            ensureScrollHeight(root, payload.top + root.clientHeight + 80);
-            applyScroll(root, payload);
-        };
-        run();
-        requestAnimationFrame(run);
+        applyScroll(root, payload);
         return;
     }
 
@@ -198,31 +216,53 @@ function restoreScrollPosition(direction: "forward" | "back" | null): void {
 
 /** astro:page-load fires before the view transition finishes — re-apply then. */
 function restoreAfterViewTransition(direction: "forward" | "back" | null): void {
-    restoreScrollPosition(direction);
-    if (direction !== "back") return;
+    if (direction !== "back") {
+        restoreScrollPosition(direction);
+        return;
+    }
 
+    const payload = resolvePayload();
     const apply = () => restoreScrollPosition("back");
+    apply();
+
+    // Windowed lists finish binding after page-load listeners start — listen for ready.
+    const onReady = () => apply();
+    document.addEventListener("kkaraoke:list-ready", onReady, { once: true });
+
+    let attempts = 0;
+    const settle = () => {
+        apply();
+        attempts += 1;
+        if (payload && !anchorIsSettled(payload) && attempts < 20) {
+            requestAnimationFrame(settle);
+            return;
+        }
+        document.removeEventListener("kkaraoke:list-ready", onReady);
+    };
+
     const html = document.documentElement;
+    const startSettle = () => {
+        requestAnimationFrame(settle);
+        window.setTimeout(settle, 50);
+        window.setTimeout(settle, 200);
+        window.setTimeout(settle, 450);
+    };
 
     if (!html.hasAttribute("data-astro-transition")) {
-        requestAnimationFrame(apply);
-        window.setTimeout(apply, 50);
-        window.setTimeout(apply, 300);
+        startSettle();
         return;
     }
 
     const obs = new MutationObserver(() => {
         if (!html.hasAttribute("data-astro-transition")) {
             obs.disconnect();
-            apply();
-            requestAnimationFrame(apply);
-            window.setTimeout(apply, 50);
+            startSettle();
         }
     });
     obs.observe(html, { attributes: true, attributeFilter: ["data-astro-transition"] });
     window.setTimeout(() => {
         obs.disconnect();
-        apply();
+        startSettle();
     }, 700);
 }
 
@@ -252,6 +292,12 @@ function onSearchLaunch(event: Event): void {
     sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
 }
 
+function preferredAnchorFromLink(link: HTMLAnchorElement): string | undefined {
+    const row = link.closest<HTMLElement>(".song-row");
+    if (row?.dataset.id) return `id:${row.dataset.id}`;
+    return undefined;
+}
+
 function onLeavingLinkPointerDown(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
@@ -260,8 +306,7 @@ function onLeavingLinkPointerDown(event: Event): void {
     if (link.target === "_blank" || link.hasAttribute("download")) return;
     const href = link.getAttribute("href");
     if (!href || href.startsWith("#")) return;
-    // Capture while the list scroller still has its offset.
-    persistCurrentScroll();
+    persistCurrentScroll(preferredAnchorFromLink(link));
 }
 
 /** Full-reload links (`data-astro-reload`) may not get pointerdown in all cases. */
@@ -270,7 +315,7 @@ function onLeavingLinkClick(event: Event): void {
     if (!(target instanceof Element)) return;
     const link = target.closest<HTMLAnchorElement>("a[href][data-astro-reload]");
     if (!link || link.hasAttribute("data-smart-back")) return;
-    persistCurrentScroll();
+    persistCurrentScroll(preferredAnchorFromLink(link));
 }
 
 type PreparationEvent = Event & {
@@ -299,17 +344,25 @@ if (!window.__kkaraokeNavInit) {
         lastNavDirection = prep.direction === "back" ? "back" : "forward";
 
         if (lastNavDirection === "forward") {
-            // DOM is still the page we're leaving; location may already match `to`.
             const payload = captureScrollPayload();
             if (payload) {
                 const fromPath = prep.from?.pathname ?? location.pathname;
-                writeSessionPayload(fromPath, payload);
-                const state = (history.state ?? {}) as NonNullable<HistoryState>;
-                history.replaceState({ ...state, kkScroll: payload }, "");
+                // Keep a more specific anchor already stored on this history entry
+                // (e.g. the song row that was clicked) when it exists.
+                const existing = (history.state as HistoryState)?.kkScroll;
+                const merged: ScrollPayload = {
+                    top: payload.top,
+                    anchor: existing?.anchor ?? payload.anchor,
+                };
+                // If the click handler already wrote a fresher top+anchor for this path, prefer higher top.
+                const session = readSessionPayload(fromPath);
+                if (session && session.top >= merged.top) {
+                    merged.top = session.top;
+                    merged.anchor = session.anchor ?? merged.anchor;
+                }
+                persistPayload(merged, fromPath);
             }
         }
-        // On back: do NOT overwrite the destination's saved scroll with the
-        // detail page's ~0 offset (location is already the destination).
     });
 
     document.addEventListener("astro:after-swap", () => {
@@ -330,8 +383,7 @@ if (!window.__kkaraokeNavInit) {
             | PerformanceNavigationTiming
             | undefined;
         const direction =
-            lastNavDirection ??
-            (navEntry?.type === "back_forward" ? "back" : null);
+            lastNavDirection ?? (navEntry?.type === "back_forward" ? "back" : null);
         restoreAfterViewTransition(direction);
 
         if (

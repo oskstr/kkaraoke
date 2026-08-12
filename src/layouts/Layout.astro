@@ -45,6 +45,7 @@ const { title, description = "Browse the karaoke catalogue by artist, decade, ge
         <script>
             import "../scripts/favorites.ts";
             import "../scripts/navigation.ts";
+            import "../scripts/song-window.ts";
             void import("../lib/search-index.ts").then((m) => {
                 if (location.pathname === "/" || location.pathname.startsWith("/browse")) {
                     void m.getSearchIndex().catch(() => {});
