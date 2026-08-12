@@ -131,6 +131,26 @@
             "name": "Dion & The Belmonts",
             "slug": "dion",
             "why": "Merged onto /artists/dion; song rows keep the Belmonts credit"
+        },
+        "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e": {
+            "name": "Sammi Cheng",
+            "slug": "sammi-cheng",
+            "why": "Catalogue credit is Sammi Cheng; MusicBrainz primary is Chinese script 鄭秀文"
+        },
+        "a2cab261-63cc-4ccf-8023-6b6e8588bb62": {
+            "name": "Jacky Cheung",
+            "slug": "jacky-cheung",
+            "why": "Known internationally as Jacky Cheung; MusicBrainz primary is Chinese script 張學友 (venue had Cheung Hok Yau)"
+        },
+        "8b86576e-1cf5-46c8-970a-a79d13c2e0f0": {
+            "name": "Dima Bilan",
+            "slug": "dima-bilan",
+            "why": "Catalogue credit is Dima Bilan; MusicBrainz primary is Cyrillic Дима Билан"
+        },
+        "e2b96b55-35c4-45b9-8d7b-726ac927982f": {
+            "name": "Anna Vissi",
+            "slug": "anna-vissi",
+            "why": "Latin form people search for; MusicBrainz primary is Greek Άννα Βίσση (dump had alias Anna Vishy)"
         }
     }
 }

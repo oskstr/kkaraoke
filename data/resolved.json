@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T07:05:05.414Z",
+  "generatedAt": "2026-08-12T07:07:29.941Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -10160,7 +10160,7 @@
     {
       "postId": 50522,
       "language": "eng",
-      "artist": "Cheung Hok Yau, Regine Velasquez",
+      "artist": "Jacky Cheung, Regine Velasquez",
       "sortAs": "Cheung, Jacky",
       "title": "In Love With You",
       "artistMbids": [
@@ -10170,7 +10170,7 @@
       "artists": [
         {
           "mbid": "a2cab261-63cc-4ccf-8023-6b6e8588bb62",
-          "name": "Cheung Hok Yau"
+          "name": "Jacky Cheung"
         },
         {
           "mbid": "b7efc324-d12b-40b5-87a8-b67ffb34a91d",
@@ -24359,7 +24359,6 @@
     {
       "postId": 47997,
       "language": "eng",
-      "artist": "Anna Vishy",
       "sortAs": "Vissi, Anna",
       "artistMbids": [
         "e2b96b55-35c4-45b9-8d7b-726ac927982f"
@@ -24367,7 +24366,7 @@
       "artists": [
         {
           "mbid": "e2b96b55-35c4-45b9-8d7b-726ac927982f",
-          "name": "Anna Vishy"
+          "name": "Anna Vissi"
         }
       ],
       "recordingMbid": "89491a64-af48-4aaf-9188-e2f9fd141e9a",

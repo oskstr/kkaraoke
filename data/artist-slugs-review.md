@@ -4,7 +4,7 @@
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
-1 curated slug override(s), 9 merged page(s), 0 collision disambiguation(s).
+5 curated slug override(s), 9 merged page(s), 0 collision disambiguation(s).
 Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz entities onto one page.
 
 | name | slug | songs | note | mbid |
@@ -116,6 +116,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Anna Book | anna-book | 2 |  | `6ad8535d-0a2f-4b23-883e-0d32621d36d9` |
 | Anna Maria Espinosa | anna-maria-espinosa | 1 |  | `2c10fef5-5cc9-48e0-9277-87797704a96a` |
 | Anna McMurphy | anna-mcmurphy | 1 |  | `c8b58f72-9f52-4235-80ee-accd2fe2e0af` |
+| Anna Vissi | anna-vissi | 1 | curated | `e2b96b55-35c4-45b9-8d7b-726ac927982f` |
 | Anne Murray | anne-murray | 1 |  | `cff63c14-b081-4686-9357-eea84d5348fc` |
 | Anne‐Lie Rydé | anne-lie-ryde | 2 |  | `18986d60-32ef-4388-9691-d23f8679419c` |
 | Anne‐Marie | anne-marie | 5 |  | `e3d5b5ec-101a-4529-9f2d-01dca64cf44e` |
@@ -245,7 +246,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Bobby Vee | bobby-vee | 2 |  | `97ebb1b4-1d9c-4303-bb60-074c993e2d53` |
 | Bobbysocks | bobbysocks | 1 |  | `bd8389cf-4ac2-4b85-8b37-7ad910fccf04` |
 | BodyRockers | bodyrockers | 1 |  | `fd0e3da0-5c32-4881-a7cc-7dfa58e265cf` |
-| Bomfunk MC’s | bomfunk-mc-s | 1 |  | `5dfbf314-2052-4c3b-9a7a-5270fb3b2a55` |
+| Bomfunk MC’s | bomfunk-mcs | 1 |  | `5dfbf314-2052-4c3b-9a7a-5270fb3b2a55` |
 | Bon Jovi | bon-jovi | 20 |  | `5dcdb5eb-cb72-4e6e-9e63-b7bace604965` |
 | Bone Thugs‐n‐Harmony | bone-thugs-n-harmony | 1 |  | `2fa45bbb-0efb-4950-9d40-94bf23cbfec1` |
 | Boney M. | boney-m | 5 |  | `5403bf6e-bc1d-4e62-b31f-926a2bf66a14` |
@@ -402,8 +403,8 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Cutting Crew | cutting-crew | 1 |  | `2aa79fa9-7ac0-443b-b250-18d67227a1cb` |
 | Cyndi Lauper | cyndi-lauper | 3 |  | `7bd9e20e-74b9-446a-a2ed-a223f82a36e7` |
 | D.O.E. | d-o-e | 1 |  | `2fa546d4-a1da-41ad-8ca6-d4c0aed77813` |
-| D’Angelo | d-angelo | 1 |  | `b66771cc-45fa-4a32-b14f-5337d7223d7a` |
-| D’Sound | d-sound | 1 |  | `6409a09d-826f-43a7-90dc-9650a848742c` |
+| D’Angelo | dangelo | 1 |  | `b66771cc-45fa-4a32-b14f-5337d7223d7a` |
+| D’Sound | dsound | 1 |  | `6409a09d-826f-43a7-90dc-9650a848742c` |
 | Da Brat | da-brat | 1 |  | `f545eed4-cd4c-40a3-89c0-edf4d195e52e` |
 | Da Buzz | da-buzz | 1 |  | `1bd50cb2-09b8-4539-b660-af585cb3e40b` |
 | Daddy Yankee | daddy-yankee | 1 |  | `2f522f5c-111c-4ce8-8bd0-d82e97c227ad` |
@@ -460,7 +461,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Descemer Bueno | descemer-bueno | 1 |  | `cdfa25d4-b9fa-4e99-a163-18fddf7d514f` |
 | Desireless | desireless | 1 |  | `b9a23705-56e8-4fb6-9543-7f43ab62eac7` |
 | Desmond Dekker & the Aces | desmond-dekker-and-the-aces | 2 |  | `ba971bf0-8316-4d0d-820b-57f4882c497f` |
-| Destiny’s Child | destiny-s-child | 16 |  | `a796b92e-c137-4895-9c89-10f900617a4f` |
+| Destiny’s Child | destinys-child | 16 |  | `a796b92e-c137-4895-9c89-10f900617a4f` |
 | Dexys Midnight Runners | dexys-midnight-runners | 3 |  | `ccce2053-7007-4c36-b1e7-f8fcf5023a12` |
 | Diana King | diana-king | 1 |  | `72447757-809b-4de5-8e25-f4a9adc24cf3` |
 | Diana Krall | diana-krall | 1 |  | `67d2cb7a-9ddb-4a7f-82bf-5a2d1a038e98` |
@@ -468,6 +469,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Dick Van Dyke | dick-van-dyke | 1 |  | `33ec3ccd-ae01-42fa-b874-095dfbfd522f` |
 | Dido | dido | 4 |  | `d1353a0c-26fb-4318-a116-defde9c7c9ad` |
 | Dilba | dilba | 1 |  | `cb099ac2-0782-4a11-b635-aebb94a8a2d9` |
+| Dima Bilan | dima-bilan | 1 | curated | `8b86576e-1cf5-46c8-970a-a79d13c2e0f0` |
 | Dina | dina | 2 |  | `a44fc848-5c1b-42fb-9d72-ee717bc79946` |
 | Dina Carroll | dina-carroll | 1 |  | `e4a10ad0-3c15-4c47-b376-6b34ae48f38a` |
 | Dinah Washington | dinah-washington | 1 |  | `d385947d-c00d-4311-9cf1-a032a1d4040b` |
@@ -539,7 +541,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Electric Boys | electric-boys | 1 |  | `49cfde3d-2824-457e-997b-6955bae2db88` |
 | Electric Light Orchestra | electric-light-orchestra | 3 |  | `0c502791-4ee9-4c5f-9696-0602b721ff3b` |
 | Elin Lanto | elin-lanto | 2 |  | `34349438-cb9d-4189-9214-1abc203b6a73` |
-| Elisa's | elisa-s | 1 |  | `725b78b3-f0f1-4af6-ad42-05d7586365ee` |
+| Elisa's | elisas | 1 |  | `725b78b3-f0f1-4af6-ad42-05d7586365ee` |
 | Eliza | eliza | 2 |  | `c45c1037-5469-420c-ac21-83841efd815d` |
 | Elkie Brooks | elkie-brooks | 2 |  | `936f9130-333f-40dd-813f-6da80fd95c11` |
 | Ella Fitzgerald | ella-fitzgerald | 4 |  | `54799c0e-eb45-4eea-996d-c4d71a63c499` |
@@ -692,7 +694,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Gloria Estefan | gloria-estefan | 12 |  | `becd8cc6-a453-4183-af88-dedaaec859a6` |
 | Gloria Gaynor | gloria-gaynor | 2 |  | `d5c51c36-ac67-4727-91ed-ee9f0df81a2d` |
 | Gnarls Barkley | gnarls-barkley | 2 |  | `a47c3aa2-7d87-475c-a2c7-1e2047dafb09` |
-| Go‐Go’s | go-go-s | 2 |  | `eec163e4-a013-4af0-9641-c5b2df41fff7` |
+| Go‐Go’s | go-gos | 2 |  | `eec163e4-a013-4af0-9641-c5b2df41fff7` |
 | Godsmack | godsmack | 1 |  | `ac2d1c91-3667-46aa-9fe7-170ca7fce9e2` |
 | Gomez | gomez | 1 |  | `304cdd9d-a04e-4eb2-865c-980a553a0efd` |
 | Goo Goo Dolls | goo-goo-dolls | 20 |  | `e2c00c56-8365-4160-9f40-a64682917633` |
@@ -730,12 +732,12 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Hasse Andersson | hasse-andersson | 1 |  | `ded37d18-f8b0-453e-a8ef-14ad04881861` |
 | Hayley Williams | hayley-williams | 1 |  | `b4b5b5a7-feff-47d0-9458-83d0d135a692` |
 | Headline | headline | 1 |  | `14bc6572-4f59-49c8-8211-f93c67b0f238` |
-| Hear’Say | hear-say | 1 |  | `7e95e908-bc59-4881-a5f6-b545acc56154` |
+| Hear’Say | hearsay | 1 |  | `7e95e908-bc59-4881-a5f6-b545acc56154` |
 | Heart | heart | 2 |  | `bdbd48f5-abf3-4a4f-9a21-4551dbc3fde9` |
 | Hector | hector | 1 |  | `600bec42-17d9-432b-949c-9ec362b13348` |
 | Helen Sjöholm | helen-sjoholm | 2 |  | `053cfc8d-cdec-4be8-a099-3e6305e15066` |
 | Helena Paparizou | helena-paparizou | 2 |  | `28a40a67-ecd3-432a-be2f-51490a7743ec` |
-| Herman’s Hermits | herman-s-hermits | 1 |  | `fc9ec2b3-b44a-4dad-8bc3-ff3738ee02ae` |
+| Herman’s Hermits | hermans-hermits | 1 |  | `fc9ec2b3-b44a-4dad-8bc3-ff3738ee02ae` |
 | Hermes House Band | hermes-house-band | 2 |  | `6d2f839e-b871-4b6c-bbf8-da73553d203e` |
 | Herreys | herreys | 1 |  | `70033c85-cc58-4344-b3ff-5009b60ba791` |
 | Highlights | highlights | 1 |  | `c21caeea-6083-4915-9614-75310384bb5f` |
@@ -774,7 +776,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Irma | irma | 1 |  | `3c58aa2b-526a-4b57-93b5-bbfb5d43134c` |
 | Iron Maiden | iron-maiden | 9 |  | `ca891d65-d9b0-4258-89f7-e6ba29d83767` |
 | Irwin Goodman | irwin-goodman | 1 |  | `078f98b2-3a90-4443-817b-440c7089b0c4` |
-| Israel Kamakawiwoʻole | israel-kamakawiwoʻole | 1 |  | `e7ae37b1-624f-47b9-bf4f-53b52ef19528` |
+| Israel Kamakawiwoʻole | israel-kamakawiwoole | 1 |  | `e7ae37b1-624f-47b9-bf4f-53b52ef19528` |
 | J Balvin | j-balvin | 6 |  | `5bdeb32d-56a5-4b6d-a768-264101fa0a0a` |
 | J. Karjalainen | j-karjalainen | 1 |  | `ee03c284-c6dc-49b5-ba31-e388157f6ed3` |
 | J.J. Barrie | j-j-barrie | 1 |  | `5a311fbe-96dd-438e-be15-4c2513ca747a` |
@@ -785,6 +787,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Jackie Wilson | jackie-wilson | 1 |  | `f0bf4fa0-028e-452f-82d3-7d4375e105dd` |
 | Jackson 5 | jackson-5 | 3 |  | `e5257dc5-1edd-4fca-b7e6-1158e00522c8` |
 | Jackson Browne | jackson-browne | 2 |  | `88527d26-7496-47c5-8358-ebdb1868a90f` |
+| Jacky Cheung | jacky-cheung | 1 | curated | `a2cab261-63cc-4ccf-8023-6b6e8588bb62` |
 | Jade Ewen | jade-ewen | 1 |  | `fa04dbda-2b62-42d5-a054-0a309170a594` |
 | Jaden | jaden | 1 |  | `166cb987-3156-4166-b0d3-f1ad5a6c514c` |
 | Jagwar Twin | jagwar-twin | 1 |  | `dc89b77a-fede-4369-b0bc-c141e74702a6` |
@@ -880,7 +883,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | John Mayer | john-mayer | 16 |  | `144ef525-85e9-40c3-8335-02c32d0861f3` |
 | John Michael Montgomery | john-michael-montgomery | 2 |  | `9647191b-5891-4885-bccc-f6bb9b200a6d` |
 | John Newman | john-newman | 2 |  | `589ef702-7f3a-4a1c-8f2c-4727005cfc0e` |
-| John O’Banion | john-o-banion | 1 |  | `3f972dd6-ae32-4843-9ae2-4e3c27dbba16` |
+| John O’Banion | john-obanion | 1 |  | `3f972dd6-ae32-4843-9ae2-4e3c27dbba16` |
 | John Parr | john-parr | 1 |  | `e31ff965-ddda-43d9-b24f-267a1924ff4a` |
 | John Paul Young | john-paul-young | 1 |  | `2af13455-6062-473c-af2a-804a0ac7f641` |
 | John Sebastian | john-sebastian | 1 |  | `95f9b1a1-dc0c-4440-9cd3-225aaba246ee` |
@@ -1111,7 +1114,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Malena Ernman | malena-ernman | 1 |  | `bcfa2a05-90f6-469a-b25d-b485838f1401` |
 | Måneskin | maneskin | 2 |  | `3862342a-43c4-4cdb-8250-bfdbfb5e1419` |
 | Manfred Mann | manfred-mann | 1 |  | `06b6f280-8787-4a3d-8ab6-c6487b465320` |
-| Manfred Mann’s Earth Band | manfred-mann-s-earth-band | 1 |  | `83e9c775-84ea-4cf6-abdf-b9ffa8c3d060` |
+| Manfred Mann’s Earth Band | manfred-manns-earth-band | 1 |  | `83e9c775-84ea-4cf6-abdf-b9ffa8c3d060` |
 | Manic Street Preachers | manic-street-preachers | 8 |  | `32efea44-6cb5-4b4f-bdaa-c8b8f6cef981` |
 | Manowar | manowar | 1 |  | `00eeed6b-5897-4359-8347-b8cd28375331` |
 | Måns Zelmerlöw | mans-zelmerlow | 4 |  | `9a21832f-5104-42fa-b881-17a1ca66bfdb` |
@@ -1195,7 +1198,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Mike Reno | mike-reno | 1 |  | `757e0383-39e2-4345-b406-d6403ab99f9e` |
 | Mike WiLL Made‐It | mike-will-made-it | 1 |  | `5a2071aa-0787-49fb-931c-fa85ba86e681` |
 | Miley Cyrus | miley-cyrus | 6 |  | `7e9bd05a-117f-4cce-87bc-e011527a8b18` |
-| Milla’s Mirakel! | milla-s-mirakel | 1 |  | `7847e3d7-591e-4ed1-be0d-3b5cdcff7237` |
+| Milla’s Mirakel! | millas-mirakel | 1 |  | `7847e3d7-591e-4ed1-be0d-3b5cdcff7237` |
 | Milli Vanilli | milli-vanilli | 3 |  | `d3d83a98-4a2e-433c-903c-5b4c79ccb42e` |
 | Millie Small | millie-small | 1 |  | `c0dab97a-bd3c-42b2-8bc4-05d941b76b7a` |
 | Minnie Riperton | minnie-riperton | 1 |  | `e842abf7-8a63-4602-8879-75958c2884a1` |
@@ -1206,7 +1209,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Mitzi Gaynor | mitzi-gaynor | 1 |  | `d5500491-0676-4fa1-ba88-5e4bc0b74449` |
 | MKTO | mkto | 1 |  | `aa25521e-3848-4ff7-ab09-545cc95b8a36` |
 | MNEK | mnek | 3 |  | `27e7c2e8-badc-4a97-8b93-24b6c530b038` |
-| MØ | mø | 1 |  | `3ab2ee23-1c2f-458c-9c8c-ca4844729120` |
+| MØ | mo | 1 |  | `3ab2ee23-1c2f-458c-9c8c-ca4844729120` |
 | Moa Lignell | moa-lignell | 1 |  | `6950aab5-4e47-45d1-9e75-3773dc40e0fb` |
 | Modern English | modern-english | 1 |  | `78605d0c-7454-456d-934c-51eb46122566` |
 | Modern Talking | modern-talking | 1 |  | `98913495-8867-43b3-aa8d-db88ee4d4cdc` |
@@ -1219,7 +1222,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Montserrat Caballé | montserrat-caballe | 1 |  | `a96e61bc-1da0-45d0-816d-ebd00b70ff9d` |
 | Monty Python | monty-python | 1 |  | `4a5c8526-f8ec-43f1-97af-49722ad88394` |
 | Morrissey | morrissey | 4 |  | `013fa897-86db-41d3-8e9f-386c8a34f4e6` |
-| Mother’s Finest | mother-s-finest | 1 |  | `7b38a145-7137-4c61-8d04-89ade521a6fc` |
+| Mother’s Finest | mothers-finest | 1 |  | `7b38a145-7137-4c61-8d04-89ade521a6fc` |
 | Mötley Crüe | motley-crue | 10 |  | `26f07661-e115-471d-a930-206f5c89d17c` |
 | Motörhead | motorhead | 2 |  | `57961a97-3796-4bf7-9f02-a985a8979ae9` |
 | Mott the Hoople | mott-the-hoople | 1 |  | `435f1441-0f43-479d-92db-a506449a686b` |
@@ -1378,7 +1381,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Pinkfong | pinkfong | 1 |  | `1af169ca-2cbd-4280-adcf-23963301448e` |
 | Pitbull | pitbull | 7 |  | `d262ea27-3ffe-40f7-b922-85c42d625e67` |
 | PJ Harvey | pj-harvey | 3 |  | `e795e03d-b5d5-4a5f-834d-162cfb308a2c` |
-| Plain White T’s | plain-white-t-s | 1 |  | `49576e42-fbbd-4d73-968d-93c8dcf7f065` |
+| Plain White T’s | plain-white-ts | 1 |  | `49576e42-fbbd-4d73-968d-93c8dcf7f065` |
 | Plura Jonsson | plura-jonsson | 1 |  | `a9cd5ade-ccd3-455a-a023-cd2cfd1d2395` |
 | Poe | poe | 1 |  | `72ae540c-514f-4c05-b05d-e6297e0ce4da` |
 | Poison | poison | 9 |  | `c79c43d4-cbed-4373-89ce-6560f62eb7d8` |
@@ -1438,7 +1441,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Rhianna | rhianna | 1 |  | `db36a76f-4cdf-43ac-8cd0-5e48092d2bae` |
 | Riccardo Cocciante | riccardo-cocciante | 1 |  | `593bb5a8-a093-431b-b78e-4d6213460980` |
 | Richard Marx | richard-marx | 9 |  | `e33c460f-011a-469a-b934-08932a3729c4` |
-| Richard O’Brien | richard-o-brien | 1 |  | `ff693144-69be-4ec5-9150-cb3c5652e430` |
+| Richard O’Brien | richard-obrien | 1 |  | `ff693144-69be-4ec5-9150-cb3c5652e430` |
 | Richard Sanderson | richard-sanderson | 1 |  | `ef30fb35-acf6-4bdc-aeb3-fb9b7d6b813d` |
 | Rick Astley | rick-astley | 2 |  | `db92a151-1ac2-438b-bc43-b82e149ddd50` |
 | Rick Nelson | rick-nelson | 4 |  | `0b511854-c21c-4af1-9c31-e3fc178ded61` |
@@ -1503,6 +1506,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Sam the Sham & the Pharaohs | sam-the-sham-and-the-pharaohs | 1 |  | `e9d7f684-d144-46c4-b411-19effff4defb` |
 | Samantha Fox | samantha-fox | 5 |  | `ffdb2b8f-ecbf-427a-abc7-c47f4ebc8ae3` |
 | Samantha Mumba | samantha-mumba | 2 |  | `7d137f81-27a6-4c65-bf78-186116368860` |
+| Sammi Cheng | sammi-cheng | 1 | curated | `5f3c4fe0-fc71-4455-99e6-abd0e8c4462e` |
 | Samuel E. Wright | samuel-e-wright | 1 |  | `32c95bd9-68ee-4f64-923c-530de6b283a1` |
 | Sandi Thom | sandi-thom | 1 |  | `fcdeb957-b420-4249-a092-946b537a00ca` |
 | Sandie Shaw | sandie-shaw | 1 |  | `16963107-9288-43a2-946c-81de2f5eddfa` |
@@ -1565,7 +1569,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Simon Forsberg | simon-forsberg | 1 |  | `075799e8-09f1-41fa-93ba-859d90b44756` |
 | Simple Minds | simple-minds | 3 |  | `f41490ce-fe39-435d-86c0-ab5ce098b423` |
 | Simply Red | simply-red | 5 |  | `a9100753-f539-43cf-bcc9-579566fb512e` |
-| Sinéad O’Connor | sinead-o-connor | 1 |  | `c78a77fa-507c-4c07-947a-0355029453bd` |
+| Sinéad O’Connor | sinead-oconnor | 1 |  | `c78a77fa-507c-4c07-947a-0355029453bd` |
 | Sir Mix‐A‐Lot | sir-mix-a-lot | 1 |  | `05539fb8-b7a5-4012-97a9-5e27ddc031fb` |
 | Sisqó | sisqo | 1 |  | `25e0497c-faa4-4765-b232-baa20e5e35a7` |
 | Sister Sledge | sister-sledge | 1 |  | `1ed00158-c6a3-45cd-819c-2f91997fc480` |
@@ -1612,7 +1616,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Stephen Bishop | stephen-bishop | 1 |  | `6cf4f18c-2455-47ed-9f6c-953e2f107406` |
 | Steppenwolf | steppenwolf | 1 |  | `12ff8858-bfcb-4812-a8dd-7e9debf0cbee` |
 | Steps | steps | 1 |  | `19659aa7-cd3a-4bfe-bca0-6943e9e5c6e0` |
-| Stereo MC’s | stereo-mc-s | 1 |  | `5e0ca89b-f5a6-4034-af31-17f10ff5a7d2` |
+| Stereo MC’s | stereo-mcs | 1 |  | `5e0ca89b-f5a6-4034-af31-17f10ff5a7d2` |
 | Stereophonics | stereophonics | 1 |  | `0bfba3d3-6a04-4779-bb0a-df07df5b0558` |
 | Steve Edwards | steve-edwards | 1 |  | `2b7a678b-24f7-4759-a6c4-e6cfa7c71613` |
 | Steve Kolander | steve-kolander | 1 |  | `3be2d963-3e2f-4c15-bd03-1b325083557d` |
@@ -1654,7 +1658,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | T. Rex | t-rex | 1 |  | `c842d29f-a297-48cd-bb71-4f77fd672b16` |
 | t.A.T.u. | t-a-t-u | 2 |  | `7c20f558-d664-42bd-b6f1-81acf9dbb72d` |
 | T.P.H. Productions | t-p-h-productions | 3 |  | `165d17a9-c8aa-41bf-9db2-adefce5cefd9` |
-| T’Pau | t-pau | 1 |  | `63721b20-b058-4176-a057-50dcd8044af6` |
+| T’Pau | tpau | 1 |  | `63721b20-b058-4176-a057-50dcd8044af6` |
 | Take That | take-that | 7 |  | `24d2505b-388c-46cc-8a64-48223ea6d78d` |
 | tAKiDA | takida | 2 |  | `2bc20c29-8c70-49e1-a92a-0738cda521a9` |
 | Tammi Terrell | tammi-terrell | 2 |  | `ce4582b6-aee7-4da1-b841-3c619d4fb5a5` |
@@ -1673,7 +1677,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Ten Sharp | ten-sharp | 1 |  | `678bd323-a298-45b0-825f-441bf6c0bb96` |
 | Tenacious D | tenacious-d | 3 |  | `148ddea2-6839-4354-8e2c-5dfadf136b7f` |
 | Tennessee Ernie Ford | tennessee-ernie-ford | 1 |  | `947163f5-f306-4d78-a316-8c3fb317ae50` |
-| Terence Trent D’Arby | terence-trent-d-arby | 1 |  | `91f603ca-b126-42a2-9c29-820ca687347c` |
+| Terence Trent D’Arby | terence-trent-darby | 1 |  | `91f603ca-b126-42a2-9c29-820ca687347c` |
 | Terror Squad | terror-squad | 1 |  | `995d7339-ff57-498e-9c8e-faf955eba696` |
 | Terry Jacks | terry-jacks | 1 |  | `d8ae63c6-6fce-41b2-98ba-e570bc4007ca` |
 | Texas | texas | 1 |  | `7289d10d-d8d2-41ff-8308-c56ec9346e07` |
@@ -1765,7 +1769,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | The New Power Generation | the-new-power-generation | 1 |  | `51d63176-56e8-45b9-88e3-81e6436473f3` |
 | The New Seekers | the-new-seekers | 2 |  | `cabebdc4-5803-4605-8f3f-ddaf92f7b5ad` |
 | The Notorious B.I.G. | the-notorious-b-i-g | 1 |  | `d5d97b2b-b83b-4976-814a-056d9076c8c3` |
-| The O’Jays | the-o-jays | 3 |  | `8153c6ef-026c-481f-b081-974f2c948d9f` |
+| The O’Jays | the-ojays | 3 |  | `8153c6ef-026c-481f-b081-974f2c948d9f` |
 | The Oak Ridge Boys | the-oak-ridge-boys | 1 |  | `1089f50b-10c3-47ef-8b21-b0b899c827d8` |
 | The Offspring | the-offspring | 6 |  | `23a03e33-a603-404e-bcbf-2c00159d7067` |
 | The Outfield | the-outfield | 1 |  | `5d400869-0471-42ee-afda-3addd73d0418` |
@@ -1974,8 +1978,4 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Zedd | zedd | 1 |  | `56c4b861-0922-4c3a-a9b9-3bfcb00f8274` |
 | Zucchero | zucchero | 1 |  | `00ed154e-8679-42f0-8f42-e59bd7e185af` |
 | ZZ Top | zz-top | 11 |  | `a81259a0-a2f5-464b-866e-71220f2739f1` |
-| Άννα Βίσση | αννα-βισση | 1 |  | `e2b96b55-35c4-45b9-8d7b-726ac927982f` |
-| Дима Билан | дима-билан | 1 |  | `8b86576e-1cf5-46c8-970a-a79d13c2e0f0` |
-| 張學友 | 張學友 | 1 |  | `a2cab261-63cc-4ccf-8023-6b6e8588bb62` |
-| 鄭秀文 | 鄭秀文 | 1 |  | `5f3c4fe0-fc71-4455-99e6-abd0e8c4462e` |
 

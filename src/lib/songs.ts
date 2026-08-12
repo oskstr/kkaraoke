@@ -160,15 +160,19 @@ function displayNameFor(mbid: string, fallback?: string): string | undefined {
 
 /**
  * URL slug from a display name. Latin diacritics fold to ASCII (`å`→`a`, `ö`→`o`) so
- * paths stay easy to type; other scripts are kept. `$` becomes `s` (A$AP → asap).
- * `&` becomes `and`. Remaining punctuation becomes hyphens.
+ * paths stay easy to type; other scripts are kept unless a catalogue display name
+ * supplies Latin. `$` becomes `s` (A$AP → asap). `&` becomes `and`. Modifier
+ * apostrophes (Hawaiian ʻ, etc.) drop out. Remaining punctuation becomes hyphens.
  */
 export function slugify(name: string): string {
     return (
         name
             .normalize("NFKD")
             .replace(/\p{M}/gu, "")
+            .replace(/[\u02BB\u02BC\u02C8\u2018\u2019\uFF07']/gu, "")
             .toLowerCase()
+            .replace(/ø/g, "o")
+            .replace(/æ/g, "ae")
             .replace(/\$/g, "s")
             .replace(/&/g, " and ")
             .replace(/[^\p{L}\p{N}]+/gu, "-")
