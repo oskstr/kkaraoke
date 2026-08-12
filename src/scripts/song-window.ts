@@ -1,4 +1,6 @@
-/** Windowed song lists — lives in Layout so it rebinds on every ClientRouter page. */
+/** Windowed song lists for large collections. Lives in Layout so it rebinds
+ *  on every ClientRouter navigation. Uses the viewport as the IO root
+ *  (document scroll — Astro restores window.scrollY on back). */
 
 export {};
 
@@ -64,7 +66,6 @@ function bindInfiniteScroll(): void {
     const list = document.querySelector("[data-song-list]");
     const sentinel = document.querySelector("[data-infinite-sentinel]");
     const json = document.querySelector<HTMLElement>("[data-more-songs]");
-    const scrollRoot = document.querySelector("[data-scroll-root]");
 
     if (!root || !list || !sentinel || !json) {
         observer?.disconnect();
@@ -75,7 +76,6 @@ function bindInfiniteScroll(): void {
         return;
     }
 
-    // Same document payload already bound (after-swap + page-load).
     if (json.dataset.bound === "1" && loadMoreFn && listEl === list) {
         document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
@@ -118,15 +118,12 @@ function bindInfiniteScroll(): void {
     };
     loadMoreFn = loadMore;
 
+    // Viewport root — page uses document scroll (Astro restores window.scrollY).
     observer = new IntersectionObserver(
         (entries) => {
             if (entries.some((e) => e.isIntersecting)) loadMore();
         },
-        {
-            root: scrollRoot instanceof Element ? scrollRoot : null,
-            rootMargin: "240px 0px",
-            threshold: 0,
-        },
+        { root: null, rootMargin: "240px 0px", threshold: 0 },
     );
     observer.observe(sentinel);
     document.dispatchEvent(new Event("kkaraoke:list-ready"));
@@ -134,25 +131,23 @@ function bindInfiniteScroll(): void {
 
 function onEnsureScrollHeight(event: Event): void {
     const detail = (
-        event as CustomEvent<{ minHeight: number; root: HTMLElement; untilId?: string }>
+        event as CustomEvent<{ minHeight: number; root: Element; untilId?: string }>
     ).detail;
     if (!detail) return;
 
-    // Fresh bind if we landed on a list before the loader was ready.
     if (!loadMoreFn) bindInfiniteScroll();
 
     let guard = 0;
     while (loadMoreFn && listEl && guard < 50) {
         if (detail.untilId) {
-            const found = listEl.querySelector(`[data-id="${CSS.escape(detail.untilId)}"]`);
-            if (found) break;
-        } else if (detail.root.scrollHeight >= detail.minHeight) {
+            if (listEl.querySelector(`[data-id="${CSS.escape(detail.untilId)}"]`)) break;
+        } else if (document.documentElement.scrollHeight >= detail.minHeight) {
             break;
         }
         const before = listEl.querySelectorAll(".song-row").length;
         loadMoreFn();
         const after = listEl.querySelectorAll(".song-row").length;
-        if (after === before) break; // loader exhausted or stuck
+        if (after === before) break;
         guard += 1;
     }
 }
@@ -166,7 +161,6 @@ declare global {
 if (!window.__kkaraokeSongWindowInit) {
     window.__kkaraokeSongWindowInit = true;
     document.addEventListener("astro:after-swap", () => {
-        // New DOM — force a fresh loader bound to the current list.
         loadMoreFn = null;
         listEl = null;
         observer?.disconnect();

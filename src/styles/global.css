@@ -21,14 +21,11 @@
 html {
     background: var(--color-ink);
     color: var(--color-cream);
-    height: 100%;
-    overflow: hidden;
 }
 
 body {
     margin: 0;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100dvh;
     font-family: var(--font-sans);
     background:
         radial-gradient(120% 80% at 50% -10%, rgba(233, 180, 76, 0.08), transparent 55%),

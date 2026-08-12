@@ -33,8 +33,7 @@ const inputId = "catalogue-search-input";
 ---
 
 <Layout title="Search · kkaraoke">
-    <div class="flex min-h-0 flex-1 flex-col">
-        <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
+    <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
             <div class="flex items-center gap-2.5">
                 <label
                     class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3.5"
@@ -76,5 +75,4 @@ const inputId = "catalogue-search-input";
             </div>
         </div>
         <SearchResults client:load suggestions={suggestions} inputId={inputId} />
-    </div>
 </Layout>
