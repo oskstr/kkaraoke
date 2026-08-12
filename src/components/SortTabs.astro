@@ -39,13 +39,19 @@ const { tint } = Astro.props;
             const artistB = b.dataset.artist ?? "";
             const yearA = Number(a.dataset.year || 9999);
             const yearB = Number(b.dataset.year || 9999);
+            const idA = Number(a.dataset.id || 0);
+            const idB = Number(b.dataset.id || 0);
             if (sort === "artist") {
-                return collator.compare(artistA, artistB) || collator.compare(titleA, titleB);
+                return (
+                    collator.compare(artistA, artistB) ||
+                    collator.compare(titleA, titleB) ||
+                    idA - idB
+                );
             }
             if (sort === "year") {
-                return yearA - yearB || collator.compare(titleA, titleB);
+                return yearA - yearB || collator.compare(titleA, titleB) || idA - idB;
             }
-            return collator.compare(titleA, titleB);
+            return collator.compare(titleA, titleB) || idA - idB;
         });
         for (const row of rows) list.appendChild(row);
     }

@@ -78,6 +78,12 @@ export default function FavoritesApp() {
         <div>
             {rows.map((song) => (
                 <div key={song.id} className="flex items-center gap-2.5 border-b border-line py-3">
+                    <span
+                        className="w-11 shrink-0 text-right font-mono text-[12px] tabular-nums leading-none text-gold"
+                        aria-label={`Number ${song.id}`}
+                    >
+                        {song.id}
+                    </span>
                     <div className="flex min-h-11 flex-1 flex-col justify-center text-left">
                         <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
                         <div className="mt-0.5 text-[13px] text-muted">

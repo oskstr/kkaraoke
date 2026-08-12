@@ -141,7 +141,8 @@ const backFallback: Record<CollectionKind, string> = {
             const bits = [song.category, ...meta].filter(Boolean);
             subtitle = escapeHtml(bits.join(" · "));
         }
-        return `<div class="song-row flex items-center gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}">
+        return `<div class="song-row flex items-center gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}" data-id="${song.id}">
+        <span class="song-num w-11 shrink-0 text-right font-mono text-[12px] tabular-nums leading-none text-gold" aria-label="Number ${song.id}">${song.id}</span>
         <div class="flex min-h-11 flex-1 flex-col justify-center">
           <div class="text-[15.5px] leading-snug text-cream">${title}</div>
           <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>

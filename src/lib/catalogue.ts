@@ -363,10 +363,13 @@ export function sortSongs(songs: Song[], sort: SortKey): Song[] {
         return copy.sort(
             (a, b) =>
                 collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
-                collator.compare(a.song, b.song),
+                collator.compare(a.song, b.song) ||
+                a.id - b.id,
         );
     }
-    return copy.sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song));
+    return copy.sort(
+        (a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song) || a.id - b.id,
+    );
 }
 
 export function parseSort(value: string | null | undefined): SortKey {
