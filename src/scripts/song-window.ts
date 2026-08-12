@@ -88,13 +88,11 @@ function bindInfiniteScroll(): void {
         observer = null;
         loadMoreFn = null;
         listEl = null;
-        document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
     }
 
     // Already wired to this exact list node — keep the in-memory remaining queue.
     if (json.dataset.bound === "1" && loadMoreFn && listEl === list) {
-        document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
     }
 
@@ -108,7 +106,6 @@ function bindInfiniteScroll(): void {
         root.remove();
         loadMoreFn = null;
         listEl = null;
-        document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
     }
 
@@ -121,7 +118,6 @@ function bindInfiniteScroll(): void {
         loadMoreFn = null;
         listEl = null;
         root.remove();
-        document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
     }
 
@@ -167,7 +163,6 @@ function bindInfiniteScroll(): void {
         { root: null, rootMargin: "240px 0px", threshold: 0 },
     );
     observer.observe(sentinel);
-    document.dispatchEvent(new Event("kkaraoke:list-ready"));
 }
 
 function onEnsureScrollHeight(event: Event): void {

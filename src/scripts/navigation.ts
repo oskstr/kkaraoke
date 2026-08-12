@@ -82,39 +82,52 @@ type PreparationEvent = Event & {
 /**
  * Windowed collections only ship the first chunk of rows. After Astro restores
  * window.scrollY, expand the list until that height (or return-song) exists.
+ *
+ * Reentrancy guard: ensure → bindInfiniteScroll used to emit list-ready which
+ * called this again and blew the stack.
  */
+let expandingForBack = false;
+
 function expandWindowedListForBack(): void {
-    const root = document.documentElement;
-    const state = history.state as { scrollY?: number } | null;
-    const targetY = state?.scrollY ?? window.scrollY;
-    const untilId = sessionStorage.getItem("kkaraoke:return-song") ?? undefined;
+    if (expandingForBack) return;
+    expandingForBack = true;
+    try {
+        const root = document.documentElement;
+        const state = history.state as { scrollY?: number } | null;
+        const targetY = state?.scrollY ?? window.scrollY;
+        const untilId = sessionStorage.getItem("kkaraoke:return-song") ?? undefined;
 
-    document.dispatchEvent(
-        new CustomEvent("kkaraoke:ensure-scroll-height", {
-            bubbles: true,
-            detail: {
-                minHeight: targetY + window.innerHeight + 80,
-                root,
-                ...(untilId ? { untilId } : {}),
-            },
-        }),
-    );
+        document.dispatchEvent(
+            new CustomEvent("kkaraoke:ensure-scroll-height", {
+                bubbles: true,
+                detail: {
+                    minHeight: targetY + window.innerHeight + 80,
+                    root,
+                    ...(untilId ? { untilId } : {}),
+                },
+            }),
+        );
 
-    if (untilId) {
-        const el = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
-        if (el) {
-            const top = el.getBoundingClientRect().top + window.scrollY;
-            if (Math.abs(window.scrollY - top) > 48) {
-                window.scrollTo({ top, left: 0, behavior: "instant" });
+        if (untilId) {
+            const el = document.querySelector<HTMLElement>(
+                `.song-row[data-id="${CSS.escape(untilId)}"]`,
+            );
+            if (el) {
+                const top = el.getBoundingClientRect().top + window.scrollY;
+                if (Math.abs(window.scrollY - top) > 48) {
+                    window.scrollTo({ top, left: 0, behavior: "instant" });
+                }
+                sessionStorage.removeItem("kkaraoke:return-song");
+                return;
             }
-            sessionStorage.removeItem("kkaraoke:return-song");
-            return;
         }
-    }
 
-    // Re-assert Astro’s restored window scroll after rows were inserted.
-    if (typeof targetY === "number" && targetY > 0) {
-        window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
+        // Re-assert Astro’s restored window scroll after rows were inserted.
+        if (typeof targetY === "number" && targetY > 0) {
+            window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
+        }
+    } finally {
+        expandingForBack = false;
     }
 }
 
@@ -164,7 +177,6 @@ if (!window.__kkaraokeNavInit) {
         }
     });
 
-    document.addEventListener("kkaraoke:list-ready", () => {
-        if (lastNavDirection === "back") expandWindowedListForBack();
-    });
+    // Do not expand on kkaraoke:list-ready — bindInfiniteScroll used to emit that
+    // from inside ensure-scroll-height, which would recurse into expand again.
 }

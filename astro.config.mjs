@@ -10,5 +10,18 @@ export default defineConfig({
 
     vite: {
         plugins: [tailwindcss()],
+        // Vite 8 / Rolldown prebundles deps with NODE_ENV=production by default.
+        // React's jsx-dev-runtime then exports jsxDEV=undefined and islands crash
+        // with "_jsxDEV is not a function" (Search, Favorites). Force development
+        // for the optimizer only — this option is unused during `astro build`.
+        optimizeDeps: {
+            rolldownOptions: {
+                transform: {
+                    define: {
+                        "process.env.NODE_ENV": JSON.stringify("development"),
+                    },
+                },
+            },
+        },
     },
 });
