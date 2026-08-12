@@ -497,11 +497,8 @@ export function getArtists(): Artist[] {
             artists.push(artist);
         }
     }
-    return artists.sort(
-        (a, b) =>
-            collator.compare(a.sortName ?? a.name, b.sortName ?? b.name) ||
-            collator.compare(a.name, b.name),
-    );
+    // Sort by display name (not MusicBrainz sortName like "Jackson, Michael").
+    return artists.sort((a, b) => collator.compare(a.name, b.name));
 }
 
 export function getArtist(slug: string): Artist | undefined {

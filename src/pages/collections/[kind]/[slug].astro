@@ -49,7 +49,8 @@ if (collection === undefined) {
 }
 
 const rows = sortSongs(songsInCollection(songs, collection.kind, collection.key), "az");
-const INITIAL = 100;
+const INITIAL = 80;
+const CHUNK = 80;
 const initialRows = rows.slice(0, INITIAL);
 const moreRows = rows.slice(INITIAL).map((song) => ({
     id: song.id,
@@ -94,24 +95,19 @@ const backFallback: Record<CollectionKind, string> = {
         </header>
         <SortTabs />
     </div>
-    <main class="hd flex-1 overflow-y-auto bg-surface px-[18px] pt-1.5 pb-6">
+    <main class="hd flex-1 overflow-y-auto bg-surface px-[18px] pt-1.5 pb-6" data-scroll-root>
         <SongList songs={initialRows} sortable />
         {
             moreRows.length > 0 && (
-                <div class="py-4" data-more-songs-root>
+                <div class="py-2" data-more-songs-root>
                     <script
                         is:inline
                         type="application/json"
                         data-more-songs
+                        data-chunk={String(CHUNK)}
                         set:html={JSON.stringify(moreRows)}
                     />
-                    <button
-                        type="button"
-                        data-show-more
-                        class="w-full rounded-xl border border-line-strong bg-panel px-4 py-3 text-[14px] font-semibold text-cream-soft"
-                    >
-                        Show {moreRows.length} more
-                    </button>
+                    <div data-infinite-sentinel class="h-8 w-full" aria-hidden="true" />
                 </div>
             )
         }
@@ -166,29 +162,58 @@ const backFallback: Record<CollectionKind, string> = {
         return escapeHtml(value).replaceAll("'", "&#39;");
     }
 
-    function bindShowMore() {
+    let observer: IntersectionObserver | null = null;
+
+    function bindInfiniteScroll() {
+        observer?.disconnect();
+        observer = null;
+
         const root = document.querySelector("[data-more-songs-root]");
         const list = document.querySelector("[data-song-list]");
-        const btn = document.querySelector("[data-show-more]");
+        const sentinel = document.querySelector("[data-infinite-sentinel]");
         const json = document.querySelector("[data-more-songs]");
-        if (!root || !list || !btn || !json) return;
+        const scrollRoot = document.querySelector("[data-scroll-root]");
+        if (!root || !list || !sentinel || !json) return;
 
-        btn.addEventListener(
-            "click",
-            () => {
-                try {
-                    const more = JSON.parse(json.textContent || "[]") as MoreSong[];
-                    list.insertAdjacentHTML("beforeend", more.map(rowHtml).join(""));
-                    root.remove();
-                    window.dispatchEvent(new Event("kkaraoke:favorites"));
-                } catch {
-                    root.remove();
-                }
+        let remaining: MoreSong[] = [];
+        try {
+            remaining = JSON.parse(json.textContent || "[]") as MoreSong[];
+        } catch {
+            root.remove();
+            return;
+        }
+        if (remaining.length === 0) {
+            root.remove();
+            return;
+        }
+
+        const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
+
+        const loadMore = () => {
+            if (remaining.length === 0) return;
+            const batch = remaining.splice(0, chunk);
+            list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
+            window.dispatchEvent(new Event("kkaraoke:favorites"));
+            if (remaining.length === 0) {
+                observer?.disconnect();
+                observer = null;
+                root.remove();
+            }
+        };
+
+        observer = new IntersectionObserver(
+            (entries) => {
+                if (entries.some((e) => e.isIntersecting)) loadMore();
             },
-            { once: true },
+            {
+                root: scrollRoot instanceof Element ? scrollRoot : null,
+                rootMargin: "240px 0px",
+                threshold: 0,
+            },
         );
+        observer.observe(sentinel);
     }
 
-    bindShowMore();
-    document.addEventListener("astro:page-load", bindShowMore);
+    bindInfiniteScroll();
+    document.addEventListener("astro:page-load", bindInfiniteScroll);
 </script>

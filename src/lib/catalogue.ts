@@ -402,8 +402,7 @@ export interface ArtistGroup {
 export function groupArtists(artists: Artist[] = getArtists()): ArtistGroup[] {
     const groups: ArtistGroup[] = [];
     for (const artist of artists) {
-        const sort = artist.sortName ?? artist.name;
-        const letter = sort.charAt(0).toUpperCase();
+        const letter = letterForName(artist.name);
         const last = groups[groups.length - 1];
         if (last !== undefined && last.letter === letter) {
             last.artists.push(artist);
@@ -412,6 +411,12 @@ export function groupArtists(artists: Artist[] = getArtists()): ArtistGroup[] {
         }
     }
     return groups;
+}
+
+/** A–Z bucket from the display name’s first letter; non-letters go under #. */
+function letterForName(name: string): string {
+    const ch = name.trim().charAt(0).toUpperCase();
+    return ch >= "A" && ch <= "Z" ? ch : "#";
 }
 
 /** Compact search index row — kept tiny for the client search island. */
