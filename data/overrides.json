@@ -281,6 +281,13 @@
             "why": "Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970)."
         },
         {
+            "postId": 48858,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Celine Dion – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
+        },
+        {
             "postId": 48862,
             "categories": [
                 "Eurovision"
@@ -471,6 +478,13 @@
             ]
         },
         {
+            "postId": 49852,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Eric Clapton – Swing Low, Sweet Chariot. Traditional spiritual/hymn with a credited rendition; mark categories Hymn."
+        },
+        {
             "postId": 49855,
             "categories": [
                 "Melodifestivalen",
@@ -604,6 +618,13 @@
             "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         },
         {
+            "postId": 50425,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
+        },
+        {
             "postId": 50460,
             "year": 1985,
             "title": "Good + Bad Times",
@@ -618,6 +639,13 @@
             "categories": [
                 "Irish traditional"
             ]
+        },
+        {
+            "postId": 50494,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
         },
         {
             "postId": 50539,
@@ -978,6 +1006,14 @@
             "why": "Loreen – Tattoo; Melodifestivalen/Eurovision 2023. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51332,
+            "categories": [
+                "Hymn"
+            ],
+            "title": "When the Saints Go Marching In",
+            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn."
+        },
+        {
             "postId": 51427,
             "why": "Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -1021,12 +1057,26 @@
             "why": "Marie Bergman & Roger Pontare – Stjärnorna; Melodifestivalen/Eurovision 1994. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51513,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
+        },
+        {
             "postId": 51546,
             "categories": [
                 "Melodifestivalen",
                 "Eurovision"
             ],
             "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51611,
+            "categories": [
+                "Irish traditional"
+            ],
+            "why": "Metallica – Whiskey in the Jar. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
         },
         {
             "postId": 51628,
@@ -1044,12 +1094,20 @@
         },
         {
             "postId": 51678,
-            "why": "Traditional / category material filed under 'Midsommarsång'; no single performer to invent",
+            "why": "Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song.",
             "artist": "",
             "sortAs": "Midsummer",
             "categories": [
-                "Midsummer"
+                "Midsummer",
+                "Children's song"
             ]
+        },
+        {
+            "postId": 51757,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song."
         },
         {
             "postId": 51829,
@@ -1107,6 +1165,13 @@
             "categories": [
                 "Birthday"
             ]
+        },
+        {
+            "postId": 52166,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Pinkfong – Baby Shark. Children's song; mark categories Children's song."
         },
         {
             "postId": 52185,
@@ -1215,6 +1280,13 @@
             "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
         },
         {
+            "postId": 52938,
+            "categories": [
+                "Birthday"
+            ],
+            "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
+        },
+        {
             "postId": 53084,
             "categories": [
                 "Melodifestivalen"
@@ -1267,6 +1339,13 @@
             "year": 1996,
             "artist": "The Wallflowers",
             "why": "The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996)."
+        },
+        {
+            "postId": 53543,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn."
         },
         {
             "postId": 53563,

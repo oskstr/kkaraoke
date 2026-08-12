@@ -1,6 +1,6 @@
 # Override review
 
-177 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+188 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -68,6 +68,7 @@ means omit a category label rather than invent a performer.
 | 1065 | Födelsedagssång | Ja må du leva | *(empty)* | Ja må du leva | Birthday | Traditional / category material filed under 'Födelsedagssång'; no single performer to invent | 50135 |
 | 1073 | Björn Skifs | Michelangelo | Björn Skifs | Michelangelo | Melodifestivalen | Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen. | 48383 |
 | 1108 | Abba | Waterloo | Abba | Waterloo | Melodifestivalen, Eurovision | ABBA – Waterloo (German version); Melodifestivalen/Eurovision 1974. Categories Melodifestivalen + Eurovision. | 47775 |
+| 1294 | Il Divo | O holy night | Il Divo | O holy night | Christmas | Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas. | 50425 |
 | 1302 | Bucks Fizz | Making your mind up | Bucks Fizz | Making your mind up | Eurovision | Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision. | 48720 |
 | 1319 | Mamas & The Papas | California dreaming | Mamas & The Papas | California Dreamin' |  | California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia). | 51441 |
 | 1326 | Brotherhood of man | Save your kisses for me | Brotherhood of man | Save your kisses for me | Eurovision | Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision. | 48656 |
@@ -82,7 +83,10 @@ means omit a category label rather than invent a performer.
 | 1590 | Östen med Resten | Hon kommer med solsken | Östen med Resten | Hon kommer med solsken | Melodifestivalen | Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen. | 53622 |
 | 1783 | James Brown | Say it loud I'm black and I'm proud | James Brown | Say it loud I'm black and I'm proud |  | James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single). | 50539 |
 | 1793 | Bobby Vee | Venus in blue | Bobby Vee | Venus in blue |  | Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962. | 48521 |
+| 1820 | Whitney Houston | Jesus loves me | Whitney Houston | Jesus loves me | Hymn | Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. | 53543 |
 | 1840 | Christina Aguilera | Reflection | Christina Aguilera | Reflection |  | Christina Aguilera Reflection from Mulan; from was missing | 48996 |
+| 1858 | Italian | Ah Maria | Italian | Ah Maria | Hymn | Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. | 50494 |
+| 1883 | Louis Armstrong | When the saints go marching in | Louis Armstrong | When the Saints Go Marching In | Hymn | Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn. | 51332 |
 | 1899 | Engelbert Humperdinck | Winter wonderland | Engelbert Humperdinck | Winter wonderland | Christmas | Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1). | 49809 |
 | 1946 | Bon Jovi | Please come home for christmas | Bon Jovi | Please come home for christmas | Christmas | Credited Christmas song (Bon Jovi – Please Come Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 48545 |
 | 1949 | Donna Summer | McArthur park | Donna Summer | MacArthur Park |  | Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978). | 49485 |
@@ -107,6 +111,7 @@ means omit a category label rather than invent a performer.
 | 2100 | Broadman Hymnal | Face to face | *(empty)* | Face to Face | Hymn | Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent | 48654 |
 | 2111 | Alexander Rybak | Fairytale | Alexander Rybak | Fairytale | Eurovision | Alexander Rybak – Fairytale; Eurovision 2009 (Norway). Category Eurovision. | 47883 |
 | 2334 | Kingsmen | Louie, Louie | Kingsmen | Louie, Louie |  | The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963). | 51022 |
+| 2337 | Mr Rogers | Won't you be my neighbour | Mr Rogers | Won't you be my neighbour | Children's song | Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song. | 51757 |
 | 2500 | Anna Bergendahl | This is my life | Anna Bergendahl | This is my life | Melodifestivalen, Eurovision | Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. | 47994 |
 | 2593 | Dionne Warwick | This girl is in love with you | Dionne Warwick | This girl is in love with you |  | Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969). | 49386 |
 | 2602 | Destiny's Child | Work it out | Destiny's Child | Work it out |  | Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002. | 49348 |
@@ -114,6 +119,7 @@ means omit a category label rather than invent a performer.
 | 2694 | Barbra Streisand & Donna Summer | Enough is enough (no more tears) | Barbra Streisand & Donna Summer | No More Tears (Enough Is Enough) |  | Donna Summer & Barbra Streisand. Year from Wikipedia (1979). | 48184 |
 | 3008 | Carola | Det är bara vi | Carola | Det är bara vi |  | Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit. | 48782 |
 | 3038 | Backstreet Boys | Hey Mr DJ (keep playing my song) | Backstreet Boys | Hey, Mr. DJ (Keep Playin' This Song) |  | Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11. | 48136 |
+| 3096 | Celine Dion | O holy night | Celine Dion | O holy night | Christmas | Celine Dion – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas. | 48858 |
 | 3216 | Celine Dion | Ne partez pas sans moi | Celine Dion | Ne partez pas sans moi | Eurovision | Céline Dion – Ne partez pas sans moi; Eurovision 1988 (Switzerland). Category Eurovision. | 48862 |
 | 3230 | Lena Meyer-Landrut | Satellite | Lena Meyer-Landrut | Satellite | Eurovision | Lena – Satellite; Eurovision 2010 (Germany). Category Eurovision. | 51178 |
 | 3240 | Eminem | Real Slim Shady | Eminem | The Real Slim Shady |  | Truncated dump title. Year from Wikipedia (2000 single from The Marshall Mathers LP). | 49781 |
@@ -145,15 +151,17 @@ means omit a category label rather than invent a performer.
 | 3419 | Charlotte Nilsson | Take me to your heaven | Charlotte Nilsson | Take me to your heaven | Melodifestivalen, Eurovision | Charlotte Perrelli – Take Me to Your Heaven; Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision. | 48894 |
 | 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a king be/Back door man medley |  | Frank Marino & Mahogany Rush Live includes I'm a King Bee. Year from Discogs Live album (1978). | 50082 |
 | 3506 | Shania Twain | The woman in me | Shania Twain | The woman in me |  | Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single). | 52731 |
-| 3555 | Midsommarsång | Små grodorna | *(empty)* | Små grodorna | Midsummer | Traditional / category material filed under 'Midsommarsång'; no single performer to invent | 51678 |
+| 3555 | Midsommarsång | Små grodorna | *(empty)* | Små grodorna | Midsummer, Children's song | Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song. | 51678 |
 | 3677 | Oasis | It's getting better | Oasis | It's Gettin' Better (Man!!) |  | Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997). | 51937 |
 | 3690 | Wallflowers | One headlight | The Wallflowers | One headlight |  | The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996). | 53473 |
 | 3694 | Jesse Hunter | Long legged Hannah | Jesse Hunter | Long legged Hannah |  | Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994). | 50644 |
 | 3755 | Irish traditional song | Wild rover | *(empty)* | The Wild Rover | Irish traditional | Traditional / category material filed under 'Irish traditional song'; no single performer to invent | 50466 |
+| 3784 | Eric Clapton | Swing low sweet chariot | Eric Clapton | Swing low sweet chariot | Hymn | Eric Clapton – Swing Low, Sweet Chariot. Traditional spiritual/hymn with a credited rendition; mark categories Hymn. | 49852 |
 | 3857 | A-Ha | The living daylights | A-Ha | The living daylights |  | a-ha Bond theme; film was missing as from | 47750 |
 | 4158 | Ayumi Hamasaki | Walking proud | Ayumi Hamasaki | walking proud |  | Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it. | 48108 |
 | 4202 | Jedward | Lipstick | Jedward | Lipstick | Eurovision | Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. | 50616 |
 | 4285 | Justin Bieber | Mistletoe | Justin Bieber | Mistletoe | Christmas | Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1). | 50864 |
+| 4290 | Metallica | Whiskey in the jar | Metallica | Whiskey in the jar | Irish traditional | Metallica – Whiskey in the Jar. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. | 51611 |
 | 4309 | Sonja Aldén | I din himmel | Sonja Aldén | I din himmel | Melodifestivalen | Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. | 52846 |
 | 4344 | Ani Difranco | Little plastic castles | Ani DiFranco | Little Plastic Castle |  | Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998). | 47988 |
 | 4352 | Arctic Monkeys | You probably couldn't see | Arctic Monkeys | You probably couldn't see |  | Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings. | 48037 |
@@ -164,14 +172,17 @@ means omit a category label rather than invent a performer.
 | 4896 | Piano singalong | Happy Birthday | *(empty)* | Happy Birthday to You | Birthday | Traditional / category material filed under 'Piano singalong'; no single performer to invent | 52134 |
 | 4914 | Pulp | All time high | Pulp | All time high |  | Pulp / David Arnold Bond theme All Time High; film was missing as from | 52252 |
 | 4979 | Steely Dan | Hey 19 | Steely Dan | Hey Nineteen |  | Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho). | 52905 |
+| 4987 | Stevie Wonder | Happy Birthday | Stevie Wonder | Happy Birthday | Birthday | Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday. | 52938 |
 | 5047 | Tooji (Eurovision 2012 Norway) | Stay | Tooji (Eurovision 2012 Norway) | Stay | Eurovision | Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical). | 53329 |
 | 5089 | Celine Dion | Don't Save It All For Christmas Day | Celine Dion | Don't Save It All For Christmas Day | Christmas | Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1). | 48864 |
 | 5256 | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Christmas | Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1). | 52185 |
 | 5407 | Mans Zelmerlow | Heroes | Mans Zelmerlow | Heroes | Melodifestivalen, Eurovision | Måns Zelmerlöw – Heroes; Melodifestivalen/Eurovision 2015. Categories Melodifestivalen + Eurovision. | 51455 |
 | 5456 | Will Smith | Fresh Prince Of Bel-air | Will Smith | Fresh Prince Of Bel-air |  | Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990). | 53563 |
 | 5491 | Disney | Listen with you heart | Disney | Listen with you heart |  | Listen With Your Heart from Pocahontas soundtrack (Wikipedia soundtrack release 1995). | 49420 |
+| 5502 | Mario Lanza | Ave Maria | Mario Lanza | Ave Maria | Hymn | Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. | 51513 |
 | 5529 | Michael Buble | You've got a friend in me | Michael Buble | You've got a friend in me |  | Michael Bublé cover of Toy Story song; from was missing | 51632 |
 | 5553 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018). | 51117 |
+| 5560 | Pink fong | Baby Shark | Pink fong | Baby Shark | Children's song | Pinkfong – Baby Shark. Children's song; mark categories Children's song. | 52166 |
 | 5617 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018). | 51120 |
 | 5664 | Barbados | Allt som jag ser | Barbados | Allt som jag ser | Melodifestivalen | Barbados – Allt som jag ser; Melodifestivalen 2001. Category Melodifestivalen. | 48174 |
 | 5670 | Uffe Neidemar | Häng med på party | Uffe Neidemar | Häng med på party |  | Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971). | 53388 |
