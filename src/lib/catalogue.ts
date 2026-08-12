@@ -149,17 +149,18 @@ function titleCaseGenre(genre: string): string {
 
 /** Curated home tiles that map onto real catalogue filters. */
 export function featuredTiles(songs: Song[]): BrowseTile[] {
+    // Keep this short (≈4 rows on a phone). Prefer evergreen karaoke entry points:
+    // decades people actually sing, Swedish repertoire, Melodifestivalen, big genres,
+    // and one fun theme. Seasonal niches (Christmas, Birthday) live under Categories.
     const curated: { kind: CollectionKind; key: string }[] = [
         { kind: "decade", key: "1980" },
-        { kind: "category", key: "Christmas" },
         { kind: "decade", key: "1990" },
-        { kind: "genre", key: "rock" },
+        { kind: "decade", key: "2000" },
         { kind: "lang", key: "swe" },
         { kind: "category", key: "Melodifestivalen" },
         { kind: "genre", key: "pop" },
-        { kind: "decade", key: "1970" },
-        { kind: "from", key: "Grease" },
-        { kind: "category", key: "Birthday" },
+        { kind: "genre", key: "rock" },
+        { kind: "category", key: "Disney" },
     ];
 
     return curated
