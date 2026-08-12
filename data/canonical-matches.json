@@ -54124,18 +54124,21 @@
       "artist": "Mika",
       "song": "Relax",
       "matched": true,
-      "artistCredit": "Mika",
+      "artistCredit": "MIKA",
       "artistMbids": [
-        "e11051f9-0098-41aa-9edb-8dacd8f1c6b5"
+        "8a9ac1cb-faae-434e-8d60-b139a3707dfc"
       ],
-      "recording": "Relax",
-      "recordingMbid": "eda5e9e7-f769-41a8-af43-77858e650ec1",
-      "release": "Cocooning",
-      "score": 5514945,
+      "recording": "Relax, Take It Easy",
+      "recordingMbid": "4ab862ea-e6da-4ced-8f9a-6f14ae8d9732",
+      "release": "Life in Cartoon Motion",
+      "score": 0,
       "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Relax (Take It Easy)"
+      "title": "Relax, Take It Easy",
+      "proposed": "Force MIKA over Austrian Mika namesake",
+      "venueArtist": "Mika",
+      "proposalArtist": "MIKA"
     },
     {
       "postId": 52320,

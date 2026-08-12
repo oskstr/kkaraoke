@@ -247,19 +247,6 @@
                 }
             ],
             "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
-        },
-        {
-            "postId": 51686,
-            "artist": "MIKA",
-            "sortAs": "MIKA",
-            "title": "Relax, Take It Easy",
-            "artists": [
-                {
-                    "mbid": "8a9ac1cb-faae-434e-8d60-b139a3707dfc",
-                    "name": "MIKA"
-                }
-            ],
-            "why": "MIKA's 2007 hit. Dump matched an Austrian house duo's unrelated track titled Relax; proposal could not stick (dump: other)."
         }
     ]
 }

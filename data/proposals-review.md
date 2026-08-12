@@ -231,7 +231,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2709 | Common & John Mayer | Go | Common | Go! |  |  | yes | Common; John Mayer features | 49060 |
 | 2735 | Luther Vandross | If I ruled the world | Nas | If I Ruled the World (Imagine That) |  |  | yes | Nas hit; venue wrongly credited Luther | 51363 |
 | 2772 | Sound of Music | My favourite things | Julie Andrews | My Favorite Things | The Sound of Music |  | yes | American spelling | 52853 |
-| 2799 | Mika | Relax | MIKA | Relax (Take It Easy) |  |  | other | Force MIKA over Austrian Mika namesake | 51686 |
+| 2799 | Mika | Relax | MIKA | Relax, Take It Easy |  |  | yes | Force MIKA over Austrian Mika namesake | 51686 |
 | 2813 | Prince | Sexy motherfucker | Prince | Sexy MF |  |  | yes | Sexy motherfucker | 52229 |
 | 2818 | Paul Simon & Art Garfunkel | Since I don't have you | The Skyliners | Since I Don't Have You |  |  | yes | Skyliners 1958 | 52051 |
 | 2822 | Sound of Music | So long, farewell | Julie Andrews | So long, farewell | The Sound of Music |  | yes | the children's number, led by Andrews on the soundtrack | 52854 |
