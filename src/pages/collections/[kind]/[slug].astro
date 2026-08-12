@@ -5,9 +5,10 @@ import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
     collectionKinds,
+    mergeSongVariants,
     resolveCollection,
     songsInCollection,
-    sortSongs,
+    sortSongVariants,
     type CollectionKind,
 } from "../../../lib/catalogue";
 import { getSongs, slugify } from "../../../lib/songs";
@@ -48,12 +49,16 @@ if (collection === undefined) {
     return Astro.redirect("/");
 }
 
-const rows = sortSongs(songsInCollection(songs, collection.kind, collection.key), "az");
+const rows = sortSongVariants(
+    mergeSongVariants(songsInCollection(songs, collection.kind, collection.key)),
+    "az",
+);
 const INITIAL = 80;
 const CHUNK = 80;
 const initialRows = rows.slice(0, INITIAL);
 const moreRows = rows.slice(INITIAL).map((song) => ({
     id: song.id,
+    ids: song.ids,
     title: song.song,
     artist: song.artist || song.category || "",
     year: song.year !== undefined ? String(song.year) : "",
@@ -117,6 +122,7 @@ const backFallback: Record<CollectionKind, string> = {
 <script>
     type MoreSong = {
         id: number;
+        ids: number[];
         title: string;
         artist: string;
         year: string;
@@ -141,13 +147,18 @@ const backFallback: Record<CollectionKind, string> = {
             const bits = [song.category, ...meta].filter(Boolean);
             subtitle = escapeHtml(bits.join(" · "));
         }
-        return `<div class="song-row flex items-center gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}" data-id="${song.id}">
-        <span class="song-num w-11 shrink-0 text-right font-mono text-[12px] tabular-nums leading-none text-gold" aria-label="Number ${song.id}">${song.id}</span>
+        const ids = song.ids.length > 0 ? song.ids : [song.id];
+        const idsAttr = ids.join(",");
+        const numbersLabel =
+            ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
+        const numbers = ids.map((id) => `<span>${id}</span>`).join("");
+        return `<div class="song-row flex items-start gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}" data-id="${ids[0]}">
+        <span class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] tabular-nums leading-none text-gold" aria-label="${escapeAttr(numbersLabel)}">${numbers}</span>
         <div class="flex min-h-11 flex-1 flex-col justify-center">
           <div class="text-[15.5px] leading-snug text-cream">${title}</div>
           <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>
         </div>
-        <button type="button" data-fav-toggle="${song.id}" class="min-w-11 bg-transparent px-1 py-2.5 text-[17px]" style="border:0;color:#3B3733" aria-label="Add to favorites" aria-pressed="false">♥</button>
+        <button type="button" data-fav-toggle="${idsAttr}" class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]" style="border:0;color:#3B3733" aria-label="Add to favorites" aria-pressed="false">♥</button>
       </div>`;
     }
 
@@ -164,10 +175,14 @@ const backFallback: Record<CollectionKind, string> = {
     }
 
     let observer: IntersectionObserver | null = null;
+    let loadMoreFn: (() => void) | null = null;
+    let listEl: Element | null = null;
 
     function bindInfiniteScroll() {
         observer?.disconnect();
         observer = null;
+        loadMoreFn = null;
+        listEl = null;
 
         const root = document.querySelector("[data-more-songs-root]");
         const list = document.querySelector("[data-song-list]");
@@ -189,6 +204,7 @@ const backFallback: Record<CollectionKind, string> = {
         }
 
         const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
+        listEl = list;
 
         const loadMore = () => {
             if (remaining.length === 0) return;
@@ -198,9 +214,11 @@ const backFallback: Record<CollectionKind, string> = {
             if (remaining.length === 0) {
                 observer?.disconnect();
                 observer = null;
+                loadMoreFn = null;
                 root.remove();
             }
         };
+        loadMoreFn = loadMore;
 
         observer = new IntersectionObserver(
             (entries) => {
@@ -215,6 +233,22 @@ const backFallback: Record<CollectionKind, string> = {
         observer.observe(sentinel);
     }
 
+    function onEnsureScrollHeight(event: Event) {
+        const detail = (event as CustomEvent<{ minHeight: number; root: HTMLElement }>).detail;
+        if (!detail || !loadMoreFn || !listEl) return;
+        // Grow the list until it can hold the restored scroll offset.
+        let guard = 0;
+        while (
+            loadMoreFn &&
+            detail.root.scrollHeight < detail.minHeight &&
+            guard < 40
+        ) {
+            loadMoreFn();
+            guard += 1;
+        }
+    }
+
     bindInfiniteScroll();
     document.addEventListener("astro:page-load", bindInfiniteScroll);
+    document.addEventListener("kkaraoke:ensure-scroll-height", onEnsureScrollHeight);
 </script>

@@ -16,18 +16,45 @@ export function writeFavorites(ids: number[]): void {
     window.dispatchEvent(new Event("kkaraoke:favorites"));
 }
 
-export function toggleFavorite(id: number): number[] {
+export function parseFavIds(value: string | null): number[] {
+    if (!value) return [];
+    return value
+        .split(",")
+        .map((part) => Number(part.trim()))
+        .filter((id) => Number.isFinite(id));
+}
+
+/** True when any of the punch-in numbers is favorited. */
+export function isFavoriteAny(ids: number[], favorites: number[] = readFavorites()): boolean {
+    if (ids.length === 0) return false;
+    const set = new Set(favorites);
+    return ids.some((id) => set.has(id));
+}
+
+/** Favorite or unfavorite every punch-in number for a merged song row. */
+export function toggleFavoriteIds(ids: number[]): number[] {
     const current = readFavorites();
-    const next = current.includes(id) ? current.filter((x) => x !== id) : [...current, id];
+    const set = new Set(current);
+    const on = ids.some((id) => set.has(id));
+    if (on) {
+        for (const id of ids) set.delete(id);
+    } else {
+        for (const id of ids) set.add(id);
+    }
+    const next = [...set].sort((a, b) => a - b);
     writeFavorites(next);
     return next;
 }
 
+export function toggleFavorite(id: number): number[] {
+    return toggleFavoriteIds([id]);
+}
+
 export function paintFavoriteButtons(root: ParentNode = document): void {
-    const favs = new Set(readFavorites());
+    const favs = readFavorites();
     root.querySelectorAll<HTMLElement>("[data-fav-toggle]").forEach((btn) => {
-        const id = Number(btn.getAttribute("data-fav-toggle"));
-        const on = favs.has(id);
+        const ids = parseFavIds(btn.getAttribute("data-fav-toggle"));
+        const on = isFavoriteAny(ids, favs);
         btn.style.color = on ? "#E9B44C" : "#3B3733";
         btn.setAttribute("aria-pressed", on ? "true" : "false");
         btn.setAttribute("aria-label", on ? "Remove from favorites" : "Add to favorites");
@@ -53,9 +80,9 @@ function onClick(event: Event): void {
     const btn = target.closest<HTMLElement>("[data-fav-toggle]");
     if (!btn) return;
     event.preventDefault();
-    const id = Number(btn.getAttribute("data-fav-toggle"));
-    if (!Number.isFinite(id)) return;
-    toggleFavorite(id);
+    const ids = parseFavIds(btn.getAttribute("data-fav-toggle"));
+    if (ids.length === 0) return;
+    toggleFavoriteIds(ids);
     paintFavoriteButtons();
     paintFavoritesNav();
 }

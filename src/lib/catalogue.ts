@@ -372,6 +372,71 @@ export function sortSongs(songs: Song[], sort: SortKey): Song[] {
     );
 }
 
+/**
+ * Same artist+title under different punch-in numbers → one row with `ids`.
+ * Representative metadata prefers the richest enriched copy.
+ */
+export interface SongVariant extends Song {
+    /** All punch-in numbers for this title, ascending. */
+    ids: number[];
+}
+
+function variantKey(song: Song): string {
+    return `${(song.artist || song.category || "").toLowerCase()}\0${song.song.toLowerCase()}`;
+}
+
+function enrichmentScore(song: Song): number {
+    let score = 0;
+    if (song.year !== undefined) score += 2;
+    if (song.from) score += 2;
+    if (song.artists && song.artists.length > 0) score += 2;
+    if (song.genres && song.genres.length > 0) score += 1;
+    if (song.language) score += 1;
+    if (song.category) score += 1;
+    return score;
+}
+
+export function mergeSongVariants(songs: Song[]): SongVariant[] {
+    const groups = new Map<string, Song[]>();
+    for (const song of songs) {
+        const key = variantKey(song);
+        const list = groups.get(key);
+        if (list) list.push(song);
+        else groups.set(key, [song]);
+    }
+
+    const merged: SongVariant[] = [];
+    for (const group of groups.values()) {
+        const ids = [...new Set(group.map((s) => s.id))].sort((a, b) => a - b);
+        const primary = group
+            .slice()
+            .sort((a, b) => enrichmentScore(b) - enrichmentScore(a) || a.id - b.id)[0]!;
+        merged.push({ ...primary, id: ids[0]!, ids });
+    }
+    return merged;
+}
+
+export function sortSongVariants(songs: SongVariant[], sort: SortKey): SongVariant[] {
+    const copy = [...songs];
+    if (sort === "az") {
+        return copy.sort((a, b) => collator.compare(a.song, b.song) || a.ids[0]! - b.ids[0]!);
+    }
+    if (sort === "artist") {
+        return copy.sort(
+            (a, b) =>
+                collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
+                collator.compare(a.song, b.song) ||
+                a.ids[0]! - b.ids[0]!,
+        );
+    }
+    return copy.sort(
+        (a, b) =>
+            (a.year ?? 9999) - (b.year ?? 9999) ||
+            collator.compare(a.song, b.song) ||
+            a.ids[0]! - b.ids[0]!,
+    );
+}
+
 export function parseSort(value: string | null | undefined): SortKey {
     if (value === "artist" || value === "year" || value === "az") return value;
     return "az";
@@ -425,6 +490,8 @@ function letterForName(name: string): string {
 /** Compact search index row — kept tiny for the client search island. */
 export interface SearchSong {
     id: number;
+    /** Punch-in numbers (one song can have several). */
+    ids: number[];
     title: string;
     artist: string;
     from?: string;
@@ -437,8 +504,9 @@ export interface SearchSong {
 }
 
 export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
-    return songs.map((song) => ({
+    return mergeSongVariants(songs).map((song) => ({
         id: song.id,
+        ids: song.ids,
         title: song.song,
         artist: song.artist,
         ...(song.from === undefined ? {} : { from: song.from }),
@@ -457,6 +525,9 @@ export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
 export function matchesQuery(song: SearchSong, query: string): boolean {
     const q = query.trim().toLowerCase();
     if (!q) return false;
+    if (/^\d+$/.test(q) && song.ids.some((id) => String(id).startsWith(q))) {
+        return true;
+    }
     return [song.title, song.artist, song.from, song.category, ...(song.genres ?? [])]
         .filter(Boolean)
         .join(" ")

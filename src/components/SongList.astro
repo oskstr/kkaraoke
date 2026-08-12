@@ -1,10 +1,10 @@
 ---
 import SongRow from "./SongRow.astro";
-import { songMeta } from "../lib/catalogue";
+import { mergeSongVariants, songMeta, type SongVariant } from "../lib/catalogue";
 import type { Song } from "../lib/songs";
 
 interface Props {
-    songs: Song[];
+    songs: Song[] | SongVariant[];
     /** On artist pages, don't link the title row to the same artist. */
     hideArtistLink?: boolean;
     emptyTitle?: string;
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const {
-    songs,
+    songs: rawSongs,
     hideArtistLink = false,
     emptyTitle,
     emptyBody,
@@ -23,6 +23,13 @@ const {
     emptyCta = "Start browsing",
     sortable = false,
 } = Astro.props;
+
+const songs: SongVariant[] =
+    rawSongs.length === 0
+        ? []
+        : "ids" in rawSongs[0]!
+          ? (rawSongs as SongVariant[])
+          : mergeSongVariants(rawSongs as Song[]);
 ---
 
 {
@@ -43,7 +50,7 @@ const {
                 const meta = hideArtistLink ? songMeta(song) : undefined;
                 return (
                     <SongRow
-                        songId={song.id}
+                        ids={song.ids}
                         title={song.song}
                         {...(meta ? { subtitle: meta } : {})}
                         {...(song.artists ? { artists: song.artists } : {})}

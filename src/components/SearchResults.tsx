@@ -45,6 +45,20 @@ function SongSubtitle({ song }: { song: SearchSong }) {
     return bits.length > 0 ? <>{bits.join(" · ")}</> : null;
 }
 
+function SongNumbers({ ids }: { ids: number[] }) {
+    const label = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
+    return (
+        <span
+            className="flex w-11 shrink-0 flex-col items-end gap-0.5 self-start pt-1 font-mono text-[12px] tabular-nums leading-none text-gold"
+            aria-label={label}
+        >
+            {ids.map((id) => (
+                <span key={id}>{id}</span>
+            ))}
+        </span>
+    );
+}
+
 export default function SearchResults({ suggestions, inputId }: Props) {
     const [query, setQuery] = useState("");
     const [index, setIndex] = useState<SearchIndex | null>(null);
@@ -118,6 +132,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                                 href={s.href}
                                 className="rounded-full border border-[#2A2724] bg-[#1A1917] px-3.5 py-2 text-[13.5px] font-semibold text-[#E4DDD1] no-underline hover:text-[#F2EDE4]"
                                 data-astro-prefetch="false"
+                                {...(s.href === "/artists" ? { "data-astro-reload": true } : {})}
                             >
                                 {s.label}
                             </a>
@@ -150,20 +165,18 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                         Songs
                     </div>
                     {rows.map((song) => (
-                        <div key={song.id} className="flex items-center gap-2.5 border-b border-line py-3">
-                            <span
-                                className="w-11 shrink-0 text-right font-mono text-[12px] tabular-nums leading-none text-gold"
-                                aria-label={`Number ${song.id}`}
-                            >
-                                {song.id}
-                            </span>
+                        <div
+                            key={song.id}
+                            className="flex items-start gap-2.5 border-b border-line py-3"
+                        >
+                            <SongNumbers ids={song.ids} />
                             <div className="flex min-h-11 flex-1 flex-col justify-center text-left">
                                 <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
                                 <div className="mt-0.5 text-[13px] text-muted">
                                     <SongSubtitle song={song} />
                                 </div>
                             </div>
-                            <FavoriteButton songId={song.id} />
+                            <FavoriteButton songIds={song.ids} />
                         </div>
                     ))}
                 </div>

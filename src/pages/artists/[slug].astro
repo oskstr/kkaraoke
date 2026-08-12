@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import BackLink from "../../components/BackLink.astro";
 import SongList from "../../components/SongList.astro";
-import { collectionPath, sortSongs } from "../../lib/catalogue";
+import { collectionPath, mergeSongVariants, sortSongVariants } from "../../lib/catalogue";
 import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
 
 export function getStaticPaths() {
@@ -10,14 +10,14 @@ export function getStaticPaths() {
         params: { slug: artist.slug },
         props: {
             artist,
-            songs: sortSongs(getSongsByArtist(artist.slug), "az"),
+            songs: sortSongVariants(mergeSongVariants(getSongsByArtist(artist.slug)), "az"),
         },
     }));
 }
 
 interface Props {
     artist: NonNullable<ReturnType<typeof getArtist>>;
-    songs: ReturnType<typeof getSongsByArtist>;
+    songs: ReturnType<typeof mergeSongVariants>;
 }
 
 const { artist, songs } = Astro.props;
@@ -44,7 +44,7 @@ const { artist, songs } = Astro.props;
             )
         }
     </header>
-    <main class="hd flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6" data-scroll-root transition:animate="fade">
+    <main class="hd flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6" data-scroll-root>
         <SongList songs={songs} hideArtistLink />
     </main>
 </Layout>

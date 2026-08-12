@@ -2,7 +2,8 @@
 import type { CreditedArtist } from "../lib/songs";
 
 interface Props {
-    songId: number;
+    /** Punch-in numbers for this song (one or more). */
+    ids: number[];
     title: string;
     /** Plain subtitle when not linking individual artists (e.g. artist page meta). */
     subtitle?: string;
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const {
-    songId,
+    ids,
     title,
     subtitle,
     artists = [],
@@ -32,20 +33,23 @@ const {
 } = Astro.props;
 
 const metaBits = [from, year !== undefined ? String(year) : null].filter(Boolean);
+const primaryId = ids[0] ?? 0;
+const idsAttr = ids.join(",");
+const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
 ---
 
 <div
-    class="song-row flex items-center gap-2.5 border-b border-line py-3"
+    class="song-row flex items-start gap-2.5 border-b border-line py-3"
     data-title={titleAttr ?? title}
     data-artist={artistAttr ?? ""}
     data-year={yearAttr ?? ""}
-    data-id={String(songId)}
+    data-id={String(primaryId)}
 >
     <span
-        class="song-num w-11 shrink-0 text-right font-mono text-[12px] tabular-nums leading-none text-gold"
-        aria-label={`Number ${songId}`}
+        class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] tabular-nums leading-none text-gold"
+        aria-label={numbersLabel}
     >
-        {songId}
+        {ids.map((id) => <span>{id}</span>)}
     </span>
     <div class="flex min-h-11 flex-1 flex-col justify-center">
         <div class="text-[15.5px] leading-snug text-cream">{title}</div>
@@ -81,8 +85,8 @@ const metaBits = [from, year !== undefined ? String(year) : null].filter(Boolean
     </div>
     <button
         type="button"
-        data-fav-toggle={songId}
-        class="min-w-11 bg-transparent px-1 py-2.5 text-[17px]"
+        data-fav-toggle={idsAttr}
+        class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]"
         style="border:0;color:#3B3733"
         aria-label="Add to favorites"
         aria-pressed="false"
