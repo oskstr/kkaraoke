@@ -27,7 +27,9 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import catalogue from "../data/songs.json" with { type: "json" };
 import {
+    isLanguageVersionAnnotation,
     isMasterAnnotation,
+    isTitleSubtitle,
     LANGUAGE_VERSION,
     publishedTitle,
 } from "./lib/song-title.ts";
@@ -186,7 +188,7 @@ function titleForms(title: string): Form[] {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(title);
     // `Du hast (english)` must not strip to `Du hast` or it prefers the German master.
     // Keep the language tag, and add the MusicBrainz-shaped `English version` form.
-    if (bracket?.[1] !== undefined && LANGUAGE_VERSION.test(bracket[1])) {
+    if (bracket?.[1] !== undefined && isLanguageVersionAnnotation(bracket[1])) {
         const language = LANGUAGE_VERSION.exec(bracket[1])?.[0];
         if (language !== undefined) {
             const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
@@ -520,8 +522,13 @@ function isLiveRelease(release: string): boolean {
     return (
         /^\d{4}-\d{2}-\d{2}\s*:/.test(release) ||
         /\blive\b/i.test(release) ||
+        /\bunplugged\b/i.test(release) ||
+        /\bbootleg\b/i.test(release) ||
+        /\b(?:live\s+lounge|in\s+concert|the\s+concert|concert\s+celebration|concert)\b/i.test(
+            release,
+        ) ||
         // Venue-named releases without the word "live" (e.g. Alicia Keys – Radio City Hall NYC).
-        /\b(?:radio city|madison square|wembley|stadium|arena|amphitheatre|amphitheater|festival|concert hall|high school)\b/i.test(
+        /\b(?:radio city|madison square|wembley|stadium|arena|amphitheatre|amphitheater|festival|concert hall|high school|sof[iı]|o₂|o2|mtv\s+history)\b/i.test(
             release,
         )
     );
@@ -531,15 +538,45 @@ function isLiveRelease(release: string): boolean {
 function isVariantRecording(recording: string): boolean {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] !== undefined) {
-        // Language versions are the song; mix/live/year/concert labels are a particular master.
-        // Subtitles that belong to the title (`If You Wanna Rock 'n' Roll`) are neither.
-        if (LANGUAGE_VERSION.test(bracket[1])) return false;
-        return isMasterAnnotation(bracket[1]);
+        const inner = bracket[1].trim();
+        // Language versions are the song the venue filed (`Du hast (English version)`).
+        if (isLanguageVersionAnnotation(inner)) return false;
+        // Master markers win over subtitle heuristics (`The Eliel mix` contains "The").
+        if (isMasterAnnotation(inner)) return true;
+        if (isTitleSubtitle(inner)) return false;
+        // Remixer-only tags (`Bimbo Jones`) and bare years (`(2010)`) are particular masters
+        // even when they omit the word "mix".
+        if (/^(?:19|20)\d{2}$/.test(inner)) return true;
+        if (/^(?:feat\.?|ft\.?|featuring)\b/i.test(inner)) return true;
+        if (/\b(?:dj|vs\.?|versus)\b|\sx\s/i.test(inner)) return true;
+        // Two+ Capitalised names with no subtitle grammar → remixer credit, not a subtitle.
+        if (/^[A-Z0-9][\w'’.&]*?(?:\s+[A-Z0-9][\w'’.&]*)+$/u.test(inner)) return true;
+        return false;
     }
+    // DJ mashups are not the karaoke master (`Just the Way You Are (Amazing) Vs. …`).
+    // Do not treat album medleys (`If I Was Your Woman / Walk On By`) as variants — that
+    // Diary cut is the studio recording, and marking it a variant left Unplugged winning.
+    if (/\bvs\.?\b/i.test(recording)) return true;
     // Do not match bare `club` here — that is the title of `In da Club`, not a club mix.
     return /\b(?:remix|rmx|emix|mix|blend|revision|rework|dub|mash(?:[- ]?up)?|bootleg|acoustic|instrumental|karaoke|mixtape|(?:the\s+)?video|sessions?|slowed|chopped|hook)\b/i.test(
         recording,
     );
+}
+
+/**
+ * Lower is better. Live/remix masters and random compilation homes lose to the plain studio
+ * cut even when the dump's raw score prefers the junk row (Lady Marmalade on Just Be Free
+ * outscoring the Lady Marmalade single).
+ */
+function matchQuality(row: Row): number {
+    let quality = row.score;
+    if (isLiveRelease(row.release)) quality += 50_000_000;
+    if (isVariantRecording(row.recording)) quality += 40_000_000;
+    // A release named for the recording is usually the single/album track we want.
+    if (combinedLookup(row.release) === combinedLookup(withoutAnnotation(row.recording))) {
+        quality -= 1_000_000;
+    }
+    return quality;
 }
 
 /**
@@ -596,13 +633,28 @@ function affixIndex(keys: Iterable<string>, end: "head" | "tail"): (value: strin
 }
 
 /** Grades a prefix match by what the canonical title has that the venue's does not. */
-function gradePrefix(ourKey: string, recording: string, credit: string): How {
+function gradePrefix(ourKey: string, recording: string, credit: string): How | undefined {
     const strippedKey = combinedLookup(credit, withoutAnnotation(recording));
     if (strippedKey === ourKey) {
         return "version";
     }
+    // Album medley whose first half is our title (`If I Was Your Woman / Walk On By`).
+    const medleyHead = recording.split(/\s\/\s/)[0]?.trim();
+    if (
+        medleyHead !== undefined &&
+        medleyHead.length > 0 &&
+        medleyHead !== recording &&
+        combinedLookup(credit, withoutAnnotation(medleyHead)) === ourKey
+    ) {
+        return "version";
+    }
     const full = combinedLookup(credit, recording);
-    return full.length - ourKey.length <= 2 ? "spelling" : "loose";
+    const extra = full.length - ourKey.length;
+    // A couple of trailing letters is a spelling variant. A long mashup/remix suffix is not
+    // evidence for the song — those rows must reach us as `version` after stripping, or not
+    // at all (`Just the Way You Are (Amazing) Vs. U Sure Do…` used to win as `loose`).
+    if (extra <= 2) return "spelling";
+    return undefined;
 }
 
 /**
@@ -755,15 +807,27 @@ async function main(): Promise<void> {
             // Proposals may use a worse rank; still let them pull the studio master.
             // Do not treat an acoustic/remix as "studio" just because its release is not live —
             // that is how `I'm Just Ken (acoustic)` stole the live plain-title master.
-            const studioUpgrade =
-                existingLive &&
-                !newLive &&
-                !newVariant &&
-                (rank <= existing.rank + 1 || entry.proposed !== undefined);
+            // A live exact hit must not permanently block a studio cut reached later via
+            // artist-scoped / title-first (Destiny's Child – Soldier: Live in Atlanta vs
+            // Destiny Fulfilled). Rank/how may be worse; the studio master is still right.
+            const studioUpgrade = existingLive && !newLive && !newVariant;
             const variantUpgrade =
                 existingVariant &&
                 !newVariant &&
                 (rank <= existing.rank + 1 || entry.proposed !== undefined);
+            // Same how/rank: prefer the single/album cut over a junk home the dump scores
+            // higher (Lady Marmalade → Just Be Free vs the Lady Marmalade single).
+            const qualityUpgrade =
+                !newLive &&
+                !newVariant &&
+                matchQuality(row) < matchQuality(existing) &&
+                rank <= existing.rank;
+            // Exact studio via annotation-strip (rank 1) must beat a loose mashup on the raw
+            // venue title (rank 0). Rewrite-count rank alone preferred the junk row.
+            const howUpgrade =
+                HOWS.indexOf(how) < HOWS.indexOf(existing.how) &&
+                !newLive &&
+                !newVariant;
             // Wrong-attribution proposals: the venue string matched someone else who happens
             // to have a recording of that title (`Dynamite` the band, solo `Steve Miller`).
             // Prefer the dump hit on the artist the proposal named.
@@ -791,12 +855,19 @@ async function main(): Promise<void> {
             const proposalUpgrade =
                 entry.proposed !== undefined &&
                 HOWS.indexOf(how) < HOWS.indexOf(existing.how);
-            if (!studioUpgrade && !variantUpgrade && !attributionUpgrade && !proposalUpgrade) {
+            if (
+                !studioUpgrade &&
+                !variantUpgrade &&
+                !qualityUpgrade &&
+                !howUpgrade &&
+                !attributionUpgrade &&
+                !proposalUpgrade
+            ) {
                 if (rank > existing.rank) return;
                 if (rank === existing.rank) {
                     const order = HOWS.indexOf(how) - HOWS.indexOf(existing.how);
                     if (order > 0) return;
-                    if (order === 0 && !(row.score < existing.score)) return;
+                    if (order === 0 && !(matchQuality(row) < matchQuality(existing))) return;
                 }
             }
         }
@@ -829,7 +900,10 @@ async function main(): Promise<void> {
         if (row === undefined) {
             return;
         }
-        const how: How = asked === key ? "exact" : gradePrefix(asked, row.recording, row.artistCredit);
+        const how: How | undefined =
+            asked === key ? "exact" : gradePrefix(asked, row.recording, row.artistCredit);
+        // Long prefix leftovers are mashups/remixes, not a spelling of our key — skip.
+        if (how === undefined) return;
         for (const entry of entries) {
             consider(entry, how, row);
         }
@@ -877,7 +951,14 @@ async function main(): Promise<void> {
 
     const byTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
     for (const song of catalogue.songs) {
-        if (best.has(song.postId)) continue;
+        const current = best.get(song.postId);
+        // Also re-open songs stuck on a live/remix master so a studio cut can upgrade them
+        // (Destiny's Child – Soldier matched Live in Atlanta before Destiny Fulfilled).
+        if (current !== undefined) {
+            if (!isLiveRelease(current.release) && !isVariantRecording(current.recording)) {
+                continue;
+            }
+        }
         // The whole artist string first, then its lead. 111 of the misses are a collaboration
         // the venue wrote as one string whose lead we have already identified elsewhere.
         const own = mbidsByArtist.get(combinedLookup(song.artist));
@@ -1187,12 +1268,12 @@ async function main(): Promise<void> {
         // with only mix/soundtrack markers dropped — never year/concert regex hacks.
         const workTitle =
             match.recordingMbid === undefined ? undefined : workTitles.get(match.recordingMbid);
-        const published = publishedTitle(match.recording, workTitle);
+        const published = publishedTitle(match.recording, workTitle, match.how);
         // A proposal's title wins when it names the work more carefully than the matched
         // master (`FourFiveSeconds` vs a remix titled with spaces; `Du hast (English version)`).
         const title =
             proposal?.title !== undefined
-                ? publishedTitle(proposal.title).title
+                ? publishedTitle(proposal.title, undefined, match.how).title
                 : published.title;
         // A proposal's `from` wins over one extracted from the recording title or from an
         // artist-column soundtrack note: the proposer is naming the show the venue filed

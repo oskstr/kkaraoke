@@ -485,7 +485,9 @@ async function main(): Promise<void> {
         const fromWork =
             match.recording === undefined
                 ? undefined
-                : publishedTitle(match.recording, workTitle);
+                : publishedTitle(match.recording, workTitle, match.how);
+        // Prefer the matcher's published title (already version-stripped) over a stale
+        // recording string; work title still wins when publishedTitle chose it.
         const canonicalTitle =
             fromWork?.source === "work"
                 ? fromWork.title

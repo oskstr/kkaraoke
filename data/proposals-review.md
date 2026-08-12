@@ -1,6 +1,6 @@
 # Proposal review
 
-415 songs, written by `pnpm build:resolved` from `data/proposals.json` and
+417 songs, written by `pnpm build:resolved` from `data/proposals.json` and
 the venue scrape. Regenerable, so do not edit it — change the proposal instead.
 
 Each row is what the venue had, then what the proposal asked MusicBrainz to confirm.
@@ -25,6 +25,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 245 | Rachel Stevens | Sweet dreams | Rachel Stevens | Sweet Dreams My LA Ex |  |  | yes | Full title | 52307 |
 | 259 | Dana Secada | Angel queen | Jon Secada | Angel |  |  | yes | Dana Secada is Jon Secada | 49215 |
 | 285 | England Dan & John Ford | I'd really love to see you tonight | England Dan & John Ford Coley | I’d Really Love to See You Tonight |  |  | yes | Full name | 49826 |
+| 286 | Sting | Every breath you take | The Police | Every Breath You Take |  |  | yes | Studio original is The Police; Sting live/orchestra cuts are not the karaoke song | 52946 |
 | 300 | Roxette | Make it real | The Jets | Make It Real |  |  | yes | Jets not Roxette | 52558 |
 | 323 | Paul Young | For you babies | Simply Red | For Your Babies |  |  | yes | Simply Red, 1992 | 52055 |
 | 334 | N Sync | Fallen | *NSYNC | Falling |  |  | yes | Fallen→Falling | 51778 |
@@ -139,7 +140,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 1878 | Spice Girls | Ga ga | Melanie C | Ga Ga |  |  | yes | Solo not Spice Girls | 52878 |
 | 1879 | Spice Girls | Goin' down | Melanie C | Goin' down |  |  | yes | Melanie C solo, 1999 | 52879 |
 | 1880 | Spice Girls | What I am | Tin Tin Out & Emma Bunton | What I am |  |  | yes | Bunton with Tin Tin Out, 1999 | 52880 |
-| 1881 | Spice Girls | I want you back | Melanie B | I want you back |  |  | yes | Melanie B with Missy Elliott, 1998 | 52881 |
+| 1881 | Spice Girls | I want you back | Melanie B | I want you back |  |  | other | Melanie B with Missy Elliott, 1998 | 52881 |
 | 1888 | Louis Armstrong | A kiss to build the dream | Louis Armstrong | A Kiss to Build a Dream On |  |  | yes | Omitted On | 51337 |
 | 1904 | Engelbert Humperdinck | Am I easy to forget | Engelbert Humperdinck | Am I That Easy to Forget |  |  | yes | Omitted That | 49814 |
 | 1939 | Bon Jovi | Living in the sun | Bon Jovi | Living in Sin |  |  | yes | Sun→Sin typo | 48538 |
@@ -192,7 +193,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2161 | Finsk musik | Jestas sentään -crazy- | Markku Aro | Jestas sentään |  | fin | yes | Markku Aro; Finnish Crazy | 49996 |
 | 2162 | Finsk musik | Linda linda | Frederik | Linda Linda |  | fin | yes | Frederik's Finnish Linda Linda | 49997 |
 | 2174 | Moulin Rouge | Come what may | Nicole Kidman & Ewan McGregor | Come what may | Moulin Rouge! |  | yes | the duet | 51749 |
-| 2175 | Moulin Rouge | Your song | Ewan McGregor | Your song | Moulin Rouge! |  | yes | McGregor sings it in the film | 51750 |
+| 2175 | Moulin Rouge | Your song | Ewan McGregor | Your song | Moulin Rouge! |  | other | McGregor sings it in the film | 51750 |
 | 2196 | Björn Skifs/Blue Swede | Hooked on a feeling | Blue Swede | Hooked on a Feeling |  |  | yes | Blue Swede; not the later choir arrangement | 48385 |
 | 2256 | Jimmy Buffet | Margaritaville | Jimmy Buffett | Margaritaville |  |  | yes | one t short | 50677 |
 | 2260 | Kenny Loggins & Jo Dee Messina | Your mama don't dance | Loggins & Messina | Your Mama Don’t Dance |  |  | yes | Jim Messina not Jo Dee | 50977 |
@@ -203,12 +204,13 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2307 | Captain & Tenille | Love will keep us together | Captain & Tennille | Love Will Keep Us Together |  |  | yes | Tennille spelling | 48752 |
 | 2319 | Jimmy Buffet | Changes in latitude, changes in attitude | Jimmy Buffett | Changes in Latitudes, Changes in Attitudes |  |  | yes | both words are plural | 50678 |
 | 2326 | Johnny Nash | The lion sleeps tonight | The Tokens | The Lion Sleeps Tonight |  |  | yes | Tokens not Johnny Nash | 50782 |
-| 2335 | Frankie Valli & Four Seasons | December -63 (Oh what a night) | Frankie Valli & The Four Seasons | December 1963 (Oh, What a Night) |  |  | yes | Full group | 50108 |
-| 2336 | Bobby Boris Picket | Monster mash | Bobby "Boris" Pickett | Monster Mash |  |  | yes | Picket is Pickett | 48514 |
+| 2335 | Frankie Valli & Four Seasons | December -63 (Oh what a night) | Frankie Valli & The Four Seasons | December 1963 (Oh, What a Night) |  |  | other | Full group | 50108 |
+| 2336 | Bobby Boris Picket | Monster mash | Bobby "Boris" Pickett | Monster Mash |  |  | other | Picket is Pickett | 48514 |
 | 2337 | Mr Rogers | Won't you be my neighbour | Mister Rogers | Won’t You Be My Neighbor? |  |  | yes | Canonical | 51757 |
 | 2338 | Grease | Greased lightning | John Travolta | Greased Lightnin' | Grease |  | yes | Travolta's number; the title is elided | 50271 |
 | 2357 | LeAnn Rimes | How do I live (original) | LeAnn Rimes | How Do I Live |  |  | other | Drop original MIX | 51160 |
 | 2372 | Chess | I know him so well | Elaine Paige & Barbara Dickson | I Know Him So Well | Chess |  | yes | Chess | 48930 |
+| 2398 | 50 Cent | Candy shop | 50 Cent feat. Olivia | Candy Shop |  |  | yes | Studio cut is credited with Olivia; solo 50 Cent dump rows are bootlegs/live | 47742 |
 | 2466 | Kim Fransson | 3 floors down | Kim | 3 Floors Down |  |  | yes | Dump credits Kim | 51015 |
 | 2469 | Ola Svensson | Unstoppable | Ola | Unstoppable |  |  | yes | MB credits Ola | 51959 |
 | 2479 | Erik Linder | Hur kan jag tro på kärleken | Erik Linder | Hur kan jag tro på kärlek |  |  | yes | Canonical drops -en | 49858 |
@@ -219,7 +221,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 2582 | Beyonce | All the single ladies | Beyoncé | Single Ladies (Put a Ring on It) |  |  | yes | All the single ladies | 48314 |
 | 2587 | Clarence Carter | Stroking | Clarence Carter | Strokin' |  |  | yes | Stroking is Strokin' | 49015 |
 | 2597 | Destiny's Child | Un-break my heart | Toni Braxton | Un-Break My Heart |  |  | yes | Braxton, not Destiny's Child | 49347 |
-| 2648 | Goo Goo Dolls | Bullet proof | Goo Goo Dolls | Bullet Proof |  |  | yes | Studio title | 50241 |
+| 2648 | Goo Goo Dolls | Bullet proof | Goo Goo Dolls | Bullet Proof |  |  | other | Studio title | 50241 |
 | 2651 | R Kelly | Burning up | R. Kelly | Burn It Up |  |  | yes | Burning→Burn It | 52290 |
 | 2660 | Lady Gaga & Wale | Chillin | Wale feat. Lady Gaga | Chillin' |  |  | yes | Wale lead on the recording | 51121 |
 | 2668 | Led Zeppelin | D'y'mak'er | Led Zeppelin | D'yer Mak'er |  |  | yes | D'y'mak'er | 51164 |
@@ -284,7 +286,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 3649 | West Side Story | Maria | Larry Kert | Maria | West Side Story |  | yes | Original cast | 53491 |
 | 3698 | Reba McEntire | Now you tell me | Reba | Now You Tell Me |  |  | yes | Canonical Reba | 52358 |
 | 3764 | Peter Cetera & Amy Grant | Next time I fall in love | Peter Cetera | The Next Time I Fall |  |  | yes | Cetera/Grant hit; prefer Cetera key | 52105 |
-| 3779 | Jekyll & Hide | This is the moment | Colm Wilkinson | This Is the Moment | Jekyll & Hyde |  | yes | Jekyll & Hyde the musical (venue Hide typo) | 50622 |
+| 3779 | Jekyll & Hide | This is the moment | Colm Wilkinson | This Is the Moment | Jekyll & Hyde |  | other | Jekyll & Hyde the musical (venue Hide typo) | 50622 |
 | 3786 | Michael McDonald | Signed, sealed, delivered | Michael McDonald | Signed, Sealed, Delivered I’m Yours |  |  | yes | Full title | 51673 |
 | 3796 | Steve Miller | The joker | Steve Miller Band | The Joker |  |  | yes | The Joker is Steve Miller Band, not solo Steve Miller | 52924 |
 | 3800 | Samantha Fox | I want to be have some fun | Samantha Fox | I Wanna Have Some Fun |  |  | yes | Correct title | 52611 |
@@ -302,7 +304,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 4058 | Weezer | If you're wondering if I want you to | Weezer | (If You’re Wondering If I Want You To) I Want You To |  |  | yes | Full title | 53488 |
 | 4068 | Bruno Mars & Travie McCoy | Billionaire | Travie McCoy feat. Bruno Mars | Billionaire |  |  | yes | Correct lead | 48701 |
 | 4092 | Rammstein | Du hast (english) | Rammstein | Du hast (English version) |  |  | other | English version of Du hast | 52329 |
-| 4095 | Bruno Mars | Just the way you are (Amazing) | Bruno Mars | Just the Way You Are |  |  | yes | Drop Amazing mashup | 48697 |
+| 4095 | Bruno Mars | Just the way you are (Amazing) | Bruno Mars | Just the Way You Are |  |  | other | Drop Amazing mashup | 48697 |
 | 4096 | 2 Pac feat. KC & Jo Jo | How do u want it | 2Pac feat. K-Ci & JoJo | How Do U Want It |  |  | yes | the venue wrote 2 Pac feat. KC & Jo Jo; K-Ci & JoJo is one duo | 47722 |
 | 4100 | Little Mermaid | Part of your world (Disney) | Jodi Benson | Part of Your World | The Little Mermaid |  | yes | Ariel's singing voice | 51298 |
 | 4107 | Dreamgirls | Move | Beyoncé | Move Your Body | Dreamgirls |  | other | Dreamgirls; may not match | 49531 |
@@ -330,8 +332,8 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 4725 | Iron Maiden | Iron fist | Motörhead | Iron Fist |  |  | yes | Iron Fist is Motörhead, not Iron Maiden | 50476 |
 | 4747 | Jay Z feat Pharrell | I know | JAY-Z | I Know |  |  | yes | feat Pharrell | 50610 |
 | 4750 | John Legend | Hey girl | Estelle feat. John Legend | You Are |  |  | yes | Hey girl was lyric | 50733 |
-| 4866 | Moulin Rouge | Elephant love medley | Nicole Kidman & Ewan McGregor | Elephant love medley | Moulin Rouge! |  | yes | the duet | 51751 |
-| 4904 | Pras Michel, Obd & Mya | Ghetto superstar (duet) | Pras Michel featuring Ol’ Dirty Bastard and introducing Mýa | Ghetto Supastar (That Is What You Are) |  |  | yes | Full credit | 52209 |
+| 4866 | Moulin Rouge | Elephant love medley | Nicole Kidman & Ewan McGregor | Elephant love medley | Moulin Rouge! |  | other | the duet | 51751 |
+| 4904 | Pras Michel, Obd & Mya | Ghetto superstar (duet) | Pras Michel featuring Ol’ Dirty Bastard and introducing Mýa | Ghetto Supastar (That Is What You Are) |  |  | other | Full credit | 52209 |
 | 4967 | Smash Mouth | You are my number one | Smash Mouth | You Are My Number One |  |  | other | Studio cut | 52817 |
 | 4968 | Snoop Dog & Justin Timberlake | Signs | Snoop Dogg feat. Justin Timberlake | Signs |  |  | yes | Both | 52826 |
 | 4969 | Snoop Dog & Pharrell | Drop it like it's hot | Snoop Dogg feat. Pharrell | Drop It Like It’s Hot |  |  | yes | Both | 52827 |
@@ -376,7 +378,7 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 5492 | Disney | I just can't wait to be king | Jason Weaver | I Just Can't Wait to Be King | The Lion King |  | yes | duplicate Lion King row | 49421 |
 | 5493 | Disney | A spoon full of sugar | Julie Andrews | A Spoonful of Sugar | Mary Poppins |  | yes | Mary Poppins; spoonful is one word | 49422 |
 | 5495 | Hall & Oates | You make my dreams | Daryl Hall & John Oates | You Make My Dreams |  |  | yes | studio Voices cut; avoid live Park West master | 50329 |
-| 5501 | Kygo ft. Selena Gomez | It aint me | Kygo & Whitney Houston | Higher Love |  |  | yes | Kygo's cover with Houston | 51079 |
+| 5501 | Kygo ft. Selena Gomez | It aint me | Kygo & Selena Gomez | It Ain't Me |  |  | yes | Venue title It aint me is It Ain't Me with Selena Gomez, not Higher Love | 51079 |
 | 5530 | Mike WMI ft Miley Cyrus | 23 | Mike WiLL Made-It feat. Miley Cyrus, Wiz Khalifa & Juicy J | 23 |  |  | yes | Mike WMI is Mike WiLL Made-It; 23 is the full featured credit | 51698 |
 | 5531 | Rudimental Ft James Arthur | Sun comes up | Rudimental feat. James Arthur | Sun Comes Up |  |  | yes | Both | 52583 |
 | 5542 | Chris Stapleton | Tennessee Whickey | Chris Stapleton | Tennessee Whiskey |  |  | yes | Whickey is Whiskey | 48987 |
@@ -400,12 +402,12 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 5698 | Grease Mega Mix | Grease MIX | John Travolta & Olivia Newton‐John | The Grease Megamix | Grease |  | yes | Grease Mega Mix is category | 50272 |
 | 5700 | Marvin Gaye | Nothing like the real thing | Marvin Gaye & Tammi Terrell | Ain’t Nothing Like the Real Thing |  |  | yes | Duet | 51552 |
 | 5726 | Bruno Mars ft Cardi B | Finesse | Bruno Mars | Finesse |  |  | yes | Cardi remix; prefer Bruno Mars Finesse | 48702 |
-| 5728 | BTS | Blood sweat and tears | BTS | Blood Sweat & Tears |  |  | other | BTS hit | 48716 |
+| 5728 | BTS | Blood sweat and tears | BTS | Blood Sweat & Tears |  |  | no | BTS hit | 48716 |
 | 5732 | Fall out boy | I'm like a lawyer | Fall Out Boy | I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You) |  |  | yes | Full title | 49943 |
 | 5737 | Fleetwod mac | Sara | Fleetwood Mac | Sara |  |  | yes | Fleetwod is Fleetwood | 50010 |
 | 5745 | High school musical | Breaking free | Zac Efron & Vanessa Hudgens | Breaking Free | High School Musical |  | yes | HSM cast | 50367 |
 | 5746 | High school musical | What time is | The High School Musical Cast | What Time Is It? | High School Musical 2 |  | yes | HSM2 | 50368 |
-| 5747 | High school musical | What iv'e been looking for | Ashley Tisdale & Lucas Grabeel | What I've Been Looking For | High School Musical |  | yes | venue typo What iv'e; HSM | 50369 |
+| 5747 | High school musical | What iv'e been looking for | Ashley Tisdale & Lucas Grabeel | What I've Been Looking For | High School Musical |  | other | venue typo What iv'e; HSM | 50369 |
 | 5757 | Fall out boy | A little less sixteen candles | Fall Out Boy | A Little Less Sixteen Candles, a Little More “Touch Me” |  |  | yes | Full title | 49945 |
 | 5760 | Aloe Blacc | I need a doollar | Aloe Blacc | I Need a Dollar |  |  | yes | doollar is Dollar with an extra o | 47938 |
 | 5778 | Frozen II | All is found | Evan Rachel Wood | All is found | Frozen II |  | yes | Queen Iduna's lullaby | 50127 |
@@ -423,4 +425,4 @@ A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal k
 | 5843 | High school musical | Were all in this together | High School Musical Cast | We’re All in This Together | High School Musical |  | other | Cast not [Disney] | 50370 |
 | 5873 | Joel Corry ft MNEK | Head and heart | Joel Corry feat. MNEK | Head & Heart |  |  | yes | Head and heart; dump uses & which folds differently from and | 50715 |
 | 5900 | Ryan Gosling | I'm just Ken | Ryan Gosling | I'm Just Ken | Barbie |  | other | from Barbie (2023) | 52589 |
-| 5901 | Andrea Bocelli ft Sara Brightman | Time to say goodbye | Andrea Bocelli & Sarah Brightman | Time to Say Goodbye |  |  | yes | Sara is Sarah | 47972 |
+| 5901 | Andrea Bocelli ft Sara Brightman | Time to say goodbye | Andrea Bocelli & Sarah Brightman | Time to Say Goodbye |  |  | other | Sara is Sarah | 47972 |

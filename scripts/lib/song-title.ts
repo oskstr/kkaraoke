@@ -14,11 +14,40 @@
  * `In Da Club (Blend By 2sty)` publishes as `In Da Club`.
  */
 export const VERSION_MARKER =
-    /\b(?:mix|remix|rmx|emix|blend|revision|rework|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|a cappella|single|from|mixtape|(?:the\s+)?video|sessions?|slowed|chopped|hook|intro|outro)\b/i;
+    /\b(?:mix|remix|rmx|emix|blend|revision|rework|instrumental|acoustic|live|karaoke|backing track|edit|version|reprise|radio|extended|demo|remaster(?:ed)?|re-?recorded|unplugged|dub|thunderdub|a cappella|single|from|mixtape|(?:the\s+)?video|sessions?|slowed(?:\s*\+\s*reverb)?|chopped|hook|intro|outro|fade|dirty|anthem|disctruct|super\s+clean|clean|bootleg|sped\s*up|speed\s*up|reverb|mash(?:[- ]?up)?)\b/i;
 
-/** A language in the bracket is why the venue wrote it — keep `Du hast (English version)`. */
+/** A language word. Prefer `isLanguageVersionAnnotation` so `w/o French intro` is not kept. */
 export const LANGUAGE_VERSION =
     /\b(?:english|swedish|finnish|german|spanish|french|italian|norwegian|danish|dutch|portuguese)\b/i;
+
+/**
+ * True when the whole bracket is a language label for the song (`English version`, `French`),
+ * not a master note that happens to mention a language (`radio edit w/o French intro`).
+ */
+export function isLanguageVersionAnnotation(inner: string): boolean {
+    const text = inner.trim();
+    if (text.length === 0) return false;
+    if (/^(?:english|swedish|finnish|german|spanish|french|italian|norwegian|danish|dutch|portuguese)$/i.test(text)) {
+        return true;
+    }
+    return LANGUAGE_VERSION.test(text) && /\bversion\b/i.test(text);
+}
+
+/**
+ * Trailing brackets that are part of the song's name rather than a particular master.
+ * `Sweet Dreams (Are Made of This)`, `Dude (Looks Like a Lady)`, language versions.
+ * Remixer tags (`Bimbo Jones`, `The Eliel mix`) are not subtitles.
+ */
+export function isTitleSubtitle(inner: string): boolean {
+    const text = inner.trim();
+    if (text.length === 0) return false;
+    if (isLanguageVersionAnnotation(text)) return true;
+    if (/^(?:from)\b/i.test(text)) return true;
+    if (VERSION_MARKER.test(text)) return false;
+    return /\b(?:are made of|looks like|call me by|part\s*\d|vols?\.?|volume|theme|aka|a\.k\.a\.?|song|suite|movement)\b/i.test(
+        text,
+    );
+}
 
 export function withoutAnnotation(title: string): string {
     return title.replace(/\s*[([][^()[\]]*[\])]\s*$/u, "").trim();
@@ -66,7 +95,7 @@ export function titleFromRecording(recording: string): { title: string; from?: s
     if (bracket?.[1] === undefined || !isMasterAnnotation(bracket[1])) {
         return { title: stripExcerptFromLabels(recording) };
     }
-    if (LANGUAGE_VERSION.test(bracket[1])) {
+    if (isLanguageVersionAnnotation(bracket[1])) {
         const language = LANGUAGE_VERSION.exec(bracket[1])?.[0];
         if (language !== undefined) {
             const capitalized = `${language.charAt(0).toUpperCase()}${language.slice(1).toLowerCase()}`;
@@ -175,13 +204,47 @@ export function titlesCorroborate(a: string, b: string): boolean {
 /**
  * Title to publish: MusicBrainz work title when it is the same song, otherwise the cleaned
  * recording title.
+ *
+ * `matchHow` is the matcher grade. A `version` match means we only reached the dump row by
+ * dropping a trailing bracket — publish without that bracket (unless it is a language
+ * version). That is what clears `Lady Marmalade (Thunderpuss Thunderdub)` and
+ * `I Do Not Hook Up (Bimbo Jones)` without maintaining an endless remixer-name list.
  */
 export function publishedTitle(
     recording: string,
     workTitle?: string,
+    matchHow?: string,
 ): { title: string; from?: string; source: "work" | "recording" } {
-    const fromRecording = titleFromRecording(recording);
+    let fromRecording = titleFromRecording(recording);
+    if (matchHow === "version") {
+        const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
+        const inner = bracket?.[1]?.trim();
+        if (inner !== undefined && !isLanguageVersionAnnotation(inner)) {
+            const base = stripExcerptFromLabels(withoutAnnotation(recording));
+            if (base.length > 0) {
+                const from = fromAnnotation(recording);
+                fromRecording = from === undefined ? { title: base } : { title: base, from };
+            }
+        }
+        // Version match on an album medley (`If I Was Your Woman / Walk On By`) — publish
+        // the half the venue filed, not the joined medley title.
+        const medleyHead = recording.split(/\s\/\s/)[0]?.trim();
+        if (medleyHead !== undefined && medleyHead.length > 0 && medleyHead !== recording) {
+            const head = stripExcerptFromLabels(withoutAnnotation(medleyHead));
+            if (head.length > 0) {
+                fromRecording = { title: head };
+            }
+        }
+    }
     if (workTitle !== undefined && workTitleCompatible(recording, workTitle)) {
+        // A version match already dropped a master bracket — do not put a remix-shaped
+        // work title back on (`Hold You Down (The Eliel mix)`).
+        if (
+            matchHow === "version" &&
+            titleKey(workTitle) !== titleKey(fromRecording.title)
+        ) {
+            return { ...fromRecording, source: "recording" };
+        }
         // Same song, different spelling (Prince's `U` / `Anymore` vs Alicia Keys' `You`):
         // keep the matched recording's form — that is what this artist released.
         if (

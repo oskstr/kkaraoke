@@ -322,9 +322,9 @@
         },
         {
             "postId": 51079,
-            "artist": "Kygo & Whitney Houston",
-            "title": "Higher Love",
-            "why": "Kygo's cover with Houston"
+            "artist": "Kygo & Selena Gomez",
+            "title": "It Ain't Me",
+            "why": "Venue title It aint me is It Ain't Me with Selena Gomez, not Higher Love"
         },
         {
             "postId": 49215,
@@ -2584,6 +2584,18 @@
             "artist": "Son of a Plumber",
             "title": "Jo-Anna Says",
             "why": "Per Gessle project; venue filed C'mon/Jo-Anna as medley"
+        },
+        {
+            "postId": 52946,
+            "artist": "The Police",
+            "title": "Every Breath You Take",
+            "why": "Studio original is The Police; Sting live/orchestra cuts are not the karaoke song"
+        },
+        {
+            "postId": 47742,
+            "artist": "50 Cent feat. Olivia",
+            "title": "Candy Shop",
+            "why": "Studio cut is credited with Olivia; solo 50 Cent dump rows are bootlegs/live"
         }
     ]
 }
