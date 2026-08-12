@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BackLink from "../../components/BackLink.astro";
+import SongList from "../../components/SongList.astro";
+import { collectionPath, sortSongs } from "../../lib/catalogue";
 import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
 
 export function getStaticPaths() {
@@ -7,7 +10,7 @@ export function getStaticPaths() {
         params: { slug: artist.slug },
         props: {
             artist,
-            songs: getSongsByArtist(artist.slug),
+            songs: sortSongs(getSongsByArtist(artist.slug), "az"),
         },
     }));
 }
@@ -20,79 +23,31 @@ interface Props {
 const { artist, songs } = Astro.props;
 ---
 
-<Layout title={`${artist.name} – KKaraoke`}>
-    <main class="m-auto p-3 sm:p-6">
-        <p class="mb-4">
-            <a href="/" class="text-gray-600 underline-offset-2 hover:underline">← All songs</a>
-        </p>
-        <h1>{artist.name}</h1>
+<Layout title={`${artist.name} · kkaraoke`}>
+    <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-[18px]" transition:name="page-header">
+        <BackLink href="/artists" label="← BACK" />
+        <h1
+            class="mt-3 text-[34px] font-bold tracking-[-0.03em] text-cream text-pretty"
+            transition:name={`artist-${artist.slug}`}
+        >
+            {artist.name}
+        </h1>
         {
             artist.genres !== undefined && artist.genres.length > 0 && (
-                <p class="mt-2 text-gray-500">{artist.genres.join(", ")}</p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                    {artist.genres.map((genre) => (
+                        <a
+                            href={collectionPath("genre", genre)}
+                            class="rounded-full border border-[#2F2C28] px-2.5 py-1.5 font-mono text-[11px] tracking-wide text-[#C6BDB1] no-underline"
+                        >
+                            {genre}
+                        </a>
+                    ))}
+                </div>
             )
         }
-        <p class="mt-2 text-sm text-gray-500">
-            {songs.length} {songs.length === 1 ? "song" : "songs"}
-        </p>
-
-        <div class="mt-6 w-full overflow-x-auto">
-            <table class="mx-auto w-full max-w-4xl">
-                <thead class="border-b border-gray-200">
-                    <tr>
-                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
-                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Artist</th>
-                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Title</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        songs.map((song) => (
-                            <tr class="border-b border-gray-200">
-                                <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">
-                                    {song.id}
-                                </td>
-                                <td class="px-3 py-2 sm:px-6 sm:py-4">
-                                    {/* Same linking rule as the main list: each credited
-                                        name, including collab partners on this page. */}
-                                    {song.artists !== undefined && song.artists.length > 0
-                                        ? song.artists.map((credited, index) => (
-                                              <>
-                                                  {index > 0 && ", "}
-                                                  {credited.slug === artist.slug ? (
-                                                      <span>{credited.name}</span>
-                                                  ) : (
-                                                      <a
-                                                          href={`/artists/${credited.slug}`}
-                                                          class="underline-offset-2 hover:underline"
-                                                      >
-                                                          {credited.name}
-                                                      </a>
-                                                  )}
-                                              </>
-                                          ))
-                                        : song.artist}
-                                </td>
-                                <td class="px-3 py-2 sm:px-6 sm:py-4">
-                                    {song.song}
-                                    {song.from !== undefined && (
-                                        <span class="block text-sm text-gray-500">{song.from}</span>
-                                    )}
-                                    {song.category !== undefined && (
-                                        <span class="block text-sm text-gray-500">{song.category}</span>
-                                    )}
-                                </td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
-        </div>
+    </header>
+    <main class="hd flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6" transition:animate="slide">
+        <SongList songs={songs} hideArtistLink />
     </main>
 </Layout>
-<style>
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin: 0;
-    }
-</style>

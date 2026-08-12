@@ -1,44 +1,36 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 
 interface Props {
     title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Browse the karaoke catalogue by artist, decade, genre, and more." } =
+    Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
         <title>{title}</title>
+        <ClientRouter />
     </head>
     <body>
-        <slot />
-        <style is:global>
-            :root {
-                --accent: 124, 58, 237;
-                --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-            }
-            html {
-                font-family: system-ui, sans-serif;
-                background-color: #f6f6f6;
-            }
-            code {
-                font-family:
-                    Menlo,
-                    Monaco,
-                    Lucida Console,
-                    Liberation Mono,
-                    DejaVu Sans Mono,
-                    Bitstream Vera Sans Mono,
-                    Courier New,
-                    monospace;
-            }
-        </style>
+        <div class="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:overflow-hidden sm:rounded-[30px] sm:border sm:border-line-strong">
+            <slot />
+        </div>
     </body>
 </html>

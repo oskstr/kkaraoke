@@ -1,0 +1,47 @@
+---
+import type { BrowseTile } from "../lib/catalogue";
+
+interface Props {
+    tiles: BrowseTile[];
+    mode: "tiles" | "list";
+}
+
+const { tiles, mode } = Astro.props;
+---
+
+{
+    mode === "tiles" ? (
+        <div class="grid grid-cols-2 gap-2.5">
+            {tiles.map((tile, i) => (
+                <a
+                    href={tile.href}
+                    class="rise flex h-24 items-end rounded-xl p-3.5"
+                    style={`background:${tile.tint};animation-delay:${Math.min(i, 8) * 30}ms`}
+                    transition:name={`tile-${tile.href}`}
+                >
+                    <span
+                        class:list={[
+                            "text-left font-bold tracking-tight text-[#F7F2E9]",
+                            tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
+                        ]}
+                    >
+                        {tile.label}
+                    </span>
+                </a>
+            ))}
+        </div>
+    ) : (
+        <div class="flex flex-col gap-px">
+            {tiles.map((tile) => (
+                <a
+                    href={tile.href}
+                    class="flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left"
+                    transition:name={`tile-${tile.href}`}
+                >
+                    <span class="flex-1 text-base text-cream">{tile.label}</span>
+                    <span class="text-[15px] text-dim">→</span>
+                </a>
+            ))}
+        </div>
+    )
+}

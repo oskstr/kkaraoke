@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BrowseHeader from "../../components/BrowseHeader.astro";
+import TileGrid from "../../components/TileGrid.astro";
+import { browseTiles, facetFromParam, FACETS, type FacetKey } from "../../lib/catalogue";
+import { getSongs } from "../../lib/songs";
+
+export function getStaticPaths() {
+    return FACETS.filter((f) => f.key !== "featured").map((f) => ({
+        params: { facet: f.href.replace("/browse/", "") },
+    }));
+}
+
+const param = Astro.params.facet;
+const facet = facetFromParam(param);
+if (facet === undefined || facet === "featured") {
+    return Astro.redirect("/");
+}
+const activeFacet: FacetKey = facet;
+
+const songs = getSongs();
+const { mode, tiles } = browseTiles(activeFacet, songs);
+const label = FACETS.find((f) => f.key === activeFacet)?.label ?? "Browse";
+---
+
+<Layout title={`${label} · kkaraoke`}>
+    <BrowseHeader facet={activeFacet} />
+    <main class="hd flex-1 overflow-y-auto px-[18px] pt-4 pb-6" transition:animate="fade">
+        <TileGrid tiles={tiles} mode={mode} />
+    </main>
+</Layout>

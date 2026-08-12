@@ -1,0 +1,46 @@
+---
+interface Props {
+    active?: boolean;
+}
+
+const { active = false } = Astro.props;
+---
+
+<a
+    href="/favorites"
+    class:list={[
+        "inline-flex min-h-[34px] items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors",
+        active
+            ? "border-[rgba(233,180,76,0.4)] bg-[rgba(233,180,76,0.14)] text-gold"
+            : "border-line-strong bg-panel text-[#9A9086]",
+    ]}
+    data-fav-nav
+    transition:name="favorites-nav"
+>
+    ♥ Favorites
+</a>
+
+<script>
+    function syncFavNav() {
+        let count = 0;
+        try {
+            const raw = localStorage.getItem("kkaraoke:favorites");
+            count = raw ? (JSON.parse(raw) as number[]).length : 0;
+        } catch {
+            count = 0;
+        }
+        document.querySelectorAll<HTMLElement>("[data-fav-nav]").forEach((el) => {
+            const on = count > 0;
+            el.classList.toggle("border-[rgba(233,180,76,0.4)]", on);
+            el.classList.toggle("bg-[rgba(233,180,76,0.14)]", on);
+            el.classList.toggle("text-gold", on);
+            el.classList.toggle("border-line-strong", !on);
+            el.classList.toggle("bg-panel", !on);
+            el.classList.toggle("text-[#9A9086]", !on);
+        });
+    }
+
+    syncFavNav();
+    document.addEventListener("astro:page-load", syncFavNav);
+    window.addEventListener("kkaraoke:favorites", syncFavNav);
+</script>

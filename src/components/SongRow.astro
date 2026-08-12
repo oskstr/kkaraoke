@@ -1,0 +1,31 @@
+---
+import FavoriteButton from "./FavoriteButton";
+
+interface Props {
+    songId: number;
+    title: string;
+    subtitle: string;
+    href?: string;
+    /** When true, title is not a link (artist page). */
+    staticTitle?: boolean;
+}
+
+const { songId, title, subtitle, href, staticTitle = false } = Astro.props;
+---
+
+<div class="flex items-center gap-2.5 border-b border-line py-3">
+    {
+        staticTitle || !href ? (
+            <div class="flex min-h-11 flex-1 flex-col justify-center">
+                <div class="text-[15.5px] leading-snug text-cream">{title}</div>
+                {subtitle && <div class="mt-0.5 text-[13px] text-muted">{subtitle}</div>}
+            </div>
+        ) : (
+            <a href={href} class="flex min-h-11 flex-1 flex-col justify-center text-left no-underline">
+                <div class="text-[15.5px] leading-snug text-cream">{title}</div>
+                {subtitle && <div class="mt-0.5 text-[13px] text-muted">{subtitle}</div>}
+            </a>
+        )
+    }
+    <FavoriteButton client:load songId={songId} />
+</div>

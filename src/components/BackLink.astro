@@ -1,0 +1,19 @@
+---
+interface Props {
+    href?: string;
+    label?: string;
+    light?: boolean;
+}
+
+const { href = "/", label = "← BACK", light = false } = Astro.props;
+---
+
+<a
+    href={href}
+    class:list={[
+        "inline-block font-mono text-[11px] tracking-[0.12em] no-underline",
+        light ? "text-white/70 hover:text-white" : "text-muted hover:text-cream-soft",
+    ]}
+>
+    {label}
+</a>

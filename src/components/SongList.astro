@@ -1,0 +1,55 @@
+---
+import SongRow from "./SongRow.astro";
+import { primaryArtistHref, songMeta, songSubtitle, type SortKey } from "../lib/catalogue";
+import type { Song } from "../lib/songs";
+
+interface Props {
+    songs: Song[];
+    sort?: SortKey;
+    /** On artist pages, don't link the title row to the same artist. */
+    hideArtistLink?: boolean;
+    emptyTitle?: string;
+    emptyBody?: string;
+    emptyHref?: string;
+    emptyCta?: string;
+}
+
+const {
+    songs,
+    hideArtistLink = false,
+    emptyTitle,
+    emptyBody,
+    emptyHref = "/",
+    emptyCta = "Start browsing",
+} = Astro.props;
+---
+
+{
+    songs.length === 0 && emptyTitle ? (
+        <div class="px-5 py-20 text-center">
+            <div class="text-lg font-semibold text-cream">{emptyTitle}</div>
+            {emptyBody && <p class="mt-2.5 text-sm text-muted text-pretty">{emptyBody}</p>}
+            <a
+                href={emptyHref}
+                class="mt-4 inline-block rounded-[10px] bg-gold px-4.5 py-3 text-[14.5px] font-semibold text-[#14120F] no-underline hover:text-[#14120F]"
+            >
+                {emptyCta}
+            </a>
+        </div>
+    ) : (
+        <div>
+            {songs.map((song) => {
+                const href = hideArtistLink ? undefined : primaryArtistHref(song);
+                return (
+                    <SongRow
+                        songId={song.id}
+                        title={song.song}
+                        subtitle={hideArtistLink ? songMeta(song) : songSubtitle(song)}
+                        {...(href === undefined ? {} : { href })}
+                        staticTitle={hideArtistLink}
+                    />
+                );
+            })}
+        </div>
+    )
+}

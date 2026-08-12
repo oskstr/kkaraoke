@@ -1,0 +1,27 @@
+---
+import { FACETS, type FacetKey } from "../lib/catalogue";
+
+interface Props {
+    active: FacetKey;
+}
+
+const { active } = Astro.props;
+---
+
+<div class="hd mt-3 flex gap-1.5 overflow-x-auto" transition:name="facet-tabs">
+    {
+        FACETS.map((facet) => (
+            <a
+                href={facet.href}
+                class:list={[
+                    "shrink-0 rounded-full border px-3.5 py-2 text-[13.5px] font-semibold",
+                    facet.key === active
+                        ? "border-cream bg-cream text-[#14120F]"
+                        : "border-line-strong bg-panel text-[#9A9086]",
+                ]}
+            >
+                {facet.label}
+            </a>
+        ))
+    }
+</div>

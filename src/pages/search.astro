@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchApp from "../components/SearchApp";
+import { buildSearchIndex, collectionPath, collator } from "../lib/catalogue";
+import { getArtists, getSongs } from "../lib/songs";
+
+const songs = getSongs();
+const index = buildSearchIndex(songs);
+const artists = getArtists().map((a) => ({ name: a.name, slug: a.slug }));
+
+const genreCounts = new Map<string, number>();
+for (const song of songs) {
+    for (const g of song.genres ?? []) {
+        genreCounts.set(g, (genreCounts.get(g) ?? 0) + 1);
+    }
+}
+const genres = [...genreCounts.entries()]
+    .sort((a, b) => b[1] - a[1] || collator.compare(a[0], b[0]))
+    .slice(0, 4)
+    .map(([g]) => g);
+
+const cats = [...new Set(songs.map((s) => s.category).filter((c): c is string => Boolean(c)))].sort(
+    collator.compare,
+);
+
+const suggestions = [
+    { label: "Artists, A–Z", href: "/artists" },
+    ...genres.map((g) => ({ label: g, href: collectionPath("genre", g) })),
+    ...cats.map((c) => ({ label: c, href: collectionPath("category", c) })),
+    { label: "80s", href: collectionPath("decade", "1980") },
+    { label: "90s", href: collectionPath("decade", "1990") },
+];
+---
+
+<Layout title="Search · kkaraoke">
+    <SearchApp client:load songs={index} artists={artists} suggestions={suggestions} />
+</Layout>

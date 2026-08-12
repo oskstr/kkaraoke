@@ -1,0 +1,80 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import BackLink from "../../../components/BackLink.astro";
+import CollectionSongs from "../../../components/CollectionSongs";
+import {
+    collectionKinds,
+    primaryArtistHref,
+    resolveCollection,
+    songSubtitle,
+    songsInCollection,
+    type CollectionKind,
+} from "../../../lib/catalogue";
+import { getSongs, slugify } from "../../../lib/songs";
+
+export function getStaticPaths() {
+    const songs = getSongs();
+    const paths: { params: { kind: string; slug: string } }[] = [];
+
+    for (const kind of collectionKinds()) {
+        const keys = new Set<string>();
+        for (const song of songs) {
+            if (kind === "decade" && song.year !== undefined) {
+                keys.add(String(Math.floor(song.year / 10) * 10));
+            } else if (kind === "genre") {
+                for (const g of song.genres ?? []) keys.add(g);
+            } else if (kind === "category" && song.category) {
+                keys.add(song.category);
+            } else if (kind === "from" && song.from) {
+                keys.add(song.from);
+            } else if (kind === "lang" && song.language) {
+                keys.add(song.language);
+            }
+        }
+        for (const key of keys) {
+            paths.push({ params: { kind, slug: slugify(key) } });
+        }
+    }
+
+    return paths;
+}
+
+const kind = Astro.params.kind as CollectionKind;
+const slug = Astro.params.slug!;
+const songs = getSongs();
+const collection = resolveCollection(kind, slug, songs);
+
+if (collection === undefined) {
+    return Astro.redirect("/");
+}
+
+const rows = songsInCollection(songs, collection.kind, collection.key).map((song) => {
+    const href = primaryArtistHref(song);
+    return {
+        id: song.id,
+        title: song.song,
+        artist: song.artist,
+        subtitle: songSubtitle(song),
+        ...(href === undefined ? {} : { href }),
+        ...(song.year === undefined ? {} : { year: song.year }),
+        ...(song.category === undefined ? {} : { category: song.category }),
+    };
+});
+---
+
+<Layout title={`${collection.label} · kkaraoke`}>
+    <header
+        class="px-[18px] pt-[22px] pb-0"
+        style={`background:${collection.tint}`}
+        transition:name={`collection-${kind}-${slug}`}
+    >
+        <BackLink href="/" label="← BACK" light />
+        <h1
+            class="mt-3 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
+            transition:name={`title-${kind}-${slug}`}
+        >
+            {collection.label}
+        </h1>
+    </header>
+    <CollectionSongs client:load songs={rows} tint={collection.tint} />
+</Layout>
