@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T07:07:29.941Z",
+  "generatedAt": "2026-08-12T13:49:54.651Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -8673,6 +8673,7 @@
         "pop soul",
         "traditional pop"
       ],
+      "year": 1971,
       "how": "version"
     },
     {
@@ -9004,6 +9005,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1967,
       "how": "exact"
     },
     {
@@ -9855,6 +9857,7 @@
         "pop soul",
         "rocksteady"
       ],
+      "year": 1959,
       "how": "exact"
     },
     {
@@ -9919,6 +9922,7 @@
         "pop rock",
         "soft rock"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -10535,6 +10539,7 @@
       "genres": [
         "beat music"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -11050,6 +11055,7 @@
         "d52ac009-4ed5-4d01-97d5-8280bb7dd460"
       ],
       "recordingMbid": "8a577af2-5b52-4dbc-b0d3-bbe858d90009",
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -11221,6 +11227,7 @@
         }
       ],
       "recordingMbid": "9c518fa6-c1e1-46af-b3bc-607e60311661",
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -12070,6 +12077,7 @@
         "pop",
         "soft rock"
       ],
+      "year": 1991,
       "how": "version"
     },
     {
@@ -12744,6 +12752,7 @@
         "pop",
         "latin"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -12767,6 +12776,7 @@
         "pop",
         "latin"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -13467,6 +13477,7 @@
         "pop",
         "soft rock"
       ],
+      "year": 1987,
       "how": "spelling"
     },
     {
@@ -14440,6 +14451,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1984,
       "how": "artist-scoped"
     },
     {
@@ -16236,6 +16248,7 @@
         }
       ],
       "recordingMbid": "d1b2673a-d508-4fbf-b521-14c35128ccef",
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -16253,6 +16266,7 @@
         }
       ],
       "recordingMbid": "b810ef54-567d-42c0-ab3a-98d0fb4a3182",
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -16291,6 +16305,7 @@
         "indie rock",
         "rock"
       ],
+      "year": 2005,
       "how": "version"
     },
     {
@@ -16421,6 +16436,7 @@
         "pop rock",
         "dance-pop"
       ],
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -16677,6 +16693,7 @@
         "funk metal",
         "glam metal"
       ],
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -16975,6 +16992,7 @@
       "genres": [
         "hip hop"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -17126,6 +17144,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -17256,6 +17275,7 @@
         "jazz",
         "pop"
       ],
+      "year": 1973,
       "how": "exact"
     },
     {
@@ -17449,6 +17469,7 @@
       "genres": [
         "dansband"
       ],
+      "year": 2008,
       "how": "version"
     },
     {
@@ -17528,6 +17549,7 @@
       "genres": [
         "dansband"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -17919,6 +17941,7 @@
         }
       ],
       "recordingMbid": "c24f967a-8367-4689-8aa9-4e6861daa20a",
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -18269,6 +18292,7 @@
         "folk",
         "rock"
       ],
+      "year": 1994,
       "how": "artist-scoped"
     },
     {
@@ -18834,6 +18858,7 @@
         }
       ],
       "recordingMbid": "8e673efb-869c-4054-8114-15496c232a58",
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -19861,6 +19886,7 @@
       "genres": [
         "soul"
       ],
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -20210,6 +20236,7 @@
         }
       ],
       "recordingMbid": "49763bdb-f471-411d-b9ca-ac07c0a4d3e4",
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -20227,6 +20254,7 @@
         }
       ],
       "recordingMbid": "3c6ad088-e505-4a03-a664-af92d24759f1",
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -20371,6 +20399,7 @@
         "pop",
         "schlager"
       ],
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -20388,6 +20417,7 @@
         }
       ],
       "recordingMbid": "1c8a733f-55c9-458f-9640-23bcfa7f2f70",
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -20629,6 +20659,7 @@
         "pop",
         "schlager"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -21690,6 +21721,7 @@
         "dance",
         "electronic"
       ],
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -21936,6 +21968,7 @@
         "folk rock",
         "pop"
       ],
+      "year": 2000,
       "how": "version"
     },
     {
@@ -22031,6 +22064,7 @@
         "country",
         "pop"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -22546,6 +22580,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -23043,6 +23078,7 @@
         }
       ],
       "recordingMbid": "0f2e51d8-3fb0-4e6c-b24c-caf70888443a",
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -23197,6 +23233,7 @@
         "alternative rock",
         "singer-songwriter"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -23297,6 +23334,7 @@
       ],
       "credit": "Åsa Jinder & CajsaStina Åkerström",
       "recordingMbid": "d72753cd-ab9b-4c9c-8f6c-5d17b179ff80",
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -23474,6 +23512,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1996,
       "how": "version"
     },
     {
@@ -23557,6 +23596,7 @@
         "disco",
         "europop"
       ],
+      "year": 1973,
       "how": "version"
     },
     {
@@ -23604,6 +23644,7 @@
         "disco",
         "europop"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -23938,6 +23979,7 @@
         "disco",
         "europop"
       ],
+      "year": 1992,
       "how": "version"
     },
     {
@@ -24180,6 +24222,7 @@
         "dance-pop",
         "electropop"
       ],
+      "year": 2005,
       "how": "artist-scoped"
     },
     {
@@ -25884,6 +25927,7 @@
         "funk",
         "disco"
       ],
+      "year": 1966,
       "how": "version"
     },
     {
@@ -25905,6 +25949,7 @@
         "pop rock",
         "power pop"
       ],
+      "year": 1970,
       "how": "spelling"
     },
     {
@@ -26201,6 +26246,7 @@
         "swing",
         "traditional pop"
       ],
+      "year": 1977,
       "how": "artist-scoped"
     },
     {
@@ -26561,6 +26607,7 @@
         "country pop",
         "country rock"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -26691,6 +26738,7 @@
         "r&b",
         "contemporary r&b"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -26953,6 +27001,7 @@
         "alternative metal",
         "industrial metal"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -27045,6 +27094,7 @@
         "soft rock",
         "traditional pop"
       ],
+      "year": 1964,
       "how": "exact"
     },
     {
@@ -27273,6 +27323,7 @@
         "country pop",
         "country rock"
       ],
+      "year": 2008,
       "how": "artist-scoped"
     },
     {
@@ -28604,6 +28655,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1950,
       "how": "exact"
     },
     {
@@ -28673,6 +28725,7 @@
         "folk pop",
         "folk rock"
       ],
+      "year": 2011,
       "how": "artist-scoped"
     },
     {
@@ -29826,6 +29879,7 @@
         }
       ],
       "recordingMbid": "b50f2ca6-36c7-4485-9fa3-c463f943fcd8",
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -30920,6 +30974,7 @@
       "genres": [
         "soul"
       ],
+      "year": 1984,
       "how": "exact"
     },
     {
@@ -31182,6 +31237,7 @@
         }
       ],
       "recordingMbid": "b155986e-7d01-430a-aac5-8e5d4c2df76f",
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -31204,6 +31260,7 @@
         "pop",
         "contemporary r&b"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -31342,6 +31399,7 @@
         "swing",
         "traditional pop"
       ],
+      "year": 1988,
       "how": "artist-scoped"
     },
     {
@@ -31723,6 +31781,7 @@
         "country pop",
         "cowpunk"
       ],
+      "year": 2004,
       "how": "artist-scoped"
     },
     {
@@ -31792,6 +31851,7 @@
         "britpop",
         "pop rock"
       ],
+      "year": 1999,
       "how": "exact"
     },
     {
@@ -32384,6 +32444,7 @@
         "pop",
         "r&b"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -34489,6 +34550,7 @@
         "rock",
         "country rock"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -35197,6 +35259,7 @@
         "quiet storm",
         "r&b"
       ],
+      "year": 1979,
       "how": "artist-scoped"
     },
     {
@@ -35667,6 +35730,7 @@
         "pop",
         "latin pop"
       ],
+      "year": 2004,
       "how": "artist-scoped"
     },
     {
@@ -36110,6 +36174,7 @@
         "pop",
         "contemporary country"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -37705,6 +37770,7 @@
         "9a07b4ae-7c2f-4473-b019-c63c3d5db45c"
       ],
       "recordingMbid": "7229a939-9d81-43dd-8456-3fbea4821380",
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -37997,6 +38063,7 @@
         }
       ],
       "recordingMbid": "1226a31c-9d31-4a20-a5d7-509f86616e8e",
+      "year": 1961,
       "how": "exact"
     },
     {
@@ -38374,6 +38441,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1963,
       "how": "exact"
     },
     {
@@ -38997,6 +39065,7 @@
         }
       ],
       "recordingMbid": "a520477b-547b-49a2-a9ec-0cec47ada38f",
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -39060,6 +39129,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -39202,6 +39272,7 @@
         }
       ],
       "recordingMbid": "08dfedf2-0a57-4572-a5d1-f7041a97aa49",
+      "year": 1967,
       "how": "exact"
     },
     {
@@ -39222,6 +39293,7 @@
       "genres": [
         "merseybeat"
       ],
+      "year": 1964,
       "how": "spelling"
     },
     {
@@ -39429,6 +39501,7 @@
         "dance-pop",
         "art pop"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -39914,6 +39987,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -40119,6 +40193,7 @@
         "pop",
         "r&b"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -40501,6 +40576,7 @@
         }
       ],
       "recordingMbid": "c9850d0f-ed8f-4c42-873e-e66403282029",
+      "year": 1962,
       "how": "exact"
     },
     {
@@ -40522,6 +40598,7 @@
       "genres": [
         "easy listening"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -40588,6 +40665,7 @@
         "classical",
         "opera"
       ],
+      "year": 1976,
       "how": "exact"
     },
     {
@@ -41111,6 +41189,7 @@
         "r&b",
         "soul"
       ],
+      "year": 1998,
       "how": "artist-scoped"
     },
     {
@@ -41267,6 +41346,7 @@
         "dixieland",
         "swing"
       ],
+      "year": 1960,
       "how": "exact"
     },
     {
@@ -41605,6 +41685,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1967,
       "how": "exact"
     },
     {
@@ -41643,6 +41724,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1993,
       "how": "artist-scoped"
     },
     {
@@ -42392,6 +42474,7 @@
         "hard rock",
         "glam metal"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -42661,6 +42744,7 @@
         "disco",
         "funk"
       ],
+      "year": 1996,
       "how": "spelling"
     },
     {
@@ -42770,6 +42854,7 @@
         "disco",
         "pop"
       ],
+      "year": 1978,
       "how": "exact"
     },
     {
@@ -42838,6 +42923,7 @@
         "smooth soul",
         "soul"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -43092,6 +43178,7 @@
         "blue-eyed soul",
         "pop rock"
       ],
+      "year": 1995,
       "how": "version"
     },
     {
@@ -43153,6 +43240,7 @@
         "rockabilly",
         "rock"
       ],
+      "year": 1972,
       "how": "version"
     },
     {
@@ -44743,6 +44831,7 @@
         "country",
         "country folk"
       ],
+      "year": 2019,
       "how": "artist-scoped"
     },
     {
@@ -44909,6 +44998,7 @@
         "country pop",
         "country rock"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -45092,6 +45182,7 @@
         "dub",
         "pop"
       ],
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -47196,6 +47287,7 @@
         }
       ],
       "recordingMbid": "d5d862d4-972f-45ef-84a2-56b09ab4981e",
+      "year": 2001,
       "how": "artist-scoped"
     },
     {
@@ -47614,6 +47706,7 @@
         "rumba catalana",
         "rumba flamenca"
       ],
+      "year": 1998,
       "how": "version"
     },
     {
@@ -47657,6 +47750,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1973,
       "how": "exact"
     },
     {
@@ -48589,6 +48683,7 @@
         "indie pop",
         "pop rock"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -48631,6 +48726,7 @@
         "alternative rock",
         "rock"
       ],
+      "year": 2005,
       "how": "artist-scoped"
     },
     {
@@ -48747,6 +48843,7 @@
         "heartland rock",
         "southern rock"
       ],
+      "year": 1985,
       "how": "exact"
     },
     {
@@ -49017,6 +49114,7 @@
         "soft rock",
         "country rock"
       ],
+      "year": 1977,
       "how": "version"
     },
     {
@@ -49106,6 +49204,7 @@
         "pop rock",
         "rock"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -49497,6 +49596,7 @@
       "genres": [
         "country"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -49564,6 +49664,7 @@
         "country",
         "country rock"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -49585,6 +49686,7 @@
       "genres": [
         "country"
       ],
+      "year": 1969,
       "how": "exact"
     },
     {
@@ -50524,6 +50626,7 @@
         "piano rock",
         "pop rock"
       ],
+      "year": 1976,
       "how": "exact"
     },
     {
@@ -50767,6 +50870,7 @@
         "rock",
         "pop rock"
       ],
+      "year": 1975,
       "how": "artist-scoped"
     },
     {
@@ -50809,6 +50913,7 @@
       "genres": [
         "children's music"
       ],
+      "year": 1973,
       "how": "exact"
     },
     {
@@ -51261,6 +51366,7 @@
         "pop",
         "contemporary country"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -51403,6 +51509,7 @@
         "country",
         "outlaw country"
       ],
+      "year": 1986,
       "how": "artist-scoped"
     },
     {
@@ -52180,6 +52287,7 @@
         "east coast hip hop",
         "gangsta rap"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -52993,6 +53101,7 @@
         "soul",
         "r&b"
       ],
+      "year": 1979,
       "how": "version"
     },
     {
@@ -53716,6 +53825,7 @@
         }
       ],
       "recordingMbid": "96235a62-d6a1-41a0-95ae-76c43faae5e1",
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -53774,6 +53884,7 @@
         }
       ],
       "recordingMbid": "24932364-94f5-4080-8970-68b99c6c4c82",
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -53957,6 +54068,7 @@
         }
       ],
       "recordingMbid": "b43b2fe2-94fd-4d04-b416-c09c5f4831a7",
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -54160,6 +54272,7 @@
         }
       ],
       "recordingMbid": "3f1d5ba6-fb16-4151-8982-1acb27243658",
+      "year": 2010,
       "how": "artist-scoped"
     },
     {
@@ -54552,6 +54665,7 @@
         "dance-pop",
         "alternative dance"
       ],
+      "year": 2007,
       "how": "artist-scoped"
     },
     {
@@ -55322,6 +55436,7 @@
         "dance-pop",
         "new wave"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -55610,6 +55725,7 @@
         "contemporary r&b",
         "dance-pop"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -56016,6 +56132,7 @@
         "dance-pop",
         "new wave"
       ],
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -56038,6 +56155,7 @@
         "heartland rock",
         "americana"
       ],
+      "year": 1994,
       "how": "artist-scoped"
     },
     {
@@ -56251,6 +56369,7 @@
         "contemporary r&b",
         "dance-pop"
       ],
+      "year": 2004,
       "how": "artist-scoped"
     },
     {
@@ -56749,6 +56868,7 @@
         "pop",
         "soul"
       ],
+      "year": 2018,
       "how": "version"
     },
     {
@@ -57414,6 +57534,7 @@
         "soul",
         "r&b"
       ],
+      "year": 1983,
       "how": "exact"
     },
     {
@@ -57680,6 +57801,7 @@
         "pop punk",
         "acoustic rock"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -57726,6 +57848,7 @@
         "pop punk",
         "acoustic rock"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -57795,6 +57918,7 @@
         "new jack swing",
         "pop"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -58672,6 +58796,7 @@
         "dance-pop",
         "electropop"
       ],
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -58819,6 +58944,7 @@
         "rock",
         "pop rock"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -58994,6 +59120,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1984,
       "how": "exact"
     },
     {
@@ -59677,6 +59804,7 @@
         "east coast hip hop",
         "boom bap"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -61178,6 +61306,7 @@
         "alternative pop",
         "dance-pop"
       ],
+      "year": 2004,
       "how": "artist-scoped"
     },
     {
@@ -61908,6 +62037,7 @@
         "blues rock",
         "classic rock"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -62525,6 +62655,7 @@
         "dance-pop",
         "electronic"
       ],
+      "year": 2004,
       "how": "artist-scoped"
     },
     {
@@ -63167,6 +63298,7 @@
         "soul",
         "r&b"
       ],
+      "year": 1964,
       "how": "exact"
     },
     {
@@ -63277,6 +63409,7 @@
       "genres": [
         "country"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -63458,6 +63591,7 @@
         "country",
         "contemporary country"
       ],
+      "year": 2002,
       "how": "artist-scoped"
     },
     {
@@ -63570,6 +63704,7 @@
         "country",
         "contemporary country"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -64222,6 +64357,7 @@
         "hip hop",
         "west coast hip hop"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -65116,6 +65252,7 @@
         "comedy rock",
         "rock"
       ],
+      "year": 1999,
       "how": "exact"
     },
     {
@@ -65453,6 +65590,7 @@
         "dance-pop",
         "disco"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -65962,6 +66100,7 @@
         "folk",
         "rock"
       ],
+      "year": 1963,
       "how": "version"
     },
     {
@@ -66781,6 +66920,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -66915,6 +67055,7 @@
         "r&b",
         "neo soul"
       ],
+      "year": 2005,
       "how": "version"
     },
     {
@@ -68129,6 +68270,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 1996,
       "how": "version"
     },
     {
@@ -69267,6 +69409,7 @@
         "contemporary r&b",
         "r&b"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -70365,6 +70508,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 1989,
       "how": "version"
     },
     {
@@ -70567,6 +70711,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 1998,
       "how": "version"
     },
     {
@@ -70872,6 +71017,7 @@
         "soft rock",
         "classic rock"
       ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -71538,6 +71684,7 @@
       "genres": [
         "rock"
       ],
+      "year": 2011,
       "how": "exact"
     },
     {
@@ -71681,6 +71828,7 @@
         }
       ],
       "recordingMbid": "2f669ed0-143f-4930-8f1f-2b28ef9ddd25",
+      "year": 2011,
       "how": "exact"
     },
     {
@@ -73584,6 +73732,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -74173,6 +74322,7 @@
         "pop",
         "experimental"
       ],
+      "year": 1971,
       "how": "artist-scoped"
     },
     {
@@ -74354,6 +74504,7 @@
         "blues rock",
         "rock"
       ],
+      "year": 1978,
       "how": "exact"
     },
     {
@@ -74898,6 +75049,7 @@
         "piano rock",
         "pop rock"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -75880,6 +76032,7 @@
         "hard rock",
         "glam metal"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -76321,6 +76474,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1976,
       "how": "artist-scoped"
     },
     {
@@ -76486,6 +76640,7 @@
         "new wave",
         "electronic"
       ],
+      "year": 1981,
       "how": "exact"
     },
     {
@@ -76580,6 +76735,7 @@
         "blues rock",
         "electric blues"
       ],
+      "year": 1988,
       "how": "artist-scoped"
     },
     {
@@ -76668,6 +76824,7 @@
       "genres": [
         "reggae"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -76684,6 +76841,7 @@
         }
       ],
       "recordingMbid": "caecc56f-028d-40d4-94d4-1352f8fad5d2",
+      "year": 1970,
       "how": "version"
     },
     {
@@ -76828,6 +76986,7 @@
         "heartland rock",
         "southern rock"
       ],
+      "year": 1979,
       "how": "artist-scoped"
     },
     {
@@ -76892,6 +77051,7 @@
         "country pop",
         "pop"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -77330,6 +77490,7 @@
         "disco",
         "pop"
       ],
+      "year": 1974,
       "how": "exact"
     },
     {
@@ -77384,6 +77545,7 @@
         "39515237-2d70-436a-800c-fcbac974bec4"
       ],
       "recordingMbid": "31931a43-2810-438a-a6a2-4bb50ff75746",
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -77601,6 +77763,7 @@
         "d138bc4c-0f52-4801-a45b-69e59649ca82"
       ],
       "recordingMbid": "bcba5626-da77-4c14-a58d-027e2596fcaf",
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -77645,6 +77808,7 @@
         "pop soul",
         "traditional pop"
       ],
+      "year": 1965,
       "how": "version"
     },
     {
@@ -77920,6 +78084,7 @@
         "disco",
         "funk"
       ],
+      "year": 1975,
       "how": "exact"
     },
     {
@@ -77989,6 +78154,7 @@
         "pop",
         "pop rock"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -79714,6 +79880,7 @@
         }
       ],
       "recordingMbid": "218b0cfd-b283-4e03-8700-14747d46ff06",
+      "year": 1979,
       "how": "exact"
     },
     {
@@ -79737,6 +79904,7 @@
         "rock",
         "psychedelic rock"
       ],
+      "year": 1969,
       "how": "artist-scoped"
     },
     {
@@ -79776,6 +79944,7 @@
         }
       ],
       "recordingMbid": "7378533b-00d0-4508-b980-795df4dbe857",
+      "year": 1977,
       "how": "exact"
     },
     {
@@ -80011,6 +80180,7 @@
       "genres": [
         "musical"
       ],
+      "year": 1960,
       "how": "exact"
     },
     {
@@ -80034,6 +80204,7 @@
         "rock",
         "soft rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -80053,6 +80224,7 @@
         }
       ],
       "recordingMbid": "56a98cf6-781c-4759-88cb-fb7adcbdc602",
+      "year": 1993,
       "how": "exact"
     },
     {
@@ -80072,6 +80244,7 @@
         }
       ],
       "recordingMbid": "94a6f61d-6a21-4c41-8999-b390c4f46727",
+      "year": 1963,
       "how": "exact"
     },
     {
@@ -80090,6 +80263,7 @@
         }
       ],
       "recordingMbid": "0dd18212-b2a7-4006-ad0b-68fba38f686d",
+      "year": 1957,
       "how": "exact"
     },
     {
@@ -81176,6 +81350,7 @@
       "genres": [
         "country"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -82271,6 +82446,7 @@
       "genres": [
         "pop rock"
       ],
+      "year": 2011,
       "how": "artist-scoped"
     },
     {
@@ -82612,6 +82788,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -82955,6 +83132,7 @@
         "ballad",
         "pop"
       ],
+      "year": 1990,
       "how": "artist-scoped"
     },
     {
@@ -82999,6 +83177,7 @@
         "contemporary r&b",
         "r&b"
       ],
+      "year": 2002,
       "how": "artist-scoped"
     },
     {
@@ -83111,6 +83290,7 @@
       "genres": [
         "soul"
       ],
+      "year": 2003,
       "how": "exact"
     },
     {
@@ -83269,6 +83449,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1972,
       "how": "artist-scoped"
     },
     {
@@ -83424,6 +83605,7 @@
         "dance-pop",
         "pop"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -83556,6 +83738,7 @@
         "dance-pop",
         "electro latino"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -83821,6 +84004,7 @@
         "gangsta rap",
         "g-funk"
       ],
+      "year": 1993,
       "how": "artist-scoped"
     },
     {
@@ -83912,6 +84096,7 @@
       "genres": [
         "musical"
       ],
+      "year": 1973,
       "how": "exact"
     },
     {
@@ -83955,6 +84140,7 @@
       "genres": [
         "rock"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -84425,6 +84611,7 @@
         "dance-pop",
         "alternative dance"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -84630,6 +84817,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1999,
       "how": "artist-scoped"
     },
     {
@@ -84948,6 +85136,7 @@
         "r&b",
         "soul"
       ],
+      "year": 1986,
       "how": "lead-scoped"
     },
     {
@@ -85818,6 +86007,7 @@
         "french house",
         "house"
       ],
+      "year": 2007,
       "how": "artist-scoped"
     },
     {
@@ -86162,6 +86352,7 @@
       "genres": [
         "country"
       ],
+      "year": 1996,
       "how": "exact"
     },
     {
@@ -86565,6 +86756,7 @@
         "alternative rock",
         "rock"
       ],
+      "year": 2005,
       "how": "version"
     },
     {
@@ -86863,6 +87055,7 @@
         "dance-pop",
         "dance"
       ],
+      "year": 2009,
       "how": "artist-scoped"
     },
     {
@@ -86955,6 +87148,7 @@
       "genres": [
         "pop punk"
       ],
+      "year": 2009,
       "how": "artist-scoped"
     },
     {
@@ -87223,6 +87417,7 @@
         "alternative rock",
         "rock"
       ],
+      "year": 2009,
       "how": "artist-scoped"
     },
     {
@@ -87384,6 +87579,7 @@
         "pop rock",
         "dance-pop"
       ],
+      "year": 2010,
       "how": "artist-scoped"
     },
     {
@@ -87763,6 +87959,7 @@
         "funk",
         "r&b"
       ],
+      "year": 2011,
       "how": "version"
     },
     {
@@ -87824,6 +88021,7 @@
         "country",
         "country pop"
       ],
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -88341,6 +88539,7 @@
         "pop",
         "sophisti-pop"
       ],
+      "year": 1988,
       "how": "exact"
     },
     {
@@ -89335,6 +89534,7 @@
         "power pop",
         "rock"
       ],
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -89476,6 +89676,7 @@
         "dance-pop",
         "hip hop"
       ],
+      "year": 2009,
       "how": "artist-scoped"
     },
     {
@@ -89498,6 +89699,7 @@
         "dance-pop",
         "dream pop"
       ],
+      "year": 1995,
       "how": "artist-scoped"
     },
     {
@@ -89575,6 +89777,7 @@
         "pop",
         "pop rap"
       ],
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -90106,6 +90309,7 @@
         "neue deutsche härte",
         "metal"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -90172,6 +90376,7 @@
         "funk",
         "r&b"
       ],
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -91248,6 +91453,7 @@
         "alternative rock",
         "pop rock"
       ],
+      "year": 2000,
       "how": "artist-scoped"
     },
     {
@@ -91472,6 +91678,7 @@
         "ballad",
         "pop"
       ],
+      "year": 2002,
       "how": "version"
     },
     {
@@ -91516,6 +91723,7 @@
         "pop rap",
         "southern hip hop"
       ],
+      "year": 1997,
       "how": "exact"
     },
     {
@@ -92038,6 +92246,7 @@
         "hip hop",
         "pop rap"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -94415,6 +94624,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 2010,
       "how": "exact"
     },
     {
@@ -94438,6 +94648,7 @@
         "pop",
         "dream pop"
       ],
+      "year": 2011,
       "how": "version"
     },
     {
@@ -95171,6 +95382,7 @@
         }
       ],
       "recordingMbid": "f3098a93-6673-4d22-a4da-9f2d646622b3",
+      "year": 2011,
       "how": "exact"
     },
     {
@@ -95188,6 +95400,7 @@
         }
       ],
       "recordingMbid": "6724a1eb-9000-40c7-9826-be5f13fd295f",
+      "year": 2012,
       "how": "exact"
     },
     {
@@ -97099,6 +97312,7 @@
       "genres": [
         "folk"
       ],
+      "year": 2011,
       "how": "artist-scoped"
     },
     {
@@ -97528,6 +97742,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -98454,6 +98669,7 @@
         "pop",
         "contemporary r&b"
       ],
+      "year": 2009,
       "how": "exact"
     },
     {
@@ -99062,6 +99278,7 @@
       "genres": [
         "country"
       ],
+      "year": 1968,
       "how": "exact"
     },
     {
@@ -100517,6 +100734,7 @@
         "synth-pop",
         "new wave"
       ],
+      "year": 1984,
       "how": "exact"
     },
     {
@@ -101623,6 +101841,7 @@
         "west coast hip hop",
         "g-funk"
       ],
+      "year": 1992,
       "how": "exact"
     },
     {
@@ -102218,6 +102437,7 @@
       "genres": [
         "pop"
       ],
+      "year": 2011,
       "how": "exact"
     },
     {
@@ -102524,6 +102744,7 @@
         "celtic punk",
         "folk punk"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -103037,6 +103258,7 @@
         "funk",
         "motown"
       ],
+      "year": 1967,
       "how": "exact"
     },
     {
@@ -103469,6 +103691,7 @@
         "pop punk",
         "acoustic rock"
       ],
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -103513,6 +103736,7 @@
         "pop punk",
         "acoustic rock"
       ],
+      "year": 2002,
       "how": "exact"
     },
     {
@@ -103535,6 +103759,7 @@
         "pop punk",
         "acoustic rock"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -104408,6 +104633,7 @@
         "hard rock",
         "rock"
       ],
+      "year": 1982,
       "how": "exact"
     },
     {
@@ -104521,6 +104747,7 @@
         "pop rock",
         "pop"
       ],
+      "year": 2003,
       "how": "artist-scoped"
     },
     {
@@ -105000,6 +105227,7 @@
         "contemporary r&b",
         "dance-pop"
       ],
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -105219,6 +105447,7 @@
         "dance-pop",
         "r&b"
       ],
+      "year": 2006,
       "how": "version"
     },
     {
@@ -105292,6 +105521,7 @@
         "dance-pop",
         "r&b"
       ],
+      "year": 2006,
       "how": "artist-scoped"
     },
     {
@@ -105770,6 +106000,7 @@
         "country",
         "traditional country"
       ],
+      "year": 1979,
       "how": "exact"
     },
     {
@@ -107675,6 +107906,7 @@
       ],
       "credit": "Nicole Kidman, Ewan McGregor and Jamie Allen",
       "recordingMbid": "c1f42261-2ac2-4adb-83d8-12763a28a924",
+      "year": 2001,
       "how": "artist-scoped"
     },
     {
@@ -107875,6 +108107,7 @@
         "teen pop",
         "dance-pop"
       ],
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -108535,6 +108768,7 @@
         "hip hop",
         "soul"
       ],
+      "year": 1998,
       "how": "artist-scoped"
     },
     {
@@ -108677,6 +108911,7 @@
         "pop",
         "contemporary r&b"
       ],
+      "year": 1991,
       "how": "exact"
     },
     {
@@ -109147,6 +109382,7 @@
         "new jack swing",
         "pop"
       ],
+      "year": 2006,
       "how": "artist-scoped"
     },
     {
@@ -109536,6 +109772,7 @@
         "jangle pop",
         "pop rock"
       ],
+      "year": 1989,
       "how": "version"
     },
     {
@@ -110027,6 +110264,7 @@
         "alternative rock",
         "pop rock"
       ],
+      "year": 2003,
       "how": "artist-scoped"
     },
     {
@@ -110055,6 +110293,7 @@
         "gangsta rap",
         "g-funk"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -110083,6 +110322,7 @@
         "gangsta rap",
         "g-funk"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -110590,6 +110830,7 @@
         "contemporary r&b",
         "funk"
       ],
+      "year": 1965,
       "how": "version"
     },
     {
@@ -111421,6 +111662,7 @@
         "soul",
         "r&b"
       ],
+      "year": 1975,
       "how": "version"
     },
     {
@@ -111668,6 +111910,7 @@
         "dance-pop",
         "hip hop"
       ],
+      "year": 2009,
       "how": "artist-scoped"
     },
     {
@@ -112010,6 +112253,7 @@
         "hip hop",
         "rap rock"
       ],
+      "year": 1986,
       "how": "exact"
     },
     {
@@ -112187,6 +112431,7 @@
         "gospel",
         "deep soul"
       ],
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -113715,6 +113960,7 @@
         "dance-pop",
         "hip hop"
       ],
+      "year": 2015,
       "how": "artist-scoped"
     },
     {
@@ -115226,6 +115472,7 @@
       "genres": [
         "pop"
       ],
+      "year": 1997,
       "how": "version"
     },
     {
@@ -116061,6 +116308,7 @@
         "dance-pop",
         "reggae-pop"
       ],
+      "year": 2014,
       "how": "exact"
     },
     {
@@ -116862,6 +117110,7 @@
         "pop rap",
         "experimental hip hop"
       ],
+      "year": 2015,
       "how": "exact"
     },
     {
@@ -117127,6 +117376,7 @@
         "big band",
         "jazz"
       ],
+      "year": 1984,
       "how": "version"
     },
     {
@@ -117621,6 +117871,7 @@
       "genres": [
         "indie rock"
       ],
+      "year": 2008,
       "how": "exact"
     },
     {
@@ -118041,6 +118292,7 @@
         "pop",
         "dance-pop"
       ],
+      "year": 1985,
       "how": "exact"
     },
     {
@@ -118356,6 +118608,7 @@
         "europop",
         "pop"
       ],
+      "year": 2000,
       "how": "exact"
     },
     {
@@ -118481,6 +118734,7 @@
         "edm",
         "electro house"
       ],
+      "year": 2014,
       "how": "exact"
     },
     {
@@ -118755,6 +119009,7 @@
         }
       ],
       "recordingMbid": "6f921f85-4449-43a4-828d-d64379d3b74b",
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -118822,6 +119077,7 @@
       "genres": [
         "jazz"
       ],
+      "year": 1967,
       "how": "exact"
     },
     {
@@ -118841,6 +119097,7 @@
         }
       ],
       "recordingMbid": "6382ff4e-3309-4f86-8762-ae7c2d8b79d4",
+      "year": 1989,
       "how": "exact"
     },
     {
@@ -119358,6 +119615,7 @@
         "alternative rock",
         "pop rock"
       ],
+      "year": 2013,
       "how": "exact"
     },
     {
@@ -120060,6 +120318,7 @@
         "latin pop",
         "pop"
       ],
+      "year": 2017,
       "how": "artist-scoped"
     },
     {
@@ -120505,6 +120764,7 @@
       "genres": [
         "power pop"
       ],
+      "year": 1995,
       "how": "exact"
     },
     {
@@ -120584,6 +120844,7 @@
         "pop rap",
         "experimental hip hop"
       ],
+      "year": 2015,
       "how": "exact"
     },
     {
@@ -121640,6 +121901,7 @@
         "country pop",
         "country rock"
       ],
+      "year": 2010,
       "how": "artist-scoped"
     },
     {
@@ -121950,6 +122212,7 @@
       "genres": [
         "r&b"
       ],
+      "year": 2004,
       "how": "exact"
     },
     {
@@ -121974,6 +122237,7 @@
       ],
       "credit": "Angela Lansbury and Jerry Orbach",
       "recordingMbid": "5ab3f01e-2204-4988-875d-867dedd5a9b3",
+      "year": 1991,
       "how": "exact"
     },
     {
@@ -121993,6 +122257,7 @@
         }
       ],
       "recordingMbid": "b508aa2a-ee57-44d9-abfe-66b69ce18342",
+      "year": 1950,
       "how": "exact"
     },
     {
@@ -122012,6 +122277,7 @@
         }
       ],
       "recordingMbid": "daaa880d-5c1b-45ca-a2a2-86d1c4144eb1",
+      "year": 1988,
       "how": "version"
     },
     {
@@ -122033,6 +122299,7 @@
       "genres": [
         "christmas music"
       ],
+      "year": 1964,
       "how": "exact"
     },
     {
@@ -122052,6 +122319,7 @@
         }
       ],
       "recordingMbid": "005817b5-21f6-48de-9206-47bb1f2d962c",
+      "year": 2003,
       "how": "exact"
     },
     {
@@ -122096,6 +122364,7 @@
         }
       ],
       "recordingMbid": "6f921f85-4449-43a4-828d-d64379d3b74b",
+      "year": 1994,
       "how": "exact"
     },
     {
@@ -122165,6 +122434,7 @@
         "pop",
         "soft rock"
       ],
+      "year": 1980,
       "how": "exact"
     },
     {
@@ -122299,6 +122569,7 @@
         "dance",
         "deep house"
       ],
+      "year": 2017,
       "how": "exact"
     },
     {
@@ -122528,6 +122799,7 @@
         "rock",
         "blues rock"
       ],
+      "year": 1994,
       "how": "version"
     },
     {
@@ -122576,6 +122848,7 @@
       "genres": [
         "progressive house"
       ],
+      "year": 2015,
       "how": "artist-scoped"
     },
     {
@@ -122724,6 +122997,7 @@
         "alternative r&b",
         "contemporary r&b"
       ],
+      "year": 2016,
       "how": "artist-scoped"
     },
     {
@@ -122976,6 +123250,7 @@
       "genres": [
         "hip hop"
       ],
+      "year": 2013,
       "how": "exact"
     },
     {
@@ -123005,6 +123280,7 @@
         "deep house",
         "liquid funk"
       ],
+      "year": 2017,
       "how": "exact"
     },
     {
@@ -123032,6 +123308,7 @@
         "dance-pop",
         "electropop"
       ],
+      "year": 2018,
       "how": "artist-scoped"
     },
     {
@@ -124063,6 +124340,7 @@
         "alternative rock",
         "post-grunge"
       ],
+      "year": 2001,
       "how": "exact"
     },
     {
@@ -124685,6 +124963,7 @@
         "folk pop",
         "pop rock"
       ],
+      "year": 2016,
       "how": "exact"
     },
     {
@@ -124707,6 +124986,7 @@
         "folk pop",
         "pop rock"
       ],
+      "year": 2015,
       "how": "exact"
     },
     {
@@ -125283,6 +125563,7 @@
         "r&b",
         "contemporary r&b"
       ],
+      "year": 2019,
       "how": "version"
     },
     {
@@ -125466,6 +125747,7 @@
         "dance-pop",
         "electropop"
       ],
+      "year": 2005,
       "how": "artist-scoped"
     },
     {
@@ -126221,6 +126503,7 @@
         "pop",
         "synth-pop"
       ],
+      "year": 1981,
       "how": "exact"
     },
     {
@@ -126662,6 +126945,7 @@
         "bubblegum pop",
         "europop"
       ],
+      "year": 1998,
       "how": "exact"
     },
     {
@@ -126751,6 +127035,7 @@
         "dba406d9-1720-4603-9dd4-e16baaacef46"
       ],
       "recordingMbid": "cabffc13-5546-4acd-88e2-edb182b123d7",
+      "year": 1957,
       "how": "exact"
     },
     {
@@ -126798,6 +127083,7 @@
       ],
       "credit": "John Travolta & Olivia Newton‐John",
       "recordingMbid": "e6171d6d-2db6-4e8a-83a1-e4292a784b63",
+      "year": 1990,
       "how": "exact"
     },
     {
@@ -126820,6 +127106,7 @@
         "pop rap",
         "experimental hip hop"
       ],
+      "year": 2007,
       "how": "artist-scoped"
     },
     {
@@ -126848,6 +127135,7 @@
         "funk",
         "smooth soul"
       ],
+      "year": 1968,
       "how": "version"
     },
     {
@@ -127207,6 +127495,7 @@
         "contemporary r&b",
         "jazz"
       ],
+      "year": 2006,
       "how": "exact"
     },
     {
@@ -127589,6 +127878,7 @@
         "alternative rock",
         "pop rock"
       ],
+      "year": 2007,
       "how": "exact"
     },
     {
@@ -127889,8 +128179,8 @@
       ],
       "credit": "Zac Efron & Vanessa Hudgens",
       "recordingMbid": "d4182fba-1731-4925-8e76-c64d4a649127",
-      "how": "exact",
-      "year": 2006
+      "year": 2006,
+      "how": "exact"
     },
     {
       "postId": 50368,
@@ -127901,8 +128191,8 @@
         "869b594f-c4f5-4747-ad57-cc9463fef491"
       ],
       "recordingMbid": "6cae8676-4b4a-49d6-b170-0fd34a034dec",
-      "how": "exact",
-      "year": 2007
+      "year": 2007,
+      "how": "exact"
     },
     {
       "postId": 50369,
@@ -128152,6 +128442,7 @@
         "alternative rock",
         "pop rock"
       ],
+      "year": 2005,
       "how": "exact"
     },
     {
@@ -128467,6 +128758,7 @@
         "east coast hip hop",
         "pop"
       ],
+      "year": 2020,
       "how": "artist-scoped"
     },
     {
@@ -129594,6 +129886,7 @@
         "east coast hip hop",
         "emo rap"
       ],
+      "year": 2017,
       "how": "exact"
     },
     {
@@ -129760,6 +130053,7 @@
         "country",
         "singer-songwriter"
       ],
+      "year": 1972,
       "how": "exact"
     },
     {
@@ -130343,6 +130637,7 @@
         "r&b",
         "contemporary r&b"
       ],
+      "year": 2019,
       "how": "version"
     },
     {
@@ -131566,6 +131861,7 @@
       "genres": [
         "classical crossover"
       ],
+      "year": 1995,
       "how": "artist-scoped"
     },
     {
