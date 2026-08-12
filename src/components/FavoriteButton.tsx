@@ -31,8 +31,12 @@ function getSnapshot() {
     return cached;
 }
 
+const EMPTY_FAVORITES: number[] = [];
+
 function getServerSnapshot() {
-    return [] as number[];
+    // Must return a stable reference — a fresh [] each call trips React’s
+    // “getServerSnapshot should be cached” infinite-loop guard.
+    return EMPTY_FAVORITES;
 }
 
 export function useFavorites() {
