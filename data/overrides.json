@@ -225,6 +225,7 @@
             "sortAs": "Tisdale, Ashley",
             "title": "What I've Been Looking For",
             "from": "High School Musical",
+            "year": 2006,
             "artists": [
                 {
                     "mbid": "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
@@ -235,7 +236,7 @@
                     "name": "Lucas Grabeel"
                 }
             ],
-            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer."
+            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz)."
         },
         {
             "postId": 50370,
