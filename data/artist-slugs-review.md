@@ -1,10 +1,10 @@
 # Artist slug review
 
-1979 artists, written by `pnpm review:artist-slugs` from the composed
+1978 artists, written by `pnpm review:artist-slugs` from the composed
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
-1 curated slug override(s), 4 collision disambiguation(s).
+1 curated slug override(s), 2 collision disambiguation(s).
 Everyone else is `slugify(display name)`.
 
 | name | slug | songs | note | mbid |
@@ -1195,8 +1195,7 @@ Everyone else is `slugify(display name)`.
 | Mick Jagger | mick-jagger | 1 |  | `b5ffc3aa-b868-4b88-905f-d73d51dbe51c` |
 | Migos | migos | 1 |  | `0221734a-35a8-40f7-b5c5-2f61a200bc7c` |
 | Miio | miio | 2 |  | `39c6ab67-4fab-4049-b1c2-ee1129897ee0` |
-| Mika | mika-group | 1 | disambiguated from `mika` | `e11051f9-0098-41aa-9edb-8dacd8f1c6b5` |
-| MIKA | mika-person | 7 | disambiguated from `mika` | `8a9ac1cb-faae-434e-8d60-b139a3707dfc` |
+| MIKA | mika | 8 |  | `8a9ac1cb-faae-434e-8d60-b139a3707dfc` |
 | Mika Sundqvist | mika-sundqvist | 1 |  | `ee74e74e-bd95-4abc-aae3-e998147c3ad6` |
 | Mikael Rickfors | mikael-rickfors | 2 |  | `7a38053e-efab-410d-8ea7-d606ebba60c4` |
 | Mike + the Mechanics | mike-the-mechanics | 7 |  | `a04e09c8-733c-4430-9e22-99ef9dd5e2d7` |

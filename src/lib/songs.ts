@@ -231,6 +231,14 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
     const category = override?.category;
     const language = override?.language ?? correction?.language;
     const artists = creditedArtists(correction, override);
+    // Year and genres come from whoever the dump matched. When an override replaces the
+    // artist (namesake, placeholder, dump-blind hit), those enrichment fields belong to
+    // the wrong recording and must not hitch a ride.
+    const artistOverridden =
+        (override !== undefined && "artist" in override) ||
+        (override?.artists !== undefined && override.artists.length > 0);
+    const genres = artistOverridden ? undefined : correction?.genres;
+    const year = artistOverridden ? undefined : correction?.year;
     return {
         id: song.id,
         postId: song.postId,
@@ -239,8 +247,8 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
         ...(artists === undefined ? {} : { artists }),
         // Sorting an artist by their own sort name is what puts The Beatles under B,
         // and it only exists once a lookup has provided it.
-        ...(correction?.genres === undefined ? {} : { genres: correction.genres }),
-        ...(correction?.year === undefined ? {} : { year: correction.year }),
+        ...(genres === undefined ? {} : { genres }),
+        ...(year === undefined ? {} : { year }),
         ...(from === undefined ? {} : { from }),
         ...(category === undefined ? {} : { category }),
         ...(language === undefined ? {} : { language }),
