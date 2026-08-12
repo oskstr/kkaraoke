@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackLink from "../components/BackLink.astro";
+import FavoritesApp from "../components/FavoritesApp";
+---
+
+<Layout title="Favorites · kkaraoke">
+    <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-4">
+        <BackLink href="/" label="← BROWSE" />
+        <h1 class="mt-3 text-[30px] font-bold tracking-[-0.025em] text-cream">Favorites</h1>
+    </header>
+    <main class="px-[18px] pt-1.5 pb-6">
+        <FavoritesApp client:load />
+    </main>
+</Layout>

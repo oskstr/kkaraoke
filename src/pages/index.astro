@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BrowseHeader from "../components/BrowseHeader.astro";
+import TileGrid from "../components/TileGrid.astro";
+import { browseTiles } from "../lib/catalogue";
+import { getSongs } from "../lib/songs";
+
+const songs = getSongs();
+const { mode, tiles } = browseTiles("featured", songs);
+---
+
+<Layout title="kkaraoke">
+    <BrowseHeader facet="featured" />
+    <main class="px-[18px] pt-4 pb-6" transition:animate="fade">
+        <TileGrid tiles={tiles} mode={mode} />
+    </main>
+</Layout>

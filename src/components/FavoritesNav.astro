@@ -1,0 +1,21 @@
+---
+interface Props {
+    active?: boolean;
+}
+
+const { active = false } = Astro.props;
+---
+
+<a
+    href="/favorites"
+    class:list={[
+        "inline-flex min-h-[34px] items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors",
+        active
+            ? "border-[rgba(233,180,76,0.4)] bg-[rgba(233,180,76,0.14)] text-gold"
+            : "border-line-strong bg-panel text-[#9A9086]",
+    ]}
+    data-fav-nav
+    transition:name="favorites-nav"
+>
+    ♥ Favorites
+</a>

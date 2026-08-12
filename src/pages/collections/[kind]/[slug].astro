@@ -1,0 +1,120 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import BackLink from "../../../components/BackLink.astro";
+import SortTabs from "../../../components/SortTabs.astro";
+import SongList from "../../../components/SongList.astro";
+import {
+    collectionKinds,
+    mergeSongVariants,
+    resolveCollection,
+    songsInCollection,
+    sortSongVariants,
+    type CollectionKind,
+} from "../../../lib/catalogue";
+import { getSongs, slugify } from "../../../lib/songs";
+
+export function getStaticPaths() {
+    const songs = getSongs();
+    const paths: { params: { kind: string; slug: string } }[] = [];
+
+    for (const kind of collectionKinds()) {
+        const keys = new Set<string>();
+        for (const song of songs) {
+            if (kind === "decade" && song.year !== undefined) {
+                keys.add(String(Math.floor(song.year / 10) * 10));
+            } else if (kind === "genre") {
+                for (const g of song.genres ?? []) keys.add(g);
+            } else if (kind === "category" && song.category) {
+                keys.add(song.category);
+            } else if (kind === "from" && song.from) {
+                keys.add(song.from);
+            } else if (kind === "lang" && song.language) {
+                keys.add(song.language);
+            }
+        }
+        for (const key of keys) {
+            paths.push({ params: { kind, slug: slugify(key) } });
+        }
+    }
+
+    return paths;
+}
+
+const kind = Astro.params.kind as CollectionKind;
+const slug = Astro.params.slug!;
+const songs = getSongs();
+const collection = resolveCollection(kind, slug, songs);
+
+if (collection === undefined) {
+    return Astro.redirect("/");
+}
+
+const rows = sortSongVariants(
+    mergeSongVariants(songsInCollection(songs, collection.kind, collection.key)),
+    "az",
+);
+const INITIAL = 80;
+const CHUNK = 80;
+const initialRows = rows.slice(0, INITIAL);
+const moreRows = rows.slice(INITIAL).map((song) => ({
+    id: song.id,
+    ids: song.ids,
+    title: song.song,
+    artist: song.artist || song.category || "",
+    year: song.year !== undefined ? String(song.year) : "",
+    from: song.from ?? "",
+    category: song.category ?? "",
+    artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
+}));
+
+const backFallback: Record<CollectionKind, string> = {
+    decade: "/browse/decades",
+    genre: "/browse/genres",
+    category: "/browse/categories",
+    from: "/browse/films",
+    lang: "/browse/languages",
+};
+---
+
+<Layout title={`${collection.label} · kkaraoke`}>
+    <!--
+      One shared-element target for the tile morph: the whole tinted chrome
+      (back + title + sort) so the tile color expands into the top bar.
+    -->
+    <div
+        class="collection-chrome sticky top-0 z-20"
+        style={`background:${collection.tint};border-bottom:1px solid rgba(0,0,0,0.25);view-transition-class:coll-chrome`}
+        transition:name={collection.transitionName}
+        transition:animate="initial"
+    >
+        <header class="px-[18px] pt-[22px] pb-0">
+            <BackLink href={backFallback[collection.kind]} label="← BACK" light />
+            <h1
+                class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
+                style="view-transition-class: coll-title"
+                transition:name={collection.titleTransitionName}
+                transition:animate="initial"
+            >
+                {collection.label}
+            </h1>
+        </header>
+        <SortTabs />
+    </div>
+    <main class="bg-surface px-[18px] pt-1.5 pb-6">
+        <SongList songs={initialRows} sortable />
+        {
+            moreRows.length > 0 && (
+                <div class="py-2" data-more-songs-root>
+                    <script
+                        is:inline
+                        type="application/json"
+                        data-more-songs
+                        data-chunk={String(CHUNK)}
+                        set:html={JSON.stringify(moreRows)}
+                    />
+                    <div data-infinite-sentinel class="h-8 w-full" aria-hidden="true" />
+                </div>
+            )
+        }
+    </main>
+</Layout>

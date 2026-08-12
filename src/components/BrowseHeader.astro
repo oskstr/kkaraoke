@@ -1,0 +1,47 @@
+---
+import FavoritesNav from "./FavoritesNav.astro";
+import FacetTabs from "./FacetTabs.astro";
+import type { FacetKey } from "../lib/catalogue";
+
+interface Props {
+    facet: FacetKey;
+}
+
+const { facet } = Astro.props;
+---
+
+<header class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
+    <div class="flex items-center gap-2">
+        <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true"
+            ><path
+                fill="#F2EDE4"
+                d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
+            ></path></svg
+        >
+        <span class="flex-1 text-[14.5px] font-bold tracking-tight text-cream" transition:name="brand"
+            >kkaraoke</span
+        >
+        <FavoritesNav />
+    </div>
+    <a
+        href="/search"
+        class="mt-3.5 flex w-full items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left text-muted no-underline hover:text-muted"
+        data-search-launch
+        data-astro-reload
+    >
+        <svg
+            viewBox="0 0 24 24"
+            width="17"
+            height="17"
+            fill="none"
+            stroke="#8B8278"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+            ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+        >
+        {/* 16px minimum — iOS zooms inputs smaller than that. */}
+        <span class="text-base">Songs, artists, films</span>
+    </a>
+    <FacetTabs active={facet} />
+</header>

@@ -1,0 +1,540 @@
+import { getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
+
+/** Swedish collation — å, ä, ö after z. */
+export const collator = new Intl.Collator("sv");
+
+export const TILE_COLORS = [
+    "#7A4B3A",
+    "#3F5A6B",
+    "#5B4A72",
+    "#6B6238",
+    "#41684F",
+    "#7A3F4F",
+    "#3E4A6B",
+    "#6B5230",
+] as const;
+
+export const LANGUAGE_LABELS: Record<string, string> = {
+    eng: "English",
+    swe: "Swedish",
+    fin: "Finnish",
+    spa: "Spanish",
+    ita: "Italian",
+    fra: "French",
+    nor: "Norwegian",
+    nob: "Norwegian",
+    deu: "German",
+    nld: "Dutch",
+    jpn: "Japanese",
+    kor: "Korean",
+    mul: "Multiple",
+    nap: "Neapolitan",
+    pan: "Punjabi",
+    zxx: "Instrumental",
+};
+
+export type FacetKey = "featured" | "decade" | "genre" | "occasion" | "film" | "lang";
+
+export type CollectionKind = "decade" | "genre" | "category" | "from" | "lang";
+
+export type SortKey = "az" | "artist" | "year";
+
+export interface FacetTab {
+    key: FacetKey;
+    label: string;
+    href: string;
+}
+
+export interface BrowseTile {
+    label: string;
+    href: string;
+    tint: string;
+    kind: CollectionKind;
+    key: string;
+    /** Shared with the collection header for morphing view transitions. */
+    transitionName: string;
+    titleTransitionName: string;
+    /** Larger type for decade tiles. */
+    large?: boolean;
+}
+
+export interface CollectionRef {
+    kind: CollectionKind;
+    key: string;
+    label: string;
+    tint: string;
+    transitionName: string;
+    titleTransitionName: string;
+}
+
+/** CSS view-transition-name friendly id (no slashes). */
+export function collectionTransitionNames(kind: CollectionKind, key: string) {
+    const id = `${kind}-${slugify(key)}`;
+    return {
+        transitionName: `coll-${id}`,
+        titleTransitionName: `coll-title-${id}`,
+    };
+}
+
+export const FACETS: FacetTab[] = [
+    { key: "featured", label: "Featured", href: "/" },
+    { key: "decade", label: "Decades", href: "/browse/decades" },
+    { key: "genre", label: "Genres", href: "/browse/genres" },
+    { key: "occasion", label: "Categories", href: "/browse/categories" },
+    { key: "film", label: "Film & musical", href: "/browse/films" },
+    { key: "lang", label: "Language", href: "/browse/languages" },
+];
+
+const FACET_PATH: Record<string, FacetKey> = {
+    decades: "decade",
+    genres: "genre",
+    categories: "occasion",
+    films: "film",
+    languages: "lang",
+};
+
+export function facetFromParam(param: string | undefined): FacetKey | undefined {
+    if (param === undefined) return undefined;
+    return FACET_PATH[param];
+}
+
+export function collectionPath(kind: CollectionKind, key: string): string {
+    return `/collections/${kind}/${encodeURIComponent(slugify(key))}`;
+}
+
+/** Stable tint so a browse tile and its collection header always match for morphing. */
+export function tintFor(kind: CollectionKind, key: string): string {
+    const seed = `${kind}:${key}`;
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+        hash = Math.imul(hash, 31) + seed.charCodeAt(i);
+    }
+    return TILE_COLORS[Math.abs(hash) % TILE_COLORS.length]!;
+}
+
+function uniqueSorted(values: Iterable<string>): string[] {
+    return [...new Set(values)].sort(collator.compare);
+}
+
+function decadeLabel(decade: string): string {
+    return `${decade.slice(2)}s`;
+}
+
+/** Display label for a collection — must match tile text for view-transition morphs. */
+export function collectionLabel(kind: CollectionKind, key: string): string {
+    if (kind === "decade") return decadeLabel(key);
+    if (kind === "lang") return LANGUAGE_LABELS[key] ?? key;
+    if (kind === "genre") return titleCaseGenre(key);
+    return key;
+}
+
+function titleCaseGenre(genre: string): string {
+    const special: Record<string, string> = {
+        "r&b": "R&B",
+        "hip hop": "Hip hop",
+        "drum and bass": "Drum and bass",
+        "a cappella": "A cappella",
+    };
+    const lower = genre.toLowerCase();
+    if (special[lower]) return special[lower]!;
+    return lower.replace(/\b([a-z])/g, (ch) => ch.toUpperCase());
+}
+
+/** Curated home tiles that map onto real catalogue filters. */
+export function featuredTiles(songs: Song[]): BrowseTile[] {
+    const curated: { kind: CollectionKind; key: string }[] = [
+        { kind: "decade", key: "1980" },
+        { kind: "category", key: "Christmas" },
+        { kind: "decade", key: "1990" },
+        { kind: "genre", key: "rock" },
+        { kind: "lang", key: "swe" },
+        { kind: "genre", key: "pop" },
+        { kind: "decade", key: "1970" },
+        { kind: "from", key: "Grease" },
+        { kind: "from", key: "High School Musical" },
+        { kind: "category", key: "Birthday" },
+    ];
+
+    return curated
+        .filter((tile) => songsInCollection(songs, tile.kind, tile.key).length > 0)
+        .map((tile) => {
+            const names = collectionTransitionNames(tile.kind, tile.key);
+            return {
+                label: collectionLabel(tile.kind, tile.key),
+                href: collectionPath(tile.kind, tile.key),
+                tint: tintFor(tile.kind, tile.key),
+                kind: tile.kind,
+                key: tile.key,
+                ...names,
+            };
+        });
+}
+
+export function browseTiles(facet: FacetKey, songs: Song[]): {
+    mode: "tiles" | "list";
+    tiles: BrowseTile[];
+} {
+    if (facet === "featured") {
+        return { mode: "tiles", tiles: featuredTiles(songs) };
+    }
+
+    if (facet === "decade") {
+        const decades = uniqueSorted(
+            songs.filter((s) => s.year !== undefined).map((s) => String(Math.floor(s.year! / 10) * 10)),
+        ).filter((d) => Number(d) >= 1960 && Number(d) <= 2010);
+        return {
+            mode: "tiles",
+            tiles: decades.map((d) => ({
+                label: collectionLabel("decade", d),
+                href: collectionPath("decade", d),
+                tint: tintFor("decade", d),
+                kind: "decade" as const,
+                key: d,
+                large: true,
+                ...collectionTransitionNames("decade", d),
+            })),
+        };
+    }
+
+    if (facet === "genre") {
+        const counts = new Map<string, number>();
+        for (const song of songs) {
+            for (const genre of song.genres ?? []) {
+                counts.set(genre, (counts.get(genre) ?? 0) + 1);
+            }
+        }
+        const genres = [...counts.entries()]
+            .filter(([, n]) => n >= 20)
+            .sort((a, b) => b[1] - a[1] || collator.compare(a[0], b[0]))
+            .slice(0, 40)
+            .map(([g]) => g)
+            .sort(collator.compare);
+        return {
+            mode: "tiles",
+            tiles: genres.map((g) => ({
+                label: collectionLabel("genre", g),
+                href: collectionPath("genre", g),
+                tint: tintFor("genre", g),
+                kind: "genre" as const,
+                key: g,
+                ...collectionTransitionNames("genre", g),
+            })),
+        };
+    }
+
+    if (facet === "occasion") {
+        const cats = uniqueSorted(songs.map((s) => s.category).filter((c): c is string => Boolean(c)));
+        return {
+            mode: "tiles",
+            tiles: cats.map((c) => ({
+                label: collectionLabel("category", c),
+                href: collectionPath("category", c),
+                tint: tintFor("category", c),
+                kind: "category" as const,
+                key: c,
+                ...collectionTransitionNames("category", c),
+            })),
+        };
+    }
+
+    if (facet === "film") {
+        const films = uniqueSorted(songs.map((s) => s.from).filter((f): f is string => Boolean(f)));
+        return {
+            mode: "list",
+            tiles: films.map((f) => ({
+                label: collectionLabel("from", f),
+                href: collectionPath("from", f),
+                tint: tintFor("from", f),
+                kind: "from" as const,
+                key: f,
+                ...collectionTransitionNames("from", f),
+            })),
+        };
+    }
+
+    const langs = uniqueSorted(songs.map((s) => s.language).filter((l): l is string => Boolean(l))).filter(
+        (l) => LANGUAGE_LABELS[l] !== undefined,
+    );
+    return {
+        mode: "list",
+        tiles: langs.map((l) => ({
+            label: collectionLabel("lang", l),
+            href: collectionPath("lang", l),
+            tint: tintFor("lang", l),
+            kind: "lang" as const,
+            key: l,
+            ...collectionTransitionNames("lang", l),
+        })),
+    };
+}
+
+export function songsInCollection(songs: Song[], kind: CollectionKind, key: string): Song[] {
+    return songs.filter((song) => songMatchesCollection(song, kind, key));
+}
+
+export function songMatchesCollection(song: Song, kind: CollectionKind, key: string): boolean {
+    if (kind === "decade") {
+        return song.year !== undefined && String(Math.floor(song.year / 10) * 10) === key;
+    }
+    if (kind === "genre") {
+        return (song.genres ?? []).some((g) => g === key);
+    }
+    if (kind === "category") {
+        return song.category === key;
+    }
+    if (kind === "from") {
+        return song.from === key;
+    }
+    if (kind === "lang") {
+        return song.language === key;
+    }
+    return false;
+}
+
+/** Resolve a collection slug back to the canonical key + label from the live catalogue. */
+export function resolveCollection(
+    kind: CollectionKind,
+    slug: string,
+    songs: Song[] = getSongs(),
+): CollectionRef | undefined {
+    const candidates = collectionCandidates(kind, songs);
+    const match = candidates.find((c) => slugify(c.key) === slug);
+    if (match === undefined) return undefined;
+    return match;
+}
+
+function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRef[] {
+    if (kind === "decade") {
+        return uniqueSorted(
+            songs.filter((s) => s.year !== undefined).map((s) => String(Math.floor(s.year! / 10) * 10)),
+        ).map((d) => ({
+            kind,
+            key: d,
+            label: collectionLabel(kind, d),
+            tint: tintFor(kind, d),
+            ...collectionTransitionNames(kind, d),
+        }));
+    }
+    if (kind === "genre") {
+        const genres = uniqueSorted(songs.flatMap((s) => s.genres ?? []));
+        return genres.map((g) => ({
+            kind,
+            key: g,
+            label: collectionLabel(kind, g),
+            tint: tintFor(kind, g),
+            ...collectionTransitionNames(kind, g),
+        }));
+    }
+    if (kind === "category") {
+        return uniqueSorted(songs.map((s) => s.category).filter((c): c is string => Boolean(c))).map(
+            (c) => ({
+                kind,
+                key: c,
+                label: collectionLabel(kind, c),
+                tint: tintFor(kind, c),
+                ...collectionTransitionNames(kind, c),
+            }),
+        );
+    }
+    if (kind === "from") {
+        return uniqueSorted(songs.map((s) => s.from).filter((f): f is string => Boolean(f))).map((f) => ({
+            kind,
+            key: f,
+            label: collectionLabel(kind, f),
+            tint: tintFor(kind, f),
+            ...collectionTransitionNames(kind, f),
+        }));
+    }
+    return uniqueSorted(songs.map((s) => s.language).filter((l): l is string => Boolean(l))).map((l) => ({
+        kind,
+        key: l,
+        label: collectionLabel(kind, l),
+        tint: tintFor(kind, l),
+        ...collectionTransitionNames(kind, l),
+    }));
+}
+
+export function sortSongs(songs: Song[], sort: SortKey): Song[] {
+    const copy = [...songs];
+    if (sort === "az") {
+        return copy.sort((a, b) => collator.compare(a.song, b.song) || a.id - b.id);
+    }
+    if (sort === "artist") {
+        return copy.sort(
+            (a, b) =>
+                collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
+                collator.compare(a.song, b.song) ||
+                a.id - b.id,
+        );
+    }
+    return copy.sort(
+        (a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song) || a.id - b.id,
+    );
+}
+
+/**
+ * Same artist+title under different punch-in numbers → one row with `ids`.
+ * Representative metadata prefers the richest enriched copy.
+ */
+export interface SongVariant extends Song {
+    /** All punch-in numbers for this title, ascending. */
+    ids: number[];
+}
+
+function variantKey(song: Song): string {
+    return `${(song.artist || song.category || "").toLowerCase()}\0${song.song.toLowerCase()}`;
+}
+
+function enrichmentScore(song: Song): number {
+    let score = 0;
+    if (song.year !== undefined) score += 2;
+    if (song.from) score += 2;
+    if (song.artists && song.artists.length > 0) score += 2;
+    if (song.genres && song.genres.length > 0) score += 1;
+    if (song.language) score += 1;
+    if (song.category) score += 1;
+    return score;
+}
+
+export function mergeSongVariants(songs: Song[]): SongVariant[] {
+    const groups = new Map<string, Song[]>();
+    for (const song of songs) {
+        const key = variantKey(song);
+        const list = groups.get(key);
+        if (list) list.push(song);
+        else groups.set(key, [song]);
+    }
+
+    const merged: SongVariant[] = [];
+    for (const group of groups.values()) {
+        const ids = [...new Set(group.map((s) => s.id))].sort((a, b) => a - b);
+        const primary = group
+            .slice()
+            .sort((a, b) => enrichmentScore(b) - enrichmentScore(a) || a.id - b.id)[0]!;
+        merged.push({ ...primary, id: ids[0]!, ids });
+    }
+    return merged;
+}
+
+export function sortSongVariants(songs: SongVariant[], sort: SortKey): SongVariant[] {
+    const copy = [...songs];
+    if (sort === "az") {
+        return copy.sort((a, b) => collator.compare(a.song, b.song) || a.ids[0]! - b.ids[0]!);
+    }
+    if (sort === "artist") {
+        return copy.sort(
+            (a, b) =>
+                collator.compare(a.artist || a.category || "", b.artist || b.category || "") ||
+                collator.compare(a.song, b.song) ||
+                a.ids[0]! - b.ids[0]!,
+        );
+    }
+    return copy.sort(
+        (a, b) =>
+            (a.year ?? 9999) - (b.year ?? 9999) ||
+            collator.compare(a.song, b.song) ||
+            a.ids[0]! - b.ids[0]!,
+    );
+}
+
+export function parseSort(value: string | null | undefined): SortKey {
+    if (value === "artist" || value === "year" || value === "az") return value;
+    return "az";
+}
+
+export function songSubtitle(song: Song): string {
+    const bits: string[] = [];
+    if (song.artist) bits.push(song.artist);
+    else if (song.category) bits.push(song.category);
+    if (song.from) bits.push(song.from);
+    if (song.year) bits.push(String(song.year));
+    return bits.join(" · ");
+}
+
+export function songMeta(song: Song): string {
+    return [song.from, song.year ? String(song.year) : null].filter(Boolean).join(" · ");
+}
+
+/** Primary artist link target for a song row. */
+export function primaryArtistHref(song: Song): string | undefined {
+    const first = song.artists?.[0];
+    if (first !== undefined) return `/artists/${first.slug}`;
+    return undefined;
+}
+
+export interface ArtistGroup {
+    letter: string;
+    artists: Artist[];
+}
+
+export function groupArtists(artists: Artist[] = getArtists()): ArtistGroup[] {
+    const groups: ArtistGroup[] = [];
+    for (const artist of artists) {
+        const letter = letterForName(artist.name);
+        const last = groups[groups.length - 1];
+        if (last !== undefined && last.letter === letter) {
+            last.artists.push(artist);
+        } else {
+            groups.push({ letter, artists: [artist] });
+        }
+    }
+    return groups;
+}
+
+/** A–Z bucket from the display name’s first letter; non-letters go under #. */
+function letterForName(name: string): string {
+    const ch = name.trim().charAt(0).toUpperCase();
+    return ch >= "A" && ch <= "Z" ? ch : "#";
+}
+
+/** Compact search index row — kept tiny for the client search island. */
+export interface SearchSong {
+    id: number;
+    /** Punch-in numbers (one song can have several). */
+    ids: number[];
+    title: string;
+    artist: string;
+    from?: string;
+    category?: string;
+    year?: number;
+    genres?: string[];
+    language?: string;
+    /** Credited artists with slugs — each name can link separately. */
+    artists?: { name: string; slug: string }[];
+}
+
+export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
+    return mergeSongVariants(songs).map((song) => ({
+        id: song.id,
+        ids: song.ids,
+        title: song.song,
+        artist: song.artist,
+        ...(song.from === undefined ? {} : { from: song.from }),
+        ...(song.category === undefined ? {} : { category: song.category }),
+        ...(song.year === undefined ? {} : { year: song.year }),
+        ...(song.genres === undefined || song.genres.length === 0 ? {} : { genres: song.genres }),
+        ...(song.language === undefined ? {} : { language: song.language }),
+        ...(song.artists === undefined || song.artists.length === 0
+            ? {}
+            : {
+                  artists: song.artists.map((a) => ({ name: a.name, slug: a.slug })),
+              }),
+    }));
+}
+
+export function matchesQuery(song: SearchSong, query: string): boolean {
+    const q = query.trim().toLowerCase();
+    if (!q) return false;
+    if (/^\d+$/.test(q) && song.ids.some((id) => String(id).startsWith(q))) {
+        return true;
+    }
+    return [song.title, song.artist, song.from, song.category, ...(song.genres ?? [])]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+        .includes(q);
+}
+
+export function collectionKinds(): CollectionKind[] {
+    return ["decade", "genre", "category", "from", "lang"];
+}

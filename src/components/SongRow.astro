@@ -1,0 +1,99 @@
+---
+import type { CreditedArtist } from "../lib/songs";
+
+interface Props {
+    /** Punch-in numbers for this song (one or more). */
+    ids: number[];
+    title: string;
+    /** Fallback plain artist/category line when no credited artists. */
+    subtitle?: string;
+    artists?: CreditedArtist[];
+    from?: string;
+    year?: number;
+    category?: string;
+    /** On an artist page, don’t link that artist’s own name. */
+    currentArtistSlug?: string;
+    titleAttr?: string;
+    artistAttr?: string;
+    yearAttr?: string;
+}
+
+const {
+    ids,
+    title,
+    subtitle,
+    artists = [],
+    from,
+    year,
+    category,
+    currentArtistSlug,
+    titleAttr,
+    artistAttr,
+    yearAttr,
+} = Astro.props;
+
+const metaBits = [from, year !== undefined ? String(year) : null].filter(Boolean);
+const primaryId = ids[0] ?? 0;
+const idsAttr = ids.join(",");
+const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
+---
+
+<div
+    class="song-row flex items-start gap-2.5 border-b border-line py-3"
+    data-title={titleAttr ?? title}
+    data-artist={artistAttr ?? ""}
+    data-year={yearAttr ?? ""}
+    data-id={String(primaryId)}
+>
+    <span
+        class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] tabular-nums leading-none text-gold"
+        aria-label={numbersLabel}
+    >
+        {ids.map((id) => <span>{id}</span>)}
+    </span>
+    <div class="flex min-h-11 flex-1 flex-col justify-center">
+        <div class="text-[15.5px] leading-snug text-cream">{title}</div>
+        <div class="mt-0.5 text-[13px] text-muted">
+            {
+                artists.length > 0 ? (
+                    <>
+                        {artists.map((artist, index) => (
+                            <>
+                                {index > 0 && <span>, </span>}
+                                {artist.slug === currentArtistSlug ? (
+                                    <span>{artist.name}</span>
+                                ) : (
+                                    <a
+                                        href={`/artists/${artist.slug}`}
+                                        class="text-muted no-underline hover:text-cream-soft"
+                                    >
+                                        {artist.name}
+                                    </a>
+                                )}
+                            </>
+                        ))}
+                        {metaBits.length > 0 && <span> · {metaBits.join(" · ")}</span>}
+                    </>
+                ) : (
+                    <>
+                        {subtitle && <span>{subtitle}</span>}
+                        {subtitle && metaBits.length > 0 && <span> · </span>}
+                        {!subtitle && category && <span>{category}</span>}
+                        {!subtitle && category && metaBits.length > 0 && <span> · </span>}
+                        {metaBits.length > 0 && <span>{metaBits.join(" · ")}</span>}
+                    </>
+                )
+            }
+        </div>
+    </div>
+    <button
+        type="button"
+        data-fav-toggle={idsAttr}
+        class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]"
+        style="border:0;color:#3B3733"
+        aria-label="Add to favorites"
+        aria-pressed="false"
+    >
+        ♥
+    </button>
+</div>

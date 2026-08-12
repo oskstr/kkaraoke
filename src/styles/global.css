@@ -1,1 +1,110 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "DM Mono", ui-monospace, monospace;
+    --color-ink: #0a0a09;
+    --color-surface: #100f0e;
+    --color-panel: #1a1917;
+    --color-line: #1c1b19;
+    --color-line-strong: #2a2724;
+    --color-cream: #f2ede4;
+    --color-cream-soft: #e4ddd1;
+    --color-muted: #8b8278;
+    --color-faint: #6a6259;
+    --color-dim: #4e4842;
+    --color-heart: #3b3733;
+    --color-gold: #e9b44c;
+    --color-gold-soft: #f2c976;
+}
+
+html {
+    background: var(--color-ink);
+    color: var(--color-cream);
+}
+
+body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background:
+        radial-gradient(120% 80% at 50% -10%, rgba(233, 180, 76, 0.08), transparent 55%),
+        radial-gradient(90% 60% at 100% 100%, rgba(63, 90, 107, 0.12), transparent 50%),
+        var(--color-ink);
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.link-accent,
+p a,
+.prose a {
+    color: var(--color-gold);
+}
+
+a.link-accent:hover,
+p a:hover,
+.prose a:hover {
+    color: var(--color-gold-soft);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+input {
+    font-family: inherit;
+    /* iOS Safari zooms any focused field under 16px */
+    font-size: 16px;
+}
+
+.hd {
+    scrollbar-width: none;
+}
+
+.hd::-webkit-scrollbar {
+    display: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 200ms;
+}
+
+::view-transition-group(*) {
+    animation-duration: 420ms;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Color chrome: fill the morphing box. */
+::view-transition-old(.coll-chrome),
+::view-transition-new(.coll-chrome) {
+    object-fit: cover;
+    overflow: clip;
+    height: 100%;
+    width: 100%;
+}
+
+/* Titles: don't stretch glyph bitmaps during the size tween. */
+::view-transition-old(.coll-title),
+::view-transition-new(.coll-title) {
+    object-fit: none;
+    overflow: visible;
+    height: auto;
+    width: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}
