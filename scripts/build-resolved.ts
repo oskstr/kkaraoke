@@ -584,6 +584,8 @@ interface OverrideRecord {
     from?: string;
     category?: string;
     language?: string;
+    year?: number;
+    genres?: string[];
     why?: string;
 }
 
