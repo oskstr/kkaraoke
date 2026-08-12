@@ -36,7 +36,7 @@ const inputId = "catalogue-search-input";
     <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-3">
         <h1 class="sr-only">Search</h1>
         <div class="flex items-center gap-2.5">
-            <form action="/search" method="get" role="search" class="flex-1">
+            <search class="flex-1">
                 <label
                     class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3.5"
                     for={inputId}
@@ -55,7 +55,7 @@ const inputId = "catalogue-search-input";
                     >
                     <SearchInput id={inputId} autofocus />
                 </label>
-            </form>
+            </search>
             <a
                 href="/"
                 data-smart-back

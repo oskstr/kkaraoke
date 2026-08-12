@@ -122,9 +122,10 @@ input {
     outline-offset: 2px;
 }
 
-label:has([data-search-input]:focus-visible) {
-    outline: 2px solid var(--color-gold);
-    outline-offset: 2px;
+/* Caret is the indicator. A ring here is always-on chrome because /search autofocuses. */
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
 }
 
 #main:focus {

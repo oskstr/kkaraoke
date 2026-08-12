@@ -28,7 +28,7 @@ const BrandTag = facet === "featured" ? "h1" : "p";
         >
         <FavoritesNav />
     </div>
-    <form action="/search" method="get" role="search" data-search-launch class="mt-3.5">
+    <search data-search-launch class="mt-3.5">
         <label
             class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left"
             for={inputId}
@@ -47,6 +47,6 @@ const BrandTag = facet === "featured" ? "h1" : "p";
             >
             <SearchInput id={inputId} />
         </label>
-    </form>
+    </search>
     <FacetTabs active={facet} />
 </header>

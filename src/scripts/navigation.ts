@@ -188,10 +188,10 @@ function expandWindowedListForBack(): void {
     }
 }
 
-function onSearchSubmit(event: Event): void {
+function onSearchCommit(event: Event): void {
     const target = event.target;
-    if (!(target instanceof HTMLFormElement)) return;
-    if (target.getAttribute("role") !== "search") return;
+    if (!(target instanceof HTMLInputElement) || !target.hasAttribute("data-search-input")) return;
+    if (event instanceof KeyboardEvent && event.key !== "Enter") return;
     event.preventDefault();
     if (location.pathname.startsWith("/search") || openingSearch) return;
     openingSearch = true;
@@ -262,7 +262,8 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
-    document.addEventListener("submit", onSearchSubmit);
+    document.addEventListener("keydown", onSearchCommit);
+    document.addEventListener("search", onSearchCommit);
     // focusin: keyboard / label activation. pointerdown: start the fetch as
     // soon as the finger lands, while the input is focused in the same gesture.
     document.addEventListener("pointerdown", openSearchFromBrowse, true);
