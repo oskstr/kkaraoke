@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
+
+export function getStaticPaths() {
+    return getArtists().map((artist) => ({
+        params: { mbid: artist.mbid },
+        props: {
+            artist,
+            songs: getSongsByArtist(artist.mbid),
+        },
+    }));
+}
+
+interface Props {
+    artist: NonNullable<ReturnType<typeof getArtist>>;
+    songs: ReturnType<typeof getSongsByArtist>;
+}
+
+const { artist, songs } = Astro.props;
+---
+
+<Layout title={`${artist.name} – KKaraoke`}>
+    <main class="m-auto p-3 sm:p-6">
+        <p class="mb-4">
+            <a href="/" class="text-gray-600 underline-offset-2 hover:underline">← Alla låtar</a>
+        </p>
+        <h1>{artist.name}</h1>
+        {
+            artist.genres !== undefined && artist.genres.length > 0 && (
+                <p class="mt-2 text-gray-500">{artist.genres.join(", ")}</p>
+            )
+        }
+        <p class="mt-2 text-sm text-gray-500">
+            {songs.length} {songs.length === 1 ? "låt" : "låtar"}
+        </p>
+
+        <div class="mt-6 w-full overflow-x-auto">
+            <table class="mx-auto w-full max-w-3xl">
+                <thead class="border-b border-gray-200">
+                    <tr>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Titel</th>
+                        <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">Med</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        songs.map((song) => {
+                            const others = (song.artists ?? []).filter((a) => a.mbid !== artist.mbid);
+                            return (
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">
+                                        {song.id}
+                                    </td>
+                                    <td class="px-3 py-2 sm:px-6 sm:py-4">
+                                        {song.song}
+                                        {song.from !== undefined && (
+                                            <span class="block text-sm text-gray-500">{song.from}</span>
+                                        )}
+                                        {song.category !== undefined && (
+                                            <span class="block text-sm text-gray-500">{song.category}</span>
+                                        )}
+                                    </td>
+                                    <td class="hidden px-3 py-2 text-sm text-gray-500 sm:table-cell sm:px-6 sm:py-4">
+                                        {others.map((other, index) => (
+                                            <>
+                                                {index > 0 && ", "}
+                                                <a
+                                                    href={`/artists/${other.mbid}`}
+                                                    class="text-gray-700 underline-offset-2 hover:underline"
+                                                >
+                                                    {other.name}
+                                                </a>
+                                            </>
+                                        ))}
+                                    </td>
+                                </tr>
+                            );
+                        })
+                    }
+                </tbody>
+            </table>
+        </div>
+    </main>
+</Layout>
+<style>
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0;
+    }
+</style>
