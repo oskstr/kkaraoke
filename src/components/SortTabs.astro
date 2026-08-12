@@ -1,12 +1,8 @@
 ---
-interface Props {
-    tint?: string;
-}
 
-const { tint } = Astro.props;
 ---
 
-<div class="hd flex gap-1.5 overflow-x-auto px-[18px] pb-4" data-sort-tabs style={tint ? undefined : undefined}>
+<div class="hd flex gap-1.5 overflow-x-auto px-[18px] pb-4" data-sort-tabs role="group" aria-label="Sort songs">
     {
         [
             { key: "az", label: "A–Z" },
@@ -16,6 +12,7 @@ const { tint } = Astro.props;
             <button
                 type="button"
                 data-sort={tab.key}
+                aria-pressed={i === 0 ? "true" : "false"}
                 class:list={[
                     "shrink-0 rounded-full border border-white/18 px-3.5 py-1.5 text-[13px] font-semibold",
                     i === 0 ? "bg-white/92 text-[#17150F]" : "bg-black/22 text-white/85",
@@ -42,11 +39,7 @@ const { tint } = Astro.props;
             const idA = Number(a.dataset.id || 0);
             const idB = Number(b.dataset.id || 0);
             if (sort === "artist") {
-                return (
-                    collator.compare(artistA, artistB) ||
-                    collator.compare(titleA, titleB) ||
-                    idA - idB
-                );
+                return collator.compare(artistA, artistB) || collator.compare(titleA, titleB) || idA - idB;
             }
             if (sort === "year") {
                 return yearA - yearB || collator.compare(titleA, titleB) || idA - idB;
@@ -59,6 +52,7 @@ const { tint } = Astro.props;
     function paintTabs(root: ParentNode, sort: string) {
         root.querySelectorAll<HTMLElement>("[data-sort]").forEach((btn) => {
             const on = btn.dataset.sort === sort;
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
             btn.classList.toggle("bg-white/92", on);
             btn.classList.toggle("text-[#17150F]", on);
             btn.classList.toggle("bg-black/22", !on);

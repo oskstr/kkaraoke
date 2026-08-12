@@ -26,7 +26,7 @@ const { artist, songs } = Astro.props;
 <Layout title={`${artist.name} · kkaraoke`}>
     <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-[18px]">
         <BackLink href="/artists" label="← BACK" />
-        <h1 class="mt-3 text-[34px] font-bold tracking-[-0.03em] text-cream text-pretty">
+        <h1 class="mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream">
             {artist.name}
         </h1>
         {
@@ -44,7 +44,7 @@ const { artist, songs } = Astro.props;
             )
         }
     </header>
-    <main class="px-[18px] pt-1.5 pb-6">
+    <main id="main" tabindex="-1" class="px-[18px] pt-1.5 pb-6">
         <SongList songs={songs} currentArtistSlug={artist.slug} />
     </main>
 </Layout>

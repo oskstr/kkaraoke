@@ -16,18 +16,15 @@ const { tiles, mode } = Astro.props;
                 <a
                     href={tile.href}
                     class="collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline"
-                    style={`background:${tile.tint}; view-transition-class: coll-chrome`}
-                    transition:name={tile.transitionName}
-                    transition:animate="initial"
+                    style={`background:${tile.tint}`}
+                    data-vt-chrome={tile.transitionName}
                 >
                     <span
                         class:list={[
                             "collection-tile-label text-left font-bold tracking-tight text-[#F7F2E9]",
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
-                        style="view-transition-class: coll-title"
-                        transition:name={tile.titleTransitionName}
-                        transition:animate="initial"
+                        data-vt-title={tile.titleTransitionName}
                     >
                         {tile.label}
                     </span>
@@ -40,18 +37,16 @@ const { tiles, mode } = Astro.props;
                 <a
                     href={tile.href}
                     class="flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left no-underline"
-                    transition:name={tile.transitionName}
-                    transition:animate="initial"
                 >
                     <span
-                        class="flex-1 text-base text-cream"
-                        style="view-transition-class: coll-title"
-                        transition:name={tile.titleTransitionName}
-                        transition:animate="initial"
+                        class="collection-tile-label flex-1 text-base text-cream"
+                        data-vt-title={tile.titleTransitionName}
                     >
                         {tile.label}
                     </span>
-                    <span class="text-[15px] text-dim">→</span>
+                    <span class="text-[15px] text-dim" aria-hidden="true">
+                        →
+                    </span>
                 </a>
             ))}
         </div>

@@ -19,11 +19,7 @@ type MoreSong = {
 };
 
 function escapeHtml(value: string): string {
-    return value
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;");
+    return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 }
 
 function escapeAttr(value: string): string {
@@ -38,7 +34,7 @@ function rowHtml(song: MoreSong): string {
         subtitle = song.artists
             .map(
                 (a, i) =>
-                    `${i > 0 ? ", " : ""}<a href="/artists/${escapeAttr(a.slug)}" class="text-muted no-underline hover:text-cream-soft">${escapeHtml(a.name)}</a>`,
+                    `${i > 0 ? ", " : ""}<a href="/artists/${escapeAttr(a.slug)}" class="song-artist-link">${escapeHtml(a.name)}</a>`,
             )
             .join("");
         if (meta.length > 0) subtitle += ` · ${escapeHtml(meta.join(" · "))}`;
@@ -49,14 +45,14 @@ function rowHtml(song: MoreSong): string {
     const ids = song.ids.length > 0 ? song.ids : [song.id];
     const idsAttr = ids.join(",");
     const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
-    const numbers = ids.map((id) => `<span>${id}</span>`).join("");
+    const numbers = ids.map((id) => `<span aria-hidden="true">${id}</span>`).join("");
     return `<div class="song-row flex items-start gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}" data-id="${ids[0]}">
         <span class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] tabular-nums leading-none text-gold" aria-label="${escapeAttr(numbersLabel)}">${numbers}</span>
         <div class="flex min-h-11 flex-1 flex-col justify-center">
           <div class="text-[15.5px] leading-snug text-cream">${title}</div>
           <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>
         </div>
-        <button type="button" data-fav-toggle="${idsAttr}" class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]" style="border:0;color:#3B3733" aria-label="Add to favorites" aria-pressed="false">♥</button>
+        <button type="button" data-fav-toggle="${idsAttr}" class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]" style="border:0" aria-label="Add to favorites" aria-pressed="false"><span aria-hidden="true">♥</span></button>
       </div>`;
 }
 
@@ -165,10 +161,15 @@ function bindInfiniteScroll(): void {
     observer.observe(sentinel);
 }
 
+function onLoadMoreClick(event: Event): void {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (!target.closest("[data-load-more]")) return;
+    loadMoreFn?.();
+}
+
 function onEnsureScrollHeight(event: Event): void {
-    const detail = (
-        event as CustomEvent<{ minHeight: number; root: Element; untilId?: string }>
-    ).detail;
+    const detail = (event as CustomEvent<{ minHeight: number; root: Element; untilId?: string }>).detail;
     if (!detail) return;
 
     if (!loadMoreFn || listEl !== document.querySelector("[data-song-list]")) {
@@ -202,5 +203,6 @@ if (!window.__kkaraokeSongWindowInit) {
     document.addEventListener("astro:after-swap", bindInfiniteScroll);
     document.addEventListener("astro:page-load", bindInfiniteScroll);
     document.addEventListener("kkaraoke:ensure-scroll-height", onEnsureScrollHeight);
+    document.addEventListener("click", onLoadMoreClick);
     bindInfiniteScroll();
 }

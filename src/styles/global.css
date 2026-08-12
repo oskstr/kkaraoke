@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "DM Mono", ui-monospace, monospace;
     --color-ink: #0a0a09;
     --color-surface: #100f0e;
     --color-panel: #1a1917;
@@ -13,12 +11,18 @@
     --color-muted: #8b8278;
     --color-faint: #6a6259;
     --color-dim: #4e4842;
-    --color-heart: #3b3733;
+    --color-heart: #8b8278;
     --color-gold: #e9b44c;
     --color-gold-soft: #f2c976;
 }
 
+@theme inline {
+    --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+}
+
 html {
+    color-scheme: dark;
     background: var(--color-ink);
     color: var(--color-cream);
 }
@@ -29,13 +33,19 @@ body {
     font-family: var(--font-sans);
     background:
         radial-gradient(120% 80% at 50% -10%, rgba(233, 180, 76, 0.08), transparent 55%),
-        radial-gradient(90% 60% at 100% 100%, rgba(63, 90, 107, 0.12), transparent 50%),
-        var(--color-ink);
+        radial-gradient(90% 60% at 100% 100%, rgba(63, 90, 107, 0.12), transparent 50%), var(--color-ink);
     -webkit-tap-highlight-color: transparent;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.app-shell {
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
 }
 
 a {
@@ -52,6 +62,18 @@ a.link-accent:hover,
 p a:hover,
 .prose a:hover {
     color: var(--color-gold-soft);
+}
+
+.song-artist-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-dim);
+    text-underline-offset: 0.18em;
+}
+
+.song-artist-link:hover {
+    color: var(--color-cream-soft);
+    text-decoration-color: var(--color-muted);
 }
 
 button {
@@ -73,12 +95,73 @@ input {
     display: none;
 }
 
+.skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    z-index: 100;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0.5rem;
+    background: var(--color-gold);
+    color: var(--color-ink);
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+}
+
+label:has([data-search-input]:focus-visible) {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+}
+
+#main:focus {
+    outline: none;
+}
+
+[data-fav-toggle],
+.fav-toggle {
+    color: var(--color-heart);
+}
+
+[data-fav-toggle][aria-pressed="true"],
+.fav-toggle[aria-pressed="true"] {
+    color: var(--color-gold);
+}
+
+.collection-tile,
+.collection-chrome {
+    view-transition-class: coll-chrome;
+}
+
+.collection-tile-label,
+.collection-title {
+    view-transition-class: coll-title;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 200ms;
+    animation-duration: 180ms;
 }
 
 ::view-transition-group(*) {
+    animation-duration: 180ms;
+}
+
+::view-transition-group(.coll-chrome),
+::view-transition-group(.coll-title) {
     animation-duration: 420ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -102,6 +185,10 @@ input {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     ::view-transition-group(*),
     ::view-transition-old(*),
     ::view-transition-new(*) {

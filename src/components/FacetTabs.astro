@@ -8,11 +8,12 @@ interface Props {
 const { active } = Astro.props;
 ---
 
-<div class="hd mt-3 flex gap-1.5 overflow-x-auto">
+<nav aria-label="Browse catalogue" class="hd mt-3 flex gap-1.5 overflow-x-auto">
     {
         FACETS.map((facet) => (
             <a
                 href={facet.href}
+                aria-current={facet.key === active ? "page" : undefined}
                 class:list={[
                     "shrink-0 rounded-full border px-3.5 py-2 text-[13.5px] font-semibold no-underline",
                     facet.key === active
@@ -24,4 +25,4 @@ const { active } = Astro.props;
             </a>
         ))
     }
-</div>
+</nav>

@@ -7,15 +7,18 @@ interface Props {
 }
 
 const { href = "/", label = "← BACK", light = false } = Astro.props;
+const stripped = label.replace(/^[←→]\s*/, "").trim();
+const accessibleLabel = /^back$/i.test(stripped) ? "Back" : /^browse$/i.test(stripped) ? "Browse" : stripped;
 ---
 
 <a
     href={href}
     data-smart-back
+    aria-label={accessibleLabel}
     class:list={[
         "inline-block font-mono text-[11px] tracking-[0.12em] no-underline",
         light ? "text-white/70 hover:text-white" : "text-muted hover:text-cream-soft",
     ]}
 >
-    {label}
+    <span aria-hidden="true">{label}</span>
 </a>

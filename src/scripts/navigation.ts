@@ -188,6 +188,69 @@ function expandWindowedListForBack(): void {
     }
 }
 
+function onSearchSubmit(event: Event): void {
+    const target = event.target;
+    if (!(target instanceof HTMLFormElement)) return;
+    if (target.getAttribute("role") !== "search") return;
+    event.preventDefault();
+    if (location.pathname.startsWith("/search") || openingSearch) return;
+    openingSearch = true;
+    sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
+    void navigate("/search").finally(() => {
+        openingSearch = false;
+    });
+}
+
+function closestVtPair(event: Event): { chrome: HTMLElement | null; title: HTMLElement | null } {
+    const target = event.target;
+    if (!(target instanceof Element)) return { chrome: null, title: null };
+    const chrome = target.closest<HTMLElement>("[data-vt-chrome]");
+    const title = target.closest<HTMLElement>("[data-vt-title]") ?? chrome?.querySelector("[data-vt-title]") ?? null;
+    return { chrome, title };
+}
+
+/** Only the activated tile participates in the shared-element morph. */
+function onCollectionTileActivate(event: Event): void {
+    if (event instanceof MouseEvent && event.button !== 0) return;
+    const { chrome, title } = closestVtPair(event);
+    if (!chrome && !title) return;
+
+    document.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
+        if (el !== chrome && el !== title) {
+            el.style.viewTransitionName = "none";
+        }
+    });
+    const chromeName = chrome?.dataset.vtChrome;
+    if (chrome && chromeName) chrome.style.viewTransitionName = chromeName;
+    const titleName = title?.dataset.vtTitle;
+    if (title && titleName) title.style.viewTransitionName = titleName;
+}
+
+type SwapEvent = Event & { newDocument?: Document };
+
+/** On back, name the matching tile in the incoming grid so the header can morph into it. */
+function prepareIncomingTileMorph(event: Event): void {
+    const newDoc = (event as SwapEvent).newDocument;
+    if (!newDoc) return;
+    const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
+    const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
+    if (chromeName) {
+        const incoming = newDoc.querySelector<HTMLElement>(`[data-vt-chrome="${CSS.escape(chromeName)}"]`);
+        if (incoming) incoming.style.viewTransitionName = chromeName;
+    }
+    if (titleName) {
+        const incoming = newDoc.querySelector<HTMLElement>(`[data-vt-title="${CSS.escape(titleName)}"]`);
+        if (incoming) incoming.style.viewTransitionName = titleName;
+    }
+}
+
+function clearBrowseViewTransitionNames(): void {
+    if (document.querySelector("[data-collection-chrome]")) return;
+    document.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
+        el.style.removeProperty("view-transition-name");
+    });
+}
+
 let lastNavDirection: "forward" | "back" | null = null;
 
 declare global {
@@ -199,11 +262,15 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
+    document.addEventListener("submit", onSearchSubmit);
     // focusin: keyboard / label activation. pointerdown: start the fetch as
     // soon as the finger lands, while the input is focused in the same gesture.
     document.addEventListener("pointerdown", openSearchFromBrowse, true);
     document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
+    document.addEventListener("pointerdown", onCollectionTileActivate, true);
+    document.addEventListener("click", onCollectionTileActivate, true);
+    document.addEventListener("astro:before-swap", prepareIncomingTileMorph);
 
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
@@ -229,6 +296,7 @@ if (!window.__kkaraokeNavInit) {
     });
 
     document.addEventListener("astro:page-load", () => {
+        clearBrowseViewTransitionNames();
         if (lastNavDirection === "back") {
             expandWindowedListForBack();
             requestAnimationFrame(expandWindowedListForBack);

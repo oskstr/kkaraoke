@@ -12,6 +12,7 @@ import {
     type CollectionKind,
 } from "../../../lib/catalogue";
 import { categoriesForSong } from "../../../lib/categories";
+import { jsonForScript } from "../../../lib/json-script";
 import { getSongs, slugify } from "../../../lib/songs";
 
 export function getStaticPaths() {
@@ -50,10 +51,7 @@ if (collection === undefined) {
     return Astro.redirect("/");
 }
 
-const rows = sortSongVariants(
-    mergeSongVariants(songsInCollection(songs, collection.kind, collection.key)),
-    "az",
-);
+const rows = sortSongVariants(mergeSongVariants(songsInCollection(songs, collection.kind, collection.key)), "az");
 const INITIAL = 80;
 const CHUNK = 80;
 const initialRows = rows.slice(0, INITIAL);
@@ -87,15 +85,18 @@ const backFallback: Record<CollectionKind, string> = {
     -->
     <div
         class="collection-chrome sticky top-0 z-20"
-        style={`background:${collection.tint};border-bottom:1px solid rgba(0,0,0,0.25);view-transition-class:coll-chrome`}
+        style={`background:${collection.tint};border-bottom:1px solid rgba(0,0,0,0.25)`}
+        data-collection-chrome
+        data-vt-chrome={collection.transitionName}
         transition:name={collection.transitionName}
         transition:animate="initial"
     >
         <header class="px-[18px] pt-[22px] pb-0">
             <BackLink href={backFallback[collection.kind]} label="← BACK" light />
             <h1
-                class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
-                style="view-transition-class: coll-title"
+                class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty text-[#FCFAF6]"
+                data-collection-title
+                data-vt-title={collection.titleTransitionName}
                 transition:name={collection.titleTransitionName}
                 transition:animate="initial"
             >
@@ -104,7 +105,7 @@ const backFallback: Record<CollectionKind, string> = {
         </header>
         <SortTabs />
     </div>
-    <main class="bg-surface px-[18px] pt-1.5 pb-6">
+    <main id="main" tabindex="-1" class="bg-surface px-[18px] pt-1.5 pb-6">
         <SongList songs={initialRows} sortable />
         {
             moreRows.length > 0 && (
@@ -114,8 +115,15 @@ const backFallback: Record<CollectionKind, string> = {
                         type="application/json"
                         data-more-songs
                         data-chunk={String(CHUNK)}
-                        set:html={JSON.stringify(moreRows)}
+                        set:html={jsonForScript(moreRows)}
                     />
+                    <button
+                        type="button"
+                        data-load-more
+                        class="mt-1 w-full rounded-xl border border-line-strong py-3 text-sm text-muted"
+                    >
+                        Load more songs
+                    </button>
                     <div data-infinite-sentinel class="h-8 w-full" aria-hidden="true" />
                 </div>
             )

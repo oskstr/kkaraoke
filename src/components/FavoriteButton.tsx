@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { isFavoriteAny, readFavorites, toggleFavoriteIds } from "../scripts/favorites";
 
@@ -60,8 +58,7 @@ export function useFavorites() {
         favorites,
         toggle,
         ready,
-        isFavorite: (ids: number | number[]) =>
-            isFavoriteAny(Array.isArray(ids) ? ids : [ids], favorites),
+        isFavorite: (ids: number | number[]) => isFavoriteAny(Array.isArray(ids) ? ids : [ids], favorites),
     };
 }
 
@@ -81,10 +78,10 @@ export default function FavoriteButton({ songId, songIds }: FavoriteButtonProps)
             aria-label={on ? "Remove from favorites" : "Add to favorites"}
             aria-pressed={on}
             onClick={() => toggle(ids)}
-            className="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]"
-            style={{ border: 0, color: on ? "#E9B44C" : "#3B3733" }}
+            className="fav-toggle min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]"
+            style={{ border: 0 }}
         >
-            ♥
+            <span aria-hidden="true">♥</span>
         </button>
     );
 }
