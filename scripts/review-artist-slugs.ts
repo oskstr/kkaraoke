@@ -19,33 +19,48 @@ async function main(): Promise<void> {
         },
     });
 
-    const curatedSlugs = new Map(
+    const curatedByMbid = new Map(
         Object.entries(
             (artistNamesFile.artists ?? {}) as Record<string, { name: string; slug?: string }>,
         )
             .filter(([, entry]) => entry.slug !== undefined && entry.slug.length > 0)
-            .map(([mbid, entry]) => [mbid, entry.slug!]),
+            .map(([mbid, entry]) => [mbid, slugify(entry.slug!)]),
     );
+    const mbidsForCuratedSlug = new Map<string, string[]>();
+    for (const [mbid, slug] of curatedByMbid) {
+        const group = mbidsForCuratedSlug.get(slug);
+        if (group === undefined) {
+            mbidsForCuratedSlug.set(slug, [mbid]);
+        } else {
+            group.push(mbid);
+        }
+    }
 
     const artists = getArtists().sort(
         (a, b) => a.name.localeCompare(b.name, "en") || a.slug.localeCompare(b.slug, "en"),
     );
     const rows = artists.map((artist) => {
         const auto = slugify(artist.name);
-        const curated = curatedSlugs.get(artist.mbid);
+        const merged = mbidsForCuratedSlug.get(artist.slug);
+        const curated = curatedByMbid.has(artist.mbid) || (merged !== undefined && merged.length > 1);
         const songs = getSongsByArtist(artist.slug).length;
         let note = "";
-        if (curated !== undefined) {
+        if (merged !== undefined && merged.length > 1) {
+            note = `merged ${merged.length} MusicBrainz ids onto \`${artist.slug}\``;
+        } else if (curated && artist.slug !== auto) {
             note = `curated (\`${auto}\` → \`${artist.slug}\`)`;
+        } else if (curated) {
+            note = "curated";
         } else if (artist.slug !== auto) {
             note = `disambiguated from \`${auto}\``;
         }
-        return { artist, songs, note };
+        return { artist, songs, note, curated, merged: merged !== undefined && merged.length > 1 };
     });
 
-    const curatedCount = rows.filter((row) => curatedSlugs.has(row.artist.mbid)).length;
+    const curatedCount = rows.filter((row) => row.curated && !row.merged).length;
+    const mergedCount = rows.filter((row) => row.merged).length;
     const disambiguatedCount = rows.filter(
-        (row) => !curatedSlugs.has(row.artist.mbid) && row.artist.slug !== slugify(row.artist.name),
+        (row) => !row.curated && row.artist.slug !== slugify(row.artist.name),
     ).length;
 
     const lines = [
@@ -55,8 +70,8 @@ async function main(): Promise<void> {
         "catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in",
         "`data/artist-names.json` instead.",
         "",
-        `${curatedCount} curated slug override(s), ${disambiguatedCount} collision disambiguation(s).`,
-        "Everyone else is `slugify(display name)`.",
+        `${curatedCount} curated slug override(s), ${mergedCount} merged page(s), ${disambiguatedCount} collision disambiguation(s).`,
+        "Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz entities onto one page.",
         "",
         "| name | slug | songs | note | mbid |",
         "| --- | --- | -: | --- | --- |",

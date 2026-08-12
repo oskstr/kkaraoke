@@ -1,11 +1,11 @@
 # Artist slug review
 
-1978 artists, written by `pnpm review:artist-slugs` from the composed
+1977 artists, written by `pnpm review:artist-slugs` from the composed
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
-1 curated slug override(s), 2 collision disambiguation(s).
-Everyone else is `slugify(display name)`.
+1 curated slug override(s), 1 merged page(s), 0 collision disambiguation(s).
+Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz entities onto one page.
 
 | name | slug | songs | note | mbid |
 | --- | --- | -: | --- | --- |
@@ -61,8 +61,7 @@ Everyone else is `slugify(display name)`.
 | Alexander Rybak | alexander-rybak | 1 |  | `1e69316c-14fa-42ba-88f2-06f6743632f7` |
 | Alexandra Stan | alexandra-stan | 1 |  | `70e6fee5-36b1-4cdb-b573-2132f9566dad` |
 | Ali Campbell | ali-campbell | 1 |  | `d2b59efd-0028-40aa-aaee-9ee2a519a0c0` |
-| Alice Cooper | alice-cooper-group | 5 | disambiguated from `alice-cooper` | `4d7928cd-7ed2-4282-8c29-c0c9f966f1bd` |
-| Alice Cooper | alice-cooper-person | 5 | disambiguated from `alice-cooper` | `ee58c59f-8e7f-4430-b8ca-236c4d3745ae` |
+| Alice Cooper | alice-cooper | 10 | merged 2 MusicBrainz ids onto `alice-cooper` | `ee58c59f-8e7f-4430-b8ca-236c4d3745ae` |
 | Alice in Chains | alice-in-chains | 6 |  | `4bd95eea-b9f6-4d70-a36c-cfea77431553` |
 | Alicia Bridges | alicia-bridges | 1 |  | `e18709d6-dcd1-4db2-9c4c-0d8d1d431ab6` |
 | Alicia Keys | alicia-keys | 24 |  | `8ef1df30-ae4f-4dbd-9351-1a32b208a01e` |

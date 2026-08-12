@@ -260,9 +260,10 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
 
 /**
  * Unique slugs for every artist that appears on a song. Curated `slug` entries in
- * artist-names.json win first. Otherwise prefer the bare name; when two catalogue
- * artists share a slug, fall back to type, then MusicBrainz disambiguation, then a
- * short id suffix — never leave two pages fighting over one URL.
+ * artist-names.json win first, and the same curated slug on two MBIDs is a deliberate
+ * merge (Alice Cooper band + solo → one page). Otherwise prefer the bare name; when two
+ * catalogue artists share a slug by accident, fall back to type, then MusicBrainz
+ * disambiguation, then a short id suffix.
  */
 function assignSlugs(mbids: Iterable<string>): Map<string, string> {
     const slugByMbid = new Map<string, string>();
@@ -278,10 +279,14 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
         slugByMbid.set(mbid, slug);
     };
 
+    // Curated slugs may be shared: that is how we merge MusicBrainz entities that karaoke
+    // browsers treat as one act. Auto-assigned slugs below stay unique.
     for (const mbid of mbids) {
         const curated = artistNameEntries.get(mbid)?.slug;
         if (curated !== undefined && curated.length > 0) {
-            claim(mbid, slugify(curated));
+            const slug = slugify(curated);
+            slugByMbid.set(mbid, slug);
+            used.add(slug);
         } else {
             remaining.push(mbid);
         }
@@ -340,7 +345,16 @@ for (const song of composedWithoutSlugs) {
     }
 }
 const slugByMbid = assignSlugs(catalogueMbids);
-const mbidBySlug = new Map([...slugByMbid].map(([mbid, slug]) => [slug, mbid]));
+/** One slug may cover several MusicBrainz ids when artist-names.json merges them. */
+const mbidsBySlug = new Map<string, string[]>();
+for (const [mbid, slug] of slugByMbid) {
+    const group = mbidsBySlug.get(slug);
+    if (group === undefined) {
+        mbidsBySlug.set(slug, [mbid]);
+    } else {
+        group.push(mbid);
+    }
+}
 
 const composed: readonly Song[] = composedWithoutSlugs
     .map((song): Song => {
@@ -392,32 +406,72 @@ export function getSongs(): Song[] {
 }
 
 export function getSongsByArtist(slug: string): Song[] {
-    const mbid = mbidBySlug.get(slug);
-    if (mbid === undefined) {
+    const mbids = mbidsBySlug.get(slug);
+    if (mbids === undefined || mbids.length === 0) {
         return [];
     }
-    return [...(songsByArtist.get(mbid) ?? [])];
+    const songs: Song[] = [];
+    const seen = new Set<number>();
+    for (const mbid of mbids) {
+        for (const song of songsByArtist.get(mbid) ?? []) {
+            if (seen.has(song.postId)) {
+                continue;
+            }
+            seen.add(song.postId);
+            songs.push(song);
+        }
+    }
+    return songs.sort((a, b) => collator.compare(a.song, b.song) || a.id - b.id);
 }
 
-function buildArtist(mbid: string): Artist | undefined {
-    if (!songsByArtist.has(mbid)) {
-        return undefined;
-    }
-    const slug = slugByMbid.get(mbid);
-    if (slug === undefined) {
-        return undefined;
-    }
-    const record = artistRecords.get(mbid);
-    const fromSong = songsByArtist.get(mbid)?.[0]?.artists?.find((a) => a.mbid === mbid)?.name;
-    const name = displayNameFor(mbid, fromSong);
-    if (name === undefined) {
-        return undefined;
-    }
-    const genres = record?.genres
-        ?.slice()
+function genresFor(mbid: string): string[] | undefined {
+    const genres = artistRecords
+        .get(mbid)
+        ?.genres?.slice()
         .sort((a, b) => b.count - a.count || collator.compare(a.name, b.name))
         .slice(0, 5)
         .map((g) => g.name);
+    return genres === undefined || genres.length === 0 ? undefined : genres;
+}
+
+/**
+ * Prefer a Person entity when several MBIDs share a slug, so Alice Cooper sorts as
+ * Cooper, Alice rather than under A for the band's sort name.
+ */
+function preferredMbid(mbids: readonly string[]): string {
+    const person = mbids.find((mbid) => artistRecords.get(mbid)?.type === "Person");
+    return person ?? mbids[0]!;
+}
+
+function buildArtist(slug: string): Artist | undefined {
+    const mbids = mbidsBySlug.get(slug);
+    if (mbids === undefined || mbids.length === 0) {
+        return undefined;
+    }
+    if (!mbids.some((mbid) => songsByArtist.has(mbid))) {
+        return undefined;
+    }
+    const mbid = preferredMbid(mbids);
+    const record = artistRecords.get(mbid);
+    const fromSong = songsByArtist.get(mbid)?.[0]?.artists?.find((a) => a.mbid === mbid)?.name
+        ?? songsByArtist.get(mbids[0]!)?.[0]?.artists?.find((a) => a.slug === slug)?.name;
+    const name = displayNameFor(mbid, fromSong) ?? displayNameFor(mbids[0]!, fromSong);
+    if (name === undefined) {
+        return undefined;
+    }
+    const genreCounts = new Map<string, number>();
+    for (const id of mbids) {
+        for (const genre of artistRecords.get(id)?.genres ?? []) {
+            genreCounts.set(genre.name, (genreCounts.get(genre.name) ?? 0) + genre.count);
+        }
+    }
+    const genres =
+        genreCounts.size === 0
+            ? genresFor(mbid)
+            : [...genreCounts]
+                  .sort((a, b) => b[1] - a[1] || collator.compare(a[0], b[0]))
+                  .slice(0, 5)
+                  .map(([genre]) => genre);
     return {
         mbid,
         slug,
@@ -429,12 +483,12 @@ function buildArtist(mbid: string): Artist | undefined {
 
 /**
  * Every artist that has at least one song in the catalogue, for `getStaticPaths`.
- * Name prefers catalogue display overrides, then MusicBrainz, then whatever a song credited.
+ * One row per slug, so curated merges (Alice Cooper) appear once.
  */
 export function getArtists(): Artist[] {
     const artists: Artist[] = [];
-    for (const mbid of songsByArtist.keys()) {
-        const artist = buildArtist(mbid);
+    for (const slug of mbidsBySlug.keys()) {
+        const artist = buildArtist(slug);
         if (artist !== undefined) {
             artists.push(artist);
         }
@@ -447,9 +501,5 @@ export function getArtists(): Artist[] {
 }
 
 export function getArtist(slug: string): Artist | undefined {
-    const mbid = mbidBySlug.get(slug);
-    if (mbid === undefined) {
-        return undefined;
-    }
-    return buildArtist(mbid);
+    return buildArtist(slug);
 }

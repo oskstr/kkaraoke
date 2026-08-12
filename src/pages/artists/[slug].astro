@@ -58,7 +58,7 @@ const { artist, songs } = Astro.props;
                                         ? song.artists.map((credited, index) => (
                                               <>
                                                   {index > 0 && ", "}
-                                                  {credited.mbid === artist.mbid ? (
+                                                  {credited.slug === artist.slug ? (
                                                       <span>{credited.name}</span>
                                                   ) : (
                                                       <a
