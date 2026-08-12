@@ -187,9 +187,15 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
     }
 
     if (facet === "decade") {
-        const decades = uniqueSorted(
-            songs.filter((s) => s.year !== undefined).map((s) => String(Math.floor(s.year! / 10) * 10)),
-        ).filter((d) => Number(d) >= 1960 && Number(d) <= 2010);
+        const counts = new Map<string, number>();
+        for (const song of songs) {
+            if (song.year === undefined) continue;
+            const decade = String(Math.floor(song.year / 10) * 10);
+            counts.set(decade, (counts.get(decade) ?? 0) + 1);
+        }
+        // Drop sparse early decades (e.g. a handful of 1940s) but keep 50s / 20s
+        // when the catalogue actually has a usable set.
+        const decades = uniqueSorted(counts.keys()).filter((d) => (counts.get(d) ?? 0) >= 20);
         return {
             mode: "tiles",
             tiles: decades.map((d) => ({
