@@ -10,12 +10,55 @@
             "sortAs": "Children's song"
         },
         {
+            "postId": 48037,
+            "year": 2006,
+            "why": "Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings."
+        },
+        {
+            "postId": 48102,
+            "year": 2002,
+            "why": "Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go)."
+        },
+        {
             "postId": 48108,
             "artist": "Ayumi Hamasaki",
             "title": "walking proud",
             "language": "jpn",
             "year": 2004,
             "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
+        },
+        {
+            "postId": 48136,
+            "title": "Hey, Mr. DJ (Keep Playin' This Song)",
+            "year": 1997,
+            "why": "Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11."
+        },
+        {
+            "postId": 48184,
+            "title": "No More Tears (Enough Is Enough)",
+            "year": 1979,
+            "why": "Donna Summer & Barbra Streisand. Year from Wikipedia (1979)."
+        },
+        {
+            "postId": 48245,
+            "title": "You're Going to Lose That Girl",
+            "year": 1965,
+            "why": "Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz."
+        },
+        {
+            "postId": 48486,
+            "year": 1976,
+            "why": "Bob Marley – Positive Vibration on Rastaman Vibration. Year from Wikipedia/Discogs (1976)."
+        },
+        {
+            "postId": 48521,
+            "year": 1964,
+            "why": "Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962."
+        },
+        {
+            "postId": 48592,
+            "year": 2002,
+            "why": "Brandsta City Släckers Melodifestivalen 2002 entry (sv.wikipedia Kom och ta mig); Discogs/MusicBrainz 2002."
         },
         {
             "postId": 48654,
@@ -26,11 +69,73 @@
             "title": "Face to Face"
         },
         {
+            "postId": 48716,
+            "artist": "BTS",
+            "title": "Blood Sweat & Tears",
+            "year": 2016,
+            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
+        },
+        {
+            "postId": 48718,
+            "title": "T.K.O. (Knock You Out)",
+            "year": 2003,
+            "why": "Bubbles; MusicBrainz/Discogs earliest dated releases 2003."
+        },
+        {
             "postId": 48782,
             "artist": "Carola",
             "title": "Det är bara vi",
             "year": 2010,
             "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
+        },
+        {
+            "postId": 48993,
+            "title": "Dirrty",
+            "year": 2002,
+            "why": "Venue/dump title Dirty; song is Dirrty (Christina Aguilera feat. Redman). Year from Wikipedia/Wikidata (2002 single from Stripped)."
+        },
+        {
+            "postId": 49348,
+            "year": 2002,
+            "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+        },
+        {
+            "postId": 49386,
+            "year": 1969,
+            "why": "Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969)."
+        },
+        {
+            "postId": 49420,
+            "year": 1995,
+            "why": "Listen With Your Heart from Pocahontas soundtrack (Wikipedia soundtrack release 1995)."
+        },
+        {
+            "postId": 49485,
+            "title": "MacArthur Park",
+            "year": 1978,
+            "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
+        },
+        {
+            "postId": 49781,
+            "title": "The Real Slim Shady",
+            "year": 2000,
+            "why": "Truncated dump title. Year from Wikipedia (2000 single from The Marshall Mathers LP)."
+        },
+        {
+            "postId": 49798,
+            "year": 2002,
+            "why": "E.M.M.A. – Vänner. Year from Discogs Swedish single (2002)."
+        },
+        {
+            "postId": 49944,
+            "title": "This Ain't a Scene, It's an Arms Race",
+            "year": 2007,
+            "why": "Truncated dump title. Year from Wikipedia (2007 single from Infinity on High)."
+        },
+        {
+            "postId": 50082,
+            "year": 1978,
+            "why": "Frank Marino & Mahogany Rush Live includes I'm a King Bee. Year from Discogs Live album (1978)."
         },
         {
             "postId": 50116,
@@ -41,6 +146,12 @@
             "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
         },
         {
+            "postId": 50122,
+            "title": "The One That You Need",
+            "year": 2002,
+            "why": "Friends Melodifestivalen 2002 entry; venue wrote The one that i need. Year from sv.wikipedia / Discogs (2002)."
+        },
+        {
             "postId": 50135,
             "category": "Birthday",
             "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
@@ -49,12 +160,66 @@
             "title": "Ja må du leva"
         },
         {
+            "postId": 50369,
+            "artist": "Ashley Tisdale, Lucas Grabeel",
+            "sortAs": "Tisdale, Ashley",
+            "title": "What I've Been Looking For",
+            "from": "High School Musical",
+            "year": 2006,
+            "artists": [
+                {
+                    "mbid": "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
+                    "name": "Ashley Tisdale"
+                },
+                {
+                    "mbid": "a4878ec4-ed11-4bdf-8f95-64ab2dc59b1b",
+                    "name": "Lucas Grabeel"
+                }
+            ],
+            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz)."
+        },
+        {
+            "postId": 50370,
+            "artist": "The High School Musical Cast",
+            "sortAs": "High School Musical Cast",
+            "title": "We're All in This Together",
+            "from": "High School Musical",
+            "artists": [
+                {
+                    "mbid": "869b594f-c4f5-4747-ad57-cc9463fef491",
+                    "name": "The High School Musical Cast"
+                }
+            ],
+            "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
+        },
+        {
             "postId": 50466,
             "category": "Irish traditional",
             "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
             "artist": "",
             "sortAs": "Irish traditional",
             "title": "The Wild Rover"
+        },
+        {
+            "postId": 50539,
+            "year": 1968,
+            "why": "James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single)."
+        },
+        {
+            "postId": 50597,
+            "year": 2002,
+            "why": "Javiera – No Hay Nada Más, Melodifestivalen 2002. Year from Discogs (2002)."
+        },
+        {
+            "postId": 50644,
+            "year": 1994,
+            "why": "Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994)."
+        },
+        {
+            "postId": 50802,
+            "title": "You Are Loved (Don't Give Up)",
+            "year": 2006,
+            "why": "Josh Groban; Wikipedia/MusicBrainz 2006 single from Awake."
         },
         {
             "postId": 50840,
@@ -198,11 +363,54 @@
             "title": "Jingle Bells"
         },
         {
+            "postId": 51001,
+            "year": 2002,
+            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha, Melodifestivalen 2002 (sv.wikipedia)."
+        },
+        {
+            "postId": 51022,
+            "year": 1963,
+            "why": "The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963)."
+        },
+        {
+            "postId": 51117,
+            "year": 2018,
+            "why": "Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018)."
+        },
+        {
+            "postId": 51120,
+            "year": 2018,
+            "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
+        },
+        {
+            "postId": 51628,
+            "title": "Missing You Now",
+            "year": 1992,
+            "why": "Catalogue Missing You is Bolton's Missing You Now. Year from Discogs single (1992)."
+        },
+        {
             "postId": 51678,
             "category": "Midsummer",
             "why": "Traditional / category material filed under 'Midsommarsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Midsummer"
+        },
+        {
+            "postId": 51829,
+            "title": "Rockin' in the Free World",
+            "year": 1989,
+            "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
+        },
+        {
+            "postId": 51882,
+            "year": 1990,
+            "why": "Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990)."
+        },
+        {
+            "postId": 51937,
+            "title": "It's Gettin' Better (Man!!)",
+            "year": 1997,
+            "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
         },
         {
             "postId": 52134,
@@ -213,44 +421,31 @@
             "title": "Happy Birthday to You"
         },
         {
-            "postId": 48716,
-            "artist": "BTS",
-            "title": "Blood Sweat & Tears",
-            "year": 2016,
-            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
+            "postId": 52395,
+            "title": "Hold On to the Nights",
+            "year": 1988,
+            "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
         },
         {
-            "postId": 50369,
-            "artist": "Ashley Tisdale, Lucas Grabeel",
-            "sortAs": "Tisdale, Ashley",
-            "title": "What I've Been Looking For",
-            "from": "High School Musical",
-            "year": 2006,
-            "artists": [
-                {
-                    "mbid": "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
-                    "name": "Ashley Tisdale"
-                },
-                {
-                    "mbid": "a4878ec4-ed11-4bdf-8f95-64ab2dc59b1b",
-                    "name": "Lucas Grabeel"
-                }
-            ],
-            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz)."
+            "postId": 52731,
+            "year": 1995,
+            "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
         },
         {
-            "postId": 50370,
-            "artist": "The High School Musical Cast",
-            "sortAs": "High School Musical Cast",
-            "title": "We're All in This Together",
-            "from": "High School Musical",
-            "artists": [
-                {
-                    "mbid": "869b594f-c4f5-4747-ad57-cc9463fef491",
-                    "name": "The High School Musical Cast"
-                }
-            ],
-            "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
+            "postId": 52905,
+            "title": "Hey Nineteen",
+            "year": 1980,
+            "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
+        },
+        {
+            "postId": 53388,
+            "year": 1971,
+            "why": "Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971)."
+        },
+        {
+            "postId": 53563,
+            "year": 1992,
+            "why": "Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990)."
         }
     ]
 }
