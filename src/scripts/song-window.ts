@@ -160,18 +160,13 @@ function onEnsureScrollHeight(event: Event): void {
 declare global {
     interface Window {
         __kkaraokeSongWindowInit?: boolean;
-        __kkaraokeSongWindowDebug?: () => {
-            hasLoader: boolean;
-            rows: number;
-            bound: string | undefined;
-        };
     }
 }
 
 if (!window.__kkaraokeSongWindowInit) {
     window.__kkaraokeSongWindowInit = true;
     document.addEventListener("astro:after-swap", () => {
-        // New DOM — clear bound flag handling via fresh nodes; force rebind.
+        // New DOM — force a fresh loader bound to the current list.
         loadMoreFn = null;
         listEl = null;
         observer?.disconnect();
@@ -182,9 +177,3 @@ if (!window.__kkaraokeSongWindowInit) {
     document.addEventListener("kkaraoke:ensure-scroll-height", onEnsureScrollHeight);
     bindInfiniteScroll();
 }
-
-window.__kkaraokeSongWindowDebug = () => ({
-    hasLoader: loadMoreFn !== null,
-    rows: document.querySelectorAll(".song-row").length,
-    bound: document.querySelector<HTMLElement>("[data-more-songs]")?.dataset.bound,
-});
