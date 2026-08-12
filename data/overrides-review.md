@@ -67,7 +67,7 @@ means omit a category label rather than invent a performer.
 | 1010 | Nick Borgen | We are all the winners | Nick Borgen | We are all the winners | Melodifestivalen | Nick Borgen – We Are All the Winners; Melodifestivalen 1993. Category Melodifestivalen. | 51857 |
 | 1065 | Födelsedagssång | Ja må du leva | *(empty)* | Ja må du leva | Birthday | Traditional / category material filed under 'Födelsedagssång'; no single performer to invent | 50135 |
 | 1073 | Björn Skifs | Michelangelo | Björn Skifs | Michelangelo | Melodifestivalen | Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen. | 48383 |
-| 1108 | Abba | Waterloo | Abba | Waterloo | Melodifestivalen, Eurovision | ABBA – Waterloo (German version); Melodifestivalen/Eurovision 1974. Categories Melodifestivalen + Eurovision. | 47775 |
+| 1108 | Abba | Waterloo | Abba | Waterloo | Melodifestivalen, Eurovision | ABBA – Waterloo. Venue filed plain Waterloo; matcher had picked the German-language MB recording. Force English ESC/Melodifestivalen cut (1974). Categories Melodifestivalen + Eurovision. | 47775 |
 | 1294 | Il Divo | O holy night | Il Divo | O holy night | Christmas | Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas. | 50425 |
 | 1302 | Bucks Fizz | Making your mind up | Bucks Fizz | Making your mind up | Eurovision | Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision. | 48720 |
 | 1319 | Mamas & The Papas | California dreaming | Mamas & The Papas | California Dreamin' |  | California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia). | 51441 |

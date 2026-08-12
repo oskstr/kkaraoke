@@ -12,7 +12,10 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "ABBA – Waterloo (German version); Melodifestivalen/Eurovision 1974. Categories Melodifestivalen + Eurovision."
+            "why": "ABBA – Waterloo. Venue filed plain Waterloo; matcher had picked the German-language MB recording. Force English ESC/Melodifestivalen cut (1974). Categories Melodifestivalen + Eurovision.",
+            "title": "Waterloo",
+            "year": 1974,
+            "language": "eng"
         },
         {
             "postId": 47841,
@@ -395,6 +398,13 @@
             "postId": 49386,
             "year": 1969,
             "why": "Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969)."
+        },
+        {
+            "postId": 49389,
+            "title": "You'll Never Get to Heaven (If You Break My Heart)",
+            "year": 1964,
+            "language": "eng",
+            "why": "Dionne Warwick – You'll Never Get to Heaven (If You Break My Heart). Venue filed the English title; matcher had picked the German-language MB recording. Force the English studio cut (1964)."
         },
         {
             "postId": 49420,

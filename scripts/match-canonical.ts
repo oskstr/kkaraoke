@@ -534,13 +534,26 @@ function isLiveRelease(release: string): boolean {
     );
 }
 
+/**
+ * True when the venue (or a proposal) already named a language version — then a
+ * `Waterloo (German version)`-shaped MusicBrainz title is what they asked for, not junk.
+ * Bare venue titles like `Waterloo` must not invent a language that way.
+ */
+function titleAsksForLanguageVersion(title: string | undefined): boolean {
+    if (title === undefined || title.length === 0) return false;
+    const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(title);
+    if (bracket?.[1] !== undefined && isLanguageVersionAnnotation(bracket[1])) return true;
+    return LANGUAGE_VERSION.test(title) && /\bversion\b/i.test(title);
+}
+
 /** Remix / acoustic / club / concert masters should not beat the plain studio cut. */
-function isVariantRecording(recording: string): boolean {
+function isVariantRecording(recording: string, allowLanguageVersion = false): boolean {
     const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
     if (bracket?.[1] !== undefined) {
         const inner = bracket[1].trim();
-        // Language versions are the song the venue filed (`Du hast (English version)`).
-        if (isLanguageVersionAnnotation(inner)) return false;
+        // Language versions are only the song when the venue filed one (`Du hast (English
+        // version)`). A bare `Waterloo` matching `Waterloo (German version)` is a variant.
+        if (isLanguageVersionAnnotation(inner)) return !allowLanguageVersion;
         // Master markers win over subtitle heuristics (`The Eliel mix` contains "The").
         if (isMasterAnnotation(inner)) return true;
         if (isTitleSubtitle(inner)) return false;
@@ -568,10 +581,10 @@ function isVariantRecording(recording: string): boolean {
  * cut even when the dump's raw score prefers the junk row (Lady Marmalade on Just Be Free
  * outscoring the Lady Marmalade single).
  */
-function matchQuality(row: Row): number {
+function matchQuality(row: Row, allowLanguageVersion = false): number {
     let quality = row.score;
     if (isLiveRelease(row.release)) quality += 50_000_000;
-    if (isVariantRecording(row.recording)) quality += 40_000_000;
+    if (isVariantRecording(row.recording, allowLanguageVersion)) quality += 40_000_000;
     // A release named for the recording is usually the single/album track we want.
     if (combinedLookup(row.release) === combinedLookup(withoutAnnotation(row.recording))) {
         quality -= 1_000_000;
@@ -768,9 +781,19 @@ async function main(): Promise<void> {
 
     const best = new Map<number, Match & { rank: number }>();
     const heads = affixIndex(wanted.keys(), "head");
+    const venueSongByPostId = new Map(catalogue.songs.map((song) => [song.postId, song.song]));
+
+    const allowsLanguageVersion = (postId: number): boolean => {
+        const proposal = proposals.get(postId);
+        return (
+            titleAsksForLanguageVersion(venueSongByPostId.get(postId)) ||
+            titleAsksForLanguageVersion(proposal?.title)
+        );
+    };
 
     const consider = (entry: Wanted, how: How, row: Row): void => {
         const { postId, rank } = entry;
+        const allowLanguageVersion = allowsLanguageVersion(postId);
         const existing = best.get(postId);
         if (existing !== undefined) {
             // A confirmed wrong-attribution proposal must not be stolen back by an exact hit
@@ -793,8 +816,8 @@ async function main(): Promise<void> {
             }
             const existingLive = isLiveRelease(existing.release);
             const newLive = isLiveRelease(row.release);
-            const existingVariant = isVariantRecording(existing.recording);
-            const newVariant = isVariantRecording(row.recording);
+            const existingVariant = isVariantRecording(existing.recording, allowLanguageVersion);
+            const newVariant = isVariantRecording(row.recording, allowLanguageVersion);
             // Never replace a plain studio cut with a live/remix just because the venue
             // string ranked better — Alicia Keys' Songs in A Minor title is shorter than
             // the live `…Anymore` the venue wrote, so the proposal hits studio at a worse
@@ -820,7 +843,7 @@ async function main(): Promise<void> {
             const qualityUpgrade =
                 !newLive &&
                 !newVariant &&
-                matchQuality(row) < matchQuality(existing) &&
+                matchQuality(row, allowLanguageVersion) < matchQuality(existing, allowLanguageVersion) &&
                 rank <= existing.rank;
             // Exact studio via annotation-strip (rank 1) must beat a loose mashup on the raw
             // venue title (rank 0). Rewrite-count rank alone preferred the junk row.
@@ -867,7 +890,7 @@ async function main(): Promise<void> {
                 if (rank === existing.rank) {
                     const order = HOWS.indexOf(how) - HOWS.indexOf(existing.how);
                     if (order > 0) return;
-                    if (order === 0 && !(matchQuality(row) < matchQuality(existing))) return;
+                    if (order === 0 && !(matchQuality(row, allowLanguageVersion) < matchQuality(existing, allowLanguageVersion))) return;
                 }
             }
         }
@@ -955,7 +978,10 @@ async function main(): Promise<void> {
         // Also re-open songs stuck on a live/remix master so a studio cut can upgrade them
         // (Destiny's Child – Soldier matched Live in Atlanta before Destiny Fulfilled).
         if (current !== undefined) {
-            if (!isLiveRelease(current.release) && !isVariantRecording(current.recording)) {
+            if (
+                !isLiveRelease(current.release) &&
+                !isVariantRecording(current.recording, allowsLanguageVersion(song.postId))
+            ) {
                 continue;
             }
         }

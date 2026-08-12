@@ -21440,14 +21440,14 @@
       "artistMbids": [
         "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
       ],
-      "recording": "Waterloo (German version)",
-      "recordingMbid": "19872953-6ae3-4650-a1bb-4c0d5b7134cc",
+      "recording": "Waterloo",
+      "recordingMbid": "bfdcfb41-167c-4f5b-b163-bde83bbf69ac",
       "release": "Waterloo",
       "score": 364591,
-      "how": "version",
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "Waterloo (German version)"
+      "title": "Waterloo"
     },
     {
       "postId": 47776,
@@ -50379,14 +50379,14 @@
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
-      "recording": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)",
-      "recordingMbid": "33373290-7c0a-4f3e-a6e7-3c9d9c4e4e81",
-      "release": "Odds & Ends: Scepter Records Rarities",
+      "recording": "You'll Never Get to Heaven (If You Break My Heart)",
+      "recordingMbid": "7c5c555f-a434-4dd4-8b54-b2221280dc0a",
+      "release": "Make Way for Dionne Warwick",
       "score": 4847806,
-      "how": "version",
+      "how": "exact",
       "rewrites": [],
       "trusted": true,
-      "title": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)"
+      "title": "You'll Never Get to Heaven (If You Break My Heart)"
     },
     {
       "postId": 49125,

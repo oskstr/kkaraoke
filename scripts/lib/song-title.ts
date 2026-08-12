@@ -219,7 +219,10 @@ export function publishedTitle(
     if (matchHow === "version") {
         const bracket = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(recording);
         const inner = bracket?.[1]?.trim();
-        if (inner !== undefined && !isLanguageVersionAnnotation(inner)) {
+        // Version matches strip the trailing bracket that made them a version hit —
+        // remix/live markers and invented language versions (`Waterloo` → `… (German
+        // version)`). Venue-filed language versions usually match as `exact` instead.
+        if (inner !== undefined) {
             const base = stripExcerptFromLabels(withoutAnnotation(recording));
             if (base.length > 0) {
                 const from = fromAnnotation(recording);

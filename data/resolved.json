@@ -23963,7 +23963,7 @@
       "postId": 47775,
       "artist": "ABBA",
       "sortAs": "ABBA",
-      "title": "Waterloo (German version)",
+      "title": "Waterloo",
       "artistMbids": [
         "d87e52c5-bb8d-4da8-b941-9f4928627dc8"
       ],
@@ -23973,14 +23973,15 @@
           "name": "ABBA"
         }
       ],
-      "recordingMbid": "19872953-6ae3-4650-a1bb-4c0d5b7134cc",
+      "recordingMbid": "bfdcfb41-167c-4f5b-b163-bde83bbf69ac",
       "genres": [
         "pop",
         "disco",
         "europop"
       ],
-      "year": 1992,
-      "how": "version"
+      "year": 1974,
+      "how": "exact",
+      "language": "eng"
     },
     {
       "postId": 47776,
@@ -56853,7 +56854,7 @@
     {
       "postId": 49389,
       "sortAs": "Warwick, Dionne",
-      "title": "You’ll Never Get to Heaven (if You Break My Heart) (German version; Ich warte jeden Tag)",
+      "title": "You'll Never Get to Heaven (If You Break My Heart)",
       "artistMbids": [
         "6784ee31-6d79-4a37-9e1f-01d6ef31940e"
       ],
@@ -56863,13 +56864,14 @@
           "name": "Dionne Warwick"
         }
       ],
-      "recordingMbid": "33373290-7c0a-4f3e-a6e7-3c9d9c4e4e81",
+      "recordingMbid": "7c5c555f-a434-4dd4-8b54-b2221280dc0a",
       "genres": [
         "pop",
         "soul"
       ],
-      "year": 2018,
-      "how": "version"
+      "year": 1964,
+      "how": "exact",
+      "language": "eng"
     },
     {
       "postId": 49125,
