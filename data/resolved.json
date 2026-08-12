@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T00:07:08.352Z",
+  "generatedAt": "2026-08-12T06:24:59.878Z",
   "note": "Written by `pnpm build:resolved`. Regenerable; hand edits belong in data/overrides.json.",
   "songs": [
     {
@@ -127880,15 +127880,6 @@
       "postId": 50369,
       "from": "High School Musical",
       "title": "What I've Been Looking For",
-      "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
-      ],
-      "artists": [
-        {
-          "mbid": "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49",
-          "name": "[Disney]"
-        }
-      ],
       "recordingMbid": "9865271d-3a80-4162-a518-967a68ffd5a4",
       "how": "artist-scoped"
     },
@@ -130184,15 +130175,6 @@
       "postId": 50370,
       "from": "High School Musical",
       "title": "We’re All in This Together",
-      "artistMbids": [
-        "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49"
-      ],
-      "artists": [
-        {
-          "mbid": "66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49",
-          "name": "[Disney]"
-        }
-      ],
       "recordingMbid": "8eb65771-0f8a-4068-b5c8-f822ba89a073",
       "year": 2005,
       "how": "exact"

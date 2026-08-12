@@ -103,6 +103,11 @@ interface Override {
     from?: string;
     category?: string;
     language?: string;
+    /**
+     * When an override names performers the dump never confirmed, these ids still let the
+     * song list link them. Absent when the override only corrects a display string.
+     */
+    artists?: { mbid: string; name: string }[];
     why?: string;
 }
 
@@ -171,12 +176,21 @@ export function slugify(name: string): string {
 
 /**
  * Named credits without slugs yet — slugs need the full set of catalogue artists so
- * collisions (two Alices, two Mikas) can be disambiguated.
+ * collisions (two Alices, two Mikas) can be disambiguated. An override may supply the
+ * list directly when the dump never confirmed the performers; an override that only
+ * sets `artist` (including empty) drops resolver ids so a hand-set name is not linked
+ * to whoever MusicBrainz pointed at.
  */
 function creditedArtists(
     correction: Correction | undefined,
     override: Override | undefined,
 ): { mbid: string; name: string }[] | undefined {
+    if (override?.artists !== undefined && override.artists.length > 0) {
+        return override.artists.map((artist) => ({
+            mbid: artist.mbid,
+            name: displayNameFor(artist.mbid, artist.name) ?? artist.name,
+        }));
+    }
     if (override !== undefined && "artist" in override) {
         return undefined;
     }
@@ -265,7 +279,7 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
 
     const byBase = new Map<string, string[]>();
     for (const mbid of remaining) {
-        const name = displayNameFor(mbid);
+        const name = displayNameFor(mbid) ?? creditedNames.get(mbid);
         if (name === undefined) {
             continue;
         }
@@ -306,9 +320,13 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
 }
 
 const catalogueMbids = new Set<string>();
+const creditedNames = new Map<string, string>();
 for (const song of composedWithoutSlugs) {
     for (const artist of song.artists ?? []) {
         catalogueMbids.add(artist.mbid);
+        if (!creditedNames.has(artist.mbid)) {
+            creditedNames.set(artist.mbid, artist.name);
+        }
     }
 }
 const slugByMbid = assignSlugs(catalogueMbids);

@@ -209,6 +209,44 @@
             "artist": "",
             "sortAs": "Birthday",
             "title": "Happy Birthday to You"
+        },
+        {
+            "postId": 48716,
+            "artist": "BTS",
+            "title": "Blood Sweat & Tears",
+            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
+        },
+        {
+            "postId": 50369,
+            "artist": "Ashley Tisdale, Lucas Grabeel",
+            "sortAs": "Tisdale, Ashley",
+            "title": "What I've Been Looking For",
+            "from": "High School Musical",
+            "artists": [
+                {
+                    "mbid": "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
+                    "name": "Ashley Tisdale"
+                },
+                {
+                    "mbid": "a4878ec4-ed11-4bdf-8f95-64ab2dc59b1b",
+                    "name": "Lucas Grabeel"
+                }
+            ],
+            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer."
+        },
+        {
+            "postId": 50370,
+            "artist": "The High School Musical Cast",
+            "sortAs": "High School Musical Cast",
+            "title": "We're All in This Together",
+            "from": "High School Musical",
+            "artists": [
+                {
+                    "mbid": "869b594f-c4f5-4747-ad57-cc9463fef491",
+                    "name": "The High School Musical Cast"
+                }
+            ],
+            "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         }
     ]
 }

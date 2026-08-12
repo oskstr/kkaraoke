@@ -1,6 +1,6 @@
 # Artist slug review
 
-1977 artists, written by `pnpm review:artist-slugs` from the composed
+1979 artists, written by `pnpm review:artist-slugs` from the composed
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
@@ -9,7 +9,6 @@ Everyone else is `slugify(display name)`.
 
 | name | slug | songs | note | mbid |
 | --- | --- | -: | --- | --- |
-| [Disney] | disney | 2 |  | `66ea0139-149f-4a0c-8fbf-5ea9ec4a6e49` |
 | *NSYNC | nsync | 9 |  | `603ba565-3967-4be1-931e-9cb945394e86` |
 | 10cc | 10cc | 6 |  | `f37c537b-3557-4031-bfd6-ab63ced32854` |
 | 112 | 112 | 1 |  | `9132d515-dc0e-4494-85ae-20f06eed14f9` |
@@ -140,6 +139,7 @@ Everyone else is `slugify(display name)`.
 | Åsa Jinder | åsa-jinder | 1 |  | `b6eaede3-3006-41d7-838f-5c2b0a17e41c` |
 | Ashanti | ashanti | 2 |  | `a47ed6d5-480e-428c-8ce9-d7a6a571e857` |
 | Asher Roth | asher-roth | 1 |  | `c7d35b71-961e-4713-b65d-35a98591204a` |
+| Ashley Tisdale | ashley-tisdale | 1 |  | `1fa14a96-c25c-4bb7-b94d-ff453519eab3` |
 | Asia | asia | 1 |  | `8f695099-c714-4ad0-8888-36eca37fee84` |
 | ATC | atc | 1 |  | `408b2a33-d229-46a5-a361-0667bc616e34` |
 | Atlantic Starr | atlantic-starr | 2 |  | `d793cf63-a10c-48fc-809c-9064d71328da` |
@@ -1085,6 +1085,7 @@ Everyone else is `slugify(display name)`.
 | Loverboy | loverboy | 2 |  | `c11ba128-03b1-404d-ae88-452524b7ecc3` |
 | Lovestoned | lovestoned | 1 |  | `be2f05db-a1ff-49a2-8dd5-ad5bdf8dad71` |
 | Luca | luca | 1 |  | `d519aa4b-1294-4705-a73b-9d71220acc1f` |
+| Lucas Grabeel | lucas-grabeel | 1 |  | `a4878ec4-ed11-4bdf-8f95-64ab2dc59b1b` |
 | Lucas Prata | lucas-prata | 1 |  | `ca402c85-8a30-4406-885b-a0234df0a4de` |
 | Luciano Pavarotti | luciano-pavarotti | 5 |  | `705076ef-a0c5-472f-bebd-3e72174fcaf4` |
 | Lucie Silvas | lucie-silvas | 1 |  | `59daa33b-98b4-49f6-aac2-af86621c7721` |
@@ -1742,6 +1743,7 @@ Everyone else is `slugify(display name)`.
 | The Fray | the-fray | 3 |  | `2ddd167f-5b8a-4372-b350-6ad50493bac0` |
 | The Georgia Mass Choir | the-georgia-mass-choir | 2 |  | `87420214-1f03-4f6e-9339-b608735babd8` |
 | The Hep Stars | the-hep-stars | 1 |  | `a9d4daed-c653-4778-a477-5548010f7ba9` |
+| The High School Musical Cast | the-high-school-musical-cast | 1 |  | `869b594f-c4f5-4747-ad57-cc9463fef491` |
 | The Hives | the-hives | 3 |  | `487bfd74-71bf-46dd-b89c-80b7a0f06f2f` |
 | The Hollies | the-hollies | 1 |  | `d4305549-6b4e-4a57-b24d-8af0743fe191` |
 | The Honeydrippers | the-honeydrippers | 1 |  | `10c058a2-41e6-4f64-8cdd-fa3c7f2be9c0` |

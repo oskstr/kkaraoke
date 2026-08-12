@@ -36,48 +36,53 @@ const { artist, songs } = Astro.props;
         </p>
 
         <div class="mt-6 w-full overflow-x-auto">
-            <table class="mx-auto w-full max-w-3xl">
+            <table class="mx-auto w-full max-w-4xl">
                 <thead class="border-b border-gray-200">
                     <tr>
                         <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Artist</th>
                         <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Title</th>
-                        <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">With</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        songs.map((song) => {
-                            const others = (song.artists ?? []).filter((a) => a.mbid !== artist.mbid);
-                            return (
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">
-                                        {song.id}
-                                    </td>
-                                    <td class="px-3 py-2 sm:px-6 sm:py-4">
-                                        {song.song}
-                                        {song.from !== undefined && (
-                                            <span class="block text-sm text-gray-500">{song.from}</span>
-                                        )}
-                                        {song.category !== undefined && (
-                                            <span class="block text-sm text-gray-500">{song.category}</span>
-                                        )}
-                                    </td>
-                                    <td class="hidden px-3 py-2 text-sm text-gray-500 sm:table-cell sm:px-6 sm:py-4">
-                                        {others.map((other, index) => (
-                                            <>
-                                                {index > 0 && ", "}
-                                                <a
-                                                    href={`/artists/${other.slug}`}
-                                                    class="text-gray-700 underline-offset-2 hover:underline"
-                                                >
-                                                    {other.name}
-                                                </a>
-                                            </>
-                                        ))}
-                                    </td>
-                                </tr>
-                            );
-                        })
+                        songs.map((song) => (
+                            <tr class="border-b border-gray-200">
+                                <td class="px-3 py-2 font-medium tabular-nums sm:px-6 sm:py-4">
+                                    {song.id}
+                                </td>
+                                <td class="px-3 py-2 sm:px-6 sm:py-4">
+                                    {/* Same linking rule as the main list: each credited
+                                        name, including collab partners on this page. */}
+                                    {song.artists !== undefined && song.artists.length > 0
+                                        ? song.artists.map((credited, index) => (
+                                              <>
+                                                  {index > 0 && ", "}
+                                                  {credited.mbid === artist.mbid ? (
+                                                      <span>{credited.name}</span>
+                                                  ) : (
+                                                      <a
+                                                          href={`/artists/${credited.slug}`}
+                                                          class="underline-offset-2 hover:underline"
+                                                      >
+                                                          {credited.name}
+                                                      </a>
+                                                  )}
+                                              </>
+                                          ))
+                                        : song.artist}
+                                </td>
+                                <td class="px-3 py-2 sm:px-6 sm:py-4">
+                                    {song.song}
+                                    {song.from !== undefined && (
+                                        <span class="block text-sm text-gray-500">{song.from}</span>
+                                    )}
+                                    {song.category !== undefined && (
+                                        <span class="block text-sm text-gray-500">{song.category}</span>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
                     }
                 </tbody>
             </table>
