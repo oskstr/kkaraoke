@@ -322,11 +322,64 @@ async function run(): Promise<void> {
     });
 
     if (values["review-only"] === true) {
-        const existing = await readJson<{ checks: Check[] }>(values.fill);
+        const existing = await readJson<{ checks: Check[]; summary?: unknown; note?: string }>(
+            values.fill,
+        );
         if (existing === undefined) {
             throw new Error(`No ${values.fill} to render.`);
         }
-        const neither = existing.checks.filter(
+        // Pull current published artist/title from resolved — otherwise the review still
+        // lists stale Emix/bootleg strings after a rematch.
+        const songsFile = JSON.parse(await readFile(values.songs, "utf8")) as { songs: SongRow[] };
+        const resolvedFile = await readJson<{ songs: ResolvedRow[] }>(values.resolved);
+        const resolvedByPost = new Map((resolvedFile?.songs ?? []).map((row) => [row.postId, row]));
+        const overridesFile = await readJson<{
+            overrides: { postId: number; artist?: string; title?: string }[];
+        }>(values.overrides);
+        const overrideByPost = new Map(
+            (overridesFile?.overrides ?? []).map((row) => [row.postId, row]),
+        );
+        const songByPost = new Map(songsFile.songs.map((row) => [row.postId, row]));
+
+        let retitled = 0;
+        let rescored = 0;
+        let invalidated = 0;
+        const checks: Check[] = existing.checks.map((check) => {
+            const song = songByPost.get(check.postId);
+            if (song === undefined) return check;
+            const resolved = resolvedByPost.get(check.postId);
+            const override = overrideByPost.get(check.postId);
+            const artist = displayArtist(song, resolved, override);
+            const title = displayTitle(song, resolved, override);
+            const changed = artist !== check.artist || title !== check.title;
+            if (!changed) return check;
+            retitled++;
+            const next: Check = { postId: check.postId, artist, title };
+            const rescore = (source: SourceCheck | undefined): SourceCheck | undefined => {
+                if (source === undefined) return undefined;
+                if (isRateLimited(source)) return source;
+                if (source.artist !== undefined || source.title !== undefined) {
+                    const artistOk =
+                        source.artist === undefined || namesAgree(source.artist, artist);
+                    const titleOk =
+                        source.title === undefined || titlesCorroborate(source.title, title);
+                    rescored++;
+                    return { ...source, ok: artistOk && titleOk };
+                }
+                // Prior "not found" was against the old title — drop so a full re-run asks again.
+                invalidated++;
+                return undefined;
+            };
+            const deezer = rescore(check.deezer);
+            const discogs = rescore(check.discogs);
+            if (deezer !== undefined) next.deezer = deezer;
+            if (discogs !== undefined) next.discogs = discogs;
+            return next;
+        });
+
+        const both = checks.filter((c) => c.deezer?.ok && c.discogs?.ok).length;
+        const either = checks.filter((c) => c.deezer?.ok || c.discogs?.ok).length;
+        const neither = checks.filter(
             (c) =>
                 c.deezer !== undefined &&
                 c.discogs !== undefined &&
@@ -335,9 +388,37 @@ async function run(): Promise<void> {
                 !isRateLimited(c.deezer) &&
                 !isRateLimited(c.discogs),
         );
+        const incomplete = checks.filter((c) => c.deezer === undefined || c.discogs === undefined);
+        await writeFile(
+            values.out,
+            `${JSON.stringify(
+                {
+                    generatedAt: new Date().toISOString(),
+                    note: "Written by `pnpm corroborate:titles --review-only` (titles synced from resolved).",
+                    summary: {
+                        checked: checks.length,
+                        both,
+                        either,
+                        neither: neither.length,
+                        incomplete: incomplete.length,
+                        retitled,
+                        rescored,
+                        invalidated,
+                    },
+                    checks: checks.sort((a, b) => a.postId - b.postId),
+                },
+                null,
+                2,
+            )}\n`,
+            "utf8",
+        );
         const reviewPath = values.out.replace(/\.json$/, "-review.md");
         await writeFile(reviewPath, formatCorroborationReview(neither), "utf8");
-        console.log(`Wrote ${reviewPath} (${neither.length} songs)`);
+        console.log(
+            `Synced ${retitled} titles from resolved (${invalidated} sources cleared for re-query).`,
+        );
+        console.log(`Wrote ${values.out}`);
+        console.log(`Wrote ${reviewPath} (${neither.length} songs still disagreeing)`);
         return;
     }
 
