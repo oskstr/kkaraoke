@@ -11,7 +11,11 @@ function SongSubtitle({ song }: { song: SearchSong }) {
                 {song.artists.map((artist, index) => (
                     <span key={artist.slug}>
                         {index > 0 && ", "}
-                        <a href={`/artists/${artist.slug}`} className="song-artist-link">
+                        <a
+                            href={`/artists/${artist.slug}`}
+                            className="song-artist-link"
+                            data-vt-artist={artist.slug}
+                        >
                             {artist.name}
                         </a>
                     </span>

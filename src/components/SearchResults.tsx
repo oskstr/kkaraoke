@@ -29,6 +29,7 @@ function SongSubtitle({ song }: { song: SearchSong }) {
                         <a
                             href={`/artists/${artist.slug}`}
                             className="song-artist-link"
+                            data-vt-artist={artist.slug}
                             onClick={(e) => e.stopPropagation()}
                         >
                             {artist.name}
@@ -177,7 +178,9 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                             href={`/artists/${a.slug}`}
                             className="flex w-full items-center gap-3 border-b border-line px-0.5 py-3.5 text-left text-cream no-underline hover:text-cream"
                         >
-                            <span className="flex-1 text-base font-medium">{a.name}</span>
+                            <span className="flex-1 text-base font-medium" data-vt-artist={a.slug}>
+                                {a.name}
+                            </span>
                             <span className="text-[15px] text-dim">→</span>
                         </a>
                     ))}

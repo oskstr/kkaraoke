@@ -64,7 +64,11 @@ const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join
                                 {artist.slug === currentArtistSlug ? (
                                     <span>{artist.name}</span>
                                 ) : (
-                                    <a href={`/artists/${artist.slug}`} class="song-artist-link">
+                                    <a
+                                        href={`/artists/${artist.slug}`}
+                                        class="song-artist-link"
+                                        data-vt-artist={artist.slug}
+                                    >
                                         {artist.name}
                                     </a>
                                 )}

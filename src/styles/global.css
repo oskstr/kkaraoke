@@ -148,7 +148,9 @@ textarea:focus-visible {
 }
 
 .collection-tile-label,
-.collection-title {
+.collection-title,
+.artist-title,
+.song-artist-link {
     view-transition-class: coll-title;
 }
 

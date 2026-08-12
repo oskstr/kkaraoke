@@ -2,6 +2,7 @@
  *  (window scroll). We only help windowed song lists grow tall enough on back. */
 
 import { navigate } from "astro:transitions/client";
+import { artistTitleTransitionName } from "../lib/view-transitions";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
@@ -123,14 +124,63 @@ function openSearchFromBrowse(event: Event): void {
     });
 }
 
-/** Remember which song row was clicked so windowed lists can expand to it on back. */
+/** Remember which artist control was pressed so the name can morph into the title. */
+let pendingArtistEl: HTMLElement | null = null;
+
+function artistSlugFromPath(pathname: string): string | undefined {
+    const match = /^\/artists\/([^/]+)\/?$/.exec(pathname);
+    return match?.[1];
+}
+
 function onSongArtistPointerDown(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
-    const link = target.closest<HTMLAnchorElement>("a[href^='/artists/']");
-    const row = link?.closest<HTMLElement>(".song-row");
-    if (!row?.dataset.id) return;
-    sessionStorage.setItem("kkaraoke:return-song", row.dataset.id);
+    const named = target.closest<HTMLElement>("[data-vt-artist]");
+    const link = named?.closest("a") ?? target.closest<HTMLAnchorElement>("a[href^='/artists/']");
+    if (!link || link.hasAttribute("data-astro-reload")) return;
+    const path = linkPathname(link);
+    if (artistSlugFromPath(path) === undefined) return;
+
+    const row = link.closest<HTMLElement>(".song-row");
+    if (row?.dataset.id) sessionStorage.setItem("kkaraoke:return-song", row.dataset.id);
+    pendingArtistEl = named ?? link;
+}
+
+function pickArtistEl(root: ParentNode, slug: string): HTMLElement | null {
+    const href = `/artists/${slug}`;
+    const untilId = sessionStorage.getItem("kkaraoke:return-song");
+    if (untilId) {
+        const inRow = root.querySelector<HTMLElement>(
+            `.song-row[data-id="${CSS.escape(untilId)}"] [data-vt-artist="${CSS.escape(slug)}"]`,
+        );
+        if (inRow) return inRow;
+    }
+    return (
+        root.querySelector<HTMLElement>(`[data-vt-artist="${CSS.escape(slug)}"]`) ??
+        root.querySelector<HTMLElement>(`a[href="${href}"]`)
+    );
+}
+
+function silenceNamedGroups(root: ParentNode, selector: string): void {
+    root.querySelectorAll<HTMLElement>(selector).forEach((el) => {
+        el.style.viewTransitionName = "none";
+    });
+}
+
+function scopeArtistTransition(root: ParentNode, dest: string): void {
+    const slug = artistSlugFromPath(dest);
+    if (!slug) return;
+    const name = artistTitleTransitionName(slug);
+    silenceNamedGroups(
+        root,
+        "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-vt-artist]",
+    );
+    const el =
+        pendingArtistEl && root.contains(pendingArtistEl) && pendingArtistEl.dataset.vtArtist === slug
+            ? pendingArtistEl
+            : pickArtistEl(root, slug);
+    pendingArtistEl = null;
+    if (el) el.style.viewTransitionName = name;
 }
 
 type PreparationEvent = Event & {
@@ -241,18 +291,31 @@ function prepareIncomingTileMorph(event: Event): void {
     if (!newDoc) return;
     const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
     const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
-    if (!chromeName && !titleName) return;
-    scopeCollectionTileNames(newDoc, {
-        ...(chromeName ? { chrome: chromeName } : {}),
-        ...(titleName ? { title: titleName } : {}),
-    });
+    if (chromeName || titleName) {
+        scopeCollectionTileNames(newDoc, {
+            ...(chromeName ? { chrome: chromeName } : {}),
+            ...(titleName ? { title: titleName } : {}),
+        });
+    }
+
+    const artistSlug = document.querySelector<HTMLElement>("[data-artist-title]")?.dataset.vtArtist;
+    if (!artistSlug) return;
+    silenceNamedGroups(
+        newDoc,
+        "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title]",
+    );
+    const el = pickArtistEl(newDoc, artistSlug);
+    if (el) el.style.viewTransitionName = artistTitleTransitionName(artistSlug);
 }
 
-function clearBrowseViewTransitionNames(): void {
-    if (document.querySelector("[data-collection-chrome]")) return;
-    document.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
-        el.style.removeProperty("view-transition-name");
-    });
+function clearScopedViewTransitionNames(): void {
+    document
+        .querySelectorAll<HTMLElement>(
+            "[data-vt-chrome], [data-vt-title], [data-vt-artist], [data-collection-chrome], [data-collection-title]",
+        )
+        .forEach((el) => {
+            el.style.removeProperty("view-transition-name");
+        });
 }
 
 let lastNavDirection: "forward" | "back" | null = null;
@@ -273,6 +336,7 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("pointerdown", openSearchFromBrowse, true);
     document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
+    document.addEventListener("click", onSongArtistPointerDown, true);
     document.addEventListener("astro:before-swap", prepareIncomingTileMorph);
 
     document.addEventListener("astro:before-preparation", (event) => {
@@ -280,6 +344,9 @@ if (!window.__kkaraokeNavInit) {
         const dest = (event as PreparationEvent).to?.pathname ?? "";
         if (dest.startsWith("/collections/")) {
             scopeCollectionTileNames(document, { href: dest });
+        }
+        if (artistSlugFromPath(dest)) {
+            scopeArtistTransition(document, dest);
         }
         if (!keepSearchInput(dest)) {
             searchInputEl()?.removeAttribute("data-astro-transition-persist");
@@ -302,7 +369,7 @@ if (!window.__kkaraokeNavInit) {
     });
 
     document.addEventListener("astro:page-load", () => {
-        clearBrowseViewTransitionNames();
+        clearScopedViewTransitionNames();
         if (lastNavDirection === "back") {
             expandWindowedListForBack();
             requestAnimationFrame(expandWindowedListForBack);

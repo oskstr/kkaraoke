@@ -34,7 +34,7 @@ function rowHtml(song: MoreSong): string {
         subtitle = song.artists
             .map(
                 (a, i) =>
-                    `${i > 0 ? ", " : ""}<a href="/artists/${escapeAttr(a.slug)}" class="song-artist-link">${escapeHtml(a.name)}</a>`,
+                    `${i > 0 ? ", " : ""}<a href="/artists/${escapeAttr(a.slug)}" class="song-artist-link" data-vt-artist="${escapeAttr(a.slug)}">${escapeHtml(a.name)}</a>`,
             )
             .join("");
         if (meta.length > 0) subtitle += ` · ${escapeHtml(meta.join(" · "))}`;
