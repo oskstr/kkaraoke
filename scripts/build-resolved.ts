@@ -583,6 +583,7 @@ interface OverrideRecord {
     title?: string;
     from?: string;
     category?: string;
+    categories?: string[];
     language?: string;
     year?: number;
     genres?: string[];
@@ -696,16 +697,24 @@ function overridesReview(
         return (left?.id ?? a.postId) - (right?.id ?? b.postId);
     });
 
+    const categoryCell = (override: OverrideRecord): string => {
+        const labels = [
+            ...(override.category ? [override.category] : []),
+            ...(override.categories ?? []),
+        ];
+        return [...new Set(labels)].join(", ");
+    };
+
     for (const override of rows) {
         const venue = byPostId.get(override.postId);
         if (venue === undefined) {
             lines.push(
-                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(categoryCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
             );
             continue;
         }
         lines.push(
-            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(categoryCell(override))} | ${cell(override.why ?? "")} | ${override.postId} |`,
         );
     }
 

@@ -152,11 +152,13 @@ export function featuredTiles(songs: Song[]): BrowseTile[] {
         { kind: "decade", key: "1990" },
         { kind: "genre", key: "rock" },
         { kind: "lang", key: "swe" },
+        { kind: "category", key: "Melodifestivalen" },
         { kind: "genre", key: "pop" },
         { kind: "decade", key: "1970" },
         { kind: "category", key: "Disney" },
         { kind: "from", key: "Grease" },
         { kind: "category", key: "Musical" },
+        { kind: "category", key: "Eurovision" },
         { kind: "category", key: "James Bond" },
         { kind: "category", key: "Birthday" },
     ];

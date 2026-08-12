@@ -1,7 +1,11 @@
 /**
  * Umbrella search categories built from `from` (specific show/film) and/or explicit
- * `category` on a song. Per docs/song-data.md: Disney, Bond themes, musicals, Christmas
- * are browse categories — not fake performers, and not a substitute for `from`.
+ * `category` / `categories` on a song. Disney, Bond themes, musicals, Melodifestivalen,
+ * Eurovision, and Christmas are browse categories — not fake performers, and not a
+ * substitute for a specific film/show in `from`.
+ *
+ * A song may belong to more than one category (Disney + Musical, or Melodifestivalen +
+ * Eurovision when a Swedish winner also represented Sweden at ESC).
  */
 
 /** Films / shows that belong under the Disney category. */
@@ -42,7 +46,7 @@ export const JAMES_BOND_FROM = new Set([
 
 /**
  * Stage musicals and film musicals. Soundtrack cues from non-musical films (Bond,
- * Ghostbusters, LOTR, Eurovision entries, etc.) stay out — those remain under Film only.
+ * Ghostbusters, LOTR, etc.) stay out — those remain under Film only.
  */
 export const MUSICAL_FROM = new Set([
     "Aladdin",
@@ -90,7 +94,13 @@ export const MUSICAL_FROM = new Set([
     "West Side Story",
 ]);
 
-/** Categories whose membership is derived from `from` (in addition to explicit `category`). */
+/**
+ * Contest names that were briefly stored as `from` before belonging as categories.
+ * Still recognised so leftover data keeps working; new edits should use `categories`.
+ */
+export const CONTEST_FROM = new Set(["Eurovision", "Melodifestivalen"]);
+
+/** Categories whose membership is derived from `from` (in addition to explicit labels). */
 export const FROM_DERIVED_CATEGORIES: Record<string, ReadonlySet<string>> = {
     Disney: DISNEY_FROM,
     "James Bond": JAMES_BOND_FROM,
@@ -101,6 +111,7 @@ export const FROM_DERIVED_CATEGORY_KEYS = Object.keys(FROM_DERIVED_CATEGORIES);
 
 export function categoryFromShow(from: string | undefined): string[] {
     if (!from) return [];
+    if (CONTEST_FROM.has(from)) return [from];
     const out: string[] = [];
     for (const [category, shows] of Object.entries(FROM_DERIVED_CATEGORIES)) {
         if (shows.has(from)) out.push(category);
@@ -109,18 +120,21 @@ export function categoryFromShow(from: string | undefined): string[] {
 }
 
 /** Every browse category a song belongs to (explicit + derived from `from`). */
-export function categoriesForSong(song: { category?: string; from?: string }): string[] {
+export function categoriesForSong(song: {
+    category?: string;
+    categories?: string[];
+    from?: string;
+}): string[] {
     const set = new Set<string>();
     if (song.category) set.add(song.category);
+    for (const cat of song.categories ?? []) set.add(cat);
     for (const cat of categoryFromShow(song.from)) set.add(cat);
     return [...set];
 }
 
 export function songBelongsToCategory(
-    song: { category?: string; from?: string },
+    song: { category?: string; categories?: string[]; from?: string },
     key: string,
 ): boolean {
-    if (song.category === key) return true;
-    const shows = FROM_DERIVED_CATEGORIES[key];
-    return shows !== undefined && song.from !== undefined && shows.has(song.from);
+    return categoriesForSong(song).includes(key);
 }

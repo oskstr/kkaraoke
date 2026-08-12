@@ -48,9 +48,15 @@ export interface Song {
      * under `Julsång`, birthday songs, hymns, and so on. Prefer this (and an empty artist)
      * over inventing a cover singer for traditional material. Umbrella browse categories
      * such as Disney / James Bond / Musical are also derived from `from` — see
-     * `src/lib/categories.ts`.
+     * `src/lib/categories.ts`. Melodifestivalen / Eurovision (and songs in both) use
+     * `categories` when more than one label applies.
      */
     category?: string;
+    /**
+     * Extra search categories beyond `category` — used when a song belongs to more than
+     * one (e.g. a Melodifestivalen winner that also went to Eurovision).
+     */
+    categories?: string[];
     /** ISO 639-3 lyrics language from the MusicBrainz work, where known. */
     language?: string;
     /** True when the artist or title shown is a correction rather than the venue's own. */
@@ -108,6 +114,8 @@ interface Override {
     title?: string;
     from?: string;
     category?: string;
+    /** One or more search categories; merged with `category` at compose time. */
+    categories?: string[];
     language?: string;
     year?: number;
     genres?: string[];
@@ -313,8 +321,13 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
             ? (override.artist ?? "")
             : (correction?.artist ?? song.artist);
     const title = override?.title ?? correction?.title ?? song.song;
-    const from = override?.from ?? correction?.from;
+    // Empty `from` on an override clears a bad resolver value (e.g. Eurovision-as-from).
+    const from =
+        override !== undefined && "from" in override
+            ? override.from || undefined
+            : correction?.from;
     const category = override?.category;
+    const categories = override?.categories;
     const language = override?.language ?? correction?.language;
     const artists = creditedArtists(correction, override);
     const { year, genres } = enrichmentFor(correction, override);
@@ -330,8 +343,13 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
         ...(year === undefined ? {} : { year }),
         ...(from === undefined ? {} : { from }),
         ...(category === undefined ? {} : { category }),
+        ...(categories === undefined || categories.length === 0 ? {} : { categories }),
         ...(language === undefined ? {} : { language }),
-        ...(artist === song.artist && title === song.song && category === undefined && from === undefined
+        ...(artist === song.artist &&
+        title === song.song &&
+        category === undefined &&
+        (categories === undefined || categories.length === 0) &&
+        from === undefined
             ? {}
             : { corrected: true as const }),
     };

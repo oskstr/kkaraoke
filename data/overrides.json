@@ -7,12 +7,43 @@
             "why": "a-ha Bond theme; film was missing as from"
         },
         {
+            "postId": 47775,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "ABBA – Waterloo (German version); Melodifestivalen/Eurovision 1974. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 47841,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 47883,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Alexander Rybak – Fairytale; Eurovision 2009 (Norway). Category Eurovision."
+        },
+        {
             "postId": 47902,
             "category": "Children's song",
             "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
             "title": "Ekorr'n satt i granen",
             "artist": "",
             "sortAs": "Children's song"
+        },
+        {
+            "postId": 47994,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 48037,
@@ -23,6 +54,14 @@
             "postId": 48057,
             "category": "Christmas",
             "why": "Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 48065,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Arvingarna – Eloise; Melodifestivalen/Eurovision 1993. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 48102,
@@ -49,6 +88,27 @@
             "why": "Credited Christmas song (Band Aid – Do They Know It’s Christmas?). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 48171,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen."
+        },
+        {
+            "postId": 48173,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Världen utanför; Melodifestivalen 2002. Category Melodifestivalen."
+        },
+        {
+            "postId": 48174,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Allt som jag ser; Melodifestivalen 2001. Category Melodifestivalen."
+        },
+        {
             "postId": 48184,
             "title": "No More Tears (Enough Is Enough)",
             "year": 1979,
@@ -64,6 +124,28 @@
             "postId": 48375,
             "category": "Christmas",
             "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 48380,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Björn Kjellman – Älskar du livet; Melodifestivalen 2006. Category Melodifestivalen."
+        },
+        {
+            "postId": 48382,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Björn Skifs – Det blir alltid värre framåt natten; Melodifestivalen/Eurovision 1978. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48383,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen."
         },
         {
             "postId": 48486,
@@ -93,7 +175,10 @@
         {
             "postId": 48592,
             "year": 2002,
-            "why": "Brandsta City Släckers Melodifestivalen 2002 entry (sv.wikipedia Kom och ta mig); Discogs/MusicBrainz 2002."
+            "why": "Brandsta City Släckers – Kom och ta mig; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
         },
         {
             "postId": 48654,
@@ -102,6 +187,13 @@
             "artist": "",
             "sortAs": "Hymn",
             "title": "Face to Face"
+        },
+        {
+            "postId": 48656,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision."
         },
         {
             "postId": 48716,
@@ -117,6 +209,36 @@
             "why": "Bubbles; MusicBrainz/Discogs earliest dated releases 2003."
         },
         {
+            "postId": 48720,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision."
+        },
+        {
+            "postId": 48753,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen."
+        },
+        {
+            "postId": 48776,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Carola – Främling; Melodifestivalen/Eurovision 1983. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48777,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Carola – Fångad av en stormvind; Melodifestivalen/Eurovision 1991. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 48782,
             "artist": "Carola",
             "title": "Det är bara vi",
@@ -124,9 +246,55 @@
             "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
         },
         {
+            "postId": 48798,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen."
+        },
+        {
+            "postId": 48862,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Céline Dion – Ne partez pas sans moi; Eurovision 1988 (Switzerland). Category Eurovision."
+        },
+        {
             "postId": 48864,
             "category": "Christmas",
             "why": "Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 48893,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Tusen och en natt (Swedish of Take Me to Your Heaven); Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48894,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Take Me to Your Heaven; Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48895,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48946,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Chips – Dag efter dag; Melodifestivalen/Eurovision 1982. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 48977,
@@ -143,6 +311,14 @@
             "postId": 48996,
             "from": "Mulan",
             "why": "Christina Aguilera Reflection from Mulan; from was missing"
+        },
+        {
+            "postId": 49013,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 49236,
@@ -186,6 +362,14 @@
             "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 49655,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Edin-Ådahl – Som en vind; Melodifestivalen/Eurovision 1990. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 49684,
             "from": "The Lion King",
             "why": "Elton John Lion King; from was missing"
@@ -199,6 +383,21 @@
             "postId": 49759,
             "category": "Christmas",
             "why": "Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 49768,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49773,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen."
         },
         {
             "postId": 49781,
@@ -217,10 +416,26 @@
             "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 49855,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Eric Saade – Popular; Melodifestivalen/Eurovision 2011. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 49944,
             "title": "This Ain't a Scene, It's an Arms Race",
             "year": 2007,
             "why": "Truncated dump title. Year from Wikipedia (2007 single from Infinity on High)."
+        },
+        {
+            "postId": 49947,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Fame – Give Me Your Love; Melodifestivalen/Eurovision 2003. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 50082,
@@ -236,10 +451,35 @@
             "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
         },
         {
+            "postId": 50118,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Fredrik Kempe & Sanna Nielsen – Du och jag mot världen; Melodifestivalen 2005. Category Melodifestivalen."
+        },
+        {
+            "postId": 50121,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Friends – Lyssna till ditt hjärta; Melodifestivalen/Eurovision 2001. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 50122,
             "title": "The One That You Need",
             "year": 2002,
-            "why": "Friends Melodifestivalen 2002 entry; venue wrote The one that i need. Year from sv.wikipedia / Discogs (2002)."
+            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
+        },
+        {
+            "postId": 50124,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Fronda – Ingen mår så bra som jag; Melodifestivalen 2008. Category Melodifestivalen."
         },
         {
             "postId": 50135,
@@ -253,6 +493,21 @@
             "postId": 50184,
             "category": "Christmas",
             "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 50208,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision."
+        },
+        {
+            "postId": 50366,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Herreys – Diggi Loo Diggi Ley; Melodifestivalen/Eurovision 1984. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 50369,
@@ -303,7 +558,17 @@
         {
             "postId": 50597,
             "year": 2002,
-            "why": "Javiera – No Hay Nada Más, Melodifestivalen 2002. Year from Discogs (2002)."
+            "why": "Javiera – No Hay Nada Más; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
+        },
+        {
+            "postId": 50616,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
         },
         {
             "postId": 50644,
@@ -311,9 +576,24 @@
             "why": "Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994)."
         },
         {
+            "postId": 50668,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 50739,
             "category": "Christmas",
             "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 50776,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Johnny Logan – Hold Me Now; Eurovision 1987 (Ireland). Category Eurovision."
         },
         {
             "postId": 50778,
@@ -478,9 +758,20 @@
             "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 51000,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Kikki Danielsson – Bra vibrationer; Melodifestivalen/Eurovision 1985. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 51001,
             "year": 2002,
-            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha, Melodifestivalen 2002 (sv.wikipedia)."
+            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
         },
         {
             "postId": 51013,
@@ -503,14 +794,105 @@
             "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
         },
         {
+            "postId": 51147,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Lasse Holm & Monica Törnell – Är det det här du kallar kärlek; Melodifestivalen/Eurovision 1986. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51178,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Lena – Satellite; Eurovision 2010 (Germany). Category Eurovision."
+        },
+        {
+            "postId": 51181,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Lena Philipsson – Det gör ont; Melodifestivalen/Eurovision 2004. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51182,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Lena Philipsson – Dansa i neon; Melodifestivalen 1987. Category Melodifestivalen."
+        },
+        {
+            "postId": 51308,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Loa Falkman – Symfonin; Melodifestivalen. Category Melodifestivalen."
+        },
+        {
+            "postId": 51314,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Lordi – Hard Rock Hallelujah; Eurovision 2006 (Finland). Category Eurovision."
+        },
+        {
+            "postId": 51316,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Loreen – Euphoria; Melodifestivalen/Eurovision 2012. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51317,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Loreen – Tattoo; Melodifestivalen/Eurovision 2023. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 51427,
             "category": "Christmas",
             "why": "Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 51430,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
+        },
+        {
+            "postId": 51455,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Måns Zelmerlöw – Heroes; Melodifestivalen/Eurovision 2015. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 51479,
             "category": "Christmas",
             "why": "Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 51504,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Marie Bergman & Roger Pontare – Stjärnorna; Melodifestivalen/Eurovision 1994. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51546,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 51628,
@@ -540,6 +922,13 @@
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
         },
         {
+            "postId": 51857,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Nick Borgen – We Are All the Winners; Melodifestivalen 1993. Category Melodifestivalen."
+        },
+        {
             "postId": 51882,
             "year": 1990,
             "why": "Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990)."
@@ -549,6 +938,13 @@
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
+        },
+        {
+            "postId": 51966,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
         },
         {
             "postId": 52064,
@@ -585,9 +981,52 @@
             "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
         },
         {
+            "postId": 52531,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Roger Pontare – När vindarna viskar mitt namn; Melodifestivalen/Eurovision 2000. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 52553,
             "category": "Christmas",
             "why": "Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 52621,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Hela världen för mig; Melodifestivalen 2003. Category Melodifestivalen."
+        },
+        {
+            "postId": 52622,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Empty Room; Melodifestivalen 2008. Category Melodifestivalen."
+        },
+        {
+            "postId": 52624,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52637,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52681,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
         },
         {
             "postId": 52731,
@@ -595,10 +1034,62 @@
             "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
         },
         {
+            "postId": 52784,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52836,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sofia – Alla; Melodifestivalen 2009. Category Melodifestivalen."
+        },
+        {
+            "postId": 52846,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen."
+        },
+        {
             "postId": 52905,
             "title": "Hey Nineteen",
             "year": 1980,
             "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
+        },
+        {
+            "postId": 53084,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Ted Gärdestad – Oh, vilken härlig dag; Melodifestivalen. Category Melodifestivalen."
+        },
+        {
+            "postId": 53104,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 53312,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Tommy Nilsson – En dag; Melodifestivalen/Eurovision 1989. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 53329,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical).",
+            "from": ""
         },
         {
             "postId": 53388,
@@ -609,6 +1100,13 @@
             "postId": 53563,
             "year": 1992,
             "why": "Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990)."
+        },
+        {
+            "postId": 53622,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen."
         }
     ]
 }
