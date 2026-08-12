@@ -1,0 +1,214 @@
+{
+    "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file.",
+    "overrides": [
+        {
+            "postId": 47902,
+            "category": "Children's song",
+            "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
+            "title": "Ekorr'n satt i granen",
+            "artist": "",
+            "sortAs": "Children's song"
+        },
+        {
+            "postId": 48108,
+            "artist": "Ayumi Hamasaki",
+            "title": "walking proud",
+            "language": "jpn",
+            "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
+        },
+        {
+            "postId": 48654,
+            "category": "Hymn",
+            "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Hymn",
+            "title": "Face to Face"
+        },
+        {
+            "postId": 48782,
+            "artist": "Carola",
+            "title": "Det är bara vi",
+            "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
+        },
+        {
+            "postId": 50116,
+            "artist": "",
+            "sortAs": "Irish traditional",
+            "category": "Irish traditional",
+            "title": "Danny Boy",
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
+        },
+        {
+            "postId": 50135,
+            "category": "Birthday",
+            "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Birthday",
+            "title": "Ja må du leva"
+        },
+        {
+            "postId": 50466,
+            "category": "Irish traditional",
+            "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Irish traditional",
+            "title": "The Wild Rover"
+        },
+        {
+            "postId": 50840,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50841,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50842,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50843,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Nu är det jul igen"
+        },
+        {
+            "postId": 50844,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Jul, jul strålande jul"
+        },
+        {
+            "postId": 50845,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Lusse Lelle"
+        },
+        {
+            "postId": 50846,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Julmedley"
+        },
+        {
+            "postId": 50847,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50848,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50849,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50850,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50851,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50852,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50853,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50854,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas"
+        },
+        {
+            "postId": 50855,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Santa Claus Is Coming to Town"
+        },
+        {
+            "postId": 50856,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "We Wish You a Merry Christmas"
+        },
+        {
+            "postId": 50857,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Silent Night, Holy Night"
+        },
+        {
+            "postId": 50858,
+            "category": "Christmas",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Jingle Bells"
+        },
+        {
+            "postId": 51678,
+            "category": "Midsummer",
+            "why": "Traditional / category material filed under 'Midsommarsång'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Midsummer"
+        },
+        {
+            "postId": 52134,
+            "category": "Birthday",
+            "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent",
+            "artist": "",
+            "sortAs": "Birthday",
+            "title": "Happy Birthday to You"
+        }
+    ]
+}

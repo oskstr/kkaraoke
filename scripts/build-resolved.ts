@@ -18,6 +18,8 @@ import { dirname } from "node:path";
 import { parseArgs } from "node:util";
 import type { Artist } from "./fetch-artists.ts";
 import type { Recording } from "./fetch-recordings.ts";
+import type { WorkLink } from "./fetch-works.ts";
+import { publishedTitle } from "./lib/song-title.ts";
 
 interface MatchRecord {
     postId: number;
@@ -32,6 +34,8 @@ interface MatchRecord {
     /** Set where the dump confirmed a proposal, holding the proposer's reasoning. */
     proposed?: string;
     from?: string;
+    /** ISO 639-3 from a proposal, until a works lookup confirms one. */
+    language?: string;
     artistCredit?: string;
     artistMbids?: string[];
     /** MusicBrainz's own recording title, master markers and all. */
@@ -60,8 +64,11 @@ interface Resolved {
     /**
      * The show or film the song is from, where the venue put that in the artist column. Kept
      * apart from the artist: `Grease` is what people search for and is not a performer.
+     * Never a language label — that is `language`.
      */
     from?: string;
+    /** ISO 639-3 lyrics language from the MusicBrainz work, or a confirmed proposal. */
+    language?: string;
     recordingMbid?: string;
     genres?: string[];
     /** Earliest release of this title by this artist, which is not the same as the master's date. */
@@ -73,29 +80,106 @@ interface Resolved {
  * Genres are user tags, so a long tail of one-vote suggestions comes with them. Two votes
  * is enough to drop the noise while keeping the genres an artist is actually known for.
  */
-/** Where the venue joins several artists into one string, as the matcher splits it. */
-const JOIN = /\s+(?:feat\.?|ft\.?|featuring|with|duet with|med|vs\.?|versus|and|x)\s+|\s*[&,+/]\s*/i;
-
 const MIN_GENRE_VOTES = 2;
+/** When nobody has two votes, a single vote is still better than a blank genre column. */
+const FALLBACK_GENRE_VOTES = 1;
 const MAX_GENRES = 3;
 
 const HAS_LATIN = /\p{Script=Latin}/u;
 
 /**
- * The name to show. MusicBrainz's canonical name is the artist's own preferred one, which for
- * `Άννα Βίσση` and `鄭秀文` is written in a script nobody in the room can type. Where it has no
- * Latin letters at all, a Latin alias is the usable name; `98°` and `A★Teens` keep theirs,
- * because a symbol is not a script.
+ * The name to show for an artist in this catalogue.
+ *
+ * Order of preference:
+ * 1. A curated entry in `data/artist-names.json` — the name these karaoke songs are well
+ *    known under (Kanye West for the 2000s cuts, Jackson 5 for the Motown ones), never the
+ *    venue string and not blindly today's MusicBrainz primary.
+ * 2. Otherwise MusicBrainz's primary name, with: Latin alias when the primary is a foreign
+ *    script; plain ASCII alias when the primary uses stylized *letters* (`JAŸ-Z` → `Jay-Z`);
+ *    trademarks with stars / fancy hyphens kept (`A★Teens`, `a‐ha`).
+ *
+ * Digit-only names (`911`) keep the primary so a wrong-country alias (`911 (US)`) cannot win.
  */
+/** Fancy hyphens folded to ASCII so `a‐ha` can meet `a-ha` without changing the letters. */
+const normalizeFancyHyphens = (value: string): string => value.replace(/[\u2010-\u2015\u2212]/g, "-");
+
+const isRawAscii = (value: string): boolean => /^[\x00-\x7F]+$/.test(value);
+
+/**
+ * Non-ASCII that is a letter (or decomposes to one): `Ÿ` yes, `★` / `‐` / `°` no. Those
+ * trademarks stay; only letter stylization seeks a plain alias.
+ */
+function hasStylizedLetters(value: string): boolean {
+    for (const ch of value) {
+        if (isRawAscii(ch)) continue;
+        if (/\p{Letter}/u.test(ch)) return true;
+        const base = ch.normalize("NFKD").replace(/\p{M}+/gu, "");
+        if ([...base].some((part) => /\p{Letter}/u.test(part))) return true;
+    }
+    return false;
+}
+
+/** Prefer `Jay-Z` / `a-ha` / `A★Teens` over `Jay Z` / `A Ha` / `A Teens`. */
+function preferDisplayForm(a: string, b: string): number {
+    const aHyphen = normalizeFancyHyphens(a);
+    const bHyphen = normalizeFancyHyphens(b);
+    return (
+        // Keep symbolic stylization (`A★Teens`, `98°`) rather than an alias that dropped it —
+        // before hyphen preference, or `A-Teens` beats the real primary.
+        (/[★☆°]/.test(b) ? 1 : 0) - (/[★☆°]/.test(a) ? 1 : 0) ||
+        // Trademark hyphenation beats a spaced alias (`a-ha` over `A Ha`, `Jay-Z` over `Jay Z`).
+        (/^[^\s]+-[^\s]+$/.test(bHyphen) ? 1 : 0) - (/^[^\s]+-[^\s]+$/.test(aHyphen) ? 1 : 0) ||
+        // Plain ASCII beats stylized letters (`Jay-Z` over `JAŸ-Z`), not fancy hyphens alone.
+        (isRawAscii(bHyphen) && hasStylizedLetters(a) ? 1 : 0) -
+            (isRawAscii(aHyphen) && hasStylizedLetters(b) ? 1 : 0) ||
+        // Prefer `Jay-Z` over the odd `Jay - Z` alias.
+        (/\s-\s/.test(a) ? 1 : 0) - (/\s-\s/.test(b) ? 1 : 0) ||
+        // Spaced readable forms only when neither side is hyphenated (`Kanye West` vs `KanYeWest`).
+        (!aHyphen.includes("-") && !bHyphen.includes("-") && b.includes(" ") ? 1 : 0) -
+            (!aHyphen.includes("-") && !bHyphen.includes("-") && a.includes(" ") ? 1 : 0) ||
+        a.length - b.length
+    );
+}
+
+/** Catalogue-scoped overrides from `data/artist-names.json`, filled in `main`. */
+const artistDisplayNames = new Map<string, string>();
+
 function displayName(artist: Artist): string {
-    if (HAS_LATIN.test(artist.name)) {
+    const curated = artistDisplayNames.get(artist.mbid);
+    if (curated !== undefined) {
+        return curated;
+    }
+    // Digit-only / symbolic primaries (`911`) keep the primary — the first Latin alias is often
+    // a wrong-country disambiguation (`911 (US)` for the UK boy band).
+    if (!/\p{Letter}/u.test(artist.name)) {
         return artist.name;
+    }
+    if (HAS_LATIN.test(artist.name)) {
+        // Stylized Latin *letters* (JAŸ-Z) prefer a plain ASCII alias. Stars and fancy hyphens
+        // stay with the primary (`A★Teens`, `a‐ha`).
+        if (hasStylizedLetters(artist.name)) {
+            const ascii = [...(artist.aliases ?? [])]
+                .filter(
+                    (alias) =>
+                        isRawAscii(normalizeFancyHyphens(alias)) &&
+                        HAS_LATIN.test(alias) &&
+                        nameKey(alias) === nameKey(artist.name),
+                )
+                .sort((a, b) => preferDisplayForm(a, b))[0];
+            if (ascii !== undefined) return normalizeFancyHyphens(ascii);
+        }
+        return normalizeFancyHyphens(artist.name);
     }
     return (artist.aliases ?? []).find((alias) => HAS_LATIN.test(alias)) ?? artist.name;
 }
 
-/** Punctuation and case removed, so that `P!nk` and `Pink` can be told apart by name. */
-const nameKey = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+/** Punctuation, case and diacritics removed, so `JAŸ-Z` and `Jay-Z` can meet. */
+const nameKey = (value: string): string =>
+    value
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/\p{M}+/gu, "")
+        .replace(/[^a-z0-9]/g, "");
 
 /**
  * Whether two entities are the same act rather than two acts with confusable names. A band
@@ -112,10 +196,10 @@ function related(a: Artist | undefined, b: Artist | undefined): boolean {
 }
 
 function pickGenres(artist: Artist | undefined): string[] {
-    return (artist?.genres ?? [])
-        .filter((genre) => genre.count >= MIN_GENRE_VOTES)
-        .slice(0, MAX_GENRES)
-        .map((genre) => genre.name);
+    const genres = artist?.genres ?? [];
+    const preferred = genres.filter((genre) => genre.count >= MIN_GENRE_VOTES);
+    const pool = preferred.length > 0 ? preferred : genres.filter((genre) => genre.count >= FALLBACK_GENRE_VOTES);
+    return pool.slice(0, MAX_GENRES).map((genre) => genre.name);
 }
 
 async function readJson<T>(path: string): Promise<T | undefined> {
@@ -131,15 +215,33 @@ async function main(): Promise<void> {
         options: {
             matches: { type: "string", default: "data/canonical-matches.json" },
             artists: { type: "string", default: "data/artists.json" },
+            "artist-names": { type: "string", default: "data/artist-names.json" },
             recordings: { type: "string", default: "data/recordings.json" },
+            works: { type: "string", default: "data/works.json" },
+            proposals: { type: "string", default: "data/proposals.json" },
+            overrides: { type: "string", default: "data/overrides.json" },
             out: { type: "string", default: "data/resolved.json" },
             queue: { type: "string", default: "data/review.md" },
+            "overrides-review": { type: "string", default: "data/overrides-review.md" },
+            "proposals-review": { type: "string", default: "data/proposals-review.md" },
         },
     });
 
     const matches = await readJson<{ songs: MatchRecord[] }>(values.matches);
     if (matches === undefined) {
         throw new Error(`Could not read ${values.matches}. Run \`pnpm match:canonical\` first.`);
+    }
+    const proposalFile = await readJson<{ proposals: ProposalRecord[] }>(values.proposals);
+    const proposals = proposalFile?.proposals ?? [];
+    const proposed = new Set(proposals.map((p) => p.postId));
+    // Overrides are hand decisions that already settled a song — category buckets with no
+    // performer, spelling the dump cannot confirm, and so on. They must not reappear in the
+    // review queue just because the matcher has nothing to match.
+    const overrideFile = await readJson<{ overrides: OverrideRecord[] }>(values.overrides);
+    const overrides = overrideFile?.overrides ?? [];
+    const overridden = new Set(overrides.map((o) => o.postId));
+    if (overrides.length > 0) {
+        console.log(`${overrides.length} songs already settled in overrides; skipping them in the review queue`);
     }
     // Enrichment is optional so that the titles can be applied before the artist lookups,
     // which take an hour, have finished.
@@ -148,6 +250,16 @@ async function main(): Promise<void> {
     if (artistFile === undefined) {
         console.warn(`No ${values.artists} yet, so artist names and genres will be left alone.`);
     }
+    const artistNamesFile = await readJson<{
+        artists: Record<string, { name: string; why?: string }>;
+    }>(values["artist-names"]);
+    artistDisplayNames.clear();
+    for (const [mbid, entry] of Object.entries(artistNamesFile?.artists ?? {})) {
+        artistDisplayNames.set(mbid, entry.name);
+    }
+    if (artistDisplayNames.size > 0) {
+        console.log(`${artistDisplayNames.size} catalogue display names from artist-names.json`);
+    }
 
     // An array rather than an object keyed by id: five thousand keys in a JSON module
     // makes TypeScript infer five thousand properties, and the site can build its own map.
@@ -155,6 +267,21 @@ async function main(): Promise<void> {
     const years = new Map((recordingFile?.recordings ?? []).map((r) => [r.recordingMbid, r.year]));
     if (recordingFile === undefined) {
         console.warn(`No ${values.recordings} yet, so songs will have no year.`);
+    }
+
+    const worksFile = await readJson<{ works: WorkLink[] }>(values.works);
+    const languages = new Map(
+        (worksFile?.works ?? [])
+            .filter((work) => work.language !== undefined)
+            .map((work) => [work.recordingMbid, work.language!]),
+    );
+    const workTitles = new Map(
+        (worksFile?.works ?? [])
+            .filter((work) => work.title !== undefined && work.title.length > 0)
+            .map((work) => [work.recordingMbid, work.title!]),
+    );
+    if (worksFile === undefined) {
+        console.warn(`No ${values.works} yet, so languages come only from proposals.`);
     }
 
     // Which artist each of the venue's artist strings turned out to name, where its songs
@@ -201,10 +328,17 @@ async function main(): Promise<void> {
     const songs: Resolved[] = [];
     const review: ReviewEntry[] = [];
 
+    /** Hand-settled songs stay out of the queue; re-listing them is how Julsång came back. */
+    const enqueue = (entry: ReviewEntry): void => {
+        if (overridden.has(entry.postId)) return;
+        review.push(entry);
+    };
+
     let titleFixes = 0;
     let artistFixes = 0;
     let genreCount = 0;
     let yearCount = 0;
+    let languageCount = 0;
     let artistOnly = 0;
 
     /**
@@ -240,7 +374,7 @@ async function main(): Promise<void> {
             // `Nothing's gonna change my love for you` is filed under George Harrison — while
             // not knowing the artist usually means the string is not an artist at all, but a
             // category such as `Julsång`, `Finsk musik` or a show name.
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: soleArtist.has(match.artist)
                     ? "this artist has no such title; the venue may have credited the wrong one"
@@ -249,8 +383,12 @@ async function main(): Promise<void> {
             artistOnlyCorrection(match);
             continue;
         }
-        if (match.trusted !== true) {
-            review.push({
+        // A `loose` how is normally untrusted, but a confirmed proposal already decided this
+        // is the right song — truncated venue titles often only reach the master loosely.
+        // (`match.proposed` is only set when a proposal key won; the proposals file still
+        // covers cases where the venue's own loose key found the same master.)
+        if (match.trusted !== true && match.proposed === undefined && !proposed.has(match.postId)) {
+            enqueue({
                 ...pick(match),
                 reason: match.placeholder === true ? "matched a placeholder entity" : "weak match",
                 ...(match.placeholder === true ? {} : { detail: `matched by ${match.how}` }),
@@ -260,7 +398,7 @@ async function main(): Promise<void> {
             continue;
         }
 
-        const mbids = match.artistMbids ?? [];
+        const mbids = [...new Set(match.artistMbids ?? [])];
 
         // A solo match to anyone other than the act that dominates this artist string is a
         // different person who happens to share a name. The title it found is usually right —
@@ -268,7 +406,10 @@ async function main(): Promise<void> {
         // and nothing here is worth applying on the strength of a namesake.
         // A proposal is exempt, because disagreeing with the artist string is the whole point
         // of making one: nine of the venue's `Spice Girls` songs are solo singles.
-        const dominant = match.proposed === undefined ? soleArtist.get(match.artist) : undefined;
+        const dominant =
+            match.proposed === undefined && !proposed.has(match.postId)
+                ? soleArtist.get(match.artist)
+                : undefined;
         const found = artists.get(mbids[0] ?? "");
         if (
             mbids.length === 1 &&
@@ -276,7 +417,7 @@ async function main(): Promise<void> {
             mbids[0] !== dominant &&
             !related(found, artists.get(dominant))
         ) {
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: "credited to a namesake, not to this artist",
                 detail: `MusicBrainz says ${found?.name ?? "another artist"}${
@@ -291,13 +432,12 @@ async function main(): Promise<void> {
         const credited = mbids.map((mbid) => artists.get(mbid)).filter((artist) => artist !== undefined);
         const lead = credited[0];
 
-        // Each distinct artist, comma separated, from their own canonical names. The dump's
-        // credit line is one flattened string of whatever the matched release printed, which
-        // makes two people look like a band with a long name and spells them differently from
-        // one release to the next. It is kept below as data, not shown.
+        // Each distinct artist, comma separated. Names come from artist-names.json when we
+        // have a catalogue-scoped choice, otherwise the MusicBrainz primary (with stylization
+        // rules) — never the venue string.
         const canonical =
             credited.length === mbids.length && credited.length > 0
-                ? credited.map(displayName).join(", ")
+                ? credited.map((artist) => displayName(artist)).join(", ")
                 : match.artistCredit;
 
         // MusicBrainz files songs with no identifiable performer under placeholder
@@ -306,7 +446,7 @@ async function main(): Promise<void> {
         // venue's own string is the better one to show and to sort under.
         const anonymous = canonical !== undefined && /^\[.*\]$/.test(canonical);
         if (anonymous) {
-            review.push({
+            enqueue({
                 ...pick(match),
                 reason: "matched a placeholder entity",
                 detail: `MusicBrainz files this under ${canonical}, which is an id but not a performer`,
@@ -314,18 +454,20 @@ async function main(): Promise<void> {
         }
 
         // Scoping a search to the lead can land on the lead's solo recording, so `Ashanti & Ja
-        // Rule – Happy` becomes Ashanti alone. The canonical names, year and genres are still
-        // a gain over the venue's string, so this is applied and noted rather than withheld.
-        if (match.how === "lead-scoped" && credited.length < match.artist.split(JOIN).length) {
-            review.push({
-                ...pick(match),
-                reason: "matched through the lead artist, which named fewer artists than the venue did",
-                suggestion: `${canonical ?? ""} – ${match.title ?? ""}`,
-            });
-        }
+        // Rule – Happy` becomes Ashanti alone. Title-first can do the same when it accepts a
+        // credit headed by the venue's lead. The canonical names, year and genres are still
+        // applied. Incomplete collaboration credits are fixed via proposals rather than queued
+        // here — the review list is for misses and wrong attributions, not already-usable songs.
 
         const resolved: Resolved = { postId: match.postId };
         if (match.from !== undefined) resolved.from = match.from;
+        const language =
+            (match.recordingMbid === undefined ? undefined : languages.get(match.recordingMbid)) ??
+            match.language;
+        if (language !== undefined) {
+            resolved.language = language;
+            languageCount++;
+        }
         if (!anonymous && canonical !== undefined && canonical !== match.artist) {
             resolved.artist = canonical;
             artistFixes++;
@@ -335,9 +477,21 @@ async function main(): Promise<void> {
         if (!anonymous && lead?.sortName !== undefined) {
             resolved.sortAs = lead.sortName;
         }
-        // `title` rather than `recording`: the matcher has already dropped a trailing marker
-        // that named one master, so a karaoke track is not published as a club mix.
-        const canonicalTitle = match.title ?? match.recording;
+        // Prefer the MusicBrainz work title when it names the same song as the recording.
+        // Fall back to the matcher's published title, then the recording with only mix /
+        // soundtrack markers dropped.
+        const workTitle =
+            match.recordingMbid === undefined ? undefined : workTitles.get(match.recordingMbid);
+        const fromWork =
+            match.recording === undefined
+                ? undefined
+                : publishedTitle(match.recording, workTitle, match.how);
+        // Prefer the matcher's published title (already version-stripped) over a stale
+        // recording string; work title still wins when publishedTitle chose it.
+        const canonicalTitle =
+            fromWork?.source === "work"
+                ? fromWork.title
+                : (match.title ?? fromWork?.title ?? match.recording);
         if (canonicalTitle !== undefined && canonicalTitle !== match.song) {
             resolved.title = canonicalTitle;
             titleFixes++;
@@ -346,7 +500,10 @@ async function main(): Promise<void> {
         // What the artist column is made of, so the page can link each name on its own rather
         // than parsing one back out of a string.
         if (credited.length > 0) {
-            resolved.artists = credited.map((artist) => ({ mbid: artist.mbid, name: displayName(artist) }));
+            resolved.artists = credited.map((artist) => ({
+                mbid: artist.mbid,
+                name: displayName(artist),
+            }));
         }
         // MusicBrainz distinguishes a guest from an equal billing, and the dump flattens that
         // distinction into this line: `feat.`, `duet with`, `vs.`. Keeping it means the
@@ -377,6 +534,7 @@ async function main(): Promise<void> {
     console.log(`  artist names corrected: ${artistFixes}`);
     console.log(`  songs with a genre: ${genreCount}`);
     console.log(`  songs with a year: ${yearCount}`);
+    console.log(`  songs with a language: ${languageCount}`);
     console.log(`  artist named from the artist's other songs, title still unknown: ${artistOnly}`);
 
     await mkdir(dirname(values.out), { recursive: true });
@@ -396,6 +554,36 @@ async function main(): Promise<void> {
     console.log(`Wrote ${values.out}`);
     await writeFile(values.queue, reviewQueue(review), "utf8");
     console.log(`Wrote ${values.queue}`);
+
+    const byPostId = new Map(matches.songs.map((song) => [song.postId, song]));
+    const overridesReviewPath = values["overrides-review"];
+    await writeFile(overridesReviewPath, overridesReview(overrides, byPostId), "utf8");
+    console.log(`Wrote ${overridesReviewPath}`);
+    const proposalsReviewPath = values["proposals-review"];
+    await writeFile(proposalsReviewPath, proposalsReview(proposals, byPostId), "utf8");
+    console.log(`Wrote ${proposalsReviewPath}`);
+}
+
+/** A guess put to the dump in `data/proposals.json`. */
+interface ProposalRecord {
+    postId: number;
+    artist?: string;
+    title?: string;
+    from?: string;
+    language?: string;
+    why: string;
+}
+
+/** A hand correction from `data/overrides.json`. */
+interface OverrideRecord {
+    postId: number;
+    artist?: string;
+    sortAs?: string;
+    title?: string;
+    from?: string;
+    category?: string;
+    language?: string;
+    why?: string;
 }
 
 interface ReviewEntry {
@@ -433,7 +621,7 @@ function reviewQueue(review: ReviewEntry[]): string {
         "A decision here becomes an entry in `data/proposals.json`, keyed by `postId`. A proposal only",
         "adds a key for the matcher to look for, so it applies if MusicBrainz agrees and does nothing at",
         "all if it does not — a wrong guess is cheap. Anything the dump cannot confirm belongs in",
-        "`data/overrides.json` instead.",
+        "`data/overrides.json` instead. Songs already listed there are omitted from this queue.",
         "",
         "## Contents",
         "",
@@ -470,6 +658,110 @@ function reviewQueue(review: ReviewEntry[]): string {
             lines.push("");
         }
     }
+    return `${lines.join("\n").trimEnd()}\n`;
+}
+
+/**
+ * Side-by-side of what the venue filed and what the override decided, so a human can review
+ * hand corrections without diffing JSON against the scrape.
+ */
+function overridesReview(
+    overrides: OverrideRecord[],
+    byPostId: Map<number, MatchRecord>,
+): string {
+    const cell = (value: string): string => value.replace(/\|/g, "\\|").replace(/\n/g, " ");
+    /** Empty string is a deliberate omit; missing field means “leave the venue's”. */
+    const shown = (value: string | undefined, fallback: string): string =>
+        value === undefined ? fallback : value === "" ? "*(empty)*" : value;
+
+    const lines = [
+        "# Override review",
+        "",
+        `${overrides.length} songs, written by \`pnpm build:resolved\` from \`data/overrides.json\` and`,
+        "the venue scrape. Regenerable, so do not edit it — change the override instead.",
+        "",
+        "Each row is what the venue had, then what we show after the override. An empty artist",
+        "means omit a category label rather than invent a performer.",
+        "",
+        "| id | venue artist | venue title | → artist | → title | category | why | postId |",
+        "| -: | --- | --- | --- | --- | --- | --- | -: |",
+    ];
+
+    const rows = [...overrides].sort((a, b) => {
+        const left = byPostId.get(a.postId);
+        const right = byPostId.get(b.postId);
+        return (left?.id ?? a.postId) - (right?.id ?? b.postId);
+    });
+
+    for (const override of rows) {
+        const venue = byPostId.get(override.postId);
+        if (venue === undefined) {
+            lines.push(
+                `| — | — | — | ${cell(shown(override.artist, "—"))} | ${cell(shown(override.title, "—"))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+            );
+            continue;
+        }
+        lines.push(
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(override.artist, venue.artist))} | ${cell(shown(override.title, venue.song))} | ${cell(override.category ?? "")} | ${cell(override.why ?? "")} | ${override.postId} |`,
+        );
+    }
+
+    return `${lines.join("\n").trimEnd()}\n`;
+}
+
+/**
+ * Side-by-side of what the venue filed and what a proposal asked the dump to look for.
+ * `dump` says whether the matcher confirmed it (`yes`), never found it (`no`), or the
+ * proposal never had to win because something else already matched (`—`).
+ */
+function proposalsReview(
+    proposals: ProposalRecord[],
+    byPostId: Map<number, MatchRecord>,
+): string {
+    const cell = (value: string): string => value.replace(/\|/g, "\\|").replace(/\n/g, " ");
+    const shown = (value: string | undefined, fallback: string): string =>
+        value === undefined ? fallback : value === "" ? "*(empty)*" : value;
+    const dumpStatus = (_proposal: ProposalRecord, venue: MatchRecord | undefined): string => {
+        if (venue === undefined || !venue.matched) return "no";
+        if (venue.proposed !== undefined) return "yes";
+        // Proposal exists but another key won — still applied for from/language/title overlay
+        // when present; say so rather than implying the dump rejected the artist guess.
+        return "other";
+    };
+
+    const lines = [
+        "# Proposal review",
+        "",
+        `${proposals.length} songs, written by \`pnpm build:resolved\` from \`data/proposals.json\` and`,
+        "the venue scrape. Regenerable, so do not edit it — change the proposal instead.",
+        "",
+        "Each row is what the venue had, then what the proposal asked MusicBrainz to confirm.",
+        "A proposal only sticks when the dump agrees; `dump` is `yes` when the proposal key won,",
+        "`other` when a different key matched, and `no` when nothing matched.",
+        "",
+        "| id | venue artist | venue title | → artist | → title | from | language | dump | why | postId |",
+        "| -: | --- | --- | --- | --- | --- | --- | --- | --- | -: |",
+    ];
+
+    const rows = [...proposals].sort((a, b) => {
+        const left = byPostId.get(a.postId);
+        const right = byPostId.get(b.postId);
+        return (left?.id ?? a.postId) - (right?.id ?? b.postId);
+    });
+
+    for (const proposal of rows) {
+        const venue = byPostId.get(proposal.postId);
+        if (venue === undefined) {
+            lines.push(
+                `| — | — | — | ${cell(shown(proposal.artist, "—"))} | ${cell(shown(proposal.title, "—"))} | ${cell(proposal.from ?? "")} | ${cell(proposal.language ?? "")} | no | ${cell(proposal.why)} | ${proposal.postId} |`,
+            );
+            continue;
+        }
+        lines.push(
+            `| ${venue.id} | ${cell(venue.artist)} | ${cell(venue.song)} | ${cell(shown(proposal.artist, venue.artist))} | ${cell(shown(proposal.title, venue.song))} | ${cell(proposal.from ?? "")} | ${cell(proposal.language ?? "")} | ${dumpStatus(proposal, venue)} | ${cell(proposal.why)} | ${proposal.postId} |`,
+        );
+    }
+
     return `${lines.join("\n").trimEnd()}\n`;
 }
 

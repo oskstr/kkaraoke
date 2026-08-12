@@ -21,7 +21,10 @@
         "match:canonical": "node --experimental-strip-types scripts/match-canonical.ts",
         "fetch:artists": "node --experimental-strip-types scripts/fetch-artists.ts",
         "fetch:recordings": "node --experimental-strip-types scripts/fetch-recordings.ts",
-        "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts"
+        "fetch:works": "node --experimental-strip-types scripts/fetch-works.ts",
+        "corroborate:titles": "node --experimental-strip-types scripts/corroborate-titles.ts",
+        "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts",
+        "audit:catalogue": "node --experimental-strip-types scripts/audit-catalogue.ts"
     },
     "dependencies": {
         "@astrojs/react": "^6.0.2",

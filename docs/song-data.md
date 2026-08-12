@@ -19,11 +19,15 @@ able to say so.
 
 ## Three layers, and who is allowed to write to them
 
-| File                  | Written by              | Contents                                                          |
-| :-------------------- | :---------------------- | :---------------------------------------------------------------- |
-| `data/songs.json`     | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
-| `data/resolved.json`  | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
-| `data/overrides.json` | humans only             | Review decisions and hand corrections. No script ever writes it.  |
+| File                        | Written by              | Contents                                                          |
+| :-------------------------- | :---------------------- | :---------------------------------------------------------------- |
+| `data/songs.json`           | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
+| `data/resolved.json`        | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
+| `data/artist-names.json`    | humans only             | Catalogue-scoped display names per artist MBID.                   |
+| `data/overrides.json`       | humans only             | Review decisions and hand corrections. No script ever writes it.  |
+| `data/overrides-review.md`  | `pnpm build:resolved`   | Venue vs override side-by-side. Regenerable; do not edit.         |
+| `data/proposals.json`       | humans / agents         | Guesses put to the dump. Applies only when MusicBrainz agrees.    |
+| `data/proposals-review.md`  | `pnpm build:resolved`   | Venue vs proposal side-by-side. Regenerable; do not edit.         |
 
 The site composes the three, with overrides winning. Keeping the machine-written and human-written files apart is
 the whole point: a re-scrape or a re-run must never be able to destroy a review decision. Raw API responses are
@@ -152,16 +156,26 @@ covering 39 songs before an obscure single. Because the agent's confidence is it
 
 30 artist values covering **124 songs**, in three kinds that need different handling.
 
-**Finnish (39, filed under `Finsk musik`).** Real songs by real artists, filed under a language label. With no
-artist to scope the search by, a title-only lookup often cannot decide. _Tested:_ `Myrskyn jälkeen` returns four
-different artists all at score 100. These are `ambiguous` by construction, and that is the correct outcome
-rather than a failure.
+**Finnish (39, filed under `Finsk musik`).** Real songs by real artists, filed under a language label rather than
+a performer. Title-only lookup is ambiguous across the dump (`Myrskyn jälkeen` hits several artists at score 100),
+so the resolution path is a proposal that names the karaoke-standard performer and sets `language: "fin"`.
+`from` is reserved for shows and films — there is no musical called Finsk musik. Other Finnish-language songs
+in the catalogue get the same language code from the MusicBrainz works pass, not only this venue bucket.
 
-**Christmas (19, filed under `Julsång`).** Mostly traditional or 19th-century works — `Stilla natt`,
-`Sankta Lucia`, `Bjällerklang`, `Gläns över sjö och strand`. There is no performer to find, and `O helga natt`
-has a known composer but no canonical performer. These are `not-applicable`, and the data model has to allow a
-song to be a work without a performer rather than have a fake artist forced onto it. One of them, `Jul medley`,
-is not a single work at all.
+**Christmas (19, filed under `Julsång`) and other traditional / category buckets.** Three rules, in order:
+
+1. **If we can establish who originally made the song**, credit that artist (and still keep a `category`
+   such as Christmas when the venue filed it under a bucket).
+2. **If the venue already names a particular artist's rendition** of a traditional song — `Metallica` on
+   `Whiskey in the Jar`, `Stevie Wonder` on `Happy Birthday`, `Louis Armstrong` on `When the Saints` — keep
+   that artist. The track is most likely their version; do not replace it with a “more famous” cover or strip
+   it because the work is traditional.
+3. **If it is traditional and neither of the above applies**, omit the artist. Do not invent Carola or Bing
+   Crosby for `Stilla natt`, and do not leave the artist column as `Julsång`. Use `data/overrides.json` with
+   `category: "Christmas"` (or Midsummer, Birthday, Hymn, Irish traditional, …) and an empty artist.
+
+`Jul medley` is not a single work at all. The same three rules cover midsummer songs, birthday songs, hymns,
+and Irish traditionals filed under category labels.
 
 **Films and musicals (28 values, 66 songs).** `Disney` (13 songs), `Chicago` (5), `Sound of Music` (4),
 `High school musical` (4), `Grease` (3), `Frozen II` (3), `Moulin Rouge` (3), plus `Blues Brothers`,
@@ -506,24 +520,58 @@ where a substitution is not. Inside an artist's own catalogue it finds Madonna's
 
 The queue is [`data/review.md`](../data/review.md), generated with everything else. It is grouped by what is
 wrong, because those are different jobs, and within that by the venue's artist string, largest group first, since
-one decision about `Finsk musik` settles thirty-nine songs and one about `Rozallo` settles one. Each row carries
+one decision about a wrong-attribution cluster settles many songs and one about `Rozallo` settles one. Each row carries
 the `postId` a proposal is keyed by and the `id` on the wall.
 
-460 songs remain, and only a minority of them are string problems:
+Most of what used to look like “obvious typos of famous artists” in that queue were real matching gaps, not
+judgement failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit because the lead was only known from
+other collaborations, `Nanne Grönwall` is filed by MusicBrainz as the mononym `Nanne`, and `Colby Caillat` has no
+other trusted song to fuzzy-match from. A title-first pass, lead indexing from matched collaborations, and a
+second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
+`Finsk musik` rows (real performers, `language: "fin"` — not `from`, which is for shows and films).
+Italian proposals use `language: "ita"` the same way. A library-wide MusicBrainz works pass fills
+`language` for every trusted recording that has a linked work. The queue is down from 460 to **3**:
+two dump-key edge cases (Ayumi Hamasaki’s non-Latin lookup; an unlocateable Debbie Smith-Tebay cut)
+and one Carola title that is not in the canonical dump under that credit.
 
-| Songs | What it is                                                                                                                                                                              |
-| ----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   308 | The artist string is not an artist. `Finsk musik` (39), `Julsång` (19), `Italian` (15) — categories used where a performer should be, which want the same treatment as the shows below. |
-|    83 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                                                  |
-|    27 | A prefix match too weak to apply.                                                                                                                                                       |
-|    26 | Matched through the lead artist, with a collaborator dropped.                                                                                                                           |
-|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                                                |
-|     3 | Credited to a namesake.                                                                                                                                                                 |
+| Songs | What it is                                                                                                                                              |
+| ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    82 | The artist string is not an artist. `Julsång` (19) still dominates; Finnish and Italian were proposed and dump-confirmed.                               |
+|    50 | The artist is known and has no such title, which usually means the venue credited the wrong performer.                                                  |
+|    50 | Matched through the lead artist (or title-first via the lead), with a collaborator dropped.                                                             |
+|    28 | A prefix match too weak to apply.                                                                                                                       |
+|    13 | MusicBrainz files it under a bracketed placeholder, which is a real id but not a person.                                                                |
+|     3 | Credited to a namesake.                                                                                                                                 |
 
-The 83 are the interesting group and the reason the review reasons distinguish them. No amount of
-better string matching reaches them, because the strings are not wrong — the attribution is.
-Fixing one means identifying the song some other way and then overruling the venue, which is what
-the proposal layer below is for.
+The interesting residual group is still wrong attribution — the strings are fine, the performer is not — which is
+what the proposal layer below is for.
+
+## Titles that name the film they came from
+
+A prefix match onto `Girls Talk Boys (from "Ghostbusters" original motion picture soundtrack)` was grading as a
+version match and then publishing the soundtrack annotation as the title. `from` is now treated as a version
+marker alongside mix/remix/live, so the published title is `Girls Talk Boys` and the film is recorded in `from`.
+
+The same leakage happens on the artist column: `Enya (fellowship Of The Ring Soundtrack)` is Enya, from
+The Fellowship of the Ring. Parentheses that look like soundtrack/film notes are stripped from the artist
+string before matching (while `Chess (Linda Eder)` is left alone, because that names a performer).
+
+## Title-first, for artists with no other trusted song
+
+Pass 2 can only scope by an artist it has already identified. A misspelled solo artist with one song —
+`Alannah Miles`, `Colby Caillat`, `Art Garfunkle` — never gets there. The title-first pass starts from an exact
+title and asks whether the dump credit is close enough to the venue's artist string (edit distance, shared
+prefix for mononyms like `Nanne`, or a lead that heads the credit). Short titles stay stricter, because `Go` and
+`Stay` collide constantly.
+
+Matched collaborations now also teach their lead: once `Clean Bandit feat. Sean Paul & Anne-Marie` matches,
+`Clean Bandit ft Zara Larssn` can be lead-scoped. After title-first identifies new artists, a second scoped pass
+picks up the rest of their catalogue — that is how `Kygo – Higher love` lands once Firestone has named Kygo.
+
+Wrong billing order is a separate failure: `Ed Sheeran Ft. Eminem – River` is Eminem feat. Ed Sheeran on the
+dump, so lead-scoping rejects it. When two or more named fragments are already known, a collab-scoped pass
+requires every one of them on the credit and ignores order — which also needs the featured artists from earlier
+matches to be indexed from the credit line (`Bruno Mars ft Cardi B` → Cardi B).
 
 ## Who works the review queue
 
@@ -587,12 +635,15 @@ song, and `Julsång` wants the same treatment rather than an invented performer.
 
 - **Which recording the venue's backing track imitates.** `Edelweiss` verified as Julie Andrews,
   but von Trapp sings it in the film. Both are real; only the venue knows which its track is.
-- **The traditional repertoire.** `Julsång` (19 songs) and `Italian` (15) are mostly carols and
-  Neapolitan standards with no single performer to find. Inventing one would be worse than
-  leaving the label alone; these want a category, not an artist.
+- **Which cover to invent for a traditional work.** Dump credits for `Stilla natt` run to hundreds of artists.
+  Picking one is not a lookup. Category buckets like `Julsång` get an empty artist and a `category` in
+  overrides. When the venue already named a rendition, that name stays. When the original artist is
+  dump-confirmable, that name is used. Italian and Finnish venue buckets were resolvable to real singers with
+  `language: "ita"` / `"fin"`.
 
 So the division is: the agent proposes and the dump adjudicates, the venue rules on intent, and
-`data/overrides.json` stays the place for anything the dump cannot confirm but a human knows.
+`data/overrides.json` stays the place for anything the dump cannot confirm but a human (or an
+open-web check) knows — including real commercial tracks MusicBrainz simply lacks or keys oddly.
 
 ## A collaboration is its artists, not a band with a long name
 
@@ -621,13 +672,14 @@ never displayed. Recovering the distinction properly means asking the web servic
 credits, which returns each artist with its join phrase; that is a later enrichment pass, not a
 parsing problem.
 
-### A name has to be typeable
+### A name has to be known for these songs
 
-MusicBrainz's canonical name is the artist's own preferred one, which for `Άννα Βίσση` and
-`鄭秀文` is written in a script nobody in the room can type. Where the canonical name has no
-Latin letters at all, a Latin alias is the usable name, and MusicBrainz lists Anna Vissi and
-Sammi Cheng among them. A symbol is not a script, so `98°`, `A★Teens` and `Florence + the
-Machine` keep theirs.
+MusicBrainz's primary is today's preferred form (`Ye`, `JAŸ-Z`), which is wrong for a room full
+of 2000s karaoke. `data/artist-names.json` maps artist MBIDs to the catalogue-scoped display
+name — what these songs are well known under (Kanye West, Jackson 5, Ian Dury & the Blockheads).
+The venue string is never consulted. Unmapped artists keep the primary, except that stylized
+letters prefer a plain alias (`JAŸ-Z` → `Jay-Z`) and symbols stay (`A★Teens`, `98°`). Where the
+primary has no Latin letters at all, a Latin alias is the usable name (Anna Vissi, Sammi Cheng).
 
 ## Reaching a collaboration through its lead
 
@@ -657,12 +709,17 @@ A prefix match onto a bracketed suffix was applying that suffix as the title, so
 was also dating those songs from the remix, which is the very error the dating pass exists to
 avoid.
 
-The suffix cannot simply be dropped, because plenty of them are the title: `Exhale (Shoop
-Shoop)`, `The Ketchup Song (Aserejé)`, `Ain't Goin' Down ('til the Sun Comes Up)`. What
-separates them is whether the bracket names a master — mix, remix, instrumental, acoustic, live,
-karaoke, backing track, reprise and so on — so that is the test, and it is applied once in the
-matcher so that the title shown and the title dated cannot drift apart. 52 titles lose a marker;
-the genuine subtitles keep theirs.
+**Prefer the MusicBrainz work title** when `pnpm fetch:works` has linked the recording to a work
+and that work names the same song (punctuation, articles, spelling, or a subtitle expansion).
+That is the song entity; the dump's recording title is often a particular master. Incompatible
+work links (covers of differently-named works, truncated `…` titles, renamed works like
+`Faith of the Heart` / `Where My Heart Will Take Me`) keep the recording title.
+
+When there is no usable work title, only mix/soundtrack-style markers are dropped from the
+recording string. Bare years and concert place/date brackets are **not** stripped by regex —
+those need a work title, an override, or a separate-source check (`pnpm corroborate:titles`
+against Discogs and Deezer). Subtitles that are part of the name stay:
+`Exhale (Shoop Shoop)`, `The Ketchup Song (Aserejé)`.
 
 ## Order of work
 
@@ -683,18 +740,42 @@ Done, and live on the site:
 6. **Reach a collaboration through its lead**, where the venue wrote several artists into one string. 95 songs, and
    it corrects the venue inside the collaboration too: `Wyclef Sean` is Wyclef Jean.
 7. **Propose, and let the dump adjudicate**, for the songs no rewriting reaches. 48 of a 54-proposal pilot were
-   confirmed and applied; the 6 that were not changed nothing.
+   confirmed and applied; the 6 that were not changed nothing. A later pass added further proposals for remaining
+   review-queue songs (title typos, wrong attributions, shows filed as artists); the dump confirmed most of them.
+8. **Title-first and re-scope.** Exact title plus a close-enough artist credit recovers misspelled artists with no
+   other trusted song; indexing leads from matched collaborations and re-scoping after title-first recovers the
+   rest of those artists' catalogues. Soundtrack `(from …)` suffixes are stripped from published titles.
 
-That places 5589 of 5915 songs: 4098 corrected titles, 1383 corrected artist names, 4757 with genres, 5436 dated.
+That places the large majority of the catalogue: corrected titles and artists, genres, and dates where the dump
+and web service agree. Regenerated counts live in `data/review.md` and the matcher's own summary.
 
 Still to do:
 
-8. Work [`data/review.md`](../data/review.md), biggest group first, into `data/proposals.json` where the dump can
-   confirm a guess and into `data/overrides.json` where it cannot.
-9. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
-   phrase rather than by parsing the flattened credit line the dump provides.
-10. Works and composers, for the songs where the writer matters more than the performer.
-11. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
+9. Work what remains in [`data/review.md`](../data/review.md), biggest group first — into
+   `data/proposals.json` where the dump can confirm a real artist, and into `data/overrides.json`
+   where it cannot. **Absence from the dump is not absence from the world:** confirm leftovers on
+   the open web (Wikipedia, press, Spotify, Discogs, …) before treating them as unresolvable.
+   `Det är bara vi` (Carola, 2010 royal wedding) and `walking proud` (Ayumi Hamasaki) are real and
+   live in overrides for exactly that reason. Traditional buckets (`Julsång` and the like) already
+   use overrides with a `category` and an omitted artist; do not re-propose cover singers for them.
+10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
+    phrase rather than by parsing the flattened credit line the dump provides.
+11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
+    canonical recording dump — so a full works dump (or `pnpm fetch:works` against recording MBIDs) is
+    required. Prefer a works dump when one is available; the API pass is correct but slow. Language
+    already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
+    Work **titles** from the same pass are preferred over dump recording titles when they name the
+    same song. `from` stays reserved for shows and films; broader buckets such as Disney films, Bond
+    themes, Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` /
+    `category` (Christmas and other traditionals already use `category` in overrides), not as
+    fake performers.
+12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
+    resolved song against **Deezer** and **Discogs** (Discogs is on
+    [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases);
+    Deezer stands in where iTunes Search is blocked from this environment). It writes
+    `data/corroboration.json` and a review markdown for songs neither source agrees with —
+    it never invents overrides. Use that list for open-web follow-up.
+13. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
