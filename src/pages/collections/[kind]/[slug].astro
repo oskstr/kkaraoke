@@ -11,6 +11,7 @@ import {
     sortSongVariants,
     type CollectionKind,
 } from "../../../lib/catalogue";
+import { categoriesForSong } from "../../../lib/categories";
 import { getSongs, slugify } from "../../../lib/songs";
 
 export function getStaticPaths() {
@@ -24,8 +25,8 @@ export function getStaticPaths() {
                 keys.add(String(Math.floor(song.year / 10) * 10));
             } else if (kind === "genre") {
                 for (const g of song.genres ?? []) keys.add(g);
-            } else if (kind === "category" && song.category) {
-                keys.add(song.category);
+            } else if (kind === "category") {
+                for (const c of categoriesForSong(song)) keys.add(c);
             } else if (kind === "from" && song.from) {
                 keys.add(song.from);
             } else if (kind === "lang" && song.language) {

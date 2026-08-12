@@ -46,7 +46,9 @@ export interface Song {
     /**
      * A search category that is not a show and not a performer — Christmas carols filed
      * under `Julsång`, birthday songs, hymns, and so on. Prefer this (and an empty artist)
-     * over inventing a cover singer for traditional material.
+     * over inventing a cover singer for traditional material. Umbrella browse categories
+     * such as Disney / James Bond / Musical are also derived from `from` — see
+     * `src/lib/categories.ts`.
      */
     category?: string;
     /** ISO 639-3 lyrics language from the MusicBrainz work, where known. */

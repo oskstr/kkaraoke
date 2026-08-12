@@ -767,8 +767,10 @@ Still to do:
     Work **titles** from the same pass are preferred over dump recording titles when they name the
     same song. `from` stays reserved for shows and films; broader buckets such as Disney films, Bond
     themes, Eurovision, Melodifestivalen, and Christmas belong as search categories built from `from` /
-    `category` (Christmas and other traditionals already use `category` in overrides), not as
-    fake performers.
+    `category`, not as fake performers. Christmas (traditionals and credited hits) uses
+    `category` in overrides. Disney, James Bond, and Musical are derived in
+    `src/lib/categories.ts` from known `from` values (a song can sit in more than one umbrella
+    while still keeping its specific film/show under Film & musical).
 12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
     resolved song against **Deezer** and **Discogs** (Discogs is on
     [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases);

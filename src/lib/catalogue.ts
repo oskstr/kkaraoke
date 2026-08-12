@@ -1,3 +1,7 @@
+import {
+    categoriesForSong,
+    songBelongsToCategory,
+} from "./categories";
 import { getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
 
 /** Swedish collation — å, ä, ö after z. */
@@ -150,8 +154,10 @@ export function featuredTiles(songs: Song[]): BrowseTile[] {
         { kind: "lang", key: "swe" },
         { kind: "genre", key: "pop" },
         { kind: "decade", key: "1970" },
+        { kind: "category", key: "Disney" },
         { kind: "from", key: "Grease" },
-        { kind: "from", key: "High School Musical" },
+        { kind: "category", key: "Musical" },
+        { kind: "category", key: "James Bond" },
         { kind: "category", key: "Birthday" },
     ];
 
@@ -223,7 +229,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
     }
 
     if (facet === "occasion") {
-        const cats = uniqueSorted(songs.map((s) => s.category).filter((c): c is string => Boolean(c)));
+        const cats = uniqueSorted(songs.flatMap((s) => categoriesForSong(s)));
         return {
             mode: "tiles",
             tiles: cats.map((c) => ({
@@ -280,7 +286,7 @@ export function songMatchesCollection(song: Song, kind: CollectionKind, key: str
         return (song.genres ?? []).some((g) => g === key);
     }
     if (kind === "category") {
-        return song.category === key;
+        return songBelongsToCategory(song, key);
     }
     if (kind === "from") {
         return song.from === key;
@@ -326,15 +332,13 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
         }));
     }
     if (kind === "category") {
-        return uniqueSorted(songs.map((s) => s.category).filter((c): c is string => Boolean(c))).map(
-            (c) => ({
-                kind,
-                key: c,
-                label: collectionLabel(kind, c),
-                tint: tintFor(kind, c),
-                ...collectionTransitionNames(kind, c),
-            }),
-        );
+        return uniqueSorted(songs.flatMap((s) => categoriesForSong(s))).map((c) => ({
+            kind,
+            key: c,
+            label: collectionLabel(kind, c),
+            tint: tintFor(kind, c),
+            ...collectionTransitionNames(kind, c),
+        }));
     }
     if (kind === "from") {
         return uniqueSorted(songs.map((s) => s.from).filter((f): f is string => Boolean(f))).map((f) => ({
@@ -496,6 +500,8 @@ export interface SearchSong {
     artist: string;
     from?: string;
     category?: string;
+    /** Explicit + derived umbrella categories (Disney, James Bond, Musical, …). */
+    categories?: string[];
     year?: number;
     genres?: string[];
     language?: string;
@@ -504,22 +510,31 @@ export interface SearchSong {
 }
 
 export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
-    return mergeSongVariants(songs).map((song) => ({
-        id: song.id,
-        ids: song.ids,
-        title: song.song,
-        artist: song.artist,
-        ...(song.from === undefined ? {} : { from: song.from }),
-        ...(song.category === undefined ? {} : { category: song.category }),
-        ...(song.year === undefined ? {} : { year: song.year }),
-        ...(song.genres === undefined || song.genres.length === 0 ? {} : { genres: song.genres }),
-        ...(song.language === undefined ? {} : { language: song.language }),
-        ...(song.artists === undefined || song.artists.length === 0
-            ? {}
-            : {
-                  artists: song.artists.map((a) => ({ name: a.name, slug: a.slug })),
-              }),
-    }));
+    return mergeSongVariants(songs).map((song) => {
+        const categories = categoriesForSong(song);
+        return {
+            id: song.id,
+            ids: song.ids,
+            title: song.song,
+            artist: song.artist,
+            ...(song.from === undefined ? {} : { from: song.from }),
+            // Prefer the explicit category for display; fall back to a derived umbrella.
+            ...(song.category !== undefined
+                ? { category: song.category }
+                : categories[0] !== undefined
+                  ? { category: categories[0] }
+                  : {}),
+            ...(categories.length > 0 ? { categories } : {}),
+            ...(song.year === undefined ? {} : { year: song.year }),
+            ...(song.genres === undefined || song.genres.length === 0 ? {} : { genres: song.genres }),
+            ...(song.language === undefined ? {} : { language: song.language }),
+            ...(song.artists === undefined || song.artists.length === 0
+                ? {}
+                : {
+                      artists: song.artists.map((a) => ({ name: a.name, slug: a.slug })),
+                  }),
+        };
+    });
 }
 
 export function matchesQuery(song: SearchSong, query: string): boolean {
@@ -528,7 +543,14 @@ export function matchesQuery(song: SearchSong, query: string): boolean {
     if (/^\d+$/.test(q) && song.ids.some((id) => String(id).startsWith(q))) {
         return true;
     }
-    return [song.title, song.artist, song.from, song.category, ...(song.genres ?? [])]
+    return [
+        song.title,
+        song.artist,
+        song.from,
+        song.category,
+        ...(song.categories ?? []),
+        ...(song.genres ?? []),
+    ]
         .filter(Boolean)
         .join(" ")
         .toLowerCase()
