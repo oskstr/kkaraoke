@@ -5,13 +5,28 @@ import FavoriteButton, { useFavorites } from "./FavoriteButton";
 import type { SearchSong } from "../lib/catalogue";
 import { getSearchIndex } from "../lib/search-index";
 
-function subtitle(song: SearchSong): string {
-    const bits: string[] = [];
-    if (song.artist) bits.push(song.artist);
-    else if (song.category) bits.push(song.category);
-    if (song.from) bits.push(song.from);
-    if (song.year) bits.push(String(song.year));
-    return bits.join(" · ");
+function SongSubtitle({ song }: { song: SearchSong }) {
+    const meta = [song.from, song.year ? String(song.year) : null].filter(Boolean);
+    if (song.artists && song.artists.length > 0) {
+        return (
+            <>
+                {song.artists.map((artist, index) => (
+                    <span key={artist.slug}>
+                        {index > 0 && ", "}
+                        <a
+                            href={`/artists/${artist.slug}`}
+                            className="text-muted no-underline hover:text-cream-soft"
+                        >
+                            {artist.name}
+                        </a>
+                    </span>
+                ))}
+                {meta.length > 0 && <span> · {meta.join(" · ")}</span>}
+            </>
+        );
+    }
+    const bits = [song.category, ...meta].filter(Boolean);
+    return bits.length > 0 ? <>{bits.join(" · ")}</> : null;
 }
 
 export default function FavoritesApp() {
@@ -63,13 +78,12 @@ export default function FavoritesApp() {
         <div>
             {rows.map((song) => (
                 <div key={song.id} className="flex items-center gap-2.5 border-b border-line py-3">
-                    <a
-                        href={song.artistSlug ? `/artists/${song.artistSlug}` : "/"}
-                        className="flex min-h-11 flex-1 flex-col justify-center text-left text-cream no-underline hover:text-cream"
-                    >
-                        <div className="text-[15.5px] leading-snug">{song.title}</div>
-                        <div className="mt-0.5 text-[13px] text-muted">{subtitle(song)}</div>
-                    </a>
+                    <div className="flex min-h-11 flex-1 flex-col justify-center text-left">
+                        <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
+                        <div className="mt-0.5 text-[13px] text-muted">
+                            <SongSubtitle song={song} />
+                        </div>
+                    </div>
                     <FavoriteButton songId={song.id} />
                 </div>
             ))}

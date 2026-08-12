@@ -2,8 +2,6 @@
 
 export {};
 
-import { navigate } from "astro:transitions/client";
-
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
     if (!ref) return false;
@@ -43,72 +41,19 @@ function markNavigated(): void {
     sessionStorage.setItem("kkaraoke:navigated", "1");
 }
 
-async function waitForViewTransitions(): Promise<void> {
-    const animations = document.getAnimations?.() ?? [];
-    if (animations.length === 0) return;
-    await Promise.all(animations.map((animation) => animation.finished.catch(() => undefined)));
-}
-
-function unlockSearchInput(): void {
-    const input = document.querySelector<HTMLInputElement>("[data-search-input]");
-    if (!input) return;
-    if (location.pathname.startsWith("/search")) {
-        input.removeAttribute("readonly");
-    } else {
-        input.setAttribute("readonly", "");
-    }
-}
-
-async function focusSearchInput(): Promise<void> {
+function focusSearchInput(): void {
     if (!location.pathname.startsWith("/search")) return;
     const input = document.querySelector<HTMLInputElement>("[data-search-input]");
     if (!input) return;
-
-    unlockSearchInput();
-    await waitForViewTransitions();
-
-    for (const delay of [0, 40, 120, 280]) {
-        if (delay > 0) {
-            await new Promise((resolve) => setTimeout(resolve, delay));
-        }
-        input.focus({ preventScroll: true });
-        if (document.activeElement === input) {
-            const len = input.value.length;
-            try {
-                input.setSelectionRange(len, len);
-            } catch {
-                /* type=search */
-            }
-            return;
-        }
-    }
+    // Sync focus inside after-swap keeps iOS user-gesture context better than delayed retries.
+    input.focus({ preventScroll: true });
 }
 
-let openingSearch = false;
-
-function openSearchFromBrowse(event: Event): void {
-    if (location.pathname.startsWith("/search") || openingSearch) return;
+function onSearchLaunch(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
-    const launch = target.closest<HTMLElement>("[data-search-launch], [data-search-input]");
-    if (!launch) return;
-
-    // Keep the persisted input focused across the route change.
-    event.preventDefault();
-    openingSearch = true;
+    if (!target.closest("[data-search-launch]")) return;
     sessionStorage.setItem("kkaraoke:focus-search", "1");
-    void navigate("/search").finally(() => {
-        openingSearch = false;
-    });
-}
-
-async function maybeFocusAfterNav(): Promise<void> {
-    unlockSearchInput();
-    const forced = sessionStorage.getItem("kkaraoke:focus-search") === "1";
-    if (forced) sessionStorage.removeItem("kkaraoke:focus-search");
-    if (forced || location.pathname.startsWith("/search")) {
-        await focusSearchInput();
-    }
 }
 
 declare global {
@@ -120,15 +65,22 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
-    document.addEventListener("pointerdown", openSearchFromBrowse, true);
-    document.addEventListener("focusin", openSearchFromBrowse, true);
-    document.addEventListener("astro:after-swap", markNavigated);
-    document.addEventListener("astro:page-load", () => {
-        unlockSearchInput();
-        void maybeFocusAfterNav();
-    });
+    document.addEventListener("pointerdown", onSearchLaunch, true);
+
     document.addEventListener("astro:after-swap", () => {
-        unlockSearchInput();
-        void maybeFocusAfterNav();
+        markNavigated();
+        if (
+            sessionStorage.getItem("kkaraoke:focus-search") === "1" ||
+            location.pathname.startsWith("/search")
+        ) {
+            sessionStorage.removeItem("kkaraoke:focus-search");
+            focusSearchInput();
+        }
+    });
+
+    document.addEventListener("astro:page-load", () => {
+        if (location.pathname.startsWith("/search")) {
+            focusSearchInput();
+        }
     });
 }

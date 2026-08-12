@@ -37,7 +37,7 @@ const inputId = "catalogue-search-input";
         <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
             <div class="flex items-center gap-2.5">
                 <label
-                    class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3"
+                    class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3.5"
                     transition:name="search-field"
                     transition:animate="initial"
                     for={inputId}
@@ -58,20 +58,20 @@ const inputId = "catalogue-search-input";
                         type="search"
                         name="q"
                         placeholder="Songs, artists, films"
-                        class="flex-1 border-0 bg-transparent text-[15px] text-cream outline-none placeholder:text-muted"
+                        class="min-w-0 flex-1 border-0 bg-transparent text-base leading-normal text-cream outline-none placeholder:text-muted"
+                        style="font-size: 16px;"
                         autocomplete="off"
                         autocorrect="off"
                         spellcheck="false"
                         enterkeyhint="search"
-                        data-search-input
-                        transition:persist="catalogue-search-input"
                         autofocus
+                        data-search-input
                     />
                 </label>
                 <a
                     href="/"
                     data-smart-back
-                    class="bg-transparent px-1 py-1 text-[14.5px] text-[#9A9086] no-underline hover:text-[#C6BDB1]"
+                    class="bg-transparent px-1 py-1 text-base text-[#9A9086] no-underline hover:text-[#C6BDB1]"
                 >
                     Cancel
                 </a>

@@ -1,18 +1,37 @@
 ---
+import type { CreditedArtist } from "../lib/songs";
+
 interface Props {
     songId: number;
     title: string;
-    subtitle: string;
-    href?: string;
-    /** When true, title is not a link (artist page). */
-    staticTitle?: boolean;
+    /** Plain subtitle when not linking individual artists (e.g. artist page meta). */
+    subtitle?: string;
+    artists?: CreditedArtist[];
+    from?: string;
+    year?: number;
+    category?: string;
+    /** When true, don't link artist names (already on an artist page). */
+    hideArtistLink?: boolean;
     titleAttr?: string;
     artistAttr?: string;
     yearAttr?: string;
 }
 
-const { songId, title, subtitle, href, staticTitle = false, titleAttr, artistAttr, yearAttr } =
-    Astro.props;
+const {
+    songId,
+    title,
+    subtitle,
+    artists = [],
+    from,
+    year,
+    category,
+    hideArtistLink = false,
+    titleAttr,
+    artistAttr,
+    yearAttr,
+} = Astro.props;
+
+const metaBits = [from, year !== undefined ? String(year) : null].filter(Boolean);
 ---
 
 <div
@@ -21,19 +40,38 @@ const { songId, title, subtitle, href, staticTitle = false, titleAttr, artistAtt
     data-artist={artistAttr ?? ""}
     data-year={yearAttr ?? ""}
 >
-    {
-        staticTitle || !href ? (
-            <div class="flex min-h-11 flex-1 flex-col justify-center">
-                <div class="text-[15.5px] leading-snug text-cream">{title}</div>
-                {subtitle && <div class="mt-0.5 text-[13px] text-muted">{subtitle}</div>}
-            </div>
-        ) : (
-            <a href={href} class="flex min-h-11 flex-1 flex-col justify-center text-left no-underline">
-                <div class="text-[15.5px] leading-snug text-cream">{title}</div>
-                {subtitle && <div class="mt-0.5 text-[13px] text-muted">{subtitle}</div>}
-            </a>
-        )
-    }
+    <div class="flex min-h-11 flex-1 flex-col justify-center">
+        <div class="text-[15.5px] leading-snug text-cream">{title}</div>
+        <div class="mt-0.5 text-[13px] text-muted">
+            {
+                hideArtistLink ? (
+                    subtitle
+                ) : artists.length > 0 ? (
+                    <>
+                        {artists.map((artist, index) => (
+                            <>
+                                {index > 0 && <span>, </span>}
+                                <a
+                                    href={`/artists/${artist.slug}`}
+                                    class="text-muted no-underline hover:text-cream-soft"
+                                >
+                                    {artist.name}
+                                </a>
+                            </>
+                        ))}
+                        {metaBits.length > 0 && <span> · {metaBits.join(" · ")}</span>}
+                    </>
+                ) : (
+                    <>
+                        {category && <span>{category}</span>}
+                        {category && metaBits.length > 0 && <span> · </span>}
+                        {metaBits.length > 0 && <span>{metaBits.join(" · ")}</span>}
+                        {!category && metaBits.length === 0 && subtitle}
+                    </>
+                )
+            }
+        </div>
+    </div>
     <button
         type="button"
         data-fav-toggle={songId}

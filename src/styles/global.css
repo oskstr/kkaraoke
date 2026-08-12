@@ -38,7 +38,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Don't force gold on every anchor — selected pills need cream/dark contrast. */
 a {
     text-decoration: none;
 }
@@ -62,6 +61,8 @@ button {
 
 input {
     font-family: inherit;
+    /* iOS Safari zooms any focused field under 16px */
+    font-size: 16px;
 }
 
 .hd {
@@ -77,10 +78,9 @@ input {
     contain-intrinsic-size: auto 68px;
 }
 
-/* Root page crossfade stays short; named morph groups use the browser default geometry tween. */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 220ms;
+    animation-duration: 200ms;
 }
 
 ::view-transition-group(*) {
@@ -88,12 +88,22 @@ input {
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-::view-transition-old(*),
-::view-transition-new(*) {
+/* Color chrome: fill the morphing box. */
+::view-transition-old(.coll-chrome),
+::view-transition-new(.coll-chrome) {
     object-fit: cover;
-    overflow: hidden;
+    overflow: clip;
     height: 100%;
     width: 100%;
+}
+
+/* Titles: don't stretch glyph bitmaps during the size tween. */
+::view-transition-old(.coll-title),
+::view-transition-new(.coll-title) {
+    object-fit: none;
+    overflow: visible;
+    height: auto;
+    width: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

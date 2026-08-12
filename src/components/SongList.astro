@@ -1,6 +1,6 @@
 ---
 import SongRow from "./SongRow.astro";
-import { primaryArtistHref, songMeta, songSubtitle } from "../lib/catalogue";
+import { songMeta } from "../lib/catalogue";
 import type { Song } from "../lib/songs";
 
 interface Props {
@@ -40,14 +40,17 @@ const {
     ) : (
         <div data-song-list={sortable ? "" : undefined}>
             {songs.map((song) => {
-                const href = hideArtistLink ? undefined : primaryArtistHref(song);
+                const meta = hideArtistLink ? songMeta(song) : undefined;
                 return (
                     <SongRow
                         songId={song.id}
                         title={song.song}
-                        subtitle={hideArtistLink ? songMeta(song) : songSubtitle(song)}
-                        {...(href === undefined ? {} : { href })}
-                        staticTitle={hideArtistLink}
+                        {...(meta ? { subtitle: meta } : {})}
+                        {...(song.artists ? { artists: song.artists } : {})}
+                        {...(song.from ? { from: song.from } : {})}
+                        {...(song.year !== undefined ? { year: song.year } : {})}
+                        {...(song.category ? { category: song.category } : {})}
+                        hideArtistLink={hideArtistLink}
                         titleAttr={song.song}
                         artistAttr={song.artist || song.category || ""}
                         yearAttr={song.year !== undefined ? String(song.year) : ""}

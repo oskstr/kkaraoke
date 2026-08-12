@@ -120,19 +120,39 @@ function decadeLabel(decade: string): string {
     return `${decade.slice(2)}s`;
 }
 
+/** Display label for a collection — must match tile text for view-transition morphs. */
+export function collectionLabel(kind: CollectionKind, key: string): string {
+    if (kind === "decade") return decadeLabel(key);
+    if (kind === "lang") return LANGUAGE_LABELS[key] ?? key;
+    if (kind === "genre") return titleCaseGenre(key);
+    return key;
+}
+
+function titleCaseGenre(genre: string): string {
+    const special: Record<string, string> = {
+        "r&b": "R&B",
+        "hip hop": "Hip hop",
+        "drum and bass": "Drum and bass",
+        "a cappella": "A cappella",
+    };
+    const lower = genre.toLowerCase();
+    if (special[lower]) return special[lower]!;
+    return lower.replace(/\b([a-z])/g, (ch) => ch.toUpperCase());
+}
+
 /** Curated home tiles that map onto real catalogue filters. */
 export function featuredTiles(songs: Song[]): BrowseTile[] {
-    const curated: { label: string; kind: CollectionKind; key: string }[] = [
-        { label: "80s", kind: "decade", key: "1980" },
-        { label: "Christmas", kind: "category", key: "Christmas" },
-        { label: "90s", kind: "decade", key: "1990" },
-        { label: "Rock", kind: "genre", key: "rock" },
-        { label: "Swedish", kind: "lang", key: "swe" },
-        { label: "Pop", kind: "genre", key: "pop" },
-        { label: "70s", kind: "decade", key: "1970" },
-        { label: "Grease", kind: "from", key: "Grease" },
-        { label: "High School Musical", kind: "from", key: "High School Musical" },
-        { label: "Birthday", kind: "category", key: "Birthday" },
+    const curated: { kind: CollectionKind; key: string }[] = [
+        { kind: "decade", key: "1980" },
+        { kind: "category", key: "Christmas" },
+        { kind: "decade", key: "1990" },
+        { kind: "genre", key: "rock" },
+        { kind: "lang", key: "swe" },
+        { kind: "genre", key: "pop" },
+        { kind: "decade", key: "1970" },
+        { kind: "from", key: "Grease" },
+        { kind: "from", key: "High School Musical" },
+        { kind: "category", key: "Birthday" },
     ];
 
     return curated
@@ -140,7 +160,7 @@ export function featuredTiles(songs: Song[]): BrowseTile[] {
         .map((tile) => {
             const names = collectionTransitionNames(tile.kind, tile.key);
             return {
-                label: tile.label,
+                label: collectionLabel(tile.kind, tile.key),
                 href: collectionPath(tile.kind, tile.key),
                 tint: tintFor(tile.kind, tile.key),
                 kind: tile.kind,
@@ -165,7 +185,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
         return {
             mode: "tiles",
             tiles: decades.map((d) => ({
-                label: decadeLabel(d),
+                label: collectionLabel("decade", d),
                 href: collectionPath("decade", d),
                 tint: tintFor("decade", d),
                 kind: "decade" as const,
@@ -192,7 +212,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
         return {
             mode: "tiles",
             tiles: genres.map((g) => ({
-                label: g,
+                label: collectionLabel("genre", g),
                 href: collectionPath("genre", g),
                 tint: tintFor("genre", g),
                 kind: "genre" as const,
@@ -207,7 +227,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
         return {
             mode: "tiles",
             tiles: cats.map((c) => ({
-                label: c,
+                label: collectionLabel("category", c),
                 href: collectionPath("category", c),
                 tint: tintFor("category", c),
                 kind: "category" as const,
@@ -222,7 +242,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
         return {
             mode: "list",
             tiles: films.map((f) => ({
-                label: f,
+                label: collectionLabel("from", f),
                 href: collectionPath("from", f),
                 tint: tintFor("from", f),
                 kind: "from" as const,
@@ -238,7 +258,7 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
     return {
         mode: "list",
         tiles: langs.map((l) => ({
-            label: LANGUAGE_LABELS[l] ?? l,
+            label: collectionLabel("lang", l),
             href: collectionPath("lang", l),
             tint: tintFor("lang", l),
             kind: "lang" as const,
@@ -290,7 +310,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
         ).map((d) => ({
             kind,
             key: d,
-            label: decadeLabel(d),
+            label: collectionLabel(kind, d),
             tint: tintFor(kind, d),
             ...collectionTransitionNames(kind, d),
         }));
@@ -300,7 +320,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
         return genres.map((g) => ({
             kind,
             key: g,
-            label: g,
+            label: collectionLabel(kind, g),
             tint: tintFor(kind, g),
             ...collectionTransitionNames(kind, g),
         }));
@@ -310,7 +330,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
             (c) => ({
                 kind,
                 key: c,
-                label: c,
+                label: collectionLabel(kind, c),
                 tint: tintFor(kind, c),
                 ...collectionTransitionNames(kind, c),
             }),
@@ -320,7 +340,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
         return uniqueSorted(songs.map((s) => s.from).filter((f): f is string => Boolean(f))).map((f) => ({
             kind,
             key: f,
-            label: f,
+            label: collectionLabel(kind, f),
             tint: tintFor(kind, f),
             ...collectionTransitionNames(kind, f),
         }));
@@ -328,7 +348,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
     return uniqueSorted(songs.map((s) => s.language).filter((l): l is string => Boolean(l))).map((l) => ({
         kind,
         key: l,
-        label: LANGUAGE_LABELS[l] ?? l,
+        label: collectionLabel(kind, l),
         tint: tintFor(kind, l),
         ...collectionTransitionNames(kind, l),
     }));
@@ -404,7 +424,8 @@ export interface SearchSong {
     year?: number;
     genres?: string[];
     language?: string;
-    artistSlug?: string;
+    /** Credited artists with slugs — each name can link separately. */
+    artists?: { name: string; slug: string }[];
 }
 
 export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
@@ -417,7 +438,11 @@ export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
         ...(song.year === undefined ? {} : { year: song.year }),
         ...(song.genres === undefined || song.genres.length === 0 ? {} : { genres: song.genres }),
         ...(song.language === undefined ? {} : { language: song.language }),
-        ...(song.artists?.[0] === undefined ? {} : { artistSlug: song.artists[0].slug }),
+        ...(song.artists === undefined || song.artists.length === 0
+            ? {}
+            : {
+                  artists: song.artists.map((a) => ({ name: a.name, slug: a.slug })),
+              }),
     }));
 }
 

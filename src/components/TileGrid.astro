@@ -16,7 +16,7 @@ const { tiles, mode } = Astro.props;
                 <a
                     href={tile.href}
                     class="collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline"
-                    style={`background:${tile.tint}`}
+                    style={`background:${tile.tint}; view-transition-class: coll-chrome`}
                     transition:name={tile.transitionName}
                     transition:animate="initial"
                 >
@@ -25,6 +25,7 @@ const { tiles, mode } = Astro.props;
                             "collection-tile-label text-left font-bold tracking-tight text-[#F7F2E9]",
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
+                        style="view-transition-class: coll-title"
                         transition:name={tile.titleTransitionName}
                         transition:animate="initial"
                     >
@@ -44,6 +45,7 @@ const { tiles, mode } = Astro.props;
                 >
                     <span
                         class="flex-1 text-base text-cream"
+                        style="view-transition-class: coll-title"
                         transition:name={tile.titleTransitionName}
                         transition:animate="initial"
                     >

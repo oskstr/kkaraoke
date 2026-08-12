@@ -20,13 +20,29 @@ interface Props {
     inputId: string;
 }
 
-function subtitle(song: SearchSong): string {
-    const bits: string[] = [];
-    if (song.artist) bits.push(song.artist);
-    else if (song.category) bits.push(song.category);
-    if (song.from) bits.push(song.from);
-    if (song.year) bits.push(String(song.year));
-    return bits.join(" · ");
+function SongSubtitle({ song }: { song: SearchSong }) {
+    const meta = [song.from, song.year ? String(song.year) : null].filter(Boolean);
+    if (song.artists && song.artists.length > 0) {
+        return (
+            <>
+                {song.artists.map((artist, index) => (
+                    <span key={artist.slug}>
+                        {index > 0 && ", "}
+                        <a
+                            href={`/artists/${artist.slug}`}
+                            className="text-muted no-underline hover:text-cream-soft"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {artist.name}
+                        </a>
+                    </span>
+                ))}
+                {meta.length > 0 && <span> · {meta.join(" · ")}</span>}
+            </>
+        );
+    }
+    const bits = [song.category, ...meta].filter(Boolean);
+    return bits.length > 0 ? <>{bits.join(" · ")}</> : null;
 }
 
 export default function SearchResults({ suggestions, inputId }: Props) {
@@ -101,6 +117,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                                 key={s.href + s.label}
                                 href={s.href}
                                 className="rounded-full border border-[#2A2724] bg-[#1A1917] px-3.5 py-2 text-[13.5px] font-semibold text-[#E4DDD1] no-underline hover:text-[#F2EDE4]"
+                                data-astro-prefetch="false"
                             >
                                 {s.label}
                             </a>
@@ -134,13 +151,12 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                     </div>
                     {rows.map((song) => (
                         <div key={song.id} className="flex items-center gap-2.5 border-b border-line py-3">
-                            <a
-                                href={song.artistSlug ? `/artists/${song.artistSlug}` : "/artists"}
-                                className="flex min-h-11 flex-1 flex-col justify-center text-left text-cream no-underline hover:text-cream"
-                            >
-                                <div className="text-[15.5px] leading-snug">{song.title}</div>
-                                <div className="mt-0.5 text-[13px] text-muted">{subtitle(song)}</div>
-                            </a>
+                            <div className="flex min-h-11 flex-1 flex-col justify-center text-left">
+                                <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
+                                <div className="mt-0.5 text-[13px] text-muted">
+                                    <SongSubtitle song={song} />
+                                </div>
+                            </div>
                             <FavoriteButton songId={song.id} />
                         </div>
                     ))}

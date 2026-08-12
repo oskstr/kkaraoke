@@ -23,8 +23,9 @@ const { facet } = Astro.props;
         >
         <FavoritesNav />
     </div>
-    <label
-        class="mt-3.5 flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3 text-left"
+    <a
+        href="/search"
+        class="mt-3.5 flex w-full items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left text-muted no-underline hover:text-muted"
         transition:name="search-field"
         transition:animate="initial"
         data-search-launch
@@ -40,21 +41,8 @@ const { facet } = Astro.props;
             aria-hidden="true"
             ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
         >
-        <input
-            id="catalogue-search-input"
-            type="search"
-            name="q"
-            placeholder="Songs, artists, films"
-            class="flex-1 border-0 bg-transparent text-[15px] text-cream outline-none placeholder:text-muted"
-            autocomplete="off"
-            autocorrect="off"
-            spellcheck="false"
-            enterkeyhint="search"
-            data-search-input
-            transition:persist="catalogue-search-input"
-            readonly
-            aria-label="Search songs, artists, films"
-        />
-    </label>
+        {/* 16px minimum — iOS zooms inputs smaller than that. */}
+        <span class="text-base">Songs, artists, films</span>
+    </a>
     <FacetTabs active={facet} />
 </header>
