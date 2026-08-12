@@ -15,9 +15,12 @@ interface ArtistHit {
 }
 
 interface Props {
+    suggestions: Suggestion[];
+}
+
+interface SearchIndex {
     songs: SearchSong[];
     artists: ArtistHit[];
-    suggestions: Suggestion[];
 }
 
 function subtitle(song: SearchSong): string {
@@ -29,36 +32,53 @@ function subtitle(song: SearchSong): string {
     return bits.join(" · ");
 }
 
-export default function SearchApp({ songs, artists, suggestions }: Props) {
+export default function SearchApp({ suggestions }: Props) {
     const [query, setQuery] = useState("");
+    const [index, setIndex] = useState<SearchIndex | null>(null);
+    const [loadError, setLoadError] = useState(false);
     const deferred = useDeferredValue(query);
     const inputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         inputRef.current?.focus();
+        let cancelled = false;
+        fetch("/search-index.json")
+            .then((r) => {
+                if (!r.ok) throw new Error("bad status");
+                return r.json() as Promise<SearchIndex>;
+            })
+            .then((data) => {
+                if (!cancelled) setIndex(data);
+            })
+            .catch(() => {
+                if (!cancelled) setLoadError(true);
+            });
+        return () => {
+            cancelled = true;
+        };
     }, []);
 
     const q = deferred.trim().toLowerCase();
 
     const artistHits = useMemo(() => {
-        if (!q) return [] as ArtistHit[];
-        return artists.filter((a) => a.name.toLowerCase().includes(q)).slice(0, 6);
-    }, [artists, q]);
+        if (!q || !index) return [] as ArtistHit[];
+        return index.artists.filter((a) => a.name.toLowerCase().includes(q)).slice(0, 6);
+    }, [index, q]);
 
     const rows = useMemo(() => {
-        if (!q) return [] as SearchSong[];
+        if (!q || !index) return [] as SearchSong[];
         const hits: SearchSong[] = [];
-        for (const song of songs) {
+        for (const song of index.songs) {
             if (matchesQuery(song, q)) {
                 hits.push(song);
                 if (hits.length >= 80) break;
             }
         }
         return hits;
-    }, [songs, q]);
+    }, [index, q]);
 
     const idle = !query.trim();
-    const empty = Boolean(query.trim()) && rows.length === 0 && artistHits.length === 0;
+    const empty = Boolean(query.trim()) && index !== null && rows.length === 0 && artistHits.length === 0;
 
     return (
         <div className="flex min-h-0 flex-1 flex-col">
@@ -96,6 +116,14 @@ export default function SearchApp({ songs, artists, suggestions }: Props) {
             </div>
 
             <div className="hd flex-1 overflow-y-auto px-[18px] pb-6 pt-2">
+                {loadError && (
+                    <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalogue.</div>
+                )}
+
+                {!loadError && !index && !idle && (
+                    <div className="px-5 py-16 text-center text-sm text-muted">Searching…</div>
+                )}
+
                 {idle && (
                     <div>
                         <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">

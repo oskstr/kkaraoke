@@ -17,21 +17,20 @@ const groups = groupArtists(getArtists());
     <main class="hd flex-1 overflow-y-auto px-[18px] pb-6" transition:animate="fade">
         {
             groups.map((group) => (
-                <div>
-                    <div class="sticky top-0 bg-surface py-2.5 font-mono text-[11px] tracking-[0.16em] text-gold">
+                <section>
+                    <div class="sticky top-0 z-10 bg-surface py-2.5 font-mono text-[11px] tracking-[0.16em] text-gold">
                         {group.letter}
                     </div>
                     {group.artists.map((artist) => (
                         <a
                             href={`/artists/${artist.slug}`}
                             class="flex w-full items-center gap-3 border-b border-line px-0.5 py-3.5 text-left no-underline"
-                            transition:name={`artist-${artist.slug}`}
                         >
                             <span class="flex-1 text-base text-cream">{artist.name}</span>
                             <span class="text-[15px] text-dim">→</span>
                         </a>
                     ))}
-                </div>
+                </section>
             ))
         }
     </main>

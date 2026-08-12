@@ -1,0 +1,89 @@
+---
+interface Props {
+    tint?: string;
+}
+
+const { tint } = Astro.props;
+---
+
+<div
+    class="hd flex gap-1.5 overflow-x-auto px-[18px] pb-4"
+    style={tint ? `background:${tint};border-bottom:1px solid rgba(0,0,0,0.25)` : undefined}
+    data-sort-tabs
+>
+    {
+        [
+            { key: "az", label: "A–Z" },
+            { key: "artist", label: "By artist" },
+            { key: "year", label: "By year" },
+        ].map((tab, i) => (
+            <button
+                type="button"
+                data-sort={tab.key}
+                class:list={[
+                    "shrink-0 rounded-full border border-white/18 px-3.5 py-1.5 text-[13px] font-semibold",
+                    i === 0 ? "bg-white/92 text-[#17150F]" : "bg-black/22 text-white/85",
+                ]}
+            >
+                {tab.label}
+            </button>
+        ))
+    }
+</div>
+
+<script>
+    const collator = new Intl.Collator("sv");
+
+    function sortList(list: HTMLElement, sort: string) {
+        const rows = [...list.querySelectorAll<HTMLElement>(".song-row")];
+        rows.sort((a, b) => {
+            const titleA = a.dataset.title ?? "";
+            const titleB = b.dataset.title ?? "";
+            const artistA = a.dataset.artist ?? "";
+            const artistB = b.dataset.artist ?? "";
+            const yearA = Number(a.dataset.year || 9999);
+            const yearB = Number(b.dataset.year || 9999);
+            if (sort === "artist") {
+                return collator.compare(artistA, artistB) || collator.compare(titleA, titleB);
+            }
+            if (sort === "year") {
+                return yearA - yearB || collator.compare(titleA, titleB);
+            }
+            return collator.compare(titleA, titleB);
+        });
+        for (const row of rows) list.appendChild(row);
+    }
+
+    function paintTabs(root: ParentNode, sort: string) {
+        root.querySelectorAll<HTMLElement>("[data-sort]").forEach((btn) => {
+            const on = btn.dataset.sort === sort;
+            btn.classList.toggle("bg-white/92", on);
+            btn.classList.toggle("text-[#17150F]", on);
+            btn.classList.toggle("bg-black/22", !on);
+            btn.classList.toggle("text-white/85", !on);
+        });
+    }
+
+    function onClick(event: Event) {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const btn = target.closest<HTMLElement>("[data-sort]");
+        if (!btn || !btn.dataset.sort) return;
+        const tabs = btn.closest("[data-sort-tabs]");
+        const list = document.querySelector<HTMLElement>("[data-song-list]");
+        if (!list || !tabs) return;
+        paintTabs(tabs, btn.dataset.sort);
+        sortList(list, btn.dataset.sort);
+    }
+
+    declare global {
+        interface Window {
+            __kkaraokeSortInit?: boolean;
+        }
+    }
+
+    if (!window.__kkaraokeSortInit) {
+        window.__kkaraokeSortInit = true;
+        document.addEventListener("click", onClick);
+    }
+</script>

@@ -2,10 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import BackLink from "../components/BackLink.astro";
 import FavoritesApp from "../components/FavoritesApp";
-import { buildSearchIndex } from "../lib/catalogue";
-import { getSongs } from "../lib/songs";
-
-const songs = buildSearchIndex(getSongs());
 ---
 
 <Layout title="Favorites · kkaraoke">
@@ -16,6 +12,6 @@ const songs = buildSearchIndex(getSongs());
         </h1>
     </header>
     <main class="hd flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6">
-        <FavoritesApp client:load songs={songs} />
+        <FavoritesApp client:load />
     </main>
 </Layout>

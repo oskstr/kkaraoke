@@ -1,12 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SearchApp from "../components/SearchApp";
-import { buildSearchIndex, collectionPath, collator } from "../lib/catalogue";
-import { getArtists, getSongs } from "../lib/songs";
+import { collectionPath, collator } from "../lib/catalogue";
+import { getSongs } from "../lib/songs";
 
 const songs = getSongs();
-const index = buildSearchIndex(songs);
-const artists = getArtists().map((a) => ({ name: a.name, slug: a.slug }));
 
 const genreCounts = new Map<string, number>();
 for (const song of songs) {
@@ -33,5 +31,5 @@ const suggestions = [
 ---
 
 <Layout title="Search · kkaraoke">
-    <SearchApp client:load songs={index} artists={artists} suggestions={suggestions} />
+    <SearchApp client:load suggestions={suggestions} />
 </Layout>

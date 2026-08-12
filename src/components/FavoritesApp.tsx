@@ -1,12 +1,8 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import FavoriteButton, { useFavorites } from "./FavoriteButton";
 import type { SearchSong } from "../lib/catalogue";
-
-interface Props {
-    songs: SearchSong[];
-}
 
 function subtitle(song: SearchSong): string {
     const bits: string[] = [];
@@ -17,19 +13,39 @@ function subtitle(song: SearchSong): string {
     return bits.join(" · ");
 }
 
-export default function FavoritesApp({ songs }: Props) {
+export default function FavoritesApp() {
     const { favorites, ready } = useFavorites();
-    const byId = useMemo(() => new Map(songs.map((s) => [s.id, s])), [songs]);
+    const [songs, setSongs] = useState<SearchSong[] | null>(null);
+
+    useEffect(() => {
+        let cancelled = false;
+        fetch("/search-index.json")
+            .then((r) => {
+                if (!r.ok) throw new Error("bad status");
+                return r.json() as Promise<{ songs: SearchSong[] }>;
+            })
+            .then((data) => {
+                if (!cancelled) setSongs(data.songs);
+            })
+            .catch(() => {
+                if (!cancelled) setSongs([]);
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    const byId = useMemo(() => new Map((songs ?? []).map((s) => [s.id, s])), [songs]);
 
     const rows = useMemo(() => {
         return favorites.map((id) => byId.get(id)).filter((s): s is SearchSong => s !== undefined);
     }, [favorites, byId]);
 
-    if (!ready) {
+    if (!ready || songs === null) {
         return <div className="px-[18px] py-8 text-sm text-muted">Loading…</div>;
     }
 
-    if (rows.length === 0) {
+    if (favorites.length === 0 || rows.length === 0) {
         return (
             <div className="px-5 py-20 text-center">
                 <div className="text-lg font-semibold text-cream">Nothing saved yet</div>

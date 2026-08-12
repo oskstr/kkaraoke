@@ -1,6 +1,4 @@
 ---
-import FavoriteButton from "./FavoriteButton";
-
 interface Props {
     songId: number;
     title: string;
@@ -8,12 +6,21 @@ interface Props {
     href?: string;
     /** When true, title is not a link (artist page). */
     staticTitle?: boolean;
+    titleAttr?: string;
+    artistAttr?: string;
+    yearAttr?: string;
 }
 
-const { songId, title, subtitle, href, staticTitle = false } = Astro.props;
+const { songId, title, subtitle, href, staticTitle = false, titleAttr, artistAttr, yearAttr } =
+    Astro.props;
 ---
 
-<div class="flex items-center gap-2.5 border-b border-line py-3">
+<div
+    class="song-row flex items-center gap-2.5 border-b border-line py-3"
+    data-title={titleAttr ?? title}
+    data-artist={artistAttr ?? ""}
+    data-year={yearAttr ?? ""}
+>
     {
         staticTitle || !href ? (
             <div class="flex min-h-11 flex-1 flex-col justify-center">
@@ -27,5 +34,14 @@ const { songId, title, subtitle, href, staticTitle = false } = Astro.props;
             </a>
         )
     }
-    <FavoriteButton client:load songId={songId} />
+    <button
+        type="button"
+        data-fav-toggle={songId}
+        class="min-w-11 bg-transparent px-1 py-2.5 text-[17px]"
+        style="border:0;color:#3B3733"
+        aria-label="Add to favorites"
+        aria-pressed="false"
+    >
+        ♥
+    </button>
 </div>

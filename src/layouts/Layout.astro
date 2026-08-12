@@ -32,5 +32,8 @@ const { title, description = "Browse the karaoke catalogue by artist, decade, ge
         <div class="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:overflow-hidden sm:rounded-[30px] sm:border sm:border-line-strong">
             <slot />
         </div>
+        <script>
+            import "../scripts/favorites.ts";
+        </script>
     </body>
 </html>

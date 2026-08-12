@@ -1,24 +1,7 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-
-const STORAGE_KEY = "kkaraoke:favorites";
-
-function readFavorites(): number[] {
-    try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return [];
-        const parsed = JSON.parse(raw) as unknown;
-        return Array.isArray(parsed) ? parsed.filter((id): id is number => typeof id === "number") : [];
-    } catch {
-        return [];
-    }
-}
-
-function writeFavorites(ids: number[]) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
-    window.dispatchEvent(new Event("kkaraoke:favorites"));
-}
+import { readFavorites, toggleFavorite } from "../scripts/favorites";
 
 let cached = typeof window === "undefined" ? ([] as number[]) : readFavorites();
 const listeners = new Set<() => void>();
@@ -26,7 +9,7 @@ const listeners = new Set<() => void>();
 function subscribe(listener: () => void) {
     listeners.add(listener);
     const onStorage = (e: StorageEvent) => {
-        if (e.key === STORAGE_KEY || e.key === null) {
+        if (e.key === "kkaraoke:favorites" || e.key === null) {
             cached = readFavorites();
             listeners.forEach((l) => l());
         }
@@ -63,9 +46,8 @@ export function useFavorites() {
     }, []);
 
     function toggle(id: number) {
-        const next = favorites.includes(id) ? favorites.filter((x) => x !== id) : [...favorites, id];
+        const next = toggleFavorite(id);
         cached = next;
-        writeFavorites(next);
         listeners.forEach((l) => l());
     }
 
