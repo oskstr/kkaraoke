@@ -12,13 +12,13 @@ const { tiles, mode } = Astro.props;
 {
     mode === "tiles" ? (
         <div class="grid grid-cols-2 gap-2.5">
-            {tiles.map((tile, i) => (
+            {tiles.map((tile) => (
                 <a
                     href={tile.href}
-                    class="collection-tile rise flex h-24 items-end rounded-xl p-3.5 no-underline"
-                    style={`background:${tile.tint};animation-delay:${Math.min(i, 8) * 30}ms`}
+                    class="collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline"
+                    style={`background:${tile.tint}`}
                     transition:name={tile.transitionName}
-                    transition:animate="none"
+                    transition:animate="initial"
                 >
                     <span
                         class:list={[
@@ -26,7 +26,7 @@ const { tiles, mode } = Astro.props;
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
                         transition:name={tile.titleTransitionName}
-                        transition:animate="none"
+                        transition:animate="initial"
                     >
                         {tile.label}
                     </span>
@@ -40,12 +40,12 @@ const { tiles, mode } = Astro.props;
                     href={tile.href}
                     class="flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left no-underline"
                     transition:name={tile.transitionName}
-                    transition:animate="none"
+                    transition:animate="initial"
                 >
                     <span
                         class="flex-1 text-base text-cream"
                         transition:name={tile.titleTransitionName}
-                        transition:animate="none"
+                        transition:animate="initial"
                     >
                         {tile.label}
                     </span>

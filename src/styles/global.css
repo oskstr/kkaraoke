@@ -77,32 +77,26 @@ input {
     contain-intrinsic-size: auto 68px;
 }
 
-@keyframes rise {
-    from {
-        transform: translateY(12px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.rise {
-    animation: rise 0.45s ease both;
-}
-
-/* Morphing shared collection elements — longer easing than the root fade. */
+/* Root page crossfade stays short; named morph groups use the browser default geometry tween. */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 260ms;
+    animation-duration: 220ms;
+}
+
+::view-transition-group(*) {
+    animation-duration: 420ms;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rise {
-        animation: none;
-    }
-
     ::view-transition-group(*),
     ::view-transition-old(*),
     ::view-transition-new(*) {

@@ -12,7 +12,7 @@ const { title, description = "Browse the karaoke catalogue by artist, decade, ge
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="fade">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,12 +29,18 @@ const { title, description = "Browse the karaoke catalogue by artist, decade, ge
         <ClientRouter />
     </head>
     <body>
-        <div class="mx-auto flex min-h-dvh w-full max-w-md flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:overflow-hidden sm:rounded-[30px] sm:border sm:border-line-strong">
+        <!--
+          No overflow:hidden on the shell — it clips view-transition snapshots and
+          kills shared-element morphs. Rounding still works via the border.
+        -->
+        <div
+            class="app-shell mx-auto flex min-h-dvh w-full max-w-md flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
+        >
             <slot />
         </div>
         <script>
             import "../scripts/favorites.ts";
-            // Warm the search index so opening search / returning from a collection is snappy.
+            import "../scripts/navigation.ts";
             void import("../lib/search-index.ts").then((m) => {
                 if (location.pathname === "/" || location.pathname.startsWith("/browse")) {
                     void m.getSearchIndex().catch(() => {});

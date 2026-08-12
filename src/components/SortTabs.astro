@@ -6,11 +6,7 @@ interface Props {
 const { tint } = Astro.props;
 ---
 
-<div
-    class="hd flex gap-1.5 overflow-x-auto px-[18px] pb-4"
-    style={tint ? `background:${tint};border-bottom:1px solid rgba(0,0,0,0.25)` : undefined}
-    data-sort-tabs
->
+<div class="hd flex gap-1.5 overflow-x-auto px-[18px] pb-4" data-sort-tabs style={tint ? undefined : undefined}>
     {
         [
             { key: "az", label: "A–Z" },

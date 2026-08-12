@@ -51,7 +51,6 @@ if (collection === undefined) {
 }
 
 const rows = sortSongs(songsInCollection(songs, collection.kind, collection.key), "az");
-/** Keep the first paint small so View Transitions + back-navigation stay responsive. */
 const INITIAL = 100;
 const initialRows = rows.slice(0, INITIAL);
 const moreRows = rows.slice(INITIAL).map((song) => {
@@ -65,25 +64,39 @@ const moreRows = rows.slice(INITIAL).map((song) => {
         ...(href === undefined ? {} : { href }),
     };
 });
+
+const backFallback: Record<CollectionKind, string> = {
+    decade: "/browse/decades",
+    genre: "/browse/genres",
+    category: "/browse/categories",
+    from: "/browse/films",
+    lang: "/browse/languages",
+};
 ---
 
 <Layout title={`${collection.label} · kkaraoke`}>
-    <header
-        class="collection-header px-[18px] pt-[22px] pb-0"
-        style={`background:${collection.tint}`}
+    <!--
+      One shared-element target for the tile morph: the whole tinted chrome
+      (back + title + sort) so the tile color expands into the top bar.
+    -->
+    <div
+        class="collection-chrome"
+        style={`background:${collection.tint};border-bottom:1px solid rgba(0,0,0,0.25)`}
         transition:name={collection.transitionName}
-        transition:animate="none"
+        transition:animate="initial"
     >
-        <BackLink href="/" label="← BACK" light />
-        <h1
-            class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
-            transition:name={collection.titleTransitionName}
-            transition:animate="none"
-        >
-            {collection.label}
-        </h1>
-    </header>
-    <SortTabs tint={collection.tint} />
+        <header class="px-[18px] pt-[22px] pb-0">
+            <BackLink href={backFallback[collection.kind]} label="← BACK" light />
+            <h1
+                class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-[#FCFAF6] text-pretty"
+                transition:name={collection.titleTransitionName}
+                transition:animate="initial"
+            >
+                {collection.label}
+            </h1>
+        </header>
+        <SortTabs />
+    </div>
     <main class="hd flex-1 overflow-y-auto bg-surface px-[18px] pt-1.5 pb-6">
         <SongList songs={initialRows} sortable />
         {

@@ -1,5 +1,6 @@
 ---
 interface Props {
+    /** Fallback when there is no in-app history entry. */
     href?: string;
     label?: string;
     light?: boolean;
@@ -10,6 +11,7 @@ const { href = "/", label = "← BACK", light = false } = Astro.props;
 
 <a
     href={href}
+    data-smart-back
     class:list={[
         "inline-block font-mono text-[11px] tracking-[0.12em] no-underline",
         light ? "text-white/70 hover:text-white" : "text-muted hover:text-cream-soft",

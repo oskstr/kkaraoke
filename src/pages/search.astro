@@ -36,10 +36,11 @@ const inputId = "catalogue-search-input";
     <div class="flex min-h-0 flex-1 flex-col">
         <div class="border-b border-[#1A1917] px-[18px] pb-3 pt-[22px]">
             <div class="flex items-center gap-2.5">
-                <div
-                    class="flex flex-1 items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3"
+                <label
+                    class="flex flex-1 cursor-text items-center gap-2.5 rounded-xl border border-[#33302B] bg-panel px-3.5 py-3"
                     transition:name="search-field"
-                    transition:animate="none"
+                    transition:animate="initial"
+                    for={inputId}
                 >
                     <svg
                         viewBox="0 0 24 24"
@@ -63,10 +64,13 @@ const inputId = "catalogue-search-input";
                         spellcheck="false"
                         enterkeyhint="search"
                         data-search-input
+                        transition:persist="catalogue-search-input"
+                        autofocus
                     />
-                </div>
+                </label>
                 <a
                     href="/"
+                    data-smart-back
                     class="bg-transparent px-1 py-1 text-[14.5px] text-[#9A9086] no-underline hover:text-[#C6BDB1]"
                 >
                     Cancel
@@ -76,33 +80,3 @@ const inputId = "catalogue-search-input";
         <SearchResults client:load suggestions={suggestions} inputId={inputId} />
     </div>
 </Layout>
-
-<script>
-    function focusSearch() {
-        if (!location.pathname.startsWith("/search")) return;
-        const input = document.querySelector<HTMLInputElement>("[data-search-input]");
-        if (!input) return;
-        requestAnimationFrame(() => {
-            input.focus({ preventScroll: true });
-            const len = input.value.length;
-            try {
-                input.setSelectionRange(len, len);
-            } catch {
-                /* type=search may not support selection in every browser */
-            }
-        });
-    }
-
-    declare global {
-        interface Window {
-            __kkaraokeSearchFocus?: boolean;
-        }
-    }
-
-    focusSearch();
-    if (!window.__kkaraokeSearchFocus) {
-        window.__kkaraokeSearchFocus = true;
-        document.addEventListener("astro:page-load", focusSearch);
-        document.addEventListener("astro:after-swap", focusSearch);
-    }
-</script>
