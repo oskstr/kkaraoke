@@ -5,14 +5,14 @@ interface Props {
     /** Punch-in numbers for this song (one or more). */
     ids: number[];
     title: string;
-    /** Plain subtitle when not linking individual artists (e.g. artist page meta). */
+    /** Fallback plain artist/category line when no credited artists. */
     subtitle?: string;
     artists?: CreditedArtist[];
     from?: string;
     year?: number;
     category?: string;
-    /** When true, don't link artist names (already on an artist page). */
-    hideArtistLink?: boolean;
+    /** On an artist page, don’t link that artist’s own name. */
+    currentArtistSlug?: string;
     titleAttr?: string;
     artistAttr?: string;
     yearAttr?: string;
@@ -26,7 +26,7 @@ const {
     from,
     year,
     category,
-    hideArtistLink = false,
+    currentArtistSlug,
     titleAttr,
     artistAttr,
     yearAttr,
@@ -55,29 +55,32 @@ const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join
         <div class="text-[15.5px] leading-snug text-cream">{title}</div>
         <div class="mt-0.5 text-[13px] text-muted">
             {
-                hideArtistLink ? (
-                    subtitle
-                ) : artists.length > 0 ? (
+                artists.length > 0 ? (
                     <>
                         {artists.map((artist, index) => (
                             <>
                                 {index > 0 && <span>, </span>}
-                                <a
-                                    href={`/artists/${artist.slug}`}
-                                    class="text-muted no-underline hover:text-cream-soft"
-                                >
-                                    {artist.name}
-                                </a>
+                                {artist.slug === currentArtistSlug ? (
+                                    <span>{artist.name}</span>
+                                ) : (
+                                    <a
+                                        href={`/artists/${artist.slug}`}
+                                        class="text-muted no-underline hover:text-cream-soft"
+                                    >
+                                        {artist.name}
+                                    </a>
+                                )}
                             </>
                         ))}
                         {metaBits.length > 0 && <span> · {metaBits.join(" · ")}</span>}
                     </>
                 ) : (
                     <>
-                        {category && <span>{category}</span>}
-                        {category && metaBits.length > 0 && <span> · </span>}
+                        {subtitle && <span>{subtitle}</span>}
+                        {subtitle && metaBits.length > 0 && <span> · </span>}
+                        {!subtitle && category && <span>{category}</span>}
+                        {!subtitle && category && metaBits.length > 0 && <span> · </span>}
                         {metaBits.length > 0 && <span>{metaBits.join(" · ")}</span>}
-                        {!category && metaBits.length === 0 && subtitle}
                     </>
                 )
             }

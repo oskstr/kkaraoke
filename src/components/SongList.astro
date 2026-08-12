@@ -1,12 +1,12 @@
 ---
 import SongRow from "./SongRow.astro";
-import { mergeSongVariants, songMeta, type SongVariant } from "../lib/catalogue";
+import { mergeSongVariants, type SongVariant } from "../lib/catalogue";
 import type { Song } from "../lib/songs";
 
 interface Props {
     songs: Song[] | SongVariant[];
-    /** On artist pages, don't link the title row to the same artist. */
-    hideArtistLink?: boolean;
+    /** On an artist page, don’t link that artist’s own name in credits. */
+    currentArtistSlug?: string;
     emptyTitle?: string;
     emptyBody?: string;
     emptyHref?: string;
@@ -16,7 +16,7 @@ interface Props {
 
 const {
     songs: rawSongs,
-    hideArtistLink = false,
+    currentArtistSlug,
     emptyTitle,
     emptyBody,
     emptyHref = "/",
@@ -46,24 +46,26 @@ const songs: SongVariant[] =
         </div>
     ) : (
         <div data-song-list={sortable ? "" : undefined}>
-            {songs.map((song) => {
-                const meta = hideArtistLink ? songMeta(song) : undefined;
-                return (
-                    <SongRow
-                        ids={song.ids}
-                        title={song.song}
-                        {...(meta ? { subtitle: meta } : {})}
-                        {...(song.artists ? { artists: song.artists } : {})}
-                        {...(song.from ? { from: song.from } : {})}
-                        {...(song.year !== undefined ? { year: song.year } : {})}
-                        {...(song.category ? { category: song.category } : {})}
-                        hideArtistLink={hideArtistLink}
-                        titleAttr={song.song}
-                        artistAttr={song.artist || song.category || ""}
-                        yearAttr={song.year !== undefined ? String(song.year) : ""}
-                    />
-                );
-            })}
+            {songs.map((song) => (
+                <SongRow
+                    ids={song.ids}
+                    title={song.song}
+                    {...(song.artists && song.artists.length > 0
+                        ? { artists: song.artists }
+                        : song.artist
+                          ? { subtitle: song.artist }
+                          : song.category
+                            ? { subtitle: song.category }
+                            : {})}
+                    {...(song.from ? { from: song.from } : {})}
+                    {...(song.year !== undefined ? { year: song.year } : {})}
+                    {...(song.category ? { category: song.category } : {})}
+                    {...(currentArtistSlug ? { currentArtistSlug } : {})}
+                    titleAttr={song.song}
+                    artistAttr={song.artist || song.category || ""}
+                    yearAttr={song.year !== undefined ? String(song.year) : ""}
+                />
+            ))}
         </div>
     )
 }
