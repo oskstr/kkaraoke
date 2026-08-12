@@ -1,10 +1,10 @@
 # Artist slug review
 
-1976 artists, written by `pnpm review:artist-slugs` from the composed
+1969 artists, written by `pnpm review:artist-slugs` from the composed
 catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
-1 curated slug override(s), 2 merged page(s), 0 collision disambiguation(s).
+1 curated slug override(s), 9 merged page(s), 0 collision disambiguation(s).
 Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz entities onto one page.
 
 | name | slug | songs | note | mbid |
@@ -233,10 +233,8 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Blur | blur | 13 |  | `ba853904-ae25-4ebb-89d6-c44cfbd71bd2` |
 | Bob & Marcia | bob-and-marcia | 2 |  | `ab329dc9-4c4c-4601-83e7-1224a113749a` |
 | Bob Dylan | bob-dylan | 19 |  | `72c536dc-7137-4477-a521-567eeb840fa8` |
-| Bob Marley | bob-marley | 14 |  | `ed2ac1e9-d51d-4eff-a2c2-85e81abd6360` |
-| Bob Marley & The Wailers | bob-marley-and-the-wailers | 8 |  | `c296e10c-110a-4103-9e77-47bfebb7fb2e` |
-| Bob Seger | bob-seger | 3 |  | `4382b934-64c3-47ac-98db-65f26d845c48` |
-| Bob Seger & the Silver Bullet Band | bob-seger-and-the-silver-bullet-band | 2 |  | `aeea3060-05ba-4dda-8c92-3dc899e24ce8` |
+| Bob Marley | bob-marley | 22 | merged 2 MusicBrainz ids onto `bob-marley` | `ed2ac1e9-d51d-4eff-a2c2-85e81abd6360` |
+| Bob Seger | bob-seger | 5 | merged 2 MusicBrainz ids onto `bob-seger` | `4382b934-64c3-47ac-98db-65f26d845c48` |
 | Bob Sinclar | bob-sinclar | 4 |  | `f9ab44f1-7b19-4ecb-830c-403abcf36cd1` |
 | Bobbi Page | bobbi-page | 1 |  | `c27b0cb1-d482-4f26-b1ba-805d3ea836fe` |
 | Bobby “Boris” Pickett | bobby-boris-pickett | 1 |  | `58dd5fa6-6eed-432a-90a5-6df1ae8d2b8d` |
@@ -275,8 +273,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Brooklyn Dreams | brooklyn-dreams | 1 |  | `35efa01e-f296-4dd0-8a85-29cb9dd6970b` |
 | Brotherhood of Man | brotherhood-of-man | 1 |  | `d9581fbb-e1d1-4353-b2b8-033ddaf4f40c` |
 | Bruce Channel | bruce-channel | 1 |  | `6304c5c2-be9f-4357-9e60-8c204479aec9` |
-| Bruce Hornsby | bruce-hornsby | 1 |  | `e60dbba7-6f55-429a-bd22-5e9c6a87ae70` |
-| Bruce Hornsby & the Range | bruce-hornsby-and-the-range | 1 |  | `b548040e-b631-4bdd-ab75-045293e448b7` |
+| Bruce Hornsby | bruce-hornsby | 2 | merged 2 MusicBrainz ids onto `bruce-hornsby` | `e60dbba7-6f55-429a-bd22-5e9c6a87ae70` |
 | Bruce Springsteen | bruce-springsteen | 32 |  | `70248960-cb53-4ea4-943a-edb18f7d336f` |
 | Bruno Mars | bruno-mars | 14 |  | `afb680f2-b6eb-4cd7-a70b-a63b25c763d5` |
 | Bryan Adams | bryan-adams | 15 |  | `4dbf5678-7a31-406a-abbe-232f8ac2cd63` |
@@ -477,8 +474,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Dingo | dingo | 1 |  | `f7c46d72-b6d1-4134-a34a-1f054b1aceb9` |
 | Dino | dino | 1 |  | `dcebae6e-a130-4d67-b4a7-f64b1c9983c9` |
 | Dio | dio | 1 |  | `c55193fb-f5d2-4839-a263-4c044fca1456` |
-| Dion | dion | 1 |  | `89efeadd-8080-4cf9-af33-2e68a173df02` |
-| Dion & The Belmonts | dion-and-the-belmonts | 2 |  | `236459d6-f9ea-4f89-9239-21c0bedaaf25` |
+| Dion | dion | 3 | merged 2 MusicBrainz ids onto `dion` | `89efeadd-8080-4cf9-af33-2e68a173df02` |
 | Dionne Warwick | dionne-warwick | 17 |  | `6784ee31-6d79-4a37-9e1f-01d6ef31940e` |
 | Dire Straits | dire-straits | 19 |  | `614e3804-7d34-41ba-857f-811bad7c2b7a` |
 | Disciples | disciples | 1 |  | `bac7f942-8e94-4868-b3f6-ba66c75b136e` |
@@ -753,10 +749,8 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Hot Chocolate | hot-chocolate | 1 |  | `a749130e-c2d8-4a7c-b740-908ea4574961` |
 | Howard Jones | howard-jones | 1 |  | `23b2cc78-7595-4630-bebb-a349a4f25262` |
 | Hozier | hozier | 1 |  | `b4691384-50c3-4afd-9988-51d3ec5db65d` |
-| Huey Lewis | huey-lewis | 1 |  | `b0b6393a-a5fb-4246-921e-33e0c20371cf` |
-| Huey Lewis and the News | huey-lewis-and-the-news | 4 |  | `2be6ae30-d220-4419-80da-2a46813ed872` |
-| Ian Dury | ian-dury | 1 |  | `3d5c6889-2471-43c4-b853-08fc5fda810a` |
-| Ian Dury & the Blockheads | ian-dury-and-the-blockheads | 1 |  | `d4675794-9ad3-48eb-bcd4-b98be183b396` |
+| Huey Lewis | huey-lewis | 5 | merged 2 MusicBrainz ids onto `huey-lewis` | `b0b6393a-a5fb-4246-921e-33e0c20371cf` |
+| Ian Dury | ian-dury | 2 | merged 2 MusicBrainz ids onto `ian-dury` | `3d5c6889-2471-43c4-b853-08fc5fda810a` |
 | Ice Spice | ice-spice | 1 |  | `6f2c949d-9540-4421-bf02-27ae27e00e33` |
 | Icona Pop | icona-pop | 3 |  | `c5f259d0-abd8-418e-81ee-3965fd4e4e9a` |
 | Idina Menzel | idina-menzel | 1 |  | `929ca8c3-5df3-4fe9-bc59-f8d603780bce` |
@@ -1857,8 +1851,7 @@ Everyone else is `slugify(display name)`. Shared curated slugs merge MusicBrainz
 | Todd Rundgren | todd-rundgren | 1 |  | `1a9a8ca0-ea8e-4e9e-96aa-288155bb2c5d` |
 | Tokio Hotel | tokio-hotel | 6 |  | `462a85b4-83ac-4164-86b3-e5ac6a7ec040` |
 | Tom Jones | tom-jones | 10 |  | `57c6f649-6cde-48a7-8114-2a200247601a` |
-| Tom Petty | tom-petty | 5 |  | `5ca3f318-d028-4151-ac73-78e2b2d6cdcc` |
-| Tom Petty and the Heartbreakers | tom-petty-and-the-heartbreakers | 2 |  | `f93dbc64-6f08-4033-bcc7-8a0bb4689849` |
+| Tom Petty | tom-petty | 7 | merged 2 MusicBrainz ids onto `tom-petty` | `5ca3f318-d028-4151-ac73-78e2b2d6cdcc` |
 | Tom Robinson | tom-robinson | 1 |  | `fd775f1b-90c8-4126-a870-7647442935e4` |
 | Tomas Ledin | tomas-ledin | 15 |  | `a3534292-7820-48df-8a9c-6b363aff43ed` |
 | Tomi Markkola | tomi-markkola | 1 |  | `92e40fbd-5a7c-43d8-8254-e8b98c3f14f1` |
