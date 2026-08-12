@@ -40,6 +40,13 @@
             ]
         },
         {
+            "postId": 47988,
+            "year": 1998,
+            "title": "Little Plastic Castle",
+            "artist": "Ani DiFranco",
+            "why": "Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998)."
+        },
+        {
             "postId": 47994,
             "categories": [
                 "Melodifestivalen",
@@ -269,6 +276,11 @@
             "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen."
         },
         {
+            "postId": 48810,
+            "year": 1970,
+            "why": "Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970)."
+        },
+        {
             "postId": 48862,
             "categories": [
                 "Eurovision"
@@ -341,6 +353,12 @@
             "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 49158,
+            "year": 1968,
+            "title": "Walk on the Water",
+            "why": "CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia)."
+        },
+        {
             "postId": 49236,
             "why": "Credited Christmas song (Darlene Love – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -406,6 +424,11 @@
             "postId": 49686,
             "from": "The Lion King",
             "why": "Elton John Lion King; from was missing"
+        },
+        {
+            "postId": 49712,
+            "year": 2021,
+            "why": "Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia)."
         },
         {
             "postId": 49759,
@@ -581,6 +604,12 @@
             "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         },
         {
+            "postId": 50460,
+            "year": 1985,
+            "title": "Good + Bad Times",
+            "why": "INXS – Good + Bad Times. Resolver matched the 2025 Listen Like Thieves deluxe alternate take; original album track 1985 (Wikipedia Listen Like Thieves, 14 Oct 1985)."
+        },
+        {
             "postId": 50466,
             "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
             "artist": "",
@@ -622,6 +651,13 @@
                 "Eurovision"
             ],
             "why": "Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 50721,
+            "year": 1971,
+            "title": "Take Me Home, Country Roads",
+            "artist": "John Denver",
+            "why": "John Denver – Take Me Home, Country Roads. Resolver dated 2019 with Max Q credit; single 12 Apr 1971 (Wikipedia)."
         },
         {
             "postId": 50739,
@@ -956,6 +992,12 @@
             "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
         },
         {
+            "postId": 51441,
+            "year": 1965,
+            "title": "California Dreamin'",
+            "why": "California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia)."
+        },
+        {
             "postId": 51455,
             "categories": [
                 "Melodifestivalen",
@@ -1032,6 +1074,12 @@
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
+        },
+        {
+            "postId": 51965,
+            "year": 1973,
+            "title": "Take Me Home, Country Roads",
+            "why": "Olivia Newton-John – Take Me Home, Country Roads. Resolver dated 2015; single Jan 1973 / Let Me Be There album (Wikipedia)."
         },
         {
             "postId": 51966,
@@ -1129,6 +1177,12 @@
             "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
         },
         {
+            "postId": 52706,
+            "year": 2000,
+            "title": "It Wasn't Me",
+            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia)."
+        },
+        {
             "postId": 52731,
             "year": 1995,
             "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
@@ -1176,6 +1230,18 @@
             "why": "The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 53135,
+            "year": 1967,
+            "title": "The Crystal Ship",
+            "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
+        },
+        {
+            "postId": 53249,
+            "year": 1999,
+            "title": "No Scrubs",
+            "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
             "postId": 53312,
             "categories": [
                 "Melodifestivalen",
@@ -1195,6 +1261,12 @@
             "postId": 53388,
             "year": 1971,
             "why": "Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971)."
+        },
+        {
+            "postId": 53473,
+            "year": 1996,
+            "artist": "The Wallflowers",
+            "why": "The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996)."
         },
         {
             "postId": 53563,

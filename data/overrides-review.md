@@ -1,6 +1,6 @@
 # Override review
 
-165 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+177 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -8,13 +8,16 @@ means omit a category label rather than invent a performer.
 
 | id | venue artist | venue title | → artist | → title | categories | why | postId |
 | -: | --- | --- | --- | --- | --- | --- | -: |
+| 73 | Tlc | No scrub | Tlc | No Scrubs |  | TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia). | 53249 |
 | 75 | Phil Collins | You'll be in my heart | Phil Collins | You'll be in my heart |  | Phil Collins Disney/Tarzan hit; from was missing | 52123 |
 | 135 | Avril Lavigne | Sk8ter boi | Avril Lavigne | Sk8ter boi |  | Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go). | 48102 |
 | 287 | Johnny Logan | Hold me now | Johnny Logan | Hold me now | Eurovision | Johnny Logan – Hold Me Now; Eurovision 1987 (Ireland). Category Eurovision. | 50776 |
 | 350 | Elton John | Circle of life | Elton John | Circle of life |  | Elton John Lion King; from was missing | 49684 |
+| 362 | Cat Stevens | Wild world | Cat Stevens | Wild world |  | Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970). | 48810 |
 | 395 | Beatles | You're going to loose that girl | Beatles | You're Going to Lose That Girl |  | Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz. | 48245 |
 | 431 | Peabo Bryson & Regina Bell | A whole new world | Peabo Bryson & Regina Bell | A whole new world |  | Peabo Bryson & Regina Belle Aladdin; from was missing | 52064 |
 | 461 | Elton John | Can you feel the love tonight | Elton John | Can you feel the love tonight |  | Elton John Lion King; from was missing | 49686 |
+| 506 | Shaggy | It wasn't me | Shaggy | It Wasn't Me |  | Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). | 52706 |
 | 521 | Gina G | Ooh aah...just a little bit | Gina G | Ooh aah...just a little bit | Eurovision | Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision. | 50208 |
 | 552 | Michael Bolton | Missing you | Michael Bolton | Missing You Now |  | Catalogue Missing You is Bolton's Missing You Now. Year from Discogs single (1992). | 51628 |
 | 598 | Richard Marx | Hold on to the night | Richard Marx | Hold On to the Nights |  | Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single). | 52395 |
@@ -66,10 +69,12 @@ means omit a category label rather than invent a performer.
 | 1073 | Björn Skifs | Michelangelo | Björn Skifs | Michelangelo | Melodifestivalen | Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen. | 48383 |
 | 1108 | Abba | Waterloo | Abba | Waterloo | Melodifestivalen, Eurovision | ABBA – Waterloo (German version); Melodifestivalen/Eurovision 1974. Categories Melodifestivalen + Eurovision. | 47775 |
 | 1302 | Bucks Fizz | Making your mind up | Bucks Fizz | Making your mind up | Eurovision | Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision. | 48720 |
+| 1319 | Mamas & The Papas | California dreaming | Mamas & The Papas | California Dreamin' |  | California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia). | 51441 |
 | 1326 | Brotherhood of man | Save your kisses for me | Brotherhood of man | Save your kisses for me | Eurovision | Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision. | 48656 |
 | 1357 | Fredric Weatherly | Danny boy | *(empty)* | Danny Boy | Irish traditional | Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting. | 50116 |
 | 1359 | Christina Aguilera | Dirty | Christina Aguilera | Dirrty |  | Venue/dump title Dirty; song is Dirrty (Christina Aguilera feat. Redman). Year from Wikipedia/Wikidata (2002 single from Stripped). | 48993 |
 | 1517 | Claes-Göran Hederström | Det börjar verka kärlek banne mig | Claes-Göran Hederström | Det börjar verka kärlek banne mig | Melodifestivalen, Eurovision | Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision. | 49013 |
+| 1568 | Creedence Clearwater Revival | Walking on the water | Creedence Clearwater Revival | Walk on the Water |  | CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia). | 49158 |
 | 1584 | Barbados | Världen utanför | Barbados | Världen utanför | Melodifestivalen | Barbados – Världen utanför; Melodifestivalen 2002. Category Melodifestivalen. | 48173 |
 | 1585 | Brandsta City Släckers | Kom och ta mig långt härifrån | Brandsta City Släckers | Kom och ta mig långt härifrån | Melodifestivalen | Brandsta City Släckers – Kom och ta mig; Melodifestivalen 2002. Category Melodifestivalen. | 48592 |
 | 1586 | Javiera | No hay nada màs | Javiera | No hay nada màs | Melodifestivalen | Javiera – No Hay Nada Más; Melodifestivalen 2002. Category Melodifestivalen. | 50597 |
@@ -98,6 +103,7 @@ means omit a category label rather than invent a performer.
 | 1985 | Julsång | Staffansvisan | *(empty)* | Staffansvisan | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50853 |
 | 1986 | Julsång | Stilla natt | *(empty)* | Stilla natt | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50854 |
 | 2022 | Bob Marley | Positive vibration | Bob Marley | Positive vibration |  | Bob Marley – Positive Vibration on Rastaman Vibration. Year from Wikipedia/Discogs (1976). | 48486 |
+| 2060 | John Denver | Country roads | John Denver | Take Me Home, Country Roads |  | John Denver – Take Me Home, Country Roads. Resolver dated 2019 with Max Q credit; single 12 Apr 1971 (Wikipedia). | 50721 |
 | 2100 | Broadman Hymnal | Face to face | *(empty)* | Face to Face | Hymn | Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent | 48654 |
 | 2111 | Alexander Rybak | Fairytale | Alexander Rybak | Fairytale | Eurovision | Alexander Rybak – Fairytale; Eurovision 2009 (Norway). Category Eurovision. | 47883 |
 | 2334 | Kingsmen | Louie, Louie | Kingsmen | Louie, Louie |  | The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963). | 51022 |
@@ -134,12 +140,14 @@ means omit a category label rather than invent a performer.
 | 3385 | Julsång | Silent night, holy night | *(empty)* | Silent Night, Holy Night | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50857 |
 | 3386 | Julsång | Jingle bells | *(empty)* | Jingle Bells | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50858 |
 | 3388 | Chris Rea | Driving home for christmas | Chris Rea | Driving home for christmas | Christmas | Credited Christmas song (Chris Rea – Driving Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 48977 |
+| 3411 | Olivia Newton-John | Country roads (remix) | Olivia Newton-John | Take Me Home, Country Roads |  | Olivia Newton-John – Take Me Home, Country Roads. Resolver dated 2015; single Jan 1973 / Let Me Be There album (Wikipedia). | 51965 |
 | 3414 | Neil Young | Rocking in the free world | Neil Young | Rockin' in the Free World |  | Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom). | 51829 |
 | 3419 | Charlotte Nilsson | Take me to your heaven | Charlotte Nilsson | Take me to your heaven | Melodifestivalen, Eurovision | Charlotte Perrelli – Take Me to Your Heaven; Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision. | 48894 |
 | 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a king be/Back door man medley |  | Frank Marino & Mahogany Rush Live includes I'm a King Bee. Year from Discogs Live album (1978). | 50082 |
 | 3506 | Shania Twain | The woman in me | Shania Twain | The woman in me |  | Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single). | 52731 |
 | 3555 | Midsommarsång | Små grodorna | *(empty)* | Små grodorna | Midsummer | Traditional / category material filed under 'Midsommarsång'; no single performer to invent | 51678 |
 | 3677 | Oasis | It's getting better | Oasis | It's Gettin' Better (Man!!) |  | Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997). | 51937 |
+| 3690 | Wallflowers | One headlight | The Wallflowers | One headlight |  | The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996). | 53473 |
 | 3694 | Jesse Hunter | Long legged Hannah | Jesse Hunter | Long legged Hannah |  | Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994). | 50644 |
 | 3755 | Irish traditional song | Wild rover | *(empty)* | The Wild Rover | Irish traditional | Traditional / category material filed under 'Irish traditional song'; no single performer to invent | 50466 |
 | 3857 | A-Ha | The living daylights | A-Ha | The living daylights |  | a-ha Bond theme; film was missing as from | 47750 |
@@ -147,8 +155,10 @@ means omit a category label rather than invent a performer.
 | 4202 | Jedward | Lipstick | Jedward | Lipstick | Eurovision | Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. | 50616 |
 | 4285 | Justin Bieber | Mistletoe | Justin Bieber | Mistletoe | Christmas | Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1). | 50864 |
 | 4309 | Sonja Aldén | I din himmel | Sonja Aldén | I din himmel | Melodifestivalen | Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. | 52846 |
+| 4344 | Ani Difranco | Little plastic castles | Ani DiFranco | Little Plastic Castle |  | Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998). | 47988 |
 | 4352 | Arctic Monkeys | You probably couldn't see | Arctic Monkeys | You probably couldn't see |  | Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings. | 48037 |
 | 4585 | Dolly Parton | Hard candy Christmas | Dolly Parton | Hard candy Christmas | Christmas | Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 49471 |
+| 4720 | INXS | Good and bad times | INXS | Good + Bad Times |  | INXS – Good + Bad Times. Resolver matched the 2025 Listen Like Thieves deluxe alternate take; original album track 1985 (Wikipedia Listen Like Thieves, 14 Oct 1985). | 50460 |
 | 4724 | Loreen | Euphoria | Loreen | Euphoria | Melodifestivalen, Eurovision | Loreen – Euphoria; Melodifestivalen/Eurovision 2012. Categories Melodifestivalen + Eurovision. | 51316 |
 | 4779 | Kenny Rogers & Dolly Parton | I believe in Santa Claus | Kenny Rogers & Dolly Parton | I believe in Santa Claus | Christmas | Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1). | 50983 |
 | 4896 | Piano singalong | Happy Birthday | *(empty)* | Happy Birthday to You | Birthday | Traditional / category material filed under 'Piano singalong'; no single performer to invent | 52134 |
@@ -168,8 +178,10 @@ means omit a category label rather than invent a performer.
 | 5674 | Jill Johnsson | Kärleken är | Jill Johnsson | Kärleken är | Melodifestivalen, Eurovision | Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision. | 50668 |
 | 5728 | BTS | Blood sweat and tears | BTS | Blood Sweat & Tears |  | Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick. | 48716 |
 | 5733 | Fall out boy | This aint a scene | Fall out boy | This Ain't a Scene, It's an Arms Race |  | Truncated dump title. Year from Wikipedia (2007 single from Infinity on High). | 49944 |
+| 5742 | The doors | Crystal Ship | The doors | The Crystal Ship |  | The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia). | 53135 |
 | 5747 | High school musical | What iv'e been looking for | Ashley Tisdale, Lucas Grabeel | What I've Been Looking For |  | HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz). | 50369 |
 | 5843 | High school musical | Were all in this together | The High School Musical Cast | We're All in This Together |  | Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. | 50370 |
 | 5847 | Ariana Grande | Santa tell me | Ariana Grande | Santa tell me | Christmas | Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1). | 48057 |
 | 5865 | Ed Sheeran | Merry christmas | Ed Sheeran | Merry christmas | Christmas | Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 49638 |
+| 5868 | Elton John ft Dua Lipa | Cold heart (pnau remix) | Elton John ft Dua Lipa | Cold heart (pnau remix) |  | Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia). | 49712 |
 | 5888 | Loreen | Tattoo | Loreen | Tattoo | Melodifestivalen, Eurovision | Loreen – Tattoo; Melodifestivalen/Eurovision 2023. Categories Melodifestivalen + Eurovision. | 51317 |
