@@ -62,6 +62,60 @@ async function main() {
     console.log(okCollection ? "PASS" : "FAIL");
     if (!okCollection) failed = true;
 
+    console.log("\n=== 80s mid-viewport artist → back (must not snap row to top) ===");
+    await page.goto(`${BASE}/collections/decade/1980`, { waitUntil: "networkidle" });
+    const midSetup = await page.evaluate(() => {
+        window.scrollTo(0, 900);
+        const link = [...document.querySelectorAll("a[href^='/artists/']")].find((a) => {
+            const r = a.getBoundingClientRect();
+            return r.top > 180 && r.top < 620 && a.closest(".song-row");
+        });
+        const row = link?.closest(".song-row");
+        if (!link || !row) {
+            return { ok: false, reason: "no mid-viewport artist link", y: window.scrollY };
+        }
+        const r = row.getBoundingClientRect();
+        return {
+            ok: true,
+            y: window.scrollY,
+            href: link.getAttribute("href"),
+            id: row.getAttribute("data-id"),
+            viewportTop: r.top,
+        };
+    });
+    console.log("mid setup", midSetup);
+    if (!midSetup.ok || !midSetup.href) {
+        failed = true;
+    } else {
+        await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${midSetup.href}"]`)]);
+        await page.waitForTimeout(400);
+        await Promise.all([page.waitForURL("**/collections/decade/1980"), nativeClick(page, "a[data-smart-back]")]);
+        await page.waitForTimeout(700);
+        const midAfter = await page.evaluate((id) => {
+            const row = document.querySelector(`.song-row[data-id="${CSS.escape(id)}"]`);
+            const r = row?.getBoundingClientRect();
+            return {
+                y: window.scrollY,
+                viewportTop: r?.top ?? null,
+                visible: r ? r.top < window.innerHeight && r.bottom > 0 : false,
+            };
+        }, midSetup.id);
+        console.log("mid after", midAfter);
+        const restoredY = Math.abs(midAfter.y - midSetup.y) < 80;
+        const stillMid =
+            midAfter.visible &&
+            midAfter.viewportTop != null &&
+            Math.abs(midAfter.viewportTop - midSetup.viewportTop) < 120;
+        const notSnappedToTop = midSetup.viewportTop > 160 && midAfter.viewportTop != null && midAfter.viewportTop > 80;
+        const okMid = restoredY && stillMid && notSnappedToTop;
+        console.log(okMid ? "PASS mid-viewport restore" : "FAIL mid-viewport restore", {
+            restoredY,
+            stillMid,
+            notSnappedToTop,
+        });
+        if (!okMid) failed = true;
+    }
+
     console.log("\n=== Artists → artist → back ===");
     await page.goto(`${BASE}/artists`, { waitUntil: "networkidle" });
     await page.evaluate(() => window.scrollTo(0, 2500));

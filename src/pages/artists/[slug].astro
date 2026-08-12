@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import BackLink from "../../components/BackLink.astro";
 import SongList from "../../components/SongList.astro";
 import { collectionPath, mergeSongVariants, sortSongVariants } from "../../lib/catalogue";
-import { artistTitleTransitionName } from "../../lib/view-transitions";
 import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
 
 export function getStaticPaths() {
@@ -27,13 +26,7 @@ const { artist, songs } = Astro.props;
 <Layout title={`${artist.name} · kkaraoke`}>
     <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-[18px]" transition:animate="fade">
         <BackLink href="/artists" label="← BACK" />
-        <h1
-            class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream"
-            data-artist-title
-            data-vt-artist={artist.slug}
-            transition:name={artistTitleTransitionName(artist.slug)}
-            transition:animate="initial"
-        >
+        <h1 class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream" data-artist-title>
             {artist.name}
         </h1>
         {

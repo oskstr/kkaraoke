@@ -2,11 +2,13 @@
  *  (window scroll). We only help windowed song lists grow tall enough on back. */
 
 import { navigate } from "astro:transitions/client";
-import { artistTitleTransitionName } from "../lib/view-transitions";
+import { ensureWindowedRows } from "./song-window";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
+const RETURN_SONG_KEY = "kkaraoke:return-song";
+const RETURN_SCROLL_KEY = "kkaraoke:return-scroll";
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -124,41 +126,35 @@ function openSearchFromBrowse(event: Event): void {
     });
 }
 
-/** Remember which artist control was pressed so the name can morph into the title. */
-let pendingArtistEl: HTMLElement | null = null;
-
 function artistSlugFromPath(pathname: string): string | undefined {
     const match = /^\/artists\/([^/]+)\/?$/.exec(pathname);
     return match?.[1];
 }
 
+function readReturnScroll(): number | undefined {
+    const raw = sessionStorage.getItem(RETURN_SCROLL_KEY);
+    if (raw == null || raw === "") return undefined;
+    const n = Number(raw);
+    return Number.isFinite(n) ? n : undefined;
+}
+
+function clearReturnKeys(): void {
+    sessionStorage.removeItem(RETURN_SONG_KEY);
+    sessionStorage.removeItem(RETURN_SCROLL_KEY);
+}
+
+/** Remember the list offset so back can restore it instead of snapping a row to the top. */
 function onSongArtistPointerDown(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
-    const named = target.closest<HTMLElement>("[data-vt-artist]");
-    const link = named?.closest("a") ?? target.closest<HTMLAnchorElement>("a[href^='/artists/']");
+    const link = target.closest<HTMLAnchorElement>("a[href^='/artists/']");
     if (!link || link.hasAttribute("data-astro-reload")) return;
     const path = linkPathname(link);
     if (artistSlugFromPath(path) === undefined) return;
 
     const row = link.closest<HTMLElement>(".song-row");
-    if (row?.dataset.id) sessionStorage.setItem("kkaraoke:return-song", row.dataset.id);
-    pendingArtistEl = named ?? link;
-}
-
-function pickArtistEl(root: ParentNode, slug: string): HTMLElement | null {
-    const href = `/artists/${slug}`;
-    const untilId = sessionStorage.getItem("kkaraoke:return-song");
-    if (untilId) {
-        const inRow = root.querySelector<HTMLElement>(
-            `.song-row[data-id="${CSS.escape(untilId)}"] [data-vt-artist="${CSS.escape(slug)}"]`,
-        );
-        if (inRow) return inRow;
-    }
-    return (
-        root.querySelector<HTMLElement>(`[data-vt-artist="${CSS.escape(slug)}"]`) ??
-        root.querySelector<HTMLElement>(`a[href="${href}"]`)
-    );
+    if (row?.dataset.id) sessionStorage.setItem(RETURN_SONG_KEY, row.dataset.id);
+    sessionStorage.setItem(RETURN_SCROLL_KEY, String(window.scrollY));
 }
 
 function silenceNamedGroups(root: ParentNode, selector: string): void {
@@ -167,20 +163,9 @@ function silenceNamedGroups(root: ParentNode, selector: string): void {
     });
 }
 
-function scopeArtistTransition(root: ParentNode, dest: string): void {
-    const slug = artistSlugFromPath(dest);
-    if (!slug) return;
-    const name = artistTitleTransitionName(slug);
-    silenceNamedGroups(
-        root,
-        "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-vt-artist]",
-    );
-    const el =
-        pendingArtistEl && root.contains(pendingArtistEl) && pendingArtistEl.dataset.vtArtist === slug
-            ? pendingArtistEl
-            : pickArtistEl(root, slug);
-    pendingArtistEl = null;
-    if (el) el.style.viewTransitionName = name;
+/** Artist pages fade; don't let collection chrome fly off as a shared element. */
+function silenceCollectionChrome(root: ParentNode): void {
+    silenceNamedGroups(root, "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title]");
 }
 
 type PreparationEvent = Event & {
@@ -197,42 +182,42 @@ type PreparationEvent = Event & {
  */
 let expandingForBack = false;
 
-function expandWindowedListForBack(): void {
+function restoreWindowScroll(targetY: number): void {
+    if (!Number.isFinite(targetY) || targetY < 0) return;
+    if (Math.abs(window.scrollY - targetY) > 1) {
+        window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
+    }
+}
+
+function expandWindowedListForBack(clearKeys = false): void {
     if (expandingForBack) return;
     expandingForBack = true;
     try {
-        const root = document.documentElement;
         const state = history.state as { scrollY?: number } | null;
-        const targetY = state?.scrollY ?? window.scrollY;
-        const untilId = sessionStorage.getItem("kkaraoke:return-song") ?? undefined;
+        const saved = readReturnScroll();
+        const targetY =
+            typeof state?.scrollY === "number" && state.scrollY > 0 ? state.scrollY : (saved ?? window.scrollY);
+        const untilId = sessionStorage.getItem(RETURN_SONG_KEY) ?? undefined;
 
-        document.dispatchEvent(
-            new CustomEvent("kkaraoke:ensure-scroll-height", {
-                bubbles: true,
-                detail: {
-                    minHeight: targetY + window.innerHeight + 80,
-                    root,
-                    ...(untilId ? { untilId } : {}),
-                },
-            }),
-        );
+        ensureWindowedRows(document, {
+            minHeight: targetY + window.innerHeight + 80,
+            ...(untilId ? { untilId } : {}),
+        });
+
+        restoreWindowScroll(targetY);
 
         if (untilId) {
             const el = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
             if (el) {
-                const top = el.getBoundingClientRect().top + window.scrollY;
-                if (Math.abs(window.scrollY - top) > 48) {
-                    window.scrollTo({ top, left: 0, behavior: "instant" });
+                const r = el.getBoundingClientRect();
+                const fullyOff = r.bottom < 0 || r.top > window.innerHeight;
+                if (fullyOff) {
+                    el.scrollIntoView({ block: "nearest", behavior: "instant" });
                 }
-                sessionStorage.removeItem("kkaraoke:return-song");
-                return;
             }
         }
 
-        // Re-assert Astro’s restored window scroll after rows were inserted.
-        if (typeof targetY === "number" && targetY > 0) {
-            window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
-        }
+        if (clearKeys) clearReturnKeys();
     } finally {
         expandingForBack = false;
     }
@@ -266,10 +251,7 @@ function linkPathname(link: HTMLAnchorElement): string {
  * the tiles that exist in both. Opening a collection would otherwise animate
  * every other tile as its own group — silence those, keep the match.
  */
-function scopeCollectionTileNames(
-    root: ParentNode,
-    keep: { href?: string; chrome?: string; title?: string },
-): void {
+function scopeCollectionTileNames(root: ParentNode, keep: { href?: string; chrome?: string; title?: string }): void {
     root.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
         const link = el.closest("a");
         const keepThis =
@@ -285,8 +267,20 @@ function scopeCollectionTileNames(
     });
 }
 
+function expandIncomingWindowedList(newDoc: Document): void {
+    const untilId = sessionStorage.getItem(RETURN_SONG_KEY) ?? undefined;
+    const saved = readReturnScroll();
+    const stateY = (history.state as { scrollY?: number } | null)?.scrollY;
+    const targetY = typeof stateY === "number" && stateY > 0 ? stateY : (saved ?? 0);
+    if (!untilId && targetY <= 0) return;
+    ensureWindowedRows(newDoc, {
+        minHeight: targetY + 900,
+        ...(untilId ? { untilId } : {}),
+    });
+}
+
 /** On back from a collection, only the matching incoming tile should morph. */
-function prepareIncomingTileMorph(event: Event): void {
+function prepareIncomingDocument(event: Event): void {
     const newDoc = (event as SwapEvent).newDocument;
     if (!newDoc) return;
     const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
@@ -298,14 +292,13 @@ function prepareIncomingTileMorph(event: Event): void {
         });
     }
 
-    const artistSlug = document.querySelector<HTMLElement>("[data-artist-title]")?.dataset.vtArtist;
-    if (!artistSlug) return;
-    silenceNamedGroups(
-        newDoc,
-        "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title]",
-    );
-    const el = pickArtistEl(newDoc, artistSlug);
-    if (el) el.style.viewTransitionName = artistTitleTransitionName(artistSlug);
+    if (document.querySelector("[data-artist-title]")) {
+        silenceCollectionChrome(newDoc);
+    }
+
+    if (lastNavDirection === "back") {
+        expandIncomingWindowedList(newDoc);
+    }
 }
 
 function clearScopedViewTransitionNames(): void {
@@ -337,7 +330,7 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
     document.addEventListener("click", onSongArtistPointerDown, true);
-    document.addEventListener("astro:before-swap", prepareIncomingTileMorph);
+    document.addEventListener("astro:before-swap", prepareIncomingDocument);
 
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
@@ -346,7 +339,7 @@ if (!window.__kkaraokeNavInit) {
             scopeCollectionTileNames(document, { href: dest });
         }
         if (artistSlugFromPath(dest)) {
-            scopeArtistTransition(document, dest);
+            silenceCollectionChrome(document);
         }
         if (!keepSearchInput(dest)) {
             searchInputEl()?.removeAttribute("data-astro-transition-persist");
@@ -358,7 +351,7 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("astro:after-swap", () => {
         markNavigated();
         if (lastNavDirection === "back") {
-            expandWindowedListForBack();
+            expandWindowedListForBack(false);
         }
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
@@ -369,11 +362,15 @@ if (!window.__kkaraokeNavInit) {
     });
 
     document.addEventListener("astro:page-load", () => {
-        clearScopedViewTransitionNames();
         if (lastNavDirection === "back") {
-            expandWindowedListForBack();
-            requestAnimationFrame(expandWindowedListForBack);
+            expandWindowedListForBack(false);
+            requestAnimationFrame(() => {
+                expandWindowedListForBack(true);
+            });
         }
+        void waitForViewTransitions().then(() => {
+            clearScopedViewTransitionNames();
+        });
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
             void scheduleSearchFocus();

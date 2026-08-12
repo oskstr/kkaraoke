@@ -5,7 +5,7 @@
  *  Always skip song ids that are already rendered.
  */
 
-export {};
+import { jsonForScript } from "../lib/json-script";
 
 type MoreSong = {
     id: number;
@@ -72,6 +72,76 @@ function notYetRendered(song: MoreSong, seen: Set<string>): boolean {
 let observer: IntersectionObserver | null = null;
 let loadMoreFn: (() => void) | null = null;
 let listEl: Element | null = null;
+
+const ROW_HEIGHT_ESTIMATE = 64;
+
+function listIsTallEnough(doc: Document, list: Element, opts: { untilId?: string; minHeight?: number }): boolean {
+    if (opts.untilId) {
+        return Boolean(list.querySelector(`[data-id="${CSS.escape(opts.untilId)}"]`));
+    }
+    if (opts.minHeight !== undefined) {
+        const scrollHeight = doc.documentElement.scrollHeight;
+        if (scrollHeight >= opts.minHeight) return true;
+        // Incoming documents in `astro:before-swap` often have no layout yet.
+        if (scrollHeight < 80) {
+            const rows = list.querySelectorAll(".song-row").length;
+            if (rows * ROW_HEIGHT_ESTIMATE >= opts.minHeight) return true;
+        }
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Insert windowed rows into `doc` until `untilId` exists or the list is tall
+ * enough. Safe on the live document and on `event.newDocument` before swap.
+ * Rewrites the JSON payload so infinite-scroll does not re-append those rows.
+ */
+export function ensureWindowedRows(doc: Document, opts: { untilId?: string; minHeight?: number } = {}): void {
+    const root = doc.querySelector("[data-more-songs-root]");
+    const list = doc.querySelector("[data-song-list]");
+    const json = doc.querySelector<HTMLElement>("[data-more-songs]");
+    if (!list || !json) return;
+
+    let remaining: MoreSong[] = [];
+    try {
+        remaining = JSON.parse(json.textContent || "[]") as MoreSong[];
+    } catch {
+        return;
+    }
+
+    const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
+    const seen = renderedSongIds(list);
+    remaining = remaining.filter((song) => notYetRendered(song, seen));
+
+    let guard = 0;
+    while (remaining.length > 0 && guard < 50 && !listIsTallEnough(doc, list, opts)) {
+        const live = renderedSongIds(list);
+        while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
+            remaining.shift();
+        }
+        const batch = remaining.splice(0, chunk).filter((song) => notYetRendered(song, live));
+        if (batch.length === 0) break;
+        for (const song of batch) {
+            for (const id of song.ids.length > 0 ? song.ids : [song.id]) {
+                live.add(String(id));
+            }
+        }
+        list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
+        guard += 1;
+    }
+
+    json.textContent = jsonForScript(remaining);
+    if (remaining.length === 0) {
+        root?.remove();
+    }
+
+    if (doc === document) {
+        if (json.isConnected) json.dataset.bound = "";
+        bindInfiniteScroll();
+        window.dispatchEvent(new Event("kkaraoke:favorites"));
+    }
+}
 
 function bindInfiniteScroll(): void {
     const root = document.querySelector("[data-more-songs-root]");
@@ -142,6 +212,7 @@ function bindInfiniteScroll(): void {
         }
         if (batch.length === 0) return;
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
+        json.textContent = jsonForScript(remaining);
         window.dispatchEvent(new Event("kkaraoke:favorites"));
         if (remaining.length === 0) {
             observer?.disconnect();
@@ -171,24 +242,10 @@ function onLoadMoreClick(event: Event): void {
 function onEnsureScrollHeight(event: Event): void {
     const detail = (event as CustomEvent<{ minHeight: number; root: Element; untilId?: string }>).detail;
     if (!detail) return;
-
-    if (!loadMoreFn || listEl !== document.querySelector("[data-song-list]")) {
-        bindInfiniteScroll();
-    }
-
-    let guard = 0;
-    while (loadMoreFn && listEl && guard < 50) {
-        if (detail.untilId) {
-            if (listEl.querySelector(`[data-id="${CSS.escape(detail.untilId)}"]`)) break;
-        } else if (document.documentElement.scrollHeight >= detail.minHeight) {
-            break;
-        }
-        const before = listEl.querySelectorAll(".song-row").length;
-        loadMoreFn();
-        const after = listEl.querySelectorAll(".song-row").length;
-        if (after === before) break;
-        guard += 1;
-    }
+    ensureWindowedRows(document, {
+        minHeight: detail.minHeight,
+        ...(detail.untilId ? { untilId: detail.untilId } : {}),
+    });
 }
 
 declare global {
