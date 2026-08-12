@@ -4,10 +4,10 @@ import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
 
 export function getStaticPaths() {
     return getArtists().map((artist) => ({
-        params: { mbid: artist.mbid },
+        params: { slug: artist.slug },
         props: {
             artist,
-            songs: getSongsByArtist(artist.mbid),
+            songs: getSongsByArtist(artist.slug),
         },
     }));
 }
@@ -23,7 +23,7 @@ const { artist, songs } = Astro.props;
 <Layout title={`${artist.name} – KKaraoke`}>
     <main class="m-auto p-3 sm:p-6">
         <p class="mb-4">
-            <a href="/" class="text-gray-600 underline-offset-2 hover:underline">← Alla låtar</a>
+            <a href="/" class="text-gray-600 underline-offset-2 hover:underline">← All songs</a>
         </p>
         <h1>{artist.name}</h1>
         {
@@ -32,7 +32,7 @@ const { artist, songs } = Astro.props;
             )
         }
         <p class="mt-2 text-sm text-gray-500">
-            {songs.length} {songs.length === 1 ? "låt" : "låtar"}
+            {songs.length} {songs.length === 1 ? "song" : "songs"}
         </p>
 
         <div class="mt-6 w-full overflow-x-auto">
@@ -40,8 +40,8 @@ const { artist, songs } = Astro.props;
                 <thead class="border-b border-gray-200">
                     <tr>
                         <th class="px-3 py-2 text-left sm:px-6 sm:py-4">ID</th>
-                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Titel</th>
-                        <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">Med</th>
+                        <th class="px-3 py-2 text-left sm:px-6 sm:py-4">Title</th>
+                        <th class="hidden px-3 py-2 text-left sm:table-cell sm:px-6 sm:py-4">With</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,7 +67,7 @@ const { artist, songs } = Astro.props;
                                             <>
                                                 {index > 0 && ", "}
                                                 <a
-                                                    href={`/artists/${other.mbid}`}
+                                                    href={`/artists/${other.slug}`}
                                                     class="text-gray-700 underline-offset-2 hover:underline"
                                                 >
                                                     {other.name}

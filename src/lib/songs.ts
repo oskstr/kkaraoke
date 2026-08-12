@@ -5,12 +5,14 @@ import artistsFile from "../../data/artists.json";
 import artistNamesFile from "../../data/artist-names.json";
 
 /**
- * One credited performer on a song, with the MusicBrainz id the artist page is keyed by.
- * Collaborations carry several of these so each name can link on its own — never by parsing
- * the display credit, which cannot tell `Hall & Oates` from `Christina Aguilera, Lil’ Kim`.
+ * One credited performer on a song. Collaborations carry several of these so each name
+ * can link on its own — never by parsing the display credit, which cannot tell
+ * `Hall & Oates` from `Christina Aguilera, Lil’ Kim`. `mbid` is the stable identity;
+ * `slug` is what the artist URL uses.
  */
 export interface CreditedArtist {
     mbid: string;
+    slug: string;
     name: string;
 }
 
@@ -56,6 +58,7 @@ export interface Song {
 /** What an artist page needs beyond the songs themselves. */
 export interface Artist {
     mbid: string;
+    slug: string;
     name: string;
     sortName?: string;
     genres?: string[];
@@ -81,9 +84,9 @@ interface Correction {
     /**
      * Present when the resolver knew each credited artist by name. `artist` above is the
      * release's credit line, which reads properly but is a single string; this is the same
-     * artists individually, with the ids a page needs to link each of them separately.
+     * artists individually, with the ids needed to link each of them separately.
      */
-    artists?: CreditedArtist[];
+    artists?: { mbid: string; name: string }[];
 }
 
 /**
@@ -107,6 +110,8 @@ interface ArtistRecord {
     mbid: string;
     name: string;
     sortName?: string;
+    type?: string;
+    disambiguation?: string;
     genres?: { name: string; count: number }[];
 }
 
@@ -141,12 +146,29 @@ function displayNameFor(mbid: string, fallback?: string): string | undefined {
 }
 
 /**
- * Named credits for linking. Prefer the resolver's `artists` list; fall back to looking
- * up `artistMbids` in the artist catalogue so artist-only corrections still link. An
- * override that touched `artist` drops the ids: empty means no performer, and a hand-set
- * name may no longer match whoever MusicBrainz pointed at.
+ * URL slug from a display name. Keeps letters from any script so non-Latin names stay
+ * readable; punctuation becomes hyphens. `&` becomes `and` so Hall & Oates is
+ * `hall-and-oates` rather than a bare join.
  */
-function creditedArtists(correction: Correction | undefined, override: Override | undefined): CreditedArtist[] | undefined {
+export function slugify(name: string): string {
+    return (
+        name
+            .normalize("NFC")
+            .toLowerCase()
+            .replace(/&/g, " and ")
+            .replace(/[^\p{L}\p{N}]+/gu, "-")
+            .replace(/^-+|-+$/g, "") || "artist"
+    );
+}
+
+/**
+ * Named credits without slugs yet — slugs need the full set of catalogue artists so
+ * collisions (two Alices, two Mikas) can be disambiguated.
+ */
+function creditedArtists(
+    correction: Correction | undefined,
+    override: Override | undefined,
+): { mbid: string; name: string }[] | undefined {
     if (override !== undefined && "artist" in override) {
         return undefined;
     }
@@ -160,7 +182,7 @@ function creditedArtists(correction: Correction | undefined, override: Override 
     if (mbids.length === 0) {
         return undefined;
     }
-    const named: CreditedArtist[] = [];
+    const named: { mbid: string; name: string }[] = [];
     for (const mbid of mbids) {
         const name = displayNameFor(mbid);
         if (name === undefined) {
@@ -171,38 +193,121 @@ function creditedArtists(correction: Correction | undefined, override: Override 
     return named.length > 0 ? named : undefined;
 }
 
-const composed: readonly Song[] = catalogue.songs
+const composedWithoutSlugs = catalogue.songs.map((song) => {
+    const correction = corrections.get(song.postId);
+    const override = overrides.get(song.postId);
+    // `??` would treat an explicit empty artist as missing and fall back to the venue
+    // category label; traditional songs need the empty string to stick.
+    const artist =
+        override !== undefined && "artist" in override
+            ? (override.artist ?? "")
+            : (correction?.artist ?? song.artist);
+    const title = override?.title ?? correction?.title ?? song.song;
+    const from = override?.from ?? correction?.from;
+    const category = override?.category;
+    const language = override?.language ?? correction?.language;
+    const artists = creditedArtists(correction, override);
+    return {
+        id: song.id,
+        postId: song.postId,
+        artist,
+        song: title,
+        ...(artists === undefined ? {} : { artists }),
+        // Sorting an artist by their own sort name is what puts The Beatles under B,
+        // and it only exists once a lookup has provided it.
+        ...(correction?.genres === undefined ? {} : { genres: correction.genres }),
+        ...(correction?.year === undefined ? {} : { year: correction.year }),
+        ...(from === undefined ? {} : { from }),
+        ...(category === undefined ? {} : { category }),
+        ...(language === undefined ? {} : { language }),
+        ...(artist === song.artist && title === song.song && category === undefined && from === undefined
+            ? {}
+            : { corrected: true as const }),
+    };
+});
+
+/**
+ * Unique slugs for every artist that appears on a song. Prefer the bare name; when two
+ * catalogue artists share a slug, fall back to type, then MusicBrainz disambiguation,
+ * then a short id suffix — never leave two pages fighting over one URL.
+ */
+function assignSlugs(mbids: Iterable<string>): Map<string, string> {
+    const byBase = new Map<string, string[]>();
+    for (const mbid of mbids) {
+        const name = displayNameFor(mbid);
+        if (name === undefined) {
+            continue;
+        }
+        const base = slugify(name);
+        const group = byBase.get(base);
+        if (group === undefined) {
+            byBase.set(base, [mbid]);
+        } else {
+            group.push(mbid);
+        }
+    }
+
+    const slugByMbid = new Map<string, string>();
+    const used = new Set<string>();
+
+    const claim = (mbid: string, candidate: string): void => {
+        let slug = candidate;
+        if (used.has(slug)) {
+            slug = `${candidate}-${mbid.slice(0, 8)}`;
+        }
+        used.add(slug);
+        slugByMbid.set(mbid, slug);
+    };
+
+    for (const [base, group] of byBase) {
+        if (group.length === 1) {
+            claim(group[0]!, base);
+            continue;
+        }
+        for (const mbid of group) {
+            const record = artistRecords.get(mbid);
+            const typeSlug = record?.type !== undefined ? slugify(record.type) : undefined;
+            const disambiguationSlug =
+                record?.disambiguation !== undefined && record.disambiguation.length > 0
+                    ? slugify(record.disambiguation)
+                    : undefined;
+            const candidate =
+                typeSlug !== undefined && !used.has(`${base}-${typeSlug}`)
+                    ? `${base}-${typeSlug}`
+                    : disambiguationSlug !== undefined && !used.has(`${base}-${disambiguationSlug}`)
+                      ? `${base}-${disambiguationSlug}`
+                      : `${base}-${mbid.slice(0, 8)}`;
+            claim(mbid, candidate);
+        }
+    }
+
+    return slugByMbid;
+}
+
+const catalogueMbids = new Set<string>();
+for (const song of composedWithoutSlugs) {
+    for (const artist of song.artists ?? []) {
+        catalogueMbids.add(artist.mbid);
+    }
+}
+const slugByMbid = assignSlugs(catalogueMbids);
+const mbidBySlug = new Map([...slugByMbid].map(([mbid, slug]) => [slug, mbid]));
+
+const composed: readonly Song[] = composedWithoutSlugs
     .map((song): Song => {
-        const correction = corrections.get(song.postId);
-        const override = overrides.get(song.postId);
-        // `??` would treat an explicit empty artist as missing and fall back to the venue
-        // category label; traditional songs need the empty string to stick.
-        const artist =
-            override !== undefined && "artist" in override
-                ? (override.artist ?? "")
-                : (correction?.artist ?? song.artist);
-        const title = override?.title ?? correction?.title ?? song.song;
-        const from = override?.from ?? correction?.from;
-        const category = override?.category;
-        const language = override?.language ?? correction?.language;
-        const artists = creditedArtists(correction, override);
-        return {
-            id: song.id,
-            postId: song.postId,
-            artist,
-            song: title,
-            ...(artists === undefined ? {} : { artists }),
-            // Sorting an artist by their own sort name is what puts The Beatles under B,
-            // and it only exists once a lookup has provided it.
-            ...(correction?.genres === undefined ? {} : { genres: correction.genres }),
-            ...(correction?.year === undefined ? {} : { year: correction.year }),
-            ...(from === undefined ? {} : { from }),
-            ...(category === undefined ? {} : { category }),
-            ...(language === undefined ? {} : { language }),
-            ...(artist === song.artist && title === song.song && category === undefined && from === undefined
-                ? {}
-                : { corrected: true }),
-        };
+        const { artists: rawArtists, ...rest } = song;
+        if (rawArtists === undefined) {
+            return rest;
+        }
+        const artists: CreditedArtist[] = [];
+        for (const artist of rawArtists) {
+            const slug = slugByMbid.get(artist.mbid);
+            if (slug === undefined) {
+                continue;
+            }
+            artists.push({ mbid: artist.mbid, slug, name: artist.name });
+        }
+        return artists.length > 0 ? { ...rest, artists } : rest;
     })
     // The file is ordered by id to keep re-scrapes diffable, so sort for display here.
     // Falling back to the title keeps an artist's songs in a fixed order too.
@@ -237,12 +342,20 @@ export function getSongs(): Song[] {
     return [...composed];
 }
 
-export function getSongsByArtist(mbid: string): Song[] {
+export function getSongsByArtist(slug: string): Song[] {
+    const mbid = mbidBySlug.get(slug);
+    if (mbid === undefined) {
+        return [];
+    }
     return [...(songsByArtist.get(mbid) ?? [])];
 }
 
 function buildArtist(mbid: string): Artist | undefined {
     if (!songsByArtist.has(mbid)) {
+        return undefined;
+    }
+    const slug = slugByMbid.get(mbid);
+    if (slug === undefined) {
         return undefined;
     }
     const record = artistRecords.get(mbid);
@@ -258,6 +371,7 @@ function buildArtist(mbid: string): Artist | undefined {
         .map((g) => g.name);
     return {
         mbid,
+        slug,
         name,
         ...(record?.sortName === undefined ? {} : { sortName: record.sortName }),
         ...(genres === undefined || genres.length === 0 ? {} : { genres }),
@@ -283,6 +397,10 @@ export function getArtists(): Artist[] {
     );
 }
 
-export function getArtist(mbid: string): Artist | undefined {
+export function getArtist(slug: string): Artist | undefined {
+    const mbid = mbidBySlug.get(slug);
+    if (mbid === undefined) {
+        return undefined;
+    }
     return buildArtist(mbid);
 }
