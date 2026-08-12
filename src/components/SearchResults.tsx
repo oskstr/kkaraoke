@@ -111,7 +111,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
     const empty = Boolean(query.trim()) && index !== null && rows.length === 0 && artistHits.length === 0;
 
     return (
-        <div className="hd flex-1 overflow-y-auto px-[18px] pb-6 pt-2" data-scroll-root>
+        <div className="hd min-h-0 flex-1 overflow-y-auto px-[18px] pb-6 pt-2" data-scroll-root>
             {loadError && (
                 <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalogue.</div>
             )}

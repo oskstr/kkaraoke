@@ -44,7 +44,7 @@ const { artist, songs } = Astro.props;
             )
         }
     </header>
-    <main class="hd flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6" data-scroll-root>
+    <main class="hd min-h-0 flex-1 overflow-y-auto px-[18px] pt-1.5 pb-6" data-scroll-root>
         <SongList songs={songs} currentArtistSlug={artist.slug} />
     </main>
 </Layout>

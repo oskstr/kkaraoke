@@ -30,12 +30,13 @@ const { title, description = "Browse the karaoke catalogue by artist, decade, ge
     </head>
     <body>
         <!--
-          Named shell keeps the phone column stable during root fades (avoids the
-          “slides in from the center/left” glitch on Search → Artists).
-          No overflow:hidden — it clips view-transition snapshots.
+          Fixed-height shell so [data-scroll-root] is the real scroller
+          (window scroll stayed at 0 and broke back-restore).
+          min-h-0 on the column lets flex children shrink and overflow.
+          Avoid overflow:hidden on the shell — it clips view-transition snapshots.
         -->
         <div
-            class="app-shell mx-auto flex min-h-dvh w-full max-w-md flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
+            class="app-shell mx-auto flex h-dvh w-full max-w-md min-h-0 flex-col bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
             transition:name="app-shell"
             transition:animate="initial"
         >
