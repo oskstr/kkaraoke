@@ -326,6 +326,13 @@
             "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 48942,
+            "categories": [
+                "Irish traditional"
+            ],
+            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
+        },
+        {
             "postId": 48946,
             "categories": [
                 "Melodifestivalen",
@@ -641,6 +648,16 @@
             ]
         },
         {
+            "postId": 50493,
+            "artist": "",
+            "sortAs": "Christmas",
+            "title": "Santa Lucia",
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Traditional Santa Lucia / Sankta Lucia. Venue filed under 'Italian' with no real performer; omit artist (docs rule 3) and mark categories Christmas (Lucia / Christmas-season repertoire)."
+        },
+        {
             "postId": 50494,
             "categories": [
                 "Hymn"
@@ -707,6 +724,13 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 50779,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
             "postId": 50802,
@@ -944,6 +968,13 @@
             "postId": 51120,
             "year": 2018,
             "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
+        },
+        {
+            "postId": 51145,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Lasse Berghagen – Teddybjörnen Fredriksson. Children's song with a credited performer; mark categories Children's song."
         },
         {
             "postId": 51147,
