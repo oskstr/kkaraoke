@@ -1,6 +1,9 @@
-/** Windowed song lists for large collections. Lives in Layout so it rebinds
- *  on every ClientRouter navigation. Uses the viewport as the IO root
- *  (document scroll — Astro restores window.scrollY on back). */
+/** Windowed song lists for large collections.
+ *
+ *  Important: never reset `remaining` to the full JSON payload while the DOM
+ *  already contains later chunks — that re-appends early letters (B…) under F.
+ *  Always skip song ids that are already rendered.
+ */
 
 export {};
 
@@ -57,6 +60,19 @@ function rowHtml(song: MoreSong): string {
       </div>`;
 }
 
+function renderedSongIds(list: Element): Set<string> {
+    const seen = new Set<string>();
+    list.querySelectorAll<HTMLElement>(".song-row[data-id]").forEach((row) => {
+        if (row.dataset.id) seen.add(row.dataset.id);
+    });
+    return seen;
+}
+
+function notYetRendered(song: MoreSong, seen: Set<string>): boolean {
+    const ids = song.ids.length > 0 ? song.ids : [song.id];
+    return ids.every((id) => !seen.has(String(id)));
+}
+
 let observer: IntersectionObserver | null = null;
 let loadMoreFn: (() => void) | null = null;
 let listEl: Element | null = null;
@@ -76,6 +92,7 @@ function bindInfiniteScroll(): void {
         return;
     }
 
+    // Already wired to this exact list node — keep the in-memory remaining queue.
     if (json.dataset.bound === "1" && loadMoreFn && listEl === list) {
         document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
@@ -83,19 +100,26 @@ function bindInfiniteScroll(): void {
 
     observer?.disconnect();
     observer = null;
-    loadMoreFn = null;
-    listEl = null;
-    json.dataset.bound = "1";
 
     let remaining: MoreSong[] = [];
     try {
         remaining = JSON.parse(json.textContent || "[]") as MoreSong[];
     } catch {
         root.remove();
+        loadMoreFn = null;
+        listEl = null;
         document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
     }
+
+    // Drop anything already in the DOM (initial SSR rows + any ensure-loaded chunks).
+    const seen = renderedSongIds(list);
+    remaining = remaining.filter((song) => notYetRendered(song, seen));
+    json.dataset.bound = "1";
+
     if (remaining.length === 0) {
+        loadMoreFn = null;
+        listEl = null;
         root.remove();
         document.dispatchEvent(new Event("kkaraoke:list-ready"));
         return;
@@ -106,7 +130,25 @@ function bindInfiniteScroll(): void {
 
     const loadMore = () => {
         if (remaining.length === 0) return;
-        const batch = remaining.splice(0, chunk);
+        // Re-check DOM in case another pass inserted rows.
+        const live = renderedSongIds(list);
+        while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
+            remaining.shift();
+        }
+        if (remaining.length === 0) {
+            observer?.disconnect();
+            observer = null;
+            loadMoreFn = null;
+            root.remove();
+            return;
+        }
+        const batch = remaining.splice(0, chunk).filter((song) => notYetRendered(song, live));
+        for (const song of batch) {
+            for (const id of song.ids.length > 0 ? song.ids : [song.id]) {
+                live.add(String(id));
+            }
+        }
+        if (batch.length === 0) return;
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
         window.dispatchEvent(new Event("kkaraoke:favorites"));
         if (remaining.length === 0) {
@@ -118,7 +160,6 @@ function bindInfiniteScroll(): void {
     };
     loadMoreFn = loadMore;
 
-    // Viewport root — page uses document scroll (Astro restores window.scrollY).
     observer = new IntersectionObserver(
         (entries) => {
             if (entries.some((e) => e.isIntersecting)) loadMore();
@@ -135,7 +176,9 @@ function onEnsureScrollHeight(event: Event): void {
     ).detail;
     if (!detail) return;
 
-    if (!loadMoreFn) bindInfiniteScroll();
+    if (!loadMoreFn || listEl !== document.querySelector("[data-song-list]")) {
+        bindInfiniteScroll();
+    }
 
     let guard = 0;
     while (loadMoreFn && listEl && guard < 50) {
@@ -160,13 +203,8 @@ declare global {
 
 if (!window.__kkaraokeSongWindowInit) {
     window.__kkaraokeSongWindowInit = true;
-    document.addEventListener("astro:after-swap", () => {
-        loadMoreFn = null;
-        listEl = null;
-        observer?.disconnect();
-        observer = null;
-        bindInfiniteScroll();
-    });
+    // Bind to the new document after swap — do not clear an already-correct loader first.
+    document.addEventListener("astro:after-swap", bindInfiniteScroll);
     document.addEventListener("astro:page-load", bindInfiniteScroll);
     document.addEventListener("kkaraoke:ensure-scroll-height", onEnsureScrollHeight);
     bindInfiniteScroll();
