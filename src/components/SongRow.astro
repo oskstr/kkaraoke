@@ -5,12 +5,13 @@ interface Props {
     /** Punch-in numbers for this song (one or more). */
     ids: number[];
     title: string;
-    /** Fallback plain artist/category line when no credited artists. */
+    /** Fallback plain artist/categories line when no credited artists. */
     subtitle?: string;
     artists?: CreditedArtist[];
     from?: string;
     year?: number;
-    category?: string;
+    /** Joined categories label for traditional / no-artist rows. */
+    categories?: string;
     /** On an artist page, don’t link that artist’s own name. */
     currentArtistSlug?: string;
     titleAttr?: string;
@@ -25,7 +26,7 @@ const {
     artists = [],
     from,
     year,
-    category,
+    categories,
     currentArtistSlug,
     titleAttr,
     artistAttr,
@@ -78,8 +79,8 @@ const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join
                     <>
                         {subtitle && <span>{subtitle}</span>}
                         {subtitle && metaBits.length > 0 && <span> · </span>}
-                        {!subtitle && category && <span>{category}</span>}
-                        {!subtitle && category && metaBits.length > 0 && <span> · </span>}
+                        {!subtitle && categories && <span>{categories}</span>}
+                        {!subtitle && categories && metaBits.length > 0 && <span> · </span>}
                         {metaBits.length > 0 && <span>{metaBits.join(" · ")}</span>}
                     </>
                 )

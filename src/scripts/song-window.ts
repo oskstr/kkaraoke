@@ -14,7 +14,7 @@ type MoreSong = {
     artist: string;
     year: string;
     from: string;
-    category: string;
+    categories: string;
     artists: { name: string; slug: string }[];
 };
 
@@ -43,7 +43,7 @@ function rowHtml(song: MoreSong): string {
             .join("");
         if (meta.length > 0) subtitle += ` · ${escapeHtml(meta.join(" · "))}`;
     } else {
-        const bits = [song.category, ...meta].filter(Boolean);
+        const bits = [song.categories, ...meta].filter(Boolean);
         subtitle = escapeHtml(bits.join(" · "));
     }
     const ids = song.ids.length > 0 ? song.ids : [song.id];

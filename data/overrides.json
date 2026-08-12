@@ -2,17 +2,80 @@
     "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file. Optional year/genres win when set; otherwise compose keeps resolver enrichment unless the override clears the performer or replaces a matched artist identity.",
     "overrides": [
         {
+            "postId": 47750,
+            "from": "The Living Daylights",
+            "why": "a-ha Bond theme; film was missing as from"
+        },
+        {
+            "postId": 47775,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "ABBA – Waterloo. Venue filed plain Waterloo; matcher had picked the German-language MB recording. Force English ESC/Melodifestivalen cut (1974). Categories Melodifestivalen + Eurovision.",
+            "title": "Waterloo",
+            "year": 1974,
+            "language": "eng"
+        },
+        {
+            "postId": 47841,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 47883,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Alexander Rybak – Fairytale; Eurovision 2009 (Norway). Category Eurovision."
+        },
+        {
             "postId": 47902,
-            "category": "Children's song",
             "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
             "title": "Ekorr'n satt i granen",
             "artist": "",
-            "sortAs": "Children's song"
+            "sortAs": "Children's song",
+            "categories": [
+                "Children's song"
+            ]
+        },
+        {
+            "postId": 47988,
+            "year": 1998,
+            "title": "Little Plastic Castle",
+            "artist": "Ani DiFranco",
+            "why": "Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998)."
+        },
+        {
+            "postId": 47994,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 48037,
             "year": 2006,
             "why": "Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings."
+        },
+        {
+            "postId": 48057,
+            "why": "Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48065,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Arvingarna – Eloise; Melodifestivalen/Eurovision 1993. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 48102,
@@ -34,6 +97,34 @@
             "why": "Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11."
         },
         {
+            "postId": 48165,
+            "why": "Credited Christmas song (Band Aid – Do They Know It’s Christmas?). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48171,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen."
+        },
+        {
+            "postId": 48173,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Världen utanför; Melodifestivalen 2002. Category Melodifestivalen."
+        },
+        {
+            "postId": 48174,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Barbados – Allt som jag ser; Melodifestivalen 2001. Category Melodifestivalen."
+        },
+        {
             "postId": 48184,
             "title": "No More Tears (Enough Is Enough)",
             "year": 1979,
@@ -46,6 +137,35 @@
             "why": "Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz."
         },
         {
+            "postId": 48375,
+            "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48380,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Björn Kjellman – Älskar du livet; Melodifestivalen 2006. Category Melodifestivalen."
+        },
+        {
+            "postId": 48382,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Björn Skifs – Det blir alltid värre framåt natten; Melodifestivalen/Eurovision 1978. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48383,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen."
+        },
+        {
             "postId": 48486,
             "year": 1976,
             "why": "Bob Marley – Positive Vibration on Rastaman Vibration. Year from Wikipedia/Discogs (1976)."
@@ -56,17 +176,50 @@
             "why": "Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962."
         },
         {
+            "postId": 48545,
+            "why": "Credited Christmas song (Bon Jovi – Please Come Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48552,
+            "why": "Credited Christmas song (Boney M. – Mary’s Boy Child / Oh My Lord). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48553,
+            "why": "Credited Christmas song (Boney M. – Feliz Navidad). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
             "postId": 48592,
             "year": 2002,
-            "why": "Brandsta City Släckers Melodifestivalen 2002 entry (sv.wikipedia Kom och ta mig); Discogs/MusicBrainz 2002."
+            "why": "Brandsta City Släckers – Kom och ta mig; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
         },
         {
             "postId": 48654,
-            "category": "Hymn",
             "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
             "artist": "",
             "sortAs": "Hymn",
-            "title": "Face to Face"
+            "title": "Face to Face",
+            "categories": [
+                "Hymn"
+            ]
+        },
+        {
+            "postId": 48656,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision."
         },
         {
             "postId": 48716,
@@ -82,6 +235,36 @@
             "why": "Bubbles; MusicBrainz/Discogs earliest dated releases 2003."
         },
         {
+            "postId": 48720,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision."
+        },
+        {
+            "postId": 48753,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen."
+        },
+        {
+            "postId": 48776,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Carola – Främling; Melodifestivalen/Eurovision 1983. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48777,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Carola – Fångad av en stormvind; Melodifestivalen/Eurovision 1991. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 48782,
             "artist": "Carola",
             "title": "Det är bara vi",
@@ -89,10 +272,122 @@
             "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
         },
         {
+            "postId": 48798,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen."
+        },
+        {
+            "postId": 48810,
+            "year": 1970,
+            "why": "Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970)."
+        },
+        {
+            "postId": 48858,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Celine Dion – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
+        },
+        {
+            "postId": 48862,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Céline Dion – Ne partez pas sans moi; Eurovision 1988 (Switzerland). Category Eurovision."
+        },
+        {
+            "postId": 48864,
+            "why": "Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 48893,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Tusen och en natt (Swedish of Take Me to Your Heaven); Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48894,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Take Me to Your Heaven; Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48895,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48942,
+            "categories": [
+                "Irish traditional"
+            ],
+            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
+        },
+        {
+            "postId": 48946,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Chips – Dag efter dag; Melodifestivalen/Eurovision 1982. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48977,
+            "why": "Credited Christmas song (Chris Rea – Driving Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
             "postId": 48993,
             "title": "Dirrty",
             "year": 2002,
             "why": "Venue/dump title Dirty; song is Dirrty (Christina Aguilera feat. Redman). Year from Wikipedia/Wikidata (2002 single from Stripped)."
+        },
+        {
+            "postId": 48996,
+            "from": "Mulan",
+            "why": "Christina Aguilera Reflection from Mulan; from was missing"
+        },
+        {
+            "postId": 49013,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49158,
+            "year": 1968,
+            "title": "Walk on the Water",
+            "why": "CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia)."
+        },
+        {
+            "postId": 49236,
+            "why": "Credited Christmas song (Darlene Love – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 49267,
+            "why": "Credited Christmas song (Dean Martin – Let It Snow! Let It Snow! Let It Snow!). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49348,
@@ -105,15 +400,81 @@
             "why": "Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969)."
         },
         {
+            "postId": 49389,
+            "title": "You'll Never Get to Heaven (If You Break My Heart)",
+            "year": 1964,
+            "language": "eng",
+            "why": "Dionne Warwick – You'll Never Get to Heaven (If You Break My Heart). Venue filed the English title; matcher had picked the German-language MB recording. Force the English studio cut (1964)."
+        },
+        {
             "postId": 49420,
             "year": 1995,
             "why": "Listen With Your Heart from Pocahontas soundtrack (Wikipedia soundtrack release 1995)."
+        },
+        {
+            "postId": 49471,
+            "why": "Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 49485,
             "title": "MacArthur Park",
             "year": 1978,
             "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
+        },
+        {
+            "postId": 49638,
+            "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 49655,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Edin-Ådahl – Som en vind; Melodifestivalen/Eurovision 1990. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49684,
+            "from": "The Lion King",
+            "why": "Elton John Lion King; from was missing"
+        },
+        {
+            "postId": 49686,
+            "from": "The Lion King",
+            "why": "Elton John Lion King; from was missing"
+        },
+        {
+            "postId": 49712,
+            "year": 2021,
+            "why": "Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia)."
+        },
+        {
+            "postId": 49759,
+            "why": "Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 49768,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49773,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen."
         },
         {
             "postId": 49781,
@@ -127,10 +488,40 @@
             "why": "E.M.M.A. – Vänner. Year from Discogs Swedish single (2002)."
         },
         {
+            "postId": 49809,
+            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 49852,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Eric Clapton – Swing Low, Sweet Chariot. Traditional spiritual/hymn with a credited rendition; mark categories Hymn."
+        },
+        {
+            "postId": 49855,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Eric Saade – Popular; Melodifestivalen/Eurovision 2011. Categories Melodifestivalen + Eurovision."
+        },
+        {
             "postId": 49944,
             "title": "This Ain't a Scene, It's an Arms Race",
             "year": 2007,
             "why": "Truncated dump title. Year from Wikipedia (2007 single from Infinity on High)."
+        },
+        {
+            "postId": 49947,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Fame – Give Me Your Love; Melodifestivalen/Eurovision 2003. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 50082,
@@ -141,23 +532,74 @@
             "postId": 50116,
             "artist": "",
             "sortAs": "Irish traditional",
-            "category": "Irish traditional",
             "title": "Danny Boy",
-            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting."
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting.",
+            "categories": [
+                "Irish traditional"
+            ]
+        },
+        {
+            "postId": 50118,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Fredrik Kempe & Sanna Nielsen – Du och jag mot världen; Melodifestivalen 2005. Category Melodifestivalen."
+        },
+        {
+            "postId": 50121,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Friends – Lyssna till ditt hjärta; Melodifestivalen/Eurovision 2001. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 50122,
             "title": "The One That You Need",
             "year": 2002,
-            "why": "Friends Melodifestivalen 2002 entry; venue wrote The one that i need. Year from sv.wikipedia / Discogs (2002)."
+            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
+        },
+        {
+            "postId": 50124,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Fronda – Ingen mår så bra som jag; Melodifestivalen 2008. Category Melodifestivalen."
         },
         {
             "postId": 50135,
-            "category": "Birthday",
             "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
             "artist": "",
             "sortAs": "Birthday",
-            "title": "Ja må du leva"
+            "title": "Ja må du leva",
+            "categories": [
+                "Birthday"
+            ]
+        },
+        {
+            "postId": 50184,
+            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 50208,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision."
+        },
+        {
+            "postId": 50366,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Herreys – Diggi Loo Diggi Ley; Melodifestivalen/Eurovision 1984. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 50369,
@@ -193,12 +635,41 @@
             "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         },
         {
+            "postId": 50425,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
+        },
+        {
+            "postId": 50460,
+            "year": 1985,
+            "title": "Good + Bad Times",
+            "why": "INXS – Good + Bad Times. Resolver matched the 2025 Listen Like Thieves deluxe alternate take; original album track 1985 (Wikipedia Listen Like Thieves, 14 Oct 1985)."
+        },
+        {
             "postId": 50466,
-            "category": "Irish traditional",
             "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
             "artist": "",
             "sortAs": "Irish traditional",
-            "title": "The Wild Rover"
+            "title": "The Wild Rover",
+            "categories": [
+                "Irish traditional"
+            ]
+        },
+        {
+            "postId": 50493,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Credited Christmas / Lucia song (Elvis Presley – Santa Lucia; Italian bucket already resolved to Elvis). Keep the performer; still mark category Christmas (docs rule 1)."
+        },
+        {
+            "postId": 50494,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
         },
         {
             "postId": 50539,
@@ -208,12 +679,65 @@
         {
             "postId": 50597,
             "year": 2002,
-            "why": "Javiera – No Hay Nada Más, Melodifestivalen 2002. Year from Discogs (2002)."
+            "why": "Javiera – No Hay Nada Más; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
+        },
+        {
+            "postId": 50616,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
         },
         {
             "postId": 50644,
             "year": 1994,
             "why": "Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994)."
+        },
+        {
+            "postId": 50668,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 50721,
+            "year": 1971,
+            "title": "Take Me Home, Country Roads",
+            "artist": "John Denver",
+            "why": "John Denver – Take Me Home, Country Roads. Resolver dated 2019 with Max Q credit; single 12 Apr 1971 (Wikipedia)."
+        },
+        {
+            "postId": 50739,
+            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 50776,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Johnny Logan – Hold Me Now; Eurovision 1987 (Ireland). Category Eurovision."
+        },
+        {
+            "postId": 50778,
+            "why": "Credited Christmas song (Johnny Mathis – Have Yourself a Merry Little Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 50779,
+            "categories": [
+                "Christmas"
+            ],
+            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
             "postId": 50802,
@@ -223,149 +747,219 @@
         },
         {
             "postId": 50840,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50841,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50842,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50843,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Nu är det jul igen"
+            "title": "Nu är det jul igen",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50844,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Jul, jul strålande jul"
+            "title": "Jul, jul strålande jul",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50845,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Lusse Lelle"
+            "title": "Lusse Lelle",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50846,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Julmedley"
+            "title": "Julmedley",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50847,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50848,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50849,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50850,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50851,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50852,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50853,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50854,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
-            "sortAs": "Christmas"
+            "sortAs": "Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50855,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Santa Claus Is Coming to Town"
+            "title": "Santa Claus Is Coming to Town",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50856,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "We Wish You a Merry Christmas"
+            "title": "We Wish You a Merry Christmas",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50857,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Silent Night, Holy Night"
+            "title": "Silent Night, Holy Night",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 50858,
-            "category": "Christmas",
             "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
             "artist": "",
             "sortAs": "Christmas",
-            "title": "Jingle Bells"
+            "title": "Jingle Bells",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 50864,
+            "why": "Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 50983,
+            "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 51000,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Kikki Danielsson – Bra vibrationer; Melodifestivalen/Eurovision 1985. Categories Melodifestivalen + Eurovision."
         },
         {
             "postId": 51001,
             "year": 2002,
-            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha, Melodifestivalen 2002 (sv.wikipedia)."
+            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha; Melodifestivalen 2002. Category Melodifestivalen.",
+            "categories": [
+                "Melodifestivalen"
+            ]
+        },
+        {
+            "postId": 51013,
+            "why": "Credited Christmas song (The Killers – Don’t Shoot Me Santa). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
         },
         {
             "postId": 51022,
@@ -383,23 +977,188 @@
             "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
         },
         {
+            "postId": 51145,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Lasse Berghagen – Teddybjörnen Fredriksson. Children's song with a credited performer; mark categories Children's song."
+        },
+        {
+            "postId": 51147,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Lasse Holm & Monica Törnell – Är det det här du kallar kärlek; Melodifestivalen/Eurovision 1986. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51178,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Lena – Satellite; Eurovision 2010 (Germany). Category Eurovision."
+        },
+        {
+            "postId": 51181,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Lena Philipsson – Det gör ont; Melodifestivalen/Eurovision 2004. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51182,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Lena Philipsson – Dansa i neon; Melodifestivalen 1987. Category Melodifestivalen."
+        },
+        {
+            "postId": 51308,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Loa Falkman – Symfonin; Melodifestivalen. Category Melodifestivalen."
+        },
+        {
+            "postId": 51314,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Lordi – Hard Rock Hallelujah; Eurovision 2006 (Finland). Category Eurovision."
+        },
+        {
+            "postId": 51316,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Loreen – Euphoria; Melodifestivalen/Eurovision 2012. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51317,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Loreen – Tattoo; Melodifestivalen/Eurovision 2023. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51332,
+            "categories": [
+                "Hymn"
+            ],
+            "title": "When the Saints Go Marching In",
+            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn."
+        },
+        {
+            "postId": 51427,
+            "why": "Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 51430,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
+        },
+        {
+            "postId": 51441,
+            "year": 1965,
+            "title": "California Dreamin'",
+            "why": "California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia)."
+        },
+        {
+            "postId": 51455,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Måns Zelmerlöw – Heroes; Melodifestivalen/Eurovision 2015. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51479,
+            "why": "Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 51504,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Marie Bergman & Roger Pontare – Stjärnorna; Melodifestivalen/Eurovision 1994. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51513,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
+        },
+        {
+            "postId": 51546,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51611,
+            "categories": [
+                "Irish traditional"
+            ],
+            "why": "Metallica – Whiskey in the Jar. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
+        },
+        {
             "postId": 51628,
             "title": "Missing You Now",
             "year": 1992,
             "why": "Catalogue Missing You is Bolton's Missing You Now. Year from Discogs single (1992)."
         },
         {
+            "postId": 51630
+        },
+        {
+            "postId": 51632,
+            "from": "Toy Story",
+            "why": "Michael Bublé cover of Toy Story song; from was missing"
+        },
+        {
             "postId": 51678,
-            "category": "Midsummer",
-            "why": "Traditional / category material filed under 'Midsommarsång'; no single performer to invent",
+            "why": "Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song.",
             "artist": "",
-            "sortAs": "Midsummer"
+            "sortAs": "Midsummer",
+            "categories": [
+                "Midsummer",
+                "Children's song"
+            ]
+        },
+        {
+            "postId": 51757,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song."
         },
         {
             "postId": 51829,
             "title": "Rockin' in the Free World",
             "year": 1989,
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
+        },
+        {
+            "postId": 51857,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Nick Borgen – We Are All the Winners; Melodifestivalen 1993. Category Melodifestivalen."
         },
         {
             "postId": 51882,
@@ -413,12 +1172,56 @@
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
         },
         {
+            "postId": 51965,
+            "year": 1973,
+            "title": "Take Me Home, Country Roads",
+            "why": "Olivia Newton-John – Take Me Home, Country Roads. Resolver dated 2015; single Jan 1973 / Let Me Be There album (Wikipedia)."
+        },
+        {
+            "postId": 51966,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
+        },
+        {
+            "postId": 52064,
+            "from": "Aladdin",
+            "why": "Peabo Bryson & Regina Belle Aladdin; from was missing"
+        },
+        {
+            "postId": 52123,
+            "from": "Tarzan",
+            "why": "Phil Collins Disney/Tarzan hit; from was missing"
+        },
+        {
             "postId": 52134,
-            "category": "Birthday",
             "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent",
             "artist": "",
             "sortAs": "Birthday",
-            "title": "Happy Birthday to You"
+            "title": "Happy Birthday to You",
+            "categories": [
+                "Birthday"
+            ]
+        },
+        {
+            "postId": 52166,
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Pinkfong – Baby Shark. Children's song; mark categories Children's song."
+        },
+        {
+            "postId": 52185,
+            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 52252,
+            "from": "Octopussy",
+            "why": "Pulp / David Arnold Bond theme All Time High; film was missing as from"
         },
         {
             "postId": 52395,
@@ -427,9 +1230,86 @@
             "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
         },
         {
+            "postId": 52531,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Roger Pontare – När vindarna viskar mitt namn; Melodifestivalen/Eurovision 2000. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 52553,
+            "why": "Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
+            "categories": [
+                "Christmas"
+            ]
+        },
+        {
+            "postId": 52621,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Hela världen för mig; Melodifestivalen 2003. Category Melodifestivalen."
+        },
+        {
+            "postId": 52622,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Empty Room; Melodifestivalen 2008. Category Melodifestivalen."
+        },
+        {
+            "postId": 52624,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52637,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52681,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
+        },
+        {
+            "postId": 52706,
+            "year": 2000,
+            "title": "It Wasn't Me",
+            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia)."
+        },
+        {
             "postId": 52731,
             "year": 1995,
             "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
+        },
+        {
+            "postId": 52784,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52836,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sofia – Alla; Melodifestivalen 2009. Category Melodifestivalen."
+        },
+        {
+            "postId": 52846,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen."
         },
         {
             "postId": 52905,
@@ -438,14 +1318,84 @@
             "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
         },
         {
+            "postId": 52938,
+            "categories": [
+                "Birthday"
+            ],
+            "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
+        },
+        {
+            "postId": 53084,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Ted Gärdestad – Oh, vilken härlig dag; Melodifestivalen. Category Melodifestivalen."
+        },
+        {
+            "postId": 53104,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 53135,
+            "year": 1967,
+            "title": "The Crystal Ship",
+            "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
+        },
+        {
+            "postId": 53249,
+            "year": 1999,
+            "title": "No Scrubs",
+            "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
+            "postId": 53312,
+            "categories": [
+                "Melodifestivalen",
+                "Eurovision"
+            ],
+            "why": "Tommy Nilsson – En dag; Melodifestivalen/Eurovision 1989. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 53329,
+            "categories": [
+                "Eurovision"
+            ],
+            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical).",
+            "from": ""
+        },
+        {
             "postId": 53388,
             "year": 1971,
             "why": "Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971)."
         },
         {
+            "postId": 53473,
+            "year": 1996,
+            "artist": "The Wallflowers",
+            "why": "The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996)."
+        },
+        {
+            "postId": 53543,
+            "categories": [
+                "Hymn"
+            ],
+            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn."
+        },
+        {
             "postId": 53563,
             "year": 1992,
             "why": "Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990)."
+        },
+        {
+            "postId": 53622,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen."
         }
     ]
 }

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SearchResults from "../components/SearchResults";
 import { collectionLabel, collectionPath, collator } from "../lib/catalogue";
+import { categoriesForSong } from "../lib/categories";
 import { getSongs } from "../lib/songs";
 
 const songs = getSongs();
@@ -17,9 +18,7 @@ const genres = [...genreCounts.entries()]
     .slice(0, 4)
     .map(([g]) => g);
 
-const cats = [...new Set(songs.map((s) => s.category).filter((c): c is string => Boolean(c)))].sort(
-    collator.compare,
-);
+const cats = [...new Set(songs.flatMap((s) => categoriesForSong(s)))].sort(collator.compare);
 
 const suggestions = [
     { label: "Artists, A–Z", href: "/artists" },

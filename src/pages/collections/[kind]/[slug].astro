@@ -11,6 +11,7 @@ import {
     sortSongVariants,
     type CollectionKind,
 } from "../../../lib/catalogue";
+import { categoriesForSong } from "../../../lib/categories";
 import { getSongs, slugify } from "../../../lib/songs";
 
 export function getStaticPaths() {
@@ -24,8 +25,8 @@ export function getStaticPaths() {
                 keys.add(String(Math.floor(song.year / 10) * 10));
             } else if (kind === "genre") {
                 for (const g of song.genres ?? []) keys.add(g);
-            } else if (kind === "category" && song.category) {
-                keys.add(song.category);
+            } else if (kind === "category") {
+                for (const c of categoriesForSong(song)) keys.add(c);
             } else if (kind === "from" && song.from) {
                 keys.add(song.from);
             } else if (kind === "lang" && song.language) {
@@ -56,16 +57,19 @@ const rows = sortSongVariants(
 const INITIAL = 80;
 const CHUNK = 80;
 const initialRows = rows.slice(0, INITIAL);
-const moreRows = rows.slice(INITIAL).map((song) => ({
-    id: song.id,
-    ids: song.ids,
-    title: song.song,
-    artist: song.artist || song.category || "",
-    year: song.year !== undefined ? String(song.year) : "",
-    from: song.from ?? "",
-    category: song.category ?? "",
-    artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
-}));
+const moreRows = rows.slice(INITIAL).map((song) => {
+    const cats = (song.categories ?? []).join(", ");
+    return {
+        id: song.id,
+        ids: song.ids,
+        title: song.song,
+        artist: song.artist || cats,
+        year: song.year !== undefined ? String(song.year) : "",
+        from: song.from ?? "",
+        categories: cats,
+        artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
+    };
+});
 
 const backFallback: Record<CollectionKind, string> = {
     decade: "/browse/decades",
