@@ -18,6 +18,8 @@ const { tiles, mode } = Astro.props;
                     class="collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline"
                     style={`background:${tile.tint}`}
                     data-vt-chrome={tile.transitionName}
+                    transition:name={tile.transitionName}
+                    transition:animate="initial"
                 >
                     <span
                         class:list={[
@@ -25,6 +27,8 @@ const { tiles, mode } = Astro.props;
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
                         data-vt-title={tile.titleTransitionName}
+                        transition:name={tile.titleTransitionName}
+                        transition:animate="initial"
                     >
                         {tile.label}
                     </span>
@@ -41,6 +45,8 @@ const { tiles, mode } = Astro.props;
                     <span
                         class="collection-tile-label flex-1 text-base text-cream"
                         data-vt-title={tile.titleTransitionName}
+                        transition:name={tile.titleTransitionName}
+                        transition:animate="initial"
                     >
                         {tile.label}
                     </span>

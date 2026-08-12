@@ -201,47 +201,51 @@ function onSearchCommit(event: Event): void {
     });
 }
 
-function closestVtPair(event: Event): { chrome: HTMLElement | null; title: HTMLElement | null } {
-    const target = event.target;
-    if (!(target instanceof Element)) return { chrome: null, title: null };
-    const chrome = target.closest<HTMLElement>("[data-vt-chrome]");
-    const title = target.closest<HTMLElement>("[data-vt-title]") ?? chrome?.querySelector("[data-vt-title]") ?? null;
-    return { chrome, title };
+type SwapEvent = Event & { newDocument?: Document };
+
+function linkPathname(link: HTMLAnchorElement): string {
+    try {
+        return new URL(link.href, location.origin).pathname;
+    } catch {
+        return link.getAttribute("href") ?? "";
+    }
 }
 
-/** Only the activated tile participates in the shared-element morph. */
-function onCollectionTileActivate(event: Event): void {
-    if (event instanceof MouseEvent && event.button !== 0) return;
-    const { chrome, title } = closestVtPair(event);
-    if (!chrome && !title) return;
-
-    document.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
-        if (el !== chrome && el !== title) {
+/**
+ * Browse grids keep shared `transition:name`s so Featured ↔ Decades can morph
+ * the tiles that exist in both. Opening a collection would otherwise animate
+ * every other tile as its own group — silence those, keep the match.
+ */
+function scopeCollectionTileNames(
+    root: ParentNode,
+    keep: { href?: string; chrome?: string; title?: string },
+): void {
+    root.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
+        const link = el.closest("a");
+        const keepThis =
+            (keep.chrome !== undefined && el.dataset.vtChrome === keep.chrome) ||
+            (keep.title !== undefined && el.dataset.vtTitle === keep.title) ||
+            (keep.href !== undefined && link !== null && linkPathname(link) === keep.href);
+        if (keepThis) {
+            if (el.dataset.vtChrome) el.style.viewTransitionName = el.dataset.vtChrome;
+            if (el.dataset.vtTitle) el.style.viewTransitionName = el.dataset.vtTitle;
+        } else {
             el.style.viewTransitionName = "none";
         }
     });
-    const chromeName = chrome?.dataset.vtChrome;
-    if (chrome && chromeName) chrome.style.viewTransitionName = chromeName;
-    const titleName = title?.dataset.vtTitle;
-    if (title && titleName) title.style.viewTransitionName = titleName;
 }
 
-type SwapEvent = Event & { newDocument?: Document };
-
-/** On back, name the matching tile in the incoming grid so the header can morph into it. */
+/** On back from a collection, only the matching incoming tile should morph. */
 function prepareIncomingTileMorph(event: Event): void {
     const newDoc = (event as SwapEvent).newDocument;
     if (!newDoc) return;
     const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
     const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
-    if (chromeName) {
-        const incoming = newDoc.querySelector<HTMLElement>(`[data-vt-chrome="${CSS.escape(chromeName)}"]`);
-        if (incoming) incoming.style.viewTransitionName = chromeName;
-    }
-    if (titleName) {
-        const incoming = newDoc.querySelector<HTMLElement>(`[data-vt-title="${CSS.escape(titleName)}"]`);
-        if (incoming) incoming.style.viewTransitionName = titleName;
-    }
+    if (!chromeName && !titleName) return;
+    scopeCollectionTileNames(newDoc, {
+        ...(chromeName ? { chrome: chromeName } : {}),
+        ...(titleName ? { title: titleName } : {}),
+    });
 }
 
 function clearBrowseViewTransitionNames(): void {
@@ -269,13 +273,14 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("pointerdown", openSearchFromBrowse, true);
     document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
-    document.addEventListener("pointerdown", onCollectionTileActivate, true);
-    document.addEventListener("click", onCollectionTileActivate, true);
     document.addEventListener("astro:before-swap", prepareIncomingTileMorph);
 
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
         const dest = (event as PreparationEvent).to?.pathname ?? "";
+        if (dest.startsWith("/collections/")) {
+            scopeCollectionTileNames(document, { href: dest });
+        }
         if (!keepSearchInput(dest)) {
             searchInputEl()?.removeAttribute("data-astro-transition-persist");
         } else {
