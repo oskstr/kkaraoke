@@ -12,7 +12,7 @@ const SEARCH_PERSIST = "catalogue-search-input";
 /** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 
-type ReturnMarker = { path: string; songId: string };
+type ReturnMarker = { path: string; songId: string; rows: number };
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -140,7 +140,14 @@ function readReturnMarker(): ReturnMarker | undefined {
     if (!raw) return undefined;
     try {
         const parsed = JSON.parse(raw) as ReturnMarker;
-        if (typeof parsed?.path === "string" && typeof parsed.songId === "string" && parsed.songId !== "") {
+        if (
+            typeof parsed?.path === "string" &&
+            typeof parsed.songId === "string" &&
+            parsed.songId !== "" &&
+            typeof parsed.rows === "number" &&
+            Number.isFinite(parsed.rows) &&
+            parsed.rows > 0
+        ) {
             return parsed;
         }
     } catch {
@@ -174,7 +181,11 @@ function onSongArtistPointerDown(event: Event): void {
     if (!songId) return;
     sessionStorage.setItem(
         RETURN_MARKER_KEY,
-        JSON.stringify({ path: location.pathname, songId } satisfies ReturnMarker),
+        JSON.stringify({
+            path: location.pathname,
+            songId,
+            rows: document.querySelectorAll(".song-row").length,
+        } satisfies ReturnMarker),
     );
 }
 
@@ -218,25 +229,37 @@ function historyScrollY(): number | undefined {
     return typeof y === "number" && Number.isFinite(y) ? y : undefined;
 }
 
+function windowedRestoreOpts(path: string): { untilId?: string; minRows?: number; minHeight?: number } {
+    const marker = returnMarkerFor(path);
+    const untilId = marker?.songId;
+    const minRows = marker?.rows;
+    const stateY = historyScrollY();
+    if (minRows !== undefined) {
+        return { ...(untilId ? { untilId } : {}), minRows };
+    }
+    const minHeight = stateY !== undefined && stateY > 0 ? stateY + window.innerHeight + 80 : undefined;
+    return {
+        ...(untilId ? { untilId } : {}),
+        ...(minHeight !== undefined ? { minHeight } : {}),
+    };
+}
+
 function expandWindowedListForBack(clearKeys = false): void {
     if (expandingForBack) return;
     expandingForBack = true;
     try {
         const marker = returnMarkerFor(location.pathname);
-        const untilId = marker?.songId;
-        const stateY = historyScrollY();
-        if (!document.querySelector("[data-more-songs]") && !untilId) {
+        const opts = windowedRestoreOpts(location.pathname);
+        if (!document.querySelector("[data-more-songs]") && !opts.untilId && !opts.minRows) {
             if (clearKeys && marker) clearReturnMarker();
             return;
         }
 
         const rowsBefore = document.querySelectorAll(".song-row").length;
-        ensureWindowedRows(document, {
-            minHeight: (stateY ?? window.scrollY) + window.innerHeight + 80,
-            ...(untilId ? { untilId } : {}),
-        });
+        ensureWindowedRows(document, opts);
         const grew = document.querySelectorAll(".song-row").length > rowsBefore;
         const resorted = applySavedSort(document, location.pathname);
+        const stateY = historyScrollY();
 
         // Astro already restored. Re-apply if we un-clamped a short document or re-sorted.
         if ((grew || resorted) && stateY !== undefined) {
@@ -297,14 +320,9 @@ function scopeCollectionTileNames(root: ParentNode, keep: { href?: string; chrom
 
 function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
     if (!newDoc.querySelector("[data-more-songs]")) return;
-    const untilId = returnMarkerFor(destPath)?.songId;
-    const stateY = historyScrollY();
-    const minHeight = stateY !== undefined && stateY > 0 ? stateY + 900 : undefined;
-    if (!untilId && minHeight === undefined) return;
-    ensureWindowedRows(newDoc, {
-        ...(minHeight !== undefined ? { minHeight } : {}),
-        ...(untilId ? { untilId } : {}),
-    });
+    const opts = windowedRestoreOpts(destPath);
+    if (!opts.untilId && !opts.minRows && !opts.minHeight) return;
+    ensureWindowedRows(newDoc, opts);
 }
 
 /** On back from a collection, only the matching incoming tile should morph. */

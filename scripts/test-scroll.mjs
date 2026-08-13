@@ -233,6 +233,10 @@ async function main() {
             }) ?? links[links.length - 1];
         link?.closest(".song-row")?.scrollIntoView({ block: "center" });
         const row = link?.closest(".song-row");
+        const visible = [...document.querySelectorAll(".song-row")].find((el) => {
+            const r = el.getBoundingClientRect();
+            return r.top >= 90 && r.top < 280;
+        });
         return {
             ok: Boolean(link && row && yearOn),
             yearOn,
@@ -240,13 +244,17 @@ async function main() {
             rows: document.querySelectorAll(".song-row").length,
             href: link?.getAttribute("href") ?? null,
             id: row?.getAttribute("data-id") ?? null,
+            visibleYear: visible?.getAttribute("data-year") ?? row?.getAttribute("data-year") ?? null,
         };
     });
     console.log("year setup", yearSetup);
     if (!yearSetup.ok || !yearSetup.href) {
         failed = true;
     } else {
-        await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${yearSetup.href}"]`)]);
+        await Promise.all([
+            page.waitForURL(/\/artists\//),
+            nativeClick(page, `.song-row[data-id="${yearSetup.id}"] a[href="${yearSetup.href}"]`),
+        ]);
         await page.waitForTimeout(400);
         const folk = await page.evaluate(() => {
             const tag = [...document.querySelectorAll("a[href^='/collections/genre/']")].find(
@@ -270,19 +278,25 @@ async function main() {
                 const loadMore = document.querySelector("[data-load-more]");
                 const lr = loadMore?.getBoundingClientRect();
                 const loadMoreInView = Boolean(lr && lr.top < window.innerHeight && lr.bottom > 0);
+                const visible = [...document.querySelectorAll(".song-row")].find((el) => {
+                    const r = el.getBoundingClientRect();
+                    return r.top >= 90 && r.top < 280;
+                });
                 return {
                     y: window.scrollY,
                     rows: document.querySelectorAll(".song-row").length,
                     yearOn: document.querySelector('[data-sort="year"]')?.getAttribute("aria-pressed") === "true",
                     loadMoreInView,
+                    visibleYear: visible?.getAttribute("data-year") ?? null,
                 };
             });
-            console.log("back to pop", backPop, "from", yearSetup.y);
+            console.log("back to pop", backPop, "from", yearSetup.y, "year", yearSetup.visibleYear);
             const okPop =
                 backPop.yearOn &&
-                backPop.rows > 120 &&
+                Math.abs(backPop.rows - yearSetup.rows) < 80 &&
                 !backPop.loadMoreInView &&
-                Math.abs(backPop.y - yearSetup.y) < 400;
+                Math.abs(backPop.y - yearSetup.y) < 400 &&
+                backPop.visibleYear === yearSetup.visibleYear;
             console.log(okPop ? "PASS pop year-sort restore" : "FAIL pop year-sort restore");
             if (!okPop) failed = true;
         }

@@ -74,19 +74,27 @@ let observer: IntersectionObserver | null = null;
 let loadMoreFn: (() => void) | null = null;
 let listEl: Element | null = null;
 
-const ROW_HEIGHT_ESTIMATE = 64;
+const ROW_HEIGHT_ESTIMATE = 80;
 
-function listIsTallEnough(doc: Document, list: Element, opts: { untilId?: string; minHeight?: number }): boolean {
+function listIsTallEnough(
+    doc: Document,
+    list: Element,
+    opts: { untilId?: string; minHeight?: number; minRows?: number },
+): boolean {
     if (opts.untilId && !list.querySelector(`[data-id="${CSS.escape(opts.untilId)}"]`)) {
         return false;
+    }
+    const rowCount = list.querySelectorAll(".song-row").length;
+    if (opts.minRows !== undefined) {
+        return rowCount >= opts.minRows;
     }
     if (opts.minHeight !== undefined) {
         const scrollHeight = doc.documentElement.scrollHeight;
         if (scrollHeight >= opts.minHeight) return true;
         // Incoming documents in `astro:before-swap` often have no layout yet.
+        // Use a tall estimate so we undershoot; after-swap fills the rest.
         if (scrollHeight < 80) {
-            const rows = list.querySelectorAll(".song-row").length;
-            if (rows * ROW_HEIGHT_ESTIMATE >= opts.minHeight) return true;
+            if (rowCount * ROW_HEIGHT_ESTIMATE >= opts.minHeight) return true;
         }
         return false;
     }
@@ -98,7 +106,10 @@ function listIsTallEnough(doc: Document, list: Element, opts: { untilId?: string
  * enough. Safe on the live document and on `event.newDocument` before swap.
  * Rewrites the JSON payload so infinite-scroll does not re-append those rows.
  */
-export function ensureWindowedRows(doc: Document, opts: { untilId?: string; minHeight?: number } = {}): void {
+export function ensureWindowedRows(
+    doc: Document,
+    opts: { untilId?: string; minHeight?: number; minRows?: number } = {},
+): void {
     const root = doc.querySelector("[data-more-songs-root]");
     const list = doc.querySelector("[data-song-list]");
     const json = doc.querySelector<HTMLElement>("[data-more-songs]");
