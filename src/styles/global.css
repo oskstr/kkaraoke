@@ -166,11 +166,16 @@ textarea:focus-visible {
     view-transition-class: coll-title;
 }
 
+/*
+  Shared-element morphs (tile ↔ collection bar, title, Featured ↔ Categories
+  tiles) are required. Do not remove view-transition-name to fix a flash —
+  that was a regression. Named groups leave a hole in the root snapshot;
+  plus-lighter fills it with the other page instead of html’s near-black.
+  The blend reads a bit lighter mid-transition (Featured ↔ Categories too);
+  revisit that without dropping the morphs.
+*/
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    /* Crossfade without punching through to html. Named chrome is missing from
-       both snapshots (a hole); plus-lighter keeps the other page’s pixels in
-       that hole so the status bar does not sample a flat near-black. */
     animation-duration: 180ms;
     mix-blend-mode: plus-lighter;
 }
