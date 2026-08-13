@@ -1,9 +1,27 @@
-/** Collection list sort. SSR is always A–Z; this reorders loaded rows in the DOM. */
+/** Collection list sort. SSR is always A–Z; windowed lists re-window in this order. */
 
 export type SortKey = "az" | "artist" | "year";
 
+export type SortableSong = { title: string; artist: string; year: string; id: number };
+
+export type RewindowOpts = {
+    minRows?: number;
+    untilId?: string;
+    minHeight?: number;
+    resetScroll?: boolean;
+    preserveView?: boolean;
+};
+
 const SORT_STORE = "kkaraoke:sort:";
 const collator = new Intl.Collator("sv");
+
+type RewindowFn = (doc: Document, sort: SortKey, opts?: RewindowOpts) => boolean;
+
+let rewindowFn: RewindowFn | null = null;
+
+export function registerListRewindow(fn: RewindowFn): void {
+    rewindowFn = fn;
+}
 
 export function parseSort(value: string | null | undefined): SortKey {
     if (value === "artist" || value === "year" || value === "az") return value;
@@ -20,25 +38,37 @@ export function saveSort(path: string, sort: SortKey): void {
     else sessionStorage.setItem(key, sort);
 }
 
+export function compareSortable(a: SortableSong, b: SortableSong, sort: SortKey): number {
+    const yearA = Number(a.year || 9999);
+    const yearB = Number(b.year || 9999);
+    if (sort === "artist") {
+        return collator.compare(a.artist, b.artist) || collator.compare(a.title, b.title) || a.id - b.id;
+    }
+    if (sort === "year") {
+        return yearA - yearB || collator.compare(a.title, b.title) || a.id - b.id;
+    }
+    return collator.compare(a.title, b.title) || a.id - b.id;
+}
+
 export function sortSongList(list: HTMLElement, sort: SortKey): void {
     const rows = [...list.querySelectorAll<HTMLElement>(".song-row")];
-    rows.sort((a, b) => {
-        const titleA = a.dataset.title ?? "";
-        const titleB = b.dataset.title ?? "";
-        const artistA = a.dataset.artist ?? "";
-        const artistB = b.dataset.artist ?? "";
-        const yearA = Number(a.dataset.year || 9999);
-        const yearB = Number(b.dataset.year || 9999);
-        const idA = Number(a.dataset.id || 0);
-        const idB = Number(b.dataset.id || 0);
-        if (sort === "artist") {
-            return collator.compare(artistA, artistB) || collator.compare(titleA, titleB) || idA - idB;
-        }
-        if (sort === "year") {
-            return yearA - yearB || collator.compare(titleA, titleB) || idA - idB;
-        }
-        return collator.compare(titleA, titleB) || idA - idB;
-    });
+    rows.sort((a, b) =>
+        compareSortable(
+            {
+                title: a.dataset.title ?? "",
+                artist: a.dataset.artist ?? "",
+                year: a.dataset.year ?? "",
+                id: Number(a.dataset.id || 0),
+            },
+            {
+                title: b.dataset.title ?? "",
+                artist: b.dataset.artist ?? "",
+                year: b.dataset.year ?? "",
+                id: Number(b.dataset.id || 0),
+            },
+            sort,
+        ),
+    );
     for (const row of rows) list.appendChild(row);
 }
 
@@ -82,13 +112,21 @@ function restoreAnchor(anchor: ViewAnchor | null): void {
     }
 }
 
+function documentOf(root: ParentNode): Document | null {
+    return root instanceof Document ? root : root.ownerDocument;
+}
+
 /** Reorder a collection list to the saved sort. Returns true if the DOM order changed. */
-export function applySavedSort(root: ParentNode, path: string, opts: { preserveView?: boolean } = {}): boolean {
+export function applySavedSort(root: ParentNode, path: string, opts: RewindowOpts = {}): boolean {
     const sort = readSavedSort(path);
     const list = root.querySelector<HTMLElement>("[data-song-list]");
     const tabs = root.querySelector("[data-sort-tabs]");
     if (!list) return false;
     if (tabs) paintSortTabs(tabs, sort);
+    const doc = documentOf(root);
+    if (rewindowFn && doc && root.querySelector("[data-more-songs]")) {
+        return rewindowFn(doc, sort, opts);
+    }
     if (sort === "az") return false;
     const anchor = opts.preserveView === true ? captureAnchor(list) : null;
     sortSongList(list, sort);
@@ -105,9 +143,15 @@ function onSortClick(event: Event): void {
     const list = document.querySelector<HTMLElement>("[data-song-list]");
     if (!list || !tabs) return;
     const sort = parseSort(btn.dataset.sort);
+    if (sort === readSavedSort(location.pathname) && btn.getAttribute("aria-pressed") === "true") return;
     saveSort(location.pathname, sort);
     paintSortTabs(tabs, sort);
+    if (rewindowFn && document.querySelector("[data-more-songs]")) {
+        rewindowFn(document, sort, { resetScroll: true });
+        return;
+    }
     sortSongList(list, sort);
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 }
 
 declare global {

@@ -55,7 +55,7 @@ const rows = sortSongVariants(mergeSongVariants(songsInCollection(songs, collect
 const INITIAL = 80;
 const CHUNK = 80;
 const initialRows = rows.slice(0, INITIAL);
-const moreRows = rows.slice(INITIAL).map((song) => {
+const allSongs = rows.map((song) => {
     const cats = (song.categories ?? []).join(", ");
     return {
         id: song.id,
@@ -108,14 +108,14 @@ const backFallback: Record<CollectionKind, string> = {
     <main id="main" tabindex="-1" class="bg-surface px-[18px] pt-1.5 pb-6">
         <SongList songs={initialRows} sortable />
         {
-            moreRows.length > 0 && (
+            allSongs.length > INITIAL && (
                 <div class="py-2" data-more-songs-root>
                     <script
                         is:inline
                         type="application/json"
                         data-more-songs
                         data-chunk={String(CHUNK)}
-                        set:html={jsonForScript(moreRows)}
+                        set:html={jsonForScript(allSongs)}
                     />
                     <button
                         type="button"

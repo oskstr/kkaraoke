@@ -4,7 +4,7 @@
 
 import { navigate } from "astro:transitions/client";
 import { ensureWindowedRows, setWindowedRestoreLock } from "./song-window";
-import { applySavedSort } from "./sort-list";
+import { applySavedSort, readSavedSort } from "./sort-list";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
@@ -331,7 +331,7 @@ function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
     if (!newDoc.querySelector("[data-more-songs]")) return;
     const opts = windowedRestoreOpts(destPath);
     if (!opts.untilId && !opts.minRows && !opts.minHeight) return;
-    ensureWindowedRows(newDoc, opts);
+    ensureWindowedRows(newDoc, { ...opts, path: destPath, sort: readSavedSort(destPath) });
 }
 
 /** On back from a collection, only the matching incoming tile should morph. */
@@ -361,10 +361,10 @@ function prepareIncomingDocument(event: Event): void {
         }
     }
 
+    applySavedSort(newDoc, toPath);
     if (lastNavDirection === "back") {
         expandIncomingWindowedList(newDoc, toPath);
     }
-    applySavedSort(newDoc, toPath);
 }
 
 function clearScopedViewTransitionNames(): void {

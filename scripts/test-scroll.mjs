@@ -207,11 +207,51 @@ async function main() {
         }
     }
 
+    console.log("\n=== Pop year-sort load more stays chronological ===");
+    await page.goto(`${BASE}/collections/genre/pop`, { waitUntil: "networkidle" });
+    await nativeClick(page, '[data-sort="year"]');
+    const chrono = await page.evaluate(async () => {
+        const firstId = document.querySelector(".song-row")?.getAttribute("data-id");
+        const snapshots = [];
+        let prevBottom = 0;
+        for (let i = 0; i < 5; i++) {
+            const rows = [...document.querySelectorAll(".song-row")];
+            const years = rows.map((el) => Number(el.getAttribute("data-year") || 0));
+            const top = years[0] ?? 0;
+            const bottom = years[years.length - 1] ?? 0;
+            const ordered = years.every((y, idx) => idx === 0 || y >= years[idx - 1]);
+            const firstStill = rows[0]?.getAttribute("data-id") === firstId;
+            snapshots.push({ top, bottom, n: rows.length, ordered, firstStill });
+            if (!ordered || !firstStill) {
+                return { ok: false, reason: !ordered ? "not sorted" : "prefix shifted", snapshots };
+            }
+            if (i > 0 && bottom < prevBottom) {
+                return { ok: false, reason: "bottom year went backwards", snapshots };
+            }
+            prevBottom = bottom;
+            window.scrollTo(0, document.documentElement.scrollHeight);
+            document.dispatchEvent(
+                new CustomEvent("kkaraoke:ensure-scroll-height", {
+                    bubbles: true,
+                    detail: {
+                        minHeight: document.documentElement.scrollHeight + 8000,
+                        root: document.documentElement,
+                    },
+                }),
+            );
+            await new Promise((r) => setTimeout(r, 50));
+        }
+        return { ok: true, snapshots };
+    });
+    console.log("chrono", chrono);
+    console.log(chrono.ok ? "PASS year-sort chronological load more" : "FAIL year-sort chronological load more");
+    if (!chrono.ok) failed = true;
+
     console.log("\n=== Pop year-sort deep → artist → folk → back to Pop ===");
     await page.goto(`${BASE}/collections/genre/pop`, { waitUntil: "networkidle" });
     await nativeClick(page, '[data-sort="year"]');
     const yearSetup = await page.evaluate(async () => {
-        for (let i = 0; i < 24; i++) {
+        for (let i = 0; i < 40; i++) {
             const hit = [...document.querySelectorAll(".song-row")].find(
                 (el) => el.getAttribute("data-year") === "2017" && el.querySelector('a[href="/artists/ed-sheeran"]'),
             );
@@ -221,7 +261,7 @@ async function main() {
                 new CustomEvent("kkaraoke:ensure-scroll-height", {
                     bubbles: true,
                     detail: {
-                        minHeight: document.documentElement.scrollHeight + 2500,
+                        minHeight: document.documentElement.scrollHeight + 8000,
                         root: document.documentElement,
                     },
                 }),

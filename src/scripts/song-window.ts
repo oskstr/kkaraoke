@@ -1,12 +1,12 @@
 /** Windowed song lists for large collections.
  *
- *  Important: never reset `remaining` to the full JSON payload while the DOM
- *  already contains later chunks — that re-appends early letters (B…) under F.
- *  Always skip song ids that are already rendered.
+ *  The JSON payload is the full collection (including SSR rows). Remaining
+ *  songs are “not in the DOM”. Load more takes the next chunk in the active
+ *  sort (A–Z / artist / year) so year-sort does not flash A–Z songs at the
+ *  bottom and then reshuffle them above the viewport.
  */
 
-import { jsonForScript } from "../lib/json-script";
-import { applySavedSort } from "./sort-list";
+import { compareSortable, readSavedSort, registerListRewindow, type RewindowOpts, type SortKey } from "./sort-list";
 
 type MoreSong = {
     id: number;
@@ -65,9 +65,51 @@ function renderedSongIds(list: Element): Set<string> {
     return seen;
 }
 
+function songIds(song: MoreSong): number[] {
+    return song.ids.length > 0 ? song.ids : [song.id];
+}
+
+function primaryId(song: MoreSong): string {
+    return String(songIds(song)[0] ?? song.id);
+}
+
 function notYetRendered(song: MoreSong, seen: Set<string>): boolean {
-    const ids = song.ids.length > 0 ? song.ids : [song.id];
-    return ids.every((id) => !seen.has(String(id)));
+    return songIds(song).every((id) => !seen.has(String(id)));
+}
+
+function songHasId(song: MoreSong, id: string): boolean {
+    return songIds(song).some((songId) => String(songId) === id);
+}
+
+function sortableOf(song: MoreSong) {
+    return { title: song.title, artist: song.artist, year: song.year, id: song.id };
+}
+
+function parseAllSongs(json: HTMLElement): MoreSong[] {
+    try {
+        return JSON.parse(json.textContent || "[]") as MoreSong[];
+    } catch {
+        return [];
+    }
+}
+
+function songsInSortOrder(songs: MoreSong[], sort: SortKey): MoreSong[] {
+    return [...songs].sort((a, b) => compareSortable(sortableOf(a), sortableOf(b), sort));
+}
+
+function nextBatch(all: MoreSong[], seen: Set<string>, sort: SortKey, chunk: number): MoreSong[] {
+    return songsInSortOrder(all, sort)
+        .filter((song) => notYetRendered(song, seen))
+        .slice(0, chunk);
+}
+
+function matchedPrefixLength(list: Element, sorted: MoreSong[]): number {
+    const rows = [...list.querySelectorAll<HTMLElement>(".song-row")];
+    let i = 0;
+    while (i < rows.length && i < sorted.length && rows[i]?.dataset.id === primaryId(sorted[i]!)) {
+        i += 1;
+    }
+    return i;
 }
 
 let observer: IntersectionObserver | null = null;
@@ -123,49 +165,110 @@ function listIsTallEnough(
     return true;
 }
 
+function neededWindowSize(list: Element, sorted: MoreSong[], opts: RewindowOpts, chunk: number): number {
+    const current = list.querySelectorAll(".song-row").length;
+    let n = opts.resetScroll ? chunk : Math.max(chunk, current);
+    if (opts.minRows !== undefined) n = Math.max(n, opts.minRows);
+    if (opts.untilId) {
+        const index = sorted.findIndex((song) => songHasId(song, opts.untilId!));
+        if (index >= 0) n = Math.max(n, index + 1);
+    }
+    if (opts.minHeight !== undefined) {
+        n = Math.max(n, Math.ceil(opts.minHeight / ROW_HEIGHT_ESTIMATE));
+    }
+    return Math.min(n, sorted.length);
+}
+
+function finishLiveWindow(doc: Document, json: HTMLElement, remaining: number): void {
+    const root = doc.querySelector("[data-more-songs-root]");
+    if (remaining === 0) {
+        root?.remove();
+        observer?.disconnect();
+        observer = null;
+        loadMoreFn = null;
+        listEl = null;
+        return;
+    }
+    if (doc === document) {
+        if (json.isConnected) json.dataset.bound = "";
+        bindInfiniteScroll();
+        window.dispatchEvent(new Event("kkaraoke:favorites"));
+    }
+}
+
+/** Rebuild (or grow) the DOM as a prefix of the collection in `sort` order. */
+export function rewindowSortedList(doc: Document, sort: SortKey, opts: RewindowOpts = {}): boolean {
+    const list = doc.querySelector("[data-song-list]");
+    const json = doc.querySelector<HTMLElement>("[data-more-songs]");
+    if (!list || !json) return false;
+
+    const all = parseAllSongs(json);
+    if (all.length === 0) return false;
+
+    const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
+    const sorted = songsInSortOrder(all, sort);
+    const n = neededWindowSize(list, sorted, opts, chunk);
+    const prefix = matchedPrefixLength(list, sorted);
+    const current = list.querySelectorAll(".song-row").length;
+
+    if (prefix === n && current === n) {
+        if (sorted.length === n) {
+            doc.querySelector("[data-more-songs-root]")?.remove();
+        }
+        return false;
+    }
+
+    if (prefix === current && n > current) {
+        list.insertAdjacentHTML("beforeend", sorted.slice(current, n).map(rowHtml).join(""));
+        finishLiveWindow(doc, json, sorted.length - n);
+        return true;
+    }
+
+    list.innerHTML = sorted.slice(0, n).map(rowHtml).join("");
+    if (opts.resetScroll && doc === document) {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+    finishLiveWindow(doc, json, sorted.length - n);
+    return true;
+}
+
 /**
  * Insert windowed rows into `doc` until `untilId` exists or the list is tall
  * enough. Safe on the live document and on `event.newDocument` before swap.
- * Rewrites the JSON payload so infinite-scroll does not re-append those rows.
  */
 export function ensureWindowedRows(
     doc: Document,
-    opts: { untilId?: string; minHeight?: number; minRows?: number } = {},
+    opts: { untilId?: string; minHeight?: number; minRows?: number; sort?: SortKey; path?: string } = {},
 ): void {
-    const root = doc.querySelector("[data-more-songs-root]");
-    const list = doc.querySelector("[data-song-list]");
     const json = doc.querySelector<HTMLElement>("[data-more-songs]");
+    const list = doc.querySelector("[data-song-list]");
     if (!list || !json) return;
 
-    let remaining: MoreSong[] = [];
-    try {
-        remaining = JSON.parse(json.textContent || "[]") as MoreSong[];
-    } catch {
+    const sort = opts.sort ?? readSavedSort(opts.path ?? (doc === document ? location.pathname : ""));
+    if (sort !== "az") {
+        rewindowSortedList(doc, sort, opts);
         return;
     }
 
+    const root = doc.querySelector("[data-more-songs-root]");
+    const all = parseAllSongs(json);
     const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
     const seen = renderedSongIds(list);
-    remaining = remaining.filter((song) => notYetRendered(song, seen));
+    let remaining = all.filter((song) => notYetRendered(song, seen));
 
     let guard = 0;
     while (remaining.length > 0 && guard < 80 && !listIsTallEnough(doc, list, opts)) {
         const live = renderedSongIds(list);
-        while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
-            remaining.shift();
-        }
-        const batch = remaining.splice(0, chunk).filter((song) => notYetRendered(song, live));
+        const batch = nextBatch(all, live, "az", chunk);
         if (batch.length === 0) break;
         for (const song of batch) {
-            for (const id of song.ids.length > 0 ? song.ids : [song.id]) {
-                live.add(String(id));
-            }
+            for (const id of songIds(song)) live.add(String(id));
         }
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
+        remaining = all.filter((song) => notYetRendered(song, live));
         guard += 1;
     }
 
-    json.textContent = jsonForScript(remaining);
     if (remaining.length === 0) {
         root?.remove();
     }
@@ -173,10 +276,6 @@ export function ensureWindowedRows(
     if (doc === document) {
         if (json.isConnected) json.dataset.bound = "";
         bindInfiniteScroll();
-        // Restore path (`minRows`) must not shift `scrollY`; live fill must keep the visible song.
-        applySavedSort(document, location.pathname, {
-            preserveView: opts.minRows === undefined,
-        });
         window.dispatchEvent(new Event("kkaraoke:favorites"));
     }
 }
@@ -204,22 +303,19 @@ function bindInfiniteScroll(): void {
     observer?.disconnect();
     observer = null;
 
-    let remaining: MoreSong[] = [];
-    try {
-        remaining = JSON.parse(json.textContent || "[]") as MoreSong[];
-    } catch {
+    const all = parseAllSongs(json);
+    if (all.length === 0) {
         root.remove();
         loadMoreFn = null;
         listEl = null;
         return;
     }
 
-    // Drop anything already in the DOM (initial SSR rows + any ensure-loaded chunks).
     const seen = renderedSongIds(list);
-    remaining = remaining.filter((song) => notYetRendered(song, seen));
+    let remainingCount = all.filter((song) => notYetRendered(song, seen)).length;
     json.dataset.bound = "1";
 
-    if (remaining.length === 0) {
+    if (remainingCount === 0) {
         loadMoreFn = null;
         listEl = null;
         root.remove();
@@ -230,31 +326,22 @@ function bindInfiniteScroll(): void {
     listEl = list;
 
     const loadMore = () => {
-        if (restoreLock || remaining.length === 0) return;
-        // Re-check DOM in case another pass inserted rows.
+        if (restoreLock || remainingCount === 0) return;
+        const sort = readSavedSort(location.pathname);
         const live = renderedSongIds(list);
-        while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
-            remaining.shift();
-        }
-        if (remaining.length === 0) {
+        const batch = nextBatch(all, live, sort, chunk);
+        if (batch.length === 0) {
             observer?.disconnect();
             observer = null;
             loadMoreFn = null;
             root.remove();
+            remainingCount = 0;
             return;
         }
-        const batch = remaining.splice(0, chunk).filter((song) => notYetRendered(song, live));
-        for (const song of batch) {
-            for (const id of song.ids.length > 0 ? song.ids : [song.id]) {
-                live.add(String(id));
-            }
-        }
-        if (batch.length === 0) return;
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
-        json.textContent = jsonForScript(remaining);
-        applySavedSort(document, location.pathname, { preserveView: true });
+        remainingCount = all.filter((song) => notYetRendered(song, renderedSongIds(list))).length;
         window.dispatchEvent(new Event("kkaraoke:favorites"));
-        if (remaining.length === 0) {
+        if (remainingCount === 0) {
             observer?.disconnect();
             observer = null;
             loadMoreFn = null;
@@ -293,6 +380,8 @@ declare global {
         __kkaraokeSongWindowInit?: boolean;
     }
 }
+
+registerListRewindow(rewindowSortedList);
 
 if (!window.__kkaraokeSongWindowInit) {
     window.__kkaraokeSongWindowInit = true;
