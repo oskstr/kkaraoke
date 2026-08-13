@@ -32,7 +32,11 @@ body {
     min-height: 100dvh;
     font-family: var(--font-sans);
     background:
-        radial-gradient(120% 80% at 50% -10%, rgba(233, 180, 76, 0.08), transparent 55%),
+        radial-gradient(
+            120% 80% at 50% calc(env(safe-area-inset-top, 0px) + 5rem),
+            rgba(233, 180, 76, 0.08),
+            transparent 55%
+        ),
         radial-gradient(90% 60% at 100% 100%, rgba(63, 90, 107, 0.12), transparent 50%), var(--color-ink);
     -webkit-tap-highlight-color: transparent;
 }
@@ -142,6 +146,16 @@ textarea:focus-visible {
     color: var(--color-gold);
 }
 
+.collection-chrome {
+    margin-top: calc(env(safe-area-inset-top, 0px) * -1);
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+.collection-tile.has-art .collection-tile-label,
+.collection-chrome.has-art .collection-title {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+}
+
 .collection-tile,
 .collection-chrome {
     view-transition-class: coll-chrome;
@@ -152,9 +166,19 @@ textarea:focus-visible {
     view-transition-class: coll-title;
 }
 
+/*
+  Shared-element morphs are required. Do not remove view-transition-name to
+  fix a flash. Named groups leave a hole in the root snapshot.
+
+  plus-lighter is the usual recipe so that hole is the other page, not html’s
+  near-black. It is additive, so the overlap can read lighter. Layout keeps
+  html as transition:name="root" so these selectors match Astro’s page fade
+  (animate="fade" alone would mint a generated name instead).
+*/
 ::view-transition-old(root),
 ::view-transition-new(root) {
     animation-duration: 180ms;
+    mix-blend-mode: plus-lighter;
 }
 
 ::view-transition-group(*) {
@@ -186,11 +210,10 @@ textarea:focus-visible {
 }
 
 /*
-  Artist ↔ list: one viewport crossfade. Named descendants (app-shell, sticky
-  collection chrome, tile titles) would otherwise snapshot separately — on back
-  the 80s bar flies up from its in-flow position while the list is already on
-  top of the fading artist page. !important beats Astro’s scope stylesheet.
-  html itself keeps its fade name; this selector is descendants only.
+  Artist ↔ list: one viewport crossfade. Named descendants (sticky collection
+  chrome, tile titles) would otherwise snapshot separately — on back the 80s
+  bar flies up from its in-flow position while the list is already on top of
+  the fading artist page. !important beats Astro’s scope stylesheet.
 */
 html.vt-fade-only [data-astro-transition-scope],
 html.vt-fade-only .app-shell,
