@@ -26,9 +26,10 @@ const { tiles, mode } = Astro.props;
                 >
                     <span
                         class:list={[
-                            "collection-tile-label text-left font-bold tracking-tight text-[#F7F2E9]",
+                            "collection-tile-label text-left font-bold tracking-tight",
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
+                        style={`color:${tile.ink ?? "#F7F2E9"}`}
                         data-vt-title={tile.titleTransitionName}
                         transition:name={tile.titleTransitionName}
                         transition:animate="initial"

@@ -54,6 +54,8 @@ export interface BrowseTile {
     tint: string;
     /** Optional cover art; tile and collection bar share it so the morph matches. */
     art?: string;
+    /** Label colour on art tiles; cream unless the card wants something else. */
+    ink?: string;
     kind: CollectionKind;
     key: string;
     /** Shared with the collection header for morphing view transitions. */
@@ -69,6 +71,7 @@ export interface CollectionRef {
     label: string;
     tint: string;
     art?: string;
+    ink?: string;
     transitionName: string;
     titleTransitionName: string;
 }
@@ -119,19 +122,20 @@ export function tintFor(kind: CollectionKind, key: string): string {
 }
 
 /** Cover art under `public/collections/`. Missing keys keep the hashed tint. */
-const COLLECTION_ART: Record<string, string> = {
-    "category:Birthday": "/collections/birthday.webp",
+const COLLECTION_ART: Record<string, { src: string; ink?: string }> = {
+    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9" },
+    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8" },
 };
 
 export function artFor(kind: CollectionKind, key: string): string | undefined {
-    return COLLECTION_ART[`${kind}:${key}`];
+    return COLLECTION_ART[`${kind}:${key}`]?.src;
 }
 
 function collectionLook(kind: CollectionKind, key: string) {
-    const art = artFor(kind, key);
+    const entry = COLLECTION_ART[`${kind}:${key}`];
     return {
         tint: tintFor(kind, key),
-        ...(art === undefined ? {} : { art }),
+        ...(entry === undefined ? {} : { art: entry.src, ink: entry.ink ?? "#F7F2E9" }),
         ...collectionTransitionNames(kind, key),
     };
 }
