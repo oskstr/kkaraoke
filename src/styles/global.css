@@ -166,28 +166,51 @@ textarea:focus-visible {
     view-transition-class: coll-title;
 }
 
-::view-transition-old(root),
+::view-transition-old(root) {
+    animation: none;
+    opacity: 0;
+    mix-blend-mode: normal;
+}
+
 ::view-transition-new(root) {
-    animation-duration: 180ms;
+    animation: none;
+    opacity: 1;
+    mix-blend-mode: normal;
 }
 
 ::view-transition-group(*) {
     animation-duration: 180ms;
 }
 
-::view-transition-group(.coll-chrome),
+::view-transition-group(.coll-chrome) {
+    /* Snap to the destination box. Morphing from the mid-page tile leaves a
+       hole at the top (html/surface showing through) for the whole flight. */
+    animation: none;
+}
+
 ::view-transition-group(.coll-title) {
     animation-duration: 420ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Color chrome: fill the morphing box. */
-::view-transition-old(.coll-chrome),
+/* Color chrome: fill the morphing box. Don't crossfade old/new snapshots —
+   that blends two crops and flashes a darker mid-frame. */
+::view-transition-old(.coll-chrome) {
+    object-fit: cover;
+    overflow: clip;
+    height: 100%;
+    width: 100%;
+    animation: none;
+    opacity: 0;
+}
+
 ::view-transition-new(.coll-chrome) {
     object-fit: cover;
     overflow: clip;
     height: 100%;
     width: 100%;
+    animation: none;
+    opacity: 1;
 }
 
 /* Titles: don't stretch glyph bitmaps during the size tween. */
@@ -200,11 +223,10 @@ textarea:focus-visible {
 }
 
 /*
-  Artist ↔ list: one viewport crossfade. Named descendants (app-shell, sticky
-  collection chrome, tile titles) would otherwise snapshot separately — on back
-  the 80s bar flies up from its in-flow position while the list is already on
-  top of the fading artist page. !important beats Astro’s scope stylesheet.
-  html itself keeps its fade name; this selector is descendants only.
+  Artist ↔ list: one viewport crossfade. Named descendants (sticky collection
+  chrome, tile titles) would otherwise snapshot separately — on back the 80s
+  bar flies up from its in-flow position while the list is already on top of
+  the fading artist page. !important beats Astro’s scope stylesheet.
 */
 html.vt-fade-only [data-astro-transition-scope],
 html.vt-fade-only .app-shell,

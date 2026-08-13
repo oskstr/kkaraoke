@@ -20,9 +20,6 @@ const { tiles, mode } = Astro.props;
                         tile.art && "has-art",
                     ]}
                     style={collectionSurfaceStyle(tile.theme ?? tile.tint, tile.art)}
-                    data-vt-chrome={tile.transitionName}
-                    transition:name={tile.transitionName}
-                    transition:animate="initial"
                 >
                     <span
                         class:list={[
@@ -30,9 +27,6 @@ const { tiles, mode } = Astro.props;
                             tile.large ? "text-[30px] tracking-[-0.02em]" : "text-[18px] leading-tight",
                         ]}
                         style={`color:${tile.ink ?? "#F7F2E9"}`}
-                        data-vt-title={tile.titleTransitionName}
-                        transition:name={tile.titleTransitionName}
-                        transition:animate="initial"
                     >
                         {tile.label}
                     </span>
@@ -46,14 +40,7 @@ const { tiles, mode } = Astro.props;
                     href={tile.href}
                     class="flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left no-underline"
                 >
-                    <span
-                        class="collection-tile-label flex-1 text-base text-cream"
-                        data-vt-title={tile.titleTransitionName}
-                        transition:name={tile.titleTransitionName}
-                        transition:animate="initial"
-                    >
-                        {tile.label}
-                    </span>
+                    <span class="collection-tile-label flex-1 text-base text-cream">{tile.label}</span>
                     <span class="text-[15px] text-dim" aria-hidden="true">
                         →
                     </span>
