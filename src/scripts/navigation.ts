@@ -4,6 +4,7 @@
 
 import { navigate } from "astro:transitions/client";
 import { ensureWindowedRows } from "./song-window";
+import { applySavedSort } from "./sort-list";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
@@ -235,9 +236,10 @@ function expandWindowedListForBack(clearKeys = false): void {
             ...(untilId ? { untilId } : {}),
         });
         const grew = document.querySelectorAll(".song-row").length > rowsBefore;
+        const resorted = applySavedSort(document, location.pathname);
 
-        // Astro already restored. Re-apply only if we un-clamped a short document.
-        if (grew && stateY !== undefined) {
+        // Astro already restored. Re-apply if we un-clamped a short document or re-sorted.
+        if ((grew || resorted) && stateY !== undefined) {
             window.scrollTo({ top: stateY, left: 0, behavior: "instant" });
         }
 
@@ -335,6 +337,7 @@ function prepareIncomingDocument(event: Event): void {
     if (lastNavDirection === "back") {
         expandIncomingWindowedList(newDoc, toPath);
     }
+    applySavedSort(newDoc, toPath);
 }
 
 function clearScopedViewTransitionNames(): void {

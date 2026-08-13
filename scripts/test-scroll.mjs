@@ -207,6 +207,87 @@ async function main() {
         }
     }
 
+    console.log("\n=== Pop year-sort deep → artist → folk → back to Pop ===");
+    await page.goto(`${BASE}/collections/genre/pop`, { waitUntil: "networkidle" });
+    await nativeClick(page, '[data-sort="year"]');
+    const yearSetup = await page.evaluate(async () => {
+        for (let i = 0; i < 16; i++) {
+            window.scrollTo(0, document.documentElement.scrollHeight);
+            document.dispatchEvent(
+                new CustomEvent("kkaraoke:ensure-scroll-height", {
+                    bubbles: true,
+                    detail: {
+                        minHeight: document.documentElement.scrollHeight + 2500,
+                        root: document.documentElement,
+                    },
+                }),
+            );
+            await new Promise((r) => setTimeout(r, 40));
+        }
+        const yearOn = document.querySelector('[data-sort="year"]')?.getAttribute("aria-pressed") === "true";
+        const links = [...document.querySelectorAll('a[href="/artists/ed-sheeran"]')];
+        const link =
+            links.find((a) => {
+                const r = a.getBoundingClientRect();
+                return r.top > 80 && r.top < 700;
+            }) ?? links[links.length - 1];
+        link?.closest(".song-row")?.scrollIntoView({ block: "center" });
+        const row = link?.closest(".song-row");
+        return {
+            ok: Boolean(link && row && yearOn),
+            yearOn,
+            y: window.scrollY,
+            rows: document.querySelectorAll(".song-row").length,
+            href: link?.getAttribute("href") ?? null,
+            id: row?.getAttribute("data-id") ?? null,
+        };
+    });
+    console.log("year setup", yearSetup);
+    if (!yearSetup.ok || !yearSetup.href) {
+        failed = true;
+    } else {
+        await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${yearSetup.href}"]`)]);
+        await page.waitForTimeout(400);
+        const folk = await page.evaluate(() => {
+            const tag = [...document.querySelectorAll("a[href^='/collections/genre/']")].find(
+                (a) => a.getAttribute("href") === "/collections/genre/folk",
+            );
+            return tag?.getAttribute("href");
+        });
+        if (!folk) {
+            console.log("no folk tag, skip remaining");
+            failed = true;
+        } else {
+            await Promise.all([page.waitForURL("**/collections/genre/**"), nativeClick(page, `a[href="${folk}"]`)]);
+            await page.waitForTimeout(300);
+            await page.evaluate(() => window.scrollTo(0, 400));
+            await page.waitForTimeout(150);
+            await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, "a[data-smart-back]")]);
+            await page.waitForTimeout(400);
+            await Promise.all([page.waitForURL("**/collections/genre/pop**"), nativeClick(page, "a[data-smart-back]")]);
+            await page.waitForTimeout(800);
+            const backPop = await page.evaluate(() => {
+                const loadMore = document.querySelector("[data-load-more]");
+                const lr = loadMore?.getBoundingClientRect();
+                const loadMoreInView = Boolean(lr && lr.top < window.innerHeight && lr.bottom > 0);
+                return {
+                    y: window.scrollY,
+                    rows: document.querySelectorAll(".song-row").length,
+                    yearOn: document.querySelector('[data-sort="year"]')?.getAttribute("aria-pressed") === "true",
+                    loadMoreInView,
+                };
+            });
+            console.log("back to pop", backPop, "from", yearSetup.y);
+            const okPop =
+                backPop.yearOn &&
+                backPop.rows > 120 &&
+                !backPop.loadMoreInView &&
+                Math.abs(backPop.y - yearSetup.y) < 400;
+            console.log(okPop ? "PASS pop year-sort restore" : "FAIL pop year-sort restore");
+            if (!okPop) failed = true;
+        }
+    }
+
     await browser.close();
     process.exit(failed ? 1 : 0);
 }

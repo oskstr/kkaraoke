@@ -6,6 +6,7 @@
  */
 
 import { jsonForScript } from "../lib/json-script";
+import { applySavedSort } from "./sort-list";
 
 type MoreSong = {
     id: number;
@@ -76,8 +77,8 @@ let listEl: Element | null = null;
 const ROW_HEIGHT_ESTIMATE = 64;
 
 function listIsTallEnough(doc: Document, list: Element, opts: { untilId?: string; minHeight?: number }): boolean {
-    if (opts.untilId) {
-        return Boolean(list.querySelector(`[data-id="${CSS.escape(opts.untilId)}"]`));
+    if (opts.untilId && !list.querySelector(`[data-id="${CSS.escape(opts.untilId)}"]`)) {
+        return false;
     }
     if (opts.minHeight !== undefined) {
         const scrollHeight = doc.documentElement.scrollHeight;
@@ -115,7 +116,7 @@ export function ensureWindowedRows(doc: Document, opts: { untilId?: string; minH
     remaining = remaining.filter((song) => notYetRendered(song, seen));
 
     let guard = 0;
-    while (remaining.length > 0 && guard < 50 && !listIsTallEnough(doc, list, opts)) {
+    while (remaining.length > 0 && guard < 80 && !listIsTallEnough(doc, list, opts)) {
         const live = renderedSongIds(list);
         while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
             remaining.shift();
@@ -139,6 +140,7 @@ export function ensureWindowedRows(doc: Document, opts: { untilId?: string; minH
     if (doc === document) {
         if (json.isConnected) json.dataset.bound = "";
         bindInfiniteScroll();
+        applySavedSort(document, location.pathname);
         window.dispatchEvent(new Event("kkaraoke:favorites"));
     }
 }
@@ -213,6 +215,7 @@ function bindInfiniteScroll(): void {
         if (batch.length === 0) return;
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
         json.textContent = jsonForScript(remaining);
+        applySavedSort(document, location.pathname);
         window.dispatchEvent(new Event("kkaraoke:favorites"));
         if (remaining.length === 0) {
             observer?.disconnect();
