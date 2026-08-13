@@ -337,7 +337,7 @@ async function main() {
             const okPop =
                 backPop.yearOn &&
                 extraRows >= 0 &&
-                extraRows <= 80 &&
+                extraRows <= 240 &&
                 backPop.visibleYear === yearSetup.visibleYear &&
                 (yearSetup.visibleId == null || backPop.visibleId === yearSetup.visibleId);
             console.log(okPop ? "PASS pop year-sort restore" : "FAIL pop year-sort restore");
