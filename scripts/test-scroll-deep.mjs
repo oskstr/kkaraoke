@@ -61,10 +61,7 @@ async function main() {
     ]);
     await page.waitForTimeout(400);
 
-    await Promise.all([
-        page.waitForURL("**/collections/genre/pop-rock**"),
-        nativeClick(page, "a[data-smart-back]"),
-    ]);
+    await Promise.all([page.waitForURL("**/collections/genre/pop-rock**"), nativeClick(page, "a[data-smart-back]")]);
     await page.waitForTimeout(900);
 
     const after = await page.evaluate(() => {
@@ -87,7 +84,7 @@ async function main() {
             offsetTop: r.top,
             y: window.scrollY,
             rows: document.querySelectorAll(".song-row").length,
-            returnSong: sessionStorage.getItem("kkaraoke:return-song"),
+            marker: sessionStorage.getItem("kkaraoke:return-marker"),
         };
     });
     console.log("after back", after);

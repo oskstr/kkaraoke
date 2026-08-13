@@ -140,6 +140,73 @@ async function main() {
     console.log(okArtists ? "PASS" : "FAIL");
     if (!okArtists) failed = true;
 
+    console.log("\n=== 80s → artist → genre tag → back (keep artist header) ===");
+    await page.goto(`${BASE}/collections/decade/1980`, { waitUntil: "networkidle" });
+    const psb = await page.evaluate(() => {
+        const link = document.querySelector('a[href="/artists/pet-shop-boys"]');
+        const row = link?.closest(".song-row");
+        if (!link || !row) return { ok: false };
+        row.scrollIntoView({ block: "center" });
+        return { ok: true, y: window.scrollY, id: row.getAttribute("data-id") };
+    });
+    console.log("80s setup", psb);
+    if (!psb.ok) {
+        failed = true;
+    } else {
+        await Promise.all([
+            page.waitForURL("**/artists/pet-shop-boys**"),
+            nativeClick(page, 'a[href="/artists/pet-shop-boys"]'),
+        ]);
+        await page.waitForTimeout(400);
+        const onArtist = await page.evaluate(() => {
+            const title = document.querySelector("[data-artist-title]");
+            const r = title?.getBoundingClientRect();
+            return {
+                y: window.scrollY,
+                headerVisible: r ? r.bottom > 0 && r.top < window.innerHeight : false,
+                headerTop: r?.top ?? null,
+            };
+        });
+        console.log("on artist", onArtist);
+        const genreHref = await page.evaluate(() => {
+            const tag = [...document.querySelectorAll("a[href^='/collections/genre/']")].find((a) =>
+                /electropop/i.test(a.getAttribute("href") ?? ""),
+            );
+            return tag?.getAttribute("href");
+        });
+        console.log("genre", genreHref);
+        if (!genreHref) {
+            failed = true;
+        } else {
+            await Promise.all([
+                page.waitForURL("**/collections/genre/**"),
+                nativeClick(page, `a[href="${genreHref}"]`),
+            ]);
+            await page.waitForTimeout(400);
+            await Promise.all([page.waitForURL("**/artists/pet-shop-boys**"), nativeClick(page, "a[data-smart-back]")]);
+            await page.waitForTimeout(700);
+            const backArtist = await page.evaluate(() => {
+                const title = document.querySelector("[data-artist-title]");
+                const r = title?.getBoundingClientRect();
+                const firstRow = document.querySelector(".song-row");
+                const fr = firstRow?.getBoundingClientRect();
+                return {
+                    path: location.pathname,
+                    y: window.scrollY,
+                    headerVisible: r ? r.top >= 0 && r.bottom > 40 && r.top < 200 : false,
+                    headerTop: r?.top ?? null,
+                    firstRowTop: fr?.top ?? null,
+                    marker: sessionStorage.getItem("kkaraoke:return-marker"),
+                };
+            });
+            console.log("back to artist", backArtist);
+            const headerOk =
+                backArtist.path.includes("/artists/pet-shop-boys") && backArtist.headerVisible && backArtist.y < 80;
+            console.log(headerOk ? "PASS artist header restored" : "FAIL artist header restored");
+            if (!headerOk) failed = true;
+        }
+    }
+
     await browser.close();
     process.exit(failed ? 1 : 0);
 }

@@ -7,8 +7,10 @@ import { ensureWindowedRows } from "./song-window";
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
-const RETURN_SONG_KEY = "kkaraoke:return-song";
-const RETURN_SCROLL_KEY = "kkaraoke:return-scroll";
+/** Scroll/song restore for a specific list URL — must not apply on a later back. */
+const RETURN_MARKER_KEY = "kkaraoke:return-marker";
+
+type ReturnMarker = { path: string; y: number; songId?: string };
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -131,16 +133,28 @@ function artistSlugFromPath(pathname: string): string | undefined {
     return match?.[1];
 }
 
-function readReturnScroll(): number | undefined {
-    const raw = sessionStorage.getItem(RETURN_SCROLL_KEY);
-    if (raw == null || raw === "") return undefined;
-    const n = Number(raw);
-    return Number.isFinite(n) ? n : undefined;
+function readReturnMarker(): ReturnMarker | undefined {
+    const raw = sessionStorage.getItem(RETURN_MARKER_KEY);
+    if (!raw) return undefined;
+    try {
+        const parsed = JSON.parse(raw) as ReturnMarker;
+        if (typeof parsed?.path === "string" && typeof parsed.y === "number" && Number.isFinite(parsed.y)) {
+            return parsed;
+        }
+    } catch {
+        return undefined;
+    }
+    return undefined;
 }
 
-function clearReturnKeys(): void {
-    sessionStorage.removeItem(RETURN_SONG_KEY);
-    sessionStorage.removeItem(RETURN_SCROLL_KEY);
+function returnMarkerFor(path: string): ReturnMarker | undefined {
+    const marker = readReturnMarker();
+    if (!marker || marker.path !== path) return undefined;
+    return marker;
+}
+
+function clearReturnMarker(): void {
+    sessionStorage.removeItem(RETURN_MARKER_KEY);
 }
 
 /** Remember the list offset so back can restore it instead of snapping a row to the top. */
@@ -153,8 +167,9 @@ function onSongArtistPointerDown(event: Event): void {
     if (artistSlugFromPath(path) === undefined) return;
 
     const row = link.closest<HTMLElement>(".song-row");
-    if (row?.dataset.id) sessionStorage.setItem(RETURN_SONG_KEY, row.dataset.id);
-    sessionStorage.setItem(RETURN_SCROLL_KEY, String(window.scrollY));
+    const marker: ReturnMarker = { path: location.pathname, y: window.scrollY };
+    if (row?.dataset.id) marker.songId = row.dataset.id;
+    sessionStorage.setItem(RETURN_MARKER_KEY, JSON.stringify(marker));
 }
 
 function silenceNamedGroups(root: ParentNode, selector: string): void {
@@ -206,10 +221,9 @@ function expandWindowedListForBack(clearKeys = false): void {
     expandingForBack = true;
     try {
         const state = history.state as { scrollY?: number } | null;
-        const saved = readReturnScroll();
-        const targetY =
-            typeof state?.scrollY === "number" && state.scrollY > 0 ? state.scrollY : (saved ?? window.scrollY);
-        const untilId = sessionStorage.getItem(RETURN_SONG_KEY) ?? undefined;
+        const marker = returnMarkerFor(location.pathname);
+        const targetY = typeof state?.scrollY === "number" ? state.scrollY : (marker?.y ?? window.scrollY);
+        const untilId = marker?.songId;
 
         ensureWindowedRows(document, {
             minHeight: targetY + window.innerHeight + 80,
@@ -229,7 +243,9 @@ function expandWindowedListForBack(clearKeys = false): void {
             }
         }
 
-        if (clearKeys) clearReturnKeys();
+        if (clearKeys && (!readReturnMarker() || marker)) {
+            clearReturnMarker();
+        }
     } finally {
         expandingForBack = false;
     }
@@ -279,11 +295,12 @@ function scopeCollectionTileNames(root: ParentNode, keep: { href?: string; chrom
     });
 }
 
-function expandIncomingWindowedList(newDoc: Document): void {
-    const untilId = sessionStorage.getItem(RETURN_SONG_KEY) ?? undefined;
-    const saved = readReturnScroll();
+function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
+    if (!newDoc.querySelector("[data-more-songs]")) return;
+    const marker = returnMarkerFor(destPath);
+    const untilId = marker?.songId;
     const stateY = (history.state as { scrollY?: number } | null)?.scrollY;
-    const targetY = typeof stateY === "number" && stateY > 0 ? stateY : (saved ?? 0);
+    const targetY = typeof stateY === "number" ? stateY : (marker?.y ?? 0);
     if (!untilId && targetY <= 0) return;
     ensureWindowedRows(newDoc, {
         minHeight: targetY + 900,
@@ -319,7 +336,7 @@ function prepareIncomingDocument(event: Event): void {
     }
 
     if (lastNavDirection === "back") {
-        expandIncomingWindowedList(newDoc);
+        expandIncomingWindowedList(newDoc, toPath);
     }
 }
 
