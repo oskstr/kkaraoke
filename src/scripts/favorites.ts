@@ -55,7 +55,6 @@ export function paintFavoriteButtons(root: ParentNode = document): void {
     root.querySelectorAll<HTMLElement>("[data-fav-toggle]").forEach((btn) => {
         const ids = parseFavIds(btn.getAttribute("data-fav-toggle"));
         const on = isFavoriteAny(ids, favs);
-        btn.style.color = on ? "#E9B44C" : "#3B3733";
         btn.setAttribute("aria-pressed", on ? "true" : "false");
         btn.setAttribute("aria-label", on ? "Remove from favorites" : "Add to favorites");
     });
@@ -71,6 +70,7 @@ export function paintFavoritesNav(root: ParentNode = document): void {
         el.classList.toggle("border-line-strong", !on);
         el.classList.toggle("bg-panel", !on);
         el.classList.toggle("text-[#9A9086]", !on);
+        el.setAttribute("aria-label", count > 0 ? `Favorites, ${count} saved` : "Favorites");
     });
 }
 

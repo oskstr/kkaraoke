@@ -1,11 +1,18 @@
-/** In-app back + search focus. Scroll restore is Astro ClientRouter’s job
- *  (window scroll). We only help windowed song lists grow tall enough on back. */
+/** In-app back + search focus. Scroll position is Astro ClientRouter’s job
+ *  (`history.state.scrollY`). We only materialize windowed collection rows so
+ *  that restore has a document tall enough to land on. */
 
 import { navigate } from "astro:transitions/client";
+import { ensureWindowedRows, setWindowedRestoreLock } from "./song-window";
+import { applySavedSort, readSavedSort } from "./sort-list";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
+/** Which windowed list to expand on back — not a scroll offset. */
+const RETURN_MARKER_KEY = "kkaraoke:return-marker";
+
+type ReturnMarker = { path: string; songId: string; rows: number };
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -123,69 +130,249 @@ function openSearchFromBrowse(event: Event): void {
     });
 }
 
-/** Remember which song row was clicked so windowed lists can expand to it on back. */
+function artistSlugFromPath(pathname: string): string | undefined {
+    const match = /^\/artists\/([^/]+)\/?$/.exec(pathname);
+    return match?.[1];
+}
+
+function readReturnMarker(): ReturnMarker | undefined {
+    const raw = sessionStorage.getItem(RETURN_MARKER_KEY);
+    if (!raw) return undefined;
+    try {
+        const parsed = JSON.parse(raw) as ReturnMarker;
+        if (
+            typeof parsed?.path === "string" &&
+            typeof parsed.songId === "string" &&
+            parsed.songId !== "" &&
+            typeof parsed.rows === "number" &&
+            Number.isFinite(parsed.rows) &&
+            parsed.rows > 0
+        ) {
+            return parsed;
+        }
+    } catch {
+        return undefined;
+    }
+    return undefined;
+}
+
+function returnMarkerFor(path: string): ReturnMarker | undefined {
+    const marker = readReturnMarker();
+    if (!marker || marker.path !== path) return undefined;
+    return marker;
+}
+
+function clearReturnMarker(): void {
+    sessionStorage.removeItem(RETURN_MARKER_KEY);
+}
+
+/** Remember which windowed row to materialize on back. Astro keeps scrollY. */
 function onSongArtistPointerDown(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
     const link = target.closest<HTMLAnchorElement>("a[href^='/artists/']");
-    const row = link?.closest<HTMLElement>(".song-row");
-    if (!row?.dataset.id) return;
-    sessionStorage.setItem("kkaraoke:return-song", row.dataset.id);
+    if (!link || link.hasAttribute("data-astro-reload")) return;
+    const path = linkPathname(link);
+    if (artistSlugFromPath(path) === undefined) return;
+    if (!document.querySelector("[data-more-songs]")) return;
+
+    const row = link.closest<HTMLElement>(".song-row");
+    const songId = row?.dataset.id;
+    if (!songId) return;
+    sessionStorage.setItem(
+        RETURN_MARKER_KEY,
+        JSON.stringify({
+            path: location.pathname,
+            songId,
+            rows: document.querySelectorAll(".song-row").length,
+        } satisfies ReturnMarker),
+    );
+}
+
+function silenceNamedGroups(root: ParentNode, selector: string): void {
+    const doc = root instanceof Document ? root : root.ownerDocument;
+    root.querySelectorAll<HTMLElement>(selector).forEach((el) => {
+        if (el === doc?.documentElement) return;
+        el.style.setProperty("view-transition-name", "none", "important");
+    });
+}
+
+const FADE_ONLY_CLASS = "vt-fade-only";
+
+function isArtistDetailPath(pathname: string): boolean {
+    return artistSlugFromPath(pathname) !== undefined;
+}
+
+function artistRelatedNav(fromPath: string, toPath: string): boolean {
+    return isArtistDetailPath(fromPath) || isArtistDetailPath(toPath);
+}
+
+function setFadeOnly(doc: Document, on: boolean): void {
+    doc.documentElement.classList.toggle(FADE_ONLY_CLASS, on);
 }
 
 type PreparationEvent = Event & {
     direction?: "forward" | "back";
+    from?: URL;
     to?: URL;
 };
 
 /**
- * Windowed collections only ship the first chunk of rows. After Astro restores
- * window.scrollY, expand the list until that height (or return-song) exists.
- *
- * Reentrancy guard: ensure → bindInfiniteScroll used to emit list-ready which
- * called this again and blew the stack.
+ * Windowed collections only ship the first chunk of rows. Expand until Astro’s
+ * restored scrollY (or the originating song) exists. Do not set scroll ourselves
+ * unless we grew the document after ClientRouter already ran `scrollTo`.
  */
 let expandingForBack = false;
 
-function expandWindowedListForBack(): void {
+function historyScrollY(): number | undefined {
+    const y = (history.state as { scrollY?: number } | null)?.scrollY;
+    return typeof y === "number" && Number.isFinite(y) ? y : undefined;
+}
+
+function windowedRestoreOpts(path: string): { untilId?: string; minRows?: number; minHeight?: number } {
+    const marker = returnMarkerFor(path);
+    const untilId = marker?.songId;
+    const minRows = marker?.rows;
+    const stateY = historyScrollY();
+    if (minRows !== undefined) {
+        return { ...(untilId ? { untilId } : {}), minRows };
+    }
+    const minHeight = stateY !== undefined && stateY > 0 ? stateY + window.innerHeight + 80 : undefined;
+    return {
+        ...(untilId ? { untilId } : {}),
+        ...(minHeight !== undefined ? { minHeight } : {}),
+    };
+}
+
+function expandWindowedListForBack(clearKeys = false): void {
     if (expandingForBack) return;
     expandingForBack = true;
     try {
-        const root = document.documentElement;
-        const state = history.state as { scrollY?: number } | null;
-        const targetY = state?.scrollY ?? window.scrollY;
-        const untilId = sessionStorage.getItem("kkaraoke:return-song") ?? undefined;
+        const marker = returnMarkerFor(location.pathname);
+        const opts = windowedRestoreOpts(location.pathname);
+        if (!document.querySelector("[data-more-songs]") && !opts.untilId && !opts.minRows) {
+            if (clearKeys && marker) clearReturnMarker();
+            setWindowedRestoreLock(false);
+            return;
+        }
 
-        document.dispatchEvent(
-            new CustomEvent("kkaraoke:ensure-scroll-height", {
-                bubbles: true,
-                detail: {
-                    minHeight: targetY + window.innerHeight + 80,
-                    root,
-                    ...(untilId ? { untilId } : {}),
-                },
-            }),
-        );
+        setWindowedRestoreLock(true);
+        const rowsBefore = document.querySelectorAll(".song-row").length;
+        ensureWindowedRows(document, opts);
+        const grew = document.querySelectorAll(".song-row").length > rowsBefore;
+        applySavedSort(document, location.pathname);
+        const stateY = historyScrollY();
 
-        if (untilId) {
-            const el = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
-            if (el) {
-                const top = el.getBoundingClientRect().top + window.scrollY;
-                if (Math.abs(window.scrollY - top) > 48) {
-                    window.scrollTo({ top, left: 0, behavior: "instant" });
-                }
-                sessionStorage.removeItem("kkaraoke:return-song");
-                return;
+        // Astro already restored. Re-apply if we un-clamped a short document.
+        // Skip if a later year-sort chunk already kept the visible song in view.
+        if (stateY !== undefined) {
+            const y = window.scrollY;
+            const stillAtRestore = Math.abs(y - stateY) < 80;
+            const clamped = y < stateY - 80;
+            if (grew || stillAtRestore || clamped) {
+                window.scrollTo({ top: stateY, left: 0, behavior: "instant" });
             }
         }
 
-        // Re-assert Astro’s restored window scroll after rows were inserted.
-        if (typeof targetY === "number" && targetY > 0) {
-            window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
+        if (clearKeys && (!readReturnMarker() || marker)) {
+            clearReturnMarker();
         }
     } finally {
         expandingForBack = false;
+        if (clearKeys) setWindowedRestoreLock(false);
     }
+}
+
+function onSearchCommit(event: Event): void {
+    const target = event.target;
+    if (!(target instanceof HTMLInputElement) || !target.hasAttribute("data-search-input")) return;
+    if (event instanceof KeyboardEvent && event.key !== "Enter") return;
+    event.preventDefault();
+    if (location.pathname.startsWith("/search") || openingSearch) return;
+    openingSearch = true;
+    sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
+    void navigate("/search").finally(() => {
+        openingSearch = false;
+    });
+}
+
+type SwapEvent = Event & { newDocument?: Document; from?: URL; to?: URL };
+
+function linkPathname(link: HTMLAnchorElement): string {
+    try {
+        return new URL(link.href, location.origin).pathname;
+    } catch {
+        return link.getAttribute("href") ?? "";
+    }
+}
+
+/**
+ * Browse grids keep shared `transition:name`s so Featured ↔ Decades can morph
+ * the tiles that exist in both. Opening a collection would otherwise animate
+ * every other tile as its own group — silence those, keep the match.
+ */
+function scopeCollectionTileNames(root: ParentNode, keep: { href?: string; chrome?: string; title?: string }): void {
+    root.querySelectorAll<HTMLElement>("[data-vt-chrome], [data-vt-title]").forEach((el) => {
+        const link = el.closest("a");
+        const keepThis =
+            (keep.chrome !== undefined && el.dataset.vtChrome === keep.chrome) ||
+            (keep.title !== undefined && el.dataset.vtTitle === keep.title) ||
+            (keep.href !== undefined && link !== null && linkPathname(link) === keep.href);
+        if (keepThis) {
+            if (el.dataset.vtChrome) el.style.viewTransitionName = el.dataset.vtChrome;
+            if (el.dataset.vtTitle) el.style.viewTransitionName = el.dataset.vtTitle;
+        } else {
+            el.style.viewTransitionName = "none";
+        }
+    });
+}
+
+function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
+    if (!newDoc.querySelector("[data-more-songs]")) return;
+    const opts = windowedRestoreOpts(destPath);
+    if (!opts.untilId && !opts.minRows && !opts.minHeight) return;
+    ensureWindowedRows(newDoc, { ...opts, path: destPath, sort: readSavedSort(destPath) });
+}
+
+/** On back from a collection, only the matching incoming tile should morph. */
+function prepareIncomingDocument(event: Event): void {
+    const swap = event as SwapEvent;
+    const newDoc = swap.newDocument;
+    if (!newDoc) return;
+
+    const fromPath = swap.from?.pathname ?? location.pathname;
+    const toPath = swap.to?.pathname ?? "";
+    const fadeOnly = artistRelatedNav(fromPath, toPath) || Boolean(document.querySelector("[data-artist-title]"));
+    setFadeOnly(newDoc, fadeOnly);
+
+    if (fadeOnly) {
+        silenceNamedGroups(
+            newDoc,
+            ".app-shell, [data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-astro-transition-scope]",
+        );
+    } else {
+        const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
+        const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
+        if (chromeName || titleName) {
+            scopeCollectionTileNames(newDoc, {
+                ...(chromeName ? { chrome: chromeName } : {}),
+                ...(titleName ? { title: titleName } : {}),
+            });
+        }
+    }
+
+    applySavedSort(newDoc, toPath);
+    if (lastNavDirection === "back") {
+        expandIncomingWindowedList(newDoc, toPath);
+    }
+}
+
+function clearScopedViewTransitionNames(): void {
+    document.documentElement.classList.remove(FADE_ONLY_CLASS);
+    document.querySelectorAll<HTMLElement>("[data-astro-transition-scope]").forEach((el) => {
+        if (el === document.documentElement) return;
+        el.style.removeProperty("view-transition-name");
+    });
 }
 
 let lastNavDirection: "forward" | "back" | null = null;
@@ -199,15 +386,30 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
+    document.addEventListener("keydown", onSearchCommit);
+    document.addEventListener("search", onSearchCommit);
     // focusin: keyboard / label activation. pointerdown: start the fetch as
     // soon as the finger lands, while the input is focused in the same gesture.
     document.addEventListener("pointerdown", openSearchFromBrowse, true);
     document.addEventListener("focusin", openSearchFromBrowse);
     document.addEventListener("pointerdown", onSongArtistPointerDown, true);
+    document.addEventListener("click", onSongArtistPointerDown, true);
+    document.addEventListener("astro:before-swap", prepareIncomingDocument);
 
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
         const dest = (event as PreparationEvent).to?.pathname ?? "";
+        const fromPath = (event as PreparationEvent).from?.pathname ?? location.pathname;
+        const fadeOnly = artistRelatedNav(fromPath, dest);
+        setFadeOnly(document, fadeOnly);
+        if (fadeOnly) {
+            silenceNamedGroups(
+                document,
+                ".app-shell, [data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-astro-transition-scope]",
+            );
+        } else if (dest.startsWith("/collections/")) {
+            scopeCollectionTileNames(document, { href: dest });
+        }
         if (!keepSearchInput(dest)) {
             searchInputEl()?.removeAttribute("data-astro-transition-persist");
         } else {
@@ -218,7 +420,9 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("astro:after-swap", () => {
         markNavigated();
         if (lastNavDirection === "back") {
-            expandWindowedListForBack();
+            expandWindowedListForBack(false);
+        } else {
+            setWindowedRestoreLock(false);
         }
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
@@ -230,9 +434,14 @@ if (!window.__kkaraokeNavInit) {
 
     document.addEventListener("astro:page-load", () => {
         if (lastNavDirection === "back") {
-            expandWindowedListForBack();
-            requestAnimationFrame(expandWindowedListForBack);
+            expandWindowedListForBack(false);
+            requestAnimationFrame(() => {
+                expandWindowedListForBack(true);
+            });
         }
+        void waitForViewTransitions().then(() => {
+            clearScopedViewTransitionNames();
+        });
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
             void scheduleSearchFocus();

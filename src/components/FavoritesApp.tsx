@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
 import FavoriteButton, { useFavorites } from "./FavoriteButton";
 import type { SearchSong } from "../lib/catalogue";
@@ -15,7 +13,8 @@ function SongSubtitle({ song }: { song: SearchSong }) {
                         {index > 0 && ", "}
                         <a
                             href={`/artists/${artist.slug}`}
-                            className="text-muted no-underline hover:text-cream-soft"
+                            className="song-artist-link"
+                            data-vt-artist={artist.slug}
                         >
                             {artist.name}
                         </a>
@@ -33,11 +32,13 @@ function SongNumbers({ ids }: { ids: number[] }) {
     const label = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
     return (
         <span
-            className="flex w-11 shrink-0 flex-col items-end gap-0.5 self-start pt-1 font-mono text-[12px] tabular-nums leading-none text-gold"
+            className="flex w-11 shrink-0 flex-col items-end gap-0.5 self-start pt-1 font-mono text-[12px] leading-none text-gold tabular-nums"
             aria-label={label}
         >
             {ids.map((id) => (
-                <span key={id}>{id}</span>
+                <span key={id} aria-hidden="true">
+                    {id}
+                </span>
             ))}
         </span>
     );

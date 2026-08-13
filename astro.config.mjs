@@ -1,12 +1,39 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://kkaraoke.vercel.app",
     integrations: [react()],
     adapter: vercel(),
+    output: "static",
+    prefetch: {
+        defaultStrategy: "hover",
+    },
+    fonts: [
+        {
+            name: "Archivo",
+            cssVariable: "--font-archivo",
+            provider: fontProviders.fontsource(),
+            // Variable file covers the weights used in the UI (regular through bold).
+            weights: ["400 700"],
+            styles: ["normal"],
+            // latin-ext is required for Swedish å/ä/ö in the catalogue.
+            subsets: ["latin", "latin-ext"],
+            fallbacks: ["sans-serif"],
+        },
+        {
+            name: "DM Mono",
+            cssVariable: "--font-dm-mono",
+            provider: fontProviders.fontsource(),
+            weights: [400, 500],
+            styles: ["normal"],
+            subsets: ["latin", "latin-ext"],
+            fallbacks: ["monospace"],
+        },
+    ],
 
     vite: {
         plugins: [tailwindcss()],

@@ -8,6 +8,7 @@ const { active = false } = Astro.props;
 
 <a
     href="/favorites"
+    aria-label="Favorites"
     class:list={[
         "inline-flex min-h-[34px] items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors",
         active
@@ -17,5 +18,5 @@ const { active = false } = Astro.props;
     data-fav-nav
     transition:name="favorites-nav"
 >
-    ♥ Favorites
+    <span aria-hidden="true">♥</span> Favorites
 </a>

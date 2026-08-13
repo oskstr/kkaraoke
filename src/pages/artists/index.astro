@@ -12,23 +12,32 @@ const groups = groupArtists(getArtists());
         <BackLink href="/" label="← BROWSE" />
         <h1 class="mt-3 text-[30px] font-bold tracking-[-0.025em] text-cream">Artists</h1>
     </header>
-    <main class="px-[18px] pb-6">
+    <main id="main" tabindex="-1" class="px-[18px] pb-6">
         {
             groups.map((group) => (
-                <section>
-                    <div class="sticky top-0 z-10 bg-surface py-2.5 font-mono text-[11px] tracking-[0.16em] text-gold">
+                <section aria-labelledby={`artist-letter-${group.letter}`}>
+                    <h2
+                        id={`artist-letter-${group.letter}`}
+                        class="sticky top-0 z-10 bg-surface py-2.5 font-mono text-[11px] tracking-[0.16em] text-gold"
+                    >
                         {group.letter}
-                    </div>
-                    {group.artists.map((artist) => (
-                        <a
-                            href={`/artists/${artist.slug}`}
-                            data-astro-reload
-                            class="flex w-full items-center gap-3 border-b border-line px-0.5 py-3.5 text-left text-cream no-underline hover:text-cream"
-                        >
-                            <span class="flex-1 text-base">{artist.name}</span>
-                            <span class="text-[15px] text-dim">→</span>
-                        </a>
-                    ))}
+                    </h2>
+                    <ul class="m-0 list-none p-0">
+                        {group.artists.map((artist) => (
+                            <li>
+                                <a
+                                    href={`/artists/${artist.slug}`}
+                                    data-astro-reload
+                                    class="flex w-full items-center gap-3 border-b border-line px-0.5 py-3.5 text-left text-cream no-underline hover:text-cream"
+                                >
+                                    <span class="flex-1 text-base">{artist.name}</span>
+                                    <span class="text-[15px] text-dim" aria-hidden="true">
+                                        →
+                                    </span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
             ))
         }

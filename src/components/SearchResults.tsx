@@ -1,5 +1,3 @@
-"use client";
-
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import FavoriteButton from "./FavoriteButton";
 import { matchesQuery, type SearchSong } from "../lib/catalogue";
@@ -30,7 +28,8 @@ function SongSubtitle({ song }: { song: SearchSong }) {
                         {index > 0 && ", "}
                         <a
                             href={`/artists/${artist.slug}`}
-                            className="text-muted no-underline hover:text-cream-soft"
+                            className="song-artist-link"
+                            data-vt-artist={artist.slug}
                             onClick={(e) => e.stopPropagation()}
                         >
                             {artist.name}
@@ -49,11 +48,13 @@ function SongNumbers({ ids }: { ids: number[] }) {
     const label = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
     return (
         <span
-            className="flex w-11 shrink-0 flex-col items-end gap-0.5 self-start pt-1 font-mono text-[12px] tabular-nums leading-none text-gold"
+            className="flex w-11 shrink-0 flex-col items-end gap-0.5 self-start pt-1 font-mono text-[12px] leading-none text-gold tabular-nums"
             aria-label={label}
         >
             {ids.map((id) => (
-                <span key={id}>{id}</span>
+                <span key={id} aria-hidden="true">
+                    {id}
+                </span>
             ))}
         </span>
     );
@@ -68,6 +69,12 @@ export default function SearchResults({ suggestions, inputId }: Props) {
     useEffect(() => {
         const input = document.getElementById(inputId) as HTMLInputElement | null;
         if (!input) return;
+
+        const params = new URLSearchParams(location.search);
+        const fromUrl = params.get("q") ?? "";
+        if (fromUrl && input.value === "") {
+            input.value = fromUrl;
+        }
 
         const onInput = () => setQuery(input.value);
         input.addEventListener("input", onInput);
@@ -87,6 +94,17 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             input.removeEventListener("input", onInput);
         };
     }, [inputId]);
+
+    useEffect(() => {
+        if (!location.pathname.startsWith("/search")) return;
+        const url = new URL(location.href);
+        const trimmed = query.trim();
+        if (trimmed) url.searchParams.set("q", trimmed);
+        else url.searchParams.delete("q");
+        if (url.href !== location.href) {
+            history.replaceState(history.state, "", url);
+        }
+    }, [query]);
 
     const q = deferred.trim().toLowerCase();
 
@@ -109,12 +127,22 @@ export default function SearchResults({ suggestions, inputId }: Props) {
 
     const idle = !query.trim();
     const empty = Boolean(query.trim()) && index !== null && rows.length === 0 && artistHits.length === 0;
+    const status = loadError
+        ? "Couldn’t load the catalogue."
+        : !index && !idle
+          ? "Searching"
+          : empty
+            ? "No matches"
+            : q
+              ? `${artistHits.length} artists, ${rows.length} songs`
+              : "";
 
     return (
-        <div className="px-[18px] pb-6 pt-2">
-            {loadError && (
-                <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalogue.</div>
-            )}
+        <div className="px-[18px] pt-2 pb-6">
+            <div className="sr-only" aria-live="polite" aria-atomic="true">
+                {status}
+            </div>
+            {loadError && <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalogue.</div>}
 
             {!loadError && !index && !idle && (
                 <div className="px-5 py-16 text-center text-sm text-muted">Searching…</div>
@@ -122,9 +150,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
 
             {idle && (
                 <div>
-                    <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">
-                        Jump to
-                    </div>
+                    <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">Jump to</div>
                     <div className="flex flex-wrap gap-1.5">
                         {suggestions.map((s) => (
                             <a
@@ -152,7 +178,9 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                             href={`/artists/${a.slug}`}
                             className="flex w-full items-center gap-3 border-b border-line px-0.5 py-3.5 text-left text-cream no-underline hover:text-cream"
                         >
-                            <span className="flex-1 text-base font-medium">{a.name}</span>
+                            <span className="flex-1 text-base font-medium" data-vt-artist={a.slug}>
+                                {a.name}
+                            </span>
                             <span className="text-[15px] text-dim">→</span>
                         </a>
                     ))}
@@ -165,10 +193,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                         Songs
                     </div>
                     {rows.map((song) => (
-                        <div
-                            key={song.id}
-                            className="flex items-start gap-2.5 border-b border-line py-3"
-                        >
+                        <div key={song.id} className="flex items-start gap-2.5 border-b border-line py-3">
                             <SongNumbers ids={song.ids} />
                             <div className="flex min-h-11 flex-1 flex-col justify-center text-left">
                                 <div className="text-[15.5px] leading-snug text-cream">{song.title}</div>
