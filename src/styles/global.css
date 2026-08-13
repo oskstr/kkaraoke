@@ -166,51 +166,32 @@ textarea:focus-visible {
     view-transition-class: coll-title;
 }
 
-::view-transition-old(root) {
-    animation: none;
-    opacity: 0;
-    mix-blend-mode: normal;
-}
-
+::view-transition-old(root),
 ::view-transition-new(root) {
-    animation: none;
-    opacity: 1;
-    mix-blend-mode: normal;
+    /* Crossfade without punching through to html. Named chrome is missing from
+       both snapshots (a hole); plus-lighter keeps the other page’s pixels in
+       that hole so the status bar does not sample a flat near-black. */
+    animation-duration: 180ms;
+    mix-blend-mode: plus-lighter;
 }
 
 ::view-transition-group(*) {
     animation-duration: 180ms;
 }
 
-::view-transition-group(.coll-chrome) {
-    /* Snap to the destination box. Morphing from the mid-page tile leaves a
-       hole at the top (html/surface showing through) for the whole flight. */
-    animation: none;
-}
-
+::view-transition-group(.coll-chrome),
 ::view-transition-group(.coll-title) {
     animation-duration: 420ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Color chrome: fill the morphing box. Don't crossfade old/new snapshots —
-   that blends two crops and flashes a darker mid-frame. */
-::view-transition-old(.coll-chrome) {
-    object-fit: cover;
-    overflow: clip;
-    height: 100%;
-    width: 100%;
-    animation: none;
-    opacity: 0;
-}
-
+/* Color chrome: fill the morphing box. */
+::view-transition-old(.coll-chrome),
 ::view-transition-new(.coll-chrome) {
     object-fit: cover;
     overflow: clip;
     height: 100%;
     width: 100%;
-    animation: none;
-    opacity: 1;
 }
 
 /* Titles: don't stretch glyph bitmaps during the size tween. */

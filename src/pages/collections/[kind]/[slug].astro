@@ -80,19 +80,27 @@ const backFallback: Record<CollectionKind, string> = {
 ---
 
 <Layout title={`${collection.label} · kkaraoke`}>
-    <!-- Header is not a named view-transition target: lifting it out of the
-         page snapshot leaves a hole at the top (flat #100c0a) that iOS samples
-         as a darker status bar mid-navigation. -->
+    <!--
+      One shared-element target for the tile morph: the whole tinted chrome
+      (back + title + sort) so the tile color expands into the top bar.
+    -->
     <div
         class:list={["collection-chrome sticky top-0 z-20", collection.art && "has-art"]}
         style={`${collectionSurfaceStyle(collection.theme ?? collection.tint, collection.art)};border-bottom:1px solid rgba(0,0,0,0.25)`}
         data-collection-chrome
+        data-vt-chrome={collection.transitionName}
+        transition:name={collection.transitionName}
+        transition:animate="initial"
     >
         <header class="px-[18px] pt-[22px] pb-0">
             <BackLink href={backFallback[collection.kind]} label="← BACK" light />
             <h1
                 class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty"
                 style={`color:${collection.ink ?? "#FCFAF6"}`}
+                data-collection-title
+                data-vt-title={collection.titleTransitionName}
+                transition:name={collection.titleTransitionName}
+                transition:animate="initial"
             >
                 {collection.label}
             </h1>
