@@ -184,7 +184,7 @@ The first step wants [the MusicBrainz canonical metadata dump](https://metabrain
 (CC0, ~2.3 GB compressed). It exists for exactly this problem — turning an artist string and a title into MBIDs — and it
 matches 89% of the catalogue in 90 seconds without a single request. That is the reason the pipeline starts offline.
 
-The other steps go through the MusicBrainz web service, whose rate limit is per IP and therefore shared with whatever
+The lookups go through the MusicBrainz web service, whose rate limit is per IP and therefore shared with whatever
 else uses the same egress address. Two things make that survivable. Responses are cached under `.cache/`, outside the
 repository, so any run resumes where it left off and re-running costs nothing. And ids are batched into single queries —
 `arid:(id1 OR id2 OR …)` returns a hundred artists at a time, which is why the artist step is 39 requests rather than 1670.
