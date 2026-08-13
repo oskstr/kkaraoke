@@ -130,7 +130,27 @@ export function tintFor(kind: CollectionKind, key: string): string {
  *  the hashed tint. */
 const COLLECTION_ART: Record<string, { src: string; ink?: string; theme?: string }> = {
     "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#120b0b" },
+    "category:Children's song": { src: "/collections/children.webp", ink: "#F4E2B9", theme: "#0f0c0a" },
+    "category:Christmas": { src: "/collections/christmas.webp", ink: "#F2E9D4", theme: "#181f1d" },
+    "category:Disney": { src: "/collections/disney.webp", ink: "#F5E5C0", theme: "#070b15" },
+    "category:Eurovision": { src: "/collections/eurovision.webp", ink: "#E4E8F8", theme: "#060938" },
+    "category:Hymn": { src: "/collections/hymn.webp", ink: "#F7F2E9", theme: "#161315" },
+    "category:Irish traditional": { src: "/collections/irish-traditional.webp", ink: "#E8D5C4", theme: "#091008" },
+    "category:James Bond": { src: "/collections/james-bond.webp", ink: "#F2EFE9", theme: "#161413" },
     "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#190c0d" },
+    "category:Midsummer": { src: "/collections/midsummer.webp", ink: "#F9EFE5", theme: "#252628" },
+    "category:Musical": { src: "/collections/musical.webp", ink: "#F9E8D2", theme: "#080504" },
+    "decade:1950": { src: "/collections/50s.webp", ink: "#FDEBD0", theme: "#251308" },
+    "decade:1960": { src: "/collections/60s.webp", ink: "#F7D8D0", theme: "#260c0b" },
+    "decade:1970": { src: "/collections/70s.webp", ink: "#F9F5E6", theme: "#1e1a12" },
+    "decade:1980": { src: "/collections/80s.webp", ink: "#FCE4EC", theme: "#130717" },
+    "decade:1990": { src: "/collections/90s.webp", ink: "#F2EBE1", theme: "#1c130d" },
+    "decade:2000": { src: "/collections/00s.webp", ink: "#E2E8F0", theme: "#0f1d2a" },
+    "decade:2010": { src: "/collections/10s.webp", ink: "#F0F2F5", theme: "#0d141b" },
+    "decade:2020": { src: "/collections/20s.webp", ink: "#EDE8FF", theme: "#161223" },
+    "genre:pop": { src: "/collections/pop.webp", ink: "#F4ECD8", theme: "#0d0e0e" },
+    "genre:rock": { src: "/collections/rock.webp", ink: "#EADCBF", theme: "#080506" },
+    "lang:swe": { src: "/collections/swedish.webp", ink: "#F2E8D5", theme: "#060302" },
 };
 
 export const DEFAULT_THEME_COLOR = "#0a0a09";
