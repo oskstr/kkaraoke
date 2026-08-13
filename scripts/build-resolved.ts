@@ -57,8 +57,8 @@ interface Resolved {
     /** The credited artists individually, which is what the artist column is built from. */
     artists?: { mbid: string; name: string }[];
     /**
-     * The matched release's own flattened credit line, kept for the collaboration kind it
-     * encodes and never displayed.
+     * The matched release's flattened credit line (`feat.`, `&`, `vs.`). Matching evidence
+     * only — the artist column is the named artists, comma separated, never this string.
      */
     credit?: string;
     /**
@@ -506,9 +506,8 @@ async function main(): Promise<void> {
                 name: displayName(artist),
             }));
         }
-        // MusicBrainz distinguishes a guest from an equal billing, and the dump flattens that
-        // distinction into this line: `feat.`, `duet with`, `vs.`. Keeping it means the
-        // distinction can be recovered later, properly, from the web service's join phrases.
+        // Dump credit line (`feat.`, `duet with`, `vs.`) is matching evidence, never display.
+        // The artist column is `artists` joined with commas.
         if (credited.length > 1 && match.artistCredit !== undefined) {
             resolved.credit = match.artistCredit;
         }

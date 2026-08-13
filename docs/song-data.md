@@ -656,22 +656,24 @@ differently from one song to the next (`Nicole Kidman and Ewan McGregor` on `Com
 `Nicole Kidman & Ewan McGregor` on `Elephant Love Medley`, identical ids behind both), and the
 page was handed a string to parse instead of artists to link.
 
-So the column is built from the credited artists' own canonical names. Song 4096 reads `2Pac,
-K-Ci & JoJo`, where the ampersand belongs to one duo's name rather than joining two artists —
-which is the whole reason the join has to come from the id list and not from punctuation. Every
-matched song carries its artists individually now, not only the collaborations.
+So the column is built from the credited artists' own canonical names, **comma separated**.
+Song 4096 reads `2Pac, K-Ci & JoJo`, where the ampersand belongs to one duo's name rather
+than joining two artists — which is the whole reason the join has to come from the id list
+and not from punctuation. Do not put `feat.`, `duet with`, `vs.`, or an ampersand between
+artists. Those are MusicBrainz credit-line join phrases, not how this catalogue names
+performers. Every matched song carries its artists individually now, not only the
+collaborations.
 
 Canonical names inside a collaboration come free with it: the venue's `Christina Aguilera, Lil
 Kim, Mya & Pink` are Lil' Kim, Mýa and P!nk.
 
-### The credit line is kept as data
+### The dump credit line is matching evidence, not display
 
-MusicBrainz does distinguish a guest from an equal billing, and the dump flattens that
-distinction into the credit line — `feat.`, `duet with`, `vs.`, and Swedish `med`. That is worth
-keeping and not worth guessing at from punctuation, so the line is stored beside the artists and
-never displayed. Recovering the distinction properly means asking the web service for artist
-credits, which returns each artist with its join phrase; that is a later enrichment pass, not a
-parsing problem.
+The dump still gives one flattened string per recording — `feat.`, `duet with`, `vs.`, Swedish
+`med`. That string is useful while matching (it is how featured artists get indexed, and how
+a lead-scoped search knows who was billed). It is stored beside the artists and **never
+shown**. The page always joins the named artists with commas. There is no later pass to
+recover join phrases for display.
 
 ### A name has to be known for these songs
 
@@ -759,9 +761,7 @@ Still to do:
    `Det är bara vi` (Carola, 2010 royal wedding) and `walking proud` (Ayumi Hamasaki) are real and
    live in overrides for exactly that reason. Traditional buckets (`Julsång` and the like) already
    use overrides with `categories` and an omitted artist; do not re-propose cover singers for them.
-10. **Ask the web service for artist credits**, so that a guest can be told from an equal billing by its own join
-    phrase rather than by parsing the flattened credit line the dump provides.
-11. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
+10. **Works, composers, and languages.** MusicBrainz stores lyrics language on **works**, not on the
     canonical recording dump — so a full works dump (or `pnpm fetch:works` against recording MBIDs) is
     required. Prefer a works dump when one is available; the API pass is correct but slow. Language
     already exists on songs from proposals (`fin` / `ita`) and from this pass where MusicBrainz has it.
@@ -773,13 +773,13 @@ Still to do:
     `src/lib/categories.ts` from known `from` values. Melodifestivalen and Eurovision are both
     tags when a Swedish winner actually competed at ESC — Melodifestivalen entries that did not
     represent Sweden stay Melodifestivalen-only.
-12. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
+11. **Corroborate published artist+title on a second source.** `pnpm corroborate:titles` checks each
     resolved song against **Deezer** and **Discogs** (Discogs is on
     [Wikipedia's list of online music databases](https://en.wikipedia.org/wiki/List_of_online_music_databases);
     Deezer stands in where iTunes Search is blocked from this environment). It writes
     `data/corroboration.json` and a review markdown for songs neither source agrees with —
     it never invents overrides. Use that list for open-web follow-up.
-13. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
+12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
 Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay

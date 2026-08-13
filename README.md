@@ -1,8 +1,8 @@
 # KKaraoke
 
 A karaoke song list built with [Astro](https://astro.build), rendered as a static site. The songs come from files
-committed to the repository — the venue's catalogue in `data/songs.json`, and the corrections in `data/resolved.json` —
-and are paginated 50 to a page.
+committed to the repository — the venue's catalogue in `data/songs.json`, the corrections in `data/resolved.json`, and
+the hand edits in `data/overrides.json` — and are browsed by decade, genre, film, language, and artist.
 
 ## Requirements
 
@@ -24,35 +24,51 @@ from a file in the repository, so builds need no database, no credentials and no
 ```
 /
 ├── data/
-│   ├── songs.json          # scraped catalogue, the venue's data verbatim
-│   ├── resolved.json       # the corrections the site applies, and a review queue
+│   ├── songs.json              # scraped catalogue, the venue's data verbatim
+│   ├── resolved.json           # the corrections the site applies; regenerable
+│   ├── overrides.json          # hand corrections; no script ever writes it
+│   ├── artist-names.json       # catalogue-scoped display names per artist MBID
+│   ├── proposals.json          # guesses put to the dump; applied only if MusicBrainz agrees
 │   ├── canonical-matches.json  # what the offline match found, per song
-│   ├── artists.json        # canonical names, sort names, aliases, genres
-│   ├── recordings.json     # earliest release date per title and artist
-│   └── pilot/              # a 50-artist trial of the resolution design
+│   ├── artists.json            # canonical names, sort names, aliases, genres
+│   ├── recordings.json         # earliest release date per title and artist
+│   ├── works.json              # work titles and lyrics language, by recording
+│   ├── review.md               # songs the resolver would not apply; regenerable
+│   └── pilot/                  # a 50-artist trial of the resolution design
 ├── docs/
-│   └── song-data.md        # design for correcting and enriching the catalogue
+│   └── song-data.md            # design for correcting and enriching the catalogue
 ├── public/
 │   └── favicon.svg
 ├── scripts/
-│   ├── fetch-songs.ts      # scrapes the catalogue from kkaraoke.se
-│   ├── match-canonical.ts  # offline match against the MusicBrainz dump
-│   ├── fetch-artists.ts    # artist names and genres, batched by id
-│   ├── fetch-recordings.ts # earliest release date per title and artist
-│   ├── build-resolved.ts   # composes the above into resolved.json
+│   ├── fetch-songs.ts          # scrapes the catalogue from kkaraoke.se
+│   ├── match-canonical.ts      # offline match against the MusicBrainz dump
+│   ├── fetch-artists.ts        # artist names and genres, batched by id
+│   ├── fetch-recordings.ts     # earliest release date per title and artist
+│   ├── fetch-works.ts          # work titles and languages, by recording MBID
+│   ├── corroborate-titles.ts   # second-source check against Deezer and Discogs
+│   ├── build-resolved.ts       # composes the above into resolved.json
 │   ├── collect-artist-evidence.ts
 │   ├── score-artist-verdicts.ts
 │   └── lib/
-│       └── musicbrainz.ts  # cached, rate-limited, batching API client
+│       └── musicbrainz.ts      # cached, rate-limited, batching API client
 ├── src/
 │   ├── lib/
-│   │   └── songs.ts        # composes the catalogue with its corrections
+│   │   ├── songs.ts            # composes the catalogue with its corrections
+│   │   ├── catalogue.ts        # browse tiles, collections, search index
+│   │   └── categories.ts       # Disney / Bond / Musical derived from `from`
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
-│   │   └── [...page].astro # paginated song list
+│   │   ├── index.astro         # featured browse tiles
+│   │   ├── browse/[facet].astro
+│   │   ├── collections/[kind]/[slug].astro
+│   │   ├── artists/
+│   │   ├── search.astro
+│   │   └── favorites.astro
+│   ├── components/
+│   ├── scripts/                # client: windowed lists, sort, favorites, navigation
 │   └── styles/
-│       └── global.css      # Tailwind entrypoint
+│       └── global.css          # Tailwind entrypoint
 └── astro.config.mjs
 ```
 
@@ -77,32 +93,48 @@ And these regenerate the corrections, rather than building the site. They are de
 [Correcting the catalogue](#correcting-the-catalogue), and designed in
 [`docs/song-data.md`](docs/song-data.md):
 
-| Command                 | Action                                                           |
-| :---------------------- | :--------------------------------------------------------------- |
-| `pnpm match:canonical`  | Matches the catalogue against a local MusicBrainz canonical dump |
-| `pnpm fetch:artists`    | Canonical artist names, sort names, aliases and genres, by id    |
-| `pnpm fetch:recordings` | Earliest release date per title and artist                       |
-| `pnpm build:resolved`   | Composes the above into `data/resolved.json`                     |
-| `pnpm collect:evidence` | Gathers MusicBrainz evidence for a list of artist strings        |
-| `pnpm score:verdicts`   | Scores a resolution run against `data/pilot/expectations.json`   |
+| Command                  | Action                                                           |
+| :----------------------- | :--------------------------------------------------------------- |
+| `pnpm match:canonical`   | Matches the catalogue against a local MusicBrainz canonical dump |
+| `pnpm fetch:artists`     | Canonical artist names, sort names, aliases and genres, by id    |
+| `pnpm fetch:recordings`  | Earliest release date per title and artist                       |
+| `pnpm fetch:works`       | Work titles and lyrics language, by recording MBID               |
+| `pnpm corroborate:titles` | Second-source check of published artist+title (Deezer, Discogs) |
+| `pnpm build:resolved`    | Composes the above into `data/resolved.json`                     |
+| `pnpm collect:evidence`  | Gathers MusicBrainz evidence for a list of artist strings        |
+| `pnpm score:verdicts`    | Scores a resolution run against `data/pilot/expectations.json`   |
 
 TypeScript is held at 6.x on purpose. `astro check` goes through the Astro language server, which needs TypeScript's
 programmatic compiler API, and the native compiler shipped in 7.0 does not expose it yet. Upgrading TypeScript to 7
 makes `pnpm check` fail outright, so it stays on 6 until
 [the Astro side lands support](https://github.com/withastro/roadmap/discussions/1321).
 
+## The site
+
+The home page is a short set of featured tiles (decades people actually sing, Swedish, Melodifestivalen, pop, rock,
+Disney). Tabs behind that browse the whole catalogue by decade, genre, category, film and musical, or language. Each
+tile opens a collection: a song list sorted A–Z, by artist, or by year.
+
+Large collections are windowed — the first eighty rows are in the HTML, the rest load as you scroll — so the page stays
+a document the browser can restore on back. Astro's `ClientRouter` handles that; the list is not a nested scroller.
+
+Search matches title, artist, film, category, genre, and punch-in number. Artist pages list every song that credits that
+performer, including collaborations. The artist column is those names, comma separated, each a link — not a MusicBrainz
+credit line with `feat.` or `&` between people. The same song under two punch-in numbers is one row that shows both.
+
+Favourites live in `localStorage` on this device. There is no login and no server to sync them.
+
 ## The song list
 
-`src/lib/songs.ts` is the only thing that reads the data files, and it composes two of them. `data/songs.json` is the
-venue's catalogue verbatim; `data/resolved.json` is what MusicBrainz says it should be. The `Song` and `Correction`
-interfaces are declared there rather than inferred from the JSON, so a change to either shape fails `pnpm check`
-instead of quietly reshaping the pages.
+`src/lib/songs.ts` is the only thing that reads the data files. `data/songs.json` is the venue's catalogue verbatim;
+`data/resolved.json` is what MusicBrainz says it should be; `data/overrides.json` wins over both. The `Song` and
+`Correction` interfaces are declared there rather than inferred from the JSON, so a change to either shape fails
+`pnpm check` instead of quietly reshaping the pages.
 
 Only corrections the resolver marked trustworthy are in `data/resolved.json`, so composing them is a straight overlay.
-The rest are listed under `review` in the same file, showing what the correction would have been, and the page keeps
-showing the venue's own strings until someone looks. Nothing in the pipeline writes to `data/songs.json`, and
-`data/resolved.json` is regenerable from scratch, so hand-authored decisions will go in a third file rather than into
-either of these.
+The rest are listed in `data/review.md`, showing what the correction would have been, and the page keeps showing the
+venue's own strings until someone looks. Nothing in the pipeline writes to `data/songs.json` or `data/overrides.json`.
+`data/resolved.json` is regenerable from scratch.
 
 `data/songs.json` is ordered by song id, because that keeps a re-scrape diffable, so the module sorts for display using
 Swedish collation — otherwise å, ä and ö sort beside a, a and o instead of after z. It sorts by the artist's MusicBrainz
@@ -138,12 +170,13 @@ in it. [docs/song-data.md](docs/song-data.md) is the design for correcting and e
 
 ## Correcting the catalogue
 
-Four steps produce `data/resolved.json`, and each is regenerable from the one before:
+Five steps produce `data/resolved.json`, and each is regenerable from the one before:
 
 ```shell
 pnpm match:canonical --csv canonical_musicbrainz_data.csv   # identity and titles, offline
 pnpm fetch:artists                                         # canonical names, sort names, genres
 pnpm fetch:recordings                                      # earliest release per title and artist
+pnpm fetch:works                                           # work titles and lyrics language
 pnpm build:resolved                                        # compose the above into resolved.json
 ```
 
@@ -151,7 +184,7 @@ The first step wants [the MusicBrainz canonical metadata dump](https://metabrain
 (CC0, ~2.3 GB compressed). It exists for exactly this problem — turning an artist string and a title into MBIDs — and it
 matches 89% of the catalogue in 90 seconds without a single request. That is the reason the pipeline starts offline.
 
-The other three go through the MusicBrainz web service, whose rate limit is per IP and therefore shared with whatever
+The lookups go through the MusicBrainz web service, whose rate limit is per IP and therefore shared with whatever
 else uses the same egress address. Two things make that survivable. Responses are cached under `.cache/`, outside the
 repository, so any run resumes where it left off and re-running costs nothing. And ids are batched into single queries —
 `arid:(id1 OR id2 OR …)` returns a hundred artists at a time, which is why the artist step is 39 requests rather than 1670.
@@ -159,6 +192,9 @@ repository, so any run resumes where it left off and re-running costs nothing. A
 `pnpm fetch:recordings` is the slow one, because a year cannot be asked for by id: see
 [docs/song-data.md](docs/song-data.md) for why the matched recording's own date is the wrong answer. It is resumable in
 the same way, and `--fill` skips what a previous pass already dated.
+
+`pnpm corroborate:titles` is not part of that chain. It checks published artist+title against Deezer and Discogs and
+writes a review list; it never invents overrides.
 
 ## Styling
 
