@@ -25,6 +25,9 @@ html {
     color-scheme: dark;
     background: var(--color-ink);
     color: var(--color-cream);
+    /* Astro’s fade on <html> otherwise names a generated id, and
+       ::view-transition-*(root) never matches the page crossfade. */
+    view-transition-name: root !important;
 }
 
 body {
@@ -167,12 +170,13 @@ textarea:focus-visible {
 }
 
 /*
-  Shared-element morphs (tile ↔ collection bar, title, Featured ↔ Categories
-  tiles) are required. Do not remove view-transition-name to fix a flash —
-  that was a regression. Named groups leave a hole in the root snapshot;
-  plus-lighter fills it with the other page instead of html’s near-black.
-  The blend reads a bit lighter mid-transition (Featured ↔ Categories too);
-  revisit that without dropping the morphs.
+  Shared-element morphs are required. Do not remove view-transition-name to
+  fix a flash. Named groups leave a hole in the root snapshot.
+
+  plus-lighter is the usual recipe so that hole is the other page, not html’s
+  near-black. It is additive, so the overlap can read lighter (Featured ↔
+  Categories too). Not a measured winner among blend modes — headless Chrome
+  does not composite those mix-blend-mode differences into screencast frames.
 */
 ::view-transition-old(root),
 ::view-transition-new(root) {
