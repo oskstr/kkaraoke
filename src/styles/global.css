@@ -185,6 +185,20 @@ textarea:focus-visible {
     width: auto;
 }
 
+/*
+  Artist ↔ list: one viewport crossfade. Named descendants (app-shell, sticky
+  collection chrome, tile titles) would otherwise snapshot separately — on back
+  the 80s bar flies up from its in-flow position while the list is already on
+  top of the fading artist page. !important beats Astro’s scope stylesheet.
+  html itself keeps its fade name; this selector is descendants only.
+*/
+html.vt-fade-only [data-astro-transition-scope],
+html.vt-fade-only .app-shell,
+html.vt-fade-only .collection-chrome,
+html.vt-fade-only .collection-title {
+    view-transition-name: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

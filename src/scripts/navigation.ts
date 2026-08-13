@@ -158,18 +158,30 @@ function onSongArtistPointerDown(event: Event): void {
 }
 
 function silenceNamedGroups(root: ParentNode, selector: string): void {
+    const doc = root instanceof Document ? root : root.ownerDocument;
     root.querySelectorAll<HTMLElement>(selector).forEach((el) => {
-        el.style.viewTransitionName = "none";
+        if (el === doc?.documentElement) return;
+        el.style.setProperty("view-transition-name", "none", "important");
     });
 }
 
-/** Artist pages fade; don't let collection chrome fly off as a shared element. */
-function silenceCollectionChrome(root: ParentNode): void {
-    silenceNamedGroups(root, "[data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title]");
+const FADE_ONLY_CLASS = "vt-fade-only";
+
+function isArtistDetailPath(pathname: string): boolean {
+    return artistSlugFromPath(pathname) !== undefined;
+}
+
+function artistRelatedNav(fromPath: string, toPath: string): boolean {
+    return isArtistDetailPath(fromPath) || isArtistDetailPath(toPath);
+}
+
+function setFadeOnly(doc: Document, on: boolean): void {
+    doc.documentElement.classList.toggle(FADE_ONLY_CLASS, on);
 }
 
 type PreparationEvent = Event & {
     direction?: "forward" | "back";
+    from?: URL;
     to?: URL;
 };
 
@@ -236,7 +248,7 @@ function onSearchCommit(event: Event): void {
     });
 }
 
-type SwapEvent = Event & { newDocument?: Document };
+type SwapEvent = Event & { newDocument?: Document; from?: URL; to?: URL };
 
 function linkPathname(link: HTMLAnchorElement): string {
     try {
@@ -281,19 +293,29 @@ function expandIncomingWindowedList(newDoc: Document): void {
 
 /** On back from a collection, only the matching incoming tile should morph. */
 function prepareIncomingDocument(event: Event): void {
-    const newDoc = (event as SwapEvent).newDocument;
+    const swap = event as SwapEvent;
+    const newDoc = swap.newDocument;
     if (!newDoc) return;
-    const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
-    const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
-    if (chromeName || titleName) {
-        scopeCollectionTileNames(newDoc, {
-            ...(chromeName ? { chrome: chromeName } : {}),
-            ...(titleName ? { title: titleName } : {}),
-        });
-    }
 
-    if (document.querySelector("[data-artist-title]")) {
-        silenceCollectionChrome(newDoc);
+    const fromPath = swap.from?.pathname ?? location.pathname;
+    const toPath = swap.to?.pathname ?? "";
+    const fadeOnly = artistRelatedNav(fromPath, toPath) || Boolean(document.querySelector("[data-artist-title]"));
+    setFadeOnly(newDoc, fadeOnly);
+
+    if (fadeOnly) {
+        silenceNamedGroups(
+            newDoc,
+            ".app-shell, [data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-astro-transition-scope]",
+        );
+    } else {
+        const chromeName = document.querySelector<HTMLElement>("[data-collection-chrome]")?.dataset.vtChrome;
+        const titleName = document.querySelector<HTMLElement>("[data-collection-title]")?.dataset.vtTitle;
+        if (chromeName || titleName) {
+            scopeCollectionTileNames(newDoc, {
+                ...(chromeName ? { chrome: chromeName } : {}),
+                ...(titleName ? { title: titleName } : {}),
+            });
+        }
     }
 
     if (lastNavDirection === "back") {
@@ -302,13 +324,11 @@ function prepareIncomingDocument(event: Event): void {
 }
 
 function clearScopedViewTransitionNames(): void {
-    document
-        .querySelectorAll<HTMLElement>(
-            "[data-vt-chrome], [data-vt-title], [data-vt-artist], [data-collection-chrome], [data-collection-title]",
-        )
-        .forEach((el) => {
-            el.style.removeProperty("view-transition-name");
-        });
+    document.documentElement.classList.remove(FADE_ONLY_CLASS);
+    document.querySelectorAll<HTMLElement>("[data-astro-transition-scope]").forEach((el) => {
+        if (el === document.documentElement) return;
+        el.style.removeProperty("view-transition-name");
+    });
 }
 
 let lastNavDirection: "forward" | "back" | null = null;
@@ -335,11 +355,16 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("astro:before-preparation", (event) => {
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
         const dest = (event as PreparationEvent).to?.pathname ?? "";
-        if (dest.startsWith("/collections/")) {
+        const fromPath = (event as PreparationEvent).from?.pathname ?? location.pathname;
+        const fadeOnly = artistRelatedNav(fromPath, dest);
+        setFadeOnly(document, fadeOnly);
+        if (fadeOnly) {
+            silenceNamedGroups(
+                document,
+                ".app-shell, [data-collection-chrome], [data-collection-title], [data-vt-chrome], [data-vt-title], [data-astro-transition-scope]",
+            );
+        } else if (dest.startsWith("/collections/")) {
             scopeCollectionTileNames(document, { href: dest });
-        }
-        if (artistSlugFromPath(dest)) {
-            silenceCollectionChrome(document);
         }
         if (!keepSearchInput(dest)) {
             searchInputEl()?.removeAttribute("data-astro-transition-persist");
