@@ -86,9 +86,9 @@ interface Correction {
     /** Ids only — present even on artist-only corrections that never built the named list. */
     artistMbids?: string[];
     /**
-     * Present when the resolver knew each credited artist by name. `artist` above is the
-     * release's credit line, which reads properly but is a single string; this is the same
-     * artists individually, with the ids needed to link each of them separately.
+     * Present when the resolver knew each credited artist by name. `artist` above is those
+     * names comma-separated for the column; this is the same artists individually, with the
+     * ids needed to link each of them separately. Not a MusicBrainz credit line (`feat.`).
      */
     artists?: { mbid: string; name: string }[];
 }
