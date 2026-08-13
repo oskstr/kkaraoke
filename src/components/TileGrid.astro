@@ -19,7 +19,7 @@ const { tiles, mode } = Astro.props;
                         "collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline",
                         tile.art && "has-art",
                     ]}
-                    style={collectionSurfaceStyle(tile.tint, tile.art)}
+                    style={collectionSurfaceStyle(tile.theme ?? tile.tint, tile.art)}
                     data-vt-chrome={tile.transitionName}
                     transition:name={tile.transitionName}
                     transition:animate="initial"

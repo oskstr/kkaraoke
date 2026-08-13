@@ -56,6 +56,8 @@ export interface BrowseTile {
     art?: string;
     /** Label colour on art tiles; cream unless the card wants something else. */
     ink?: string;
+    /** Status-bar / CSS fallback — top of the art, or the tint when there is none. */
+    theme?: string;
     kind: CollectionKind;
     key: string;
     /** Shared with the collection header for morphing view transitions. */
@@ -72,6 +74,8 @@ export interface CollectionRef {
     tint: string;
     art?: string;
     ink?: string;
+    /** Status-bar / `theme-color` — top of the art, or the tint when there is none. */
+    theme?: string;
     transitionName: string;
     titleTransitionName: string;
 }
@@ -121,11 +125,14 @@ export function tintFor(kind: CollectionKind, key: string): string {
     return TILE_COLORS[Math.abs(hash) % TILE_COLORS.length]!;
 }
 
-/** Cover art under `public/collections/`. Missing keys keep the hashed tint. */
-const COLLECTION_ART: Record<string, { src: string; ink?: string }> = {
-    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9" },
-    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8" },
+/** Cover art under `public/collections/`. `theme` is the colour at the top of the
+ *  image (iOS status bar / CSS fallback). Missing keys keep the hashed tint. */
+const COLLECTION_ART: Record<string, { src: string; ink?: string; theme?: string }> = {
+    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#0a0a09" },
+    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#0a0a09" },
 };
+
+export const DEFAULT_THEME_COLOR = "#0a0a09";
 
 export function artFor(kind: CollectionKind, key: string): string | undefined {
     return COLLECTION_ART[`${kind}:${key}`]?.src;
@@ -133,22 +140,26 @@ export function artFor(kind: CollectionKind, key: string): string | undefined {
 
 function collectionLook(kind: CollectionKind, key: string) {
     const entry = COLLECTION_ART[`${kind}:${key}`];
+    const tint = tintFor(kind, key);
     return {
-        tint: tintFor(kind, key),
+        tint,
+        theme: entry?.theme ?? (entry === undefined ? tint : DEFAULT_THEME_COLOR),
         ...(entry === undefined ? {} : { art: entry.src, ink: entry.ink ?? "#F7F2E9" }),
         ...collectionTransitionNames(kind, key),
     };
 }
 
-/** Inline style for a tile or collection bar — tint alone, or art with a text scrim. */
-export function collectionSurfaceStyle(tint: string, art?: string): string {
-    if (art === undefined) return `background:${tint}`;
+/** Inline style for a tile or collection bar — solid colour, or art with a text scrim.
+ *  `color` is the CSS background-color (and what iOS samples when theme-color is ignored).
+ */
+export function collectionSurfaceStyle(color: string, art?: string, position = "center"): string {
+    if (art === undefined) return `background:${color}`;
     const scrim = "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.2) 48%, rgba(10,10,9,0.18) 100%)";
     return [
-        `background-color:${tint}`,
+        `background-color:${color}`,
         `background-image:${scrim}, url("${art}")`,
         "background-size:cover",
-        "background-position:center",
+        `background-position:${position}`,
     ].join(";");
 }
 
