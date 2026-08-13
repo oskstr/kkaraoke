@@ -54,7 +54,7 @@ export interface BrowseTile {
     tint: string;
     /** Optional cover art; tile and collection bar share it so the morph matches. */
     art?: string;
-    /** Label colour on art tiles; cream unless the card wants something else. */
+    /** Label color on art tiles; cream unless the card wants something else. */
     ink?: string;
     /** Status-bar / CSS fallback — top of the art, or the tint when there is none. */
     theme?: string;
@@ -125,11 +125,11 @@ export function tintFor(kind: CollectionKind, key: string): string {
     return TILE_COLORS[Math.abs(hash) % TILE_COLORS.length]!;
 }
 
-/** Cover art under `public/collections/`. `theme` is the colour at the top of the
+/** Cover art under `public/collections/`. `theme` is the color at the top of the
  *  image (iOS status bar / CSS fallback). Missing keys keep the hashed tint. */
 const COLLECTION_ART: Record<string, { src: string; ink?: string; theme?: string }> = {
-    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#0a0a09" },
-    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#0a0a09" },
+    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#120b0b" },
+    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#190c0d" },
 };
 
 export const DEFAULT_THEME_COLOR = "#0a0a09";
@@ -149,12 +149,13 @@ function collectionLook(kind: CollectionKind, key: string) {
     };
 }
 
-/** Inline style for a tile or collection bar — solid colour, or art with a text scrim.
+/** Inline style for a tile or collection bar — solid color, or art with a text scrim.
  *  `color` is the CSS background-color (and what iOS samples when theme-color is ignored).
  */
 export function collectionSurfaceStyle(color: string, art?: string, position = "center"): string {
     if (art === undefined) return `background:${color}`;
-    const scrim = "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.2) 48%, rgba(10,10,9,0.18) 100%)";
+    // Transparent at the top so the status bar can match the art, not a black wash.
+    const scrim = "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.22) 55%, transparent 100%)";
     return [
         `background-color:${color}`,
         `background-image:${scrim}, url("${art}")`,
