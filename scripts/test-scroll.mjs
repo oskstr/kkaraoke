@@ -233,13 +233,16 @@ async function main() {
             (el) => el.getAttribute("data-year") === "2017" && el.querySelector('a[href="/artists/ed-sheeran"]'),
         );
         const link = row?.querySelector('a[href="/artists/ed-sheeran"]');
-        row?.scrollIntoView({ block: "center" });
+        if (row) {
+            const r = row.getBoundingClientRect();
+            window.scrollBy({ top: r.top - 140, left: 0, behavior: "instant" });
+        }
         const visible = [...document.querySelectorAll(".song-row")].find((el) => {
             const r = el.getBoundingClientRect();
             return r.top >= 90 && r.top < 280;
         });
         return {
-            ok: Boolean(link && row && yearOn),
+            ok: Boolean(link && row && yearOn && visible?.getAttribute("data-year") === "2017"),
             yearOn,
             y: window.scrollY,
             rows: document.querySelectorAll(".song-row").length,
