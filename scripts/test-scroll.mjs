@@ -211,7 +211,11 @@ async function main() {
     await page.goto(`${BASE}/collections/genre/pop`, { waitUntil: "networkidle" });
     await nativeClick(page, '[data-sort="year"]');
     const yearSetup = await page.evaluate(async () => {
-        for (let i = 0; i < 16; i++) {
+        for (let i = 0; i < 24; i++) {
+            const hit = [...document.querySelectorAll(".song-row")].find(
+                (el) => el.getAttribute("data-year") === "2017" && el.querySelector('a[href="/artists/ed-sheeran"]'),
+            );
+            if (hit) break;
             window.scrollTo(0, document.documentElement.scrollHeight);
             document.dispatchEvent(
                 new CustomEvent("kkaraoke:ensure-scroll-height", {
@@ -225,14 +229,11 @@ async function main() {
             await new Promise((r) => setTimeout(r, 40));
         }
         const yearOn = document.querySelector('[data-sort="year"]')?.getAttribute("aria-pressed") === "true";
-        const links = [...document.querySelectorAll('a[href="/artists/ed-sheeran"]')];
-        const link =
-            links.find((a) => {
-                const r = a.getBoundingClientRect();
-                return r.top > 80 && r.top < 700;
-            }) ?? links[links.length - 1];
-        link?.closest(".song-row")?.scrollIntoView({ block: "center" });
-        const row = link?.closest(".song-row");
+        const row = [...document.querySelectorAll(".song-row")].find(
+            (el) => el.getAttribute("data-year") === "2017" && el.querySelector('a[href="/artists/ed-sheeran"]'),
+        );
+        const link = row?.querySelector('a[href="/artists/ed-sheeran"]');
+        row?.scrollIntoView({ block: "center" });
         const visible = [...document.querySelectorAll(".song-row")].find((el) => {
             const r = el.getBoundingClientRect();
             return r.top >= 90 && r.top < 280;
@@ -245,6 +246,7 @@ async function main() {
             href: link?.getAttribute("href") ?? null,
             id: row?.getAttribute("data-id") ?? null,
             visibleYear: visible?.getAttribute("data-year") ?? row?.getAttribute("data-year") ?? null,
+            visibleId: visible?.getAttribute("data-id") ?? row?.getAttribute("data-id") ?? null,
         };
     });
     console.log("year setup", yearSetup);
@@ -275,9 +277,6 @@ async function main() {
             await Promise.all([page.waitForURL("**/collections/genre/pop**"), nativeClick(page, "a[data-smart-back]")]);
             await page.waitForTimeout(800);
             const backPop = await page.evaluate(() => {
-                const loadMore = document.querySelector("[data-load-more]");
-                const lr = loadMore?.getBoundingClientRect();
-                const loadMoreInView = Boolean(lr && lr.top < window.innerHeight && lr.bottom > 0);
                 const visible = [...document.querySelectorAll(".song-row")].find((el) => {
                     const r = el.getBoundingClientRect();
                     return r.top >= 90 && r.top < 280;
@@ -286,17 +285,18 @@ async function main() {
                     y: window.scrollY,
                     rows: document.querySelectorAll(".song-row").length,
                     yearOn: document.querySelector('[data-sort="year"]')?.getAttribute("aria-pressed") === "true",
-                    loadMoreInView,
                     visibleYear: visible?.getAttribute("data-year") ?? null,
+                    visibleId: visible?.getAttribute("data-id") ?? null,
                 };
             });
             console.log("back to pop", backPop, "from", yearSetup.y, "year", yearSetup.visibleYear);
+            const extraRows = backPop.rows - yearSetup.rows;
             const okPop =
                 backPop.yearOn &&
-                Math.abs(backPop.rows - yearSetup.rows) < 80 &&
-                !backPop.loadMoreInView &&
-                Math.abs(backPop.y - yearSetup.y) < 400 &&
-                backPop.visibleYear === yearSetup.visibleYear;
+                extraRows >= 0 &&
+                extraRows <= 80 &&
+                backPop.visibleYear === yearSetup.visibleYear &&
+                (yearSetup.visibleId == null || backPop.visibleId === yearSetup.visibleId);
             console.log(okPop ? "PASS pop year-sort restore" : "FAIL pop year-sort restore");
             if (!okPop) failed = true;
         }

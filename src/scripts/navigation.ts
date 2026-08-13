@@ -3,7 +3,7 @@
  *  that restore has a document tall enough to land on. */
 
 import { navigate } from "astro:transitions/client";
-import { ensureWindowedRows } from "./song-window";
+import { ensureWindowedRows, setWindowedRestoreLock } from "./song-window";
 import { applySavedSort } from "./sort-list";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
@@ -252,18 +252,26 @@ function expandWindowedListForBack(clearKeys = false): void {
         const opts = windowedRestoreOpts(location.pathname);
         if (!document.querySelector("[data-more-songs]") && !opts.untilId && !opts.minRows) {
             if (clearKeys && marker) clearReturnMarker();
+            setWindowedRestoreLock(false);
             return;
         }
 
+        setWindowedRestoreLock(true);
         const rowsBefore = document.querySelectorAll(".song-row").length;
         ensureWindowedRows(document, opts);
         const grew = document.querySelectorAll(".song-row").length > rowsBefore;
-        const resorted = applySavedSort(document, location.pathname);
+        applySavedSort(document, location.pathname);
         const stateY = historyScrollY();
 
-        // Astro already restored. Re-apply if we un-clamped a short document or re-sorted.
-        if ((grew || resorted) && stateY !== undefined) {
-            window.scrollTo({ top: stateY, left: 0, behavior: "instant" });
+        // Astro already restored. Re-apply if we un-clamped a short document.
+        // Skip if a later year-sort chunk already kept the visible song in view.
+        if (stateY !== undefined) {
+            const y = window.scrollY;
+            const stillAtRestore = Math.abs(y - stateY) < 80;
+            const clamped = y < stateY - 80;
+            if (grew || stillAtRestore || clamped) {
+                window.scrollTo({ top: stateY, left: 0, behavior: "instant" });
+            }
         }
 
         if (clearKeys && (!readReturnMarker() || marker)) {
@@ -271,6 +279,7 @@ function expandWindowedListForBack(clearKeys = false): void {
         }
     } finally {
         expandingForBack = false;
+        if (clearKeys) setWindowedRestoreLock(false);
     }
 }
 
@@ -412,6 +421,8 @@ if (!window.__kkaraokeNavInit) {
         markNavigated();
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
+        } else {
+            setWindowedRestoreLock(false);
         }
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);

@@ -73,6 +73,28 @@ function notYetRendered(song: MoreSong, seen: Set<string>): boolean {
 let observer: IntersectionObserver | null = null;
 let loadMoreFn: (() => void) | null = null;
 let listEl: Element | null = null;
+/** Pause infinite-scroll while back-navigation restores `scrollY`. */
+let restoreLock = false;
+
+function observeSentinel(): void {
+    const sentinel = document.querySelector("[data-infinite-sentinel]");
+    if (!observer || !sentinel || restoreLock) return;
+    observer.observe(sentinel);
+}
+
+/** Block extra chunks until Astro’s restored `scrollY` is applied. */
+export function setWindowedRestoreLock(locked: boolean): void {
+    restoreLock = locked;
+    if (locked) {
+        observer?.disconnect();
+        return;
+    }
+    if (observer) {
+        observeSentinel();
+        return;
+    }
+    bindInfiniteScroll();
+}
 
 const ROW_HEIGHT_ESTIMATE = 80;
 
@@ -151,7 +173,10 @@ export function ensureWindowedRows(
     if (doc === document) {
         if (json.isConnected) json.dataset.bound = "";
         bindInfiniteScroll();
-        applySavedSort(document, location.pathname);
+        // Restore path (`minRows`) must not shift `scrollY`; live fill must keep the visible song.
+        applySavedSort(document, location.pathname, {
+            preserveView: opts.minRows === undefined,
+        });
         window.dispatchEvent(new Event("kkaraoke:favorites"));
     }
 }
@@ -172,6 +197,7 @@ function bindInfiniteScroll(): void {
 
     // Already wired to this exact list node — keep the in-memory remaining queue.
     if (json.dataset.bound === "1" && loadMoreFn && listEl === list) {
+        observeSentinel();
         return;
     }
 
@@ -204,7 +230,7 @@ function bindInfiniteScroll(): void {
     listEl = list;
 
     const loadMore = () => {
-        if (remaining.length === 0) return;
+        if (restoreLock || remaining.length === 0) return;
         // Re-check DOM in case another pass inserted rows.
         const live = renderedSongIds(list);
         while (remaining.length > 0 && !notYetRendered(remaining[0]!, live)) {
@@ -226,7 +252,7 @@ function bindInfiniteScroll(): void {
         if (batch.length === 0) return;
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
         json.textContent = jsonForScript(remaining);
-        applySavedSort(document, location.pathname);
+        applySavedSort(document, location.pathname, { preserveView: true });
         window.dispatchEvent(new Event("kkaraoke:favorites"));
         if (remaining.length === 0) {
             observer?.disconnect();
@@ -243,7 +269,7 @@ function bindInfiniteScroll(): void {
         },
         { root: null, rootMargin: "240px 0px", threshold: 0 },
     );
-    observer.observe(sentinel);
+    observeSentinel();
 }
 
 function onLoadMoreClick(event: Event): void {

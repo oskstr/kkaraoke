@@ -53,15 +53,46 @@ export function paintSortTabs(root: ParentNode, sort: SortKey): void {
     });
 }
 
+type ViewAnchor = { id: string; top: number };
+
+function captureAnchor(list: HTMLElement): ViewAnchor | null {
+    if (list.ownerDocument !== document) return null;
+    const rows = [...list.querySelectorAll<HTMLElement>(".song-row")];
+    const row =
+        rows.find((el) => {
+            const top = el.getBoundingClientRect().top;
+            return top >= 80 && top < window.innerHeight - 80;
+        }) ??
+        rows.find((el) => {
+            const r = el.getBoundingClientRect();
+            return r.bottom > 80 && r.top < window.innerHeight;
+        });
+    const id = row?.dataset.id;
+    if (!row || !id) return null;
+    return { id, top: row.getBoundingClientRect().top };
+}
+
+function restoreAnchor(anchor: ViewAnchor | null): void {
+    if (!anchor) return;
+    const row = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(anchor.id)}"]`);
+    if (!row) return;
+    const delta = row.getBoundingClientRect().top - anchor.top;
+    if (Math.abs(delta) > 1) {
+        window.scrollBy({ top: delta, left: 0, behavior: "instant" });
+    }
+}
+
 /** Reorder a collection list to the saved sort. Returns true if the DOM order changed. */
-export function applySavedSort(root: ParentNode, path: string): boolean {
+export function applySavedSort(root: ParentNode, path: string, opts: { preserveView?: boolean } = {}): boolean {
     const sort = readSavedSort(path);
     const list = root.querySelector<HTMLElement>("[data-song-list]");
     const tabs = root.querySelector("[data-sort-tabs]");
     if (!list) return false;
     if (tabs) paintSortTabs(tabs, sort);
     if (sort === "az") return false;
+    const anchor = opts.preserveView === true ? captureAnchor(list) : null;
     sortSongList(list, sort);
+    restoreAnchor(anchor);
     return true;
 }
 
@@ -89,6 +120,6 @@ if (!window.__kkaraokeSortInit) {
     window.__kkaraokeSortInit = true;
     document.addEventListener("click", onSortClick);
     document.addEventListener("astro:page-load", () => {
-        applySavedSort(document, location.pathname);
+        applySavedSort(document, location.pathname, { preserveView: window.scrollY > 80 });
     });
 }
