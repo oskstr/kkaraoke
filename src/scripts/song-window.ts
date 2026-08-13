@@ -94,13 +94,14 @@ function parseAllSongs(json: HTMLElement): MoreSong[] {
 }
 
 function songsInSortOrder(songs: MoreSong[], sort: SortKey): MoreSong[] {
+    // Payload is stored A–Z; don’t pay for a no-op sort on that path.
+    if (sort === "az") return songs;
     return [...songs].sort((a, b) => compareSortable(sortableOf(a), sortableOf(b), sort));
 }
 
-function nextBatch(all: MoreSong[], seen: Set<string>, sort: SortKey, chunk: number): MoreSong[] {
-    return songsInSortOrder(all, sort)
-        .filter((song) => notYetRendered(song, seen))
-        .slice(0, chunk);
+function remainingInSortOrder(all: MoreSong[], list: Element, sort: SortKey): MoreSong[] {
+    const seen = renderedSongIds(list);
+    return songsInSortOrder(all, sort).filter((song) => notYetRendered(song, seen));
 }
 
 function matchedPrefixLength(list: Element, sorted: MoreSong[]): number {
@@ -253,19 +254,13 @@ export function ensureWindowedRows(
     const root = doc.querySelector("[data-more-songs-root]");
     const all = parseAllSongs(json);
     const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
-    const seen = renderedSongIds(list);
-    let remaining = all.filter((song) => notYetRendered(song, seen));
+    let remaining = remainingInSortOrder(all, list, "az");
 
     let guard = 0;
     while (remaining.length > 0 && guard < 80 && !listIsTallEnough(doc, list, opts)) {
-        const live = renderedSongIds(list);
-        const batch = nextBatch(all, live, "az", chunk);
+        const batch = remaining.splice(0, chunk);
         if (batch.length === 0) break;
-        for (const song of batch) {
-            for (const id of songIds(song)) live.add(String(id));
-        }
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
-        remaining = all.filter((song) => notYetRendered(song, live));
         guard += 1;
     }
 
@@ -311,11 +306,11 @@ function bindInfiniteScroll(): void {
         return;
     }
 
-    const seen = renderedSongIds(list);
-    let remainingCount = all.filter((song) => notYetRendered(song, seen)).length;
+    const sort = readSavedSort(location.pathname);
+    let remaining = remainingInSortOrder(all, list, sort);
     json.dataset.bound = "1";
 
-    if (remainingCount === 0) {
+    if (remaining.length === 0) {
         loadMoreFn = null;
         listEl = null;
         root.remove();
@@ -325,36 +320,49 @@ function bindInfiniteScroll(): void {
     const chunk = Math.max(1, Number(json.getAttribute("data-chunk") || "80"));
     listEl = list;
 
+    const stopLoader = () => {
+        observer?.disconnect();
+        observer = null;
+        loadMoreFn = null;
+        root.remove();
+    };
+
     const loadMore = () => {
-        if (restoreLock || remainingCount === 0) return;
-        const sort = readSavedSort(location.pathname);
-        const live = renderedSongIds(list);
-        const batch = nextBatch(all, live, sort, chunk);
+        if (restoreLock || remaining.length === 0) return false;
+        const batch = remaining.splice(0, chunk);
         if (batch.length === 0) {
-            observer?.disconnect();
-            observer = null;
-            loadMoreFn = null;
-            root.remove();
-            remainingCount = 0;
-            return;
+            stopLoader();
+            return false;
         }
         list.insertAdjacentHTML("beforeend", batch.map(rowHtml).join(""));
-        remainingCount = all.filter((song) => notYetRendered(song, renderedSongIds(list))).length;
         window.dispatchEvent(new Event("kkaraoke:favorites"));
-        if (remainingCount === 0) {
-            observer?.disconnect();
-            observer = null;
-            loadMoreFn = null;
-            root.remove();
+        if (remaining.length === 0) {
+            stopLoader();
+            return false;
+        }
+        return true;
+    };
+
+    const PREFETCH_PX = 1200;
+    const loadWhileNear = () => {
+        let n = 0;
+        while (!restoreLock && remaining.length > 0 && n < 3) {
+            if (n > 0) {
+                const top = sentinel.getBoundingClientRect().top;
+                if (top > window.innerHeight + PREFETCH_PX) break;
+            }
+            if (!loadMore()) break;
+            n += 1;
+            if (!sentinel.isConnected) break;
         }
     };
-    loadMoreFn = loadMore;
+    loadMoreFn = loadWhileNear;
 
     observer = new IntersectionObserver(
         (entries) => {
-            if (entries.some((e) => e.isIntersecting)) loadMore();
+            if (entries.some((e) => e.isIntersecting)) loadWhileNear();
         },
-        { root: null, rootMargin: "240px 0px", threshold: 0 },
+        { root: null, rootMargin: `${PREFETCH_PX}px 0px`, threshold: 0 },
     );
     observeSentinel();
 }
