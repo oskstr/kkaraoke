@@ -25,9 +25,6 @@ html {
     color-scheme: dark;
     background: var(--color-ink);
     color: var(--color-cream);
-    /* Astro’s fade on <html> otherwise names a generated id, and
-       ::view-transition-*(root) never matches the page crossfade. */
-    view-transition-name: root !important;
 }
 
 body {
@@ -174,9 +171,9 @@ textarea:focus-visible {
   fix a flash. Named groups leave a hole in the root snapshot.
 
   plus-lighter is the usual recipe so that hole is the other page, not html’s
-  near-black. It is additive, so the overlap can read lighter (Featured ↔
-  Categories too). Not a measured winner among blend modes — headless Chrome
-  does not composite those mix-blend-mode differences into screencast frames.
+  near-black. It is additive, so the overlap can read lighter. Layout keeps
+  html as transition:name="root" so these selectors match Astro’s page fade
+  (animate="fade" alone would mint a generated name instead).
 */
 ::view-transition-old(root),
 ::view-transition-new(root) {
