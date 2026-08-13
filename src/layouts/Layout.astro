@@ -7,27 +7,26 @@ import "../styles/global.css";
 interface Props {
     title: string;
     description?: string;
-    /** iOS Safari status-bar color. Dark-mode `theme-color` is ignored without a media query. */
-    themeColor?: string;
 }
 
-const {
-    title,
-    description = "Browse the karaoke catalogue by artist, decade, genre, and more.",
-    themeColor = DEFAULT_THEME_COLOR,
-} = Astro.props;
+const { title, description = "Browse the karaoke catalogue by artist, decade, genre, and more." } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="fade" style={`background-color:${themeColor}`}>
+<html lang="en" transition:animate="fade">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="color-scheme" content="dark" />
-        <meta name="theme-color" content={themeColor} media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content={themeColor} media="(prefers-color-scheme: light)" />
+        <!--
+          Bare theme-color (no media query): Android chrome. iOS dark-mode ignores
+          this and samples the page — which is what we want, including during
+          view transitions. A media-queried / per-page tag freezes a solid bar
+          and flashes when ClientRouter updates it.
+        -->
+        <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
@@ -51,14 +50,12 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
         <a href="#main" class="skip-link">Skip to content</a>
         <div
             class="app-shell mx-auto min-h-dvh w-full max-w-md bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
-            data-theme-color={themeColor}
             transition:name="app-shell"
             transition:animate="initial"
         >
             <slot />
         </div>
         <script>
-            import "../scripts/theme-color.ts";
             import "../scripts/favorites.ts";
             import "../scripts/navigation.ts";
             import "../scripts/song-window.ts";

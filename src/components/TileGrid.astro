@@ -20,7 +20,6 @@ const { tiles, mode } = Astro.props;
                         tile.art && "has-art",
                     ]}
                     style={collectionSurfaceStyle(tile.theme ?? tile.tint, tile.art)}
-                    data-theme-color={tile.theme ?? tile.tint}
                     data-vt-chrome={tile.transitionName}
                     transition:name={tile.transitionName}
                     transition:animate="initial"

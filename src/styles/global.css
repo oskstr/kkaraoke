@@ -32,7 +32,11 @@ body {
     min-height: 100dvh;
     font-family: var(--font-sans);
     background:
-        radial-gradient(120% 80% at 50% -10%, rgba(233, 180, 76, 0.08), transparent 55%),
+        radial-gradient(
+            120% 80% at 50% calc(env(safe-area-inset-top, 0px) + 5rem),
+            rgba(233, 180, 76, 0.08),
+            transparent 55%
+        ),
         radial-gradient(90% 60% at 100% 100%, rgba(63, 90, 107, 0.12), transparent 50%), var(--color-ink);
     -webkit-tap-highlight-color: transparent;
 }
