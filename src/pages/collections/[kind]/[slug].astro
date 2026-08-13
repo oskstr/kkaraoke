@@ -5,6 +5,7 @@ import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
     collectionKinds,
+    collectionSurfaceStyle,
     mergeSongVariants,
     resolveCollection,
     songsInCollection,
@@ -84,8 +85,8 @@ const backFallback: Record<CollectionKind, string> = {
       (back + title + sort) so the tile color expands into the top bar.
     -->
     <div
-        class="collection-chrome sticky top-0 z-20"
-        style={`background:${collection.tint};border-bottom:1px solid rgba(0,0,0,0.25)`}
+        class:list={["collection-chrome sticky top-0 z-20", collection.art && "has-art"]}
+        style={`${collectionSurfaceStyle(collection.tint, collection.art)};border-bottom:1px solid rgba(0,0,0,0.25)`}
         data-collection-chrome
         data-vt-chrome={collection.transitionName}
         transition:name={collection.transitionName}

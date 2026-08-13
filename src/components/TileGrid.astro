@@ -1,5 +1,5 @@
 ---
-import type { BrowseTile } from "../lib/catalogue";
+import { collectionSurfaceStyle, type BrowseTile } from "../lib/catalogue";
 
 interface Props {
     tiles: BrowseTile[];
@@ -15,8 +15,11 @@ const { tiles, mode } = Astro.props;
             {tiles.map((tile) => (
                 <a
                     href={tile.href}
-                    class="collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline"
-                    style={`background:${tile.tint}`}
+                    class:list={[
+                        "collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline",
+                        tile.art && "has-art",
+                    ]}
+                    style={collectionSurfaceStyle(tile.tint, tile.art)}
                     data-vt-chrome={tile.transitionName}
                     transition:name={tile.transitionName}
                     transition:animate="initial"

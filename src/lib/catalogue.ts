@@ -1,8 +1,4 @@
-import {
-    categoriesForSong,
-    categoriesLabel,
-    songBelongsToCategory,
-} from "./categories";
+import { categoriesForSong, categoriesLabel, songBelongsToCategory } from "./categories";
 import { getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
 
 export { categoriesForSong, categoriesLabel, songBelongsToCategory } from "./categories";
@@ -56,6 +52,8 @@ export interface BrowseTile {
     label: string;
     href: string;
     tint: string;
+    /** Optional cover art; tile and collection bar share it so the morph matches. */
+    art?: string;
     kind: CollectionKind;
     key: string;
     /** Shared with the collection header for morphing view transitions. */
@@ -70,6 +68,7 @@ export interface CollectionRef {
     key: string;
     label: string;
     tint: string;
+    art?: string;
     transitionName: string;
     titleTransitionName: string;
 }
@@ -119,6 +118,36 @@ export function tintFor(kind: CollectionKind, key: string): string {
     return TILE_COLORS[Math.abs(hash) % TILE_COLORS.length]!;
 }
 
+/** Cover art under `public/collections/`. Missing keys keep the hashed tint. */
+const COLLECTION_ART: Record<string, string> = {
+    "category:Birthday": "/collections/birthday.webp",
+};
+
+export function artFor(kind: CollectionKind, key: string): string | undefined {
+    return COLLECTION_ART[`${kind}:${key}`];
+}
+
+function collectionLook(kind: CollectionKind, key: string) {
+    const art = artFor(kind, key);
+    return {
+        tint: tintFor(kind, key),
+        ...(art === undefined ? {} : { art }),
+        ...collectionTransitionNames(kind, key),
+    };
+}
+
+/** Inline style for a tile or collection bar — tint alone, or art with a text scrim. */
+export function collectionSurfaceStyle(tint: string, art?: string): string {
+    if (art === undefined) return `background:${tint}`;
+    const scrim = "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.2) 48%, rgba(10,10,9,0.18) 100%)";
+    return [
+        `background-color:${tint}`,
+        `background-image:${scrim}, url("${art}")`,
+        "background-size:cover",
+        "background-position:center",
+    ].join(";");
+}
+
 function uniqueSorted(values: Iterable<string>): string[] {
     return [...new Set(values)].sort(collator.compare);
 }
@@ -165,20 +194,19 @@ export function featuredTiles(songs: Song[]): BrowseTile[] {
 
     return curated
         .filter((tile) => songsInCollection(songs, tile.kind, tile.key).length > 0)
-        .map((tile) => {
-            const names = collectionTransitionNames(tile.kind, tile.key);
-            return {
-                label: collectionLabel(tile.kind, tile.key),
-                href: collectionPath(tile.kind, tile.key),
-                tint: tintFor(tile.kind, tile.key),
-                kind: tile.kind,
-                key: tile.key,
-                ...names,
-            };
-        });
+        .map((tile) => ({
+            label: collectionLabel(tile.kind, tile.key),
+            href: collectionPath(tile.kind, tile.key),
+            kind: tile.kind,
+            key: tile.key,
+            ...collectionLook(tile.kind, tile.key),
+        }));
 }
 
-export function browseTiles(facet: FacetKey, songs: Song[]): {
+export function browseTiles(
+    facet: FacetKey,
+    songs: Song[],
+): {
     mode: "tiles" | "list";
     tiles: BrowseTile[];
 } {
@@ -201,11 +229,10 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
             tiles: decades.map((d) => ({
                 label: collectionLabel("decade", d),
                 href: collectionPath("decade", d),
-                tint: tintFor("decade", d),
                 kind: "decade" as const,
                 key: d,
                 large: true,
-                ...collectionTransitionNames("decade", d),
+                ...collectionLook("decade", d),
             })),
         };
     }
@@ -228,10 +255,9 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
             tiles: genres.map((g) => ({
                 label: collectionLabel("genre", g),
                 href: collectionPath("genre", g),
-                tint: tintFor("genre", g),
                 kind: "genre" as const,
                 key: g,
-                ...collectionTransitionNames("genre", g),
+                ...collectionLook("genre", g),
             })),
         };
     }
@@ -243,10 +269,9 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
             tiles: cats.map((c) => ({
                 label: collectionLabel("category", c),
                 href: collectionPath("category", c),
-                tint: tintFor("category", c),
                 kind: "category" as const,
                 key: c,
-                ...collectionTransitionNames("category", c),
+                ...collectionLook("category", c),
             })),
         };
     }
@@ -258,10 +283,9 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
             tiles: films.map((f) => ({
                 label: collectionLabel("from", f),
                 href: collectionPath("from", f),
-                tint: tintFor("from", f),
                 kind: "from" as const,
                 key: f,
-                ...collectionTransitionNames("from", f),
+                ...collectionLook("from", f),
             })),
         };
     }
@@ -274,10 +298,9 @@ export function browseTiles(facet: FacetKey, songs: Song[]): {
         tiles: langs.map((l) => ({
             label: collectionLabel("lang", l),
             href: collectionPath("lang", l),
-            tint: tintFor("lang", l),
             kind: "lang" as const,
             key: l,
-            ...collectionTransitionNames("lang", l),
+            ...collectionLook("lang", l),
         })),
     };
 }
@@ -325,8 +348,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
             kind,
             key: d,
             label: collectionLabel(kind, d),
-            tint: tintFor(kind, d),
-            ...collectionTransitionNames(kind, d),
+            ...collectionLook(kind, d),
         }));
     }
     if (kind === "genre") {
@@ -335,8 +357,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
             kind,
             key: g,
             label: collectionLabel(kind, g),
-            tint: tintFor(kind, g),
-            ...collectionTransitionNames(kind, g),
+            ...collectionLook(kind, g),
         }));
     }
     if (kind === "category") {
@@ -344,8 +365,7 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
             kind,
             key: c,
             label: collectionLabel(kind, c),
-            tint: tintFor(kind, c),
-            ...collectionTransitionNames(kind, c),
+            ...collectionLook(kind, c),
         }));
     }
     if (kind === "from") {
@@ -353,16 +373,14 @@ function collectionCandidates(kind: CollectionKind, songs: Song[]): CollectionRe
             kind,
             key: f,
             label: collectionLabel(kind, f),
-            tint: tintFor(kind, f),
-            ...collectionTransitionNames(kind, f),
+            ...collectionLook(kind, f),
         }));
     }
     return uniqueSorted(songs.map((s) => s.language).filter((l): l is string => Boolean(l))).map((l) => ({
         kind,
         key: l,
         label: collectionLabel(kind, l),
-        tint: tintFor(kind, l),
-        ...collectionTransitionNames(kind, l),
+        ...collectionLook(kind, l),
     }));
 }
 
@@ -379,9 +397,7 @@ export function sortSongs(songs: Song[], sort: SortKey): Song[] {
                 a.id - b.id,
         );
     }
-    return copy.sort(
-        (a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song) || a.id - b.id,
-    );
+    return copy.sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song) || a.id - b.id);
 }
 
 /**
@@ -420,9 +436,7 @@ export function mergeSongVariants(songs: Song[]): SongVariant[] {
     const merged: SongVariant[] = [];
     for (const group of groups.values()) {
         const ids = [...new Set(group.map((s) => s.id))].sort((a, b) => a - b);
-        const primary = group
-            .slice()
-            .sort((a, b) => enrichmentScore(b) - enrichmentScore(a) || a.id - b.id)[0]!;
+        const primary = group.slice().sort((a, b) => enrichmentScore(b) - enrichmentScore(a) || a.id - b.id)[0]!;
         merged.push({ ...primary, id: ids[0]!, ids });
     }
     return merged;
@@ -442,10 +456,7 @@ export function sortSongVariants(songs: SongVariant[], sort: SortKey): SongVaria
         );
     }
     return copy.sort(
-        (a, b) =>
-            (a.year ?? 9999) - (b.year ?? 9999) ||
-            collator.compare(a.song, b.song) ||
-            a.ids[0]! - b.ids[0]!,
+        (a, b) => (a.year ?? 9999) - (b.year ?? 9999) || collator.compare(a.song, b.song) || a.ids[0]! - b.ids[0]!,
     );
 }
 
