@@ -1,5 +1,6 @@
-/** In-app back + search focus. Scroll restore is Astro ClientRouter’s job
- *  (window scroll). We only help windowed song lists grow tall enough on back. */
+/** In-app back + search focus. Scroll position is Astro ClientRouter’s job
+ *  (`history.state.scrollY`). We only materialize windowed collection rows so
+ *  that restore has a document tall enough to land on. */
 
 import { navigate } from "astro:transitions/client";
 import { ensureWindowedRows } from "./song-window";
@@ -7,10 +8,10 @@ import { ensureWindowedRows } from "./song-window";
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
-/** Scroll/song restore for a specific list URL — must not apply on a later back. */
+/** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 
-type ReturnMarker = { path: string; y: number; songId?: string };
+type ReturnMarker = { path: string; songId: string };
 
 function sameOriginReferrer(): boolean {
     const ref = document.referrer;
@@ -138,7 +139,7 @@ function readReturnMarker(): ReturnMarker | undefined {
     if (!raw) return undefined;
     try {
         const parsed = JSON.parse(raw) as ReturnMarker;
-        if (typeof parsed?.path === "string" && typeof parsed.y === "number" && Number.isFinite(parsed.y)) {
+        if (typeof parsed?.path === "string" && typeof parsed.songId === "string" && parsed.songId !== "") {
             return parsed;
         }
     } catch {
@@ -157,7 +158,7 @@ function clearReturnMarker(): void {
     sessionStorage.removeItem(RETURN_MARKER_KEY);
 }
 
-/** Remember the list offset so back can restore it instead of snapping a row to the top. */
+/** Remember which windowed row to materialize on back. Astro keeps scrollY. */
 function onSongArtistPointerDown(event: Event): void {
     const target = event.target;
     if (!(target instanceof Element)) return;
@@ -165,11 +166,15 @@ function onSongArtistPointerDown(event: Event): void {
     if (!link || link.hasAttribute("data-astro-reload")) return;
     const path = linkPathname(link);
     if (artistSlugFromPath(path) === undefined) return;
+    if (!document.querySelector("[data-more-songs]")) return;
 
     const row = link.closest<HTMLElement>(".song-row");
-    const marker: ReturnMarker = { path: location.pathname, y: window.scrollY };
-    if (row?.dataset.id) marker.songId = row.dataset.id;
-    sessionStorage.setItem(RETURN_MARKER_KEY, JSON.stringify(marker));
+    const songId = row?.dataset.id;
+    if (!songId) return;
+    sessionStorage.setItem(
+        RETURN_MARKER_KEY,
+        JSON.stringify({ path: location.pathname, songId } satisfies ReturnMarker),
+    );
 }
 
 function silenceNamedGroups(root: ParentNode, selector: string): void {
@@ -201,46 +206,39 @@ type PreparationEvent = Event & {
 };
 
 /**
- * Windowed collections only ship the first chunk of rows. After Astro restores
- * window.scrollY, expand the list until that height (or return-song) exists.
- *
- * Reentrancy guard: ensure → bindInfiniteScroll used to emit list-ready which
- * called this again and blew the stack.
+ * Windowed collections only ship the first chunk of rows. Expand until Astro’s
+ * restored scrollY (or the originating song) exists. Do not set scroll ourselves
+ * unless we grew the document after ClientRouter already ran `scrollTo`.
  */
 let expandingForBack = false;
 
-function restoreWindowScroll(targetY: number): void {
-    if (!Number.isFinite(targetY) || targetY < 0) return;
-    if (Math.abs(window.scrollY - targetY) > 1) {
-        window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
-    }
+function historyScrollY(): number | undefined {
+    const y = (history.state as { scrollY?: number } | null)?.scrollY;
+    return typeof y === "number" && Number.isFinite(y) ? y : undefined;
 }
 
 function expandWindowedListForBack(clearKeys = false): void {
     if (expandingForBack) return;
     expandingForBack = true;
     try {
-        const state = history.state as { scrollY?: number } | null;
         const marker = returnMarkerFor(location.pathname);
-        const targetY = typeof state?.scrollY === "number" ? state.scrollY : (marker?.y ?? window.scrollY);
         const untilId = marker?.songId;
+        const stateY = historyScrollY();
+        if (!document.querySelector("[data-more-songs]") && !untilId) {
+            if (clearKeys && marker) clearReturnMarker();
+            return;
+        }
 
+        const rowsBefore = document.querySelectorAll(".song-row").length;
         ensureWindowedRows(document, {
-            minHeight: targetY + window.innerHeight + 80,
+            minHeight: (stateY ?? window.scrollY) + window.innerHeight + 80,
             ...(untilId ? { untilId } : {}),
         });
+        const grew = document.querySelectorAll(".song-row").length > rowsBefore;
 
-        restoreWindowScroll(targetY);
-
-        if (untilId) {
-            const el = document.querySelector<HTMLElement>(`.song-row[data-id="${CSS.escape(untilId)}"]`);
-            if (el) {
-                const r = el.getBoundingClientRect();
-                const fullyOff = r.bottom < 0 || r.top > window.innerHeight;
-                if (fullyOff) {
-                    el.scrollIntoView({ block: "nearest", behavior: "instant" });
-                }
-            }
+        // Astro already restored. Re-apply only if we un-clamped a short document.
+        if (grew && stateY !== undefined) {
+            window.scrollTo({ top: stateY, left: 0, behavior: "instant" });
         }
 
         if (clearKeys && (!readReturnMarker() || marker)) {
@@ -297,13 +295,12 @@ function scopeCollectionTileNames(root: ParentNode, keep: { href?: string; chrom
 
 function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
     if (!newDoc.querySelector("[data-more-songs]")) return;
-    const marker = returnMarkerFor(destPath);
-    const untilId = marker?.songId;
-    const stateY = (history.state as { scrollY?: number } | null)?.scrollY;
-    const targetY = typeof stateY === "number" ? stateY : (marker?.y ?? 0);
-    if (!untilId && targetY <= 0) return;
+    const untilId = returnMarkerFor(destPath)?.songId;
+    const stateY = historyScrollY();
+    const minHeight = stateY !== undefined && stateY > 0 ? stateY + 900 : undefined;
+    if (!untilId && minHeight === undefined) return;
     ensureWindowedRows(newDoc, {
-        minHeight: targetY + 900,
+        ...(minHeight !== undefined ? { minHeight } : {}),
         ...(untilId ? { untilId } : {}),
     });
 }
