@@ -9,6 +9,7 @@ import { applySavedSort, readSavedSort } from "./sort-list";
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
+const BRAND_PERSIST = "catalogue-brand";
 /** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 
@@ -55,6 +56,22 @@ function markNavigated(): void {
 
 function searchInputEl(): HTMLInputElement | null {
     return document.querySelector<HTMLInputElement>("[data-search-input]");
+}
+
+function brandMarkEl(): HTMLElement | null {
+    return document.querySelector("[data-brand-mark]");
+}
+
+function setHeaderPersist(on: boolean): void {
+    const input = searchInputEl();
+    const brand = brandMarkEl();
+    if (on) {
+        input?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
+        brand?.setAttribute("data-astro-transition-persist", BRAND_PERSIST);
+    } else {
+        input?.removeAttribute("data-astro-transition-persist");
+        brand?.removeAttribute("data-astro-transition-persist");
+    }
 }
 
 function focusSearchInput(): boolean {
@@ -461,11 +478,7 @@ if (!window.__kkaraokeNavInit) {
         } else if (dest.startsWith("/collections/")) {
             scopeCollectionTileNames(document, { href: dest });
         }
-        if (!keepSearchInput(dest)) {
-            searchInputEl()?.removeAttribute("data-astro-transition-persist");
-        } else {
-            searchInputEl()?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
-        }
+        setHeaderPersist(keepSearchInput(dest));
     });
 
     document.addEventListener("astro:after-swap", () => {

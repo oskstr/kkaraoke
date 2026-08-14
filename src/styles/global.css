@@ -190,6 +190,10 @@ html:active-view-transition [data-search-input] {
     animation-duration: 180ms;
 }
 
+::view-transition-group(brand) {
+    animation: none;
+}
+
 ::view-transition-group(.coll-chrome),
 ::view-transition-group(.coll-title) {
     animation-duration: 420ms;

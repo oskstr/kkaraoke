@@ -36,6 +36,7 @@ async function main() {
             launch: Boolean(document.querySelector("[data-search-launch]")),
             input: Boolean(input),
             persist: input?.getAttribute("data-astro-transition-persist"),
+            brandPersist: document.querySelector("[data-brand-mark]")?.getAttribute("data-astro-transition-persist"),
             reload: document.querySelector("[data-search-launch]")?.hasAttribute("data-astro-reload"),
             top: rect ? Math.round(rect.top) : null,
             left: rect ? Math.round(rect.left) : null,
@@ -45,6 +46,12 @@ async function main() {
     if (!home.launch || !home.input) fail("home search field missing");
     if (home.reload) fail("search launch should not full-reload");
     if (home.persist !== "catalogue-search-input") fail("search input should persist");
+    if (home.brandPersist !== "catalogue-brand") fail("brand mark should persist");
+
+    await page.evaluate(() => {
+        const brand = document.querySelector("[data-brand-mark]");
+        if (brand) brand.dataset.keep = "1";
+    });
 
     await page.evaluate(() => {
         window.__swapFocus = null;
@@ -82,6 +89,8 @@ async function main() {
             left: rect ? Math.round(rect.left) : null,
             hasCancel: Boolean(document.querySelector("a[data-smart-back]")),
             hasLaunch: Boolean(document.querySelector("[data-search-launch]")),
+            brandKept: document.querySelector("[data-brand-mark]")?.dataset.keep === "1",
+            brandPersist: document.querySelector("[data-brand-mark]")?.getAttribute("data-astro-transition-persist"),
         };
     });
     console.log("after-swap", swap);
@@ -91,6 +100,8 @@ async function main() {
     if (!settled.inputIsActive) fail(`search input not focused after transition: ${JSON.stringify(settled)}`);
     if (!settled.hasCancel) fail("search page missing Cancel");
     if (settled.hasLaunch) fail("search page should not be a search launch target");
+    if (!settled.brandKept) fail("brand mark was replaced instead of persisted");
+    if (settled.brandPersist !== "catalogue-brand") fail("brand persist dropped on search");
     // iOS caret overlay is painted at the focus-time rect; the field must not move.
     if (home.top !== settled.top) fail(`search field moved vertically: home=${home.top} search=${settled.top}`);
     if (home.left !== settled.left) fail(`search field moved horizontally: home=${home.left} search=${settled.left}`);
@@ -126,9 +137,11 @@ async function main() {
         const leftover = await page.evaluate(() => ({
             path: location.pathname,
             searchInput: Boolean(document.querySelector("[data-search-input]")),
+            brand: Boolean(document.querySelector("[data-brand-mark]")),
         }));
         console.log("artist page", leftover);
         if (leftover.searchInput) fail("persisted search input leaked onto artist page");
+        if (leftover.brand) fail("persisted brand mark leaked onto artist page");
     }
 
     // Cancel from a fresh search must return home without bouncing back.
