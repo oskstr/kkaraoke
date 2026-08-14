@@ -270,9 +270,9 @@ export function collectionSurfaceStyle(look: ArtSurface, position = "center top"
     if (look.art === undefined) return `background:${color}`;
     const ink = look.ink ?? "#F7F2E9";
     const parts = [
-        `--art-theme:${color}`,
+        `--art-theme-dark:${color}`,
         `--art-dark:url(${look.art})`,
-        `--art-ink:${ink}`,
+        `--art-ink-dark:${ink}`,
         `--art-position:${position}`,
     ];
     if (look.lightArt) {

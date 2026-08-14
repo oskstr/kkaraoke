@@ -211,6 +211,8 @@ html:active-view-transition [data-search-input] {
 .collection-tile.has-art,
 .collection-chrome.has-art {
     --art: var(--art-dark);
+    --art-theme: var(--art-theme-dark);
+    --art-ink: var(--art-ink-dark);
     --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%);
     --art-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
     background-color: var(--art-theme);
@@ -223,10 +225,13 @@ html:active-view-transition [data-search-input] {
     .collection-tile.has-art,
     .collection-chrome.has-art {
         --art: var(--art-light, var(--art-dark));
-        --art-theme: var(--art-theme-light, var(--art-theme));
-        --art-ink: var(--art-ink-light, var(--art-ink));
-        --art-scrim: var(--art-scrim-light, var(--art-scrim));
-        --art-shadow: var(--art-shadow-light, var(--art-shadow));
+        --art-theme: var(--art-theme-light, var(--art-theme-dark));
+        --art-ink: var(--art-ink-light, var(--art-ink-dark));
+        --art-scrim: var(
+            --art-scrim-light,
+            linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%)
+        );
+        --art-shadow: var(--art-shadow-light, 0 1px 10px rgba(0, 0, 0, 0.85));
     }
 }
 
