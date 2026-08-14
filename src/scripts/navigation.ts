@@ -334,6 +334,43 @@ function expandIncomingWindowedList(newDoc: Document, destPath: string): void {
     ensureWindowedRows(newDoc, { ...opts, path: destPath, sort: readSavedSort(destPath) });
 }
 
+const FACET_TABS = "[data-facet-tabs]";
+const FACET_TAB_PAD = 12;
+
+/** Horizontal offset of the browse tab strip. Kept across ClientRouter swaps. */
+let lastFacetTabScroll = 0;
+
+function facetTabsEl(root: ParentNode): HTMLElement | null {
+    return root.querySelector(FACET_TABS);
+}
+
+function rememberFacetTabScroll(): void {
+    const nav = facetTabsEl(document);
+    if (nav) lastFacetTabScroll = nav.scrollLeft;
+}
+
+function scrollFacetTabIntoView(nav: HTMLElement, tab: HTMLElement): void {
+    if (nav.clientWidth <= 0) return;
+    const navRect = nav.getBoundingClientRect();
+    const tabRect = tab.getBoundingClientRect();
+    if (tabRect.right > navRect.right - FACET_TAB_PAD) {
+        nav.scrollLeft += tabRect.right - navRect.right + FACET_TAB_PAD;
+    } else if (tabRect.left < navRect.left + FACET_TAB_PAD) {
+        nav.scrollLeft += tabRect.left - navRect.left - FACET_TAB_PAD;
+    }
+}
+
+/** Restore the tab strip’s scroll, then nudge so the selected tab is on screen. */
+function placeFacetTabs(root: ParentNode, restore = true): void {
+    const nav = facetTabsEl(root);
+    if (!nav) return;
+    if (restore) nav.scrollLeft = lastFacetTabScroll;
+    const active = nav.querySelector<HTMLElement>('[aria-current="page"]');
+    if (active) scrollFacetTabIntoView(nav, active);
+    // Incoming documents are not laid out yet — don't clobber the saved offset.
+    if (nav.clientWidth > 0) lastFacetTabScroll = nav.scrollLeft;
+}
+
 /** On back from a collection, only the matching incoming tile should morph. */
 function prepareIncomingDocument(event: Event): void {
     const swap = event as SwapEvent;
@@ -365,6 +402,7 @@ function prepareIncomingDocument(event: Event): void {
     if (lastNavDirection === "back") {
         expandIncomingWindowedList(newDoc, toPath);
     }
+    placeFacetTabs(newDoc);
 }
 
 function clearScopedViewTransitionNames(): void {
@@ -397,6 +435,7 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("astro:before-swap", prepareIncomingDocument);
 
     document.addEventListener("astro:before-preparation", (event) => {
+        rememberFacetTabScroll();
         lastNavDirection = (event as PreparationEvent).direction === "back" ? "back" : "forward";
         const dest = (event as PreparationEvent).to?.pathname ?? "";
         const fromPath = (event as PreparationEvent).from?.pathname ?? location.pathname;
@@ -418,6 +457,7 @@ if (!window.__kkaraokeNavInit) {
     });
 
     document.addEventListener("astro:after-swap", () => {
+        placeFacetTabs(document);
         markNavigated();
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
@@ -433,6 +473,10 @@ if (!window.__kkaraokeNavInit) {
     });
 
     document.addEventListener("astro:page-load", () => {
+        placeFacetTabs(document, false);
+        requestAnimationFrame(() => {
+            placeFacetTabs(document, false);
+        });
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
             requestAnimationFrame(() => {
@@ -447,6 +491,8 @@ if (!window.__kkaraokeNavInit) {
             void scheduleSearchFocus();
         }
     });
+
+    placeFacetTabs(document);
 
     // Do not expand on kkaraoke:list-ready — bindInfiniteScroll used to emit that
     // from inside ensure-scroll-height, which would recurse into expand again.
