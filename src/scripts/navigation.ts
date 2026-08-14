@@ -92,6 +92,7 @@ function syncBrandCurrent(): void {
 }
 
 function focusSearchInput(): boolean {
+    if (searchKeyCommitted) return false;
     if (!location.pathname.startsWith("/search")) return false;
     const input = searchInputEl();
     if (!input) return false;
@@ -129,6 +130,7 @@ async function scheduleSearchFocus(): Promise<void> {
 }
 
 function wantsSearchFocus(): boolean {
+    if (searchKeyCommitted) return false;
     if (!location.pathname.startsWith("/search")) return false;
     if (sessionStorage.getItem(FOCUS_SEARCH_KEY) === "1") return true;
     // Don't pop the keyboard when returning to a previous search.
@@ -147,6 +149,8 @@ function resetBrowseSearchInput(): void {
 }
 
 let openingSearch = false;
+/** Search/Enter committed — don't steal focus back and reopen the keyboard. */
+let searchKeyCommitted = false;
 
 function keepSearchInput(pathname: string): boolean {
     return pathname.startsWith("/search") || pathname === "/" || pathname.startsWith("/browse");
@@ -166,6 +170,7 @@ function openSearchFromBrowse(event: Event): void {
     // Mark before focus() — focusin fires synchronously and would otherwise
     // start a second navigate().
     openingSearch = true;
+    searchKeyCommitted = false;
     sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
 
     const input = launch.querySelector<HTMLInputElement>("[data-search-input]") ?? searchInputEl();
@@ -329,14 +334,20 @@ function expandWindowedListForBack(clearKeys = false): void {
     }
 }
 
+/**
+ * Search/Enter commits the query. The spec only labels that key; the keyboard
+ * stays up while the field is focused, so a live-search page has to blur.
+ */
 function onSearchCommit(event: Event): void {
     const target = event.target;
     if (!(target instanceof HTMLInputElement) || !target.hasAttribute("data-search-input")) return;
     if (event instanceof KeyboardEvent && event.key !== "Enter") return;
     event.preventDefault();
+    searchKeyCommitted = true;
+    sessionStorage.removeItem(FOCUS_SEARCH_KEY);
+    target.blur();
     if (location.pathname.startsWith("/search") || openingSearch) return;
     openingSearch = true;
-    sessionStorage.setItem(FOCUS_SEARCH_KEY, "1");
     void navigate("/search").finally(() => {
         openingSearch = false;
     });

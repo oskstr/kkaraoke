@@ -123,6 +123,25 @@ async function main() {
     if (!typed.active) fail("input lost focus while typing");
     if (!typed.hasColdplay) fail("search results did not update");
 
+    // Search/Enter is a commit: drop focus so the mobile keyboard can close.
+    await page.keyboard.press("Enter");
+    await page.waitForTimeout(400);
+    const afterEnter = await page.evaluate(() => {
+        const input = document.querySelector("[data-search-input]");
+        const text = document.body.innerText;
+        return {
+            path: location.pathname,
+            value: input instanceof HTMLInputElement ? input.value : null,
+            active: document.activeElement === input,
+            hasColdplay: /coldplay/i.test(text),
+        };
+    });
+    console.log("after enter", afterEnter);
+    if (afterEnter.path !== "/search") fail(`Enter left search: ${afterEnter.path}`);
+    if (afterEnter.value !== "coldplay") fail(`Enter cleared the query: ${afterEnter.value}`);
+    if (afterEnter.active) fail("search input stayed focused after Search/Enter");
+    if (!afterEnter.hasColdplay) fail("search results gone after Enter");
+
     // Search → artist page must not leave a persisted input behind.
     const artistHref = await page.evaluate(() => {
         const link = document.querySelector('a[href^="/artists/"]');
