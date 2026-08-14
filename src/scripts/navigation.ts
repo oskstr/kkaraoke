@@ -67,6 +67,15 @@ function focusSearchInput(): boolean {
     return document.activeElement === input;
 }
 
+/** Nudge WebKit to push a new caret rect after persist reparents the input. */
+function refreshSearchCaret(): void {
+    const input = searchInputEl();
+    if (!input || document.activeElement !== input) return;
+    const start = input.selectionStart ?? 0;
+    const end = input.selectionEnd ?? 0;
+    input.setSelectionRange(start, end);
+}
+
 async function waitForViewTransitions(): Promise<void> {
     const animations = document.getAnimations?.() ?? [];
     const pending = animations.filter((animation) => animation.playState !== "finished");
@@ -82,6 +91,7 @@ async function scheduleSearchFocus(): Promise<void> {
     });
     await waitForViewTransitions();
     focusSearchInput();
+    refreshSearchCaret();
 }
 
 function wantsSearchFocus(): boolean {
@@ -108,7 +118,9 @@ function keepSearchInput(pathname: string): boolean {
     return pathname.startsWith("/search") || pathname === "/" || pathname.startsWith("/browse");
 }
 
-/** Open /search from the browse field without dropping caret/keyboard. */
+/** Open /search from the browse field without dropping caret/keyboard.
+ *  The field itself must not move: iOS Safari's caret overlay stays at the
+ *  focus-time rect, even when the persisted <input> is reparented. */
 function openSearchFromBrowse(event: Event): void {
     if (location.pathname.startsWith("/search") || openingSearch) return;
     const target = event.target;
