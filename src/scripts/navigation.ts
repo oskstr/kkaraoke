@@ -1,6 +1,7 @@
-/** In-app back + search focus. Scroll position is Astro ClientRouter’s job
- *  (`history.state.scrollY`). We only materialize windowed collection rows so
- *  that restore has a document tall enough to land on. */
+/** Search focus, windowed back-restore, and the brand home link.
+ *  Scroll position is Astro ClientRouter’s job (`history.state.scrollY`).
+ *  We only materialize windowed collection rows so that restore has a
+ *  document tall enough to land on. */
 
 import { navigate } from "astro:transitions/client";
 import { ensureWindowedRows, setWindowedRestoreLock } from "./song-window";
@@ -9,7 +10,6 @@ import { applySavedSort, readSavedSort } from "./sort-list";
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
-const BRAND_PERSIST = "catalogue-brand";
 /** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 
@@ -58,19 +58,36 @@ function searchInputEl(): HTMLInputElement | null {
     return document.querySelector<HTMLInputElement>("[data-search-input]");
 }
 
-function brandMarkEl(): HTMLElement | null {
-    return document.querySelector("[data-brand-mark]");
-}
-
-function setHeaderPersist(on: boolean): void {
+function setSearchPersist(on: boolean): void {
     const input = searchInputEl();
-    const brand = brandMarkEl();
     if (on) {
         input?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
-        brand?.setAttribute("data-astro-transition-persist", BRAND_PERSIST);
     } else {
         input?.removeAttribute("data-astro-transition-persist");
-        brand?.removeAttribute("data-astro-transition-persist");
+    }
+}
+
+/** Logo always goes to `/`. Do not swap if we are already there. */
+function onBrandHomeClick(event: MouseEvent): void {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const link = target.closest<HTMLAnchorElement>("a[data-brand-mark]");
+    if (!link) return;
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+    }
+    if (location.pathname === "/") {
+        event.preventDefault();
+    }
+}
+
+function syncBrandCurrent(): void {
+    const brand = document.querySelector("[data-brand-mark]");
+    if (!(brand instanceof HTMLElement)) return;
+    if (location.pathname === "/") {
+        brand.setAttribute("aria-current", "page");
+    } else {
+        brand.removeAttribute("aria-current");
     }
 }
 
@@ -453,6 +470,7 @@ declare global {
 if (!window.__kkaraokeNavInit) {
     window.__kkaraokeNavInit = true;
     document.addEventListener("click", onSmartBackClick);
+    document.addEventListener("click", onBrandHomeClick);
     document.addEventListener("keydown", onSearchCommit);
     document.addEventListener("search", onSearchCommit);
     // focusin: keyboard / label activation. pointerdown: start the fetch as
@@ -478,12 +496,13 @@ if (!window.__kkaraokeNavInit) {
         } else if (dest.startsWith("/collections/")) {
             scopeCollectionTileNames(document, { href: dest });
         }
-        setHeaderPersist(keepSearchInput(dest));
+        setSearchPersist(keepSearchInput(dest));
     });
 
     document.addEventListener("astro:after-swap", () => {
         placeFacetTabs(document);
         markNavigated();
+        syncBrandCurrent();
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
         } else {
@@ -499,6 +518,7 @@ if (!window.__kkaraokeNavInit) {
 
     document.addEventListener("astro:page-load", () => {
         placeFacetTabs(document, false);
+        syncBrandCurrent();
         requestAnimationFrame(() => {
             placeFacetTabs(document, false);
         });
@@ -518,6 +538,7 @@ if (!window.__kkaraokeNavInit) {
     });
 
     placeFacetTabs(document);
+    syncBrandCurrent();
 
     // Do not expand on kkaraoke:list-ready — bindInfiniteScroll used to emit that
     // from inside ensure-scroll-height, which would recurse into expand again.

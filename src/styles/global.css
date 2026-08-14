@@ -161,6 +161,10 @@ html:active-view-transition [data-search-input] {
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
 }
 
+.collection-chrome.has-art [data-brand-mark] {
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.85));
+}
+
 .collection-tile,
 .collection-chrome {
     view-transition-class: coll-chrome;

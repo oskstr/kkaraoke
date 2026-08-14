@@ -68,8 +68,7 @@ async function scenarioA(page, errors) {
     const setup = await page.evaluate(() => {
         const rows = [...document.querySelectorAll(".song-row")];
         const fRow = rows.find((row) => {
-            const title =
-                row.querySelector(".text-cream, [class*='text-[15']")?.textContent?.trim() ?? "";
+            const title = row.querySelector(".text-cream, [class*='text-[15']")?.textContent?.trim() ?? "";
             return /^f/i.test(title);
         });
         if (!fRow) return { ok: false, reason: "no F-title row", rows: rows.length };
@@ -96,7 +95,7 @@ async function scenarioA(page, errors) {
     });
     details.push(`setup: ${JSON.stringify(setup)}`);
     if (!setup.ok) {
-        return { name: "a) Rock genre scroll / artist / smart-back / A–Z", ok: false, details, errors: [...errors] };
+        return { name: "a) Rock genre scroll / artist / back / A–Z", ok: false, details, errors: [...errors] };
     }
 
     await Promise.all([
@@ -106,17 +105,12 @@ async function scenarioA(page, errors) {
     await page.waitForTimeout(400);
     details.push(`navigated to artist: ${page.url()}`);
 
-    await Promise.all([
-        page.waitForURL("**/collections/genre/rock**"),
-        nativeClick(page, "a[data-smart-back]"),
-    ]);
+    await Promise.all([page.waitForURL("**/collections/genre/rock**"), page.goBack()]);
     await page.waitForTimeout(800);
 
     const afterBack = await page.evaluate(() => {
         const rows = [...document.querySelectorAll(".song-row")];
-        const titles = rows.map(
-            (row) => row.querySelector(".text-cream, [class*='15.5']")?.textContent?.trim() ?? "",
-        );
+        const titles = rows.map((row) => row.querySelector(".text-cream, [class*='15.5']")?.textContent?.trim() ?? "");
         const ids = rows.map((r) => r.getAttribute("data-id"));
         return { titles, ids, y: window.scrollY, rows: rows.length };
     });
@@ -135,17 +129,13 @@ async function scenarioA(page, errors) {
 
     const afterMore = await page.evaluate(() => {
         const rows = [...document.querySelectorAll(".song-row")];
-        const titles = rows.map(
-            (row) => row.querySelector(".text-cream, [class*='15.5']")?.textContent?.trim() ?? "",
-        );
+        const titles = rows.map((row) => row.querySelector(".text-cream, [class*='15.5']")?.textContent?.trim() ?? "");
         const ids = rows.map((r) => r.getAttribute("data-id"));
         return { titles, ids, rows: rows.length };
     });
     const order2 = checkAzOrder(afterMore.titles);
     const dups2 = checkDuplicateIds(afterMore.ids);
-    details.push(
-        `after more: rows=${afterMore.rows} first="${afterMore.titles[0]}" last="${afterMore.titles.at(-1)}"`,
-    );
+    details.push(`after more: rows=${afterMore.rows} first="${afterMore.titles[0]}" last="${afterMore.titles.at(-1)}"`);
     if (order2.regression >= 0) {
         details.push(`A–Z regression after more @${order2.regression}: "${order2.prev}" > "${order2.next}"`);
     }
@@ -163,7 +153,7 @@ async function scenarioA(page, errors) {
     }
 
     return {
-        name: "a) Rock genre scroll / artist / smart-back / A–Z + no dup ids",
+        name: "a) Rock genre scroll / artist / back / A–Z + no dup ids",
         ok,
         details,
         errors: [...errors],
@@ -192,7 +182,11 @@ async function scenarioB(page, errors) {
         }
         const row = document.querySelector('.song-row[data-id="3345"]');
         if (!row) {
-            return { ok: false, reason: "Say Say Say (3345) missing", rows: document.querySelectorAll(".song-row").length };
+            return {
+                ok: false,
+                reason: "Say Say Say (3345) missing",
+                rows: document.querySelectorAll(".song-row").length,
+            };
         }
         const top = row.getBoundingClientRect().top + window.scrollY;
         window.scrollTo(0, top);
@@ -215,10 +209,7 @@ async function scenarioB(page, errors) {
     await page.waitForTimeout(400);
     details.push(`on artist: ${page.url()}`);
 
-    await Promise.all([
-        page.waitForURL("**/collections/genre/pop-rock**"),
-        nativeClick(page, "a[data-smart-back]"),
-    ]);
+    await Promise.all([page.waitForURL("**/collections/genre/pop-rock**"), page.goBack()]);
     await page.waitForTimeout(900);
 
     const after = await page.evaluate(() => {
@@ -299,9 +290,7 @@ async function scenarioD(page, errors) {
             const r = a.getBoundingClientRect();
             return r.top > 120 && r.top < 600 && a.hasAttribute("data-astro-reload");
         });
-        return link
-            ? { href: link.getAttribute("href"), hasReload: link.hasAttribute("data-astro-reload") }
-            : null;
+        return link ? { href: link.getAttribute("href"), hasReload: link.hasAttribute("data-astro-reload") } : null;
     });
     details.push(`click target: ${JSON.stringify(mid)}`);
     if (!mid?.href) {
@@ -312,7 +301,7 @@ async function scenarioD(page, errors) {
     await page.waitForTimeout(400);
     details.push(`on artist: ${page.url()}`);
 
-    await Promise.all([page.waitForURL("**/artists"), nativeClick(page, "a[data-smart-back]")]);
+    await Promise.all([page.waitForURL("**/artists"), page.goBack()]);
     await page.waitForTimeout(700);
 
     const after = await page.evaluate(() => ({
@@ -333,11 +322,7 @@ async function scenarioD(page, errors) {
 
 async function scenarioE(page, errors) {
     const details = [];
-    const routes = [
-        `${BASE}/browse/genres`,
-        `${BASE}/collections/genre/rock`,
-        `${BASE}/artists/coldplay`,
-    ];
+    const routes = [`${BASE}/browse/genres`, `${BASE}/collections/genre/rock`, `${BASE}/artists/coldplay`];
 
     let crashed = false;
     let lastUrl = "";

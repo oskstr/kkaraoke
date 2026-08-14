@@ -87,7 +87,7 @@ async function main() {
             persist: input?.getAttribute("data-astro-transition-persist"),
             top: rect ? Math.round(rect.top) : null,
             left: rect ? Math.round(rect.left) : null,
-            hasCancel: Boolean(document.querySelector("a[data-smart-back]")),
+            hasCancel: Boolean(document.querySelector("[data-search-cancel]")),
             hasLaunch: Boolean(document.querySelector("[data-search-launch]")),
             brandKept: document.querySelector("[data-brand-mark]")?.dataset.keep === "1",
             brandPersist: document.querySelector("[data-brand-mark]")?.getAttribute("data-astro-transition-persist"),
@@ -138,10 +138,25 @@ async function main() {
             path: location.pathname,
             searchInput: Boolean(document.querySelector("[data-search-input]")),
             brand: Boolean(document.querySelector("[data-brand-mark]")),
+            brandKept: document.querySelector("[data-brand-mark]")?.dataset.keep === "1",
+            brandPersist: document.querySelector("[data-brand-mark]")?.getAttribute("data-astro-transition-persist"),
         }));
         console.log("artist page", leftover);
         if (leftover.searchInput) fail("persisted search input leaked onto artist page");
-        if (leftover.brand) fail("persisted brand mark leaked onto artist page");
+        if (!leftover.brand) fail("artist page missing brand mark");
+        if (!leftover.brandKept) fail("brand mark was replaced instead of persisted onto artist page");
+        if (leftover.brandPersist !== "catalogue-brand") fail("brand persist dropped on artist page");
+
+        await page.click("[data-brand-mark]");
+        await page.waitForURL((url) => url.pathname === "/", { timeout: 15000 });
+        await page.waitForTimeout(300);
+        const afterBrand = await page.evaluate(() => ({
+            path: location.pathname,
+            brandCurrent: document.querySelector("[data-brand-mark]")?.getAttribute("aria-current"),
+        }));
+        console.log("brand home", afterBrand);
+        if (afterBrand.path !== "/") fail(`brand mark did not return home: ${afterBrand.path}`);
+        if (afterBrand.brandCurrent !== "page") fail("home brand mark should be the current page");
     }
 
     // Cancel from a fresh search must return home without bouncing back.
@@ -149,7 +164,7 @@ async function main() {
     await page.click("[data-search-launch]");
     await page.waitForURL("**/search", { timeout: 15000 });
     await page.keyboard.type("beatles");
-    await page.click("a[data-smart-back]");
+    await page.click("[data-search-cancel]");
     await page.waitForURL((url) => url.pathname === "/", { timeout: 15000 });
     await page.waitForTimeout(400);
     const afterCancel = await page.evaluate(() => {

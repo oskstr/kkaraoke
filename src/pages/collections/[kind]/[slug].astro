@@ -1,6 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import BackLink from "../../../components/BackLink.astro";
+import BrandMark from "../../../components/BrandMark.astro";
 import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
@@ -69,20 +69,12 @@ const allSongs = rows.map((song) => {
         artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
     };
 });
-
-const backFallback: Record<CollectionKind, string> = {
-    decade: "/browse/decades",
-    genre: "/browse/genres",
-    category: "/browse/categories",
-    from: "/browse/films",
-    lang: "/browse/languages",
-};
 ---
 
 <Layout title={`${collection.label} · kkaraoke`}>
     <!--
       One shared-element target for the tile morph: the whole tinted chrome
-      (back + title + sort) so the tile color expands into the top bar.
+      (brand + title + sort) so the tile color expands into the top bar.
     -->
     <div
         class:list={["collection-chrome sticky top-0 z-20", collection.art && "has-art"]}
@@ -93,7 +85,7 @@ const backFallback: Record<CollectionKind, string> = {
         transition:animate="initial"
     >
         <header class="px-[18px] pt-[22px] pb-0">
-            <BackLink href={backFallback[collection.kind]} label="← BACK" light />
+            <BrandMark />
             <h1
                 class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty"
                 style={`color:${collection.ink ?? "#FCFAF6"}`}
