@@ -132,6 +132,11 @@ textarea:focus-visible {
     outline: none;
 }
 
+/* Don't flash the iOS caret at the browse rect while the page swap settles. */
+html:active-view-transition [data-search-input] {
+    caret-color: transparent;
+}
+
 #main:focus {
     outline: none;
 }
@@ -183,6 +188,10 @@ textarea:focus-visible {
 
 ::view-transition-group(*) {
     animation-duration: 180ms;
+}
+
+::view-transition-group(brand) {
+    animation: none;
 }
 
 ::view-transition-group(.coll-chrome),

@@ -5,48 +5,79 @@ import SearchInput from "./SearchInput.astro";
 import { FACETS, type FacetKey } from "../lib/catalogue";
 
 interface Props {
-    facet: FacetKey;
+    /** Browse facet. Omit on /search so the field stays in the same place. */
+    facet?: FacetKey;
 }
 
 const { facet } = Astro.props;
+const searchPage = facet === undefined;
 const inputId = "catalogue-search-input";
-const heading = FACETS.find((f) => f.key === facet)?.label ?? "Browse";
-const BrandTag = facet === "featured" ? "h1" : "p";
+const heading = searchPage
+    ? "Search"
+    : facet === "featured"
+      ? "kkaraoke"
+      : (FACETS.find((f) => f.key === facet)?.label ?? "Browse");
+
+// iOS Safari paints the caret from the rect at focus. The persisted input
+// keeps keyboard, but the overlay does not follow a layout move — so browse
+// and /search share this header's field offset. Persist the mark so the node
+// survives the swap, and name it with animate none so it is not in the
+// plus-lighter root fade.
 ---
 
 <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-3" transition:animate="none">
-    {facet !== "featured" && <h1 class="sr-only">{heading}</h1>}
-    <div class="flex items-center gap-2">
-        <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true"
-            ><path
-                fill="#F2EDE4"
-                d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
-            ></path></svg
+    <h1 class="sr-only">{heading}</h1>
+    <div class="flex min-h-[34px] items-center gap-2">
+        <div
+            data-brand-mark
+            transition:persist="catalogue-brand"
+            transition:name="brand"
+            transition:animate="none"
+            class="flex items-center gap-2"
         >
-        <BrandTag class="flex-1 text-[14.5px] font-bold tracking-tight text-cream" transition:name="brand"
-            >kkaraoke</BrandTag
-        >
-        <FavoritesNav />
-    </div>
-    <search data-search-launch class="mt-3.5">
-        <label
-            class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left"
-            for={inputId}
-        >
-            <svg
-                viewBox="0 0 24 24"
-                width="17"
-                height="17"
-                fill="none"
-                stroke="#8B8278"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                aria-hidden="true"
-                class="pointer-events-none"
-                ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+            <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true"
+                ><path
+                    fill="#F2EDE4"
+                    d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
+                ></path></svg
             >
-            <SearchInput id={inputId} />
-        </label>
-    </search>
-    <FacetTabs active={facet} />
+            <p class="text-[14.5px] font-bold tracking-tight text-cream">kkaraoke</p>
+        </div>
+        <span class="min-w-0 flex-1" aria-hidden="true"></span>
+        {!searchPage && <FavoritesNav />}
+    </div>
+    <div class="mt-3.5 flex items-center gap-2.5">
+        <search class="min-w-0 flex-1" data-search-launch={searchPage ? undefined : true}>
+            <label
+                class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left"
+                for={inputId}
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="none"
+                    stroke="#8B8278"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    aria-hidden="true"
+                    class="pointer-events-none"
+                    ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+                >
+                <SearchInput id={inputId} autofocus={searchPage} />
+            </label>
+        </search>
+        {
+            searchPage && (
+                <a
+                    href="/"
+                    data-smart-back
+                    class="bg-transparent px-1 py-1 text-base text-[#9A9086] no-underline hover:text-[#C6BDB1]"
+                >
+                    Cancel
+                </a>
+            )
+        }
+    </div>
+    {!searchPage && facet && <FacetTabs active={facet} />}
 </header>

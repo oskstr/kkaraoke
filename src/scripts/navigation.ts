@@ -9,6 +9,7 @@ import { applySavedSort, readSavedSort } from "./sort-list";
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
 const SEARCH_PERSIST = "catalogue-search-input";
+const BRAND_PERSIST = "catalogue-brand";
 /** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 
@@ -57,6 +58,22 @@ function searchInputEl(): HTMLInputElement | null {
     return document.querySelector<HTMLInputElement>("[data-search-input]");
 }
 
+function brandMarkEl(): HTMLElement | null {
+    return document.querySelector("[data-brand-mark]");
+}
+
+function setHeaderPersist(on: boolean): void {
+    const input = searchInputEl();
+    const brand = brandMarkEl();
+    if (on) {
+        input?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
+        brand?.setAttribute("data-astro-transition-persist", BRAND_PERSIST);
+    } else {
+        input?.removeAttribute("data-astro-transition-persist");
+        brand?.removeAttribute("data-astro-transition-persist");
+    }
+}
+
 function focusSearchInput(): boolean {
     if (!location.pathname.startsWith("/search")) return false;
     const input = searchInputEl();
@@ -65,6 +82,15 @@ function focusSearchInput(): boolean {
         input.focus({ preventScroll: true });
     }
     return document.activeElement === input;
+}
+
+/** Nudge WebKit to push a new caret rect after persist reparents the input. */
+function refreshSearchCaret(): void {
+    const input = searchInputEl();
+    if (!input || document.activeElement !== input) return;
+    const start = input.selectionStart ?? 0;
+    const end = input.selectionEnd ?? 0;
+    input.setSelectionRange(start, end);
 }
 
 async function waitForViewTransitions(): Promise<void> {
@@ -82,6 +108,7 @@ async function scheduleSearchFocus(): Promise<void> {
     });
     await waitForViewTransitions();
     focusSearchInput();
+    refreshSearchCaret();
 }
 
 function wantsSearchFocus(): boolean {
@@ -108,7 +135,9 @@ function keepSearchInput(pathname: string): boolean {
     return pathname.startsWith("/search") || pathname === "/" || pathname.startsWith("/browse");
 }
 
-/** Open /search from the browse field without dropping caret/keyboard. */
+/** Open /search from the browse field without dropping caret/keyboard.
+ *  The field itself must not move: iOS Safari's caret overlay stays at the
+ *  focus-time rect, even when the persisted <input> is reparented. */
 function openSearchFromBrowse(event: Event): void {
     if (location.pathname.startsWith("/search") || openingSearch) return;
     const target = event.target;
@@ -449,11 +478,7 @@ if (!window.__kkaraokeNavInit) {
         } else if (dest.startsWith("/collections/")) {
             scopeCollectionTileNames(document, { href: dest });
         }
-        if (!keepSearchInput(dest)) {
-            searchInputEl()?.removeAttribute("data-astro-transition-persist");
-        } else {
-            searchInputEl()?.setAttribute("data-astro-transition-persist", SEARCH_PERSIST);
-        }
+        setHeaderPersist(keepSearchInput(dest));
     });
 
     document.addEventListener("astro:after-swap", () => {
