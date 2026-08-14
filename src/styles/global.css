@@ -208,18 +208,42 @@ html:active-view-transition [data-search-input] {
     padding-top: env(safe-area-inset-top, 0px);
 }
 
+.collection-tile.has-art,
+.collection-chrome.has-art {
+    --art: var(--art-dark);
+    --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%);
+    --art-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+    background-color: var(--art-theme);
+    background-image: var(--art-scrim), var(--art);
+    background-size: cover;
+    background-position: var(--art-position, center top);
+}
+
+@media (prefers-color-scheme: light) {
+    .collection-tile.has-art,
+    .collection-chrome.has-art {
+        --art: var(--art-light, var(--art-dark));
+        --art-theme: var(--art-theme-light, var(--art-theme));
+        --art-ink: var(--art-ink-light, var(--art-ink));
+        --art-scrim: var(--art-scrim-light, var(--art-scrim));
+        --art-shadow: var(--art-shadow-light, var(--art-shadow));
+    }
+}
+
 .collection-tile.has-art .collection-tile-label,
 .collection-chrome.has-art .collection-title {
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+    color: var(--art-ink);
+    text-shadow: var(--art-shadow);
+}
+
+/* No-art chrome is still a dark tint — keep the mark cream. */
+.collection-chrome [data-brand-mark] {
+    color: var(--on-art);
 }
 
 .collection-chrome.has-art [data-brand-mark] {
-    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.85));
-}
-
-/* Collection chrome is always a dark tint or cover — keep the mark light. */
-.collection-chrome [data-brand-mark] {
-    color: var(--on-art);
+    color: var(--art-ink);
+    filter: drop-shadow(var(--art-shadow));
 }
 
 .collection-tile,
