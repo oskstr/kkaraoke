@@ -209,13 +209,18 @@ html:active-view-transition [data-search-input] {
     width: 100%;
 }
 
-/* Titles: don't stretch glyph bitmaps during the size tween. */
+/* Titles: uniform scale inside the interpolating group. `none` + overflow
+   visible paints the destination-sized snapshot at the origin — on film and
+   language rows that is a huge phrase sitting below the header, then a pop
+   when the live node appears. contain keeps the glyphs unstretched and on
+   the path from the row to the collection title. */
 ::view-transition-old(.coll-title),
 ::view-transition-new(.coll-title) {
-    object-fit: none;
-    overflow: visible;
-    height: auto;
-    width: auto;
+    object-fit: contain;
+    object-position: left top;
+    overflow: clip;
+    height: 100%;
+    width: 100%;
 }
 
 /*
@@ -227,7 +232,9 @@ html:active-view-transition [data-search-input] {
 html.vt-fade-only [data-astro-transition-scope],
 html.vt-fade-only .app-shell,
 html.vt-fade-only .collection-chrome,
-html.vt-fade-only .collection-title {
+html.vt-fade-only .collection-title,
+html.vt-fade-only .collection-tile,
+html.vt-fade-only .collection-tile-label {
     view-transition-name: none !important;
 }
 

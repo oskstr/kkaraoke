@@ -41,10 +41,14 @@ const { tiles, mode } = Astro.props;
         </div>
     ) : (
         <div class="flex flex-col gap-px">
+            {/* Named chrome on the row so the title nests the same way as the collection bar. */}
             {tiles.map((tile) => (
                 <a
                     href={tile.href}
-                    class="flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left no-underline"
+                    class="collection-tile flex w-full items-center gap-3 border-b border-line px-0.5 py-4 text-left no-underline"
+                    data-vt-chrome={tile.transitionName}
+                    transition:name={tile.transitionName}
+                    transition:animate="initial"
                 >
                     <span
                         class="collection-tile-label flex-1 text-base text-cream"
