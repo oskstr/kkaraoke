@@ -274,9 +274,10 @@ html:active-view-transition [data-search-input] {
     }
 
     .collection-chrome.has-art .sort-tab {
-        border-color: color-mix(in srgb, var(--art-ink) 52%, transparent);
-        background: rgb(255 255 255 / 0.86);
+        border-color: color-mix(in srgb, var(--art-ink) 62%, transparent);
+        background: rgb(255 255 255 / 0.9);
         color: var(--art-ink);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
     }
 
     .collection-chrome.has-art .sort-tab[aria-pressed="true"] {
