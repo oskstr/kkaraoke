@@ -51,10 +51,7 @@ async function main() {
     console.log("before", before, "click", href);
     await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${href}"]`)]);
     await page.waitForTimeout(400);
-    await Promise.all([
-        page.waitForURL("**/collections/genre/alternative-rock"),
-        nativeClick(page, "a[data-smart-back]"),
-    ]);
+    await Promise.all([page.waitForURL("**/collections/genre/alternative-rock"), page.goBack()]);
     await page.waitForTimeout(700);
     const after = await measure(page);
     console.log("after", after);
@@ -89,7 +86,7 @@ async function main() {
     } else {
         await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${midSetup.href}"]`)]);
         await page.waitForTimeout(400);
-        await Promise.all([page.waitForURL("**/collections/decade/1980"), nativeClick(page, "a[data-smart-back]")]);
+        await Promise.all([page.waitForURL("**/collections/decade/1980"), page.goBack()]);
         await page.waitForTimeout(700);
         const midAfter = await page.evaluate((id) => {
             const row = document.querySelector(`.song-row[data-id="${CSS.escape(id)}"]`);
@@ -131,7 +128,7 @@ async function main() {
     console.log("before", artistsBefore, "click", mid);
     await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, `a[href="${mid}"]`)]);
     await page.waitForTimeout(400);
-    await Promise.all([page.waitForURL("**/artists"), nativeClick(page, "a[data-smart-back]")]);
+    await Promise.all([page.waitForURL("**/artists"), page.goBack()]);
     await page.waitForTimeout(700);
     const artistsAfter = await measure(page);
     console.log("after", artistsAfter);
@@ -183,7 +180,7 @@ async function main() {
                 nativeClick(page, `a[href="${genreHref}"]`),
             ]);
             await page.waitForTimeout(400);
-            await Promise.all([page.waitForURL("**/artists/pet-shop-boys**"), nativeClick(page, "a[data-smart-back]")]);
+            await Promise.all([page.waitForURL("**/artists/pet-shop-boys**"), page.goBack()]);
             await page.waitForTimeout(700);
             const backArtist = await page.evaluate(() => {
                 const title = document.querySelector("[data-artist-title]");
@@ -315,9 +312,9 @@ async function main() {
             await page.waitForTimeout(300);
             await page.evaluate(() => window.scrollTo(0, 400));
             await page.waitForTimeout(150);
-            await Promise.all([page.waitForURL(/\/artists\//), nativeClick(page, "a[data-smart-back]")]);
+            await Promise.all([page.waitForURL(/\/artists\//), page.goBack()]);
             await page.waitForTimeout(400);
-            await Promise.all([page.waitForURL("**/collections/genre/pop**"), nativeClick(page, "a[data-smart-back]")]);
+            await Promise.all([page.waitForURL("**/collections/genre/pop**"), page.goBack()]);
             await page.waitForTimeout(800);
             const backPop = await page.evaluate(() => {
                 const visible = [...document.querySelectorAll(".song-row")].find((el) => {

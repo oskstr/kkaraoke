@@ -71,10 +71,7 @@ async function main() {
         nativeClick(page, `.song-row[data-id="${setup.id}"] a[href="${setup.href}"]`),
     ]);
     await page.waitForTimeout(400);
-    await Promise.all([
-        page.waitForURL("**/collections/genre/rock**"),
-        nativeClick(page, "a[data-smart-back]"),
-    ]);
+    await Promise.all([page.waitForURL("**/collections/genre/rock**"), page.goBack()]);
     await page.waitForTimeout(800);
 
     const afterBack = await page.evaluate(() => {

@@ -61,7 +61,7 @@ async function main() {
     ]);
     await page.waitForTimeout(400);
 
-    await Promise.all([page.waitForURL("**/collections/genre/pop-rock**"), nativeClick(page, "a[data-smart-back]")]);
+    await Promise.all([page.waitForURL("**/collections/genre/pop-rock**"), page.goBack()]);
     await page.waitForTimeout(900);
 
     const after = await page.evaluate(() => {
