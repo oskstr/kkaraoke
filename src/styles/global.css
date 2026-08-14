@@ -149,11 +149,6 @@ textarea:focus-visible {
 .collection-chrome {
     margin-top: calc(env(safe-area-inset-top, 0px) * -1);
     padding-top: env(safe-area-inset-top, 0px);
-    overflow-anchor: none;
-}
-
-[data-song-list] {
-    overflow-anchor: none;
 }
 
 .collection-tile.has-art .collection-tile-label,
