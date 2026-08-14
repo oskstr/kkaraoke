@@ -345,6 +345,32 @@ async function main() {
         }
     }
 
+    console.log("\n=== Genres tile → collection starts at the first song ===");
+    await page.goto(`${BASE}/browse/genres`, { waitUntil: "networkidle" });
+    await page.waitForTimeout(200);
+    await Promise.all([
+        page.waitForURL("**/collections/genre/alternative-rock"),
+        nativeClick(page, 'a[href="/collections/genre/alternative-rock"]'),
+    ]);
+    await page.waitForTimeout(700);
+    const opened = await page.evaluate(() => {
+        const chrome = document.querySelector("[data-collection-chrome]");
+        const first = document.querySelector(".song-row");
+        const chromeBottom = chrome?.getBoundingClientRect().bottom ?? 0;
+        const firstBox = first?.getBoundingClientRect();
+        return {
+            y: window.scrollY,
+            firstTitle: first?.getAttribute("data-title") ?? null,
+            firstTop: firstBox ? Math.round(firstBox.top) : null,
+            chromeBottom: Math.round(chromeBottom),
+            tucked: firstBox ? firstBox.top + 8 < chromeBottom : true,
+        };
+    });
+    console.log("opened alt-rock", opened);
+    const okOpen = opened.y < 8 && opened.firstTitle != null && opened.tucked === false;
+    console.log(okOpen ? "PASS collection opens at top" : "FAIL collection opens at top");
+    if (!okOpen) failed = true;
+
     await browser.close();
     process.exit(failed ? 1 : 0);
 }

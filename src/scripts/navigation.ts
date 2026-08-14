@@ -375,6 +375,18 @@ function clearScopedViewTransitionNames(): void {
     });
 }
 
+/**
+ * Opening a collection must start at the first song. iOS Safari can leave a
+ * leftover `scrollY` after the tile→header morph (art chrome + sticky bar +
+ * safe area), which tucks the first row under the header. Do not do this on
+ * back — ClientRouter owns that restore.
+ */
+function pinForwardCollectionScroll(): void {
+    if (lastNavDirection !== "forward") return;
+    if (!location.pathname.startsWith("/collections/")) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
+
 let lastNavDirection: "forward" | "back" | null = null;
 
 declare global {
@@ -423,6 +435,7 @@ if (!window.__kkaraokeNavInit) {
             expandWindowedListForBack(false);
         } else {
             setWindowedRestoreLock(false);
+            pinForwardCollectionScroll();
         }
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
@@ -432,15 +445,29 @@ if (!window.__kkaraokeNavInit) {
         }
     });
 
+    document.addEventListener(
+        "astro:page-load",
+        () => {
+            pinForwardCollectionScroll();
+        },
+        true,
+    );
+
     document.addEventListener("astro:page-load", () => {
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
             requestAnimationFrame(() => {
                 expandWindowedListForBack(true);
             });
+        } else {
+            pinForwardCollectionScroll();
         }
         void waitForViewTransitions().then(() => {
-            clearScopedViewTransitionNames();
+            pinForwardCollectionScroll();
+            requestAnimationFrame(() => {
+                pinForwardCollectionScroll();
+                clearScopedViewTransitionNames();
+            });
         });
         if (wantsSearchFocus()) {
             sessionStorage.removeItem(FOCUS_SEARCH_KEY);
