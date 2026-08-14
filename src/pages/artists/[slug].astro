@@ -24,7 +24,7 @@ const { artist, songs } = Astro.props;
 ---
 
 <Layout title={`${artist.name} · kkaraoke`}>
-    <header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-[18px]">
+    <header class="border-b border-line px-[18px] pt-[22px] pb-[18px]">
         <BrandMark />
         <h1 class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream" data-artist-title>
             {artist.name}
@@ -35,7 +35,7 @@ const { artist, songs } = Astro.props;
                     {artist.genres.map((genre) => (
                         <a
                             href={collectionPath("genre", genre)}
-                            class="rounded-full border border-[#2F2C28] px-2.5 py-1.5 font-mono text-[11px] tracking-wide text-[#C6BDB1] no-underline"
+                            class="rounded-full border border-line-strong px-2.5 py-1.5 font-mono text-[11px] tracking-wide text-cream-soft no-underline"
                         >
                             {genre}
                         </a>

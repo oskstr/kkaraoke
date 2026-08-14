@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
-import { DEFAULT_THEME_COLOR } from "../lib/catalogue";
+import { DEFAULT_THEME_COLOR, LIGHT_THEME_COLOR } from "../lib/catalogue";
 import "../styles/global.css";
 
 interface Props {
@@ -19,14 +19,14 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="color-scheme" content="dark" />
+        <meta name="color-scheme" content="light dark" />
         <!--
-          Bare theme-color (no media query): Android chrome. iOS dark-mode ignores
-          this and samples the page — which is what we want, including during
-          view transitions. A media-queried / per-page tag freezes a solid bar
-          and flashes when ClientRouter updates it.
+          Media-queried theme-color follows the OS, matching the CSS palette.
+          Still not per-page: a ClientRouter swap of these tags freezes a solid
+          bar and flashes. iOS dark-mode ignores the tag and samples the page.
         -->
-        <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
+        <meta name="theme-color" content={DEFAULT_THEME_COLOR} media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content={LIGHT_THEME_COLOR} media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
@@ -49,7 +49,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
     <body>
         <a href="#main" class="skip-link">Skip to content</a>
         <div
-            class="app-shell mx-auto min-h-dvh w-full max-w-md bg-surface text-cream shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
+            class="app-shell mx-auto min-h-dvh w-full max-w-md bg-surface text-cream sm:my-6 sm:min-h-[min(844px,calc(100dvh-3rem))] sm:rounded-[30px] sm:border sm:border-line-strong"
         >
             <slot />
         </div>

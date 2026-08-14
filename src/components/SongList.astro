@@ -36,10 +36,10 @@ const songs: SongVariant[] =
     songs.length === 0 && emptyTitle ? (
         <div class="px-5 py-20 text-center">
             <div class="text-lg font-semibold text-cream">{emptyTitle}</div>
-            {emptyBody && <p class="mt-2.5 text-sm text-muted text-pretty">{emptyBody}</p>}
+            {emptyBody && <p class="mt-2.5 text-sm text-pretty text-muted">{emptyBody}</p>}
             <a
                 href={emptyHref}
-                class="mt-4 inline-block rounded-[10px] bg-gold px-[18px] py-3 text-[14.5px] font-semibold text-[#14120F] no-underline hover:text-[#14120F]"
+                class="mt-4 inline-block rounded-[10px] bg-gold-fill px-[18px] py-3 text-[14.5px] font-semibold text-on-gold no-underline hover:text-on-gold"
             >
                 {emptyCta}
             </a>

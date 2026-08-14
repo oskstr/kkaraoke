@@ -11,11 +11,7 @@ function SongSubtitle({ song }: { song: SearchSong }) {
                 {song.artists.map((artist, index) => (
                     <span key={artist.slug}>
                         {index > 0 && ", "}
-                        <a
-                            href={`/artists/${artist.slug}`}
-                            className="song-artist-link"
-                            data-vt-artist={artist.slug}
-                        >
+                        <a href={`/artists/${artist.slug}`} className="song-artist-link" data-vt-artist={artist.slug}>
                             {artist.name}
                         </a>
                     </span>
@@ -95,7 +91,7 @@ export default function FavoritesApp() {
                 </p>
                 <a
                     href="/"
-                    className="inline-block rounded-[10px] bg-gold px-[18px] py-3 text-[14.5px] font-semibold text-[#14120F] no-underline hover:text-[#14120F]"
+                    className="inline-block rounded-[10px] bg-gold-fill px-[18px] py-3 text-[14.5px] font-semibold text-on-gold no-underline hover:text-on-gold"
                 >
                     Start browsing
                 </a>

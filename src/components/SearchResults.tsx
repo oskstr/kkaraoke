@@ -156,7 +156,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                             <a
                                 key={s.href + s.label}
                                 href={s.href}
-                                className="rounded-full border border-[#2A2724] bg-[#1A1917] px-3.5 py-2 text-[13.5px] font-semibold text-[#E4DDD1] no-underline hover:text-[#F2EDE4]"
+                                className="rounded-full border border-line-strong bg-panel px-3.5 py-2 text-[13.5px] font-semibold text-cream-soft no-underline hover:text-cream"
                                 data-astro-prefetch="false"
                                 {...(s.href === "/artists" ? { "data-astro-reload": true } : {})}
                             >
