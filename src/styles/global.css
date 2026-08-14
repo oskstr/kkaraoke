@@ -251,6 +251,41 @@ html:active-view-transition [data-search-input] {
     filter: drop-shadow(var(--art-shadow));
 }
 
+.sort-tab {
+    border: 1px solid rgb(255 255 255 / 0.18);
+    background: rgb(0 0 0 / 0.22);
+    color: rgb(255 255 255 / 0.85);
+}
+
+.sort-tab[aria-pressed="true"] {
+    border-color: transparent;
+    background: rgb(255 255 255 / 0.92);
+    color: #17150f;
+}
+
+@media (prefers-color-scheme: light) {
+    /* Cream hairline so chromatic ink survives both a bright window and a
+       dark curtain / amp / organ — the same type is a tile label and a top bar. */
+    .collection-tile.has-art .collection-tile-label,
+    .collection-chrome.has-art .collection-title,
+    .collection-chrome.has-art [data-brand-mark] {
+        -webkit-text-stroke: 0.55px rgba(255, 252, 247, 0.62);
+        paint-order: stroke fill;
+    }
+
+    .collection-chrome.has-art .sort-tab {
+        border-color: color-mix(in srgb, var(--art-ink) 52%, transparent);
+        background: rgb(255 255 255 / 0.86);
+        color: var(--art-ink);
+    }
+
+    .collection-chrome.has-art .sort-tab[aria-pressed="true"] {
+        border-color: transparent;
+        background: var(--art-ink);
+        color: #f7f2e9;
+    }
+}
+
 .collection-tile,
 .collection-chrome {
     view-transition-class: coll-chrome;
