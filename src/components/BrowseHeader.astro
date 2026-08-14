@@ -24,7 +24,7 @@ const heading = searchPage
 // and /search share this header's field offset.
 ---
 
-<header class="border-b border-[#1A1917] px-[18px] pt-[22px] pb-3" transition:animate="none">
+<header class="border-b border-line px-[18px] pt-[22px] pb-3" transition:animate="none">
     <h1 class="sr-only">{heading}</h1>
     <div class="flex min-h-[34px] items-center gap-2">
         <BrandMark current={facet === "featured"} />
@@ -42,11 +42,11 @@ const heading = searchPage
                     width="17"
                     height="17"
                     fill="none"
-                    stroke="#8B8278"
+                    stroke="currentColor"
                     stroke-width="2.2"
                     stroke-linecap="round"
                     aria-hidden="true"
-                    class="pointer-events-none"
+                    class="pointer-events-none text-muted"
                     ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
                 >
                 <SearchInput id={inputId} autofocus={searchPage} />
@@ -58,7 +58,7 @@ const heading = searchPage
                     href="/"
                     data-smart-back
                     data-search-cancel
-                    class="bg-transparent px-1 py-1 text-base text-[#9A9086] no-underline hover:text-[#C6BDB1]"
+                    class="bg-transparent px-1 py-1 text-base text-muted no-underline hover:text-cream-soft"
                 >
                     Cancel
                 </a>

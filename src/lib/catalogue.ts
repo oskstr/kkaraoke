@@ -191,7 +191,10 @@ const COLLECTION_ART: Record<string, { src: string; ink?: string; theme?: string
     "lang:swe": { src: "/collections/swedish.webp", ink: "#F2E8D5", theme: "#060302" },
 };
 
+/** Dark `theme-color` / art fallback — keep in sync with `--ink` in global.css. */
 export const DEFAULT_THEME_COLOR = "#0a0a09";
+/** Light `theme-color` — keep in sync with light `--surface` in global.css. */
+export const LIGHT_THEME_COLOR = "#f2ede4";
 
 export function artFor(kind: CollectionKind, key: string): string | undefined {
     return COLLECTION_ART[`${kind}:${key}`]?.src;

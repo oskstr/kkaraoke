@@ -11,9 +11,7 @@ const { active = false } = Astro.props;
     aria-label="Favorites"
     class:list={[
         "inline-flex min-h-[34px] items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px] font-semibold transition-colors",
-        active
-            ? "border-[rgba(233,180,76,0.4)] bg-[rgba(233,180,76,0.14)] text-gold"
-            : "border-line-strong bg-panel text-[#9A9086]",
+        active ? "border-gold/40 bg-gold/15 text-gold" : "border-line-strong bg-panel text-muted",
     ]}
     data-fav-nav
     transition:name="favorites-nav"

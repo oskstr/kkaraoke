@@ -64,12 +64,12 @@ export function paintFavoritesNav(root: ParentNode = document): void {
     const count = readFavorites().length;
     root.querySelectorAll<HTMLElement>("[data-fav-nav]").forEach((el) => {
         const on = count > 0;
-        el.classList.toggle("border-[rgba(233,180,76,0.4)]", on);
-        el.classList.toggle("bg-[rgba(233,180,76,0.14)]", on);
+        el.classList.toggle("border-gold/40", on);
+        el.classList.toggle("bg-gold/15", on);
         el.classList.toggle("text-gold", on);
         el.classList.toggle("border-line-strong", !on);
         el.classList.toggle("bg-panel", !on);
-        el.classList.toggle("text-[#9A9086]", !on);
+        el.classList.toggle("text-muted", !on);
         el.setAttribute("aria-label", count > 0 ? `Favorites, ${count} saved` : "Favorites");
     });
 }
