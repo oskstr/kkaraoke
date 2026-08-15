@@ -2,9 +2,11 @@
  * Raster share images for iMessage / Open Graph / the home screen.
  *
  * Chrome draws the default card and the icons; ffmpeg crops each collection
- * still to 1200×630 JPEG. Re-run after the mark or collection photos change:
+ * still to 1200×630 JPEG. Re-run after the mark or collection photos change.
+ * Pass `--stills` to recrop the collection cards:
  *
  *   node scripts/generate-share-images.mjs
+ *   node scripts/generate-share-images.mjs --stills
  */
 import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -48,6 +50,11 @@ const ogHtml = `<!doctype html>
     src: url("Inter-Bold.ttf") format("truetype");
     font-weight: 700;
   }
+  @font-face {
+    font-family: Inter;
+    src: url("Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
   html, body {
     margin: 0;
     width: 1200px;
@@ -85,8 +92,8 @@ const ogHtml = `<!doctype html>
     background: radial-gradient(circle, rgba(63,90,107,0.18) 0%, rgba(63,90,107,0) 70%);
     pointer-events: none;
   }
+  .lockup { position: relative; }
   .brand {
-    position: relative;
     display: flex;
     align-items: center;
     gap: 22px;
@@ -98,13 +105,24 @@ const ogHtml = `<!doctype html>
     letter-spacing: -0.04em;
     line-height: 1;
   }
+  .tag {
+    margin: 20px 0 0 94px;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: #8b8278;
+  }
 </style>
 </head>
 <body>
   <div class="card">
     <div class="glow"></div>
     <div class="glow-2"></div>
-    <div class="brand">${mark}<span class="name">kkaraoke</span></div>
+    <div class="lockup">
+      <div class="brand">${mark}<span class="name">kkaraoke</span></div>
+      <p class="tag">A karaoke song list.</p>
+    </div>
   </div>
 </body>
 </html>`;
@@ -165,7 +183,11 @@ function shot(htmlName, html, width, height, dest) {
 mkdirSync(workDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
 mkdirSync(ogDir, { recursive: true });
-run("cp", ["/usr/share/fonts/truetype/macos/Inter-Bold.ttf", workDir]);
+run("cp", [
+    "/usr/share/fonts/truetype/macos/Inter-Bold.ttf",
+    "/usr/share/fonts/truetype/macos/Inter-Regular.ttf",
+    workDir,
+]);
 
 const ogSrc = shot("og.html", ogHtml, 1200, 630, "og.png");
 run("cp", [ogSrc, join(outDir, "og.png")]);
@@ -180,21 +202,24 @@ for (const [file, size] of [
     run("ffmpeg", ["-y", "-loglevel", "error", "-i", iconSrc, "-vf", `scale=${size}:${size}`, join(outDir, file)]);
 }
 
-const stills = readdirSync(join(outDir, "collections")).filter((file) => file.endsWith(".webp"));
-for (const file of stills) {
-    const dest = join(ogDir, file.replace(/\.webp$/, ".jpg"));
-    run("ffmpeg", [
-        "-y",
-        "-loglevel",
-        "error",
-        "-i",
-        join(outDir, "collections", file),
-        "-vf",
-        "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630:(iw-1200)/2:0",
-        "-q:v",
-        "3",
-        dest,
-    ]);
+if (process.argv.includes("--stills")) {
+    const stills = readdirSync(join(outDir, "collections")).filter((file) => file.endsWith(".webp"));
+    for (const file of stills) {
+        const dest = join(ogDir, file.replace(/\.webp$/, ".jpg"));
+        run("ffmpeg", [
+            "-y",
+            "-loglevel",
+            "error",
+            "-i",
+            join(outDir, "collections", file),
+            "-vf",
+            "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630:(iw-1200)/2:0",
+            "-q:v",
+            "3",
+            dest,
+        ]);
+    }
+    console.log(`wrote public/og.png, ${stills.length} collection cards in public/og/, and icons`);
+} else {
+    console.log("wrote public/og.png and icons");
 }
-
-console.log(`wrote public/og.png, ${stills.length} collection cards in public/og/, and icons`);
