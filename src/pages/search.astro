@@ -32,7 +32,10 @@ const suggestions = [
 const inputId = "catalogue-search-input";
 ---
 
-<Layout title="Search · kkaraoke">
+<Layout
+    title="Search · kkaraoke"
+    description="Search the karaoke catalogue by title, artist, film, or punch-in number."
+>
     <BrowseHeader />
     <main id="main" tabindex="-1">
         <SearchResults client:load suggestions={suggestions} inputId={inputId} />

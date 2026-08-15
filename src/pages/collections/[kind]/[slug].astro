@@ -69,9 +69,13 @@ const allSongs = rows.map((song) => {
         artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
     };
 });
+const songWord = rows.length === 1 ? "song" : "songs";
 ---
 
-<Layout title={`${collection.label} · kkaraoke`}>
+<Layout
+    title={`${collection.label} · kkaraoke`}
+    description={`${collection.label} — ${rows.length} ${songWord} in the karaoke catalogue.`}
+>
     <!--
       One shared-element target for the tile morph: the whole tinted chrome
       (brand + title + sort) so the tile color expands into the top bar.

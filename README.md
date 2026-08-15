@@ -38,7 +38,9 @@ from a file in the repository, so builds need no database, no credentials and no
 ├── docs/
 │   └── song-data.md            # design for correcting and enriching the catalogue
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   ├── apple-touch-icon.png
+│   └── og.png
 ├── scripts/
 │   ├── fetch-songs.ts          # scrapes the catalogue from kkaraoke.se
 │   ├── match-canonical.ts      # offline match against the MusicBrainz dump
