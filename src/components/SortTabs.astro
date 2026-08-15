@@ -13,10 +13,7 @@
                 type="button"
                 data-sort={tab.key}
                 aria-pressed={i === 0 ? "true" : "false"}
-                class:list={[
-                    "shrink-0 rounded-full border border-white/18 px-3.5 py-1.5 text-[13px] font-semibold",
-                    i === 0 ? "bg-white/92 text-[#17150F]" : "bg-black/22 text-white/85",
-                ]}
+                class="sort-tab shrink-0 rounded-full px-3.5 py-1.5 text-[13px] font-semibold"
             >
                 {tab.label}
             </button>

@@ -208,18 +208,98 @@ html:active-view-transition [data-search-input] {
     padding-top: env(safe-area-inset-top, 0px);
 }
 
+.collection-tile.has-art,
+.collection-chrome.has-art {
+    --art: var(--art-dark);
+    --art-theme: var(--art-theme-dark);
+    --art-ink: var(--art-ink-dark);
+    --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%);
+    --art-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+    background-color: var(--art-theme);
+    /* Fallback `none` so an invalid scrim never drops the photo layer. */
+    background-image: var(--art-scrim, none), var(--art);
+    background-size: cover;
+    background-position: var(--art-position, center top);
+}
+
+@media (prefers-color-scheme: light) {
+    .collection-tile.has-art,
+    .collection-chrome.has-art {
+        --art: var(--art-light, var(--art-dark));
+        --art-theme: var(--art-theme-light, var(--art-theme-dark));
+        --art-ink: var(--art-ink-light, var(--art-ink-dark));
+        --art-on-ink: var(--art-on-ink-light, #f7f2e9);
+        --art-stroke: var(--art-stroke-light, 0.4px rgba(255, 252, 247, 0.5));
+        --art-tab-idle-bg: var(--art-tab-idle-bg-light, rgb(255 255 255 / 0.9));
+        --art-tab-idle-border: var(--art-tab-idle-border-light, rgb(0 0 0 / 0.18));
+        --art-scrim: var(
+            --art-scrim-light,
+            linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%)
+        );
+        --art-shadow: var(--art-shadow-light, 0 1px 10px rgba(0, 0, 0, 0.85));
+    }
+
+    /* Tile labels sit lower on the photo than the collection title. A stronger
+       bottom wash keeps dark type readable when that corner is a guitar body
+       or a dark sill, without changing the top bar.
+
+       Do not assign `--art-scrim` to a `var(--art-scrim)` fallback — Safari
+       treats that as a cycle, invalidates the property, and drops the entire
+       `background-image` (photo included). */
+    .collection-tile.has-art {
+        background-image: var(--art-scrim-tile-light, var(--art-scrim, none)), var(--art);
+    }
+}
+
 .collection-tile.has-art .collection-tile-label,
 .collection-chrome.has-art .collection-title {
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+    color: var(--art-ink);
+    text-shadow: var(--art-shadow);
+}
+
+/* No-art chrome is still a dark tint — keep the mark cream. */
+.collection-chrome [data-brand-mark] {
+    color: var(--on-art);
 }
 
 .collection-chrome.has-art [data-brand-mark] {
-    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.85));
+    color: var(--art-ink);
+    filter: drop-shadow(var(--art-shadow));
 }
 
-/* Collection chrome is always a dark tint or cover — keep the mark light. */
-.collection-chrome [data-brand-mark] {
-    color: var(--on-art);
+.sort-tab {
+    border: 1px solid rgb(255 255 255 / 0.18);
+    background: rgb(0 0 0 / 0.22);
+    color: rgb(255 255 255 / 0.85);
+}
+
+.sort-tab[aria-pressed="true"] {
+    border-color: transparent;
+    background: rgb(255 255 255 / 0.92);
+    color: #17150f;
+}
+
+@media (prefers-color-scheme: light) {
+    .collection-tile.has-art .collection-tile-label,
+    .collection-chrome.has-art .collection-title,
+    .collection-chrome.has-art [data-brand-mark] {
+        -webkit-text-stroke: var(--art-stroke);
+        paint-order: stroke fill;
+    }
+
+    .collection-chrome.has-art .sort-tab {
+        border-color: var(--art-tab-idle-border);
+        background: var(--art-tab-idle-bg);
+        color: var(--art-ink);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+    }
+
+    .collection-chrome.has-art .sort-tab[aria-pressed="true"] {
+        border-color: transparent;
+        background: var(--art-ink);
+        color: var(--art-on-ink);
+        box-shadow: none;
+    }
 }
 
 .collection-tile,

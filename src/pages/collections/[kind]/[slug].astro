@@ -78,7 +78,7 @@ const allSongs = rows.map((song) => {
     -->
     <div
         class:list={["collection-chrome sticky top-0 z-20", collection.art && "has-art"]}
-        style={`${collectionSurfaceStyle(collection.theme ?? collection.tint, collection.art)};border-bottom:1px solid rgba(0,0,0,0.25)`}
+        style={`${collectionSurfaceStyle(collection)};border-bottom:1px solid rgba(0,0,0,0.25)`}
         data-collection-chrome
         data-vt-chrome={collection.transitionName}
         transition:name={collection.transitionName}
@@ -88,7 +88,7 @@ const allSongs = rows.map((song) => {
             <BrandMark />
             <h1
                 class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty"
-                style={`color:${collection.ink ?? "#FCFAF6"}`}
+                style={collection.art ? undefined : `color:${collection.ink ?? "#FCFAF6"}`}
                 data-collection-title
                 data-vt-title={collection.titleTransitionName}
                 transition:name={collection.titleTransitionName}

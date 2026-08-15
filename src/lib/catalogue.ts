@@ -58,6 +58,10 @@ export interface BrowseTile {
     ink?: string;
     /** CSS fallback under the art — top of the image, which iOS samples for the status bar. */
     theme?: string;
+    /** Daytime still life used when `prefers-color-scheme: light`. */
+    lightArt?: string;
+    lightInk?: string;
+    lightTheme?: string;
     kind: CollectionKind;
     key: string;
     /** Shared with the collection header for morphing view transitions. */
@@ -76,6 +80,9 @@ export interface CollectionRef {
     ink?: string;
     /** CSS fallback under the art — top of the image, which iOS samples for the status bar. */
     theme?: string;
+    lightArt?: string;
+    lightInk?: string;
+    lightTheme?: string;
     transitionName: string;
     titleTransitionName: string;
 }
@@ -127,68 +134,71 @@ export function tintFor(kind: CollectionKind, key: string): string {
 
 /** Cover art under `public/collections/`. `theme` is the color at the top of the
  *  image (CSS fallback; iOS samples this for the status bar). Missing keys keep
- *  the hashed tint. */
-const COLLECTION_ART: Record<string, { src: string; ink?: string; theme?: string }> = {
-    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#120b0b" },
-    "category:Children's song": { src: "/collections/children.webp", ink: "#F4E2B9", theme: "#0f0c0a" },
-    "category:Christmas": { src: "/collections/christmas.webp", ink: "#F2E9D4", theme: "#181f1d" },
-    "category:Disney": { src: "/collections/disney.webp", ink: "#F5E5C0", theme: "#070b15" },
-    "category:Eurovision": { src: "/collections/eurovision.webp", ink: "#E4E8F8", theme: "#060938" },
-    "category:Hymn": { src: "/collections/hymn.webp", ink: "#F7F2E9", theme: "#161315" },
-    "category:Irish traditional": { src: "/collections/irish-traditional.webp", ink: "#E8D5C4", theme: "#091008" },
-    "category:James Bond": { src: "/collections/james-bond.webp", ink: "#F2EFE9", theme: "#161413" },
-    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#190c0d" },
-    "category:Midsummer": { src: "/collections/midsummer.webp", ink: "#F9EFE5", theme: "#252628" },
-    "category:Musical": { src: "/collections/musical.webp", ink: "#F9E8D2", theme: "#080504" },
-    "decade:1950": { src: "/collections/50s.webp", ink: "#FDEBD0", theme: "#251308" },
-    "decade:1960": { src: "/collections/60s.webp", ink: "#F7D8D0", theme: "#260c0b" },
-    "decade:1970": { src: "/collections/70s.webp", ink: "#F9F5E6", theme: "#1e1a12" },
-    "decade:1980": { src: "/collections/80s.webp", ink: "#FCE4EC", theme: "#130717" },
-    "decade:1990": { src: "/collections/90s.webp", ink: "#F2EBE1", theme: "#1c130d" },
-    "decade:2000": { src: "/collections/00s.webp", ink: "#E2E8F0", theme: "#0f1d2a" },
-    "decade:2010": { src: "/collections/10s.webp", ink: "#F0F2F5", theme: "#0d141b" },
-    "decade:2020": { src: "/collections/20s.webp", ink: "#EDE8FF", theme: "#161223" },
-    "genre:alternative rock": { src: "/collections/alternative-rock.webp", ink: "#E5DBD0", theme: "#020409" },
-    "genre:art rock": { src: "/collections/art-rock.webp", ink: "#DADDDA", theme: "#04070f" },
-    "genre:blues": { src: "/collections/blues.webp", ink: "#ECD9C7", theme: "#020201" },
-    "genre:blues rock": { src: "/collections/blues-rock.webp", ink: "#EDD9C5", theme: "#0f0e0d" },
-    "genre:britpop": { src: "/collections/britpop.webp", ink: "#E6DBC7", theme: "#050402" },
-    "genre:contemporary r&b": { src: "/collections/contemporary-r-and-b.webp", ink: "#E5DBCE", theme: "#080806" },
-    "genre:country": { src: "/collections/country.webp", ink: "#E0DCD4", theme: "#070a0f" },
-    "genre:country pop": { src: "/collections/country-pop.webp", ink: "#E8DACB", theme: "#050403" },
-    "genre:country rock": { src: "/collections/country-rock.webp", ink: "#EDD9C4", theme: "#030201" },
-    "genre:dance": { src: "/collections/dance.webp", ink: "#DFDCD5", theme: "#020305" },
-    "genre:dance-pop": { src: "/collections/dance-pop.webp", ink: "#D8DBEE", theme: "#010102" },
-    "genre:disco": { src: "/collections/disco.webp", ink: "#E9DAC8", theme: "#030303" },
-    "genre:electronic": { src: "/collections/electronic.webp", ink: "#E3DBD1", theme: "#08080a" },
-    "genre:electropop": { src: "/collections/electropop.webp", ink: "#CCDEF2", theme: "#010102" },
-    "genre:europop": { src: "/collections/europop.webp", ink: "#D8DDDE", theme: "#20262c" },
-    "genre:folk": { src: "/collections/folk.webp", ink: "#F8D7BB", theme: "#030302" },
-    "genre:folk rock": { src: "/collections/folk-rock.webp", ink: "#EBDAC8", theme: "#0c0908" },
-    "genre:funk": { src: "/collections/funk.webp", ink: "#FFD5B2", theme: "#060301" },
-    "genre:glam metal": { src: "/collections/glam-metal.webp", ink: "#F1D6D8", theme: "#050002" },
-    "genre:glam rock": { src: "/collections/glam-rock.webp", ink: "#DDDBE1", theme: "#020103" },
-    "genre:hard rock": { src: "/collections/hard-rock.webp", ink: "#FAD6C3", theme: "#0a090a" },
-    "genre:heavy metal": { src: "/collections/heavy-metal.webp", ink: "#DDDCD8", theme: "#030405" },
-    "genre:hip hop": { src: "/collections/hip-hop.webp", ink: "#F4D8B8", theme: "#010103" },
-    "genre:indie rock": { src: "/collections/indie-rock.webp", ink: "#E6DBCC", theme: "#010306" },
-    "genre:jazz": { src: "/collections/jazz.webp", ink: "#E6DBCC", theme: "#141415" },
-    "genre:new wave": { src: "/collections/new-wave.webp", ink: "#F0D7D4", theme: "#040306" },
-    "genre:pop": { src: "/collections/pop.webp", ink: "#F4ECD8", theme: "#0d0e0e" },
-    "genre:pop punk": { src: "/collections/pop-punk.webp", ink: "#DFDCD6", theme: "#000000" },
-    "genre:pop rap": { src: "/collections/pop-rap.webp", ink: "#FCD2E1", theme: "#0f0b11" },
-    "genre:pop rock": { src: "/collections/pop-rock.webp", ink: "#EFD9BF", theme: "#0a1110" },
-    "genre:post-grunge": { src: "/collections/post-grunge.webp", ink: "#DEDCD5", theme: "#060806" },
-    "genre:r&b": { src: "/collections/r-and-b.webp", ink: "#E5DAD0", theme: "#07080a" },
-    "genre:rock": { src: "/collections/rock.webp", ink: "#EADCBF", theme: "#080506" },
-    "genre:rock and roll": { src: "/collections/rock-and-roll.webp", ink: "#F2D9BC", theme: "#010000" },
-    "genre:rockabilly": { src: "/collections/rockabilly.webp", ink: "#EDD9C7", theme: "#010101" },
-    "genre:singer-songwriter": { src: "/collections/singer-songwriter.webp", ink: "#DDDCD8", theme: "#0a0e10" },
-    "genre:soft rock": { src: "/collections/soft-rock.webp", ink: "#ECD9C8", theme: "#000000" },
-    "genre:soul": { src: "/collections/soul.webp", ink: "#EED9C4", theme: "#0f0b05" },
-    "genre:synth-pop": { src: "/collections/synth-pop.webp", ink: "#D2DEE8", theme: "#000103" },
-    "genre:teen pop": { src: "/collections/teen-pop.webp", ink: "#F7D4D9", theme: "#040204" },
-    "lang:swe": { src: "/collections/swedish.webp", ink: "#F2E8D5", theme: "#060302" },
+ *  the hashed tint. Light `ink` is a contrast pick against the tile label and
+ *  the collection title — dark type on pale photos, cream where those letters
+ *  sit on a dark patch. */
+type CollectionArt = { src: string; ink?: string; theme?: string; light?: { src: string; ink?: string; theme?: string } };
+const COLLECTION_ART: Record<string, CollectionArt> = {
+    "category:Birthday": { src: "/collections/birthday.webp", ink: "#F7F2E9", theme: "#120b0b", light: { src: "/collections/light/birthday.webp", ink: "#24201c", theme: "#dbd4c9" } },
+    "category:Children's song": { src: "/collections/children.webp", ink: "#F4E2B9", theme: "#0f0c0a", light: { src: "/collections/light/children.webp", ink: "#24201c", theme: "#67847b" } },
+    "category:Christmas": { src: "/collections/christmas.webp", ink: "#F2E9D4", theme: "#181f1d", light: { src: "/collections/light/christmas.webp", ink: "#1c2026", theme: "#c7cdd0" } },
+    "category:Disney": { src: "/collections/disney.webp", ink: "#F5E5C0", theme: "#070b15", light: { src: "/collections/light/disney.webp", ink: "#24201c", theme: "#a19174" } },
+    "category:Eurovision": { src: "/collections/eurovision.webp", ink: "#E4E8F8", theme: "#060938", light: { src: "/collections/light/eurovision.webp", ink: "#24201c", theme: "#9a8f80" } },
+    "category:Hymn": { src: "/collections/hymn.webp", ink: "#F7F2E9", theme: "#161315", light: { src: "/collections/light/hymn.webp", ink: "#24201c", theme: "#d0ad85" } },
+    "category:Irish traditional": { src: "/collections/irish-traditional.webp", ink: "#E8D5C4", theme: "#091008", light: { src: "/collections/light/irish-traditional.webp", ink: "#24201c", theme: "#afb5b6" } },
+    "category:James Bond": { src: "/collections/james-bond.webp", ink: "#F2EFE9", theme: "#161413", light: { src: "/collections/light/james-bond.webp", ink: "#1c2026", theme: "#a0bdc7" } },
+    "category:Melodifestivalen": { src: "/collections/melodifestivalen.webp", ink: "#F6D4C8", theme: "#190c0d", light: { src: "/collections/light/melodifestivalen.webp", ink: "#24201c", theme: "#b6b1ad" } },
+    "category:Midsummer": { src: "/collections/midsummer.webp", ink: "#F9EFE5", theme: "#252628", light: { src: "/collections/light/midsummer.webp", ink: "#1c2026", theme: "#6796b6" } },
+    "category:Musical": { src: "/collections/musical.webp", ink: "#F9E8D2", theme: "#080504", light: { src: "/collections/light/musical.webp", ink: "#f7f2e9", theme: "#2d090b" } },
+    "decade:1950": { src: "/collections/50s.webp", ink: "#FDEBD0", theme: "#251308", light: { src: "/collections/light/50s.webp", ink: "#24201c", theme: "#eceae1" } },
+    "decade:1960": { src: "/collections/60s.webp", ink: "#F7D8D0", theme: "#260c0b", light: { src: "/collections/light/60s.webp", ink: "#f7f2e9", theme: "#af8967" } },
+    "decade:1970": { src: "/collections/70s.webp", ink: "#F9F5E6", theme: "#1e1a12", light: { src: "/collections/light/70s.webp", ink: "#24201c", theme: "#a57d43" } },
+    "decade:1980": { src: "/collections/80s.webp", ink: "#FCE4EC", theme: "#130717", light: { src: "/collections/light/80s.webp", ink: "#24201c", theme: "#cbc3b1" } },
+    "decade:1990": { src: "/collections/90s.webp", ink: "#F2EBE1", theme: "#1c130d", light: { src: "/collections/light/90s.webp", ink: "#24201c", theme: "#cec6b4" } },
+    "decade:2000": { src: "/collections/00s.webp", ink: "#E2E8F0", theme: "#0f1d2a", light: { src: "/collections/light/00s.webp", ink: "#1c2026", theme: "#eff2f6" } },
+    "decade:2010": { src: "/collections/10s.webp", ink: "#F0F2F5", theme: "#0d141b", light: { src: "/collections/light/10s.webp", ink: "#1c2026", theme: "#e3e8eb" } },
+    "decade:2020": { src: "/collections/20s.webp", ink: "#EDE8FF", theme: "#161223", light: { src: "/collections/light/20s.webp", ink: "#1c2026", theme: "#d7d5d1" } },
+    "genre:alternative rock": { src: "/collections/alternative-rock.webp", ink: "#E5DBD0", theme: "#020409", light: { src: "/collections/light/alternative-rock.webp", ink: "#24201c", theme: "#7f6f56" } },
+    "genre:art rock": { src: "/collections/art-rock.webp", ink: "#DADDDA", theme: "#04070f", light: { src: "/collections/light/art-rock.webp", ink: "#24201c", theme: "#c3b7a9" } },
+    "genre:blues": { src: "/collections/blues.webp", ink: "#ECD9C7", theme: "#020201", light: { src: "/collections/light/blues.webp", ink: "#24201c", theme: "#a0937d" } },
+    "genre:blues rock": { src: "/collections/blues-rock.webp", ink: "#EDD9C5", theme: "#0f0e0d", light: { src: "/collections/light/blues-rock.webp", ink: "#24201c", theme: "#85745f" } },
+    "genre:britpop": { src: "/collections/britpop.webp", ink: "#E6DBC7", theme: "#050402", light: { src: "/collections/light/britpop.webp", ink: "#f7f2e9", theme: "#abbabd" } },
+    "genre:contemporary r&b": { src: "/collections/contemporary-r-and-b.webp", ink: "#E5DBCE", theme: "#080806", light: { src: "/collections/light/contemporary-r-and-b.webp", ink: "#1c2026", theme: "#c0d9e8" } },
+    "genre:country": { src: "/collections/country.webp", ink: "#E0DCD4", theme: "#070a0f", light: { src: "/collections/light/country.webp", ink: "#24201c", theme: "#d1ddea" } },
+    "genre:country pop": { src: "/collections/country-pop.webp", ink: "#E8DACB", theme: "#050403", light: { src: "/collections/light/country-pop.webp", ink: "#24201c", theme: "#e6dfd1" } },
+    "genre:country rock": { src: "/collections/country-rock.webp", ink: "#EDD9C4", theme: "#030201", light: { src: "/collections/light/country-rock.webp", ink: "#f7f2e9", theme: "#bdb8b0" } },
+    "genre:dance": { src: "/collections/dance.webp", ink: "#DFDCD5", theme: "#020305", light: { src: "/collections/light/dance.webp", ink: "#1c2026", theme: "#989272" } },
+    "genre:dance-pop": { src: "/collections/dance-pop.webp", ink: "#D8DBEE", theme: "#010102", light: { src: "/collections/light/dance-pop.webp", ink: "#24201c", theme: "#d5bea0" } },
+    "genre:disco": { src: "/collections/disco.webp", ink: "#E9DAC8", theme: "#030303", light: { src: "/collections/light/disco.webp", ink: "#24201c", theme: "#d1be9e" } },
+    "genre:electronic": { src: "/collections/electronic.webp", ink: "#E3DBD1", theme: "#08080a", light: { src: "/collections/light/electronic.webp", ink: "#24201c", theme: "#d2cbbf" } },
+    "genre:electropop": { src: "/collections/electropop.webp", ink: "#CCDEF2", theme: "#010102", light: { src: "/collections/light/electropop.webp", ink: "#1c2026", theme: "#cccbca" } },
+    "genre:europop": { src: "/collections/europop.webp", ink: "#D8DDDE", theme: "#20262c", light: { src: "/collections/light/europop.webp", ink: "#1c2026", theme: "#efefef" } },
+    "genre:folk": { src: "/collections/folk.webp", ink: "#F8D7BB", theme: "#030302", light: { src: "/collections/light/folk.webp", ink: "#24201c", theme: "#dee4e6" } },
+    "genre:folk rock": { src: "/collections/folk-rock.webp", ink: "#EBDAC8", theme: "#0c0908", light: { src: "/collections/light/folk-rock.webp", ink: "#24201c", theme: "#b9a486" } },
+    "genre:funk": { src: "/collections/funk.webp", ink: "#FFD5B2", theme: "#060301", light: { src: "/collections/light/funk.webp", ink: "#24201c", theme: "#ac9277" } },
+    "genre:glam metal": { src: "/collections/glam-metal.webp", ink: "#F1D6D8", theme: "#050002", light: { src: "/collections/light/glam-metal.webp", ink: "#24201c", theme: "#b6b1ae" } },
+    "genre:glam rock": { src: "/collections/glam-rock.webp", ink: "#DDDBE1", theme: "#020103", light: { src: "/collections/light/glam-rock.webp", ink: "#24201c", theme: "#d8c7b3" } },
+    "genre:hard rock": { src: "/collections/hard-rock.webp", ink: "#FAD6C3", theme: "#0a090a", light: { src: "/collections/light/hard-rock.webp", ink: "#f7f2e9", theme: "#9a948e" } },
+    "genre:heavy metal": { src: "/collections/heavy-metal.webp", ink: "#DDDCD8", theme: "#030405", light: { src: "/collections/light/heavy-metal.webp", ink: "#1c2026", theme: "#dee7f2" } },
+    "genre:hip hop": { src: "/collections/hip-hop.webp", ink: "#F4D8B8", theme: "#010103", light: { src: "/collections/light/hip-hop.webp", ink: "#24201c", theme: "#f3e3c8" } },
+    "genre:indie rock": { src: "/collections/indie-rock.webp", ink: "#E6DBCC", theme: "#010306", light: { src: "/collections/light/indie-rock.webp", ink: "#24201c", theme: "#7d7162" } },
+    "genre:jazz": { src: "/collections/jazz.webp", ink: "#E6DBCC", theme: "#141415", light: { src: "/collections/light/jazz.webp", ink: "#f7f2e9", theme: "#cec5b9" } },
+    "genre:new wave": { src: "/collections/new-wave.webp", ink: "#F0D7D4", theme: "#040306", light: { src: "/collections/light/new-wave.webp", ink: "#1c2026", theme: "#dbd7d4" } },
+    "genre:pop": { src: "/collections/pop.webp", ink: "#F4ECD8", theme: "#0d0e0e", light: { src: "/collections/light/pop.webp", ink: "#24201c", theme: "#cebda6" } },
+    "genre:pop punk": { src: "/collections/pop-punk.webp", ink: "#DFDCD6", theme: "#000000", light: { src: "/collections/light/pop-punk.webp", ink: "#24201c", theme: "#8c7e6d" } },
+    "genre:pop rap": { src: "/collections/pop-rap.webp", ink: "#FCD2E1", theme: "#0f0b11", light: { src: "/collections/light/pop-rap.webp", ink: "#24201c", theme: "#e4dfdc" } },
+    "genre:pop rock": { src: "/collections/pop-rock.webp", ink: "#EFD9BF", theme: "#0a1110", light: { src: "/collections/light/pop-rock.webp", ink: "#24201c", theme: "#ecf4fc" } },
+    "genre:post-grunge": { src: "/collections/post-grunge.webp", ink: "#DEDCD5", theme: "#060806", light: { src: "/collections/light/post-grunge.webp", ink: "#24201c", theme: "#e4e7eb" } },
+    "genre:r&b": { src: "/collections/r-and-b.webp", ink: "#E5DAD0", theme: "#07080a", light: { src: "/collections/light/r-and-b.webp", ink: "#24201c", theme: "#94846f" } },
+    "genre:rock": { src: "/collections/rock.webp", ink: "#EADCBF", theme: "#080506", light: { src: "/collections/light/rock.webp", ink: "#f7f2e9", theme: "#c1ab98" } },
+    "genre:rock and roll": { src: "/collections/rock-and-roll.webp", ink: "#F2D9BC", theme: "#010000", light: { src: "/collections/light/rock-and-roll.webp", ink: "#24201c", theme: "#aba6a1" } },
+    "genre:rockabilly": { src: "/collections/rockabilly.webp", ink: "#EDD9C7", theme: "#010101", light: { src: "/collections/light/rockabilly.webp", ink: "#24201c", theme: "#ad8373" } },
+    "genre:singer-songwriter": { src: "/collections/singer-songwriter.webp", ink: "#DDDCD8", theme: "#0a0e10", light: { src: "/collections/light/singer-songwriter.webp", ink: "#24201c", theme: "#c1d5e4" } },
+    "genre:soft rock": { src: "/collections/soft-rock.webp", ink: "#ECD9C8", theme: "#000000", light: { src: "/collections/light/soft-rock.webp", ink: "#1c2026", theme: "#c2dfef" } },
+    "genre:soul": { src: "/collections/soul.webp", ink: "#EED9C4", theme: "#0f0b05", light: { src: "/collections/light/soul.webp", ink: "#24201c", theme: "#8e7a5c" } },
+    "genre:synth-pop": { src: "/collections/synth-pop.webp", ink: "#D2DEE8", theme: "#000103", light: { src: "/collections/light/synth-pop.webp", ink: "#24201c", theme: "#c3c0b3" } },
+    "genre:teen pop": { src: "/collections/teen-pop.webp", ink: "#F7D4D9", theme: "#040204", light: { src: "/collections/light/teen-pop.webp", ink: "#24201c", theme: "#c5b6a4" } },
+    "lang:swe": { src: "/collections/swedish.webp", ink: "#F2E8D5", theme: "#060302", light: { src: "/collections/light/swedish.webp", ink: "#24201c", theme: "#bcab99" } },
 };
 
 /** Dark `theme-color` / art fallback — keep in sync with `--ink` in global.css. */
@@ -206,24 +216,99 @@ function collectionLook(kind: CollectionKind, key: string) {
     return {
         tint,
         theme: entry?.theme ?? (entry === undefined ? tint : DEFAULT_THEME_COLOR),
-        ...(entry === undefined ? {} : { art: entry.src, ink: entry.ink ?? "#F7F2E9" }),
+        ...(entry === undefined
+            ? {}
+            : {
+                  art: entry.src,
+                  ink: entry.ink ?? "#F7F2E9",
+                  ...(entry.light
+                      ? {
+                            lightArt: entry.light.src,
+                            lightInk: entry.light.ink ?? "#1c1915",
+                            lightTheme: entry.light.theme ?? LIGHT_THEME_COLOR,
+                        }
+                      : {}),
+              }),
         ...collectionTransitionNames(kind, key),
     };
 }
 
-/** Inline style for a tile or collection bar — solid color, or art with a text scrim.
- *  `color` is the CSS background-color iOS samples for the status bar.
- */
-export function collectionSurfaceStyle(color: string, art?: string, position = "center top"): string {
-    if (art === undefined) return `background:${color}`;
-    // Transparent at the top so the status bar can match the art, not a black wash.
-    const scrim = "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.22) 55%, transparent 100%)";
+type ArtSurface = {
+    tint: string;
+    theme?: string;
+    art?: string;
+    ink?: string;
+    lightArt?: string;
+    lightInk?: string;
+    lightTheme?: string;
+};
+
+function hexLuminance(hex: string): number {
+    const n = hex.replace("#", "");
+    if (n.length !== 6) return 0.5;
+    const r = parseInt(n.slice(0, 2), 16) / 255;
+    const g = parseInt(n.slice(2, 4), 16) / 255;
+    const b = parseInt(n.slice(4, 6), 16) / 255;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+function scrimForInk(ink: string): string {
+    if (hexLuminance(ink) > 0.45) {
+        return "linear-gradient(to top, rgba(10,10,9,0.72) 0%, rgba(10,10,9,0.22) 55%, transparent 100%)";
+    }
+    return "linear-gradient(to top, rgba(242,237,228,0.78) 0%, rgba(242,237,228,0.3) 48%, transparent 100%)";
+}
+
+function shadowForInk(ink: string): string {
+    if (hexLuminance(ink) > 0.45) {
+        return "0 1px 1px rgba(0,0,0,0.55), 0 1px 10px rgba(0,0,0,0.45)";
+    }
+    return "0 1px 1px rgba(20,16,12,0.28), 0 1px 6px rgba(20,16,12,0.14)";
+}
+
+function lightInkChrome(ink: string): string[] {
+    if (hexLuminance(ink) > 0.45) {
+        return [
+            `--art-on-ink-light:#17150f`,
+            `--art-stroke-light:0.45px rgba(10,10,9,0.4)`,
+            `--art-tab-idle-bg-light:rgb(0 0 0 / 0.28)`,
+            `--art-tab-idle-border-light:rgb(255 255 255 / 0.22)`,
+        ];
+    }
     return [
-        `background-color:${color}`,
-        `background-image:${scrim}, url("${art}")`,
-        "background-size:cover",
-        `background-position:${position}`,
-    ].join(";");
+        `--art-on-ink-light:#f7f2e9`,
+        `--art-stroke-light:0px transparent`,
+        `--art-tab-idle-bg-light:rgb(255 255 255 / 0.9)`,
+        `--art-tab-idle-border-light:color-mix(in srgb, ${ink} 55%, transparent)`,
+        `--art-scrim-tile-light:linear-gradient(to top, rgba(242,237,228,0.88) 0%, rgba(242,237,228,0.4) 42%, transparent 76%)`,
+    ];
+}
+
+/** Inline style for a tile or collection bar — solid color, or CSS variables for art.
+ *  Light/dark still lifes swap in CSS via `prefers-color-scheme`. Do not morph across themes.
+ */
+export function collectionSurfaceStyle(look: ArtSurface, position = "center top"): string {
+    const color = look.theme ?? look.tint;
+    if (look.art === undefined) return `background:${color}`;
+    const ink = look.ink ?? "#F7F2E9";
+    const parts = [
+        `--art-theme-dark:${color}`,
+        `--art-dark:url(${look.art})`,
+        `--art-ink-dark:${ink}`,
+        `--art-position:${position}`,
+    ];
+    if (look.lightArt) {
+        const lightInk = look.lightInk ?? "#1c1915";
+        parts.push(
+            `--art-light:url(${look.lightArt})`,
+            `--art-theme-light:${look.lightTheme ?? LIGHT_THEME_COLOR}`,
+            `--art-ink-light:${lightInk}`,
+            `--art-scrim-light:${scrimForInk(lightInk)}`,
+            `--art-shadow-light:${shadowForInk(lightInk)}`,
+            ...lightInkChrome(lightInk),
+        );
+    }
+    return parts.join(";");
 }
 
 function uniqueSorted(values: Iterable<string>): string[] {

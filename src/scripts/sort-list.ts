@@ -76,10 +76,6 @@ export function paintSortTabs(root: ParentNode, sort: SortKey): void {
     root.querySelectorAll<HTMLElement>("[data-sort]").forEach((btn) => {
         const on = btn.dataset.sort === sort;
         btn.setAttribute("aria-pressed", on ? "true" : "false");
-        btn.classList.toggle("bg-white/92", on);
-        btn.classList.toggle("text-[#17150F]", on);
-        btn.classList.toggle("bg-black/22", !on);
-        btn.classList.toggle("text-white/85", !on);
     });
 }
 
