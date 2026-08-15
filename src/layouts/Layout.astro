@@ -12,6 +12,7 @@ interface Props {
 const { title, description = "Browse the karaoke catalogue by artist, decade, genre, and more." } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
+const shareImage = new URL("/og.png", Astro.site ?? Astro.url).href;
 ---
 
 <!doctype html>
@@ -29,13 +30,30 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
         <meta name="theme-color" content={LIGHT_THEME_COLOR} media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <!-- iOS Messages ignores SVG favicons; this PNG is what replaces the compass placeholder. -->
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="kkaraoke" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:site_name" content="kkaraoke" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href={canonical} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:locale" content="en" />
+        <meta property="og:image" content={shareImage} />
+        <meta property="og:image:alt" content="kkaraoke" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <meta name="twitter:image:alt" content="kkaraoke" />
         <Font cssVariable="--font-archivo" preload />
         <Font cssVariable="--font-dm-mono" />
         <title>{title}</title>
