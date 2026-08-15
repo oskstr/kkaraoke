@@ -216,7 +216,8 @@ html:active-view-transition [data-search-input] {
     --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%);
     --art-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
     background-color: var(--art-theme);
-    background-image: var(--art-scrim), var(--art);
+    /* Fallback `none` so an invalid scrim never drops the photo layer. */
+    background-image: var(--art-scrim, none), var(--art);
     background-size: cover;
     background-position: var(--art-position, center top);
 }
@@ -240,9 +241,13 @@ html:active-view-transition [data-search-input] {
 
     /* Tile labels sit lower on the photo than the collection title. A stronger
        bottom wash keeps dark type readable when that corner is a guitar body
-       or a dark sill, without changing the top bar. */
+       or a dark sill, without changing the top bar.
+
+       Do not assign `--art-scrim` to a `var(--art-scrim)` fallback — Safari
+       treats that as a cycle, invalidates the property, and drops the entire
+       `background-image` (photo included). */
     .collection-tile.has-art {
-        --art-scrim: var(--art-scrim-tile-light, var(--art-scrim-light, var(--art-scrim)));
+        background-image: var(--art-scrim-tile-light, var(--art-scrim, none)), var(--art);
     }
 }
 
