@@ -12,7 +12,13 @@ interface Props {
 const { title, description = "Browse the karaoke catalogue by artist, decade, genre, and more." } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
-const shareImage = new URL("/og.png", Astro.site ?? Astro.url).href;
+// Preview deploys must point the image at this host — production 404s until the PR is live,
+// and iMessage then falls back to the compact title+URL card.
+const shareOrigin =
+    process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : (Astro.site ?? Astro.url);
+const shareImage = new URL("/og.jpg", shareOrigin).href;
 ---
 
 <!doctype html>
@@ -46,9 +52,9 @@ const shareImage = new URL("/og.png", Astro.site ?? Astro.url).href;
         <meta property="og:locale" content="en" />
         <meta property="og:image" content={shareImage} />
         <meta property="og:image:alt" content="kkaraoke" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="2400" />
+        <meta property="og:image:height" content="1260" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
