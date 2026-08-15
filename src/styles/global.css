@@ -269,7 +269,7 @@ html:active-view-transition [data-search-input] {
     .collection-tile.has-art .collection-tile-label,
     .collection-chrome.has-art .collection-title,
     .collection-chrome.has-art [data-brand-mark] {
-        -webkit-text-stroke: 0.55px rgba(255, 252, 247, 0.62);
+        -webkit-text-stroke: 0.4px rgba(255, 252, 247, 0.5);
         paint-order: stroke fill;
     }
 
