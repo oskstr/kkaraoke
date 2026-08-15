@@ -227,11 +227,22 @@ html:active-view-transition [data-search-input] {
         --art: var(--art-light, var(--art-dark));
         --art-theme: var(--art-theme-light, var(--art-theme-dark));
         --art-ink: var(--art-ink-light, var(--art-ink-dark));
+        --art-on-ink: var(--art-on-ink-light, #f7f2e9);
+        --art-stroke: var(--art-stroke-light, 0.4px rgba(255, 252, 247, 0.5));
+        --art-tab-idle-bg: var(--art-tab-idle-bg-light, rgb(255 255 255 / 0.9));
+        --art-tab-idle-border: var(--art-tab-idle-border-light, rgb(0 0 0 / 0.18));
         --art-scrim: var(
             --art-scrim-light,
             linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%)
         );
         --art-shadow: var(--art-shadow-light, 0 1px 10px rgba(0, 0, 0, 0.85));
+    }
+
+    /* Tile labels sit lower on the photo than the collection title. A stronger
+       bottom wash keeps dark type readable when that corner is a guitar body
+       or a dark sill, without changing the top bar. */
+    .collection-tile.has-art {
+        --art-scrim: var(--art-scrim-tile-light, var(--art-scrim-light, var(--art-scrim)));
     }
 }
 
@@ -264,18 +275,16 @@ html:active-view-transition [data-search-input] {
 }
 
 @media (prefers-color-scheme: light) {
-    /* Cream hairline so chromatic ink survives both a bright window and a
-       dark curtain / amp / organ — the same type is a tile label and a top bar. */
     .collection-tile.has-art .collection-tile-label,
     .collection-chrome.has-art .collection-title,
     .collection-chrome.has-art [data-brand-mark] {
-        -webkit-text-stroke: 0.4px rgba(255, 252, 247, 0.5);
+        -webkit-text-stroke: var(--art-stroke);
         paint-order: stroke fill;
     }
 
     .collection-chrome.has-art .sort-tab {
-        border-color: color-mix(in srgb, var(--art-ink) 62%, transparent);
-        background: rgb(255 255 255 / 0.9);
+        border-color: var(--art-tab-idle-border);
+        background: var(--art-tab-idle-bg);
         color: var(--art-ink);
         box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
     }
@@ -283,7 +292,8 @@ html:active-view-transition [data-search-input] {
     .collection-chrome.has-art .sort-tab[aria-pressed="true"] {
         border-color: transparent;
         background: var(--art-ink);
-        color: #f7f2e9;
+        color: var(--art-on-ink);
+        box-shadow: none;
     }
 }
 
