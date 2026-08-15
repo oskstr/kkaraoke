@@ -40,7 +40,7 @@ from a file in the repository, so builds need no database, no credentials and no
 ├── public/
 │   ├── favicon.svg
 │   ├── apple-touch-icon.png
-│   └── og.jpg
+│   └── og.png
 ├── scripts/
 │   ├── fetch-songs.ts          # scrapes the catalogue from kkaraoke.se
 │   ├── match-canonical.ts      # offline match against the MusicBrainz dump
