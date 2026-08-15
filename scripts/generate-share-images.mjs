@@ -1,18 +1,19 @@
 /**
  * Raster share images for iMessage / Open Graph / the home screen.
  *
- * Chrome draws the HTML; ffmpeg scales the icon. Re-run after the mark or
- * palette changes:
+ * Chrome draws the default card and the icons; ffmpeg crops each collection
+ * still to 1200×630 JPEG. Re-run after the mark or collection photos change:
  *
  *   node scripts/generate-share-images.mjs
  */
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = join(root, "public");
+const ogDir = join(outDir, "og");
 const workDir = join(root, ".cache/share-images");
 
 const chrome = [
@@ -37,10 +38,6 @@ const mark = `<svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
   </defs>
 </svg>`;
 
-const tiles = ["#7A4B3A", "#3F5A6B", "#5B4A72", "#6B6238", "#41684F", "#7A3F4F", "#3E4A6B", "#6B5230"]
-    .map((c) => `<span class="tile" style="background:${c}"></span>`)
-    .join("");
-
 const ogHtml = `<!doctype html>
 <html>
 <head>
@@ -50,11 +47,6 @@ const ogHtml = `<!doctype html>
     font-family: Inter;
     src: url("Inter-Bold.ttf") format("truetype");
     font-weight: 700;
-  }
-  @font-face {
-    font-family: Inter;
-    src: url("Inter-Regular.ttf") format("truetype");
-    font-weight: 400;
   }
   html, body {
     margin: 0;
@@ -66,9 +58,11 @@ const ogHtml = `<!doctype html>
   .card {
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
     width: 1200px;
     height: 630px;
-    padding: 88px 96px 80px;
+    padding: 0 96px;
     background: #100f0e;
     color: #f2ede4;
     font-family: Inter, ui-sans-serif, system-ui, sans-serif;
@@ -104,28 +98,6 @@ const ogHtml = `<!doctype html>
     letter-spacing: -0.04em;
     line-height: 1;
   }
-  .tag {
-    position: relative;
-    margin: 36px 0 0;
-    max-width: 760px;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
-    color: #c8c0b4;
-  }
-  .tiles {
-    position: absolute;
-    left: 96px;
-    bottom: 80px;
-    display: flex;
-    gap: 10px;
-  }
-  .tile {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-  }
 </style>
 </head>
 <body>
@@ -133,8 +105,6 @@ const ogHtml = `<!doctype html>
     <div class="glow"></div>
     <div class="glow-2"></div>
     <div class="brand">${mark}<span class="name">kkaraoke</span></div>
-    <p class="tag">Browse the karaoke catalogue by artist, decade, genre, and more.</p>
-    <div class="tiles">${tiles}</div>
   </div>
 </body>
 </html>`;
@@ -167,56 +137,64 @@ const iconHtml = `<!doctype html>
 </body>
 </html>`;
 
+function run(cmd, args) {
+    const result = spawnSync(cmd, args, { encoding: "utf8" });
+    if (result.status !== 0) {
+        console.error(result.stderr || result.stdout);
+        process.exit(result.status ?? 1);
+    }
+}
+
 function shot(htmlName, html, width, height, dest) {
     const htmlPath = join(workDir, htmlName);
     writeFileSync(htmlPath, html);
     const pngPath = join(workDir, dest);
-    const result = spawnSync(
-        chrome,
-        [
-            "--headless=new",
-            "--no-sandbox",
-            "--disable-gpu",
-            "--hide-scrollbars",
-            "--allow-file-access-from-files",
-            `--window-size=${width},${height}`,
-            `--screenshot=${pngPath}`,
-            `file://${htmlPath}`,
-        ],
-        { encoding: "utf8" },
-    );
-    if (result.status !== 0) {
-        console.error(result.stderr || result.stdout);
-        process.exit(result.status ?? 1);
-    }
+    run(chrome, [
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--hide-scrollbars",
+        "--allow-file-access-from-files",
+        `--window-size=${width},${height}`,
+        `--screenshot=${pngPath}`,
+        `file://${htmlPath}`,
+    ]);
     return pngPath;
-}
-
-function scale(src, dest, size) {
-    const result = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-i", src, "-vf", `scale=${size}:${size}`, dest], {
-        encoding: "utf8",
-    });
-    if (result.status !== 0) {
-        console.error(result.stderr || result.stdout);
-        process.exit(result.status ?? 1);
-    }
 }
 
 mkdirSync(workDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
-spawnSync("cp", [
-    "/usr/share/fonts/truetype/macos/Inter-Bold.ttf",
-    "/usr/share/fonts/truetype/macos/Inter-Regular.ttf",
-    workDir,
-]);
+mkdirSync(ogDir, { recursive: true });
+run("cp", ["/usr/share/fonts/truetype/macos/Inter-Bold.ttf", workDir]);
 
 const ogSrc = shot("og.html", ogHtml, 1200, 630, "og.png");
-spawnSync("cp", [ogSrc, join(outDir, "og.png")]);
+run("cp", [ogSrc, join(outDir, "og.png")]);
 
 const iconSrc = shot("icon.html", iconHtml, 512, 512, "icon-512.png");
-spawnSync("cp", [iconSrc, join(outDir, "icon-512.png")]);
-scale(iconSrc, join(outDir, "icon-192.png"), 192);
-scale(iconSrc, join(outDir, "apple-touch-icon.png"), 180);
-scale(iconSrc, join(outDir, "favicon-32.png"), 32);
+run("cp", [iconSrc, join(outDir, "icon-512.png")]);
+for (const [file, size] of [
+    ["icon-192.png", 192],
+    ["apple-touch-icon.png", 180],
+    ["favicon-32.png", 32],
+]) {
+    run("ffmpeg", ["-y", "-loglevel", "error", "-i", iconSrc, "-vf", `scale=${size}:${size}`, join(outDir, file)]);
+}
 
-console.log("wrote public/og.png, icon-512.png, icon-192.png, apple-touch-icon.png, favicon-32.png");
+const stills = readdirSync(join(outDir, "collections")).filter((file) => file.endsWith(".webp"));
+for (const file of stills) {
+    const dest = join(ogDir, file.replace(/\.webp$/, ".jpg"));
+    run("ffmpeg", [
+        "-y",
+        "-loglevel",
+        "error",
+        "-i",
+        join(outDir, "collections", file),
+        "-vf",
+        "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630:(iw-1200)/2:0",
+        "-q:v",
+        "3",
+        dest,
+    ]);
+}
+
+console.log(`wrote public/og.png, ${stills.length} collection cards in public/og/, and icons`);

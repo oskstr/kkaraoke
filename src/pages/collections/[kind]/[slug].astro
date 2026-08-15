@@ -5,6 +5,7 @@ import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
     collectionKinds,
+    collectionOgImage,
     collectionSurfaceStyle,
     mergeSongVariants,
     resolveCollection,
@@ -74,7 +75,9 @@ const songWord = rows.length === 1 ? "song" : "songs";
 
 <Layout
     title={`${collection.label} · kkaraoke`}
-    description={`${collection.label} — ${rows.length} ${songWord} in the karaoke catalogue.`}
+    description={`${collection.label} — ${rows.length} ${songWord}.`}
+    image={collectionOgImage(collection.art) ?? "/og.png"}
+    imageAlt={collection.art ? collection.label : "kkaraoke"}
 >
     <!--
       One shared-element target for the tile morph: the whole tinted chrome

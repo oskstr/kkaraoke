@@ -210,6 +210,13 @@ export function artFor(kind: CollectionKind, key: string): string | undefined {
     return COLLECTION_ART[`${kind}:${key}`]?.src;
 }
 
+/** JPEG share card cropped from a collection still (`/collections/rock.webp` → `/og/rock.jpg`). */
+export function collectionOgImage(art: string | undefined): string | undefined {
+    if (art === undefined || !art.endsWith(".webp")) return undefined;
+    const file = art.slice(art.lastIndexOf("/") + 1).replace(/\.webp$/, ".jpg");
+    return `/og/${file}`;
+}
+
 function collectionLook(kind: CollectionKind, key: string) {
     const entry = COLLECTION_ART[`${kind}:${key}`];
     const tint = tintFor(kind, key);

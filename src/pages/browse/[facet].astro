@@ -23,7 +23,7 @@ const { mode, tiles } = browseTiles(activeFacet, songs);
 const label = FACETS.find((f) => f.key === activeFacet)?.label ?? "Browse";
 ---
 
-<Layout title={`${label} · kkaraoke`} description={`Browse karaoke songs by ${label.toLowerCase()}.`}>
+<Layout title={`${label} · kkaraoke`}>
     <BrowseHeader facet={activeFacet} />
     <main id="main" tabindex="-1" class="px-[18px] pt-4 pb-6" transition:animate="fade">
         <TileGrid tiles={tiles} mode={mode} />
