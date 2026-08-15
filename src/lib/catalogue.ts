@@ -151,7 +151,7 @@ const COLLECTION_ART: Record<string, CollectionArt> = {
     "category:Midsummer": { src: "/collections/midsummer.webp", ink: "#F9EFE5", theme: "#252628", light: { src: "/collections/light/midsummer.webp", ink: "#1c2026", theme: "#6796b6" } },
     "category:Musical": { src: "/collections/musical.webp", ink: "#F9E8D2", theme: "#080504", light: { src: "/collections/light/musical.webp", ink: "#f7f2e9", theme: "#2d090b" } },
     "decade:1950": { src: "/collections/50s.webp", ink: "#FDEBD0", theme: "#251308", light: { src: "/collections/light/50s.webp", ink: "#24201c", theme: "#eceae1" } },
-    "decade:1960": { src: "/collections/60s.webp", ink: "#F7D8D0", theme: "#260c0b", light: { src: "/collections/light/60s.webp", ink: "#24201c", theme: "#af8967" } },
+    "decade:1960": { src: "/collections/60s.webp", ink: "#F7D8D0", theme: "#260c0b", light: { src: "/collections/light/60s.webp", ink: "#f7f2e9", theme: "#af8967" } },
     "decade:1970": { src: "/collections/70s.webp", ink: "#F9F5E6", theme: "#1e1a12", light: { src: "/collections/light/70s.webp", ink: "#24201c", theme: "#a57d43" } },
     "decade:1980": { src: "/collections/80s.webp", ink: "#FCE4EC", theme: "#130717", light: { src: "/collections/light/80s.webp", ink: "#24201c", theme: "#cbc3b1" } },
     "decade:1990": { src: "/collections/90s.webp", ink: "#F2EBE1", theme: "#1c130d", light: { src: "/collections/light/90s.webp", ink: "#24201c", theme: "#cec6b4" } },
@@ -263,7 +263,7 @@ function shadowForInk(ink: string): string {
     if (hexLuminance(ink) > 0.45) {
         return "0 1px 1px rgba(0,0,0,0.55), 0 1px 10px rgba(0,0,0,0.45)";
     }
-    return "0 0 1px rgba(255,252,247,0.95), 0 1px 0 rgba(255,255,255,0.88), 0 1px 2px rgba(0,0,0,0.22), 0 1px 12px rgba(255,252,247,0.55)";
+    return "0 1px 1px rgba(20,16,12,0.28), 0 1px 6px rgba(20,16,12,0.14)";
 }
 
 function lightInkChrome(ink: string): string[] {
@@ -277,10 +277,10 @@ function lightInkChrome(ink: string): string[] {
     }
     return [
         `--art-on-ink-light:#f7f2e9`,
-        `--art-stroke-light:0.4px rgba(255,252,247,0.5)`,
+        `--art-stroke-light:0px transparent`,
         `--art-tab-idle-bg-light:rgb(255 255 255 / 0.9)`,
         `--art-tab-idle-border-light:color-mix(in srgb, ${ink} 55%, transparent)`,
-        `--art-scrim-tile-light:linear-gradient(to top, rgba(242,237,228,0.9) 0%, rgba(242,237,228,0.5) 40%, transparent 78%)`,
+        `--art-scrim-tile-light:linear-gradient(to top, rgba(242,237,228,0.88) 0%, rgba(242,237,228,0.4) 42%, transparent 76%)`,
     ];
 }
 
