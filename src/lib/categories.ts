@@ -83,7 +83,7 @@ export const MUSICAL_FROM = new Set([
 
 /**
  * Contest names that were briefly stored as `from` before belonging as categories.
- * Still recognised so leftover data keeps working; new edits should use `categories`.
+ * Still recognized so leftover data keeps working; new edits should use `categories`.
  */
 export const CONTEST_FROM = new Set(["Eurovision", "Melodifestivalen"]);
 

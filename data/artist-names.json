@@ -1,38 +1,38 @@
 {
-    "note": "Catalogue-scoped display names, keyed by MusicBrainz artist MBID. Use the name these songs are well known under in this karaoke catalogue — not the venue string, not necessarily today's primary, and not a generic 'most famous ever' label. Optional `slug` overrides the URL path when slugifying the display name would be awkward (P!nk → pink). The same slug on two MBIDs merges them onto one artist page: for leader+band splits the page is the front figure, while song rows keep the full credit. Humans only; no script writes this file. Unmapped artists fall back to the MusicBrainz primary (with stylization rules in build-resolved).",
+    "note": "Catalog-scoped display names, keyed by MusicBrainz artist MBID. Use the name these songs are well known under in this karaoke catalog — not the venue string, not necessarily today's primary, and not a generic 'most famous ever' label. Optional `slug` overrides the URL path when slugifying the display name would be awkward (P!nk → pink). The same slug on two MBIDs merges them onto one artist page: for leader+band splits the page is the front figure, while song rows keep the full credit. Humans only; no script writes this file. Unmapped artists fall back to the MusicBrainz primary (with stylization rules in build-resolved).",
     "artists": {
         "164f0d73-1234-4e2c-8743-d77bf2191051": {
             "name": "Kanye West",
-            "why": "All catalogue cuts are 2004–2011; known here as Kanye West, not Ye"
+            "why": "All catalog cuts are 2004–2011; known here as Kanye West, not Ye"
         },
         "f82bcf78-5b69-4622-a5ef-73800768d9ac": {
             "name": "Jay-Z",
-            "why": "Catalogue hip-hop hits are known as Jay-Z, not JAŸ-Z"
+            "why": "Catalog hip-hop hits are known as Jay-Z, not JAŸ-Z"
         },
         "f4d5cc07-3bc9-4836-9b15-88a08359bc63": {
             "name": "P!nk",
             "slug": "pink",
-            "why": "Stylized brand on the catalogue's 2000s–2020s hits; slug is the readable form, not p-nk"
+            "why": "Stylized brand on the catalog's 2000s–2020s hits; slug is the readable form, not p-nk"
         },
         "fab34286-b8e1-4879-bce3-194e1358fbd2": {
             "name": "Kesha",
-            "why": "Catalogue songs are known as Kesha (Ke$ha was a spelling era, not a different act)"
+            "why": "Catalog songs are known as Kesha (Ke$ha was a spelling era, not a different act)"
         },
         "f90e8b26-9e52-4669-a5c9-e28529c47894": {
             "name": "Snoop Dogg",
-            "why": "Catalogue is mostly mid/late-career Snoop Dogg; one early Doggy Dogg credit should not rename the rest"
+            "why": "Catalog is mostly mid/late-career Snoop Dogg; one early Doggy Dogg credit should not rename the rest"
         },
         "cabb4fcf-4067-4ba5-908d-76ee66fcf0c6": {
             "name": "Puff Daddy",
-            "why": "Catalogue songs are 1997–2001 I'll Be Missing You / I Need a Girl era"
+            "why": "Catalog songs are 1997–2001 I'll Be Missing You / I Need a Girl era"
         },
         "e2345fdf-2be7-47c5-a6dd-be64353ad134": {
             "name": "Cat Stevens",
-            "why": "Catalogue songs are the Cat Stevens recordings people search for, not Yusuf"
+            "why": "Catalog songs are the Cat Stevens recordings people search for, not Yusuf"
         },
         "e5257dc5-1edd-4fca-b7e6-1158e00522c8": {
             "name": "Jackson 5",
-            "why": "Catalogue Motown-era songs (I Want You Back, I'll Be There, …) are known as Jackson 5"
+            "why": "Catalog Motown-era songs (I Want You Back, I'll Be There, …) are known as Jackson 5"
         },
         "3d5c6889-2471-43c4-b853-08fc5fda810a": {
             "name": "Ian Dury",
@@ -46,7 +46,7 @@
         },
         "070d193a-845c-479f-980e-bef15710653e": {
             "name": "Prince",
-            "why": "Catalogue songs are Prince-credited hits, not the Love Symbol era"
+            "why": "Catalog songs are Prince-credited hits, not the Love Symbol era"
         },
         "28a40a67-ecd3-432a-be2f-51490a7743ec": {
             "name": "Helena Paparizou",
@@ -55,7 +55,7 @@
         "4d7928cd-7ed2-4282-8c29-c0c9f966f1bd": {
             "name": "Alice Cooper",
             "slug": "alice-cooper",
-            "why": "Band era (School's Out, …). Same stage persona as the solo artist — one catalogue page, like Spotify"
+            "why": "Band era (School's Out, …). Same stage persona as the solo artist — one catalog page, like Spotify"
         },
         "ee58c59f-8e7f-4430-b8ca-236c4d3745ae": {
             "name": "Alice Cooper",
@@ -65,7 +65,7 @@
         "025df4dd-aaab-46e2-ba0c-6c6909a4ffe6": {
             "name": "Emilia",
             "slug": "emilia",
-            "why": "Big Big World–era performance name; same person as Emilia Mitiku — one catalogue page"
+            "why": "Big Big World–era performance name; same person as Emilia Mitiku — one catalog page"
         },
         "54370132-ba55-4425-bb64-df202f489a27": {
             "name": "Emilia",
@@ -135,7 +135,7 @@
         "5f3c4fe0-fc71-4455-99e6-abd0e8c4462e": {
             "name": "Sammi Cheng",
             "slug": "sammi-cheng",
-            "why": "Catalogue credit is Sammi Cheng; MusicBrainz primary is Chinese script 鄭秀文"
+            "why": "Catalog credit is Sammi Cheng; MusicBrainz primary is Chinese script 鄭秀文"
         },
         "a2cab261-63cc-4ccf-8023-6b6e8588bb62": {
             "name": "Jacky Cheung",
@@ -145,7 +145,7 @@
         "8b86576e-1cf5-46c8-970a-a79d13c2e0f0": {
             "name": "Dima Bilan",
             "slug": "dima-bilan",
-            "why": "Catalogue credit is Dima Bilan; MusicBrainz primary is Cyrillic Дима Билан"
+            "why": "Catalog credit is Dima Bilan; MusicBrainz primary is Cyrillic Дима Билан"
         },
         "e2b96b55-35c4-45b9-8d7b-726ac927982f": {
             "name": "Anna Vissi",

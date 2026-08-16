@@ -1,10 +1,10 @@
 /**
- * Full-catalogue reasonableness checks on published titles and matched masters.
+ * Full-catalog reasonableness checks on published titles and matched masters.
  *
  * Run after rematch/rebuild. Exits non-zero when pollution classes that should be empty
  * still have hits — so "done" is not a vibe check on a handful of examples.
  *
- * Usage: pnpm audit:catalogue
+ * Usage: pnpm audit:catalog
  */
 
 import { readFile } from "node:fs/promises";
@@ -112,7 +112,7 @@ async function main(): Promise<void> {
         }
     }
 
-    // These must be empty — pollution we claim to have fixed catalogue-wide.
+    // These must be empty — pollution we claim to have fixed catalog-wide.
     const mustBeEmpty = [
         "bootlegMatch",
         "versionParenPublished",

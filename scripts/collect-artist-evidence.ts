@@ -3,7 +3,7 @@
  * and writes it to a file for something else to judge.
  *
  * Fetching and judging are deliberately separate. The request budget is fixed by
- * MusicBrainz's per-IP rate limit, so it belongs to one process, while the judgement
+ * MusicBrainz's per-IP rate limit, so it belongs to one process, while the judgment
  * can then be re-run over the same cached evidence by any number of models for free.
  *
  * Usage: pnpm collect:evidence --artists <file> [--out <file>] [--candidates 3] [--titles 3]
@@ -12,7 +12,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { parseArgs } from "node:util";
-import catalogue from "../data/songs.json" with { type: "json" };
+import catalog from "../data/songs.json" with { type: "json" };
 import { requestStats, searchArtists, searchRecordingForArtist, searchRecordings } from "./lib/musicbrainz.ts";
 import type { ArtistHit, RecordingHit } from "./lib/musicbrainz.ts";
 
@@ -137,11 +137,11 @@ function toCandidate(hit: ArtistHit): Omit<Candidate, "titleChecks"> {
 }
 
 async function collect(artist: string, maxCandidates: number, maxTitles: number): Promise<ArtistEvidence> {
-    const songs = catalogue.songs
+    const songs = catalog.songs
         .filter((song) => song.artist === artist)
         .map((song) => ({ id: song.id, song: song.song }));
     if (songs.length === 0) {
-        throw new Error(`No songs in the catalogue are filed under ${JSON.stringify(artist)}.`);
+        throw new Error(`No songs in the catalog are filed under ${JSON.stringify(artist)}.`);
     }
 
     // Deterministic sample, so a re-run hits the cache instead of the network.
@@ -218,7 +218,7 @@ async function main(): Promise<void> {
     });
 
     if (values.artists === undefined) {
-        throw new Error("--artists <file> is required: one artist string per line, as it appears in the catalogue.");
+        throw new Error("--artists <file> is required: one artist string per line, as it appears in the catalog.");
     }
     const maxCandidates = Number(values.candidates);
     const maxTitles = Number(values.titles);

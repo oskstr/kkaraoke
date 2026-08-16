@@ -1,5 +1,5 @@
 ---
-import { FACETS, type FacetKey } from "../lib/catalogue";
+import { FACETS, type FacetKey } from "../lib/catalog";
 
 interface Props {
     active: FacetKey;
@@ -8,7 +8,7 @@ interface Props {
 const { active } = Astro.props;
 ---
 
-<nav aria-label="Browse catalogue" data-facet-tabs class="hd mt-3 flex scroll-px-3 gap-1.5 overflow-x-auto">
+<nav aria-label="Browse catalog" data-facet-tabs class="hd mt-3 flex scroll-px-3 gap-1.5 overflow-x-auto">
     {
         FACETS.map((facet) => (
             <a

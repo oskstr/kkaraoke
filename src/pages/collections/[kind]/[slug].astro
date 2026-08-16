@@ -5,13 +5,14 @@ import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
     collectionKinds,
+    collectionOgImage,
     collectionSurfaceStyle,
     mergeSongVariants,
     resolveCollection,
     songsInCollection,
     sortSongVariants,
     type CollectionKind,
-} from "../../../lib/catalogue";
+} from "../../../lib/catalog";
 import { categoriesForSong } from "../../../lib/categories";
 import { jsonForScript } from "../../../lib/json-script";
 import { getSongs, slugify } from "../../../lib/songs";
@@ -69,12 +70,13 @@ const allSongs = rows.map((song) => {
         artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
     };
 });
-const songWord = rows.length === 1 ? "song" : "songs";
 ---
 
 <Layout
     title={`${collection.label} · kkaraoke`}
-    description={`${collection.label} — ${rows.length} ${songWord} in the karaoke catalogue.`}
+    description={collection.label}
+    image={collectionOgImage(collection.art) ?? "/og.png"}
+    imageAlt={collection.art ? collection.label : "kkaraoke"}
 >
     <!--
       One shared-element target for the tile morph: the whole tinted chrome

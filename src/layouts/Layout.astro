@@ -1,18 +1,22 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
-import { DEFAULT_THEME_COLOR, LIGHT_THEME_COLOR } from "../lib/catalogue";
+import { DEFAULT_THEME_COLOR, LIGHT_THEME_COLOR, SITE_DESCRIPTION } from "../lib/catalog";
 import "../styles/global.css";
 
 interface Props {
     title: string;
     description?: string;
+    /** Site-relative share image; collection pages pass their still. */
+    image?: string;
+    imageAlt?: string;
 }
 
-const { title, description = "Browse the karaoke catalogue by artist, decade, genre, and more." } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image = "/og.png", imageAlt = "kkaraoke" } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
-const shareImage = new URL("/og.png", Astro.site ?? Astro.url).href;
+const shareImage = new URL(image, Astro.site ?? Astro.url).href;
+const shareType = image.endsWith(".jpg") || image.endsWith(".jpeg") ? "image/jpeg" : "image/png";
 ---
 
 <!doctype html>
@@ -45,15 +49,15 @@ const shareImage = new URL("/og.png", Astro.site ?? Astro.url).href;
         <meta property="og:url" content={canonical} />
         <meta property="og:locale" content="en" />
         <meta property="og:image" content={shareImage} />
-        <meta property="og:image:alt" content="kkaraoke" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content={imageAlt} />
+        <meta property="og:image:type" content={shareType} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={shareImage} />
-        <meta name="twitter:image:alt" content="kkaraoke" />
+        <meta name="twitter:image:alt" content={imageAlt} />
         <Font cssVariable="--font-archivo" preload />
         <Font cssVariable="--font-dm-mono" />
         <title>{title}</title>

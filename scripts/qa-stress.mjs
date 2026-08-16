@@ -246,7 +246,7 @@ async function scenarioB(page, errors) {
 async function scenarioC(page, errors) {
     const details = [];
     await page.goto(`${BASE}/search`, { waitUntil: "networkidle" });
-    const input = page.locator("#catalogue-search-input, [data-search-input]");
+    const input = page.locator("#catalog-search-input, [data-search-input]");
     const inputCount = await input.count();
     details.push(`search input count: ${inputCount}`);
     if (inputCount === 0) {

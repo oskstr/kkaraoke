@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { buildSearchIndex } from "../lib/catalogue";
+import { buildSearchIndex } from "../lib/catalog";
 import { getArtists, getSongs } from "../lib/songs";
 
 export const prerender = true;

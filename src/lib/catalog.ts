@@ -205,9 +205,18 @@ const COLLECTION_ART: Record<string, CollectionArt> = {
 export const DEFAULT_THEME_COLOR = "#0a0a09";
 /** Light `theme-color` — keep in sync with light `--surface` in global.css. */
 export const LIGHT_THEME_COLOR = "#f2ede4";
+/** Default HTML / Open Graph description. */
+export const SITE_DESCRIPTION = "Browse the karaoke catalog by artist, decade, genre, and more.";
 
 export function artFor(kind: CollectionKind, key: string): string | undefined {
     return COLLECTION_ART[`${kind}:${key}`]?.src;
+}
+
+/** JPEG share card cropped from a collection still (`/collections/rock.webp` → `/og/rock.jpg`). */
+export function collectionOgImage(art: string | undefined): string | undefined {
+    if (art === undefined || !art.endsWith(".webp")) return undefined;
+    const file = art.slice(art.lastIndexOf("/") + 1).replace(/\.webp$/, ".jpg");
+    return `/og/${file}`;
 }
 
 function collectionLook(kind: CollectionKind, key: string) {
@@ -339,7 +348,7 @@ function titleCaseGenre(genre: string): string {
     return lower.replace(/\b([a-z])/g, (ch) => ch.toUpperCase());
 }
 
-/** Curated home tiles that map onto real catalogue filters. */
+/** Curated home tiles that map onto real catalog filters. */
 export function featuredTiles(songs: Song[]): BrowseTile[] {
     // Keep this short (≈4 rows on a phone). Prefer evergreen karaoke entry points:
     // decades people actually sing, Swedish repertoire, Melodifestivalen, big genres,
@@ -385,7 +394,7 @@ export function browseTiles(
             counts.set(decade, (counts.get(decade) ?? 0) + 1);
         }
         // Drop sparse early decades (e.g. a handful of 1940s) but keep 50s / 20s
-        // when the catalogue actually has a usable set.
+        // when the catalog actually has a usable set.
         const decades = uniqueSorted(counts.keys()).filter((d) => (counts.get(d) ?? 0) >= 20);
         return {
             mode: "tiles",
@@ -491,7 +500,7 @@ export function songMatchesCollection(song: Song, kind: CollectionKind, key: str
     return false;
 }
 
-/** Resolve a collection slug back to the canonical key + label from the live catalogue. */
+/** Resolve a collection slug back to the canonical key + label from the live catalog. */
 export function resolveCollection(
     kind: CollectionKind,
     slug: string,

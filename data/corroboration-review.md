@@ -8,7 +8,7 @@ Rate-limited rows are omitted — re-run `pnpm corroborate:titles` to retry them
 
 ## Disagreements
 
-Ours versus the other catalogue's top hit when that hit exists but does not match.
+Ours versus the other catalog's top hit when that hit exists but does not match.
 
 | postId | our artist | our title | Deezer | Discogs |
 | --- | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ Ours versus the other catalogue's top hit when that hit exists but does not matc
 
 ## Not found on either source
 
-No usable Deezer or Discogs hit — often a remix/annotation title, a very local cut, or a credit the other catalogues file differently.
+No usable Deezer or Discogs hit — often a remix/annotation title, a very local cut, or a credit the other catalogs file differently.
 
 | postId | our artist | our title |
 | --- | --- | --- |

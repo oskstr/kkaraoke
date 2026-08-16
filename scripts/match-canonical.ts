@@ -1,5 +1,5 @@
 /**
- * Matches the whole catalogue against the MusicBrainz canonical metadata dump, offline.
+ * Matches the whole catalog against the MusicBrainz canonical metadata dump, offline.
  *
  * The dump exists for exactly our problem: turning an (artist string, title string) pair
  * into MBIDs. Its `combined_lookup` column is the artist and recording names with
@@ -25,7 +25,7 @@ import { dirname } from "node:path";
 import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
-import catalogue from "../data/songs.json" with { type: "json" };
+import catalog from "../data/songs.json" with { type: "json" };
 import {
     isLanguageVersionAnnotation,
     isMasterAnnotation,
@@ -38,7 +38,7 @@ import type { WorkLink } from "./fetch-works.ts";
 /**
  * Characters the dump's Unidecode pass folds but Unicode decomposition does not, since
  * they are single code points rather than a base plus a combining mark. The Nordic ones
- * are the whole point for this catalogue.
+ * are the whole point for this catalog.
  */
 const FOLDED = new Map([
     ["ø", "o"],
@@ -66,7 +66,7 @@ export function combinedLookup(...parts: string[]): string {
 
 /**
  * The rewritings the venue's strings need before they line up with MusicBrainz's. The
- * dropped leading article is the big one, and it happens at both ends: the catalogue files
+ * dropped leading article is the big one, and it happens at both ends: the catalog files
  * The Beatles, The Kinks and The Cranberries without their article, and does the same to
  * titles — `Winner takes it all`, `Little Time`, `Rush of blood to the head`. No amount of
  * punctuation folding fixes that, because the missing word is at the front of the key.
@@ -444,7 +444,7 @@ interface Wanted {
     /** How much rewriting the key took, so a literal match always wins. */
     rank: number;
     rewrites: Rewrite[];
-    /** Set when the key came from a proposal rather than from the catalogue's own strings. */
+    /** Set when the key came from a proposal rather than from the catalog's own strings. */
     proposed?: string;
     from?: string;
     /** ISO 639-3 lyrics language, where a proposal names one (never a show or film). */
@@ -708,7 +708,7 @@ const nameKey = (value: string): string =>
 
 /**
  * Worse than any rewriting for ordinary collisions, so a speculative proposal cannot
- * overrule the catalogue's own strings. Wrong-attribution proposals are exempt in
+ * overrule the catalog's own strings. Wrong-attribution proposals are exempt in
  * `consider` when the existing hit is clearly the mistaken venue artist.
  */
 const PROPOSED_RANK = 99;
@@ -749,7 +749,7 @@ async function main(): Promise<void> {
         if (proposals.size > 0) console.log(`${proposals.size} proposals to put to the dump`);
     }
 
-    // Several songs can share a key: the catalogue lists some songs twice under different
+    // Several songs can share a key: the catalog lists some songs twice under different
     // punch-in numbers.
     const wanted = new Map<string, Wanted[]>();
     const add = (key: string, entry: Wanted): void => {
@@ -757,7 +757,7 @@ async function main(): Promise<void> {
         if (existing === undefined) wanted.set(key, [entry]);
         else existing.push(entry);
     };
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         for (const { key, rewrites } of keysFor(song.artist, song.song)) {
             add(key, { postId: song.postId, rank: rewrites.length, rewrites });
         }
@@ -781,7 +781,7 @@ async function main(): Promise<void> {
 
     const best = new Map<number, Match & { rank: number }>();
     const heads = affixIndex(wanted.keys(), "head");
-    const venueSongByPostId = new Map(catalogue.songs.map((song) => [song.postId, song.song]));
+    const venueSongByPostId = new Map(catalog.songs.map((song) => [song.postId, song.song]));
 
     const allowsLanguageVersion = (postId: number): boolean => {
         const proposal = proposals.get(postId);
@@ -933,9 +933,9 @@ async function main(): Promise<void> {
     });
 
     const afterFirst = best.size;
-    console.log(`  ${rows} rows scanned, ${afterFirst}/${catalogue.songs.length} songs matched`);
+    console.log(`  ${rows} rows scanned, ${afterFirst}/${catalog.songs.length} songs matched`);
 
-    // A second pass, now that we know which MBIDs the catalogue's artists correspond to.
+    // A second pass, now that we know which MBIDs the catalog's artists correspond to.
     // The venue's typos live here: `Sugarbabes`, `Rozallo`, `Zuchero` and `Pink` for
     // `P!nk` never match a combined key, but their other songs did, so the artist is
     // known and the title alone is enough to place the rest.
@@ -945,7 +945,7 @@ async function main(): Promise<void> {
         for (const mbid of mbids) set.add(mbid);
         mbidsByArtist.set(artistKey, set);
     };
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
         remember(combinedLookup(song.artist), match.artistMbids);
@@ -973,7 +973,7 @@ async function main(): Promise<void> {
     }
 
     const byTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         const current = best.get(song.postId);
         // Also re-open songs stuck on a live/remix master so a studio cut can upgrade them
         // (Destiny's Child – Soldier matched Live in Atlanta before Destiny Fulfilled).
@@ -1039,7 +1039,7 @@ async function main(): Promise<void> {
     // credit is order-free and still blocks the Peabo-on-a-cover failure (Regina Belle absent).
     const beforeCollab = best.size;
     const collabByTitle = new Map<string, { postId: number; required: Set<string>[] }[]>();
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         if (best.has(song.postId)) continue;
         const fragments = artistFragments(song.artist);
         if (fragments.length < 2) continue;
@@ -1092,7 +1092,7 @@ async function main(): Promise<void> {
     // reasonably close.
     const beforeTitleFirst = best.size;
     const titleFirst = new Map<string, { postId: number; artist: string }[]>();
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         if (best.has(song.postId)) continue;
         for (const title of new Set([song.song, withoutAnnotation(song.song)])) {
             const key = combinedLookup(title);
@@ -1131,7 +1131,7 @@ async function main(): Promise<void> {
 
     // Title-first may have just identified artists the earlier scoped pass could not see —
     // Kygo only appeared as `Kygo Ft. …` until Firestone matched — so a second scoped pass
-    // places the rest of their catalogue (`Kygo – Higher love`) now that the lead is known.
+    // places the rest of their catalog (`Kygo – Higher love`) now that the lead is known.
     const beforeRescope = best.size;
     const mbidsAfterTitle = new Map<string, Set<string>>();
     const rememberAfter = (artistKey: string, mbids: Iterable<string>): void => {
@@ -1139,7 +1139,7 @@ async function main(): Promise<void> {
         for (const mbid of mbids) set.add(mbid);
         mbidsAfterTitle.set(artistKey, set);
     };
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
         rememberAfter(combinedLookup(song.artist), match.artistMbids);
@@ -1155,7 +1155,7 @@ async function main(): Promise<void> {
         }
     }
     const rescopeByTitle = new Map<string, { postId: number; mbids: Set<string>; viaLead: boolean }[]>();
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         if (best.has(song.postId)) continue;
         const own = mbidsAfterTitle.get(combinedLookup(song.artist));
         const lead = leadArtist(song.artist);
@@ -1210,7 +1210,7 @@ async function main(): Promise<void> {
         for (const mbid of mbids) entry.mbids.add(mbid);
         creditsByArtistKey.set(artistKey, entry);
     };
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         const match = best.get(song.postId);
         if (match === undefined || !match.trusted) continue;
         rememberCredits(combinedLookup(song.artist), match.artistCredit, match.artistMbids);
@@ -1242,7 +1242,7 @@ async function main(): Promise<void> {
             }
         }
     };
-    for (const song of catalogue.songs) {
+    for (const song of catalog.songs) {
         if (best.has(song.postId)) continue;
         const titleKey = combinedLookup(withoutAnnotation(song.song));
         // A key too short for an edit is still worth reaching for on a transposition alone.
@@ -1279,7 +1279,7 @@ async function main(): Promise<void> {
         console.log(`  recovered ${best.size - beforeNear} more songs`);
     }
 
-    const results = catalogue.songs.map((song) => {
+    const results = catalog.songs.map((song) => {
         const match = best.get(song.postId);
         const proposal = proposals.get(song.postId);
         if (match === undefined) {

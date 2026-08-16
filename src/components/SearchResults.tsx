@@ -1,6 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import FavoriteButton from "./FavoriteButton";
-import { matchesQuery, type SearchSong } from "../lib/catalogue";
+import { matchesQuery, type SearchSong } from "../lib/catalog";
 import { getSearchIndex, type SearchIndex } from "../lib/search-index";
 
 interface Suggestion {
@@ -128,13 +128,13 @@ export default function SearchResults({ suggestions, inputId }: Props) {
     const idle = !query.trim();
     const empty = Boolean(query.trim()) && index !== null && rows.length === 0 && artistHits.length === 0;
     const status = loadError
-        ? "Couldn’t load the catalogue."
+        ? "Couldn’t load the catalog."
         : !index && !idle
           ? "Searching"
           : empty
             ? "No matches"
             : q
-              ? `${artistHits.length} artists, ${rows.length} songs`
+              ? "Matches"
               : "";
 
     return (
@@ -142,7 +142,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             <div className="sr-only" aria-live="polite" aria-atomic="true">
                 {status}
             </div>
-            {loadError && <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalogue.</div>}
+            {loadError && <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalog.</div>}
 
             {!loadError && !index && !idle && (
                 <div className="px-5 py-16 text-center text-sm text-muted">Searching…</div>

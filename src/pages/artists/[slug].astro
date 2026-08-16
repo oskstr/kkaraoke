@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import BrandMark from "../../components/BrandMark.astro";
 import SongList from "../../components/SongList.astro";
-import { collectionPath, mergeSongVariants, sortSongVariants } from "../../lib/catalogue";
+import { collectionPath, mergeSongVariants, sortSongVariants } from "../../lib/catalog";
 import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
 
 export function getStaticPaths() {
@@ -21,13 +21,9 @@ interface Props {
 }
 
 const { artist, songs } = Astro.props;
-const songWord = songs.length === 1 ? "song" : "songs";
 ---
 
-<Layout
-    title={`${artist.name} · kkaraoke`}
-    description={`${artist.name} — ${songs.length} ${songWord} in the karaoke catalogue.`}
->
+<Layout title={`${artist.name} · kkaraoke`} description={artist.name}>
     <header class="border-b border-line px-[18px] pt-[22px] pb-[18px]">
         <BrandMark />
         <h1 class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream" data-artist-title>

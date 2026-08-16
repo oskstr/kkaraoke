@@ -1,12 +1,12 @@
 /**
- * Scrapes the karaoke catalogue from kkaraoke.se into a JSON file.
+ * Scrapes the karaoke catalog from kkaraoke.se into a JSON file.
  *
  * The site offers no API. The list is a WordPress/Elementor page with a JetEngine
  * listing widget, and paging it re-renders the entire ~450 KB page as HTML, so the
- * only way to read the catalogue is to walk every page and pull the rows out of the
+ * only way to read the catalog is to walk every page and pull the rows out of the
  * markup. Runs rarely and by hand, so it parses with regexes rather than pulling in
  * an HTML parser; every assumption about the markup is asserted, and the script
- * aborts instead of writing a half-scraped or empty catalogue.
+ * aborts instead of writing a half-scraped or empty catalog.
  *
  * Usage: pnpm fetch:songs [--out <file>] [--pages <n>] [--delay <ms>]
  */
@@ -18,7 +18,7 @@ import { parseArgs } from "node:util";
 const LIST_URL = "https://www.kkaraoke.se/latar/";
 
 /**
- * The page renders the same catalogue twice, as two listings with different page
+ * The page renders the same catalog twice, as two listings with different page
  * sizes, and `jsf` picks which of them `pagenum` applies to. This is the one
  * showing 50 rows per page; the other shows 10 and would need five times the
  * requests.
@@ -36,7 +36,7 @@ const ELEMENT_IDS = {
     song: "d1a0a37",
 } as const;
 
-const USER_AGENT = "kkaraoke-catalogue-fetcher (+https://github.com/oskstr/kkaraoke)";
+const USER_AGENT = "kkaraoke-catalog-fetcher (+https://github.com/oskstr/kkaraoke)";
 const REQUEST_TIMEOUT_MS = 30_000;
 const MAX_ATTEMPTS = 4;
 
@@ -212,7 +212,7 @@ function parseRows(listingHtml: string, page: number): Song[] {
     });
 }
 
-/** One song per line, so refreshing the catalogue produces a diff worth reading. */
+/** One song per line, so refreshing the catalog produces a diff worth reading. */
 function serialize(songs: Song[]): string {
     const rows = songs.map((song) => `        ${JSON.stringify(song)}`).join(",\n");
     return [
@@ -270,7 +270,7 @@ async function main(): Promise<void> {
             console.log(`${totalPages} pages of up to ${perPage} songs to fetch`);
         }
 
-        // The walk takes minutes and the source sorts by artist, so a catalogue edit
+        // The walk takes minutes and the source sorts by artist, so a catalog edit
         // midway through can shift rows across page boundaries and serve some of them
         // twice. Deduplicating on the WordPress post id keeps that out of the output,
         // and a page carrying nothing new means paging has stopped making progress.

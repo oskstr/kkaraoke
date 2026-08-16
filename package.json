@@ -24,7 +24,7 @@
         "fetch:works": "node --experimental-strip-types scripts/fetch-works.ts",
         "corroborate:titles": "node --experimental-strip-types scripts/corroborate-titles.ts",
         "build:resolved": "node --experimental-strip-types scripts/build-resolved.ts",
-        "audit:catalogue": "node --experimental-strip-types scripts/audit-catalogue.ts",
+        "audit:catalog": "node --experimental-strip-types scripts/audit-catalog.ts",
         "review:artist-slugs": "node --experimental-strip-types scripts/review-artist-slugs.ts"
     },
     "dependencies": {

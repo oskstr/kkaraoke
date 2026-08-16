@@ -45,8 +45,8 @@ async function main() {
     console.log("home", home);
     if (!home.launch || !home.input) fail("home search field missing");
     if (home.reload) fail("search launch should not full-reload");
-    if (home.persist !== "catalogue-search-input") fail("search input should persist");
-    if (home.brandPersist !== "catalogue-brand") fail("brand mark should persist");
+    if (home.persist !== "catalog-search-input") fail("search input should persist");
+    if (home.brandPersist !== "catalog-brand") fail("brand mark should persist");
 
     await page.evaluate(() => {
         const brand = document.querySelector("[data-brand-mark]");
@@ -101,7 +101,7 @@ async function main() {
     if (!settled.hasCancel) fail("search page missing Cancel");
     if (settled.hasLaunch) fail("search page should not be a search launch target");
     if (!settled.brandKept) fail("brand mark was replaced instead of persisted");
-    if (settled.brandPersist !== "catalogue-brand") fail("brand persist dropped on search");
+    if (settled.brandPersist !== "catalog-brand") fail("brand persist dropped on search");
     // iOS caret overlay is painted at the focus-time rect; the field must not move.
     if (home.top !== settled.top) fail(`search field moved vertically: home=${home.top} search=${settled.top}`);
     if (home.left !== settled.left) fail(`search field moved horizontally: home=${home.left} search=${settled.left}`);
@@ -164,7 +164,7 @@ async function main() {
         if (leftover.searchInput) fail("persisted search input leaked onto artist page");
         if (!leftover.brand) fail("artist page missing brand mark");
         if (!leftover.brandKept) fail("brand mark was replaced instead of persisted onto artist page");
-        if (leftover.brandPersist !== "catalogue-brand") fail("brand persist dropped on artist page");
+        if (leftover.brandPersist !== "catalog-brand") fail("brand persist dropped on artist page");
 
         await page.click("[data-brand-mark]");
         await page.waitForURL((url) => url.pathname === "/", { timeout: 15000 });

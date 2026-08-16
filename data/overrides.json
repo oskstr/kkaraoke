@@ -632,7 +632,7 @@
                     "name": "The High School Musical Cast"
                 }
             ],
-            "why": "Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
+            "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         },
         {
             "postId": 50425,
@@ -1120,7 +1120,7 @@
             "postId": 51628,
             "title": "Missing You Now",
             "year": 1992,
-            "why": "Catalogue Missing You is Bolton's Missing You Now. Year from Discogs single (1992)."
+            "why": "Catalog Missing You is Bolton's Missing You Now. Year from Discogs single (1992)."
         },
         {
             "postId": 51630
