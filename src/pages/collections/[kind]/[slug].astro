@@ -70,12 +70,11 @@ const allSongs = rows.map((song) => {
         artists: (song.artists ?? []).map((a) => ({ name: a.name, slug: a.slug })),
     };
 });
-const songWord = rows.length === 1 ? "song" : "songs";
 ---
 
 <Layout
     title={`${collection.label} · kkaraoke`}
-    description={`${collection.label} — ${rows.length} ${songWord}.`}
+    description={`${collection.label}.`}
     image={collectionOgImage(collection.art) ?? "/og.png"}
     imageAlt={collection.art ? collection.label : "kkaraoke"}
 >
