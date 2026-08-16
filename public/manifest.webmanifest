@@ -1,7 +1,7 @@
 {
     "name": "kkaraoke",
     "short_name": "kkaraoke",
-    "description": "Songs, artists, films",
+    "description": "Browse the karaoke catalog by artist, decade, genre, and more.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0a0a09",
