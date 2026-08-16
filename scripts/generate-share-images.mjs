@@ -121,7 +121,7 @@ const ogHtml = `<!doctype html>
     <div class="glow-2"></div>
     <div class="lockup">
       <div class="brand">${mark}<span class="name">kkaraoke</span></div>
-      <p class="tag">A karaoke song list.</p>
+      <p class="tag">Songs, artists, films</p>
     </div>
   </div>
 </body>

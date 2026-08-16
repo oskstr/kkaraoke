@@ -205,6 +205,8 @@ const COLLECTION_ART: Record<string, CollectionArt> = {
 export const DEFAULT_THEME_COLOR = "#0a0a09";
 /** Light `theme-color` — keep in sync with light `--surface` in global.css. */
 export const LIGHT_THEME_COLOR = "#f2ede4";
+/** Share / search copy — same words as the search field. */
+export const SITE_DESCRIPTION = "Songs, artists, films";
 
 export function artFor(kind: CollectionKind, key: string): string | undefined {
     return COLLECTION_ART[`${kind}:${key}`]?.src;

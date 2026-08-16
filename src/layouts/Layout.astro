@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
-import { DEFAULT_THEME_COLOR, LIGHT_THEME_COLOR } from "../lib/catalogue";
+import { DEFAULT_THEME_COLOR, LIGHT_THEME_COLOR, SITE_DESCRIPTION } from "../lib/catalogue";
 import "../styles/global.css";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
     imageAlt?: string;
 }
 
-const { title, description = "A karaoke song list.", image = "/og.png", imageAlt = "kkaraoke" } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image = "/og.png", imageAlt = "kkaraoke" } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
 const shareImage = new URL(image, Astro.site ?? Astro.url).href;
