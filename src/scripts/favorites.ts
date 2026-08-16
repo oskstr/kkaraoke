@@ -70,7 +70,7 @@ export function paintFavoritesNav(root: ParentNode = document): void {
         el.classList.toggle("border-line-strong", !on);
         el.classList.toggle("bg-panel", !on);
         el.classList.toggle("text-muted", !on);
-        el.setAttribute("aria-label", count > 0 ? `Favorites, ${count} saved` : "Favorites");
+        el.setAttribute("aria-label", "Favorites");
     });
 }
 

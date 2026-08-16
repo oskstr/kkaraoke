@@ -134,7 +134,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
           : empty
             ? "No matches"
             : q
-              ? `${artistHits.length} artists, ${rows.length} songs`
+              ? "Matches"
               : "";
 
     return (
