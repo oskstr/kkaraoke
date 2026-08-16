@@ -50,11 +50,6 @@ const ogHtml = `<!doctype html>
     src: url("Inter-Bold.ttf") format("truetype");
     font-weight: 700;
   }
-  @font-face {
-    font-family: Inter;
-    src: url("Inter-Regular.ttf") format("truetype");
-    font-weight: 400;
-  }
   html, body {
     margin: 0;
     width: 1200px;
@@ -105,14 +100,6 @@ const ogHtml = `<!doctype html>
     letter-spacing: -0.04em;
     line-height: 1;
   }
-  .tag {
-    margin: 20px 0 0 94px;
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    color: #8b8278;
-  }
 </style>
 </head>
 <body>
@@ -121,7 +108,6 @@ const ogHtml = `<!doctype html>
     <div class="glow-2"></div>
     <div class="lockup">
       <div class="brand">${mark}<span class="name">kkaraoke</span></div>
-      <p class="tag">Songs, artists, films</p>
     </div>
   </div>
 </body>
@@ -185,7 +171,6 @@ mkdirSync(outDir, { recursive: true });
 mkdirSync(ogDir, { recursive: true });
 run("cp", [
     "/usr/share/fonts/truetype/macos/Inter-Bold.ttf",
-    "/usr/share/fonts/truetype/macos/Inter-Regular.ttf",
     workDir,
 ]);
 

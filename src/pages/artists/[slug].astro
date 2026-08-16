@@ -23,7 +23,7 @@ interface Props {
 const { artist, songs } = Astro.props;
 ---
 
-<Layout title={`${artist.name} · kkaraoke`}>
+<Layout title={`${artist.name} · kkaraoke`} description={artist.name}>
     <header class="border-b border-line px-[18px] pt-[22px] pb-[18px]">
         <BrandMark />
         <h1 class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream" data-artist-title>

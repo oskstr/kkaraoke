@@ -74,6 +74,7 @@ const allSongs = rows.map((song) => {
 
 <Layout
     title={`${collection.label} · kkaraoke`}
+    description={collection.label}
     image={collectionOgImage(collection.art) ?? "/og.png"}
     imageAlt={collection.art ? collection.label : "kkaraoke"}
 >
