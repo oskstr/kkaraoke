@@ -23,7 +23,7 @@ able to say so.
 | :-------------------------- | :---------------------- | :---------------------------------------------------------------- |
 | `data/songs.json`           | `pnpm fetch:songs` only | The scrape. Never hand-edited.                                    |
 | `data/resolved.json`        | the resolver only       | Lookup results and provenance. Fully regenerable; safe to delete. |
-| `data/artist-names.json`    | humans only             | Catalogue-scoped display names per artist MBID.                   |
+| `data/artist-names.json`    | humans only             | Catalog-scoped display names per artist MBID.                   |
 | `data/overrides.json`       | humans only             | Review decisions and hand corrections. No script ever writes it.  |
 | `data/overrides-review.md`  | `pnpm build:resolved`   | Venue vs override side-by-side. Regenerable; do not edit.         |
 | `data/proposals.json`       | humans / agents         | Guesses put to the dump. Applies only when MusicBrainz agrees.    |
@@ -46,7 +46,7 @@ case variants, the collaboration splitting. Doing it first also makes the song p
 lookup scoped to a known artist is a far narrower question than a title search against the whole database.
 
 For prioritisation: 1278 artists have exactly one song, so **802 artists cover 4637 songs (78% of the
-catalogue)**. The long tail is 22% of the songs at the highest cost per item and the worst source coverage, and
+catalog)**. The long tail is 22% of the songs at the highest cost per item and the worst source coverage, and
 is the natural place to let flags accumulate rather than grind.
 
 ### Search on aliases, not on the name field
@@ -117,7 +117,7 @@ many credited artists.
 work's first publication year. They diverge wildly for standards and traditional songs, and picking one would
 mean arguing about it later.
 
-**Match works, not recordings.** A karaoke catalogue is full of covers, and there are thousands of karaoke
+**Match works, not recordings.** A karaoke catalog is full of covers, and there are thousands of karaoke
 recordings that would pollute recording-level matching. Works also carry the composer and the translations.
 _Tested:_ `Stilla natt` resolves to a work at 100 with type `Song`.
 
@@ -160,7 +160,7 @@ covering 39 songs before an obscure single. Because the agent's confidence is it
 a performer. Title-only lookup is ambiguous across the dump (`Myrskyn jälkeen` hits several artists at score 100),
 so the resolution path is a proposal that names the karaoke-standard performer and sets `language: "fin"`.
 `from` is reserved for shows and films — there is no musical called Finsk musik. Other Finnish-language songs
-in the catalogue get the same language code from the MusicBrainz works pass, not only this venue bucket.
+in the catalog get the same language code from the MusicBrainz works pass, not only this venue bucket.
 
 **Christmas (19, filed under `Julsång`) and other traditional / category buckets.** Three rules, in order:
 
@@ -199,7 +199,7 @@ than being treated as artist-less.
 | Same song listed twice under different numbers | 34 pairs, e.g. `Coldplay – In my place` as 119 and 4477         |
 | Songs with no real artist                      | 124, across 30 artist values                                    |
 
-The title casing is not a scattering of typos but a transformation applied to the whole catalogue, which is why
+The title casing is not a scattering of typos but a transformation applied to the whole catalog, which is why
 titles are a 5900-lookup job and not a cleanup pass.
 
 The 34 duplicate pairs need a product decision rather than a lookup: either show one row carrying both numbers,
@@ -229,7 +229,7 @@ Two rewrites of the venue's strings earn their keep, and each match records whic
 
 | Rewrite                        |  Recovers | Why                                                                                                                                        |
 | :----------------------------- | --------: | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| prepend the article            | 176 songs | the catalogue files `Beatles`, `Kinks`, `Housemartins` without it, and folding punctuation cannot fix a missing word at the front of a key |
+| prepend the article            | 176 songs | the catalog files `Beatles`, `Kinks`, `Housemartins` without it, and folding punctuation cannot fix a missing word at the front of a key |
 | strip a trailing parenthetical |  33 songs | `Un-break my heart (original)`, `Country roads (remix)`                                                                                    |
 
 **What the dump cannot do is enrich.** It carries no works, composers, release dates, aliases or genres. Its chosen
@@ -243,13 +243,13 @@ matches need review — one reached Madonna's `Secret (Some Bizarre mix)` from `
 
 | Stage                          | Cost                             | Produces                                                                                                                                                   |
 | :----------------------------- | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| offline match against the dump | 45 seconds, no requests          | identity and canonical titles for 88% of the catalogue                                                                                                     |
+| offline match against the dump | 45 seconds, no requests          | identity and canonical titles for 88% of the catalog                                                                                                     |
 | web service for the residue    | **506 artist strings**, not 2080 | the typos and abbreviations the dump cannot fold: `Rozallo`, `Zuchero`, `Sugabab`/`Sugarbabes`, `Pink` for `P!nk`, `Lena PH`, `Paul Simon & Art Garfunkel` |
 | enrichment by MBID             | 1644 artists plus works          | years, works, composers, languages, genres                                                                                                                 |
 
 That removes about three quarters of the crawling, and the enrichment that remains is direct lookups by id rather
-than searches, which are both faster and exact. It also means the evidence-and-judgement pipeline above is aimed at
-506 hard strings instead of the whole catalogue, which is where it was always going to be worth the most.
+than searches, which are both faster and exact. It also means the evidence-and-judgment pipeline above is aimed at
+506 hard strings instead of the whole catalog, which is where it was always going to be worth the most.
 
 ## Is another database worth using?
 
@@ -283,7 +283,7 @@ Where another source would genuinely add something MusicBrainz lacks:
   registries and carry alternate titles per distribution channel.
 - **Duet still has no source.** Nothing on that list records who sings which part. It stays a human-curated flag.
 
-Neither Rate Your Music (no API, scraping prohibited) nor AllMusic (no API) is usable. Streaming catalogues would
+Neither Rate Your Music (no API, scraping prohibited) nor AllMusic (no API) is usable. Streaming catalogs would
 mean OAuth credentials for a worse answer.
 
 ## Cost and rate limits
@@ -316,7 +316,7 @@ MusicBrainz, not by us.
 
 What concurrency does help with is everything that is not a request. Keep one fetcher that owns the entire
 request budget and writes to the cache, and let any number of workers reason over what it has already fetched.
-That split is worth having anyway: it is what makes the job resumable, and what makes re-running the judgement
+That split is worth having anyway: it is what makes the job resumable, and what makes re-running the judgment
 step against different prompts free.
 
 If the wall clock ever genuinely matters, the answer is a local mirror of the MusicBrainz database rather than
@@ -328,7 +328,7 @@ Rather than start on 2080 artists, the approach was tried on 50 — `data/pilot/
 weighted towards the cases known to be hard, with unambiguous controls mixed in so that false positives would be
 visible and not just misses. `data/pilot/expectations.json` records what I thought the answers were, written from
 the evidence before any model saw it, and `pnpm score:verdicts` checks a run against them. The expectations are my
-judgement, not ground truth, and the cases where I do not think there is one defensible answer are marked
+judgment, not ground truth, and the cases where I do not think there is one defensible answer are marked
 observe-only.
 
 Collecting the evidence took 557 requests. Grok 4.5 then judged it with no network access of its own and **passed
@@ -362,7 +362,7 @@ evidence rather than in a model's care.
 One mechanical result is worth more than the model comparison. Asking only whether _any_ candidate that is neither
 a placeholder nor a tribute act cleanly has the venue's songs identified **exactly the six strings that are not
 artists**, with no false positives and no misses. That is a cheap arithmetic test over data we already fetch, and
-it means judgement is only needed for a remainder, not for the catalogue.
+it means judgment is only needed for a remainder, not for the catalog.
 
 ### And on a sample nobody curated
 
@@ -371,7 +371,7 @@ strings have exactly one song, which is the population where corroboration is we
 it does not, with none of the 3-of-3 against 0-of-3 contrast that settles the multi-song cases. So
 `data/pilot/tail-artists.txt` takes 60 of them chosen by hashing the name, which is reproducible and not curated.
 
-**56 of the 60 corroborated cleanly, with no judgement involved.** The four that did not are the useful part, and
+**56 of the 60 corroborated cleanly, with no judgment involved.** The four that did not are the useful part, and
 none of them is an artist-identification failure:
 
 - `Little Mermaid` and `Fiddler on the roof` are a film and a musical. Not artists, which is the right answer.
@@ -380,7 +380,7 @@ none of them is an artist-identification failure:
   Melodifestivalen entry is `Symfonin`. Neither survives a phrase search. **Both records were in MusicBrainz all
   along** — see below — so this was our query, not their data.
 
-So the tail's weakness is **titles, not artists**, and the artist pass can be trusted across the whole catalogue.
+So the tail's weakness is **titles, not artists**, and the artist pass can be trusted across the whole catalog.
 That relocates the remaining risk onto the song pass, which is both the larger job — 5915 lookups against 2080 —
 and the one where the venue's own formatting fights us: 84% of multi-word titles are sentence-cased, and the
 sample also turned up parenthetical annotations (`Part of your world (Disney)`, `Bella Notte (english)`) and lost
@@ -395,7 +395,7 @@ request. The artist pass is therefore about **14800 requests and 10 to 12 hours*
 It also does not have to be one job. Ordered by how many songs an artist covers, each chunk is independently
 useful and the work is banked as it goes:
 
-| Chunk                      | Requests | Time | Catalogue covered |
+| Chunk                      | Requests | Time | Catalog covered |
 | :------------------------- | -------: | ---: | ----------------: |
 | 128 artists with 10+ songs |     1400 |  1 h |               37% |
 | 271 with 4-9               |     3000 |  2 h |               63% |
@@ -403,8 +403,8 @@ useful and the work is banked as it goes:
 | 1278 with 1                |     7200 |  5 h |              100% |
 
 The table above is what the artist pass costs through the web service, and it is now the fallback rather than the
-plan. The offline match does the same work for 88% of the catalogue in 45 seconds, so these figures apply only to
-the 506 strings it cannot fold — roughly a quarter of the crawl, and the quarter that most needs judgement.
+plan. The offline match does the same work for 88% of the catalog in 45 seconds, so these figures apply only to
+the 506 strings it cannot fold — roughly a quarter of the crawl, and the quarter that most needs judgment.
 
 ## Asking about a hundred things at once
 
@@ -432,7 +432,7 @@ sparse as _genres_; they are not sparse as _tags_. Artist search returns raw tag
 first 100 artists have some. The trouble with tags is that they are not all genres: U2 is tagged `alternative
 rock` and also `irish`, `ireland` and `dublin`.
 
-MusicBrainz publishes the genre list it recognises, all 2184 of them, at `genre/all`. Intersecting an artist's
+MusicBrainz publishes the genre list it recognizes, all 2184 of them, at `genre/all`. Intersecting an artist's
 tags with that list keeps `britpop` and drops `british`, for the cost of paging through the vocabulary once.
 **1424 of 1670 artists** come back with at least one genre, which covers **4469 songs**. Discogs is no longer
 needed for a first cut.
@@ -453,7 +453,7 @@ important part: remixes, live takes and extended mixes are separate recordings w
 them in is how a 2019 live version becomes a song's release year.
 
 One systematic error survives, and it is worth knowing about. Where the venue's title is a misspelling that
-MusicBrainz also holds as a genuine later recording, the year follows the later recording: the catalogue's
+MusicBrainz also holds as a genuine later recording, the year follows the later recording: the catalog's
 `Girls just wanna have fun` matches Cyndi Lauper's mid-90s re-recording under that spelling rather than the 1983
 `Girls Just Want to Have Fun`. The title is right, the artist is right, and the year is twelve years late.
 
@@ -464,7 +464,7 @@ MusicBrainz has more than one artist called Chicago — but it is the right orde
 before the artist existed is rejected outright, since that one is impossible rather than merely suspicious.
 
 The distribution is a good sanity check in its own right. It peaks in the 1990s and 2000s, tails off through the
-1970s and 60s, and has 58 songs before 1960, which is what a karaoke catalogue should look like.
+1970s and 60s, and has 58 songs before 1960, which is what a karaoke catalog should look like.
 
 Coverage is the argument for the wide-then-narrow order. The wide pass at five pairs to a query dated 76% of the
 recordings for 1041 requests; a narrow pass at two pairs over just the gaps took that to **97%** for 660 more.
@@ -506,7 +506,7 @@ unrelated people called Pink never do.
 
 ## The venue drops leading articles from titles too, not just artists
 
-The article rule earned for artists — the catalogue files The Beatles and The Kinks without it — applies just as
+The article rule earned for artists — the catalog files The Beatles and The Kinks without it — applies just as
 well to titles, and nobody thought to try it there. `Winner takes it all`, `Little time`, `Zephyr song`, `Glory of
 love`, `Dark end of the street`: 25 songs, recovered by generating the same variants on both halves of the key
 rather than only on the left.
@@ -514,7 +514,7 @@ rather than only on the left.
 Below seven characters a title gets no edit budget at all, because at that length a single substitution is
 usually a different song — `Stay` is one edit from `Say`. A **transposition** is not like that. Swapping two
 adjacent characters is a slip of the fingers, and no real title is the swap of another, so it is safe exactly
-where a substitution is not. Inside an artist's own catalogue it finds Madonna's `Vouge` and nothing else.
+where a substitution is not. Inside an artist's own catalog it finds Madonna's `Vouge` and nothing else.
 
 ## What is left, and why matching cannot fix most of it
 
@@ -524,7 +524,7 @@ one decision about a wrong-attribution cluster settles many songs and one about 
 the `postId` a proposal is keyed by and the `id` on the wall.
 
 Most of what used to look like “obvious typos of famous artists” in that queue were real matching gaps, not
-judgement failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit because the lead was only known from
+judgment failures: `Clean Bandit ft Zara Larssn` never reached Clean Bandit because the lead was only known from
 other collaborations, `Nanne Grönwall` is filed by MusicBrainz as the mononym `Nanne`, and `Colby Caillat` has no
 other trusted song to fuzzy-match from. A title-first pass, lead indexing from matched collaborations, and a
 second scoped pass after title-first now clear those. Finnish proposals then cleared all 39
@@ -566,7 +566,7 @@ prefix for mononyms like `Nanne`, or a lead that heads the credit). Short titles
 
 Matched collaborations now also teach their lead: once `Clean Bandit feat. Sean Paul & Anne-Marie` matches,
 `Clean Bandit ft Zara Larssn` can be lead-scoped. After title-first identifies new artists, a second scoped pass
-picks up the rest of their catalogue — that is how `Kygo – Higher love` lands once Firestone has named Kygo.
+picks up the rest of their catalog — that is how `Kygo – Higher love` lands once Firestone has named Kygo.
 
 Wrong billing order is a separate failure: `Ed Sheeran Ft. Eminem – River` is Eminem feat. Ed Sheeran on the
 dump, so lead-scoping rejects it. When two or more named fragments are already known, a collab-scoped pass
@@ -580,7 +580,7 @@ correction can be kept separate: `data/proposals.json` holds hypotheses, and a p
 nothing but add keys for the matcher to look for. It takes effect if and only if MusicBrainz
 turns out to hold that artist with that recording. A wrong guess finds nothing and changes
 nothing, which is what makes it safe to let something fallible write that file. Proposals are
-also ranked below every rewriting, so one can never overrule the catalogue's own strings.
+also ranked below every rewriting, so one can never overrule the catalog's own strings.
 
 What an agent is genuinely good at here is generating the hypothesis, because the failures are
 not string problems and world knowledge is the only thing that reaches them:
@@ -613,16 +613,16 @@ the repertoire the venue's own staff know and an English-language model does not
 One effect was not designed and is worth keeping. Confirming three `Sound of Music` proposals
 made Julie Andrews a trusted credit for that artist string, and the artist-scoped pass then
 found `Edelweiss` under her without being asked. Naming an artist once pays for their whole
-catalogue.
+catalog.
 
 ### A show is a fact about the song, not its artist
 
 The first version of this resolved `Grease – Summer nights` to `John Travolta & Olivia
 Newton-John` and stopped there, which is right about the performers and wrong about the
-catalogue: it deleted the only word anyone would search for. The venue put a show in the artist
+catalog: it deleted the only word anyone would search for. The venue put a show in the artist
 column because it had nowhere else to put one.
 
-So a proposal can name the show as its own field, travelling beside the artist rather than
+So a proposal can name the show as its own field, traveling beside the artist rather than
 competing with it. Where the venue only said `Disney`, the proposal names the film, so three
 songs are now from Mary Poppins, Mulan and Pocahontas rather than from a studio. Twenty songs
 across seven shows.
@@ -660,7 +660,7 @@ So the column is built from the credited artists' own canonical names, **comma s
 Song 4096 reads `2Pac, K-Ci & JoJo`, where the ampersand belongs to one duo's name rather
 than joining two artists — which is the whole reason the join has to come from the id list
 and not from punctuation. Do not put `feat.`, `duet with`, `vs.`, or an ampersand between
-artists. Those are MusicBrainz credit-line join phrases, not how this catalogue names
+artists. Those are MusicBrainz credit-line join phrases, not how this catalog names
 performers. Every matched song carries its artists individually now, not only the
 collaborations.
 
@@ -678,7 +678,7 @@ recover join phrases for display.
 ### A name has to be known for these songs
 
 MusicBrainz's primary is today's preferred form (`Ye`, `JAŸ-Z`), which is wrong for a room full
-of 2000s karaoke. `data/artist-names.json` maps artist MBIDs to the catalogue-scoped display
+of 2000s karaoke. `data/artist-names.json` maps artist MBIDs to the catalog-scoped display
 name — what these songs are well known under (Kanye West, Jackson 5, Ian Dury & the Blockheads).
 The venue string is never consulted. Unmapped artists keep the primary, except that stylized
 letters prefer a plain alias (`JAŸ-Z` → `Jay-Z`) and symbols stay (`A★Teens`, `98°`). Where the
@@ -728,7 +728,7 @@ against Discogs and Deezer). Subtitles that are part of the name stay:
 
 Done, and live on the site:
 
-1. **Match offline** against the canonical dump. Identity and canonical titles for 89% of the catalogue in 90
+1. **Match offline** against the canonical dump. Identity and canonical titles for 89% of the catalog in 90
    seconds, no requests. Prefix matches are graded by what the canonical title has that the venue's does not — a
    bracketed version marker, two stray characters, or something else — and only the first two are applied.
    Bracketed placeholder entities are excluded by their own name.
@@ -747,9 +747,9 @@ Done, and live on the site:
    review-queue songs (title typos, wrong attributions, shows filed as artists); the dump confirmed most of them.
 8. **Title-first and re-scope.** Exact title plus a close-enough artist credit recovers misspelled artists with no
    other trusted song; indexing leads from matched collaborations and re-scoping after title-first recovers the
-   rest of those artists' catalogues. Soundtrack `(from …)` suffixes are stripped from published titles.
+   rest of those artists' catalogs. Soundtrack `(from …)` suffixes are stripped from published titles.
 
-That places the large majority of the catalogue: corrected titles and artists, genres, and dates where the dump
+That places the large majority of the catalog: corrected titles and artists, genres, and dates where the dump
 and web service agree. Regenerated counts live in `data/review.md` and the matcher's own summary.
 
 Still to do:
@@ -782,5 +782,5 @@ Still to do:
 12. Artist pages, which are the reason for all of the above. Every matched song already carries its artists
     individually, with their ids, so the page has what it needs to link them one by one.
 
-Favourites, playlists and login are a separate concern and want a real database. The catalogue itself should stay
+Favorites, playlists and login are a separate concern and want a real database. The catalog itself should stay
 as files in the repository: it is small, it wants to be diffable, and it makes the build depend on nothing.

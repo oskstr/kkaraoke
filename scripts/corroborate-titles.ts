@@ -1,7 +1,7 @@
 /**
  * Corroborates resolved artist+title pairs against Discogs and Deezer.
  *
- * MusicBrainz stays primary for identity. This pass checks that a separate catalogue
+ * MusicBrainz stays primary for identity. This pass checks that a separate catalog
  * also knows the same artist performing that song title, so published names are not
  * grounded only in one dump of recordings. Disagreements are listed for review — this
  * script never writes overrides or proposals.
@@ -149,7 +149,7 @@ function leadName(artist: string): string {
 }
 
 /**
- * Streaming catalogues are full of karaoke/tribute rows that share the song title. Those are
+ * Streaming catalogs are full of karaoke/tribute rows that share the song title. Those are
  * not corroboration of our artist — skip them when picking a hit to compare.
  */
 const KARAOKE_JUNK =
@@ -434,7 +434,7 @@ async function run(): Promise<void> {
     const byPost = new Map<number, Check>();
     for (const check of existing?.checks ?? []) {
         // Older runs stored iTunes results; keep successful ones as Deezer stand-ins so we
-        // do not re-query songs already grounded on a second catalogue.
+        // do not re-query songs already grounded on a second catalog.
         const migrated: Check = {
             postId: check.postId,
             artist: check.artist,
@@ -538,7 +538,7 @@ async function run(): Promise<void> {
                 `${JSON.stringify(
                     {
                         generatedAt: new Date().toISOString(),
-                        note: "Written by `pnpm corroborate:titles`. Regenerable; does not change the catalogue.",
+                        note: "Written by `pnpm corroborate:titles`. Regenerable; does not change the catalog.",
                         checks: [...byPost.values()].sort((a, b) => a.postId - b.postId),
                     },
                     null,
@@ -575,7 +575,7 @@ async function run(): Promise<void> {
         `${JSON.stringify(
             {
                 generatedAt: new Date().toISOString(),
-                note: "Written by `pnpm corroborate:titles`. Regenerable; Discogs + Deezer; does not change the catalogue.",
+                note: "Written by `pnpm corroborate:titles`. Regenerable; Discogs + Deezer; does not change the catalog.",
                 summary: {
                     checked: checks.length,
                     both,
@@ -600,7 +600,7 @@ function cell(value: string): string {
     return value.replace(/\|/g, "/").replace(/\n/g, " ");
 }
 
-/** What the other catalogue returned, or why there is nothing to compare. */
+/** What the other catalog returned, or why there is nothing to compare. */
 function sourceDiff(ours: { artist: string; title: string }, source: SourceCheck | undefined): string {
     if (source === undefined) return "—";
     if (source.ok) return "agrees";
@@ -653,7 +653,7 @@ function formatCorroborationReview(neither: Check[]): string {
         "",
         "## Disagreements",
         "",
-        "Ours versus the other catalogue's top hit when that hit exists but does not match.",
+        "Ours versus the other catalog's top hit when that hit exists but does not match.",
         "",
         `| postId | our artist | our title | Deezer | Discogs |`,
         `| --- | --- | --- | --- | --- |`,
@@ -666,7 +666,7 @@ function formatCorroborationReview(neither: Check[]): string {
         "",
         "## Not found on either source",
         "",
-        "No usable Deezer or Discogs hit — often a remix/annotation title, a very local cut, or a credit the other catalogues file differently.",
+        "No usable Deezer or Discogs hit — often a remix/annotation title, a very local cut, or a credit the other catalogs file differently.",
         "",
         `| postId | our artist | our title |`,
         `| --- | --- | --- |`,

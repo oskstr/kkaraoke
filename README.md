@@ -1,7 +1,7 @@
 # KKaraoke
 
 A karaoke song list built with [Astro](https://astro.build), rendered as a static site. The songs come from files
-committed to the repository — the venue's catalogue in `data/songs.json`, the corrections in `data/resolved.json`, and
+committed to the repository — the venue's catalog in `data/songs.json`, the corrections in `data/resolved.json`, and
 the hand edits in `data/overrides.json` — and are browsed by decade, genre, film, language, and artist.
 
 ## Requirements
@@ -16,7 +16,7 @@ pnpm install
 pnpm dev
 ```
 
-The site is served at [localhost:4321](http://localhost:4321). There is nothing else to configure: the catalogue is read
+The site is served at [localhost:4321](http://localhost:4321). There is nothing else to configure: the catalog is read
 from a file in the repository, so builds need no database, no credentials and no network access.
 
 ## Project structure
@@ -24,10 +24,10 @@ from a file in the repository, so builds need no database, no credentials and no
 ```
 /
 ├── data/
-│   ├── songs.json              # scraped catalogue, the venue's data verbatim
+│   ├── songs.json              # scraped catalog, the venue's data verbatim
 │   ├── resolved.json           # the corrections the site applies; regenerable
 │   ├── overrides.json          # hand corrections; no script ever writes it
-│   ├── artist-names.json       # catalogue-scoped display names per artist MBID
+│   ├── artist-names.json       # catalog-scoped display names per artist MBID
 │   ├── proposals.json          # guesses put to the dump; applied only if MusicBrainz agrees
 │   ├── canonical-matches.json  # what the offline match found, per song
 │   ├── artists.json            # canonical names, sort names, aliases, genres
@@ -36,13 +36,13 @@ from a file in the repository, so builds need no database, no credentials and no
 │   ├── review.md               # songs the resolver would not apply; regenerable
 │   └── pilot/                  # a 50-artist trial of the resolution design
 ├── docs/
-│   └── song-data.md            # design for correcting and enriching the catalogue
+│   └── song-data.md            # design for correcting and enriching the catalog
 ├── public/
 │   ├── favicon.svg
 │   ├── apple-touch-icon.png
 │   └── og.png
 ├── scripts/
-│   ├── fetch-songs.ts          # scrapes the catalogue from kkaraoke.se
+│   ├── fetch-songs.ts          # scrapes the catalog from kkaraoke.se
 │   ├── match-canonical.ts      # offline match against the MusicBrainz dump
 │   ├── fetch-artists.ts        # artist names and genres, batched by id
 │   ├── fetch-recordings.ts     # earliest release date per title and artist
@@ -55,8 +55,8 @@ from a file in the repository, so builds need no database, no credentials and no
 │       └── musicbrainz.ts      # cached, rate-limited, batching API client
 ├── src/
 │   ├── lib/
-│   │   ├── songs.ts            # composes the catalogue with its corrections
-│   │   ├── catalogue.ts        # browse tiles, collections, search index
+│   │   ├── songs.ts            # composes the catalog with its corrections
+│   │   ├── catalog.ts          # browse tiles, collections, search index
 │   │   └── categories.ts       # Disney / Bond / Musical derived from `from`
 │   ├── layouts/
 │   │   └── Layout.astro
@@ -92,12 +92,12 @@ All commands are run from the root of the project:
 | `pnpm fetch:songs` | Re-scrapes `data/songs.json` from kkaraoke.se    |
 
 And these regenerate the corrections, rather than building the site. They are described under
-[Correcting the catalogue](#correcting-the-catalogue), and designed in
+[Correcting the catalog](#correcting-the-catalog), and designed in
 [`docs/song-data.md`](docs/song-data.md):
 
 | Command                  | Action                                                           |
 | :----------------------- | :--------------------------------------------------------------- |
-| `pnpm match:canonical`   | Matches the catalogue against a local MusicBrainz canonical dump |
+| `pnpm match:canonical`   | Matches the catalog against a local MusicBrainz canonical dump |
 | `pnpm fetch:artists`     | Canonical artist names, sort names, aliases and genres, by id    |
 | `pnpm fetch:recordings`  | Earliest release date per title and artist                       |
 | `pnpm fetch:works`       | Work titles and lyrics language, by recording MBID               |
@@ -114,7 +114,7 @@ makes `pnpm check` fail outright, so it stays on 6 until
 ## The site
 
 The home page is a short set of featured tiles (decades people actually sing, Swedish, Melodifestivalen, pop, rock,
-Disney). Tabs behind that browse the whole catalogue by decade, genre, category, film and musical, or language. Each
+Disney). Tabs behind that browse the whole catalog by decade, genre, category, film and musical, or language. Each
 tile opens a collection: a song list sorted A–Z, by artist, or by year.
 
 Large collections are windowed — the first eighty rows are in the HTML, the rest load as you scroll — so the page stays
@@ -124,11 +124,11 @@ Search matches title, artist, film, category, genre, and punch-in number. Artist
 performer, including collaborations. The artist column is those names, comma separated, each a link — not a MusicBrainz
 credit line with `feat.` or `&` between people. The same song under two punch-in numbers is one row that shows both.
 
-Favourites live in `localStorage` on this device. There is no login and no server to sync them.
+Favorites live in `localStorage` on this device. There is no login and no server to sync them.
 
 ## The song list
 
-`src/lib/songs.ts` is the only thing that reads the data files. `data/songs.json` is the venue's catalogue verbatim;
+`src/lib/songs.ts` is the only thing that reads the data files. `data/songs.json` is the venue's catalog verbatim;
 `data/resolved.json` is what MusicBrainz says it should be; `data/overrides.json` wins over both. The `Song` and
 `Correction` interfaces are declared there rather than inferred from the JSON, so a change to either shape fails
 `pnpm check` instead of quietly reshaping the pages.
@@ -143,7 +143,7 @@ Swedish collation — otherwise å, ä and ö sort beside a, a and o instead of 
 sort name where there is one, which is what files The Beatles under B and a collaboration under whoever is credited
 first.
 
-## Fetching the catalogue
+## Fetching the catalog
 
 `data/songs.json` is scraped from [the venue's song list](https://www.kkaraoke.se/latar/) by `pnpm fetch:songs`. It is
 committed, so a refresh shows up as a reviewable diff:
@@ -156,21 +156,21 @@ git diff --stat data/songs.json
 The source has no API. It is a WordPress page whose JetEngine listing widget re-renders all ~450 KB of HTML for every
 page of results, so the script walks the pages and lifts each row out of the markup. Two details make that work:
 
-- The page renders the same catalogue twice, once at 10 rows per page and once at 50. The `jsf=jet-engine/default` query
+- The page renders the same catalog twice, once at 10 rows per page and once at 50. The `jsf=jet-engine/default` query
   parameter aims `pagenum` at the 50-row listing, which is why the script uses that one.
 - Every row is three Elementor heading widgets that are only distinguishable by the element id in their class, and their
   order in the markup is not the order the columns appear in on screen. The script matches on those ids.
 
 Both are details of how the page happens to be built today, so the script asserts each of them and every field it reads,
-and aborts rather than writing a partial or empty catalogue if the page changes shape. `--pages <n>` limits the walk for
+and aborts rather than writing a partial or empty catalog if the page changes shape. `--pages <n>` limits the walk for
 a quick check, and `--delay <ms>` (1 second by default) spaces out the requests.
 
 A refresh is therefore a data change like any other: re-run the script, read the diff, and deploy it.
 
-The catalogue is the venue's data verbatim, typos and all, so `Ace of Base` and `Ace of base` are two different artists
+The catalog is the venue's data verbatim, typos and all, so `Ace of Base` and `Ace of base` are two different artists
 in it. [docs/song-data.md](docs/song-data.md) is the design for correcting and enriching it.
 
-## Correcting the catalogue
+## Correcting the catalog
 
 Five steps produce `data/resolved.json`, and each is regenerable from the one before:
 
@@ -184,7 +184,7 @@ pnpm build:resolved                                        # compose the above i
 
 The first step wants [the MusicBrainz canonical metadata dump](https://metabrainz.org/datasets/derived-dumps#canonical)
 (CC0, ~2.3 GB compressed). It exists for exactly this problem — turning an artist string and a title into MBIDs — and it
-matches 89% of the catalogue in 90 seconds without a single request. That is the reason the pipeline starts offline.
+matches 89% of the catalog in 90 seconds without a single request. That is the reason the pipeline starts offline.
 
 The lookups go through the MusicBrainz web service, whose rate limit is per IP and therefore shared with whatever
 else uses the same egress address. Two things make that survivable. Responses are cached under `.cache/`, outside the

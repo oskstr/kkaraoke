@@ -1,4 +1,4 @@
-import catalogue from "../../data/songs.json" with { type: "json" };
+import catalog from "../../data/songs.json" with { type: "json" };
 import resolved from "../../data/resolved.json" with { type: "json" };
 import overridesFile from "../../data/overrides.json" with { type: "json" };
 import artistsFile from "../../data/artists.json" with { type: "json" };
@@ -18,7 +18,7 @@ export interface CreditedArtist {
 
 /**
  * The shape the pages rely on. Declared here rather than inferred from the JSON, so
- * that a change to the scraped catalogue fails the typecheck instead of quietly
+ * that a change to the scraped catalog fails the typecheck instead of quietly
  * reshaping the site.
  */
 export interface Song {
@@ -171,7 +171,7 @@ function displayNameFor(mbid: string, fallback?: string): string | undefined {
 
 /**
  * URL slug from a display name. Latin diacritics fold to ASCII (`å`→`a`, `ö`→`o`) so
- * paths stay easy to type; other scripts are kept unless a catalogue display name
+ * paths stay easy to type; other scripts are kept unless a catalog display name
  * supplies Latin. `$` becomes `s` (A$AP → asap). `&` becomes `and`. Modifier
  * apostrophes (Hawaiian ʻ, etc.) drop out. Remaining punctuation becomes hyphens.
  */
@@ -192,7 +192,7 @@ export function slugify(name: string): string {
 }
 
 /**
- * Named credits without slugs yet — slugs need the full set of catalogue artists so
+ * Named credits without slugs yet — slugs need the full set of catalog artists so
  * collisions (two Alices, two Mikas) can be disambiguated. An override may supply the
  * list directly when the dump never confirmed the performers; an override that only
  * sets `artist` (including empty) drops resolver ids so a hand-set name is not linked
@@ -306,7 +306,7 @@ function keepCorrectionEnrichment(
     return false;
 }
 
-const composedWithoutSlugs = catalogue.songs.map((song) => {
+const composedWithoutSlugs = catalog.songs.map((song) => {
     const correction = corrections.get(song.postId);
     const override = overrides.get(song.postId);
     // `??` would treat an explicit empty artist as missing and fall back to the venue
@@ -351,7 +351,7 @@ const composedWithoutSlugs = catalogue.songs.map((song) => {
  * Unique slugs for every artist that appears on a song. Curated `slug` entries in
  * artist-names.json win first, and the same curated slug on two MBIDs is a deliberate
  * merge (Alice Cooper band + solo → one page). Otherwise prefer the bare name; when two
- * catalogue artists share a slug by accident, fall back to type, then MusicBrainz
+ * catalog artists share a slug by accident, fall back to type, then MusicBrainz
  * disambiguation, then a short id suffix.
  */
 function assignSlugs(mbids: Iterable<string>): Map<string, string> {
@@ -423,17 +423,17 @@ function assignSlugs(mbids: Iterable<string>): Map<string, string> {
     return slugByMbid;
 }
 
-const catalogueMbids = new Set<string>();
+const catalogMbids = new Set<string>();
 const creditedNames = new Map<string, string>();
 for (const song of composedWithoutSlugs) {
     for (const artist of song.artists ?? []) {
-        catalogueMbids.add(artist.mbid);
+        catalogMbids.add(artist.mbid);
         if (!creditedNames.has(artist.mbid)) {
             creditedNames.set(artist.mbid, artist.name);
         }
     }
 }
-const slugByMbid = assignSlugs(catalogueMbids);
+const slugByMbid = assignSlugs(catalogMbids);
 /** One slug may cover several MusicBrainz ids when artist-names.json merges them. */
 const mbidsBySlug = new Map<string, string[]>();
 for (const [mbid, slug] of slugByMbid) {
@@ -571,7 +571,7 @@ function buildArtist(slug: string): Artist | undefined {
 }
 
 /**
- * Every artist that has at least one song in the catalogue, for `getStaticPaths`.
+ * Every artist that has at least one song in the catalog, for `getStaticPaths`.
  * One row per slug, so curated merges (Alice Cooper) appear once.
  */
 export function getArtists(): Artist[] {

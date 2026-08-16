@@ -53,7 +53,7 @@ export interface Artist {
     aliases?: string[];
 }
 
-/** Every genre name MusicBrainz recognises, so that `irish` can be told from `britpop`. */
+/** Every genre name MusicBrainz recognizes, so that `irish` can be told from `britpop`. */
 async function genreVocabulary(): Promise<Set<string>> {
     const names = new Set<string>();
     for (let offset = 0; ; offset += BATCH) {

@@ -1,5 +1,5 @@
 {
-    "note": "Hand-written expectations for scoring a resolver run against the pilot set. These are my judgements from reading the evidence, not ground truth, and the cases marked `observeOnly` are ones where I do not think there is a single defensible answer yet.",
+    "note": "Hand-written expectations for scoring a resolver run against the pilot set. These are my judgments from reading the evidence, not ground truth, and the cases marked `observeOnly` are ones where I do not think there is a single defensible answer yet.",
     "checks": [
         { "artist": "Hall & Oates", "status": "resolved", "artistCount": 1, "expectName": "Daryl Hall & John Oates" },
         { "artist": "Rem", "status": "resolved", "artistCount": 1, "expectName": "R.E.M." },

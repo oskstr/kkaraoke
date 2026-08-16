@@ -20,7 +20,7 @@ export default defineConfig({
             // Variable file covers the weights used in the UI (regular through bold).
             weights: ["400 700"],
             styles: ["normal"],
-            // latin-ext is required for Swedish å/ä/ö in the catalogue.
+            // latin-ext is required for Swedish å/ä/ö in the catalog.
             subsets: ["latin", "latin-ext"],
             fallbacks: ["sans-serif"],
         },

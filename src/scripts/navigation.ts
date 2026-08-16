@@ -9,7 +9,7 @@ import { applySavedSort, readSavedSort } from "./sort-list";
 
 const FOCUS_SEARCH_KEY = "kkaraoke:focus-search";
 const NAVIGATED_KEY = "kkaraoke:navigated";
-const SEARCH_PERSIST = "catalogue-search-input";
+const SEARCH_PERSIST = "catalog-search-input";
 /** Which windowed list to expand on back — not a scroll offset. */
 const RETURN_MARKER_KEY = "kkaraoke:return-marker";
 

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import BrandMark from "../../components/BrandMark.astro";
-import { groupArtists } from "../../lib/catalogue";
+import { groupArtists } from "../../lib/catalog";
 import { getArtists } from "../../lib/songs";
 
 const groups = groupArtists(getArtists());

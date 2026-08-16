@@ -88,7 +88,7 @@ const MAX_GENRES = 3;
 const HAS_LATIN = /\p{Script=Latin}/u;
 
 /**
- * The name to show for an artist in this catalogue.
+ * The name to show for an artist in this catalog.
  *
  * Order of preference:
  * 1. A curated entry in `data/artist-names.json` — the name these karaoke songs are well
@@ -141,7 +141,7 @@ function preferDisplayForm(a: string, b: string): number {
     );
 }
 
-/** Catalogue-scoped overrides from `data/artist-names.json`, filled in `main`. */
+/** Catalog-scoped overrides from `data/artist-names.json`, filled in `main`. */
 const artistDisplayNames = new Map<string, string>();
 
 function displayName(artist: Artist): string {
@@ -258,7 +258,7 @@ async function main(): Promise<void> {
         artistDisplayNames.set(mbid, entry.name);
     }
     if (artistDisplayNames.size > 0) {
-        console.log(`${artistDisplayNames.size} catalogue display names from artist-names.json`);
+        console.log(`${artistDisplayNames.size} catalog display names from artist-names.json`);
     }
 
     // An array rather than an object keyed by id: five thousand keys in a JSON module
@@ -433,7 +433,7 @@ async function main(): Promise<void> {
         const lead = credited[0];
 
         // Each distinct artist, comma separated. Names come from artist-names.json when we
-        // have a catalogue-scoped choice, otherwise the MusicBrainz primary (with stylization
+        // have a catalog-scoped choice, otherwise the MusicBrainz primary (with stylization
         // rules) — never the venue string.
         const canonical =
             credited.length === mbids.length && credited.length > 0

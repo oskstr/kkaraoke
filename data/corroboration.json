@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-12T05:39:10.185Z",
-  "note": "Written by `pnpm corroborate:titles`. Regenerable; Discogs + Deezer; does not change the catalogue.",
+  "note": "Written by `pnpm corroborate:titles`. Regenerable; Discogs + Deezer; does not change the catalog.",
   "summary": {
     "checked": 5915,
     "both": 5604,

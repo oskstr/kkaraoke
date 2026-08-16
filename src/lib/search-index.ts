@@ -1,4 +1,4 @@
-import type { SearchSong } from "../lib/catalogue";
+import type { SearchSong } from "../lib/catalog";
 
 export interface SearchIndex {
     songs: SearchSong[];

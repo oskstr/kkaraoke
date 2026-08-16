@@ -1,7 +1,7 @@
 # Artist slug review
 
 1969 artists, written by `pnpm review:artist-slugs` from the composed
-catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in
+catalog. Regenerable, so do not edit it — change a display name or add a `slug` in
 `data/artist-names.json` instead.
 
 5 curated slug override(s), 9 merged page(s), 0 collision disambiguation(s).

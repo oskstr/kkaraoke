@@ -1,5 +1,5 @@
 /**
- * Writes `data/artist-slugs-review.md` — every catalogue artist and the slug their
+ * Writes `data/artist-slugs-review.md` — every catalog artist and the slug their
  * page uses. Regenerable; change a display name or a `slug` in artist-names.json
  * instead of editing the markdown.
  */
@@ -67,7 +67,7 @@ async function main(): Promise<void> {
         "# Artist slug review",
         "",
         `${artists.length} artists, written by \`pnpm review:artist-slugs\` from the composed`,
-        "catalogue. Regenerable, so do not edit it — change a display name or add a `slug` in",
+        "catalog. Regenerable, so do not edit it — change a display name or add a `slug` in",
         "`data/artist-names.json` instead.",
         "",
         `${curatedCount} curated slug override(s), ${mergedCount} merged page(s), ${disambiguatedCount} collision disambiguation(s).`,

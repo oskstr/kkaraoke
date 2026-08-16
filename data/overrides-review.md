@@ -19,7 +19,7 @@ means omit a category label rather than invent a performer.
 | 461 | Elton John | Can you feel the love tonight | Elton John | Can you feel the love tonight |  | Elton John Lion King; from was missing | 49686 |
 | 506 | Shaggy | It wasn't me | Shaggy | It Wasn't Me |  | Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). | 52706 |
 | 521 | Gina G | Ooh aah...just a little bit | Gina G | Ooh aah...just a little bit | Eurovision | Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision. | 50208 |
-| 552 | Michael Bolton | Missing you | Michael Bolton | Missing You Now |  | Catalogue Missing You is Bolton's Missing You Now. Year from Discogs single (1992). | 51628 |
+| 552 | Michael Bolton | Missing you | Michael Bolton | Missing You Now |  | Catalog Missing You is Bolton's Missing You Now. Year from Discogs single (1992). | 51628 |
 | 598 | Richard Marx | Hold on to the night | Richard Marx | Hold On to the Nights |  | Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single). | 52395 |
 | 636 | Niklas Strömstedt | Flickor talar om kärleken | Niklas Strömstedt | Flickor talar om kärleken |  | Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990). | 51882 |
 | 639 | Michael Bolton | Go the distance | Michael Bolton | Go the distance |  |  | 51630 |
@@ -191,7 +191,7 @@ means omit a category label rather than invent a performer.
 | 5733 | Fall out boy | This aint a scene | Fall out boy | This Ain't a Scene, It's an Arms Race |  | Truncated dump title. Year from Wikipedia (2007 single from Infinity on High). | 49944 |
 | 5742 | The doors | Crystal Ship | The doors | The Crystal Ship |  | The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia). | 53135 |
 | 5747 | High school musical | What iv'e been looking for | Ashley Tisdale, Lucas Grabeel | What I've Been Looking For |  | HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz). | 50369 |
-| 5843 | High school musical | Were all in this together | The High School Musical Cast | We're All in This Together |  | Cast credit, same act as the catalogue's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. | 50370 |
+| 5843 | High school musical | Were all in this together | The High School Musical Cast | We're All in This Together |  | Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. | 50370 |
 | 5847 | Ariana Grande | Santa tell me | Ariana Grande | Santa tell me | Christmas | Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1). | 48057 |
 | 5865 | Ed Sheeran | Merry christmas | Ed Sheeran | Merry christmas | Christmas | Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 49638 |
 | 5868 | Elton John ft Dua Lipa | Cold heart (pnau remix) | Elton John ft Dua Lipa | Cold heart (pnau remix) |  | Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia). | 49712 |

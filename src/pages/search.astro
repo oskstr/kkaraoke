@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SearchResults from "../components/SearchResults";
 import BrowseHeader from "../components/BrowseHeader.astro";
-import { collectionLabel, collectionPath, collator } from "../lib/catalogue";
+import { collectionLabel, collectionPath, collator } from "../lib/catalog";
 import { categoriesForSong } from "../lib/categories";
 import { getSongs } from "../lib/songs";
 
@@ -29,7 +29,7 @@ const suggestions = [
     { label: "90s", href: collectionPath("decade", "1990") },
 ];
 
-const inputId = "catalogue-search-input";
+const inputId = "catalog-search-input";
 ---
 
 <Layout title="Search · kkaraoke">

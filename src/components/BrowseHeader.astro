@@ -3,7 +3,7 @@ import BrandMark from "./BrandMark.astro";
 import FavoritesNav from "./FavoritesNav.astro";
 import FacetTabs from "./FacetTabs.astro";
 import SearchInput from "./SearchInput.astro";
-import { FACETS, type FacetKey } from "../lib/catalogue";
+import { FACETS, type FacetKey } from "../lib/catalog";
 
 interface Props {
     /** Browse facet. Omit on /search so the field stays in the same place. */
@@ -12,7 +12,7 @@ interface Props {
 
 const { facet } = Astro.props;
 const searchPage = facet === undefined;
-const inputId = "catalogue-search-input";
+const inputId = "catalog-search-input";
 const heading = searchPage
     ? "Search"
     : facet === "featured"

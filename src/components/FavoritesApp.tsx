@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import FavoriteButton, { useFavorites } from "./FavoriteButton";
-import type { SearchSong } from "../lib/catalogue";
+import type { SearchSong } from "../lib/catalog";
 import { getSearchIndex } from "../lib/search-index";
 
 function SongSubtitle({ song }: { song: SearchSong }) {

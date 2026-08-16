@@ -75,7 +75,7 @@ export function fromAnnotation(recording: string): string | undefined {
 
 /**
  * MusicBrainz often tacks the second half of a medley on as ` / Excerpt From 'Song'`.
- * That is catalogue noise on the recording, not the karaoke title.
+ * That is catalog noise on the recording, not the karaoke title.
  */
 export function stripExcerptFromLabels(title: string): string {
     const cleaned = title
@@ -123,7 +123,7 @@ export function titleKey(value: string): string {
 }
 
 /**
- * Fold common title spelling variants so corroboration can recognise the same song:
+ * Fold common title spelling variants so corroboration can recognize the same song:
  * `How Come U Don't Call Me Anymore` ≈ `How Come You Don't Call Me`.
  */
 export function titleKeyLoose(value: string): string {
