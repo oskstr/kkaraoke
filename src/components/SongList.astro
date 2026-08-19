@@ -34,7 +34,7 @@ const songs: SongVariant[] =
 
 {
     songs.length === 0 && emptyTitle ? (
-        <div class="px-5 py-20 text-center">
+        <div class="py-20 text-center">
             <div class="text-lg font-semibold text-cream">{emptyTitle}</div>
             {emptyBody && <p class="mt-2.5 text-sm text-pretty text-muted">{emptyBody}</p>}
             <a
@@ -50,7 +50,7 @@ const songs: SongVariant[] =
                 <span class="song-num">#</span>
                 <span>Title</span>
                 <span>Artist</span>
-                <span>From</span>
+                <span class="song-col-from">From</span>
                 <span class="song-col-year">Year</span>
                 <span />
             </div>

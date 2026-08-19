@@ -91,6 +91,17 @@ function syncBrandCurrent(): void {
     }
 }
 
+function syncStickyHeadOffset(): void {
+    const header = document.querySelector(".browse-header");
+    const sticky =
+        header instanceof HTMLElement &&
+        window.matchMedia("(min-width: 1024px)").matches &&
+        getComputedStyle(header).position === "sticky"
+            ? header.getBoundingClientRect().height
+            : 0;
+    document.documentElement.style.setProperty("--sticky-head-top", `${Math.round(sticky)}px`);
+}
+
 function focusSearchInput(): boolean {
     if (searchKeyCommitted) return false;
     if (!location.pathname.startsWith("/search")) return false;
@@ -514,6 +525,7 @@ if (!window.__kkaraokeNavInit) {
         placeFacetTabs(document);
         markNavigated();
         syncBrandCurrent();
+        syncStickyHeadOffset();
         if (lastNavDirection === "back") {
             expandWindowedListForBack(false);
         } else {
@@ -530,6 +542,7 @@ if (!window.__kkaraokeNavInit) {
     document.addEventListener("astro:page-load", () => {
         placeFacetTabs(document, false);
         syncBrandCurrent();
+        syncStickyHeadOffset();
         requestAnimationFrame(() => {
             placeFacetTabs(document, false);
         });
@@ -550,6 +563,8 @@ if (!window.__kkaraokeNavInit) {
 
     placeFacetTabs(document);
     syncBrandCurrent();
+    syncStickyHeadOffset();
+    window.addEventListener("resize", syncStickyHeadOffset);
 
     // Do not expand on kkaraoke:list-ready — bindInfiniteScroll used to emit that
     // from inside ensure-scroll-height, which would recurse into expand again.

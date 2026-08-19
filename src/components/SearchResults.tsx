@@ -100,10 +100,10 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             <div className="sr-only" aria-live="polite" aria-atomic="true">
                 {status}
             </div>
-            {loadError && <div className="px-5 py-16 text-center text-sm text-muted">Couldn’t load the catalog.</div>}
+            {loadError && <div className="py-16 text-center text-sm text-muted">Couldn’t load the catalog.</div>}
 
             {!loadError && !index && !idle && (
-                <div className="px-5 py-16 text-center text-sm text-muted">Searching…</div>
+                <div className="py-16 text-center text-sm text-muted">Searching…</div>
             )}
 
             {idle && (
@@ -149,7 +149,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
 
             {rows.length > 0 && (
                 <div>
-                    <div className="pt-3.5 pb-1 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase lg:hidden">
+                    <div className="pt-3.5 pb-1 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase md:hidden">
                         Songs
                     </div>
                     <SongTableHead />
@@ -160,7 +160,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             )}
 
             {empty && (
-                <div className="px-5 py-[70px] text-center">
+                <div className="py-[70px] text-center">
                     <div className="text-[17px] font-semibold text-cream">No matches</div>
                     <p className="mt-2 text-sm text-muted">Try the artist, or the film it&apos;s from.</p>
                 </div>

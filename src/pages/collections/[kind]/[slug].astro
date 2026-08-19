@@ -83,7 +83,7 @@ const allSongs = rows.map((song) => {
       (brand + title + sort) so the tile color expands into the top bar.
     -->
     <div
-        class:list={["collection-chrome sticky top-0 z-20 flex flex-col", collection.art && "has-art"]}
+        class:list={["collection-chrome sticky top-0 z-20 flex flex-col md:static", collection.art && "has-art"]}
         style={`${collectionSurfaceStyle(collection)};border-bottom:1px solid rgba(0,0,0,0.25)`}
         data-collection-chrome
         data-vt-chrome={collection.transitionName}

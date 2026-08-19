@@ -63,7 +63,7 @@ function rowHtml(song: MoreSong): string {
           <div class="song-sub mt-0.5 text-[13px] text-muted">${subtitle}</div>
         </div>
         <div class="song-col song-col-artist">${artistCol}</div>
-        <div class="song-col">${escapeHtml(song.from)}</div>
+        <div class="song-col song-col-from">${escapeHtml(song.from)}</div>
         <div class="song-col song-col-year">${escapeHtml(song.year)}</div>
         <button type="button" data-fav-toggle="${idsAttr}" class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]" style="border:0" aria-label="Add to favorites" aria-pressed="false"><span aria-hidden="true">♥</span></button>
       </div>`;

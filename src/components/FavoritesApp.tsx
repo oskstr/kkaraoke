@@ -48,7 +48,7 @@ export default function FavoritesApp() {
 
     if (favorites.length === 0 || rows.length === 0) {
         return (
-            <div className="px-5 py-20 text-center">
+            <div className="py-20 text-center">
                 <div className="text-lg font-semibold text-cream">Nothing saved yet</div>
                 <p className="mt-2.5 mb-4 text-sm text-pretty text-muted">
                     Tap the heart on a song and it stays here on your phone.

@@ -67,7 +67,7 @@ export function SongTableHead() {
             <span className="song-num">#</span>
             <span>Title</span>
             <span>Artist</span>
-            <span>From</span>
+            <span className="song-col-from">From</span>
             <span className="song-col-year">Year</span>
             <span></span>
         </div>
@@ -94,7 +94,7 @@ export default function SongResultRow({ song, stopArtistNav = false }: SongResul
             <div className="song-col song-col-artist">
                 <ArtistLinks song={song} onArtistClick={onArtistClick} />
             </div>
-            <div className="song-col">{song.from ?? ""}</div>
+            <div className="song-col song-col-from">{song.from ?? ""}</div>
             <div className="song-col song-col-year">{song.year ? String(song.year) : ""}</div>
             <FavoriteButton songIds={song.ids} />
         </div>

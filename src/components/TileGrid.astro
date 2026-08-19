@@ -16,7 +16,6 @@ const { tiles, mode, facet } = Astro.props;
             class:list={[
                 "tile-grid grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-3.5",
                 facet === "featured" && "tile-grid-featured",
-                facet === "decade" && "tile-grid-decade",
                 (facet === "genre" || facet === "occasion") && "tile-grid-genre",
             ]}
         >
@@ -25,7 +24,7 @@ const { tiles, mode, facet } = Astro.props;
                     href={tile.href}
                     class:list={[
                         "collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline",
-                        tile.large ? "md:h-36 lg:h-40" : "md:h-[6.75rem] lg:h-32",
+                        tile.large ? "lg:h-36" : "lg:h-28",
                         tile.art && "has-art",
                     ]}
                     style={collectionSurfaceStyle(tile)}
