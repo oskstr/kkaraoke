@@ -37,6 +37,7 @@ const metaBits = [from, year !== undefined ? String(year) : null].filter(Boolean
 const primaryId = ids[0] ?? 0;
 const idsAttr = ids.join(",");
 const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
+const artistFallback = subtitle || categories || "";
 ---
 
 <div
@@ -52,9 +53,9 @@ const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join
     >
         {ids.map((id) => <span aria-hidden="true">{id}</span>)}
     </span>
-    <div class="flex min-h-11 flex-1 flex-col justify-center">
-        <div class="text-[15.5px] leading-snug text-cream">{title}</div>
-        <div class="mt-0.5 text-[13px] text-muted">
+    <div class="song-body flex min-h-11 min-w-0 flex-1 flex-col justify-center">
+        <div class="song-title text-[15.5px] leading-snug text-cream">{title}</div>
+        <div class="song-sub mt-0.5 text-[13px] text-muted">
             {
                 artists.length > 0 ? (
                     <>
@@ -88,6 +89,28 @@ const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join
             }
         </div>
     </div>
+    <div class="song-col song-col-artist">
+        {
+            artists.length > 0 ? (
+                artists.map((artist, index) => (
+                    <>
+                        {index > 0 && <span>, </span>}
+                        {artist.slug === currentArtistSlug ? (
+                            <span>{artist.name}</span>
+                        ) : (
+                            <a href={`/artists/${artist.slug}`} class="song-artist-link" data-vt-artist={artist.slug}>
+                                {artist.name}
+                            </a>
+                        )}
+                    </>
+                ))
+            ) : (
+                <span>{artistFallback}</span>
+            )
+        }
+    </div>
+    <div class="song-col">{from ?? ""}</div>
+    <div class="song-col song-col-year">{year !== undefined ? String(year) : ""}</div>
     <button
         type="button"
         data-fav-toggle={idsAttr}

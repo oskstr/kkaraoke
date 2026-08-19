@@ -24,46 +24,59 @@ const heading = searchPage
 // and /search share this header's field offset.
 ---
 
-<header class="border-b border-line px-[18px] pt-[22px] pb-3" transition:animate="none">
-    <h1 class="sr-only">{heading}</h1>
-    <div class="flex min-h-[34px] items-center gap-2">
-        <BrandMark current={facet === "featured"} />
-        <span class="min-w-0 flex-1" aria-hidden="true"></span>
-        {!searchPage && <FavoritesNav />}
-    </div>
-    <div class="mt-3.5 flex items-center gap-2.5">
-        <search class="min-w-0 flex-1" data-search-launch={searchPage ? undefined : true}>
-            <label
-                class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left"
-                for={inputId}
-            >
-                <svg
-                    viewBox="0 0 24 24"
-                    width="17"
-                    height="17"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.2"
-                    stroke-linecap="round"
-                    aria-hidden="true"
-                    class="pointer-events-none text-muted"
-                    ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
-                >
-                <SearchInput id={inputId} autofocus={searchPage} />
-            </label>
-        </search>
+<header class="browse-header border-b border-line" transition:animate="none">
+    <div class="page-inner browse-header-inner">
+        <h1 class="sr-only">{heading}</h1>
+        <div class="browse-brand">
+            <BrandMark current={facet === "featured"} />
+        </div>
         {
-            searchPage && (
-                <a
-                    href="/"
-                    data-smart-back
-                    data-search-cancel
-                    class="bg-transparent px-1 py-1 text-base text-muted no-underline hover:text-cream-soft"
+            !searchPage && (
+                <div class="browse-tools">
+                    <FavoritesNav />
+                </div>
+            )
+        }
+        <div class="browse-search">
+            <search class="min-w-0 flex-1" data-search-launch={searchPage ? undefined : true}>
+                <label
+                    class="flex w-full cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-3.5 text-left"
+                    for={inputId}
                 >
-                    Cancel
-                </a>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="17"
+                        height="17"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        aria-hidden="true"
+                        class="pointer-events-none text-muted"
+                        ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+                    >
+                    <SearchInput id={inputId} autofocus={searchPage} />
+                </label>
+            </search>
+            {
+                searchPage && (
+                    <a
+                        href="/"
+                        data-smart-back
+                        data-search-cancel
+                        class="bg-transparent px-1 py-1 text-base text-muted no-underline hover:text-cream-soft"
+                    >
+                        Cancel
+                    </a>
+                )
+            }
+        </div>
+        {
+            !searchPage && facet && (
+                <div class="browse-tabs">
+                    <FacetTabs active={facet} />
+                </div>
             )
         }
     </div>
-    {!searchPage && facet && <FacetTabs active={facet} />}
 </header>

@@ -83,14 +83,14 @@ const allSongs = rows.map((song) => {
       (brand + title + sort) so the tile color expands into the top bar.
     -->
     <div
-        class:list={["collection-chrome sticky top-0 z-20", collection.art && "has-art"]}
+        class:list={["collection-chrome sticky top-0 z-20 flex flex-col", collection.art && "has-art"]}
         style={`${collectionSurfaceStyle(collection)};border-bottom:1px solid rgba(0,0,0,0.25)`}
         data-collection-chrome
         data-vt-chrome={collection.transitionName}
         transition:name={collection.transitionName}
         transition:animate="initial"
     >
-        <header class="px-[18px] pt-[22px] pb-0">
+        <header class="page-inner collection-hero pt-[22px] pb-0 md:pt-6">
             <BrandMark />
             <h1
                 class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty"
@@ -103,9 +103,11 @@ const allSongs = rows.map((song) => {
                 {collection.label}
             </h1>
         </header>
-        <SortTabs />
+        <div class="page-inner">
+            <SortTabs />
+        </div>
     </div>
-    <main id="main" tabindex="-1" class="bg-surface px-[18px] pt-1.5 pb-6">
+    <main id="main" tabindex="-1" class="page-inner bg-surface pt-1.5 pb-6 md:pt-3 md:pb-10">
         <SongList songs={initialRows} sortable />
         {
             allSongs.length > INITIAL && (
@@ -120,7 +122,7 @@ const allSongs = rows.map((song) => {
                     <button
                         type="button"
                         data-load-more
-                        class="mt-1 w-full rounded-xl border border-line-strong py-3 text-sm text-muted"
+                        class="mt-1 w-full rounded-xl border border-line-strong py-3 text-sm text-muted md:w-auto md:px-8"
                     >
                         Load more songs
                     </button>

@@ -43,16 +43,28 @@ function rowHtml(song: MoreSong): string {
         const bits = [song.categories, ...meta].filter(Boolean);
         subtitle = escapeHtml(bits.join(" · "));
     }
+    const artistCol =
+        song.artists.length > 0
+            ? song.artists
+                  .map(
+                      (a, i) =>
+                          `${i > 0 ? ", " : ""}<a href="/artists/${escapeAttr(a.slug)}" class="song-artist-link" data-vt-artist="${escapeAttr(a.slug)}">${escapeHtml(a.name)}</a>`,
+                  )
+                  .join("")
+            : escapeHtml(song.categories);
     const ids = song.ids.length > 0 ? song.ids : [song.id];
     const idsAttr = ids.join(",");
     const numbersLabel = ids.length === 1 ? `Number ${ids[0]}` : `Numbers ${ids.join(", ")}`;
     const numbers = ids.map((id) => `<span aria-hidden="true">${id}</span>`).join("");
     return `<div class="song-row flex items-start gap-2.5 border-b border-line py-3" data-title="${escapeAttr(song.title)}" data-artist="${escapeAttr(song.artist)}" data-year="${escapeAttr(song.year)}" data-id="${ids[0]}">
-        <span class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] tabular-nums leading-none text-gold" aria-label="${escapeAttr(numbersLabel)}">${numbers}</span>
-        <div class="flex min-h-11 flex-1 flex-col justify-center">
-          <div class="text-[15.5px] leading-snug text-cream">${title}</div>
-          <div class="mt-0.5 text-[13px] text-muted">${subtitle}</div>
+        <span class="song-num flex w-11 shrink-0 flex-col items-end gap-0.5 pt-1 font-mono text-[12px] leading-none text-gold tabular-nums" aria-label="${escapeAttr(numbersLabel)}">${numbers}</span>
+        <div class="song-body flex min-h-11 min-w-0 flex-1 flex-col justify-center">
+          <div class="song-title text-[15.5px] leading-snug text-cream">${title}</div>
+          <div class="song-sub mt-0.5 text-[13px] text-muted">${subtitle}</div>
         </div>
+        <div class="song-col song-col-artist">${artistCol}</div>
+        <div class="song-col">${escapeHtml(song.from)}</div>
+        <div class="song-col song-col-year">${escapeHtml(song.year)}</div>
         <button type="button" data-fav-toggle="${idsAttr}" class="min-w-11 self-center bg-transparent px-1 py-2.5 text-[17px]" style="border:0" aria-label="Add to favorites" aria-pressed="false"><span aria-hidden="true">♥</span></button>
       </div>`;
 }

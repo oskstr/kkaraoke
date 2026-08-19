@@ -45,30 +45,40 @@ const songs: SongVariant[] =
             </a>
         </div>
     ) : (
-        <div data-song-list={sortable ? "" : undefined}>
-            {songs.map((song) => {
-                const cats = categoriesLabel(song);
-                return (
-                    <SongRow
-                        ids={song.ids}
-                        title={song.song}
-                        {...(song.artists && song.artists.length > 0
-                            ? { artists: song.artists }
-                            : song.artist
-                              ? { subtitle: song.artist }
-                              : cats
-                                ? { subtitle: cats }
-                                : {})}
-                        {...(song.from ? { from: song.from } : {})}
-                        {...(song.year !== undefined ? { year: song.year } : {})}
-                        {...(cats ? { categories: cats } : {})}
-                        {...(currentArtistSlug ? { currentArtistSlug } : {})}
-                        titleAttr={song.song}
-                        artistAttr={song.artist || cats}
-                        yearAttr={song.year !== undefined ? String(song.year) : ""}
-                    />
-                );
-            })}
+        <div>
+            <div class="song-table-head" aria-hidden="true">
+                <span class="song-num">#</span>
+                <span>Title</span>
+                <span>Artist</span>
+                <span>From</span>
+                <span class="song-col-year">Year</span>
+                <span />
+            </div>
+            <div data-song-list={sortable ? "" : undefined}>
+                {songs.map((song) => {
+                    const cats = categoriesLabel(song);
+                    return (
+                        <SongRow
+                            ids={song.ids}
+                            title={song.song}
+                            {...(song.artists && song.artists.length > 0
+                                ? { artists: song.artists }
+                                : song.artist
+                                  ? { subtitle: song.artist }
+                                  : cats
+                                    ? { subtitle: cats }
+                                    : {})}
+                            {...(song.from ? { from: song.from } : {})}
+                            {...(song.year !== undefined ? { year: song.year } : {})}
+                            {...(cats ? { categories: cats } : {})}
+                            {...(currentArtistSlug ? { currentArtistSlug } : {})}
+                            titleAttr={song.song}
+                            artistAttr={song.artist || cats}
+                            yearAttr={song.year !== undefined ? String(song.year) : ""}
+                        />
+                    );
+                })}
+            </div>
         </div>
     )
 }
