@@ -30,6 +30,8 @@ const songs: SongVariant[] =
         : "ids" in rawSongs[0]!
           ? (rawSongs as SongVariant[])
           : mergeSongVariants(rawSongs as Song[]);
+
+const showFrom = songs.some((song) => Boolean(song.from));
 ---
 
 {
@@ -45,7 +47,7 @@ const songs: SongVariant[] =
             </a>
         </div>
     ) : (
-        <div>
+        <div class:list={["song-table", showFrom && "has-from"]}>
             <div class="song-table-head" aria-hidden="true">
                 <span class="song-num">#</span>
                 <span>Title</span>

@@ -92,11 +92,13 @@ function syncBrandCurrent(): void {
 }
 
 function syncStickyHeadOffset(): void {
-    const header = document.querySelector(".browse-header");
+    if (!window.matchMedia("(min-width: 768px)").matches) {
+        document.documentElement.style.setProperty("--sticky-head-top", "0px");
+        return;
+    }
+    const header = document.querySelector<HTMLElement>(".desktop-appbar, .browse-header");
     const sticky =
-        header instanceof HTMLElement &&
-        window.matchMedia("(min-width: 1024px)").matches &&
-        getComputedStyle(header).position === "sticky"
+        header instanceof HTMLElement && getComputedStyle(header).position === "sticky"
             ? header.getBoundingClientRect().height
             : 0;
     document.documentElement.style.setProperty("--sticky-head-top", `${Math.round(sticky)}px`);

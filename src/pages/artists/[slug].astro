@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import BrandMark from "../../components/BrandMark.astro";
+import DesktopAppBar from "../../components/DesktopAppBar.astro";
 import SongList from "../../components/SongList.astro";
 import { collectionPath, mergeSongVariants, sortSongVariants } from "../../lib/catalog";
 import { getArtist, getArtists, getSongsByArtist } from "../../lib/songs";
@@ -24,11 +25,14 @@ const { artist, songs } = Astro.props;
 ---
 
 <Layout title={`${artist.name} · kkaraoke`} description={artist.name}>
+    <DesktopAppBar />
     <header class="border-b border-line">
-        <div class="page-inner pt-[22px] pb-[18px] md:pt-6 md:pb-6">
-            <BrandMark />
+        <div class="page-inner pt-[22px] pb-[18px] md:pt-8 md:pb-7">
+            <div class="md:hidden">
+                <BrandMark />
+            </div>
             <h1
-                class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream"
+                class="artist-title mt-3 text-[34px] font-bold tracking-[-0.03em] text-pretty text-cream md:mt-0 md:text-5xl"
                 data-artist-title
             >
                 {artist.name}

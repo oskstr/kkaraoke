@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import BrandMark from "../../../components/BrandMark.astro";
+import DesktopAppBar from "../../../components/DesktopAppBar.astro";
 import SortTabs from "../../../components/SortTabs.astro";
 import SongList from "../../../components/SongList.astro";
 import {
@@ -78,6 +79,7 @@ const allSongs = rows.map((song) => {
     image={collectionOgImage(collection.art) ?? "/og.png"}
     imageAlt={collection.art ? collection.label : "kkaraoke"}
 >
+    <DesktopAppBar />
     <!--
       One shared-element target for the tile morph: the whole tinted chrome
       (brand + title + sort) so the tile color expands into the top bar.
@@ -90,8 +92,10 @@ const allSongs = rows.map((song) => {
         transition:name={collection.transitionName}
         transition:animate="initial"
     >
-        <header class="page-inner collection-hero pt-[22px] pb-0 md:pt-6">
-            <BrandMark />
+        <header class="page-inner collection-hero pt-[22px] pb-0">
+            <div class="collection-hero-brand">
+                <BrandMark />
+            </div>
             <h1
                 class="collection-title mt-3 mb-3.5 text-[34px] leading-none font-bold tracking-[-0.03em] text-pretty"
                 style={collection.art ? undefined : `color:${collection.ink ?? "#FCFAF6"}`}

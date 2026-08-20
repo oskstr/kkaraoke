@@ -1,0 +1,34 @@
+---
+import BrandMark from "./BrandMark.astro";
+import FavoritesNav from "./FavoritesNav.astro";
+
+/** Compact find/favorites chrome for tablet and desktop. Hidden on the phone. */
+const onFavorites = Astro.url.pathname.startsWith("/favorites");
+---
+
+<header class="desktop-appbar sticky top-0 z-30 hidden border-b border-line md:block">
+    <div class="page-inner flex items-center gap-3 py-3 lg:gap-4">
+        <BrandMark persist={false} />
+        <button
+            type="button"
+            data-search-launch
+            aria-label="Search songs, artists, films"
+            class="flex max-w-xl min-w-0 flex-1 cursor-text items-center gap-2.5 rounded-xl border border-line-strong bg-panel px-3.5 py-2.5 text-left text-[15px] text-muted"
+        >
+            <svg
+                viewBox="0 0 24 24"
+                width="17"
+                height="17"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                aria-hidden="true"
+                class="pointer-events-none shrink-0"
+                ><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg
+            >
+            Songs, artists, films
+        </button>
+        <FavoritesNav active={onFavorites} />
+    </div>
+</header>

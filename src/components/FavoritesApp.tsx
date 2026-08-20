@@ -64,7 +64,7 @@ export default function FavoritesApp() {
     }
 
     return (
-        <div>
+        <div className={rows.some((song) => song.from) ? "song-table has-from" : "song-table"}>
             <SongTableHead />
             {rows.map((song) => (
                 <SongResultRow key={song.id} song={song} />

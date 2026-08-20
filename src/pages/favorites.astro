@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BrandMark from "../components/BrandMark.astro";
+import DesktopAppBar from "../components/DesktopAppBar.astro";
 import FavoritesApp from "../components/FavoritesApp";
 ---
 
 <Layout title="Favorites · kkaraoke" description="Songs you've saved on this device.">
+    <DesktopAppBar />
     <header class="border-b border-line">
-        <div class="page-inner pt-[22px] pb-4 md:pt-6">
-            <BrandMark />
-            <h1 class="mt-3 text-[30px] font-bold tracking-[-0.025em] text-cream">Favorites</h1>
+        <div class="page-inner pt-[22px] pb-4 md:pt-7 md:pb-5">
+            <div class="md:hidden">
+                <BrandMark />
+            </div>
+            <h1 class="mt-3 text-[30px] font-bold tracking-[-0.025em] text-cream md:mt-0">Favorites</h1>
         </div>
     </header>
     <main id="main" tabindex="-1" class="page-inner pt-1.5 pb-6 md:pt-3 md:pb-10">

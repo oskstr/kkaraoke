@@ -2,28 +2,44 @@
 interface Props {
     /** True on the start page so the mark is the current location, not a way back. */
     current?: boolean;
+    /**
+     * Duplicate marks (tablet/desktop app bar) must not persist — browse/search
+     * already own `catalog-brand`, and two persisted nodes fight.
+     */
+    persist?: boolean;
 }
 
-const { current = false } = Astro.props;
-
-// Same node on every page: persist + named group with animate none so
-// kkaraoke does not fade through the plus-lighter root snapshot.
+const { current = false, persist = true } = Astro.props;
 ---
 
-<a
-    href="/"
-    data-brand-mark
-    aria-current={current ? "page" : undefined}
-    transition:persist="catalog-brand"
-    transition:name="brand"
-    transition:animate="none"
-    class="flex min-h-[34px] items-center gap-2 text-cream no-underline"
->
-    <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true"
-        ><path
-            fill="currentColor"
-            d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
-        ></path></svg
-    >
-    <span class="text-[14.5px] font-bold tracking-tight">kkaraoke</span>
-</a>
+{
+    persist ? (
+        <a
+            href="/"
+            data-brand-mark
+            aria-current={current ? "page" : undefined}
+            transition:persist="catalog-brand"
+            transition:name="brand"
+            transition:animate="none"
+            class="flex min-h-[34px] items-center gap-2 text-cream no-underline"
+        >
+            <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true">
+                <path
+                    fill="currentColor"
+                    d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
+                />
+            </svg>
+            <span class="text-[14.5px] font-bold tracking-tight">kkaraoke</span>
+        </a>
+    ) : (
+        <a href="/" data-brand-mark class="flex min-h-[34px] items-center gap-2 text-cream no-underline">
+            <svg viewBox="0 0 36 36" width="19" height="19" fill="none" aria-hidden="true">
+                <path
+                    fill="currentColor"
+                    d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"
+                />
+            </svg>
+            <span class="text-[14.5px] font-bold tracking-tight">kkaraoke</span>
+        </a>
+    )
+}

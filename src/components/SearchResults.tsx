@@ -102,14 +102,15 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             </div>
             {loadError && <div className="py-16 text-center text-sm text-muted">Couldn’t load the catalog.</div>}
 
-            {!loadError && !index && !idle && (
-                <div className="py-16 text-center text-sm text-muted">Searching…</div>
-            )}
+            {!loadError && !index && !idle && <div className="py-16 text-center text-sm text-muted">Searching…</div>}
 
             {idle && (
-                <div>
+                <div className="search-idle md:pt-4 lg:pt-6">
+                    <p className="mb-5 hidden max-w-xl text-[17px] leading-relaxed text-muted md:block">
+                        Type a song, an artist, or the film it&apos;s from.
+                    </p>
                     <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">Jump to</div>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    <div className="flex flex-wrap gap-1.5 md:max-w-3xl md:gap-2">
                         {suggestions.map((s) => (
                             <a
                                 key={s.href + s.label}
@@ -148,7 +149,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             )}
 
             {rows.length > 0 && (
-                <div>
+                <div className={rows.some((song) => song.from) ? "song-table has-from" : "song-table"}>
                     <div className="pt-3.5 pb-1 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase md:hidden">
                         Songs
                     </div>
