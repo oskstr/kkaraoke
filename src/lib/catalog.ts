@@ -665,6 +665,20 @@ export interface ArtistGroup {
     artists: Artist[];
 }
 
+/** Unique catalog songs per artist slug — same counting as an artist page. */
+export function artistSongCounts(songs: Song[] = getSongs()): Map<string, number> {
+    const counts = new Map<string, number>();
+    for (const song of songs) {
+        const seen = new Set<string>();
+        for (const artist of song.artists ?? []) {
+            if (seen.has(artist.slug)) continue;
+            seen.add(artist.slug);
+            counts.set(artist.slug, (counts.get(artist.slug) ?? 0) + 1);
+        }
+    }
+    return counts;
+}
+
 export function groupArtists(artists: Artist[] = getArtists()): ArtistGroup[] {
     const groups: ArtistGroup[] = [];
     for (const artist of artists) {

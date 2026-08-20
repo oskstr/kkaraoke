@@ -30,11 +30,13 @@ const songs: SongVariant[] =
         : "ids" in rawSongs[0]!
           ? (rawSongs as SongVariant[])
           : mergeSongVariants(rawSongs as Song[]);
+
+const showFrom = songs.some((song) => Boolean(song.from));
 ---
 
 {
     songs.length === 0 && emptyTitle ? (
-        <div class="px-5 py-20 text-center">
+        <div class="py-20 text-center">
             <div class="text-lg font-semibold text-cream">{emptyTitle}</div>
             {emptyBody && <p class="mt-2.5 text-sm text-pretty text-muted">{emptyBody}</p>}
             <a
@@ -45,30 +47,40 @@ const songs: SongVariant[] =
             </a>
         </div>
     ) : (
-        <div data-song-list={sortable ? "" : undefined}>
-            {songs.map((song) => {
-                const cats = categoriesLabel(song);
-                return (
-                    <SongRow
-                        ids={song.ids}
-                        title={song.song}
-                        {...(song.artists && song.artists.length > 0
-                            ? { artists: song.artists }
-                            : song.artist
-                              ? { subtitle: song.artist }
-                              : cats
-                                ? { subtitle: cats }
-                                : {})}
-                        {...(song.from ? { from: song.from } : {})}
-                        {...(song.year !== undefined ? { year: song.year } : {})}
-                        {...(cats ? { categories: cats } : {})}
-                        {...(currentArtistSlug ? { currentArtistSlug } : {})}
-                        titleAttr={song.song}
-                        artistAttr={song.artist || cats}
-                        yearAttr={song.year !== undefined ? String(song.year) : ""}
-                    />
-                );
-            })}
+        <div class:list={["song-table", showFrom && "has-from"]}>
+            <div class="song-table-head" aria-hidden="true">
+                <span class="song-num">#</span>
+                <span>Title</span>
+                <span>Artist</span>
+                <span class="song-col-from">From</span>
+                <span class="song-col-year">Year</span>
+                <span />
+            </div>
+            <div data-song-list={sortable ? "" : undefined}>
+                {songs.map((song) => {
+                    const cats = categoriesLabel(song);
+                    return (
+                        <SongRow
+                            ids={song.ids}
+                            title={song.song}
+                            {...(song.artists && song.artists.length > 0
+                                ? { artists: song.artists }
+                                : song.artist
+                                  ? { subtitle: song.artist }
+                                  : cats
+                                    ? { subtitle: cats }
+                                    : {})}
+                            {...(song.from ? { from: song.from } : {})}
+                            {...(song.year !== undefined ? { year: song.year } : {})}
+                            {...(cats ? { categories: cats } : {})}
+                            {...(currentArtistSlug ? { currentArtistSlug } : {})}
+                            titleAttr={song.song}
+                            artistAttr={song.artist || cats}
+                            yearAttr={song.year !== undefined ? String(song.year) : ""}
+                        />
+                    );
+                })}
+            </div>
         </div>
     )
 }

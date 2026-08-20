@@ -104,6 +104,491 @@ body {
     box-shadow: var(--shell-shadow);
 }
 
+@media (min-width: 768px) {
+    .app-shell {
+        box-shadow: none;
+    }
+}
+
+/*
+  Shared horizontal rhythm. Mobile keeps the original 18px inset; wider
+  screens center a readable column instead of stretching the phone layout.
+*/
+.page-inner {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+@media (min-width: 768px) {
+    .page-inner {
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-inner {
+        max-width: 72rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-inner {
+        max-width: 80rem;
+    }
+}
+
+/* Browse chrome: stacked on a phone, compact toolbar from tablet. */
+.browse-header-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "brand tools"
+        "search search"
+        "tabs tabs";
+    padding-top: 22px;
+    padding-bottom: 12px;
+    column-gap: 8px;
+}
+
+.browse-brand {
+    grid-area: brand;
+    display: flex;
+    min-height: 34px;
+    align-items: center;
+}
+
+.browse-tools {
+    grid-area: tools;
+    display: flex;
+    align-items: center;
+}
+
+.browse-search {
+    grid-area: search;
+    display: flex;
+    margin-top: 14px;
+    align-items: center;
+    gap: 10px;
+}
+
+.browse-tabs {
+    grid-area: tabs;
+}
+
+.browse-header-inner:not(:has(.browse-tools)) {
+    grid-template-areas:
+        "brand brand"
+        "search search";
+}
+
+@media (min-width: 768px) {
+    .browse-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: color-mix(in srgb, var(--surface) 88%, transparent);
+        backdrop-filter: blur(16px);
+    }
+
+    .browse-header-inner {
+        grid-template-columns: auto minmax(10rem, 1fr) auto;
+        grid-template-areas:
+            "brand search tools"
+            "tabs tabs tabs";
+        padding-top: 0.85rem;
+        padding-bottom: 0.75rem;
+        column-gap: 1rem;
+        row-gap: 0.7rem;
+        align-items: center;
+    }
+
+    .browse-search {
+        margin-top: 0;
+        max-width: 28rem;
+        justify-self: stretch;
+    }
+
+    .browse-header-inner:not(:has(.browse-tools)) {
+        grid-template-columns: auto minmax(10rem, 1fr);
+        grid-template-areas: "brand search";
+    }
+
+    .browse-header-inner:not(:has(.browse-tools)) .browse-search {
+        max-width: 28rem;
+        justify-self: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .browse-header-inner {
+        padding-top: 1rem;
+        padding-bottom: 0.85rem;
+        column-gap: 1.25rem;
+    }
+
+    .browse-search,
+    .browse-header-inner:not(:has(.browse-tools)) .browse-search {
+        max-width: 36rem;
+    }
+}
+
+.desktop-appbar {
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(16px);
+}
+
+/* Collection hero: phone stays compact; tablet/desktop get a banner, not a taller bar. */
+@media (min-width: 768px) {
+    .collection-chrome {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .collection-hero {
+        display: flex;
+        min-height: 11rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 1.5rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .collection-hero-brand {
+        display: none;
+    }
+
+    .collection-title {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-size: 2.75rem;
+    }
+
+    .collection-chrome.has-art {
+        --art-position: center 30%;
+        --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.86) 0%, rgba(10, 10, 9, 0.28) 42%, transparent 70%);
+    }
+
+    .collection-chrome.has-art .collection-hero {
+        min-height: 17.5rem;
+        padding-top: 1.25rem;
+        padding-bottom: 0.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .collection-hero {
+        min-height: 13rem;
+    }
+
+    .collection-chrome.has-art .collection-hero {
+        min-height: 22rem;
+        padding-top: 1.5rem;
+    }
+
+    .collection-title {
+        font-size: 3.25rem;
+    }
+}
+
+@media (prefers-color-scheme: light) and (min-width: 768px) {
+    .collection-chrome.has-art {
+        --art-scrim: var(
+            --art-scrim-light,
+            linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.22) 55%, transparent 100%)
+        );
+    }
+}
+
+/*
+  Featured compositions — not “more columns of the same tile.”
+  Tablet: 80s as a wide lead. Desktop: 80s as a 2×2 hero, Pop as a wide closer.
+*/
+@media (min-width: 768px) {
+    .tile-grid-featured {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 11rem 7.25rem 7.25rem;
+        gap: 0.75rem;
+    }
+
+    .tile-grid-featured > * {
+        height: 100%;
+    }
+
+    .tile-grid-featured > :nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+
+    .tile-grid-featured > :nth-child(1) .collection-tile-label {
+        font-size: 1.75rem;
+        letter-spacing: -0.03em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tile-grid-featured {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: 9.25rem 9.25rem 8.25rem;
+        gap: 0.875rem;
+    }
+
+    .tile-grid-featured > :nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .tile-grid-featured > :nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .tile-grid-featured > :nth-child(3) {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .tile-grid-featured > :nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .tile-grid-featured > :nth-child(5) {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .tile-grid-featured > :nth-child(6) {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    .tile-grid-featured > :nth-child(7) {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .tile-grid-featured > :nth-child(8) {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    .tile-grid-featured > :nth-child(1) .collection-tile-label {
+        font-size: 2.15rem;
+    }
+
+    .tile-grid-featured > :nth-child(6) .collection-tile-label {
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .tile-grid-genre {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.875rem;
+    }
+
+    .tile-grid-featured {
+        grid-template-rows: 10rem 10rem 8.75rem;
+    }
+}
+
+/* Song lists become a scanable table from md. Mobile markup stays stacked. */
+.song-col,
+.song-table-head {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .song-table-head,
+    .song-row {
+        display: grid;
+        grid-template-columns: 3.25rem minmax(0, 1.5fr) minmax(0, 1fr) 3.75rem 2.5rem;
+        column-gap: 0.85rem;
+        align-items: center;
+        margin-inline: -0.5rem;
+        padding-inline: 0.5rem;
+    }
+
+    .song-table.has-from .song-table-head,
+    .song-table.has-from .song-row {
+        grid-template-columns: 3.25rem minmax(0, 1.4fr) minmax(0, 0.9fr) minmax(0, 1fr) 3.75rem 2.5rem;
+    }
+
+    .song-table-head {
+        position: sticky;
+        top: var(--sticky-head-top, 0px);
+        z-index: 15;
+        padding-top: 0.4rem;
+        padding-bottom: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--faint);
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        backdrop-filter: blur(10px);
+    }
+
+    .song-table-head .song-num {
+        width: auto;
+        padding-top: 0;
+        padding-right: 0.2rem;
+        font-size: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        justify-self: end;
+    }
+
+    .song-row {
+        gap: 0;
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+        border-radius: 0.5rem;
+        border-bottom-color: transparent;
+        box-shadow: inset 0 -1px var(--line);
+    }
+
+    .song-row .song-num {
+        width: auto;
+        padding-top: 0;
+        padding-right: 0.2rem;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .song-row .song-body {
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .song-row .song-sub {
+        display: none;
+    }
+
+    .song-col {
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        font-size: 13.5px;
+        color: var(--muted);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .song-col-year {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        color: var(--faint);
+        text-align: right;
+    }
+
+    .song-col-from {
+        display: none;
+    }
+
+    .song-table.has-from .song-col-from {
+        display: block;
+    }
+
+    .song-row .song-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .collection-tile.has-art {
+        transition: filter 160ms ease;
+    }
+
+    .collection-tile.has-art:hover {
+        filter: brightness(1.08);
+    }
+
+    .collection-tile:not(.has-art):hover {
+        filter: brightness(1.06);
+    }
+
+    @media (min-width: 768px) {
+        .song-row:hover {
+            background: color-mix(in srgb, var(--cream) 4.5%, transparent);
+        }
+    }
+}
+
+.artist-letter-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .artist-index {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 2.5rem;
+    }
+
+    .artist-index section {
+        min-width: 0;
+        padding-bottom: 0.75rem;
+    }
+
+    .artist-index .artist-letter {
+        position: static;
+        top: auto;
+        scroll-margin-top: calc(var(--sticky-head-top, 0px) + 0.5rem);
+    }
+
+    .artist-count {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        color: var(--faint);
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+@media (min-width: 1024px) {
+    .artist-letter-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.15rem 0.65rem;
+        margin: 0 0 1.1rem;
+        padding: 0;
+        list-style: none;
+    }
+
+    .artist-letter-nav a {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        text-decoration: none;
+    }
+
+    .artist-letter-nav a:hover {
+        color: var(--text, var(--cream));
+    }
+}
+
+@media (min-width: 1280px) {
+    .artist-index {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 2.75rem;
+    }
+}
+
 a {
     text-decoration: none;
 }
