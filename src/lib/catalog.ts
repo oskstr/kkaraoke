@@ -69,6 +69,8 @@ export interface BrowseTile {
     titleTransitionName: string;
     /** Larger type for decade tiles. */
     large?: boolean;
+    /** Song count for list-mode rows (films, languages). */
+    count?: number;
 }
 
 export interface CollectionRef {
@@ -449,7 +451,12 @@ export function browseTiles(
     }
 
     if (facet === "film") {
-        const films = uniqueSorted(songs.map((s) => s.from).filter((f): f is string => Boolean(f)));
+        const counts = new Map<string, number>();
+        for (const song of songs) {
+            if (!song.from) continue;
+            counts.set(song.from, (counts.get(song.from) ?? 0) + 1);
+        }
+        const films = uniqueSorted(counts.keys());
         return {
             mode: "list",
             tiles: films.map((f) => ({
@@ -457,14 +464,18 @@ export function browseTiles(
                 href: collectionPath("from", f),
                 kind: "from" as const,
                 key: f,
+                count: counts.get(f) ?? 0,
                 ...collectionLook("from", f),
             })),
         };
     }
 
-    const langs = uniqueSorted(songs.map((s) => s.language).filter((l): l is string => Boolean(l))).filter(
-        (l) => LANGUAGE_LABELS[l] !== undefined,
-    );
+    const langCounts = new Map<string, number>();
+    for (const song of songs) {
+        if (!song.language) continue;
+        langCounts.set(song.language, (langCounts.get(song.language) ?? 0) + 1);
+    }
+    const langs = uniqueSorted(langCounts.keys()).filter((l) => LANGUAGE_LABELS[l] !== undefined);
     return {
         mode: "list",
         tiles: langs.map((l) => ({
@@ -472,6 +483,7 @@ export function browseTiles(
             href: collectionPath("lang", l),
             kind: "lang" as const,
             key: l,
+            count: langCounts.get(l) ?? 0,
             ...collectionLook("lang", l),
         })),
     };

@@ -68,6 +68,11 @@ const { tiles, mode, facet } = Astro.props;
                     >
                         {tile.label}
                     </span>
+                    {tile.count !== undefined && (
+                        <span class="artist-count hidden md:inline">
+                            {tile.count} {tile.count === 1 ? "song" : "songs"}
+                        </span>
+                    )}
                     <span class="row-chevron text-[15px] text-dim md:hidden" aria-hidden="true">
                         →
                     </span>

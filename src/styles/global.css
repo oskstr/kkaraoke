@@ -409,6 +409,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    .song-table {
+        max-width: 54rem;
+    }
+
     .song-table-head,
     .song-row {
         display: grid;
