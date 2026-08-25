@@ -882,37 +882,28 @@ html:active-view-transition [data-search-input] {
     animation: none;
 }
 
-/* Browse ↔ collection: search, brand, and Favorites occupy the same toolbar
-   slots on desktop. Named morphs still fade the field (plus-lighter root)
-   and slide Favorites because persist/search-launch are different nodes.
-   Keep those groups still. Phone keeps persist search and Favorites morph. */
+/* Browse ↔ collection: both toolbars use the same slots, but Astro still
+   mints a different name per component, so search/Favorites participate in
+   the root plus-lighter fade (and Favorites-nav morphs if it pairs). One
+   frozen toolbar group. Phone keeps persist search and Favorites morph. */
 @media (min-width: 768px) {
-    .browse-search {
-        view-transition-name: desktop-search-chrome;
+    .browse-header,
+    .desktop-appbar {
+        view-transition-name: desktop-toolbar !important;
     }
 
-    [data-search-input] {
-        view-transition-name: none !important;
-    }
-
+    .browse-search,
+    [data-search-input],
+    [data-fav-nav],
+    .browse-brand [data-brand-mark],
+    .desktop-appbar .browse-brand a,
     .collection-hero-brand [data-brand-mark] {
         view-transition-name: none !important;
     }
 
-    .browse-brand [data-brand-mark],
-    .desktop-appbar .browse-brand a {
-        view-transition-name: desktop-brand !important;
-    }
-
-    ::view-transition-group(desktop-search-chrome),
-    ::view-transition-old(desktop-search-chrome),
-    ::view-transition-new(desktop-search-chrome),
-    ::view-transition-group(desktop-brand),
-    ::view-transition-old(desktop-brand),
-    ::view-transition-new(desktop-brand),
-    ::view-transition-group(favorites-nav),
-    ::view-transition-old(favorites-nav),
-    ::view-transition-new(favorites-nav) {
+    ::view-transition-group(desktop-toolbar),
+    ::view-transition-old(desktop-toolbar),
+    ::view-transition-new(desktop-toolbar) {
         animation: none !important;
     }
 }
