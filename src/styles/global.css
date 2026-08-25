@@ -182,10 +182,12 @@ body {
     gap: 10px;
 }
 
-.browse-toolbar:not(:has(.browse-tools)) {
-    grid-template-areas:
-        "brand brand"
-        "search search";
+@media (max-width: 767px) {
+    .browse-toolbar:not(:has(.browse-tools)) {
+        grid-template-areas:
+            "brand brand"
+            "search search";
+    }
 }
 
 @media (min-width: 768px) {
@@ -215,8 +217,7 @@ body {
         display: contents;
     }
 
-    .browse-search > search,
-    .browse-search > [data-search-launch] {
+    .browse-search-control {
         grid-area: search;
         max-width: 28rem;
         width: 100%;
@@ -246,8 +247,7 @@ body {
         column-gap: 1.25rem;
     }
 
-    .browse-search > search,
-    .browse-search > [data-search-launch] {
+    .browse-search-control {
         max-width: 36rem;
     }
 }
@@ -286,7 +286,6 @@ body {
     }
 
     .collection-chrome.has-art {
-        --art-position: center 48%;
         --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.2) 46%, transparent 76%);
     }
 
@@ -763,7 +762,8 @@ html:active-view-transition [data-search-input] {
 
     .collection-chrome.has-art {
         background-size: cover;
-        background-position: var(--art-position, center 48%);
+        /* Inline --art-position stays `center top` for the phone. */
+        background-position: center 58%;
         background-repeat: no-repeat;
     }
 }
