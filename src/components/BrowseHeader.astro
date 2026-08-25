@@ -31,13 +31,9 @@ const heading = searchPage
             <div class="browse-brand">
                 <BrandMark current={facet === "featured"} />
             </div>
-            {
-                !searchPage && (
-                    <div class="browse-tools">
-                        <FavoritesNav />
-                    </div>
-                )
-            }
+            <div class="browse-tools">
+                <FavoritesNav />
+            </div>
             <div class="browse-search">
                 <search class="browse-search-control min-w-0 flex-1" data-search-launch={searchPage ? undefined : true}>
                     <label

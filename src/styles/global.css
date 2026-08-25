@@ -183,10 +183,15 @@ body {
 }
 
 @media (max-width: 767px) {
-    .browse-toolbar:not(:has(.browse-tools)) {
+    .browse-toolbar:not(:has(.browse-tools)),
+    .browse-toolbar:has([data-search-cancel]) {
         grid-template-areas:
             "brand brand"
             "search search";
+    }
+
+    .browse-toolbar:has([data-search-cancel]) .browse-tools {
+        display: none;
     }
 }
 
@@ -211,24 +216,21 @@ body {
         align-items: center;
     }
 
-    /* Field and Cancel become grid items so Cancel sits in the Favorites
-       column instead of crowding the pill. Phone keeps them in one flex row. */
     .browse-search {
-        display: contents;
+        margin-top: 0;
+        min-width: 0;
     }
 
+    /* Width lives on the field so Cancel can sit beside it without shrinking the pill. */
     .browse-search-control {
-        grid-area: search;
-        max-width: 28rem;
-        width: 100%;
+        width: 28rem;
+        max-width: 100%;
+        flex: 0 0 auto;
         min-width: 0;
-        justify-self: stretch;
     }
 
     .browse-header [data-search-cancel] {
-        grid-area: tools;
-        justify-self: end;
-        align-self: center;
+        flex: 0 0 auto;
         white-space: nowrap;
     }
 
@@ -248,7 +250,7 @@ body {
     }
 
     .browse-search-control {
-        max-width: 36rem;
+        width: 36rem;
     }
 }
 
@@ -888,43 +890,85 @@ html:active-view-transition [data-search-input] {
     animation: none;
 }
 
-/* Browse ↔ collection: freeze the shared brand | search | Favorites row.
-   Naming the whole header morphs different heights (browse has facet tabs).
-   `animation: none` on old AND new would keep both snapshots painted, so
-   Favorites and Cancel stacked on browse ↔ search. Hide the outgoing bar.
+/* Freeze brand, the search pill, and Favorites in place. Cancel is a
+   sibling of the pill (not the Favorites slot) and fades in on its own.
    Phone keeps persist search and Favorites morph. */
 @media (min-width: 768px) {
     .browse-header,
-    .desktop-appbar {
+    .desktop-appbar,
+    .browse-toolbar {
         view-transition-name: none !important;
     }
 
-    .browse-toolbar {
-        view-transition-name: desktop-toolbar !important;
+    .browse-brand {
+        view-transition-name: desktop-brand !important;
+    }
+
+    .browse-search-control {
+        view-transition-name: desktop-search-field !important;
+    }
+
+    [data-fav-nav] {
+        view-transition-name: desktop-tools !important;
+    }
+
+    .browse-header [data-search-cancel] {
+        view-transition-name: search-cancel;
     }
 
     .browse-search,
     [data-search-input],
-    [data-fav-nav],
     .browse-brand [data-brand-mark],
     .desktop-appbar .browse-brand a,
     .collection-hero-brand [data-brand-mark] {
         view-transition-name: none !important;
     }
 
-    ::view-transition-group(desktop-toolbar) {
-        animation: none !important;
-    }
-
-    ::view-transition-old(desktop-toolbar) {
+    ::view-transition-group(desktop-brand),
+    ::view-transition-old(desktop-brand),
+    ::view-transition-new(desktop-brand),
+    ::view-transition-group(desktop-search-field),
+    ::view-transition-old(desktop-search-field),
+    ::view-transition-new(desktop-search-field),
+    ::view-transition-group(desktop-tools),
+    ::view-transition-old(desktop-tools),
+    ::view-transition-new(desktop-tools) {
         animation: none !important;
         mix-blend-mode: normal;
+    }
+
+    ::view-transition-old(desktop-brand),
+    ::view-transition-old(desktop-search-field),
+    ::view-transition-old(desktop-tools) {
+        opacity: 0 !important;
+    }
+
+    ::view-transition-old(search-cancel) {
+        animation: search-cancel-out 140ms ease-in both;
+        mix-blend-mode: normal;
+    }
+
+    ::view-transition-new(search-cancel) {
+        animation: search-cancel-in 160ms ease-out both;
+        mix-blend-mode: normal;
+    }
+}
+
+@keyframes search-cancel-in {
+    from {
         opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
 
-    ::view-transition-new(desktop-toolbar) {
-        animation: none !important;
-        mix-blend-mode: normal;
+@keyframes search-cancel-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
