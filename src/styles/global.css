@@ -209,25 +209,30 @@ body {
         align-items: center;
     }
 
+    /* Field and Cancel become grid items so Cancel sits in the Favorites
+       column instead of crowding the pill. Phone keeps them in one flex row. */
     .browse-search {
-        margin-top: 0;
+        display: contents;
+    }
+
+    .browse-search > search,
+    .browse-search > [data-search-launch] {
+        grid-area: search;
         max-width: 28rem;
+        width: 100%;
+        min-width: 0;
         justify-self: stretch;
+    }
+
+    .browse-header [data-search-cancel] {
+        grid-area: tools;
+        justify-self: end;
+        align-self: center;
+        white-space: nowrap;
     }
 
     .browse-tabs {
         margin-top: 0.7rem;
-    }
-
-    .browse-toolbar:not(:has(.browse-tools)) {
-        grid-template-columns: auto minmax(10rem, 1fr);
-        grid-template-areas: "brand search";
-    }
-
-    .browse-toolbar:not(:has(.browse-tools)) .browse-search {
-        max-width: 32rem;
-        width: 100%;
-        justify-self: start;
     }
 }
 
@@ -241,8 +246,8 @@ body {
         column-gap: 1.25rem;
     }
 
-    .browse-search,
-    .browse-toolbar:not(:has(.browse-tools)) .browse-search {
+    .browse-search > search,
+    .browse-search > [data-search-launch] {
         max-width: 36rem;
     }
 }
@@ -281,8 +286,8 @@ body {
     }
 
     .collection-chrome.has-art {
-        --art-position: center 30%;
-        --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.86) 0%, rgba(10, 10, 9, 0.28) 42%, transparent 70%);
+        --art-position: center 48%;
+        --art-scrim: linear-gradient(to top, rgba(10, 10, 9, 0.72) 0%, rgba(10, 10, 9, 0.2) 46%, transparent 76%);
     }
 
     .collection-chrome.has-art .collection-hero {
@@ -748,18 +753,18 @@ html:active-view-transition [data-search-input] {
 }
 
 /* Phone tiles are short, so still-lifes are framed from the top (and iOS
-   samples that edge). Taller desktop tiles need the subject in the frame.
-   Collection banners are much wider than the photos — size to height and
-   pin right so the still-life is whole, with the title sitting on the tint. */
+   samples that edge). Taller desktop tiles and banners crop through the
+   subject instead of the top of the frame (wall, handle). Cover keeps the
+   photo across the bar; a wash on the title is enough for type. */
 @media (min-width: 768px) {
     .collection-tile.has-art {
         background-position: center 42%;
     }
 
     .collection-chrome.has-art {
+        background-size: cover;
+        background-position: var(--art-position, center 48%);
         background-repeat: no-repeat;
-        background-size: 100% 100%, auto 88%;
-        background-position: center, right 4% center;
     }
 }
 
