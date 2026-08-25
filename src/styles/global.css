@@ -337,7 +337,7 @@ body {
 @media (min-width: 1024px) {
     .tile-grid-featured {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: 1.2fr 1.2fr 0.85fr;
+        grid-template-rows: 1.15fr 1.15fr 1fr;
         gap: 0.875rem;
         min-height: min(34rem, calc(100svh - 11rem));
     }
@@ -411,10 +411,22 @@ body {
 
     .tile-grid-featured {
         flex: 1 1 auto;
+        /* Keep the 80s hero landscape-ish so cover does not punch into a portrait crop. */
+        max-height: min(42rem, calc(100svh - var(--sticky-head-top, 8rem) - 2rem));
     }
 
     .collection-chrome.has-art .collection-hero {
-        min-height: clamp(24rem, 42svh, 36rem);
+        min-height: clamp(24rem, 42svh, 40rem);
+    }
+}
+
+@media (min-width: 1536px) {
+    .page-inner:has(.tile-grid-featured) {
+        max-width: 90rem;
+    }
+
+    .tile-grid-featured {
+        max-height: min(46rem, calc(100svh - var(--sticky-head-top, 8rem) - 2rem));
     }
 }
 
@@ -729,15 +741,17 @@ html:active-view-transition [data-search-input] {
 }
 
 /* Phone tiles are short, so still-lifes are framed from the top (and iOS
-   samples that edge). Taller desktop tiles and banners need the subject
-   in the frame, not the sky/ceiling above it. */
+   samples that edge). Taller desktop tiles need the subject in the frame.
+   Collection banners are much wider than the photos — size to height and
+   pin right so the still-life is whole, with the title sitting on the tint. */
 @media (min-width: 768px) {
     .collection-tile.has-art {
         background-position: center 42%;
     }
 
     .collection-chrome.has-art {
-        background-position: center 46%;
+        background-size: auto 100%;
+        background-position: right center;
     }
 }
 
