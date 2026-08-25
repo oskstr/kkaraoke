@@ -1,6 +1,6 @@
 ---
 import SongRow from "./SongRow.astro";
-import { categoriesLabel, mergeSongVariants, type SongVariant } from "../lib/catalog";
+import { categoriesLabel, mergeSongVariants, songsNeedFromColumn, type SongVariant } from "../lib/catalog";
 import type { Song } from "../lib/songs";
 
 interface Props {
@@ -31,7 +31,7 @@ const songs: SongVariant[] =
           ? (rawSongs as SongVariant[])
           : mergeSongVariants(rawSongs as Song[]);
 
-const showFrom = songs.some((song) => Boolean(song.from));
+const showFrom = songsNeedFromColumn(songs);
 ---
 
 {

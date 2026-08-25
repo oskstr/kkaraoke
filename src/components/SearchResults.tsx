@@ -1,6 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import SongResultRow, { SongTableHead } from "./SongResultRow";
-import { matchesQuery, type SearchSong } from "../lib/catalog";
+import { matchesQuery, songsNeedFromColumn, type SearchSong } from "../lib/catalog";
 import { getSearchIndex, type SearchIndex } from "../lib/search-index";
 
 interface Suggestion {
@@ -15,10 +15,11 @@ interface ArtistHit {
 
 interface Props {
     suggestions: Suggestion[];
+    destinations?: Suggestion[];
     inputId: string;
 }
 
-export default function SearchResults({ suggestions, inputId }: Props) {
+export default function SearchResults({ suggestions, destinations = [], inputId }: Props) {
     const [query, setQuery] = useState("");
     const [index, setIndex] = useState<SearchIndex | null>(null);
     const [loadError, setLoadError] = useState(false);
@@ -105,24 +106,47 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             {!loadError && !index && !idle && <div className="py-16 text-center text-sm text-muted">Searching…</div>}
 
             {idle && (
-                <div className="search-idle md:pt-4 lg:pt-6">
-                    <p className="mb-5 hidden max-w-xl text-[17px] leading-relaxed text-muted md:block">
-                        Type a song, an artist, or the film it&apos;s from.
-                    </p>
-                    <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">Jump to</div>
-                    <div className="flex flex-wrap gap-1.5 md:max-w-3xl md:gap-2">
-                        {suggestions.map((s) => (
-                            <a
-                                key={s.href + s.label}
-                                href={s.href}
-                                className="rounded-full border border-line-strong bg-panel px-3.5 py-2 text-[13.5px] font-semibold text-cream-soft no-underline hover:text-cream"
-                                data-astro-prefetch="false"
-                                {...(s.href === "/artists" ? { "data-astro-reload": true } : {})}
-                            >
-                                {s.label}
-                            </a>
-                        ))}
+                <div className="search-idle md:grid md:grid-cols-2 md:gap-x-16 md:pt-8 lg:gap-x-24">
+                    <div>
+                        <p className="mb-5 hidden max-w-xl text-[17px] leading-relaxed text-muted md:block">
+                            Type a song, an artist, or the film it&apos;s from.
+                        </p>
+                        <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">
+                            Jump to
+                        </div>
+                        <div className="flex flex-wrap gap-1.5 md:gap-2">
+                            {suggestions.map((s) => (
+                                <a
+                                    key={s.href + s.label}
+                                    href={s.href}
+                                    className="rounded-full border border-line-strong bg-panel px-3.5 py-2 text-[13.5px] font-semibold text-cream-soft no-underline hover:text-cream"
+                                    data-astro-prefetch="false"
+                                    {...(s.href === "/artists" ? { "data-astro-reload": true } : {})}
+                                >
+                                    {s.label}
+                                </a>
+                            ))}
+                        </div>
                     </div>
+                    {destinations.length > 0 && (
+                        <div className="mt-8 hidden md:mt-0 md:block">
+                            <div className="py-2.5 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase">
+                                Start here
+                            </div>
+                            <ul className="m-0 list-none p-0">
+                                {destinations.map((d) => (
+                                    <li key={d.href}>
+                                        <a
+                                            href={d.href}
+                                            className="flex items-center border-b border-line py-3.5 text-[17px] font-semibold text-cream no-underline hover:text-cream"
+                                        >
+                                            {d.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             )}
 
@@ -141,7 +165,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
                                 <span className="flex-1 text-base font-medium" data-vt-artist={a.slug}>
                                     {a.name}
                                 </span>
-                                <span className="text-[15px] text-dim">→</span>
+                                <span className="text-[15px] text-dim md:hidden">→</span>
                             </a>
                         ))}
                     </div>
@@ -149,7 +173,7 @@ export default function SearchResults({ suggestions, inputId }: Props) {
             )}
 
             {rows.length > 0 && (
-                <div className={rows.some((song) => song.from) ? "song-table has-from" : "song-table"}>
+                <div className={songsNeedFromColumn(rows) ? "song-table has-from" : "song-table"}>
                     <div className="pt-3.5 pb-1 font-mono text-[10.5px] tracking-[0.14em] text-faint uppercase md:hidden">
                         Songs
                     </div>

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useFavorites } from "./FavoriteButton";
 import SongResultRow, { SongTableHead } from "./SongResultRow";
-import type { SearchSong } from "../lib/catalog";
+import { songsNeedFromColumn, type SearchSong } from "../lib/catalog";
 import { getSearchIndex } from "../lib/search-index";
 
 export default function FavoritesApp() {
@@ -64,7 +64,7 @@ export default function FavoritesApp() {
     }
 
     return (
-        <div className={rows.some((song) => song.from) ? "song-table has-from" : "song-table"}>
+        <div className={songsNeedFromColumn(rows) ? "song-table has-from" : "song-table"}>
             <SongTableHead />
             {rows.map((song) => (
                 <SongResultRow key={song.id} song={song} />

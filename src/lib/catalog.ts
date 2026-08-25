@@ -665,6 +665,19 @@ export interface ArtistGroup {
     artists: Artist[];
 }
 
+/** Show From only when the list has several different films — not a hollow or redundant column. */
+export function songsNeedFromColumn(songs: { from?: string | undefined }[]): boolean {
+    const films = new Set<string>();
+    let withFrom = 0;
+    for (const song of songs) {
+        if (!song.from) continue;
+        withFrom++;
+        films.add(song.from);
+    }
+    if (films.size < 2) return false;
+    return withFrom * 2 >= songs.length;
+}
+
 /** Unique catalog songs per artist slug — same counting as an artist page. */
 export function artistSongCounts(songs: Song[] = getSongs()): Map<string, number> {
     const counts = new Map<string, number>();
