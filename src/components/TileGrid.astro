@@ -1,22 +1,32 @@
 ---
-import { collectionSurfaceStyle, type BrowseTile } from "../lib/catalog";
+import { collectionSurfaceStyle, type BrowseTile, type FacetKey } from "../lib/catalog";
 
 interface Props {
     tiles: BrowseTile[];
     mode: "tiles" | "list";
+    facet?: FacetKey;
 }
 
-const { tiles, mode } = Astro.props;
+const { tiles, mode, facet } = Astro.props;
 ---
 
 {
     mode === "tiles" ? (
-        <div class="grid grid-cols-2 gap-2.5">
+        <div
+            class:list={[
+                "tile-grid grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-3 lg:grid-cols-4",
+                facet === "featured" && "tile-grid-featured",
+                (facet === "genre" || facet === "occasion") && "tile-grid-genre",
+            ]}
+        >
             {tiles.map((tile) => (
                 <a
                     href={tile.href}
                     class:list={[
-                        "collection-tile flex h-24 items-end overflow-hidden rounded-xl p-3.5 no-underline",
+                        "collection-tile flex items-end overflow-hidden rounded-xl p-3.5 no-underline",
+                        facet === "featured"
+                            ? "h-24 md:h-full md:p-4 lg:p-5"
+                            : ["h-24", tile.large ? "md:h-32 lg:h-36" : "md:h-28 lg:h-28"],
                         tile.art && "has-art",
                     ]}
                     style={collectionSurfaceStyle(tile)}
@@ -40,7 +50,7 @@ const { tiles, mode } = Astro.props;
             ))}
         </div>
     ) : (
-        <div class="flex flex-col gap-px">
+        <div class="flex flex-col gap-px md:grid md:grid-cols-2 md:gap-x-10">
             {/* Named chrome on the row so the title nests the same way as the collection bar. */}
             {tiles.map((tile) => (
                 <a
@@ -58,7 +68,12 @@ const { tiles, mode } = Astro.props;
                     >
                         {tile.label}
                     </span>
-                    <span class="text-[15px] text-dim" aria-hidden="true">
+                    {tile.count !== undefined && (
+                        <span class="artist-count hidden md:inline">
+                            {tile.count} {tile.count === 1 ? "song" : "songs"}
+                        </span>
+                    )}
+                    <span class="row-chevron text-[15px] text-dim md:hidden" aria-hidden="true">
                         →
                     </span>
                 </a>

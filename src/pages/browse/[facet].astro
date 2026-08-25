@@ -25,7 +25,7 @@ const label = FACETS.find((f) => f.key === activeFacet)?.label ?? "Browse";
 
 <Layout title={`${label} · kkaraoke`}>
     <BrowseHeader facet={activeFacet} />
-    <main id="main" tabindex="-1" class="px-[18px] pt-4 pb-6" transition:animate="fade">
-        <TileGrid tiles={tiles} mode={mode} />
+    <main id="main" tabindex="-1" class="page-inner pt-4 pb-6 md:pt-6 md:pb-10" transition:animate="fade">
+        <TileGrid tiles={tiles} mode={mode} facet={activeFacet} />
     </main>
 </Layout>
