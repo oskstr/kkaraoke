@@ -144,16 +144,20 @@ body {
     }
 }
 
-/* Browse chrome: stacked on a phone, compact toolbar from tablet. */
+/* Browse chrome: stacked on a phone, compact toolbar from tablet.
+   Brand/search/Favorites live in `.browse-toolbar` so that row can share a
+   view-transition name with the collection app bar (tabs are a different height). */
 .browse-header-inner {
+    padding-top: 22px;
+    padding-bottom: 12px;
+}
+
+.browse-toolbar {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
         "brand tools"
-        "search search"
-        "tabs tabs";
-    padding-top: 22px;
-    padding-bottom: 12px;
+        "search search";
     column-gap: 8px;
 }
 
@@ -178,11 +182,7 @@ body {
     gap: 10px;
 }
 
-.browse-tabs {
-    grid-area: tabs;
-}
-
-.browse-header-inner:not(:has(.browse-tools)) {
+.browse-toolbar:not(:has(.browse-tools)) {
     grid-template-areas:
         "brand brand"
         "search search";
@@ -198,14 +198,14 @@ body {
     }
 
     .browse-header-inner {
-        grid-template-columns: auto minmax(10rem, 1fr) auto;
-        grid-template-areas:
-            "brand search tools"
-            "tabs tabs tabs";
         padding-top: 0.85rem;
         padding-bottom: 0.75rem;
+    }
+
+    .browse-toolbar {
+        grid-template-columns: auto minmax(10rem, 1fr) auto;
+        grid-template-areas: "brand search tools";
         column-gap: 1rem;
-        row-gap: 0.7rem;
         align-items: center;
     }
 
@@ -215,12 +215,16 @@ body {
         justify-self: stretch;
     }
 
-    .browse-header-inner:not(:has(.browse-tools)) {
+    .browse-tabs {
+        margin-top: 0.7rem;
+    }
+
+    .browse-toolbar:not(:has(.browse-tools)) {
         grid-template-columns: auto minmax(10rem, 1fr);
         grid-template-areas: "brand search";
     }
 
-    .browse-header-inner:not(:has(.browse-tools)) .browse-search {
+    .browse-toolbar:not(:has(.browse-tools)) .browse-search {
         max-width: 32rem;
         width: 100%;
         justify-self: start;
@@ -231,11 +235,14 @@ body {
     .browse-header-inner {
         padding-top: 1rem;
         padding-bottom: 0.85rem;
+    }
+
+    .browse-toolbar {
         column-gap: 1.25rem;
     }
 
     .browse-search,
-    .browse-header-inner:not(:has(.browse-tools)) .browse-search {
+    .browse-toolbar:not(:has(.browse-tools)) .browse-search {
         max-width: 36rem;
     }
 }
@@ -243,12 +250,6 @@ body {
 .desktop-appbar {
     background: color-mix(in srgb, var(--surface) 88%, transparent);
     backdrop-filter: blur(16px);
-}
-
-/* Same first-row slots as browse (brand | search | favorites). Without this,
-   flex leftover space sits after Favorites and the control jumps inward. */
-.desktop-appbar-inner {
-    grid-template-areas: "brand search tools";
 }
 
 /* Collection hero: phone stays compact; tablet/desktop get a banner, not a taller bar. */
@@ -882,13 +883,16 @@ html:active-view-transition [data-search-input] {
     animation: none;
 }
 
-/* Browse ↔ collection: both toolbars use the same slots, but Astro still
-   mints a different name per component, so search/Favorites participate in
-   the root plus-lighter fade (and Favorites-nav morphs if it pairs). One
-   frozen toolbar group. Phone keeps persist search and Favorites morph. */
+/* Browse ↔ collection: freeze the shared brand | search | Favorites row.
+   Naming the whole header morphs different heights (browse has facet tabs).
+   Phone keeps persist search and Favorites morph. */
 @media (min-width: 768px) {
     .browse-header,
     .desktop-appbar {
+        view-transition-name: none !important;
+    }
+
+    .browse-toolbar {
         view-transition-name: desktop-toolbar !important;
     }
 
