@@ -245,6 +245,12 @@ body {
     backdrop-filter: blur(16px);
 }
 
+/* Same first-row slots as browse (brand | search | favorites). Without this,
+   flex leftover space sits after Favorites and the control jumps inward. */
+.desktop-appbar-inner {
+    grid-template-areas: "brand search tools";
+}
+
 /* Collection hero: phone stays compact; tablet/desktop get a banner, not a taller bar. */
 @media (min-width: 768px) {
     .collection-chrome {
@@ -874,6 +880,41 @@ html:active-view-transition [data-search-input] {
 
 ::view-transition-group(brand) {
     animation: none;
+}
+
+/* Browse ↔ collection: search, brand, and Favorites occupy the same toolbar
+   slots on desktop. Named morphs still fade the field (plus-lighter root)
+   and slide Favorites because persist/search-launch are different nodes.
+   Keep those groups still. Phone keeps persist search and Favorites morph. */
+@media (min-width: 768px) {
+    .browse-search {
+        view-transition-name: desktop-search-chrome;
+    }
+
+    [data-search-input] {
+        view-transition-name: none !important;
+    }
+
+    .collection-hero-brand [data-brand-mark] {
+        view-transition-name: none !important;
+    }
+
+    .browse-brand [data-brand-mark],
+    .desktop-appbar .browse-brand a {
+        view-transition-name: desktop-brand !important;
+    }
+
+    ::view-transition-group(desktop-search-chrome),
+    ::view-transition-old(desktop-search-chrome),
+    ::view-transition-new(desktop-search-chrome),
+    ::view-transition-group(desktop-brand),
+    ::view-transition-old(desktop-brand),
+    ::view-transition-new(desktop-brand),
+    ::view-transition-group(favorites-nav),
+    ::view-transition-old(favorites-nav),
+    ::view-transition-new(favorites-nav) {
+        animation: none !important;
+    }
 }
 
 ::view-transition-group(.coll-chrome),
