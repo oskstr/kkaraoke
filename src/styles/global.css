@@ -890,6 +890,8 @@ html:active-view-transition [data-search-input] {
 
 /* Browse ↔ collection: freeze the shared brand | search | Favorites row.
    Naming the whole header morphs different heights (browse has facet tabs).
+   `animation: none` on old AND new would keep both snapshots painted, so
+   Favorites and Cancel stacked on browse ↔ search. Hide the outgoing bar.
    Phone keeps persist search and Favorites morph. */
 @media (min-width: 768px) {
     .browse-header,
@@ -910,10 +912,19 @@ html:active-view-transition [data-search-input] {
         view-transition-name: none !important;
     }
 
-    ::view-transition-group(desktop-toolbar),
-    ::view-transition-old(desktop-toolbar),
+    ::view-transition-group(desktop-toolbar) {
+        animation: none !important;
+    }
+
+    ::view-transition-old(desktop-toolbar) {
+        animation: none !important;
+        mix-blend-mode: normal;
+        opacity: 0;
+    }
+
     ::view-transition-new(desktop-toolbar) {
         animation: none !important;
+        mix-blend-mode: normal;
     }
 }
 
