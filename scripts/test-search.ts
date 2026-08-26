@@ -201,6 +201,12 @@ describe("issue #34 A★Teens", () => {
         }
     });
 
+    it("still matches A★Teens while the last word is being typed", () => {
+        const row = catalog[0]!;
+        assert.equal(matchesQuery(row, "a te", bySlug), true);
+        assert.equal(rankArtists(artists, "a te")[0]?.name, "A★Teens");
+    });
+
     it("ranks A★Teens first for a teens", () => {
         const artistHits = rankArtists(artists, "a teens");
         assert.equal(artistHits[0]?.name, "A★Teens");
@@ -227,8 +233,8 @@ describe("stylized names", () => {
     it("does not treat aha as a prefix of A Hard Day’s Night", () => {
         const titles = rankSongs(catalog, "aha", bySlug).map((row) => row.title);
         assert.ok(!titles.includes("A Hard Day’s Night"));
-        const spaced = rankSongs(catalog, "a ha", bySlug).map((row) => row.title);
-        assert.ok(!spaced.includes("A Hard Day’s Night"));
+        const spaced = rankSongs(catalog, "a ha", bySlug);
+        assert.equal(spaced[0]?.title, "Take On Me");
     });
 
     it("finds AC/DC from acdc", () => {

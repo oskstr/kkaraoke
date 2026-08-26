@@ -77,18 +77,21 @@ export function artistMap(artists: readonly SearchArtist[]): Map<string, SearchA
     return new Map(artists.map((artist) => [artist.slug, artist]));
 }
 
-function tokenHits(queryToken: string, fieldToken: string): boolean {
-    if (queryToken.length <= 2) {
-        return fieldToken === queryToken;
+function tokenHits(queryToken: string, fieldToken: string, allowPrefix = false): boolean {
+    if (allowPrefix || queryToken.length > 2) {
+        return fieldToken.startsWith(queryToken);
     }
-    return fieldToken.startsWith(queryToken);
+    return fieldToken === queryToken;
 }
 
 function tokensMatch(query: readonly string[], field: readonly string[]): boolean {
     if (query.length === 0) {
         return false;
     }
-    return query.every((qt) => field.some((ft) => tokenHits(qt, ft)));
+    return query.every((qt, index) => {
+        const typingLast = index === query.length - 1 && query.length >= 2;
+        return field.some((ft) => tokenHits(qt, ft, typingLast));
+    });
 }
 
 /** True when the field is the query, or its leading words are. `a ha` must not prefix `a hard`. */
