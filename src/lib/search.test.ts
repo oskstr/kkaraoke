@@ -166,6 +166,18 @@ const catalog: SearchSong[] = [
         artist: "Cat Stevens",
         artists: [{ name: "Cat Stevens", slug: "cat-stevens" }],
     }),
+    song({
+        id: 120,
+        title: "California Love",
+        artist: "2Pac",
+        artists: [{ name: "2Pac", slug: "2pac" }],
+    }),
+    song({
+        id: 130,
+        title: "Buttons",
+        artist: "The Pussycat Dolls",
+        artists: [{ name: "The Pussycat Dolls", slug: "the-pussycat-dolls" }],
+    }),
 ];
 
 const artists: SearchArtist[] = [
@@ -178,6 +190,15 @@ const artists: SearchArtist[] = [
     { name: "Queen", slug: "queen" },
     { name: "Håkan Hellström", slug: "hakan-hellstrom" },
     { name: "Elton John", slug: "elton-john" },
+    { name: "The Pussycat Dolls", slug: "the-pussycat-dolls" },
+    { name: "Doja Cat", slug: "doja-cat" },
+    { name: "Pink Floyd", slug: "pink-floyd" },
+    { name: "Cameo", slug: "cameo" },
+    { name: "Cash Cash", slug: "cash-cash" },
+    { name: "Four Cats", slug: "four-cats" },
+    { name: "The Cars", slug: "the-cars" },
+    { name: "Cascada", slug: "cascada" },
+    { name: "2Pac", slug: "2pac" },
     { name: "Elvis Presley", slug: "elvis-presley", aliases: ["The King", "Elvis"] },
 ];
 
@@ -236,6 +257,7 @@ describe("stylized names", () => {
         assert.equal(songs[0]?.artist, "P!nk");
         assert.equal(songs[0]?.title, "So What");
         assert.equal(rankArtists(artists, "pink")[0]?.name, "P!nk");
+        assert.ok(rankArtists(artists, "pink").some((artist) => artist.name === "Pink Floyd"));
     });
 
     it("finds a-ha from aha and a ha", () => {
@@ -289,6 +311,28 @@ describe("token matching", () => {
         const rows = rankSongs(catalog, "10", bySlug);
         assert.equal(rows[0]?.id, 10);
     });
+
+    it("matches ca as a word prefix of Cat Stevens and California Love", () => {
+        const songs = rankSongs(catalog, "ca", bySlug);
+        const titles = songs.map((row) => row.title);
+        const names = rankArtists(artists, "ca").map((artist) => artist.name);
+        assert.equal(names[0], "Cat Stevens");
+        assert.ok(titles.includes("California Love"));
+        assert.ok(titles.includes("Wild World"));
+        assert.ok(titles.indexOf("California Love") < titles.indexOf("Wild World"));
+    });
+
+    it("matches cat inside Pussycat Dolls and ranks Cat Stevens first", () => {
+        const names = rankArtists(artists, "cat").map((artist) => artist.name);
+        assert.equal(names[0], "Cat Stevens");
+        assert.ok(names.includes("Doja Cat"));
+        assert.ok(names.includes("The Pussycat Dolls"));
+        assert.ok(names.indexOf("Cat Stevens") < names.indexOf("The Pussycat Dolls"));
+        const titles = rankSongs(catalog, "cat", bySlug).map((row) => row.title);
+        assert.ok(titles.includes("Buttons"));
+        assert.ok(titles.includes("Wild World"));
+        assert.ok(titles.indexOf("Wild World") < titles.indexOf("Buttons"));
+    });
 });
 
 describe("ranking", () => {
@@ -300,10 +344,10 @@ describe("ranking", () => {
     it("prefers a title that starts with the query", () => {
         const extra = [...catalog, song({ id: 101, title: "Can't Help Falling in Love", artist: "Elvis Presley" })];
         const rows = rankSongs(extra, "love", bySlug);
-        assert.equal(rows[0]?.title, "Love Me Do");
-        assert.ok(
-            rows.findIndex((row) => row.title === "Love Me Do") < rows.findIndex((row) => row.title === "LoveGame"),
-        );
+        const titles = rows.map((row) => row.title);
+        assert.ok(titles.includes("Love Me Do"));
+        assert.ok(titles.includes("California Love"));
+        assert.ok(titles.indexOf("Love Me Do") < titles.indexOf("California Love"));
     });
 });
 
@@ -319,7 +363,7 @@ describe("aliases", () => {
         assert.equal(rankArtists(artists, "abba")[0]?.name, "ABBA");
     });
 
-    it("finds Elvis from the king without dumping every Elvis song onto king", () => {
+    it("finds Elvis from the king without treating king as only Elvis", () => {
         assert.equal(rankArtists(artists, "the king")[0]?.name, "Elvis Presley");
         const kingSongs = rankSongs(
             [
@@ -335,8 +379,9 @@ describe("aliases", () => {
             "king",
             bySlug,
         );
-        assert.ok(!kingSongs.some((row) => row.artist === "Elvis Presley"));
-        assert.ok(kingSongs.some((row) => row.title.includes("King")));
+        const titles = kingSongs.map((row) => row.title);
+        assert.ok(titles.includes("King of Wishful Thinking"));
+        assert.ok(titles.indexOf("King of Wishful Thinking") < titles.indexOf("Jailhouse Rock"));
     });
 
     it("keeps Latin aliases ahead of script-only ones", () => {

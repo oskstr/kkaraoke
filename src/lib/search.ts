@@ -1,13 +1,21 @@
+import MiniSearch from "minisearch";
 import type { SearchSong } from "./catalog";
 
 /**
  * Client search for the karaoke catalog.
  *
- * The index stores display strings (`A★Teens`, `P!nk`, `a-ha`), but people type
- * `a teens`, `pink`, `aha`. Matching therefore folds punctuation and diacritics,
- * treats stylized separators as word breaks, and ranks title/artist hits above a
- * genre that merely contains the same letters. Later names stay as aliases
- * (`Yusuf` still finds Cat Stevens) without changing the page title.
+ * MiniSearch finds the candidates. Ranking is ours: title/artist identity and
+ * word prefixes beat an infix such as `cat` in Pussycat Dolls, and BM25 is not
+ * allowed to bury Cat Stevens under Cameo just because the name is shorter.
+ *
+ * The tokenizer still folds stylized names (`A★Teens` / `a teens`, `P!nk` /
+ * `pink`). Indexed fields are:
+ *
+ * - full words (Cat Stevens)
+ * - edge prefixes of length ≥ 2 (`ca` → Cat, California)
+ * - in-word suffixes of length ≥ 3 (`cat` → Pussycat Dolls)
+ * - compact forms (`aha`, `ateens`, `acdc`)
+ * - aliases (`Yusuf` → Cat Stevens)
  */
 
 export interface SearchArtist {
@@ -17,11 +25,52 @@ export interface SearchArtist {
     aliases?: string[];
 }
 
-const SONG_LIMIT = 80;
+export interface CatalogSearch {
+    searchSongs(query: string, limit?: number): SearchSong[];
+    searchArtists(query: string, limit?: number): SearchArtist[];
+}
+
+const SONG_LIMIT = 100;
 const ARTIST_LIMIT = 6;
+const EDGE_MIN = 2;
+const INSIDE_MIN = 3;
 
 /** Apostrophes and a few stylized marks drop out; they are not word breaks (`P!nk` → `pnk`). */
 const STRIP_MARKS = /[\u02BB\u02BC\u02C8\u2018\u2019\uFF07'!°]/g;
+
+const SEARCH_OPTIONS = {
+    prefix: false,
+    fuzzy: (term: string) => (term.length > 5 ? 0.2 : false),
+    maxFuzzy: 2,
+    combineWith: "AND" as const,
+    weights: { prefix: 0.45, fuzzy: 0.2 },
+};
+
+interface ParsedQuery {
+    trimmed: string;
+    phrase: string;
+    compact: string;
+    tokens: string[];
+    numeric: boolean;
+    singleLetter: boolean;
+}
+
+interface FieldHit {
+    kind: number;
+    extra: number;
+}
+
+const KIND = {
+    identity: 200,
+    compact: 190,
+    phrasePrefix: 90,
+    firstExact: 80,
+    laterExact: 70,
+    firstPrefix: 60,
+    laterPrefix: 50,
+    firstInfix: 40,
+    laterInfix: 28,
+} as const;
 
 export function foldText(value: string): string {
     return value
@@ -46,6 +95,49 @@ export function compactText(value: string): string {
 export function searchTokens(value: string): string[] {
     const folded = foldText(value);
     return folded.length === 0 ? [] : folded.split(" ");
+}
+
+/** Prefixes of each word, excluding the word itself (`ca` / `cal` from California). */
+export function edgeTokens(value: string): string[] {
+    return unique(
+        searchTokens(value).flatMap((part) => {
+            const grams: string[] = [];
+            for (let i = EDGE_MIN; i < part.length; i++) {
+                grams.push(part.slice(0, i));
+            }
+            return grams;
+        }),
+    );
+}
+
+/** In-word suffixes (`cat` from Pussycat), so a query need not match the start of the word. */
+export function insideTokens(value: string): string[] {
+    return unique(
+        searchTokens(value).flatMap((part) => {
+            const grams: string[] = [];
+            for (let i = 1; i <= part.length - INSIDE_MIN; i++) {
+                grams.push(part.slice(i));
+            }
+            return grams;
+        }),
+    );
+}
+
+function compactForms(value: string): string[] {
+    const parts = searchTokens(value);
+    if (parts.length < 2) {
+        return [];
+    }
+    // Glue short stylized names (`a-ha`, `AC/DC`, `A★Teens`), not long titles.
+    if (parts.some((part) => part.length > 5) || parts.join("").length > 12) {
+        return [];
+    }
+    const compact = parts.join("");
+    return compact.length >= 3 ? [compact] : [];
+}
+
+function unique(values: string[]): string[] {
+    return [...new Set(values.filter((value) => value.length > 0))];
 }
 
 /** Keep aliases that still say something the display name does not, Latin first. */
@@ -78,342 +170,442 @@ export function artistMap(artists: readonly SearchArtist[]): Map<string, SearchA
     return new Map(artists.map((artist) => [artist.slug, artist]));
 }
 
-function tokenHits(queryToken: string, fieldToken: string, allowPrefix = false): boolean {
-    if (allowPrefix || queryToken.length > 2) {
-        return fieldToken.startsWith(queryToken);
-    }
-    return fieldToken === queryToken;
-}
-
-function tokensMatch(query: readonly string[], field: readonly string[]): boolean {
-    if (query.length === 0) {
-        return false;
-    }
-    return query.every((qt, index) => {
-        const typingLast = index === query.length - 1 && query.length >= 2;
-        return field.some((ft) => tokenHits(qt, ft, typingLast));
-    });
-}
-
-/** True when the field is the query, or its leading words are. `a ha` must not prefix `a hard`. */
-function fieldPrefixMatch(field: string, queryTokens: readonly string[], queryFold: string): boolean {
-    const folded = foldText(field);
-    if (folded.length === 0 || queryFold.length === 0) {
-        return false;
-    }
-    if (folded === queryFold) {
-        return true;
-    }
-    const fieldTokens = searchTokens(field);
-    if (queryTokens.length === 0 || queryTokens.length > fieldTokens.length) {
-        return false;
-    }
-    return queryTokens.every((qt, index) => tokenHits(qt, fieldTokens[index]!));
-}
-
-function compactEquals(query: string, field: string): boolean {
-    const compact = compactText(query);
-    return compact.length >= 2 && compact === compactText(field);
-}
-
-function tokensForFields(fields: readonly string[]): string[] {
-    const out: string[] = [];
-    const seen = new Set<string>();
-    const add = (token: string) => {
-        if (token.length === 0 || seen.has(token)) {
-            return;
-        }
-        seen.add(token);
-        out.push(token);
-    };
-    for (const field of fields) {
-        for (const part of searchTokens(field)) {
-            add(part);
-        }
-    }
-    return out;
-}
-
-function fieldsCompactMatch(query: string, fields: readonly string[]): boolean {
-    return fields.some((field) => compactEquals(query, field));
-}
-
-function aliasPhraseMatch(query: string, alias: string): boolean {
-    const folded = foldText(query);
-    const other = foldText(alias);
-    if (folded.length === 0 || other.length === 0) {
-        return false;
-    }
-    if (folded === other) {
-        return true;
-    }
-    const compact = compactText(query);
-    if (compact.length >= 3 && compact === compactText(alias)) {
-        return true;
-    }
-    // Yusuf → Yusuf Islam / Yusuf / Cat Stevens. Not king → The King, and not
-    // the → The King (too short). Word boundary, so the query is the start of the alias.
-    return folded.length >= 4 && other.startsWith(`${folded} `);
-}
-
-function isSingleLetterQuery(tokens: readonly string[]): boolean {
-    return tokens.length === 1 && tokens[0]!.length === 1 && !/^\d$/.test(tokens[0]!);
-}
-
 function slugPhrase(slug: string): string {
     return slug.replace(/-/g, " ");
 }
 
-function primaryFields(song: SearchSong, artists: ReadonlyMap<string, SearchArtist> | undefined): string[] {
-    const fields = [song.title, song.artist];
-    if (song.from !== undefined) {
-        fields.push(song.from);
-    }
-    for (const category of song.categories ?? []) {
-        fields.push(category);
-    }
+function creditedHints(song: SearchSong, artists: ReadonlyMap<string, SearchArtist>): string[] {
+    const hints: string[] = [];
     for (const credited of song.artists ?? []) {
-        fields.push(credited.name);
-        fields.push(slugPhrase(credited.slug));
-        const record = artists?.get(credited.slug);
+        hints.push(credited.name);
+        hints.push(slugPhrase(credited.slug));
+        const record = artists.get(credited.slug);
         if (record?.sortName !== undefined) {
-            fields.push(record.sortName);
+            hints.push(record.sortName);
         }
     }
-    return fields;
+    return hints;
 }
 
-function aliasPhrases(song: SearchSong, artists: ReadonlyMap<string, SearchArtist> | undefined): string[] {
-    const phrases: string[] = [];
+function aliasHints(song: SearchSong, artists: ReadonlyMap<string, SearchArtist>): string[] {
+    const hints: string[] = [];
     for (const credited of song.artists ?? []) {
-        const record = artists?.get(credited.slug);
+        const record = artists.get(credited.slug);
         for (const alias of record?.aliases ?? []) {
-            phrases.push(alias);
+            hints.push(alias);
         }
     }
-    return phrases;
+    return hints;
 }
 
-function artistPhrases(artist: SearchArtist): string[] {
-    const fields = [artist.name, slugPhrase(artist.slug)];
-    if (artist.sortName !== undefined) {
-        fields.push(artist.sortName);
+function joined(values: readonly string[]): string {
+    return values.filter((value) => value.length > 0).join(" ");
+}
+
+function tokenizeField(text: string, fieldName?: string): string[] {
+    if (fieldName === "edge") {
+        return edgeTokens(text);
     }
-    return fields;
+    if (fieldName === "inside") {
+        return insideTokens(text);
+    }
+    if (fieldName === "compact") {
+        return text.split(" ").filter((part) => part.length > 0);
+    }
+    if (fieldName === "numbers") {
+        const parts = text.split(" ").filter((part) => part.length > 0);
+        return unique([...parts, ...edgeTokens(text)]);
+    }
+    return searchTokens(text);
 }
 
-export function matchesQuery(song: SearchSong, query: string, artists?: ReadonlyMap<string, SearchArtist>): boolean {
-    return songMatches(song, query, artists);
+interface SongDoc {
+    id: number;
+    title: string;
+    artist: string;
+    from: string;
+    categories: string;
+    genres: string;
+    aliases: string;
+    numbers: string;
+    compact: string;
+    edge: string;
+    inside: string;
 }
 
-function songMatches(song: SearchSong, query: string, artists: ReadonlyMap<string, SearchArtist> | undefined): boolean {
+interface ArtistDoc {
+    id: string;
+    name: string;
+    slug: string;
+    sortName: string;
+    aliases: string;
+    compact: string;
+    edge: string;
+    inside: string;
+}
+
+function songDoc(song: SearchSong, artists: ReadonlyMap<string, SearchArtist>): SongDoc {
+    const credited = creditedHints(song, artists);
+    const aliases = aliasHints(song, artists);
+    const primary = joined([song.title, song.artist, song.from ?? "", ...credited]);
+    const edgeSource = joined([primary, ...aliases, ...(song.categories ?? [])]);
+    return {
+        id: song.id,
+        title: song.title,
+        artist: song.artist,
+        from: song.from ?? "",
+        categories: joined(song.categories ?? []),
+        genres: joined(song.genres ?? []),
+        aliases: joined(aliases),
+        numbers: song.ids.map(String).join(" "),
+        compact: joined([song.title, song.artist, ...credited, ...aliases].flatMap(compactForms)),
+        edge: edgeSource,
+        inside: primary,
+    };
+}
+
+function artistDoc(artist: SearchArtist): ArtistDoc {
+    const name = artist.name;
+    const slug = slugPhrase(artist.slug);
+    const sortName = artist.sortName ?? "";
+    const aliasList = artist.aliases ?? [];
+    const primary = joined([name, slug, sortName]);
+    const aliases = joined(aliasList);
+    return {
+        id: artist.slug,
+        name,
+        slug,
+        sortName,
+        aliases,
+        compact: joined([name, slug, sortName, ...aliasList].flatMap(compactForms)),
+        edge: joined([primary, aliases]),
+        inside: primary,
+    };
+}
+
+function tokenizeQuery(query: string): string[] {
     const trimmed = query.trim();
-    if (trimmed.length === 0) {
-        return false;
-    }
-    if (/^\d+$/.test(trimmed) && song.ids.some((id) => String(id).startsWith(trimmed))) {
-        return true;
-    }
-
-    const qt = searchTokens(trimmed);
-    if (qt.length === 0) {
-        return false;
-    }
-
-    const primary = primaryFields(song, artists);
-    if (isSingleLetterQuery(qt)) {
-        return primary.some((field) => searchTokens(field)[0]?.startsWith(qt[0]!));
-    }
-    if (tokensMatch(qt, tokensForFields(primary)) || fieldsCompactMatch(trimmed, primary)) {
-        return true;
-    }
-    if (aliasPhrases(song, artists).some((alias) => aliasPhraseMatch(trimmed, alias))) {
-        return true;
-    }
-    const genreTokens = (song.genres ?? []).flatMap(searchTokens);
-    return qt.every((token) => genreTokens.includes(token));
-}
-
-function songScore(song: SearchSong, query: string, artists: ReadonlyMap<string, SearchArtist> | undefined): number {
-    const trimmed = query.trim();
-    const qt = searchTokens(trimmed);
-    const qFold = foldText(trimmed);
-    let score = 1;
-
     if (/^\d+$/.test(trimmed)) {
-        if (song.ids.some((id) => String(id) === trimmed)) {
-            score += 10_000;
-        } else if (song.ids.some((id) => String(id).startsWith(trimmed))) {
-            score += 8_000;
+        return [trimmed];
+    }
+    return searchTokens(trimmed);
+}
+
+function parseQuery(raw: string): ParsedQuery | null {
+    const trimmed = raw.trim();
+    if (trimmed.length === 0) {
+        return null;
+    }
+    const numeric = /^\d+$/.test(trimmed);
+    const tokens = numeric ? [trimmed] : searchTokens(trimmed);
+    if (tokens.length === 0) {
+        return null;
+    }
+    return {
+        trimmed,
+        phrase: foldText(trimmed),
+        compact: compactText(trimmed),
+        tokens,
+        numeric,
+        singleLetter: tokens.length === 1 && tokens[0]!.length === 1 && !numeric,
+    };
+}
+
+function firstSignificant(words: readonly string[]): number {
+    return words[0] === "the" && words.length > 1 ? 1 : 0;
+}
+
+function bestWordMatch(words: readonly string[], term: string, firstOnly: boolean): FieldHit {
+    const skip = firstSignificant(words);
+    let best: FieldHit = { kind: 0, extra: 99 };
+    for (let i = 0; i < words.length; i++) {
+        if (firstOnly && i !== skip) {
+            continue;
+        }
+        const word = words[i]!;
+        const first = i === skip;
+        const extra = Math.max(0, word.length - term.length);
+        let kind = 0;
+        if (word === term) {
+            kind = first ? KIND.firstExact : KIND.laterExact;
+        } else if (word.startsWith(term)) {
+            kind = first ? KIND.firstPrefix : KIND.laterPrefix;
+        } else if (!firstOnly && term.length >= INSIDE_MIN && word.includes(term)) {
+            kind = first ? KIND.firstInfix : KIND.laterInfix;
+        }
+        if (kind > best.kind || (kind === best.kind && extra < best.extra)) {
+            best = { kind, extra };
         }
     }
+    return best;
+}
 
-    const titleFold = foldText(song.title);
-    const artistFold = foldText(song.artist);
-    const titleTokens = searchTokens(song.title);
-    const artistTokens = searchTokens(song.artist);
-
-    if (titleFold === qFold) {
-        score += 1_000;
-    } else if (fieldPrefixMatch(song.title, qt, qFold)) {
-        score += 800;
-    } else if (tokensMatch(qt, tokensForFields([song.title])) || compactEquals(trimmed, song.title)) {
-        score += 600;
-        if (titleTokens[0] !== undefined && tokenHits(qt[0]!, titleTokens[0])) {
-            score += 40;
+function leadingPhraseHit(words: readonly string[], query: ParsedQuery): FieldHit | null {
+    if (query.tokens.length === 0 || words.length < query.tokens.length) {
+        return null;
+    }
+    for (let i = 0; i < query.tokens.length; i++) {
+        const word = words[i]!;
+        const term = query.tokens[i]!;
+        if (i < query.tokens.length - 1) {
+            if (word !== term) {
+                return null;
+            }
+        } else if (word !== term && !word.startsWith(term)) {
+            return null;
         }
     }
-    if (qt.length === 1 && titleTokens.includes(qt[0]!)) {
-        score += 120;
+    const lastWord = words[query.tokens.length - 1]!;
+    const lastTerm = query.tokens[query.tokens.length - 1]!;
+    const extra = lastWord.length - lastTerm.length + (words.length - query.tokens.length) * 4;
+    return { kind: KIND.phrasePrefix, extra };
+}
+
+function matchField(text: string, query: ParsedQuery): FieldHit {
+    const folded = foldText(text);
+    if (folded.length === 0) {
+        return { kind: 0, extra: 99 };
+    }
+    const words = folded.split(" ");
+    if (folded === query.phrase) {
+        return { kind: KIND.identity, extra: 0 };
+    }
+    const compact = folded.replace(/ /g, "");
+    if (query.compact.length >= 2 && compact === query.compact) {
+        return { kind: KIND.compact, extra: 0 };
+    }
+    const phrase = leadingPhraseHit(words, query);
+    if (phrase !== null && query.tokens.length > 1) {
+        return phrase;
     }
 
-    if (artistFold === qFold || compactEquals(trimmed, song.artist)) {
-        score += 950;
-    } else if (fieldPrefixMatch(song.artist, qt, qFold)) {
-        score += 750;
-    } else if (tokensMatch(qt, tokensForFields([song.artist]))) {
-        score += 550;
-        if (artistTokens[0] !== undefined && tokenHits(qt[0]!, artistTokens[0])) {
-            score += 30;
+    let kindSum = 0;
+    let extraSum = 0;
+    for (const term of query.tokens) {
+        const hit = bestWordMatch(words, term, query.singleLetter);
+        if (hit.kind === 0) {
+            return { kind: 0, extra: 99 };
         }
+        kindSum += hit.kind;
+        extraSum += hit.extra;
     }
-    if (qt.length === 1 && artistTokens.includes(qt[0]!)) {
-        score += 100;
-    }
+    return { kind: kindSum / query.tokens.length, extra: extraSum };
+}
 
-    const credited = song.artists ?? [];
-    for (const artist of credited) {
-        if (foldText(slugPhrase(artist.slug)) === qFold || compactEquals(trimmed, artist.name)) {
-            score += 900;
-        }
-        const record = artists?.get(artist.slug);
-        if (record?.sortName !== undefined && foldText(record.sortName) === qFold) {
-            score += 880;
-        }
+function fieldScore(text: string, query: ParsedQuery, weight: number, extraScale: number): number {
+    const hit = matchField(text, query);
+    if (hit.kind === 0) {
+        return 0;
     }
-    if (
-        credited.length === 1 &&
-        (foldText(slugPhrase(credited[0]!.slug)) === qFold ||
-            compactEquals(trimmed, credited[0]!.name) ||
-            foldText(credited[0]!.name) === qFold)
-    ) {
-        score += 150;
-    }
+    return weight * 100 + hit.kind * 10 - hit.extra * extraScale;
+}
 
-    if (song.from !== undefined && tokensMatch(qt, tokensForFields([song.from]))) {
-        score += 300;
+function bestScore(scores: readonly number[]): number {
+    let best = 0;
+    for (const score of scores) {
+        if (score > best) {
+            best = score;
+        }
+    }
+    return best;
+}
+
+function tokenQuery(query: ParsedQuery, term: string): ParsedQuery {
+    return {
+        trimmed: term,
+        phrase: term,
+        compact: term,
+        tokens: [term],
+        numeric: query.numeric,
+        singleLetter: term.length === 1 && !query.numeric,
+    };
+}
+
+function scoreFields(
+    fields: readonly { text: string; weight: number }[],
+    query: ParsedQuery,
+    extraScale: number,
+): number {
+    const whole = bestScore(fields.map((field) => fieldScore(field.text, query, field.weight, extraScale)));
+    if (query.tokens.length <= 1) {
+        return whole;
+    }
+    let tokenSum = 0;
+    for (const term of query.tokens) {
+        const best = bestScore(
+            fields.map((field) => fieldScore(field.text, tokenQuery(query, term), field.weight, extraScale)),
+        );
+        if (best === 0) {
+            return whole;
+        }
+        tokenSum += best;
+    }
+    return Math.max(whole, tokenSum / query.tokens.length);
+}
+
+function artistFields(artist: SearchArtist): { text: string; weight: number }[] {
+    return [
+        { text: artist.name, weight: 50 },
+        { text: slugPhrase(artist.slug), weight: 48 },
+        ...(artist.sortName !== undefined ? [{ text: artist.sortName, weight: 36 }] : []),
+        ...(artist.aliases ?? []).map((alias) => ({ text: alias, weight: 22 })),
+    ];
+}
+
+function songFields(song: SearchSong, artists: ReadonlyMap<string, SearchArtist>): { text: string; weight: number }[] {
+    const fields: { text: string; weight: number }[] = [
+        { text: song.title, weight: 50 },
+        { text: song.artist, weight: 45 },
+    ];
+    for (const row of song.artists ?? []) {
+        const record = artists.get(row.slug);
+        fields.push({ text: row.name, weight: 45 });
+        fields.push({ text: slugPhrase(row.slug), weight: 44 });
+        if (record?.sortName !== undefined) {
+            fields.push({ text: record.sortName, weight: 32 });
+        }
+        for (const alias of record?.aliases ?? []) {
+            fields.push({ text: alias, weight: 22 });
+        }
+    }
+    if (song.from !== undefined) {
+        fields.push({ text: song.from, weight: 24 });
     }
     for (const category of song.categories ?? []) {
-        if (tokensMatch(qt, tokensForFields([category]))) {
-            score += 280;
+        fields.push({ text: category, weight: 22 });
+    }
+    for (const genre of song.genres ?? []) {
+        fields.push({ text: genre, weight: 6 });
+    }
+    return fields;
+}
+
+function scoreArtist(artist: SearchArtist, query: ParsedQuery): number {
+    return scoreFields(artistFields(artist), query, 1);
+}
+
+function scoreSong(song: SearchSong, query: ParsedQuery, artists: ReadonlyMap<string, SearchArtist>): number {
+    if (query.numeric) {
+        if (song.ids.some((id) => String(id) === query.trimmed)) {
+            return 20_000;
+        }
+        if (song.ids.some((id) => String(id).startsWith(query.trimmed))) {
+            return 18_000;
         }
     }
-    if (tokensMatch(qt, tokensForFields(primaryFields(song, artists)))) {
-        score += 100;
+    const score = scoreFields(songFields(song, artists), query, 0.01);
+    if (score === 0) {
+        return 0;
     }
-    if (aliasPhrases(song, artists).some((alias) => aliasPhraseMatch(trimmed, alias))) {
-        score += 500;
-    }
-    const genreTokens = (song.genres ?? []).flatMap(searchTokens);
-    if (qt.length > 0 && qt.every((token) => genreTokens.includes(token))) {
-        score += 40;
-    }
+    const collab = Math.max(0, (song.artists?.length ?? 1) - 1);
+    return score - collab * 40 - Math.min(searchTokens(song.title).length, 12);
+}
 
-    score -= Math.min(titleTokens.length, 20);
-    return score;
+function orderHits<T>(
+    items: readonly T[],
+    scoreOf: (item: T) => number,
+    compareNames: (a: T, b: T) => number,
+    limit: number,
+): T[] {
+    return items
+        .map((item) => ({ item, score: scoreOf(item) }))
+        .filter((hit) => hit.score > 0)
+        .sort((a, b) => b.score - a.score || compareNames(a.item, b.item))
+        .slice(0, limit)
+        .map((hit) => hit.item);
+}
+
+export function createCatalogSearch(index: {
+    songs: readonly SearchSong[];
+    artists: readonly SearchArtist[];
+}): CatalogSearch {
+    const artistsBySlug = artistMap(index.artists);
+    const songsById = new Map(index.songs.map((song) => [song.id, song]));
+    const artistsById = new Map(index.artists.map((artist) => [artist.slug, artist]));
+
+    const songs = new MiniSearch<SongDoc>({
+        fields: ["title", "artist", "from", "categories", "genres", "aliases", "numbers", "compact", "edge", "inside"],
+        idField: "id",
+        tokenize: tokenizeField,
+        processTerm: (term) => term,
+        searchOptions: {
+            ...SEARCH_OPTIONS,
+            tokenize: tokenizeQuery,
+        },
+    });
+    songs.addAll(index.songs.map((song) => songDoc(song, artistsBySlug)));
+
+    const artists = new MiniSearch<ArtistDoc>({
+        fields: ["name", "slug", "sortName", "aliases", "compact", "edge", "inside"],
+        idField: "id",
+        tokenize: tokenizeField,
+        processTerm: (term) => term,
+        searchOptions: {
+            ...SEARCH_OPTIONS,
+            tokenize: tokenizeQuery,
+        },
+    });
+    artists.addAll(index.artists.map(artistDoc));
+
+    return {
+        searchSongs(query: string, limit = SONG_LIMIT): SearchSong[] {
+            const parsed = parseQuery(query);
+            if (parsed === null) {
+                return [];
+            }
+            const candidates: SearchSong[] = [];
+            for (const hit of songs.search(query)) {
+                const song = songsById.get(hit.id as number);
+                if (song !== undefined) {
+                    candidates.push(song);
+                }
+            }
+            return orderHits(
+                candidates,
+                (song) => scoreSong(song, parsed, artistsBySlug),
+                (a, b) => a.title.localeCompare(b.title, "sv") || a.id - b.id,
+                limit,
+            );
+        },
+        searchArtists(query: string, limit = ARTIST_LIMIT): SearchArtist[] {
+            const parsed = parseQuery(query);
+            if (parsed === null) {
+                return [];
+            }
+            const candidates: SearchArtist[] = [];
+            for (const hit of artists.search(query)) {
+                const artist = artistsById.get(String(hit.id));
+                if (artist !== undefined) {
+                    candidates.push(artist);
+                }
+            }
+            return orderHits(
+                candidates,
+                (artist) => scoreArtist(artist, parsed),
+                (a, b) => a.name.localeCompare(b.name, "sv") || a.slug.localeCompare(b.slug),
+                limit,
+            );
+        },
+    };
+}
+
+export function matchesQuery(
+    song: SearchSong,
+    query: string,
+    artists: ReadonlyMap<string, SearchArtist> = new Map(),
+): boolean {
+    return rankSongs([song], query, artists, 1).some((hit) => hit.id === song.id);
 }
 
 export function rankSongs(
     songs: readonly SearchSong[],
     query: string,
-    artists?: ReadonlyMap<string, SearchArtist>,
+    artists: ReadonlyMap<string, SearchArtist> = new Map(),
     limit = SONG_LIMIT,
 ): SearchSong[] {
-    if (query.trim().length === 0) {
-        return [];
-    }
-    const hits: { song: SearchSong; score: number }[] = [];
-    for (const song of songs) {
-        if (!songMatches(song, query, artists)) {
-            continue;
-        }
-        hits.push({ song, score: songScore(song, query, artists) });
-    }
-    hits.sort((a, b) => b.score - a.score || a.song.title.localeCompare(b.song.title, "sv") || a.song.id - b.song.id);
-    return hits.slice(0, limit).map((hit) => hit.song);
-}
-
-function artistMatches(artist: SearchArtist, query: string): boolean {
-    const trimmed = query.trim();
-    const qt = searchTokens(trimmed);
-    if (qt.length === 0) {
-        return false;
-    }
-    const phrases = artistPhrases(artist);
-    if (isSingleLetterQuery(qt)) {
-        return phrases.some((field) => searchTokens(field)[0]?.startsWith(qt[0]!));
-    }
-    if (tokensMatch(qt, tokensForFields(phrases)) || fieldsCompactMatch(trimmed, phrases)) {
-        return true;
-    }
-    return (artist.aliases ?? []).some((alias) => aliasPhraseMatch(trimmed, alias));
-}
-
-function artistScore(artist: SearchArtist, query: string): number {
-    const trimmed = query.trim();
-    const qt = searchTokens(trimmed);
-    const qFold = foldText(trimmed);
-    let score = 1;
-
-    const nameFold = foldText(artist.name);
-    if (nameFold === qFold || compactEquals(trimmed, artist.name)) {
-        score += 1_000;
-    } else if (fieldPrefixMatch(artist.name, qt, qFold)) {
-        score += 800;
-    } else if (tokensMatch(qt, tokensForFields([artist.name]))) {
-        score += 600;
-    }
-
-    if (artist.sortName !== undefined) {
-        const sortFold = foldText(artist.sortName);
-        if (sortFold === qFold) {
-            score += 700;
-        } else if (tokensMatch(qt, tokensForFields([artist.sortName]))) {
-            score += 400;
-        }
-    }
-
-    const slugFold = foldText(slugPhrase(artist.slug));
-    if (slugFold === qFold) {
-        score += 650;
-    } else if (tokensMatch(qt, tokensForFields([slugPhrase(artist.slug)]))) {
-        score += 350;
-    }
-
-    if ((artist.aliases ?? []).some((alias) => aliasPhraseMatch(trimmed, alias))) {
-        score += 450;
-    }
-
-    score -= Math.min(searchTokens(artist.name).length, 10);
-    return score;
+    return createCatalogSearch({ songs, artists: [...artists.values()] }).searchSongs(query, limit);
 }
 
 export function rankArtists(artists: readonly SearchArtist[], query: string, limit = ARTIST_LIMIT): SearchArtist[] {
-    if (query.trim().length === 0) {
-        return [];
-    }
-    const hits: { artist: SearchArtist; score: number }[] = [];
-    for (const artist of artists) {
-        if (!artistMatches(artist, query)) {
-            continue;
-        }
-        hits.push({ artist, score: artistScore(artist, query) });
-    }
-    hits.sort(
-        (a, b) =>
-            b.score - a.score ||
-            a.artist.name.localeCompare(b.artist.name, "sv") ||
-            a.artist.slug.localeCompare(b.artist.slug),
-    );
-    return hits.slice(0, limit).map((hit) => hit.artist);
+    return createCatalogSearch({ songs: [], artists }).searchArtists(query, limit);
 }
