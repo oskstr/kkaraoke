@@ -6,7 +6,8 @@ import type { SearchSong } from "./catalog";
  * The index stores display strings (`A★Teens`, `P!nk`, `a-ha`), but people type
  * `a teens`, `pink`, `aha`. Matching therefore folds punctuation and diacritics,
  * treats stylized separators as word breaks, and ranks title/artist hits above a
- * genre that merely contains the same letters.
+ * genre that merely contains the same letters. Later names stay as aliases
+ * (`Yusuf` still finds Cat Stevens) without changing the page title.
  */
 
 export interface SearchArtist {
