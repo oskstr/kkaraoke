@@ -1,6 +1,7 @@
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import SongResultRow, { SongTableHead } from "./SongResultRow";
-import { matchesQuery, songsNeedFromColumn, type SearchSong } from "../lib/catalog";
+import { songsNeedFromColumn, type SearchSong } from "../lib/catalog";
+import { artistMap, rankArtists, rankSongs } from "../lib/search";
 import { getSearchIndex, type SearchIndex } from "../lib/search-index";
 
 interface Suggestion {
@@ -65,24 +66,18 @@ export default function SearchResults({ suggestions, destinations = [], inputId 
         }
     }, [query]);
 
-    const q = deferred.trim().toLowerCase();
+    const q = deferred.trim();
+    const artistsBySlug = useMemo(() => artistMap(index?.artists ?? []), [index]);
 
     const artistHits = useMemo(() => {
         if (!q || !index) return [] as ArtistHit[];
-        return index.artists.filter((a) => a.name.toLowerCase().includes(q)).slice(0, 6);
+        return rankArtists(index.artists, q);
     }, [index, q]);
 
     const rows = useMemo(() => {
         if (!q || !index) return [] as SearchSong[];
-        const hits: SearchSong[] = [];
-        for (const song of index.songs) {
-            if (matchesQuery(song, q)) {
-                hits.push(song);
-                if (hits.length >= 80) break;
-            }
-        }
-        return hits;
-    }, [index, q]);
+        return rankSongs(index.songs, q, artistsBySlug);
+    }, [index, q, artistsBySlug]);
 
     const idle = !query.trim();
     const empty = Boolean(query.trim()) && index !== null && rows.length === 0 && artistHits.length === 0;
