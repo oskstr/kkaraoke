@@ -137,9 +137,9 @@ function fieldsCompactMatch(query: string, fields: readonly string[]): boolean {
     return fields.some((field) => compactEquals(query, field));
 }
 
-function strongPhraseMatch(query: string, value: string): boolean {
+function aliasPhraseMatch(query: string, alias: string): boolean {
     const folded = foldText(query);
-    const other = foldText(value);
+    const other = foldText(alias);
     if (folded.length === 0 || other.length === 0) {
         return false;
     }
@@ -147,7 +147,12 @@ function strongPhraseMatch(query: string, value: string): boolean {
         return true;
     }
     const compact = compactText(query);
-    return compact.length >= 3 && compact === compactText(value);
+    if (compact.length >= 3 && compact === compactText(alias)) {
+        return true;
+    }
+    // Yusuf → Yusuf Islam / Yusuf / Cat Stevens. Not king → The King, and not
+    // the → The King (too short). Word boundary, so the query is the start of the alias.
+    return folded.length >= 4 && other.startsWith(`${folded} `);
 }
 
 function isSingleLetterQuery(tokens: readonly string[]): boolean {
@@ -221,7 +226,7 @@ function songMatches(song: SearchSong, query: string, artists: ReadonlyMap<strin
     if (tokensMatch(qt, tokensForFields(primary)) || fieldsCompactMatch(trimmed, primary)) {
         return true;
     }
-    if (aliasPhrases(song, artists).some((alias) => strongPhraseMatch(trimmed, alias))) {
+    if (aliasPhrases(song, artists).some((alias) => aliasPhraseMatch(trimmed, alias))) {
         return true;
     }
     const genreTokens = (song.genres ?? []).flatMap(searchTokens);
@@ -305,7 +310,7 @@ function songScore(song: SearchSong, query: string, artists: ReadonlyMap<string,
     if (tokensMatch(qt, tokensForFields(primaryFields(song, artists)))) {
         score += 100;
     }
-    if (aliasPhrases(song, artists).some((alias) => strongPhraseMatch(trimmed, alias))) {
+    if (aliasPhrases(song, artists).some((alias) => aliasPhraseMatch(trimmed, alias))) {
         score += 500;
     }
     const genreTokens = (song.genres ?? []).flatMap(searchTokens);
@@ -350,7 +355,7 @@ function artistMatches(artist: SearchArtist, query: string): boolean {
     if (tokensMatch(qt, tokensForFields(phrases)) || fieldsCompactMatch(trimmed, phrases)) {
         return true;
     }
-    return (artist.aliases ?? []).some((alias) => strongPhraseMatch(trimmed, alias));
+    return (artist.aliases ?? []).some((alias) => aliasPhraseMatch(trimmed, alias));
 }
 
 function artistScore(artist: SearchArtist, query: string): number {
@@ -384,7 +389,7 @@ function artistScore(artist: SearchArtist, query: string): number {
         score += 350;
     }
 
-    if ((artist.aliases ?? []).some((alias) => strongPhraseMatch(trimmed, alias))) {
+    if ((artist.aliases ?? []).some((alias) => aliasPhraseMatch(trimmed, alias))) {
         score += 450;
     }
 

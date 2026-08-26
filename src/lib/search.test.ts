@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import type { SearchSong } from "../src/lib/catalog.ts";
+import type { SearchSong } from "./catalog.ts";
 import {
     artistMap,
     compactText,
@@ -11,7 +11,7 @@ import {
     searchTokens,
     usefulAliases,
     type SearchArtist,
-} from "../src/lib/search.ts";
+} from "./search.ts";
 
 function song(partial: Partial<SearchSong> & Pick<SearchSong, "title" | "artist">): SearchSong {
     return {
@@ -50,6 +50,13 @@ const aha: SearchArtist = {
 const acdc: SearchArtist = {
     name: "AC/DC",
     slug: "ac-dc",
+};
+
+const catStevens: SearchArtist = {
+    name: "Cat Stevens",
+    slug: "cat-stevens",
+    sortName: "Stevens, Cat",
+    aliases: ["Yusuf / Cat Stevens", "Yusuf Islam", "Steven Demetre Georgiou"],
 };
 
 const catalog: SearchSong[] = [
@@ -153,6 +160,12 @@ const catalog: SearchSong[] = [
         categories: ["Disney"],
         artists: [{ name: "Elton John", slug: "elton-john" }],
     }),
+    song({
+        id: 110,
+        title: "Wild World",
+        artist: "Cat Stevens",
+        artists: [{ name: "Cat Stevens", slug: "cat-stevens" }],
+    }),
 ];
 
 const artists: SearchArtist[] = [
@@ -160,6 +173,7 @@ const artists: SearchArtist[] = [
     pink,
     aha,
     acdc,
+    catStevens,
     { name: "ABBA", slug: "abba" },
     { name: "Queen", slug: "queen" },
     { name: "Håkan Hellström", slug: "hakan-hellstrom" },
@@ -294,6 +308,17 @@ describe("ranking", () => {
 });
 
 describe("aliases", () => {
+    it("finds Cat Stevens from Yusuf and Yusuf Islam", () => {
+        assert.equal(rankArtists(artists, "yusuf")[0]?.name, "Cat Stevens");
+        assert.equal(rankArtists(artists, "yusuf islam")[0]?.name, "Cat Stevens");
+        assert.equal(rankSongs(catalog, "yusuf", bySlug)[0]?.artist, "Cat Stevens");
+        assert.equal(rankSongs(catalog, "yusuf islam", bySlug)[0]?.title, "Wild World");
+    });
+
+    it("ranks ABBA above the A★Teens ABBA Teens alias", () => {
+        assert.equal(rankArtists(artists, "abba")[0]?.name, "ABBA");
+    });
+
     it("finds Elvis from the king without dumping every Elvis song onto king", () => {
         assert.equal(rankArtists(artists, "the king")[0]?.name, "Elvis Presley");
         const kingSongs = rankSongs(
