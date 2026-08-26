@@ -178,6 +178,12 @@ const catalog: SearchSong[] = [
         artist: "The Pussycat Dolls",
         artists: [{ name: "The Pussycat Dolls", slug: "the-pussycat-dolls" }],
     }),
+    song({
+        id: 140,
+        title: "Life on Mars?",
+        artist: "David Bowie",
+        artists: [{ name: "David Bowie", slug: "david-bowie" }],
+    }),
 ];
 
 const artists: SearchArtist[] = [
@@ -200,6 +206,11 @@ const artists: SearchArtist[] = [
     { name: "Cascada", slug: "cascada" },
     { name: "2Pac", slug: "2pac" },
     { name: "Elvis Presley", slug: "elvis-presley", aliases: ["The King", "Elvis"] },
+    {
+        name: "David Bowie",
+        slug: "david-bowie",
+        aliases: ["Ziggy Stardust", "The Thin White Duke", "Bowie"],
+    },
 ];
 
 const bySlug = artistMap(artists);
@@ -238,7 +249,9 @@ describe("issue #34 A★Teens", () => {
 
     it("still matches A★Teens while the last word is being typed", () => {
         const row = catalog[0]!;
+        assert.equal(matchesQuery(row, "a t", bySlug), true);
         assert.equal(matchesQuery(row, "a te", bySlug), true);
+        assert.equal(rankArtists(artists, "a t")[0]?.name, "A★Teens");
         assert.equal(rankArtists(artists, "a te")[0]?.name, "A★Teens");
     });
 
@@ -386,8 +399,34 @@ describe("aliases", () => {
 
     it("keeps Latin aliases ahead of script-only ones", () => {
         const aliases = usefulAliases("Elvis Presley", ["エルヴィス・プレスリー", "The King", "Elvis"]);
-        assert.equal(aliases[0], "Elvis");
+        assert.ok(aliases.includes("Elvis"));
         assert.ok(aliases.includes("The King"));
+        assert.equal(aliases.at(-1), "エルヴィス・プレスリー");
+    });
+});
+
+describe("typeahead and typos", () => {
+    it("keeps Ziggy Stardust visible for every prefix of the last word", () => {
+        for (const query of ["ziggy", "ziggy s", "ziggy st", "ziggy star", "ziggy stardust"]) {
+            assert.equal(rankArtists(artists, query)[0]?.name, "David Bowie", query);
+            assert.equal(rankSongs(catalog, query, bySlug)[0]?.artist, "David Bowie", query);
+        }
+    });
+
+    it("finds David Bowie from a missing-letter typo in Ziggy Stardust", () => {
+        assert.equal(rankArtists(artists, "ziggy stadust")[0]?.name, "David Bowie");
+        assert.equal(rankSongs(catalog, "ziggy stadust", bySlug)[0]?.artist, "David Bowie");
+    });
+
+    it("keeps Dancing Queen and Pussycat Dolls while the last word is one letter", () => {
+        assert.equal(rankSongs(catalog, "dancing q", bySlug)[0]?.title, "Dancing Queen");
+        assert.equal(rankArtists(artists, "pussycat d")[0]?.name, "The Pussycat Dolls");
+        assert.equal(rankSongs(catalog, "life on m", bySlug)[0]?.title, "Life on Mars?");
+        assert.equal(rankArtists(artists, "yusuf i")[0]?.name, "Cat Stevens");
+    });
+
+    it("finds Bowie from The Thin White Duke", () => {
+        assert.equal(rankArtists(artists, "thin white")[0]?.name, "David Bowie");
     });
 });
 

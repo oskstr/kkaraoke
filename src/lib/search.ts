@@ -39,7 +39,10 @@ const INSIDE_MIN = 3;
 const STRIP_MARKS = /[\u02BB\u02BC\u02C8\u2018\u2019\uFF07'!°]/g;
 
 const SEARCH_OPTIONS = {
-    prefix: false,
+    // Only the last letter uses MiniSearch prefix. Longer prefixes are already
+    // indexed as edge n-grams; prefixing those would also hit inside-grams
+    // (`love` → `loved` in Beloved).
+    prefix: (term: string, i: number, terms: string[]) => i === terms.length - 1 && term.length === 1,
     fuzzy: (term: string) => (term.length > 5 ? 0.2 : false),
     maxFuzzy: 2,
     combineWith: "AND" as const,
@@ -70,6 +73,7 @@ const KIND = {
     laterPrefix: 50,
     firstInfix: 40,
     laterInfix: 28,
+    typo: 22,
 } as const;
 
 export function foldText(value: string): string {
@@ -143,7 +147,7 @@ function unique(values: string[]): string[] {
 /** Keep aliases that still say something the display name does not, Latin first. */
 export function usefulAliases(name: string, aliases: readonly string[]): string[] {
     const seen = new Set<string>([compactText(name)]);
-    const ranked = aliases.slice().sort((a, b) => aliasQuality(b) - aliasQuality(a) || a.length - b.length);
+    const ranked = aliases.slice().sort((a, b) => aliasQuality(b, name) - aliasQuality(a, name) || a.length - b.length);
     const out: string[] = [];
     for (const alias of ranked) {
         const compact = compactText(alias);
@@ -152,18 +156,20 @@ export function usefulAliases(name: string, aliases: readonly string[]): string[
         }
         seen.add(compact);
         out.push(alias);
-        if (out.length >= 8) {
+        if (out.length >= 12) {
             break;
         }
     }
     return out;
 }
 
-function aliasQuality(alias: string): number {
+function aliasQuality(alias: string, name: string): number {
     const folded = foldText(alias);
     const hasLatin = /[a-z]/.test(folded);
     const latinOnly = /^[a-z0-9 ]+$/.test(folded);
-    return (latinOnly ? 2 : 0) + (hasLatin ? 1 : 0);
+    const nameTokens = new Set(searchTokens(name));
+    const distinctive = searchTokens(alias).every((token) => !nameTokens.has(token)) ? 2 : 0;
+    return (latinOnly ? 4 : 0) + (hasLatin ? 1 : 0) + distinctive;
 }
 
 export function artistMap(artists: readonly SearchArtist[]): Map<string, SearchArtist> {
@@ -315,6 +321,58 @@ function firstSignificant(words: readonly string[]): number {
     return words[0] === "the" && words.length > 1 ? 1 : 0;
 }
 
+/** Same window MiniSearch uses: 0.2 of term length, at least 1, capped at 2. */
+function maxTypoDistance(term: string): number {
+    if (term.length <= 5) {
+        return 0;
+    }
+    return Math.min(2, Math.max(1, Math.round(term.length * 0.2)));
+}
+
+function levenshtein(a: string, b: string, max: number): number {
+    if (a === b) {
+        return 0;
+    }
+    if (Math.abs(a.length - b.length) > max) {
+        return max + 1;
+    }
+    const prev = new Array<number>(b.length + 1);
+    const next = new Array<number>(b.length + 1);
+    for (let j = 0; j <= b.length; j++) {
+        prev[j] = j;
+    }
+    for (let i = 1; i <= a.length; i++) {
+        next[0] = i;
+        let rowMin = next[0]!;
+        for (let j = 1; j <= b.length; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            next[j] = Math.min(prev[j]! + 1, next[j - 1]! + 1, prev[j - 1]! + cost);
+            if (next[j]! < rowMin) {
+                rowMin = next[j]!;
+            }
+        }
+        if (rowMin > max) {
+            return max + 1;
+        }
+        for (let j = 0; j <= b.length; j++) {
+            prev[j] = next[j]!;
+        }
+    }
+    return prev[b.length]!;
+}
+
+function typoHit(word: string, term: string): FieldHit | null {
+    const max = maxTypoDistance(term);
+    if (max === 0) {
+        return null;
+    }
+    const distance = levenshtein(word, term, max);
+    if (distance < 1 || distance > max) {
+        return null;
+    }
+    return { kind: KIND.typo, extra: distance * 8 };
+}
+
 function bestWordMatch(words: readonly string[], term: string, firstOnly: boolean): FieldHit {
     const skip = firstSignificant(words);
     let best: FieldHit = { kind: 0, extra: 99 };
@@ -324,7 +382,7 @@ function bestWordMatch(words: readonly string[], term: string, firstOnly: boolea
         }
         const word = words[i]!;
         const first = i === skip;
-        const extra = Math.max(0, word.length - term.length);
+        let extra = Math.max(0, word.length - term.length);
         let kind = 0;
         if (word === term) {
             kind = first ? KIND.firstExact : KIND.laterExact;
@@ -332,6 +390,12 @@ function bestWordMatch(words: readonly string[], term: string, firstOnly: boolea
             kind = first ? KIND.firstPrefix : KIND.laterPrefix;
         } else if (!firstOnly && term.length >= INSIDE_MIN && word.includes(term)) {
             kind = first ? KIND.firstInfix : KIND.laterInfix;
+        } else if (!firstOnly) {
+            const typo = typoHit(word, term);
+            if (typo !== null) {
+                kind = typo.kind;
+                extra = typo.extra;
+            }
         }
         if (kind > best.kind || (kind === best.kind && extra < best.extra)) {
             best = { kind, extra };
@@ -351,7 +415,7 @@ function leadingPhraseHit(words: readonly string[], query: ParsedQuery): FieldHi
             if (word !== term) {
                 return null;
             }
-        } else if (word !== term && !word.startsWith(term)) {
+        } else if (word !== term && !word.startsWith(term) && typoHit(word, term) === null) {
             return null;
         }
     }
