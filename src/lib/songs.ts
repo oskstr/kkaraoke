@@ -129,6 +129,8 @@ interface ArtistRecord {
     type?: string;
     disambiguation?: string;
     genres?: { name: string; count: number }[];
+    /** Alternative spellings from MusicBrainz — search uses these, pages do not. */
+    aliases?: string[];
 }
 
 /** Swedish collation, so å, ä and ö sort after z rather than beside a, a and o. */
@@ -588,4 +590,30 @@ export function getArtists(): Artist[] {
 
 export function getArtist(slug: string): Artist | undefined {
     return buildArtist(slug);
+}
+
+/**
+ * MusicBrainz aliases keyed by catalog slug, including merges (several MBIDs, one page).
+ * Search reads these; they are not shown on artist pages.
+ */
+export function aliasesBySlug(): Map<string, string[]> {
+    const map = new Map<string, string[]>();
+    for (const [slug, mbids] of mbidsBySlug) {
+        const aliases: string[] = [];
+        const seen = new Set<string>();
+        for (const mbid of mbids) {
+            for (const alias of artistRecords.get(mbid)?.aliases ?? []) {
+                const key = alias.trim().toLowerCase();
+                if (key.length === 0 || seen.has(key)) {
+                    continue;
+                }
+                seen.add(key);
+                aliases.push(alias);
+            }
+        }
+        if (aliases.length > 0) {
+            map.set(slug, aliases);
+        }
+    }
+    return map;
 }

@@ -14,6 +14,7 @@
         "preview": "astro preview",
         "astro": "astro",
         "check": "astro check",
+        "test": "node --experimental-strip-types --test src/**/*.test.ts",
         "format": "prettier --write .",
         "fetch:songs": "node --experimental-strip-types scripts/fetch-songs.ts",
         "collect:evidence": "node --experimental-strip-types scripts/collect-artist-evidence.ts",
@@ -32,6 +33,7 @@
         "@astrojs/vercel": "^11.0.5",
         "@tailwindcss/vite": "^4.3.3",
         "astro": "^7.2.0",
+        "minisearch": "^7.2.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "tailwindcss": "^4.3.3"

@@ -1,8 +1,9 @@
 import type { SearchSong } from "../lib/catalog";
+import type { SearchArtist } from "../lib/search";
 
 export interface SearchIndex {
     songs: SearchSong[];
-    artists: { name: string; slug: string }[];
+    artists: SearchArtist[];
 }
 
 let cache: SearchIndex | null = null;

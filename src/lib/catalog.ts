@@ -1,5 +1,6 @@
 import { categoriesForSong, categoriesLabel, songBelongsToCategory } from "./categories";
-import { getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
+import { usefulAliases, type SearchArtist } from "./search";
+import { aliasesBySlug, getArtists, getSongs, slugify, type Artist, type Song } from "./songs";
 
 export { categoriesForSong, categoriesLabel, songBelongsToCategory } from "./categories";
 
@@ -763,18 +764,22 @@ export function buildSearchIndex(songs: Song[] = getSongs()): SearchSong[] {
     });
 }
 
-export function matchesQuery(song: SearchSong, query: string): boolean {
-    const q = query.trim().toLowerCase();
-    if (!q) return false;
-    if (/^\d+$/.test(q) && song.ids.some((id) => String(id).startsWith(q))) {
-        return true;
-    }
-    return [song.title, song.artist, song.from, ...(song.categories ?? []), ...(song.genres ?? [])]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase()
-        .includes(q);
+export function buildSearchArtists(artists: Artist[] = getArtists()): SearchArtist[] {
+    const aliases = aliasesBySlug();
+    return artists.map((artist) => {
+        const extra = usefulAliases(artist.name, aliases.get(artist.slug) ?? []);
+        const sortName =
+            artist.sortName !== undefined && artist.sortName !== artist.name ? artist.sortName : undefined;
+        return {
+            name: artist.name,
+            slug: artist.slug,
+            ...(sortName === undefined ? {} : { sortName }),
+            ...(extra.length === 0 ? {} : { aliases: extra }),
+        };
+    });
 }
+
+export { matchesQuery } from "./search";
 
 export function collectionKinds(): CollectionKind[] {
     return ["decade", "genre", "category", "from", "lang"];
