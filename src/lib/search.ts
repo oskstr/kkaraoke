@@ -77,11 +77,39 @@ export function artistMap(artists: readonly SearchArtist[]): Map<string, SearchA
     return new Map(artists.map((artist) => [artist.slug, artist]));
 }
 
+function tokenHits(queryToken: string, fieldToken: string): boolean {
+    if (queryToken.length <= 2) {
+        return fieldToken === queryToken;
+    }
+    return fieldToken.startsWith(queryToken);
+}
+
 function tokensMatch(query: readonly string[], field: readonly string[]): boolean {
     if (query.length === 0) {
         return false;
     }
-    return query.every((qt) => field.some((ft) => ft.startsWith(qt)));
+    return query.every((qt) => field.some((ft) => tokenHits(qt, ft)));
+}
+
+/** True when the field is the query, or its leading words are. `a ha` must not prefix `a hard`. */
+function fieldPrefixMatch(field: string, queryTokens: readonly string[], queryFold: string): boolean {
+    const folded = foldText(field);
+    if (folded.length === 0 || queryFold.length === 0) {
+        return false;
+    }
+    if (folded === queryFold) {
+        return true;
+    }
+    const fieldTokens = searchTokens(field);
+    if (queryTokens.length === 0 || queryTokens.length > fieldTokens.length) {
+        return false;
+    }
+    return queryTokens.every((qt, index) => tokenHits(qt, fieldTokens[index]!));
+}
+
+function compactEquals(query: string, field: string): boolean {
+    const compact = compactText(query);
+    return compact.length >= 2 && compact === compactText(field);
 }
 
 function tokensForFields(fields: readonly string[]): string[] {
@@ -95,15 +123,15 @@ function tokensForFields(fields: readonly string[]): string[] {
         out.push(token);
     };
     for (const field of fields) {
-        const parts = searchTokens(field);
-        for (const part of parts) {
+        for (const part of searchTokens(field)) {
             add(part);
-        }
-        if (parts.length > 1) {
-            add(compactText(field));
         }
     }
     return out;
+}
+
+function fieldsCompactMatch(query: string, fields: readonly string[]): boolean {
+    return fields.some((field) => compactEquals(query, field));
 }
 
 function strongPhraseMatch(query: string, value: string): boolean {
@@ -187,7 +215,7 @@ function songMatches(song: SearchSong, query: string, artists: ReadonlyMap<strin
     if (isSingleLetterQuery(qt)) {
         return primary.some((field) => searchTokens(field)[0]?.startsWith(qt[0]!));
     }
-    if (tokensMatch(qt, tokensForFields(primary))) {
+    if (tokensMatch(qt, tokensForFields(primary)) || fieldsCompactMatch(trimmed, primary)) {
         return true;
     }
     if (aliasPhrases(song, artists).some((alias) => strongPhraseMatch(trimmed, alias))) {
@@ -201,7 +229,6 @@ function songScore(song: SearchSong, query: string, artists: ReadonlyMap<string,
     const trimmed = query.trim();
     const qt = searchTokens(trimmed);
     const qFold = foldText(trimmed);
-    const qCompact = compactText(trimmed);
     let score = 1;
 
     if (/^\d+$/.test(trimmed)) {
@@ -219,34 +246,49 @@ function songScore(song: SearchSong, query: string, artists: ReadonlyMap<string,
 
     if (titleFold === qFold) {
         score += 1_000;
-    } else if (qFold.length > 0 && titleFold.startsWith(qFold)) {
+    } else if (fieldPrefixMatch(song.title, qt, qFold)) {
         score += 800;
-    } else if (tokensMatch(qt, tokensForFields([song.title]))) {
+    } else if (tokensMatch(qt, tokensForFields([song.title])) || compactEquals(trimmed, song.title)) {
         score += 600;
-        if (titleTokens[0]?.startsWith(qt[0]!)) {
+        if (titleTokens[0] !== undefined && tokenHits(qt[0]!, titleTokens[0])) {
             score += 40;
         }
     }
+    if (qt.length === 1 && titleTokens.includes(qt[0]!)) {
+        score += 120;
+    }
 
-    if (artistFold === qFold || (qCompact.length >= 2 && compactText(song.artist) === qCompact)) {
+    if (artistFold === qFold || compactEquals(trimmed, song.artist)) {
         score += 950;
-    } else if (qFold.length > 0 && artistFold.startsWith(qFold)) {
+    } else if (fieldPrefixMatch(song.artist, qt, qFold)) {
         score += 750;
     } else if (tokensMatch(qt, tokensForFields([song.artist]))) {
         score += 550;
-        if (artistTokens[0]?.startsWith(qt[0]!)) {
+        if (artistTokens[0] !== undefined && tokenHits(qt[0]!, artistTokens[0])) {
             score += 30;
         }
     }
+    if (qt.length === 1 && artistTokens.includes(qt[0]!)) {
+        score += 100;
+    }
 
-    for (const credited of song.artists ?? []) {
-        if (foldText(slugPhrase(credited.slug)) === qFold) {
+    const credited = song.artists ?? [];
+    for (const artist of credited) {
+        if (foldText(slugPhrase(artist.slug)) === qFold || compactEquals(trimmed, artist.name)) {
             score += 900;
         }
-        const record = artists?.get(credited.slug);
+        const record = artists?.get(artist.slug);
         if (record?.sortName !== undefined && foldText(record.sortName) === qFold) {
             score += 880;
         }
+    }
+    if (
+        credited.length === 1 &&
+        (foldText(slugPhrase(credited[0]!.slug)) === qFold ||
+            compactEquals(trimmed, credited[0]!.name) ||
+            foldText(credited[0]!.name) === qFold)
+    ) {
+        score += 150;
     }
 
     if (song.from !== undefined && tokensMatch(qt, tokensForFields([song.from]))) {
@@ -302,25 +344,22 @@ function artistMatches(artist: SearchArtist, query: string): boolean {
     if (isSingleLetterQuery(qt)) {
         return phrases.some((field) => searchTokens(field)[0]?.startsWith(qt[0]!));
     }
-    if (tokensMatch(qt, tokensForFields(phrases))) {
+    if (tokensMatch(qt, tokensForFields(phrases)) || fieldsCompactMatch(trimmed, phrases)) {
         return true;
     }
-    return (artist.aliases ?? []).some(
-        (alias) => strongPhraseMatch(trimmed, alias) || tokensMatch(qt, tokensForFields([alias])),
-    );
+    return (artist.aliases ?? []).some((alias) => strongPhraseMatch(trimmed, alias));
 }
 
 function artistScore(artist: SearchArtist, query: string): number {
     const trimmed = query.trim();
     const qt = searchTokens(trimmed);
     const qFold = foldText(trimmed);
-    const qCompact = compactText(trimmed);
     let score = 1;
 
     const nameFold = foldText(artist.name);
-    if (nameFold === qFold || (qCompact.length >= 2 && compactText(artist.name) === qCompact)) {
+    if (nameFold === qFold || compactEquals(trimmed, artist.name)) {
         score += 1_000;
-    } else if (qFold.length > 0 && nameFold.startsWith(qFold)) {
+    } else if (fieldPrefixMatch(artist.name, qt, qFold)) {
         score += 800;
     } else if (tokensMatch(qt, tokensForFields([artist.name]))) {
         score += 600;
@@ -344,8 +383,6 @@ function artistScore(artist: SearchArtist, query: string): number {
 
     if ((artist.aliases ?? []).some((alias) => strongPhraseMatch(trimmed, alias))) {
         score += 450;
-    } else if ((artist.aliases ?? []).some((alias) => tokensMatch(qt, tokensForFields([alias])))) {
-        score += 120;
     }
 
     score -= Math.min(searchTokens(artist.name).length, 10);

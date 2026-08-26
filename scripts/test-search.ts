@@ -81,6 +81,16 @@ const catalog: SearchSong[] = [
         artists: [{ name: "P!nk", slug: "pink" }],
     }),
     song({
+        id: 21,
+        title: "Dreaming",
+        artist: "Marshmello, P!nk, Sting",
+        artists: [
+            { name: "Marshmello", slug: "marshmello" },
+            { name: "P!nk", slug: "pink" },
+            { name: "Sting", slug: "sting" },
+        ],
+    }),
+    song({
         id: 30,
         title: "Take On Me",
         artist: "a-ha",
@@ -98,6 +108,24 @@ const catalog: SearchSong[] = [
         title: "Dancing Queen",
         artist: "ABBA",
         artists: [{ name: "ABBA", slug: "abba" }],
+    }),
+    song({
+        id: 51,
+        title: "A Hard Day’s Night",
+        artist: "The Beatles",
+        artists: [{ name: "The Beatles", slug: "the-beatles" }],
+    }),
+    song({
+        id: 52,
+        title: "Love Me Do",
+        artist: "The Beatles",
+        artists: [{ name: "The Beatles", slug: "the-beatles" }],
+    }),
+    song({
+        id: 53,
+        title: "LoveGame",
+        artist: "Lady Gaga",
+        artists: [{ name: "Lady Gaga", slug: "lady-gaga" }],
     }),
     song({
         id: 60,
@@ -186,6 +214,7 @@ describe("stylized names", () => {
     it("finds P!nk from pink via the slug", () => {
         const songs = rankSongs(catalog, "pink", bySlug);
         assert.equal(songs[0]?.artist, "P!nk");
+        assert.equal(songs[0]?.title, "So What");
         assert.equal(rankArtists(artists, "pink")[0]?.name, "P!nk");
     });
 
@@ -193,6 +222,13 @@ describe("stylized names", () => {
         assert.equal(rankSongs(catalog, "aha", bySlug)[0]?.title, "Take On Me");
         assert.equal(rankSongs(catalog, "a ha", bySlug)[0]?.title, "Take On Me");
         assert.equal(rankArtists(artists, "aha")[0]?.name, "a-ha");
+    });
+
+    it("does not treat aha as a prefix of A Hard Day’s Night", () => {
+        const titles = rankSongs(catalog, "aha", bySlug).map((row) => row.title);
+        assert.ok(!titles.includes("A Hard Day’s Night"));
+        const spaced = rankSongs(catalog, "a ha", bySlug).map((row) => row.title);
+        assert.ok(!spaced.includes("A Hard Day’s Night"));
     });
 
     it("finds AC/DC from acdc", () => {
@@ -242,13 +278,12 @@ describe("ranking", () => {
     });
 
     it("prefers a title that starts with the query", () => {
-        const extra = [
-            ...catalog,
-            song({ id: 100, title: "Love Me Do", artist: "The Beatles" }),
-            song({ id: 101, title: "Can't Help Falling in Love", artist: "Elvis Presley" }),
-        ];
+        const extra = [...catalog, song({ id: 101, title: "Can't Help Falling in Love", artist: "Elvis Presley" })];
         const rows = rankSongs(extra, "love", bySlug);
         assert.equal(rows[0]?.title, "Love Me Do");
+        assert.ok(
+            rows.findIndex((row) => row.title === "Love Me Do") < rows.findIndex((row) => row.title === "LoveGame"),
+        );
     });
 });
 
