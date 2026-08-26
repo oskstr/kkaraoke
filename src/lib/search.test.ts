@@ -362,6 +362,29 @@ describe("ranking", () => {
         assert.ok(titles.includes("California Love"));
         assert.ok(titles.indexOf("Love Me Do") < titles.indexOf("California Love"));
     });
+
+    it("prefers Money, Money, Money over the shorter title Money", () => {
+        const extra = [
+            ...catalog,
+            song({ id: 1100, title: "Money, Money, Money", artist: "ABBA" }),
+            song({ id: 3839, title: "Money", artist: "Pink Floyd" }),
+        ];
+        const rows = rankSongs(extra, "Money, Money, Money", bySlug);
+        assert.equal(rows[0]?.title, "Money, Money, Money");
+        assert.ok(rows.some((row) => row.title === "Money"));
+    });
+
+    it("prefers the song titled 1999 over punch-in number 1999", () => {
+        const extra = [
+            ...catalog,
+            song({ id: 852, title: "1999", artist: "Prince" }),
+            song({ id: 1999, title: "Ain’t Goin’ Down", artist: "Garth Brooks" }),
+        ];
+        const rows = rankSongs(extra, "1999", bySlug);
+        assert.equal(rows[0]?.title, "1999");
+        assert.equal(rows[0]?.artist, "Prince");
+        assert.ok(rows.some((row) => row.id === 1999));
+    });
 });
 
 describe("aliases", () => {

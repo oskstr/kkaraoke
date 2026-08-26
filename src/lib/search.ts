@@ -425,22 +425,24 @@ function leadingPhraseHit(words: readonly string[], query: ParsedQuery): FieldHi
     return { kind: KIND.phrasePrefix, extra };
 }
 
-function matchField(text: string, query: ParsedQuery): FieldHit {
+function matchField(text: string, query: ParsedQuery, wordOnly = false): FieldHit {
     const folded = foldText(text);
     if (folded.length === 0) {
         return { kind: 0, extra: 99 };
     }
     const words = folded.split(" ");
-    if (folded === query.phrase) {
-        return { kind: KIND.identity, extra: 0 };
-    }
-    const compact = folded.replace(/ /g, "");
-    if (query.compact.length >= 2 && compact === query.compact) {
-        return { kind: KIND.compact, extra: 0 };
-    }
-    const phrase = leadingPhraseHit(words, query);
-    if (phrase !== null && query.tokens.length > 1) {
-        return phrase;
+    if (!wordOnly) {
+        if (folded === query.phrase) {
+            return { kind: KIND.identity, extra: 0 };
+        }
+        const compact = folded.replace(/ /g, "");
+        if (query.compact.length >= 2 && compact === query.compact) {
+            return { kind: KIND.compact, extra: 0 };
+        }
+        const phrase = leadingPhraseHit(words, query);
+        if (phrase !== null && query.tokens.length > 1) {
+            return phrase;
+        }
     }
 
     let kindSum = 0;
@@ -456,8 +458,8 @@ function matchField(text: string, query: ParsedQuery): FieldHit {
     return { kind: kindSum / query.tokens.length, extra: extraSum };
 }
 
-function fieldScore(text: string, query: ParsedQuery, weight: number, extraScale: number): number {
-    const hit = matchField(text, query);
+function fieldScore(text: string, query: ParsedQuery, weight: number, extraScale: number, wordOnly = false): number {
+    const hit = matchField(text, query, wordOnly);
     if (hit.kind === 0) {
         return 0;
     }
@@ -497,7 +499,7 @@ function scoreFields(
     let tokenSum = 0;
     for (const term of query.tokens) {
         const best = bestScore(
-            fields.map((field) => fieldScore(field.text, tokenQuery(query, term), field.weight, extraScale)),
+            fields.map((field) => fieldScore(field.text, tokenQuery(query, term), field.weight, extraScale, true)),
         );
         if (best === 0) {
             return whole;
@@ -549,20 +551,22 @@ function scoreArtist(artist: SearchArtist, query: ParsedQuery): number {
 }
 
 function scoreSong(song: SearchSong, query: ParsedQuery, artists: ReadonlyMap<string, SearchArtist>): number {
+    const score = scoreFields(songFields(song, artists), query, 0.01);
+    let punch = 0;
     if (query.numeric) {
+        // Below an exact title match (`1999` the Prince song) but above a loose word hit.
         if (song.ids.some((id) => String(id) === query.trimmed)) {
-            return 20_000;
-        }
-        if (song.ids.some((id) => String(id).startsWith(query.trimmed))) {
-            return 18_000;
+            punch = 6_850;
+        } else if (song.ids.some((id) => String(id).startsWith(query.trimmed))) {
+            punch = 6_400;
         }
     }
-    const score = scoreFields(songFields(song, artists), query, 0.01);
-    if (score === 0) {
+    const best = Math.max(score, punch);
+    if (best === 0) {
         return 0;
     }
     const collab = Math.max(0, (song.artists?.length ?? 1) - 1);
-    return score - collab * 40 - Math.min(searchTokens(song.title).length, 12);
+    return best - collab * 40 - Math.min(searchTokens(song.title).length, 12);
 }
 
 function orderHits<T>(
