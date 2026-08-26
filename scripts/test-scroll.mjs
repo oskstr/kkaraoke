@@ -132,7 +132,7 @@ async function main() {
     await page.waitForTimeout(700);
     const artistsAfter = await measure(page);
     console.log("after", artistsAfter);
-    // artists uses data-astro-reload — full navigation; browser back_forward restore
+    // ClientRouter stores history.state.scrollY; back should land on the same offset.
     const okArtists = artistsAfter.y != null && Math.abs(artistsAfter.y - artistsBefore.y) < 200;
     console.log(okArtists ? "PASS" : "FAIL");
     if (!okArtists) failed = true;

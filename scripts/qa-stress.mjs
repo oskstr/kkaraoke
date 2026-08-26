@@ -288,9 +288,9 @@ async function scenarioD(page, errors) {
     const mid = await page.evaluate(() => {
         const link = [...document.querySelectorAll("a[href^='/artists/']")].find((a) => {
             const r = a.getBoundingClientRect();
-            return r.top > 120 && r.top < 600 && a.hasAttribute("data-astro-reload");
+            return r.top > 120 && r.top < 600;
         });
-        return link ? { href: link.getAttribute("href"), hasReload: link.hasAttribute("data-astro-reload") } : null;
+        return link ? { href: link.getAttribute("href") } : null;
     });
     details.push(`click target: ${JSON.stringify(mid)}`);
     if (!mid?.href) {
@@ -313,7 +313,7 @@ async function scenarioD(page, errors) {
     const ok = after.path === "/artists" && after.y != null && delta < 200;
     details.push(`scroll delta: ${delta} (limit 200)`);
     return {
-        name: "d) /artists scroll deep → artist (data-astro-reload) → back restore",
+        name: "d) /artists scroll deep → artist → back restore",
         ok,
         details,
         errors: [...errors],
