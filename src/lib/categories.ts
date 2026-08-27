@@ -21,6 +21,7 @@ export const DISNEY_FROM = new Set([
     "Mary Poppins",
     "Mulan",
     "Peter Pan",
+    "Pinocchio",
     "Pocahontas",
     "Tarzan",
     "The Jungle Book",
