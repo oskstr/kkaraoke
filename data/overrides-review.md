@@ -1,6 +1,6 @@
 # Override review
 
-209 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+212 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -122,6 +122,7 @@ means omit a category label rather than invent a performer.
 | 2185 | Edith Piaf | No regrets (french) | Edith Piaf | Non, je ne regrette rien |  | Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960). | 49658 |
 | 2334 | Kingsmen | Louie, Louie | Kingsmen | Louie, Louie |  | The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963). | 51022 |
 | 2337 | Mr Rogers | Won't you be my neighbour | Mr Rogers | Won't you be my neighbour | Children's song | Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song. | 51757 |
+| 2429 | Lady Gaga | Bad romance | Lady Gaga | Bad romance |  | Lady Gaga – Bad Romance. English song; MusicBrainz work lists eng+fra for the short French bridge ('Je veux ton amour et je veux ta revanche'), a translation of the English chorus. Same rule as That's Amore: a few lines in another language is not a bilingual recording. | 51099 |
 | 2500 | Anna Bergendahl | This is my life | Anna Bergendahl | This is my life | Melodifestivalen, Eurovision | Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. | 47994 |
 | 2593 | Dionne Warwick | This girl is in love with you | Dionne Warwick | This girl is in love with you |  | Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969). | 49386 |
 | 2602 | Destiny's Child | Work it out | Destiny's Child | Work it out |  | Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002. | 49348 |
@@ -138,6 +139,7 @@ means omit a category label rather than invent a performer.
 | 3258 | Sanna Nielsen | I'm in love | Sanna Nielsen | I'm in love | Melodifestivalen | Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen. | 52624 |
 | 3260 | Simon Forsberg | Tid att andas | Simon Forsberg | Tid att andas | Melodifestivalen | Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen. | 52784 |
 | 3261 | Sara Varga | Spring för livet | Sara Varga | Spring för livet | Melodifestivalen | Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen. | 52637 |
+| 3274 | Lady Gaga | Alejandro | Lady Gaga | Alejandro |  | Lady Gaga – Alejandro. English song; MusicBrainz work lists eng+spa for Spanish names (Alejandro, Fernando, Roberto) and the one phrase 'en su bolsillo'. Not a Spanish verse. | 51107 |
 | 3275 | Mariah Carey | All I want for christmas is you | Mariah Carey | All I want for christmas is you | Christmas | Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1). | 51479 |
 | 3297 | Killers | Don't shoot me santa | Killers | Don't shoot me santa | Christmas | Credited Christmas song (The Killers – Don’t Shoot Me Santa). Keep the performer; still mark category Christmas (docs rule 1). | 51013 |
 | 3363 | Josh Groban | You are loved (don't give up) | Josh Groban | You Are Loved (Don't Give Up) |  | Josh Groban; Wikipedia/MusicBrainz 2006 single from Awake. | 50802 |
@@ -200,6 +202,7 @@ means omit a category label rather than invent a performer.
 | 5496 | Il Divo | Adagio | Il Divo | Adagio |  | Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx). | 50426 |
 | 5502 | Mario Lanza | Ave Maria | Mario Lanza | Ave Maria | Hymn | Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. | 51513 |
 | 5529 | Michael Buble | You've got a friend in me | Michael Buble | You've got a friend in me |  | Michael Bublé cover of Toy Story song; from was missing | 51632 |
+| 5548 | Lady Gaga | Born this way | Lady Gaga | Born this way |  | Lady Gaga – Born This Way. English song; MusicBrainz work lists eng+ita for the one line 'Mi amore vole fe yah' (not standard Italian; Gaga glossed it as 'love needs faith'). | 51115 |
 | 5553 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018). | 51117 |
 | 5560 | Pink fong | Baby Shark | Pink fong | Baby Shark | Children's song | Pinkfong – Baby Shark. Children's song; mark categories Children's song. | 52166 |
 | 5617 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018). | 51120 |
