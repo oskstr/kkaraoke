@@ -34,6 +34,7 @@ export const LANGUAGE_LABELS: Record<string, string> = {
     mul: "Multiple",
     nap: "Neapolitan",
     pan: "Punjabi",
+    ron: "Romanian",
     zxx: "Instrumental",
 };
 
