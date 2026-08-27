@@ -370,6 +370,11 @@
             "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 49041,
+            "language": "eng",
+            "why": "Coldplay – Life in Technicolor. MusicBrainz work is the wordless album intro (zxx). A karaoke catalog is likelier to have the sung English version (Life in Technicolor ii) than the instrumental opener. Same karaoke-vocal rule as Swedish House Mafia – One."
+        },
+        {
             "postId": 49158,
             "year": 1968,
             "title": "Walk on the Water",
@@ -493,6 +498,30 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49832,
+            "language": "mul",
+            "artist": "Enrique Iglesias, Sean Paul, Descemer Bueno, Gente de Zona",
+            "artists": [
+                {
+                    "mbid": "35f866dc-c061-48ba-8157-cf2e0eac4857",
+                    "name": "Enrique Iglesias"
+                },
+                {
+                    "mbid": "c3da3346-2643-48a7-93cd-011f6834b3d7",
+                    "name": "Sean Paul"
+                },
+                {
+                    "mbid": "cdfa25d4-b9fa-4e99-a163-18fddf7d514f",
+                    "name": "Descemer Bueno"
+                },
+                {
+                    "mbid": "35e53195-f6e1-40bc-a3ae-62b1900ee199",
+                    "name": "Gente de Zona"
+                }
+            ],
+            "why": "Enrique Iglesias feat. Sean Paul – Bailando. Venue credited Sean Paul, which is the Spanglish/English cut (English verses + Spanish chorus; Wikipedia). Matcher lead-scoped onto the Spanish-only recording (Descemer Bueno & Gente de Zona) and tagged spa."
         },
         {
             "postId": 49852,
@@ -642,6 +671,11 @@
             "why": "Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
         },
         {
+            "postId": 50426,
+            "language": "ita",
+            "why": "Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx)."
+        },
+        {
             "postId": 50460,
             "year": 1985,
             "title": "Good + Bad Times",
@@ -672,6 +706,11 @@
             "why": "Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
         },
         {
+            "postId": 50497,
+            "language": "eng",
+            "why": "Dean Martin – That's Amore. English pop song with a few Italian words (Wikipedia). Language ita was copied from the venue's Italian bucket, not from the lyrics."
+        },
+        {
             "postId": 50539,
             "year": 1968,
             "why": "James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single)."
@@ -690,6 +729,11 @@
                 "Eurovision"
             ],
             "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
+        },
+        {
+            "postId": 50642,
+            "language": "eng",
+            "why": "Jerry Williams – Did I Tell You. Sung in English (Genius lyrics; Swedish Wikipedia notes dansband covers as 'Sa jag nånsin'). MusicBrainz work language swe follows the Swedish artist, not the lyrics."
         },
         {
             "postId": 50644,
@@ -744,6 +788,22 @@
             "title": "You Are Loved (Don't Give Up)",
             "year": 2006,
             "why": "Josh Groban; Wikipedia/MusicBrainz 2006 single from Awake."
+        },
+        {
+            "postId": 50833,
+            "language": "mul",
+            "artist": "Juanes, Colbie Caillat",
+            "artists": [
+                {
+                    "mbid": "8b0f05ce-354e-4121-9e0b-8b4732ea844f",
+                    "name": "Juanes"
+                },
+                {
+                    "mbid": "efc8a006-d0c6-4a9b-8cb1-91ca770fa2b9",
+                    "name": "Colbie Caillat"
+                }
+            ],
+            "why": "Juanes & Colbie Caillat – Hoy me voy. Venue credited the bilingual duet (Spanish + English verses). Matcher kept Juanes's Spanish original and tagged spa."
         },
         {
             "postId": 50840,
@@ -1185,6 +1245,11 @@
             "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
         },
         {
+            "postId": 51995,
+            "language": "eng",
+            "why": "Outlandish – Aïcha. English-language cover of Khaled's 1996 French original (Genius; only the last line keeps 'écoute-moi'). MusicBrainz work language is the French original."
+        },
+        {
             "postId": 52064,
             "from": "Aladdin",
             "why": "Peabo Bryson & Regina Belle Aladdin; from was missing"
@@ -1245,6 +1310,11 @@
             ]
         },
         {
+            "postId": 52579,
+            "language": "eng",
+            "why": "Roy Orbison – Pretty Woman. English 1964 original. MusicBrainz linked the recording to a Dutch-language work (nld) — a translation, not Orbison's cut."
+        },
+        {
             "postId": 52621,
             "categories": [
                 "Melodifestivalen"
@@ -1278,6 +1348,11 @@
                 "Melodifestivalen"
             ],
             "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
+        },
+        {
+            "postId": 52704,
+            "language": "eng",
+            "why": "Sha-Boom – R.O.C.K. English lyrics ('I love rock'n roll music… From the New York streets to the beach of L.A.'; Singa karaoke text). MusicBrainz work language swe follows the Swedish band, not the lyrics."
         },
         {
             "postId": 52706,
@@ -1318,11 +1393,49 @@
             "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
         },
         {
+            "postId": 52921,
+            "language": "eng",
+            "why": "Steve Lawrence – Footsteps. English 1960 hit (Barry Mann/Hank Hunter; Wikipedia lyrics). MusicBrainz linked the recording to a Japanese-language work titled Footsteps."
+        },
+        {
             "postId": 52938,
             "categories": [
                 "Birthday"
             ],
             "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
+        },
+        {
+            "postId": 53022,
+            "language": "eng",
+            "title": "One (Your Name)",
+            "artist": "Swedish House Mafia, Pharrell Williams",
+            "artists": [
+                {
+                    "mbid": "99075985-0d80-4692-a15e-b16f78831792",
+                    "name": "Swedish House Mafia"
+                },
+                {
+                    "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+                    "name": "Pharrell Williams"
+                }
+            ],
+            "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue filed the vocal cut with Pharrell. Matcher landed on the instrumental 'One' work (zxx) and dropped Pharrell. Karaoke has the sung English version."
+        },
+        {
+            "postId": 53023,
+            "language": "eng",
+            "artist": "Swedish House Mafia, Pharrell Williams",
+            "artists": [
+                {
+                    "mbid": "99075985-0d80-4692-a15e-b16f78831792",
+                    "name": "Swedish House Mafia"
+                },
+                {
+                    "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+                    "name": "Pharrell Williams"
+                }
+            ],
+            "why": "Swedish House Mafia & Pharrell – One. Same vocal 'One (Your Name)' as postId 53022: venue credited Pharrell; matcher used the instrumental work (zxx). Karaoke has the sung English version."
         },
         {
             "postId": 53084,
@@ -1344,6 +1457,11 @@
             "year": 1967,
             "title": "The Crystal Ship",
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
+        },
+        {
+            "postId": 53210,
+            "language": "eng",
+            "why": "Three Days Grace – Home. English lyrics throughout (Genius). MusicBrainz work lists eng+por; the Portuguese is a translation of the same English song, not a second sung language."
         },
         {
             "postId": 53249,

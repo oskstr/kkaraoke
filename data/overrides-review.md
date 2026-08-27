@@ -1,6 +1,6 @@
 # Override review
 
-188 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+206 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -10,12 +10,14 @@ means omit a category label rather than invent a performer.
 | -: | --- | --- | --- | --- | --- | --- | -: |
 | 73 | Tlc | No scrub | Tlc | No Scrubs |  | TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia). | 53249 |
 | 75 | Phil Collins | You'll be in my heart | Phil Collins | You'll be in my heart |  | Phil Collins Disney/Tarzan hit; from was missing | 52123 |
+| 85 | Chieftains feat. The Corrs | I know my love | Chieftains feat. The Corrs | I know my love | Irish traditional | The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. | 48942 |
 | 135 | Avril Lavigne | Sk8ter boi | Avril Lavigne | Sk8ter boi |  | Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go). | 48102 |
 | 287 | Johnny Logan | Hold me now | Johnny Logan | Hold me now | Eurovision | Johnny Logan – Hold Me Now; Eurovision 1987 (Ireland). Category Eurovision. | 50776 |
 | 350 | Elton John | Circle of life | Elton John | Circle of life |  | Elton John Lion King; from was missing | 49684 |
 | 362 | Cat Stevens | Wild world | Cat Stevens | Wild world |  | Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970). | 48810 |
 | 395 | Beatles | You're going to loose that girl | Beatles | You're Going to Lose That Girl |  | Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz. | 48245 |
 | 431 | Peabo Bryson & Regina Bell | A whole new world | Peabo Bryson & Regina Bell | A whole new world |  | Peabo Bryson & Regina Belle Aladdin; from was missing | 52064 |
+| 457 | Roy Orbison | Pretty woman | Roy Orbison | Pretty woman |  | Roy Orbison – Pretty Woman. English 1964 original. MusicBrainz linked the recording to a Dutch-language work (nld) — a translation, not Orbison's cut. | 52579 |
 | 461 | Elton John | Can you feel the love tonight | Elton John | Can you feel the love tonight |  | Elton John Lion King; from was missing | 49686 |
 | 506 | Shaggy | It wasn't me | Shaggy | It Wasn't Me |  | Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). | 52706 |
 | 521 | Gina G | Ooh aah...just a little bit | Gina G | Ooh aah...just a little bit | Eurovision | Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision. | 50208 |
@@ -24,6 +26,7 @@ means omit a category label rather than invent a performer.
 | 636 | Niklas Strömstedt | Flickor talar om kärleken | Niklas Strömstedt | Flickor talar om kärleken |  | Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990). | 51882 |
 | 639 | Michael Bolton | Go the distance | Michael Bolton | Go the distance |  |  | 51630 |
 | 663 | Emma | Vänner | Emma | Vänner |  | E.M.M.A. – Vänner. Year from Discogs Swedish single (2002). | 49798 |
+| 675 | Outlandish | Aicha | Outlandish | Aicha |  | Outlandish – Aïcha. English-language cover of Khaled's 1996 French original (Genius; only the last line keeps 'écoute-moi'). MusicBrainz work language is the French original. | 51995 |
 | 716 | Lordi | Hard rock hallelujah | Lordi | Hard rock hallelujah | Eurovision | Lordi – Hard Rock Hallelujah; Eurovision 2006 (Finland). Category Eurovision. | 51314 |
 | 803 | Fame | Give me your love | Fame | Give me your love | Melodifestivalen, Eurovision | Fame – Give Me Your Love; Melodifestivalen/Eurovision 2003. Categories Melodifestivalen + Eurovision. | 49947 |
 | 807 | Sanna Nielsen | Hela världen för mig | Sanna Nielsen | Hela världen för mig | Melodifestivalen | Sanna Nielsen – Hela världen för mig; Melodifestivalen 2003. Category Melodifestivalen. | 52621 |
@@ -65,9 +68,13 @@ means omit a category label rather than invent a performer.
 | 1008 | Charlotte Nilsson | Tusen och en natt | Charlotte Nilsson | Tusen och en natt | Melodifestivalen, Eurovision | Charlotte Perrelli – Tusen och en natt (Swedish of Take Me to Your Heaven); Melodifestivalen/Eurovision 1999. Categories Melodifestivalen + Eurovision. | 48893 |
 | 1009 | Roger Pontare | Vindarna viskar mitt namn | Roger Pontare | Vindarna viskar mitt namn | Melodifestivalen, Eurovision | Roger Pontare – När vindarna viskar mitt namn; Melodifestivalen/Eurovision 2000. Categories Melodifestivalen + Eurovision. | 52531 |
 | 1010 | Nick Borgen | We are all the winners | Nick Borgen | We are all the winners | Melodifestivalen | Nick Borgen – We Are All the Winners; Melodifestivalen 1993. Category Melodifestivalen. | 51857 |
+| 1023 | Lasse Berghagen | Teddybjörnen Fredriksson | Lasse Berghagen | Teddybjörnen Fredriksson | Children's song | Lasse Berghagen – Teddybjörnen Fredriksson. Children's song with a credited performer; mark categories Children's song. | 51145 |
+| 1027 | Sha-Boom | Rock (rock'n roll music) | Sha-Boom | Rock (rock'n roll music) |  | Sha-Boom – R.O.C.K. English lyrics ('I love rock'n roll music… From the New York streets to the beach of L.A.'; Singa karaoke text). MusicBrainz work language swe follows the Swedish band, not the lyrics. | 52704 |
+| 1037 | Jerry Williams | Did I tell you | Jerry Williams | Did I tell you |  | Jerry Williams – Did I Tell You. Sung in English (Genius lyrics; Swedish Wikipedia notes dansband covers as 'Sa jag nånsin'). MusicBrainz work language swe follows the Swedish artist, not the lyrics. | 50642 |
 | 1065 | Födelsedagssång | Ja må du leva | *(empty)* | Ja må du leva | Birthday | Traditional / category material filed under 'Födelsedagssång'; no single performer to invent | 50135 |
 | 1073 | Björn Skifs | Michelangelo | Björn Skifs | Michelangelo | Melodifestivalen | Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen. | 48383 |
 | 1108 | Abba | Waterloo | Abba | Waterloo | Melodifestivalen, Eurovision | ABBA – Waterloo. Venue filed plain Waterloo; matcher had picked the German-language MB recording. Force English ESC/Melodifestivalen cut (1974). Categories Melodifestivalen + Eurovision. | 47775 |
+| 1219 | Steve Lawrence | Footsteps | Steve Lawrence | Footsteps |  | Steve Lawrence – Footsteps. English 1960 hit (Barry Mann/Hank Hunter; Wikipedia lyrics). MusicBrainz linked the recording to a Japanese-language work titled Footsteps. | 52921 |
 | 1294 | Il Divo | O holy night | Il Divo | O holy night | Christmas | Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas. | 50425 |
 | 1302 | Bucks Fizz | Making your mind up | Bucks Fizz | Making your mind up | Eurovision | Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision. | 48720 |
 | 1319 | Mamas & The Papas | California dreaming | Mamas & The Papas | California Dreamin' |  | California Dreamin'. Resolver dated 2011; Barry McGuire / Mamas & the Papas recording 1965 (Wikipedia). | 51441 |
@@ -85,7 +92,9 @@ means omit a category label rather than invent a performer.
 | 1793 | Bobby Vee | Venus in blue | Bobby Vee | Venus in blue |  | Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962. | 48521 |
 | 1820 | Whitney Houston | Jesus loves me | Whitney Houston | Jesus loves me | Hymn | Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. | 53543 |
 | 1840 | Christina Aguilera | Reflection | Christina Aguilera | Reflection |  | Christina Aguilera Reflection from Mulan; from was missing | 48996 |
+| 1857 | Italian | Santa Lucia | Italian | Santa Lucia | Christmas | Credited Christmas / Lucia song (Elvis Presley – Santa Lucia; Italian bucket already resolved to Elvis). Keep the performer; still mark category Christmas (docs rule 1). | 50493 |
 | 1858 | Italian | Ah Maria | Italian | Ah Maria | Hymn | Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. | 50494 |
+| 1861 | Italian | That's amore | Italian | That's amore |  | Dean Martin – That's Amore. English pop song with a few Italian words (Wikipedia). Language ita was copied from the venue's Italian bucket, not from the lyrics. | 50497 |
 | 1883 | Louis Armstrong | When the saints go marching in | Louis Armstrong | When the Saints Go Marching In | Hymn | Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn. | 51332 |
 | 1899 | Engelbert Humperdinck | Winter wonderland | Engelbert Humperdinck | Winter wonderland | Christmas | Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1). | 49809 |
 | 1946 | Bon Jovi | Please come home for christmas | Bon Jovi | Please come home for christmas | Christmas | Credited Christmas song (Bon Jovi – Please Come Home for Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 48545 |
@@ -115,6 +124,7 @@ means omit a category label rather than invent a performer.
 | 2500 | Anna Bergendahl | This is my life | Anna Bergendahl | This is my life | Melodifestivalen, Eurovision | Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. | 47994 |
 | 2593 | Dionne Warwick | This girl is in love with you | Dionne Warwick | This girl is in love with you |  | Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969). | 49386 |
 | 2602 | Destiny's Child | Work it out | Destiny's Child | Work it out |  | Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002. | 49348 |
+| 2605 | Dionne Warwick | You'll never get to heaven if you break my heart | Dionne Warwick | You'll Never Get to Heaven (If You Break My Heart) |  | Dionne Warwick – You'll Never Get to Heaven (If You Break My Heart). Venue filed the English title; matcher had picked the German-language MB recording. Force the English studio cut (1964). | 49389 |
 | 2691 | Alice Tegnér | Ekorrn satt i granen | *(empty)* | Ekorr'n satt i granen | Children's song | Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy). | 47902 |
 | 2694 | Barbra Streisand & Donna Summer | Enough is enough (no more tears) | Barbra Streisand & Donna Summer | No More Tears (Enough Is Enough) |  | Donna Summer & Barbra Streisand. Year from Wikipedia (1979). | 48184 |
 | 3008 | Carola | Det är bara vi | Carola | Det är bara vi |  | Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit. | 48782 |
@@ -141,6 +151,7 @@ means omit a category label rather than invent a performer.
 | 3378 | Elvis Presley | Blue christmas | Elvis Presley | Blue christmas | Christmas | Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 49759 |
 | 3379 | John Lennon | Happy x-mas, war is over | John Lennon | Happy x-mas, war is over | Christmas | Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1). | 50739 |
 | 3380 | Johnny Mathis | Have yourself a merry little christmas | Johnny Mathis | Have yourself a merry little christmas | Christmas | Credited Christmas song (Johnny Mathis – Have Yourself a Merry Little Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 50778 |
+| 3381 | Johnny Mathis | When a child is born | Johnny Mathis | When a child is born | Christmas | Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1). | 50779 |
 | 3383 | Madonna | Santa baby | Madonna | Santa baby | Christmas | Credited Christmas song (Madonna – Santa Baby). Keep the performer; still mark category Christmas (docs rule 1). | 51427 |
 | 3384 | Ronettes | I saw mommy kissing Santa Claus | Ronettes | I saw mommy kissing Santa Claus | Christmas | Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1). | 52553 |
 | 3385 | Julsång | Silent night, holy night | *(empty)* | Silent Night, Holy Night | Christmas | Traditional / category material filed under 'Julsång'; no single performer to invent | 50857 |
@@ -152,16 +163,20 @@ means omit a category label rather than invent a performer.
 | 3484 | Frank Marino | I'm a king be/Back door man medley | Frank Marino | I'm a king be/Back door man medley |  | Frank Marino & Mahogany Rush Live includes I'm a King Bee. Year from Discogs Live album (1978). | 50082 |
 | 3506 | Shania Twain | The woman in me | Shania Twain | The woman in me |  | Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single). | 52731 |
 | 3555 | Midsommarsång | Små grodorna | *(empty)* | Små grodorna | Midsummer, Children's song | Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song. | 51678 |
+| 3583 | Coldplay | Life in technicolor | Coldplay | Life in technicolor |  | Coldplay – Life in Technicolor. MusicBrainz work is the wordless album intro (zxx). A karaoke catalog is likelier to have the sung English version (Life in Technicolor ii) than the instrumental opener. Same karaoke-vocal rule as Swedish House Mafia – One. | 49041 |
 | 3677 | Oasis | It's getting better | Oasis | It's Gettin' Better (Man!!) |  | Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997). | 51937 |
 | 3690 | Wallflowers | One headlight | The Wallflowers | One headlight |  | The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996). | 53473 |
 | 3694 | Jesse Hunter | Long legged Hannah | Jesse Hunter | Long legged Hannah |  | Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994). | 50644 |
 | 3755 | Irish traditional song | Wild rover | *(empty)* | The Wild Rover | Irish traditional | Traditional / category material filed under 'Irish traditional song'; no single performer to invent | 50466 |
 | 3784 | Eric Clapton | Swing low sweet chariot | Eric Clapton | Swing low sweet chariot | Hymn | Eric Clapton – Swing Low, Sweet Chariot. Traditional spiritual/hymn with a credited rendition; mark categories Hymn. | 49852 |
 | 3857 | A-Ha | The living daylights | A-Ha | The living daylights |  | a-ha Bond theme; film was missing as from | 47750 |
+| 3881 | Three Days Grace | Home | Three Days Grace | Home |  | Three Days Grace – Home. English lyrics throughout (Genius). MusicBrainz work lists eng+por; the Portuguese is a translation of the same English song, not a second sung language. | 53210 |
+| 3967 | Swedish House Mafia & Pharrell | One (your name) | Swedish House Mafia, Pharrell Williams | One (Your Name) |  | Swedish House Mafia & Pharrell – One (Your Name). Venue filed the vocal cut with Pharrell. Matcher landed on the instrumental 'One' work (zxx) and dropped Pharrell. Karaoke has the sung English version. | 53022 |
 | 4158 | Ayumi Hamasaki | Walking proud | Ayumi Hamasaki | walking proud |  | Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it. | 48108 |
 | 4202 | Jedward | Lipstick | Jedward | Lipstick | Eurovision | Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. | 50616 |
 | 4285 | Justin Bieber | Mistletoe | Justin Bieber | Mistletoe | Christmas | Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1). | 50864 |
 | 4290 | Metallica | Whiskey in the jar | Metallica | Whiskey in the jar | Irish traditional | Metallica – Whiskey in the Jar. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. | 51611 |
+| 4292 | Juanes & Colbie Caillat | Hoy me voy | Juanes, Colbie Caillat | Hoy me voy |  | Juanes & Colbie Caillat – Hoy me voy. Venue credited the bilingual duet (Spanish + English verses). Matcher kept Juanes's Spanish original and tagged spa. | 50833 |
 | 4309 | Sonja Aldén | I din himmel | Sonja Aldén | I din himmel | Melodifestivalen | Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. | 52846 |
 | 4344 | Ani Difranco | Little plastic castles | Ani DiFranco | Little Plastic Castle |  | Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998). | 47988 |
 | 4352 | Arctic Monkeys | You probably couldn't see | Arctic Monkeys | You probably couldn't see |  | Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings. | 48037 |
@@ -175,10 +190,13 @@ means omit a category label rather than invent a performer.
 | 4987 | Stevie Wonder | Happy Birthday | Stevie Wonder | Happy Birthday | Birthday | Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday. | 52938 |
 | 5047 | Tooji (Eurovision 2012 Norway) | Stay | Tooji (Eurovision 2012 Norway) | Stay | Eurovision | Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical). | 53329 |
 | 5089 | Celine Dion | Don't Save It All For Christmas Day | Celine Dion | Don't Save It All For Christmas Day | Christmas | Credited Christmas song (Celine Dion – Don’t Save It All for Christmas Day). Keep the performer; still mark category Christmas (docs rule 1). | 48864 |
+| 5119 | Enrique Iglesias Feat. Sean Paul | Bailando | Enrique Iglesias, Sean Paul, Descemer Bueno, Gente de Zona | Bailando |  | Enrique Iglesias feat. Sean Paul – Bailando. Venue credited Sean Paul, which is the Spanglish/English cut (English verses + Spanish chorus; Wikipedia). Matcher lead-scoped onto the Spanish-only recording (Descemer Bueno & Gente de Zona) and tagged spa. | 49832 |
 | 5256 | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Christmas | Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1). | 52185 |
 | 5407 | Mans Zelmerlow | Heroes | Mans Zelmerlow | Heroes | Melodifestivalen, Eurovision | Måns Zelmerlöw – Heroes; Melodifestivalen/Eurovision 2015. Categories Melodifestivalen + Eurovision. | 51455 |
+| 5442 | Swedish House Mafia And Pharrell | One | Swedish House Mafia, Pharrell Williams | One |  | Swedish House Mafia & Pharrell – One. Same vocal 'One (Your Name)' as postId 53022: venue credited Pharrell; matcher used the instrumental work (zxx). Karaoke has the sung English version. | 53023 |
 | 5456 | Will Smith | Fresh Prince Of Bel-air | Will Smith | Fresh Prince Of Bel-air |  | Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990). | 53563 |
 | 5491 | Disney | Listen with you heart | Disney | Listen with you heart |  | Listen With Your Heart from Pocahontas soundtrack (Wikipedia soundtrack release 1995). | 49420 |
+| 5496 | Il Divo | Adagio | Il Divo | Adagio |  | Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx). | 50426 |
 | 5502 | Mario Lanza | Ave Maria | Mario Lanza | Ave Maria | Hymn | Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. | 51513 |
 | 5529 | Michael Buble | You've got a friend in me | Michael Buble | You've got a friend in me |  | Michael Bublé cover of Toy Story song; from was missing | 51632 |
 | 5553 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018). | 51117 |
