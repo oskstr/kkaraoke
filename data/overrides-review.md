@@ -1,6 +1,6 @@
 # Override review
 
-206 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+209 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -119,6 +119,7 @@ means omit a category label rather than invent a performer.
 | 2060 | John Denver | Country roads | John Denver | Take Me Home, Country Roads |  | John Denver – Take Me Home, Country Roads. Resolver dated 2019 with Max Q credit; single 12 Apr 1971 (Wikipedia). | 50721 |
 | 2100 | Broadman Hymnal | Face to face | *(empty)* | Face to Face | Hymn | Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent | 48654 |
 | 2111 | Alexander Rybak | Fairytale | Alexander Rybak | Fairytale | Eurovision | Alexander Rybak – Fairytale; Eurovision 2009 (Norway). Category Eurovision. | 47883 |
+| 2185 | Edith Piaf | No regrets (french) | Edith Piaf | Non, je ne regrette rien |  | Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960). | 49658 |
 | 2334 | Kingsmen | Louie, Louie | Kingsmen | Louie, Louie |  | The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963). | 51022 |
 | 2337 | Mr Rogers | Won't you be my neighbour | Mr Rogers | Won't you be my neighbour | Children's song | Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song. | 51757 |
 | 2500 | Anna Bergendahl | This is my life | Anna Bergendahl | This is my life | Melodifestivalen, Eurovision | Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. | 47994 |
@@ -202,6 +203,8 @@ means omit a category label rather than invent a performer.
 | 5553 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018). | 51117 |
 | 5560 | Pink fong | Baby Shark | Pink fong | Baby Shark | Children's song | Pinkfong – Baby Shark. Children's song; mark categories Children's song. | 52166 |
 | 5617 | Lady Gaga | I'll never love again | Lady Gaga | I'll never love again |  | Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018). | 51120 |
+| 5648 | J Balvin | Ginza | J Balvin | Ginza |  | J Balvin – Ginza. Spanish-language reggaeton (Genius; Wikipedia; Billboard called it a Spanish-language video). MusicBrainz work language is eng because the title is a Tokyo place name, not because the lyrics are English. | 50504 |
+| 5651 | J Balvin | Familiar | J Balvin | Familiar |  | Liam Payne, J Balvin – Familiar. English chorus and verses plus a Spanish verse from J Balvin (Wikipedia language English, Spanish). MusicBrainz work listed eng only. | 50507 |
 | 5664 | Barbados | Allt som jag ser | Barbados | Allt som jag ser | Melodifestivalen | Barbados – Allt som jag ser; Melodifestivalen 2001. Category Melodifestivalen. | 48174 |
 | 5670 | Uffe Neidemar | Häng med på party | Uffe Neidemar | Häng med på party |  | Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971). | 53388 |
 | 5674 | Jill Johnsson | Kärleken är | Jill Johnsson | Kärleken är | Melodifestivalen, Eurovision | Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision. | 50668 |

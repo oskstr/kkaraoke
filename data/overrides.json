@@ -447,6 +447,13 @@
             "why": "Edin-Ådahl – Som en vind; Melodifestivalen/Eurovision 1990. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 49658,
+            "language": "fra",
+            "title": "Non, je ne regrette rien",
+            "year": 1960,
+            "why": "Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960)."
+        },
+        {
             "postId": 49684,
             "from": "The Lion King",
             "why": "Elton John Lion King; from was missing"
@@ -711,6 +718,16 @@
             "postId": 50497,
             "language": "eng",
             "why": "Dean Martin – That's Amore. English pop song with a few Italian words (Wikipedia). Language ita was copied from the venue's Italian bucket, not from the lyrics."
+        },
+        {
+            "postId": 50504,
+            "language": "spa",
+            "why": "J Balvin – Ginza. Spanish-language reggaeton (Genius; Wikipedia; Billboard called it a Spanish-language video). MusicBrainz work language is eng because the title is a Tokyo place name, not because the lyrics are English."
+        },
+        {
+            "postId": 50507,
+            "language": "mul",
+            "why": "Liam Payne, J Balvin – Familiar. English chorus and verses plus a Spanish verse from J Balvin (Wikipedia language English, Spanish). MusicBrainz work listed eng only."
         },
         {
             "postId": 50539,
