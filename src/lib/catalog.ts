@@ -26,7 +26,6 @@ export const LANGUAGE_LABELS: Record<string, string> = {
     ita: "Italian",
     fra: "French",
     nor: "Norwegian",
-    nob: "Norwegian",
     deu: "German",
     nld: "Dutch",
     jpn: "Japanese",

@@ -1,6 +1,6 @@
 # Override review
 
-363 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+364 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -50,6 +50,7 @@ means omit a category label rather than invent a performer.
 | 753 | Ebba Grön | 800 grader | Ebba Grön | 800 grader |  | Sung in Swedish. MusicBrainz work had no language. | 49604 |
 | 756 | Imperiet | Du ska va president | Imperiet | Du ska va president |  | Sung in Swedish. MusicBrainz work had no language. | 50434 |
 | 760 | Nationalteatern | Livet är en fest | Nationalteatern | Livet är en fest |  | Sung in Swedish. MusicBrainz work had no language. | 51805 |
+| 765 | Benny Borg | Balladen om Morgan Kane | Benny Borg | Balladen om Morgan Kane |  | Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split. | 48294 |
 | 773 | Ole Ivars | Spelmannsblod | Ole Ivars | Spelmannsblod |  | Sung in Norwegian. MusicBrainz work had no language. | 51960 |
 | 776 | Tor Endresen | Ingen er så nydelig som du | Tor Endresen | Ingen er så nydelig som du |  | Sung in Norwegian. MusicBrainz work had no language. | 53331 |
 | 778 | Dina | Bli hos meg (Just say goodbye) | Dina | Bli hos meg (Just say goodbye) |  | Sung in Norwegian. MusicBrainz work had no language. | 49367 |
