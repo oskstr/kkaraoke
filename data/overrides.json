@@ -1424,6 +1424,7 @@
         {
             "postId": 53023,
             "language": "eng",
+            "title": "One (Your Name)",
             "artist": "Swedish House Mafia, Pharrell Williams",
             "artists": [
                 {
@@ -1435,7 +1436,7 @@
                     "name": "Pharrell Williams"
                 }
             ],
-            "why": "Swedish House Mafia & Pharrell – One. Same vocal 'One (Your Name)' as postId 53022: venue credited Pharrell; matcher used the instrumental work (zxx). Karaoke has the sung English version."
+            "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue titled it One but credited Pharrell on both listings, so this is the same vocal cut as postId 53022, not the instrumental. Matcher used the instrumental work (zxx) and dropped Pharrell."
         },
         {
             "postId": 53084,
