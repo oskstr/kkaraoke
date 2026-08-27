@@ -17,7 +17,7 @@ means omit a category label rather than invent a performer.
 | 362 | Cat Stevens | Wild world | Cat Stevens | Wild world |  | Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970). | 48810 |
 | 395 | Beatles | You're going to loose that girl | Beatles | You're Going to Lose That Girl |  | Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz. | 48245 |
 | 431 | Peabo Bryson & Regina Bell | A whole new world | Peabo Bryson & Regina Bell | A whole new world |  | Peabo Bryson & Regina Belle Aladdin; from was missing | 52064 |
-| 457 | Roy Orbison | Pretty woman | Roy Orbison | Pretty woman |  | Roy Orbison – Pretty Woman. English 1964 original. MusicBrainz linked the recording to a Dutch-language work (nld) — a translation, not Orbison's cut. | 52579 |
+| 457 | Roy Orbison | Pretty woman | Roy Orbison | Oh, Pretty Woman |  | Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld). | 52579 |
 | 461 | Elton John | Can you feel the love tonight | Elton John | Can you feel the love tonight |  | Elton John Lion King; from was missing | 49686 |
 | 506 | Shaggy | It wasn't me | Shaggy | It Wasn't Me |  | Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). | 52706 |
 | 521 | Gina G | Ooh aah...just a little bit | Gina G | Ooh aah...just a little bit | Eurovision | Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision. | 50208 |

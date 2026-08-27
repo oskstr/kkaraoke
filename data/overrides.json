@@ -1314,7 +1314,8 @@
         {
             "postId": 52579,
             "language": "eng",
-            "why": "Roy Orbison – Pretty Woman. English 1964 original. MusicBrainz linked the recording to a Dutch-language work (nld) — a translation, not Orbison's cut."
+            "title": "Oh, Pretty Woman",
+            "why": "Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld)."
         },
         {
             "postId": 52621,
