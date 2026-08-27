@@ -1979,7 +1979,10 @@
         {
             "postId": 52657,
             "language": "deu",
-            "why": "Sung in German. MusicBrainz work had no language."
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Schnappi – Schnappi, das kleine Krokodil. Sung in German. MusicBrainz work had no language. Children's song with a credited performer (same as Baby Shark); mark categories Children's song."
         },
         {
             "postId": 52674,

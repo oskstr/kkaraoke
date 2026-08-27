@@ -43,7 +43,7 @@ means omit a category label rather than invent a performer.
 | 684 | Markoolio | In med bollen | Markoolio | In med bollen |  | Sung in Swedish. MusicBrainz work had no language. | 51519 |
 | 685 | Raymond & Maria | Ingen vill veta var du köpt din tröja | Raymond & Maria | Ingen vill veta var du köpt din tröja |  | Sung in Swedish. MusicBrainz work had no language. | 52355 |
 | 700 | Timbuktu | Alla vill till himmelen | Timbuktu | Alla vill till himmelen |  | Sung in Swedish. MusicBrainz work had no language. | 53230 |
-| 708 | Schnappi | Schnappi - das kleine krokodil | Schnappi | Schnappi - das kleine krokodil |  | Sung in German. MusicBrainz work had no language. | 52657 |
+| 708 | Schnappi | Schnappi - das kleine krokodil | Schnappi | Schnappi - das kleine krokodil | Children's song | Schnappi – Schnappi, das kleine Krokodil. Sung in German. MusicBrainz work had no language. Children's song with a credited performer (same as Baby Shark); mark categories Children's song. | 52657 |
 | 716 | Lordi | Hard rock hallelujah | Lordi | Hard rock hallelujah | Eurovision | Lordi – Hard Rock Hallelujah; Eurovision 2006 (Finland). Category Eurovision. | 51314 |
 | 723 | Martin Stenmarck | 7 milakliv | Martin Stenmarck | 7 milakliv |  | Sung in Swedish. MusicBrainz work had no language. | 51545 |
 | 737 | Sonja Aldén | Här står jag | Sonja Aldén | Här står jag |  | Sung in Swedish. MusicBrainz work had no language. | 52844 |
