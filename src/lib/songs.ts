@@ -308,6 +308,15 @@ function keepCorrectionEnrichment(
     return false;
 }
 
+/**
+ * MusicBrainz distinguishes Bokmål (`nob`) and Nynorsk (`nno`) from macrolanguage
+ * Norwegian (`nor`). Karaoke browse is one Norwegian list.
+ */
+function catalogLanguage(code: string | undefined): string | undefined {
+    if (code === "nob" || code === "nno") return "nor";
+    return code;
+}
+
 const composedWithoutSlugs = catalog.songs.map((song) => {
     const correction = corrections.get(song.postId);
     const override = overrides.get(song.postId);
@@ -324,7 +333,7 @@ const composedWithoutSlugs = catalog.songs.map((song) => {
             ? override.from || undefined
             : correction?.from;
     const categories = override?.categories;
-    const language = override?.language ?? correction?.language;
+    const language = catalogLanguage(override?.language ?? correction?.language);
     const artists = creditedArtists(correction, override);
     const { year, genres } = enrichmentFor(correction, override);
     return {

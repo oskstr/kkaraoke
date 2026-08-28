@@ -26,6 +26,11 @@
             "why": "Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 47849,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 47883,
             "categories": [
                 "Eurovision"
@@ -34,13 +39,19 @@
         },
         {
             "postId": 47902,
-            "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy).",
+            "language": "swe",
+            "why": "Traditional children's song. Venue credited composer Alice Tegnér; that is not a karaoke rendition artist (same rule as Fredric Weatherly / Danny Boy). Sung in Swedish.",
             "title": "Ekorr'n satt i granen",
             "artist": "",
             "sortAs": "Children's song",
             "categories": [
                 "Children's song"
             ]
+        },
+        {
+            "postId": 47979,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 47988,
@@ -50,12 +61,37 @@
             "why": "Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998)."
         },
         {
+            "postId": 47993,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 47994,
             "categories": [
                 "Melodifestivalen",
                 "Eurovision"
             ],
             "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 47995,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47998,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48000,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48001,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 48037,
@@ -115,7 +151,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Barbados – Världen utanför; Melodifestivalen 2002. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Barbados – Världen utanför; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish."
         },
         {
             "postId": 48174,
@@ -144,11 +181,27 @@
             ]
         },
         {
+            "postId": 48294,
+            "language": "nor",
+            "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
+        },
+        {
+            "postId": 48378,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 48380,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Björn Kjellman – Älskar du livet; Melodifestivalen 2006. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Björn Kjellman – Älskar du livet; Melodifestivalen 2006. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 48381,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 48382,
@@ -163,7 +216,18 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Björn Skifs – Michelangelo; Melodifestivalen 1975. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 48391,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48413,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 48486,
@@ -199,7 +263,8 @@
         {
             "postId": 48592,
             "year": 2002,
-            "why": "Brandsta City Släckers – Kom och ta mig; Melodifestivalen 2002. Category Melodifestivalen.",
+            "language": "swe",
+            "why": "Brandsta City Släckers – Kom och ta mig; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish.",
             "categories": [
                 "Melodifestivalen"
             ]
@@ -249,6 +314,11 @@
             "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen."
         },
         {
+            "postId": 48762,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 48776,
             "categories": [
                 "Melodifestivalen",
@@ -265,11 +335,22 @@
             "why": "Carola – Fångad av en stormvind; Melodifestivalen/Eurovision 1991. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 48778,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 48782,
             "artist": "Carola",
             "title": "Det är bara vi",
             "year": 2010,
-            "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit."
+            "language": "swe",
+            "why": "Confirmed outside the dump: special-written for Victoria & Daniel's 2010 wedding; performed by Carola (Aftonbladet, SR, Wikipedia). Absent from the canonical MusicBrainz dump under that credit. Sung in Swedish."
+        },
+        {
+            "postId": 48797,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 48798,
@@ -367,7 +448,20 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision."
+            "language": "swe",
+            "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision. Sung in Swedish."
+        },
+        {
+            "postId": 49041,
+            "language": "eng",
+            "title": "Life in Technicolor ii",
+            "year": 2009,
+            "why": "Coldplay – Life in Technicolor ii. Venue filed Life in technicolor, which is the wordless album intro; a karaoke catalog is likelier to have the sung cut (Prospekt's March / 2009 single). Same case as Swedish House Mafia – One vs One (Your Name): do not keep the instrumental's title."
+        },
+        {
+            "postId": 49096,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 49158,
@@ -393,6 +487,11 @@
             "postId": 49348,
             "year": 2002,
             "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+        },
+        {
+            "postId": 49367,
+            "language": "nor",
+            "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
             "postId": 49386,
@@ -425,6 +524,16 @@
             "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
         },
         {
+            "postId": 49536,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49604,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 49638,
             "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -438,6 +547,23 @@
                 "Eurovision"
             ],
             "why": "Edin-Ådahl – Som en vind; Melodifestivalen/Eurovision 1990. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49658,
+            "language": "fra",
+            "title": "Non, je ne regrette rien",
+            "year": 1960,
+            "why": "Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960)."
+        },
+        {
+            "postId": 49662,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49669,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 49684,
@@ -485,7 +611,8 @@
         {
             "postId": 49798,
             "year": 2002,
-            "why": "E.M.M.A. – Vänner. Year from Discogs Swedish single (2002)."
+            "language": "swe",
+            "why": "E.M.M.A. – Vänner. Year from Discogs Swedish single (2002). Sung in Swedish."
         },
         {
             "postId": 49809,
@@ -493,6 +620,30 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49832,
+            "language": "mul",
+            "artist": "Enrique Iglesias, Sean Paul, Descemer Bueno, Gente de Zona",
+            "artists": [
+                {
+                    "mbid": "35f866dc-c061-48ba-8157-cf2e0eac4857",
+                    "name": "Enrique Iglesias"
+                },
+                {
+                    "mbid": "c3da3346-2643-48a7-93cd-011f6834b3d7",
+                    "name": "Sean Paul"
+                },
+                {
+                    "mbid": "cdfa25d4-b9fa-4e99-a163-18fddf7d514f",
+                    "name": "Descemer Bueno"
+                },
+                {
+                    "mbid": "35e53195-f6e1-40bc-a3ae-62b1900ee199",
+                    "name": "Gente de Zona"
+                }
+            ],
+            "why": "Enrique Iglesias feat. Sean Paul – Bailando. Venue credited Sean Paul, which is the Spanglish/English cut (English verses + Spanish chorus; Wikipedia). Matcher lead-scoped onto the Spanish-only recording (Descemer Bueno & Gente de Zona) and tagged spa."
         },
         {
             "postId": 49852,
@@ -510,6 +661,31 @@
             "why": "Eric Saade – Popular; Melodifestivalen/Eurovision 2011. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 49856,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49858,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49861,
+            "language": "ita",
+            "why": "Sung in Italian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49897,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49918,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 49944,
             "title": "This Ain't a Scene, It's an Arms Race",
             "year": 2007,
@@ -522,6 +698,11 @@
                 "Eurovision"
             ],
             "why": "Fame – Give Me Your Love; Melodifestivalen/Eurovision 2003. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 49948,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 50082,
@@ -546,6 +727,11 @@
             "why": "Fredrik Kempe & Sanna Nielsen – Du och jag mot världen; Melodifestivalen 2005. Category Melodifestivalen."
         },
         {
+            "postId": 50120,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50121,
             "categories": [
                 "Melodifestivalen",
@@ -563,15 +749,22 @@
             ]
         },
         {
+            "postId": 50123,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50124,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Fronda – Ingen mår så bra som jag; Melodifestivalen 2008. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Fronda – Ingen mår så bra som jag; Melodifestivalen 2008. Category Melodifestivalen. Sung in Swedish."
         },
         {
             "postId": 50135,
-            "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Födelsedagssång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Birthday",
             "title": "Ja må du leva",
@@ -592,6 +785,56 @@
                 "Eurovision"
             ],
             "why": "Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision."
+        },
+        {
+            "postId": 50211,
+            "language": "ita",
+            "why": "Sung in Italian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50291,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50315,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50316,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50317,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50318,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50337,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50351,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50356,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50358,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 50366,
@@ -635,11 +878,31 @@
             "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
         },
         {
+            "postId": 50387,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50424,
+            "language": "spa",
+            "why": "Il Divo – All by Myself (Spanish). Venue labeled (spanska); Spanish-language cut. MusicBrainz work had no language."
+        },
+        {
             "postId": 50425,
             "categories": [
                 "Christmas"
             ],
             "why": "Il Divo – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas."
+        },
+        {
+            "postId": 50426,
+            "language": "ita",
+            "why": "Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx)."
+        },
+        {
+            "postId": 50434,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 50460,
@@ -658,6 +921,11 @@
             ]
         },
         {
+            "postId": 50492,
+            "language": "ita",
+            "why": "Sung in Italian. MusicBrainz work had no language."
+        },
+        {
             "postId": 50493,
             "categories": [
                 "Christmas"
@@ -672,14 +940,46 @@
             "why": "Luciano Pavarotti – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
         },
         {
+            "postId": 50497,
+            "language": "eng",
+            "why": "Dean Martin – That's Amore. English pop song with a few Italian words (Wikipedia). Language ita was copied from the venue's Italian bucket, not from the lyrics."
+        },
+        {
+            "postId": 50504,
+            "language": "spa",
+            "why": "J Balvin – Ginza. Spanish-language reggaeton (Genius; Wikipedia; Billboard called it a Spanish-language video). MusicBrainz work language is eng because the title is a Tokyo place name, not because the lyrics are English."
+        },
+        {
+            "postId": 50506,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50507,
+            "language": "mul",
+            "why": "Liam Payne, J Balvin – Familiar. English chorus and verses plus a Spanish verse from J Balvin (Wikipedia language English, Spanish). MusicBrainz work listed eng only."
+        },
+        {
             "postId": 50539,
             "year": 1968,
             "why": "James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single)."
         },
         {
+            "postId": 50567,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50568,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50597,
             "year": 2002,
-            "why": "Javiera – No Hay Nada Más; Melodifestivalen 2002. Category Melodifestivalen.",
+            "title": "No Hay Nada Más",
+            "language": "spa",
+            "why": "Javiera – No Hay Nada Más; Melodifestivalen 2002. Category Melodifestivalen. Sung in Spanish.",
             "categories": [
                 "Melodifestivalen"
             ]
@@ -690,6 +990,11 @@
                 "Eurovision"
             ],
             "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
+        },
+        {
+            "postId": 50642,
+            "language": "eng",
+            "why": "Jerry Williams – Did I Tell You. Sung in English (Genius lyrics; Swedish Wikipedia notes dansband covers as 'Sa jag nånsin'). MusicBrainz work language swe follows the Swedish artist, not the lyrics."
         },
         {
             "postId": 50644,
@@ -705,6 +1010,21 @@
             "why": "Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 50691,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50692,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50704,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50721,
             "year": 1971,
             "title": "Take Me Home, Country Roads",
@@ -717,6 +1037,11 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 50764,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
         },
         {
             "postId": 50776,
@@ -740,14 +1065,66 @@
             "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1)."
         },
         {
+            "postId": 50790,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50793,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50802,
             "title": "You Are Loved (Don't Give Up)",
             "year": 2006,
             "why": "Josh Groban; Wikipedia/MusicBrainz 2006 single from Awake."
         },
         {
+            "postId": 50828,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50829,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50830,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50831,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50832,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50833,
+            "language": "mul",
+            "artist": "Juanes, Colbie Caillat",
+            "artists": [
+                {
+                    "mbid": "8b0f05ce-354e-4121-9e0b-8b4732ea844f",
+                    "name": "Juanes"
+                },
+                {
+                    "mbid": "efc8a006-d0c6-4a9b-8cb1-91ca770fa2b9",
+                    "name": "Colbie Caillat"
+                }
+            ],
+            "why": "Juanes & Colbie Caillat – Hoy me voy. Venue credited the bilingual duet (Spanish + English verses). Matcher kept Juanes's Spanish original and tagged spa."
+        },
+        {
             "postId": 50840,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -756,7 +1133,8 @@
         },
         {
             "postId": 50841,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -765,7 +1143,8 @@
         },
         {
             "postId": 50842,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -774,7 +1153,8 @@
         },
         {
             "postId": 50843,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Nu är det jul igen",
@@ -784,7 +1164,8 @@
         },
         {
             "postId": 50844,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Jul, jul strålande jul",
@@ -794,7 +1175,8 @@
         },
         {
             "postId": 50845,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Lusse Lelle",
@@ -814,7 +1196,8 @@
         },
         {
             "postId": 50847,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -823,7 +1206,8 @@
         },
         {
             "postId": 50848,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -832,7 +1216,8 @@
         },
         {
             "postId": 50849,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -841,7 +1226,8 @@
         },
         {
             "postId": 50850,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -850,7 +1236,8 @@
         },
         {
             "postId": 50851,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -859,16 +1246,27 @@
         },
         {
             "postId": 50852,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
-            "artist": "",
-            "sortAs": "Christmas",
+            "language": "swe",
+            "artist": "Sven-Olof Sandberg",
+            "sortAs": "Sandberg, Sven-Olof",
+            "title": "Ser du stjärnan i det blå?",
+            "from": "Pinocchio",
+            "year": 1941,
+            "artists": [
+                {
+                    "mbid": "1cbdb72c-5c54-4d31-ac86-19f0a2fec234",
+                    "name": "Sven-Olof Sandberg"
+                }
+            ],
             "categories": [
                 "Christmas"
-            ]
+            ],
+            "why": "Sven-Olof Sandberg – Ser du stjärnan i det blå? Swedish of When You Wish Upon a Star (Pinocchio). Not a traditional carol: first Swedish record of this Halldén lyric is Sandberg with Willard Ringstrand, Sonora 7022, recorded 23 Jan 1941, issued Feb 1941 (SMDB). Cliff Edwards is the English original; the 1941 Swedish dub used a different lyric (När en önskestjärna tänds); Bertil Engh is the 1995 dub; Bengt Feldreich is the 16-second Kalle Anka clip, which is why Christmas stays. Year 1941 from that first Swedish release."
         },
         {
             "postId": 50853,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -877,7 +1275,8 @@
         },
         {
             "postId": 50854,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "swe",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in Swedish.",
             "artist": "",
             "sortAs": "Christmas",
             "categories": [
@@ -886,7 +1285,8 @@
         },
         {
             "postId": 50855,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in English.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Santa Claus Is Coming to Town",
@@ -896,7 +1296,8 @@
         },
         {
             "postId": 50856,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in English.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "We Wish You a Merry Christmas",
@@ -906,7 +1307,8 @@
         },
         {
             "postId": 50857,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in English.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Silent Night, Holy Night",
@@ -916,7 +1318,8 @@
         },
         {
             "postId": 50858,
-            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Julsång'; no single performer to invent. Sung in English.",
             "artist": "",
             "sortAs": "Christmas",
             "title": "Jingle Bells",
@@ -932,11 +1335,26 @@
             ]
         },
         {
+            "postId": 50898,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 50983,
             "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 50984,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50999,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51000,
@@ -949,7 +1367,8 @@
         {
             "postId": 51001,
             "year": 2002,
-            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha; Melodifestivalen 2002. Category Melodifestivalen.",
+            "language": "swe",
+            "why": "Kikki, Bettan & Lotta – Vem e' de' du vill ha; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish.",
             "categories": [
                 "Melodifestivalen"
             ]
@@ -967,6 +1386,26 @@
             "why": "The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963)."
         },
         {
+            "postId": 51090,
+            "language": "eng",
+            "why": "Lady and the Tramp – Bella Notte. Venue labeled (english); English Disney cut. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51099,
+            "language": "eng",
+            "why": "Lady Gaga – Bad Romance. English song; MusicBrainz work lists eng+fra for the short French bridge ('Je veux ton amour et je veux ta revanche'), a translation of the English chorus. Same rule as That's Amore: a few lines in another language is not a bilingual recording."
+        },
+        {
+            "postId": 51107,
+            "language": "eng",
+            "why": "Lady Gaga – Alejandro. English song; MusicBrainz work lists eng+spa for Spanish names (Alejandro, Fernando, Roberto) and the one phrase 'en su bolsillo'. Not a Spanish verse."
+        },
+        {
+            "postId": 51115,
+            "language": "eng",
+            "why": "Lady Gaga – Born This Way. English song; MusicBrainz work lists eng+ita for the one line 'Mi amore vole fe yah' (not standard Italian; Gaga glossed it as 'love needs faith')."
+        },
+        {
             "postId": 51117,
             "year": 2018,
             "why": "Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018)."
@@ -977,11 +1416,31 @@
             "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
         },
         {
+            "postId": 51139,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51140,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51142,
+            "language": "spa",
+            "why": "Las Ketchup – The Ketchup Song (Aserejé). Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
             "postId": 51145,
             "categories": [
                 "Children's song"
             ],
             "why": "Lasse Berghagen – Teddybjörnen Fredriksson. Children's song with a credited performer; mark categories Children's song."
+        },
+        {
+            "postId": 51146,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51147,
@@ -990,6 +1449,11 @@
                 "Eurovision"
             ],
             "why": "Lasse Holm & Monica Törnell – Är det det här du kallar kärlek; Melodifestivalen/Eurovision 1986. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51148,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51178,
@@ -1014,11 +1478,37 @@
             "why": "Lena Philipsson – Dansa i neon; Melodifestivalen 1987. Category Melodifestivalen."
         },
         {
+            "postId": 51185,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51241,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51242,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51257,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51294,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 51308,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Loa Falkman – Symfonin; Melodifestivalen. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Loa Falkman – Symfonin; Melodifestivalen. Category Melodifestivalen. Sung in Swedish."
         },
         {
             "postId": 51314,
@@ -1044,12 +1534,37 @@
             "why": "Loreen – Tattoo; Melodifestivalen/Eurovision 2023. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51319,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
             "postId": 51332,
             "categories": [
                 "Hymn"
             ],
             "title": "When the Saints Go Marching In",
             "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn."
+        },
+        {
+            "postId": 51351,
+            "language": "mul",
+            "artist": "Luis Fonsi, Daddy Yankee, Justin Bieber",
+            "artists": [
+                {
+                    "mbid": "d68fda90-ab8d-4799-be56-317ba4ae700f",
+                    "name": "Luis Fonsi"
+                },
+                {
+                    "mbid": "2f522f5c-111c-4ce8-8bd0-d82e97c227ad",
+                    "name": "Daddy Yankee"
+                },
+                {
+                    "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+                    "name": "Justin Bieber"
+                }
+            ],
+            "why": "Luis Fonsi, Daddy Yankee, Justin Bieber – Despacito. Venue credited the bilingual remix (Spanish + English verse). Matcher dropped Bieber (Spanish-only recording) and left language blank."
         },
         {
             "postId": 51427,
@@ -1064,6 +1579,31 @@
                 "Melodifestivalen"
             ],
             "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
+        },
+        {
+            "postId": 51431,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51432,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51434,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51435,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51436,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51441,
@@ -1102,12 +1642,32 @@
             "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
         },
         {
+            "postId": 51517,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51519,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51545,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 51546,
             "categories": [
                 "Melodifestivalen",
                 "Eurovision"
             ],
             "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51595,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51611,
@@ -1132,7 +1692,8 @@
         },
         {
             "postId": 51678,
-            "why": "Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song.",
+            "language": "swe",
+            "why": "Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song. Sung in Swedish.",
             "artist": "",
             "sortAs": "Midsummer",
             "categories": [
@@ -1141,11 +1702,41 @@
             ]
         },
         {
+            "postId": 51679,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51680,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51704,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51724,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 51757,
             "categories": [
                 "Children's song"
             ],
             "why": "Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song."
+        },
+        {
+            "postId": 51792,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51805,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 51829,
@@ -1163,13 +1754,44 @@
         {
             "postId": 51882,
             "year": 1990,
-            "why": "Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990)."
+            "language": "swe",
+            "why": "Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990). Sung in Swedish."
+        },
+        {
+            "postId": 51884,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51885,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51898,
+            "language": "spa",
+            "why": "Sung in Spanish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51915,
+            "language": "ron",
+            "why": "O-Zone – Dragostea din tei. Sung in Romanian. MusicBrainz work had no language."
         },
         {
             "postId": 51937,
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
+        },
+        {
+            "postId": 51960,
+            "language": "nor",
+            "why": "Sung in Norwegian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51961,
+            "language": "nor",
+            "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
             "postId": 51965,
@@ -1185,9 +1807,29 @@
             "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
         },
         {
+            "postId": 51995,
+            "language": "eng",
+            "why": "Outlandish – Aïcha. English-language cover of Khaled's 1996 French original (Genius; only the last line keeps 'écoute-moi'). MusicBrainz work language is the French original."
+        },
+        {
+            "postId": 51996,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52064,
             "from": "Aladdin",
             "why": "Peabo Bryson & Regina Belle Aladdin; from was missing"
+        },
+        {
+            "postId": 52088,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52113,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52123,
@@ -1212,6 +1854,11 @@
             "why": "Pinkfong – Baby Shark. Children's song; mark categories Children's song."
         },
         {
+            "postId": 52181,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52185,
             "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -1219,9 +1866,34 @@
             ]
         },
         {
+            "postId": 52208,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52252,
             "from": "Octopussy",
             "why": "Pulp / David Arnold Bond theme All Time High; film was missing as from"
+        },
+        {
+            "postId": 52261,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52343,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52346,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52355,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52395,
@@ -1230,12 +1902,28 @@
             "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
         },
         {
+            "postId": 52424,
+            "language": "spa",
+            "why": "Ricky Martin – María. Venue labeled (spanish); Spanish-language cut. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52490,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52531,
             "categories": [
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Roger Pontare – När vindarna viskar mitt namn; Melodifestivalen/Eurovision 2000. Categories Melodifestivalen + Eurovision."
+            "language": "swe",
+            "why": "Roger Pontare – När vindarna viskar mitt namn; Melodifestivalen/Eurovision 2000. Categories Melodifestivalen + Eurovision. Sung in Swedish."
+        },
+        {
+            "postId": 52533,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52553,
@@ -1243,6 +1931,17 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 52579,
+            "language": "eng",
+            "title": "Oh, Pretty Woman",
+            "why": "Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld)."
+        },
+        {
+            "postId": 52619,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52621,
@@ -1266,11 +1965,40 @@
             "why": "Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen."
         },
         {
+            "postId": 52634,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52635,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52637,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52642,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52657,
+            "language": "deu",
+            "categories": [
+                "Children's song"
+            ],
+            "why": "Schnappi – Schnappi, das kleine Krokodil. Sung in German. MusicBrainz work had no language. Children's song with a credited performer (same as Baby Shark); mark categories Children's song."
+        },
+        {
+            "postId": 52674,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52681,
@@ -1280,10 +2008,25 @@
             "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
         },
         {
+            "postId": 52695,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52704,
+            "language": "eng",
+            "why": "Sha-Boom – R.O.C.K. English lyrics ('I love rock'n roll music… From the New York streets to the beach of L.A.'; Singa karaoke text). MusicBrainz work language swe follows the Swedish band, not the lyrics."
+        },
+        {
             "postId": 52706,
             "year": 2000,
             "title": "It Wasn't Me",
             "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia)."
+        },
+        {
+            "postId": 52721,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52731,
@@ -1291,31 +2034,69 @@
             "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
         },
         {
+            "postId": 52771,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52772,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 52784,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
         },
         {
             "postId": 52836,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Sofia – Alla; Melodifestivalen 2009. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Sofia – Alla; Melodifestivalen 2009. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52837,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52844,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52845,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 52846,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. Sung in Swedish."
         },
         {
             "postId": 52905,
             "title": "Hey Nineteen",
             "year": 1980,
             "why": "Steely Dan; venue Hey 19. Year from Wikipedia/MusicBrainz (1980, Gaucho)."
+        },
+        {
+            "postId": 52913,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52921,
+            "language": "eng",
+            "why": "Steve Lawrence – Footsteps. English 1960 hit (Barry Mann/Hank Hunter; Wikipedia lyrics). MusicBrainz linked the recording to a Japanese-language work titled Footsteps."
         },
         {
             "postId": 52938,
@@ -1325,11 +2106,81 @@
             "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
         },
         {
+            "postId": 53007,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53010,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53011,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53014,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53022,
+            "language": "eng",
+            "title": "One (Your Name)",
+            "artist": "Swedish House Mafia, Pharrell Williams",
+            "artists": [
+                {
+                    "mbid": "99075985-0d80-4692-a15e-b16f78831792",
+                    "name": "Swedish House Mafia"
+                },
+                {
+                    "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+                    "name": "Pharrell Williams"
+                }
+            ],
+            "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue filed the vocal cut with Pharrell. Matcher landed on the instrumental 'One' work (zxx) and dropped Pharrell. Karaoke has the sung English version."
+        },
+        {
+            "postId": 53023,
+            "language": "eng",
+            "title": "One (Your Name)",
+            "artist": "Swedish House Mafia, Pharrell Williams",
+            "artists": [
+                {
+                    "mbid": "99075985-0d80-4692-a15e-b16f78831792",
+                    "name": "Swedish House Mafia"
+                },
+                {
+                    "mbid": "149f91ef-1287-46da-9a8e-87fee02f1471",
+                    "name": "Pharrell Williams"
+                }
+            ],
+            "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue titled it One but credited Pharrell on both listings, so this is the same vocal cut as postId 53022, not the instrumental. Matcher used the instrumental work (zxx) and dropped Pharrell."
+        },
+        {
             "postId": 53084,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Ted Gärdestad – Oh, vilken härlig dag; Melodifestivalen. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Ted Gärdestad – Oh, vilken härlig dag; Melodifestivalen. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 53086,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53087,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53088,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 53104,
@@ -1346,10 +2197,95 @@
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
         },
         {
+            "postId": 53210,
+            "language": "eng",
+            "why": "Three Days Grace – Home. English lyrics throughout (Genius). MusicBrainz work lists eng+por; the Portuguese is a translation of the same English song, not a second sung language."
+        },
+        {
+            "postId": 53230,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53232,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53234,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53235,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 53249,
             "year": 1999,
             "title": "No Scrubs",
             "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
+            "postId": 53296,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53298,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53299,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53300,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53302,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53303,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53304,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53305,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53306,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53307,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53310,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53311,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 53312,
@@ -1368,9 +2304,50 @@
             "from": ""
         },
         {
+            "postId": 53331,
+            "language": "nor",
+            "why": "Sung in Norwegian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53354,
+            "language": "nor",
+            "why": "Sung in Norwegian. MusicBrainz work had no language."
+        },
+        {
             "postId": 53388,
             "year": 1971,
-            "why": "Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971)."
+            "language": "swe",
+            "why": "Ulf Neidemar – Häng me' på party. Year from sv.wikipedia / Discogs single (1971). Sung in Swedish."
+        },
+        {
+            "postId": 53393,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53455,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53456,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53457,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53458,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53463,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
             "postId": 53473,
@@ -1391,11 +2368,17 @@
             "why": "Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990)."
         },
         {
+            "postId": 53580,
+            "language": "swe",
+            "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
             "postId": 53622,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen."
+            "language": "swe",
+            "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish."
         }
     ]
 }
