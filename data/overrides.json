@@ -326,10 +326,60 @@
             "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
         },
         {
+            "postId": 48132,
+            "language": "eng",
+            "why": "Backstreet Boys – Boys Will Be Boys. English-language 1996 international debut-album cut (You've got something so incredible in my eyes / Boys will be boys). Genius / Dork. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48134,
+            "language": "eng",
+            "why": "Backstreet Boys – Everytime I Close My Eyes. English-language 1996 international debut-album cut (Every time I close my eyes I see your face). Genius. MusicBrainz work had no language."
+        },
+        {
             "postId": 48136,
             "title": "Hey, Mr. DJ (Keep Playin' This Song)",
             "year": 1997,
             "why": "Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11."
+        },
+        {
+            "postId": 48139,
+            "language": "eng",
+            "why": "Backstreet Boys – I Want to Be With You. English-language 1996 international debut-album cut I Wanna Be With You (I wanna be with you / It's crazy but it's true). Vagalume / BSB fandom. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48142,
+            "language": "eng",
+            "why": "Backstreet Boys – Nobody But You. English-language 1996 international debut-album cut (Ain't nobody else but you / There is nobody who can make me cry). Fan lyric page. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48143,
+            "language": "eng",
+            "why": "Backstreet Boys – Quit Playing Games With My Heart. English-language 1996/97 hit (Even in my heart I see / You're not bein' true to me / Quit playin' games with my heart). lyricdown / muztext. Not a Spanish-language cut."
+        },
+        {
+            "postId": 48145,
+            "language": "eng",
+            "why": "Backstreet Boys – That's the Way I Like It. English-language 1997 Backstreet's Back original (Somebody told me that you're not my kind / That's the way I like it), not the KC and the Sunshine Band song of the same name. Genius / BSB fandom."
+        },
+        {
+            "postId": 48147,
+            "language": "eng",
+            "why": "Backstreet Boys – We've Got It Goin' On. English-language 1995 debut single (Everybody groove to the music / Jam on 'cause Backstreet's got it). Genius / AZLyrics. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48153,
+            "language": "eng",
+            "why": "Backstreet Boys – Let's Have a Party. English-language 1996 international debut-album cut (Let's have a party / Everybody, throw your hands up in the air). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48154,
+            "language": "eng",
+            "why": "Backstreet Boys – Like a Child. English-language 1997 Backstreet's Back cut (Then I might break down and cry / Just like a child). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48155,
+            "language": "eng",
+            "why": "Backstreet Boys – That's What She Said. English-language 1997 Backstreet's Back cut (Always forever, all things she said / Because that's what she said). Genius. MusicBrainz work had no language."
         },
         {
             "postId": 48165,
@@ -1080,6 +1130,111 @@
             "postId": 49712,
             "year": 2021,
             "why": "Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia)."
+        },
+        {
+            "postId": 49724,
+            "language": "eng",
+            "why": "Elvis Presley – Return to Sender. English-language 1962 hit (Return to sender / Address unknown / No such number, no such zone). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49725,
+            "language": "eng",
+            "why": "Elvis Presley – It's Now or Never. English-language 1960 hit using the 'O Sole Mio melody (It's now or never / Come hold me tight); Aaron Schroeder / Wally Gold lyrics, not the Neapolitan original. Wikipedia / SecondHandSongs Language: English."
+        },
+        {
+            "postId": 49726,
+            "language": "eng",
+            "why": "Elvis Presley – Jailhouse Rock. English-language 1957 Leiber/Stoller hit (The warden threw a party in the county jail). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49727,
+            "language": "eng",
+            "why": "Elvis Presley – Suspicious Minds. English-language 1969 hit (We're caught in a trap / I can't walk out). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49729,
+            "language": "eng",
+            "why": "Elvis Presley – All Shook Up. English-language 1957 hit (A well I bless my soul / What's wrong with me / I'm all shook up). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49730,
+            "language": "eng",
+            "why": "Elvis Presley – Hound Dog. English-language 1956 Leiber/Stoller hit (You ain't nothin' but a hound dog / Cryin' all the time). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49731,
+            "language": "eng",
+            "why": "Elvis Presley – Heartbreak Hotel. English-language 1956 debut RCA hit (Well, since my baby left me / I found a new place to dwell). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49735,
+            "language": "eng",
+            "why": "Elvis Presley – Let Me Be Your Teddy Bear. English-language 1957 hit (Baby let me be your lovin' teddy bear). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49736,
+            "language": "eng",
+            "why": "Elvis Presley – Surrender. English-language 1961 Doc Pomus / Mort Shuman adaptation of Torna a Surriento (When we kiss my heart's on fire / So my darling please surrender), not the Neapolitan original. Wikipedia; elvispresley.com.au lyrics."
+        },
+        {
+            "postId": 49737,
+            "language": "eng",
+            "why": "Elvis Presley – Don't. English-language 1958 Leiber/Stoller ballad (Don't, don't, that's what you say / Each time that I hold you this way), not Don't Leave Me Now. Genius / Wikipedia."
+        },
+        {
+            "postId": 49738,
+            "language": "eng",
+            "why": "Elvis Presley – Too Much. English-language 1957 hit (Well you're runnin' and a-hidin' / Honey what do you say). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49739,
+            "language": "eng",
+            "why": "Elvis Presley – Guitar Man. English-language 1967 Jerry Reed cover (Well I quit my job down at the car wash / I gotta be a guitar man). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49741,
+            "language": "eng",
+            "why": "Elvis Presley – Stuck on You. English-language 1960 first post-army single (You can shake an apple off an apple tree / But you'll never shake me). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49743,
+            "language": "eng",
+            "why": "Elvis Presley – Crying in the Chapel. English-language 1965 gospel hit (You saw me crying in the chapel / The tears I shed were tears of joy). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49745,
+            "language": "eng",
+            "why": "Elvis Presley – She's Not You. English-language 1962 hit (She's not you / How could she be). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49750,
+            "language": "eng",
+            "why": "Elvis Presley – I Want You, I Need You, I Love You. English-language 1956 hit (Hold me close, hold me tight / I want you, I need you, I love you). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49751,
+            "language": "eng",
+            "why": "Elvis Presley – Little Sister. English-language 1961 hit (Little sister, don't you / Kiss me once or twice and then you say it's time to go). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49752,
+            "language": "eng",
+            "why": "Elvis Presley – Love Me Tender. English-language 1956 film title song (Love me tender, love me sweet / Never let me go). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49753,
+            "language": "eng",
+            "why": "Elvis Presley – The Impossible Dream. English-language live cut of the Man of La Mancha standard (To dream the impossible dream / To fight the unbeatable foe); Joe Darion lyrics, not a Spanish El sueño imposible cut. Wikipedia; elvis.net lyrics; Madison Square Garden 1972."
+        },
+        {
+            "postId": 49755,
+            "language": "eng",
+            "why": "Elvis Presley – Are You Lonesome Tonight. English-language 1960 hit (Are you lonesome tonight / Do you miss me tonight). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49757,
+            "language": "eng",
+            "why": "Elvis Presley – Don't Be Cruel. English-language 1956 Otis Blackwell hit (You know I can be found / Sitting home all alone). Wikipedia. MusicBrainz work had no language."
         },
         {
             "postId": 49759,
@@ -2571,6 +2726,21 @@
             "why": "Måns Zelmerlöw – Hope & Glory. Melodifestivalen 2009 (4th). Sung in English (eurovisionworld Language: English; lyrics I'm still standing for hope and glory)."
         },
         {
+            "postId": 51778,
+            "language": "eng",
+            "why": "N Sync – Fallen. Venue typo for *NSYNC Falling on Celebrity (2001); English-language bonus/album cut ('Cause I'm falling, falling / Girl, I'm falling for you). songlyrics / allthelyrics lists the same English lyric under Fallen. Not a separate Fallen recording."
+        },
+        {
+            "postId": 51779,
+            "language": "eng",
+            "why": "*NSYNC – I Drive Myself Crazy. English-language 1998/99 single (I drive myself crazy thinking of you / Made a mistake when I let you go baby). Debut-album lyrics. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51782,
+            "language": "eng",
+            "why": "*NSYNC – I Want You Back. English-language 1996/97 original (You're all I ever wanted / You're all I ever needed / I want you back), not the Jackson 5 song of the same name. Debut-album / lyrhub lyrics."
+        },
+        {
             "postId": 51792,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -3551,6 +3721,36 @@
             "year": 1996,
             "artist": "The Wallflowers",
             "why": "The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996)."
+        },
+        {
+            "postId": 53494,
+            "language": "eng",
+            "why": "Westlife – Miss You Nights. English-language 2002 Cliff Richard cover (I've had many times I can tell you / These miss you nights are the longest). Genius; Unbreakable: The Greatest Hits Vol. 1."
+        },
+        {
+            "postId": 53495,
+            "language": "eng",
+            "why": "Westlife – Hey Whatever. English-language 2003 Turnaround single (Hey whatever / Let your beauty come alive / Let your colour fill the sky). Genius / Dork. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53496,
+            "language": "eng",
+            "why": "Westlife – I Lay My Love on You. English-language 2000/01 Coast to Coast single (I lay my love on you, it's all I wanna do / Every time I breathe I feel brand new). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53497,
+            "language": "eng",
+            "why": "Westlife – If I Let You Go. English-language 1999 debut-album single (But if I let you go I will never know / What my life would be holding you close to me). Wikipedia song list; lyric pages. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53502,
+            "language": "eng",
+            "why": "Westlife – When You're Looking Like That. English-language 2001 Coast to Coast single (Am I supposed to leave you now / When you're looking like that). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53503,
+            "language": "eng",
+            "why": "Westlife – I'm Already There. English-language 2007 Lonestar cover (I'm already there / Take a look around / I'm the sunshine in your hair). Genius; Back Home."
         },
         {
             "postId": 53543,
