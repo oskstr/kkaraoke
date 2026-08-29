@@ -247,6 +247,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 48004,
+            "language": "eng",
+            "why": "Annie – Chewing Gum. Norwegian singer; the Anniemal single is English (Hey Annie, well look at you / You think you're chocolate when you're chewing gum). Wikipedia / Genius. Not the Simlish Sims 2 cut."
+        },
+        {
             "postId": 48018,
             "language": "eng",
             "why": "Aqua – Cartoon Heroes. English-language 2000 single from Aquarius (lyricsdepot / Lyreka: We are the Cartoon Heroes / We are the ones who're gonna last forever). MusicBrainz work had no language."
@@ -280,6 +285,11 @@
                 "Eurovision"
             ],
             "why": "Arvingarna – Eloise; Melodifestivalen/Eurovision 1993. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48070,
+            "language": "eng",
+            "why": "ATC – Around the World (La La La La La). English-language cover of Ruki Vverh! Pesenka (The kisses of the sun / It goes around the world). Wikipedia; not the Russian original."
         },
         {
             "postId": 48102,
@@ -336,6 +346,11 @@
             "title": "No More Tears (Enough Is Enough)",
             "year": 1979,
             "why": "Donna Summer & Barbra Streisand. Year from Wikipedia (1979)."
+        },
+        {
+            "postId": 48221,
+            "language": "eng",
+            "why": "Basshunter – Every Morning. English-language 2009 Bass Generation single (Every morning, she makes me a cup of coffee), not a Swedish rewrite of Boten Anna (Genius; muzikum Language: English)."
         },
         {
             "postId": 48222,
@@ -462,9 +477,19 @@
             ]
         },
         {
+            "postId": 48558,
+            "language": "eng",
+            "why": "Bosson – You. English-language 2006 Svensktoppen single (You, you make all my dreams come true). NostalgiListan / album Future's Gone Tomorrow."
+        },
+        {
             "postId": 48559,
             "language": "eng",
             "why": "Bosson – Efharisto. Melodifestivalen 2004; English lyrics with the Greek word for thank you as the hook (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 48560,
+            "language": "eng",
+            "why": "Bosson – We Live. English-language 1999 single from The Right Time (We live and we die / I don't wanna be an ordinary man). eLyrics / Wikipedia."
         },
         {
             "postId": 48592,
@@ -500,6 +525,11 @@
             "year": 2016,
             "language": "kor",
             "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick. Korean original 피 땀 눈물 from WINGS (2016), the international hit under this English title — not the later Japanese Chi, Ase, Namida (Wikipedia)."
+        },
+        {
+            "postId": 48717,
+            "language": "eng",
+            "why": "Bubbles – Hit the Floor. English-language 2003 Bless single (Tonight we set the groove / We're gonna hit the floor). Not a Swedish-language Bubbles cut such as Regnbågens Barn (songlyrics; Bubblegum Dancer)."
         },
         {
             "postId": 48718,
@@ -545,6 +575,21 @@
             ],
             "language": "eng",
             "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen. Sung in English (YouTube/Mello performance; Bubblegum Dancer lyrics)."
+        },
+        {
+            "postId": 48755,
+            "language": "eng",
+            "why": "The Cardigans – My Favourite Game. English-language 1998 Gran Turismo single (I'm losing my favourite game). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 48756,
+            "language": "eng",
+            "why": "The Cardigans – Erase/Rewind. English-language 1999 Gran Turismo single (Erase and rewind / Cause I'll be changing my mind). Wikipedia / Genius."
+        },
+        {
+            "postId": 48758,
+            "language": "eng",
+            "why": "The Cardigans – Lovefool. English-language 1996 First Band on the Moon single (Love me love me say that you love me). Wikipedia / Genius. Not a Swedish-language cut."
         },
         {
             "postId": 48762,
@@ -734,6 +779,11 @@
             "why": "Crucified Barbara – Heaven or Hell. Melodifestivalen 2010 (Andra chansen). Sung in English (eurovisionworld Language: English)."
         },
         {
+            "postId": 49208,
+            "language": "eng",
+            "why": "Da Buzz – Dangerous. English-language 2004 title track (I can take it, I can make it, I'm dangerous). eLyrics / album Dangerous – The Album. MusicBrainz work had no language."
+        },
+        {
             "postId": 49210,
             "language": "swe",
             "why": "Dag Vag – Popitop. Swedish-language cover of Thore Skogman's song (Popoppitop, det är toppen i år). Venue credits Dag Vag, not Skogman (dagvag.se lyrics)."
@@ -755,6 +805,11 @@
             "postId": 49228,
             "language": "eng",
             "why": "Darin – Step Up. English-language 2005 debut single (Genius: Girls, step up to the party). Duplicate catalog row."
+        },
+        {
+            "postId": 49230,
+            "language": "eng",
+            "why": "Darin – Nobody Knows. English-language 2012 Exit lead single (What's love, nobody knows). Wikipedia / eLyrics. Not a Swedish-language Darin cut."
         },
         {
             "postId": 49233,
@@ -784,6 +839,11 @@
             "postId": 49348,
             "year": 2002,
             "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+        },
+        {
+            "postId": 49364,
+            "language": "eng",
+            "why": "Dilba – I'm Sorry. English-language 1996 debut single (I painted a picture of you / I'm sorry, this illusion has caused you a lot of pain). sv.wikipedia / songlyrics."
         },
         {
             "postId": 49365,
@@ -849,9 +909,22 @@
             "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
         },
         {
+            "postId": 49529,
+            "language": "eng",
+            "why": "Dreamhouse – Sha La La. Venue Dream House / Shalala is the English 1997 cover of The Walkers (There's a boy in my mind / My heart goes shalalala), not a Swedish-language version (Wikipedia; songlyrics)."
+        },
+        {
             "postId": 49536,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49571,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "E-Type feat. Nana Hedin – Paradise. Melodifestivalen 2004 (5th). Sung in English (eurovisionworld Language: English; lyrics It must be like paradise)."
         },
         {
             "postId": 49604,
@@ -886,9 +959,19 @@
             "why": "Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960)."
         },
         {
+            "postId": 49659,
+            "language": "eng",
+            "why": "Edward Maya & Vika Jigulina – Stereo Love. English-language 2009 hit (When you gonna stop breaking my heart). Genius / Wikipedia. Not a Romanian-language cut."
+        },
+        {
             "postId": 49662,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49663,
+            "language": "eng",
+            "why": "Electric Boys – All Lips 'n' Hips. English-language 1989/1990 Funk-O-Metal Carpet Ride single (She's all lips and hips). lyricstranslate / eLyrics."
         },
         {
             "postId": 49667,
@@ -1305,6 +1388,11 @@
             "postId": 50426,
             "language": "ita",
             "why": "Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx)."
+        },
+        {
+            "postId": 50432,
+            "language": "eng",
+            "why": "Imany – Don't Be So Shy (Filatov & Karas remix). French singer; the hit and original are English (Take off your clothes / Don't be so shy). Wikipedia / eLyrics. Not a French-language cut."
         },
         {
             "postId": 50434,
@@ -1887,6 +1975,11 @@
             "why": "Le Couple – Wishes. Japanese duo; Britt Savage's English lyrics (I looked in the sky and there I saw a star), not a Japanese-language cut (Utaten / JOYSOUND)."
         },
         {
+            "postId": 51177,
+            "language": "eng",
+            "why": "Leila K – Open Sesame. English-language 1992 eurodance single with dancehall slang (Abracadabra me say open sesame). muzikum Language: English. Not a Swedish-language cut."
+        },
+        {
             "postId": 51178,
             "categories": [
                 "Eurovision"
@@ -2267,6 +2360,11 @@
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
         },
         {
+            "postId": 51955,
+            "language": "eng",
+            "why": "Ola – Rain. English-language 2006 cover of Anthony Callea (Falling like rain / Just not for me). Wikipedia / eLyrics. MusicBrainz work had no language."
+        },
+        {
             "postId": 51956,
             "language": "eng",
             "why": "Ola – Natalie. English-language 2007 cover of Tony Nilsson's song (Wikipedia: Swedish English language song; lyrics You really got me now). MusicBrainz work had no language."
@@ -2441,6 +2539,11 @@
             "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
         },
         {
+            "postId": 52403,
+            "language": "eng",
+            "why": "Richard Sanderson – Reality. English-language La Boum theme (Dreams are my reality). muzikum Language: English; Jeff Jordan lyrics. Not a French-language cut."
+        },
+        {
             "postId": 52424,
             "language": "spa",
             "why": "Ricky Martin – María. Venue labeled (spanish); Spanish-language cut. MusicBrainz work had no language."
@@ -2449,6 +2552,21 @@
             "postId": 52490,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52504,
+            "language": "eng",
+            "why": "Robyn – Handle Me. English-language 2005/2007 single from Robyn (You can't handle me). Wikipedia / eLyrics. Not a Swedish-language cut."
+        },
+        {
+            "postId": 52507,
+            "language": "eng",
+            "why": "Robyn & Kleerup – With Every Heartbeat. English-language 2007 single (And it hurts with every heartbeat). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 52508,
+            "language": "eng",
+            "why": "Robyn – Do You Know (What It Takes). English-language 1996 Robyn Is Here single (Do you know what it takes to love me). Wikipedia / Genius. Not a Swedish-language cut."
         },
         {
             "postId": 52509,
@@ -2494,6 +2612,11 @@
             "language": "eng",
             "title": "Oh, Pretty Woman",
             "why": "Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld)."
+        },
+        {
+            "postId": 52618,
+            "language": "eng",
+            "why": "Sandra – (I'll Never Be) Maria Magdalena. English-language 1985 hit (I'll never be Maria Magdalena). The German name is a seven-syllable hook, not a German-language version (Wikipedia; muzikum Language: English)."
         },
         {
             "postId": 52619,
@@ -2561,6 +2684,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52644,
+            "language": "eng",
+            "why": "Sator – I Wanna Go Home. English-language 1992 Headquake track (I've been away for 50 days now / I wanna go home). cover.info Language: English; songlyrics."
+        },
+        {
             "postId": 52657,
             "language": "deu",
             "categories": [
@@ -2572,6 +2700,11 @@
             "postId": 52674,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52680,
+            "language": "eng",
+            "why": "Sebastian Karlsson – Do What You're Told. English-language 2006 Idol runner-up debut single (Do what you're told / Follow directions, obey the law). Wikipedia / songlyrics."
         },
         {
             "postId": 52681,
@@ -2589,6 +2722,11 @@
             "postId": 52695,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52697,
+            "language": "eng",
+            "why": "September – Can't Get Over. English-language 2007 Dancing Shoes single (You know I can't get over). Wikipedia / Genius. Not a Swedish-language Petra Marklund cut."
         },
         {
             "postId": 52698,
@@ -2796,6 +2934,11 @@
             "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue titled it One but credited Pharrell on both listings, so this is the same vocal cut as postId 53022, not the instrumental. Matcher used the instrumental work (zxx) and dropped Pharrell."
         },
         {
+            "postId": 53040,
+            "language": "eng",
+            "why": "Takida – Handlake Village. English-language 2007 Bury the Lies track (It's been a long, long time / The store is not open). Genius / songlyrics. Title names Handsjöbyn; lyrics are English."
+        },
+        {
             "postId": 53084,
             "categories": [
                 "Melodifestivalen"
@@ -2827,6 +2970,11 @@
             "why": "The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 53105,
+            "language": "eng",
+            "why": "The Attic – I Just Can't Help It. English-language 2000s Swedish dance single (I have this feeling / I just can't help it). eLyrics / Musixmatch. MusicBrainz work had no language."
+        },
+        {
             "postId": 53135,
             "year": 1967,
             "title": "The Crystal Ship",
@@ -2839,6 +2987,11 @@
             ],
             "language": "eng",
             "why": "The Moniker – Oh My God! Melodifestivalen 2011 (3rd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 53173,
+            "language": "eng",
+            "why": "The Sounds – Living in America. English-language 2002 debut single (We're not living in America, but we're not sorry). sv.wikipedia / eLyrics. Not a Swedish-language cut."
         },
         {
             "postId": 53210,
@@ -2964,9 +3117,19 @@
             "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
+            "postId": 53338,
+            "language": "eng",
+            "why": "Tove Lo feat. Hippie Sabotage – Stay High. Venue credit is the English Habits (Stay High) remix (I eat my dinner in my bathtub / Gotta stay high). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
             "postId": 53354,
             "language": "nor",
             "why": "Sung in Norwegian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53355,
+            "language": "eng",
+            "why": "Trance Dance – You're Gonna Get It. English-language 1987/1988 single from Dancing in the Shadows (You can have it right here / You're gonna get it). Musikon style: Engelska; Dork lyrics."
         },
         {
             "postId": 53388,
