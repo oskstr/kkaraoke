@@ -2,9 +2,19 @@
     "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file. Optional year/genres win when set; otherwise compose keeps resolver enrichment unless the override clears the performer or replaces a matched artist identity.",
     "overrides": [
         {
+            "postId": 47710,
+            "language": "eng",
+            "why": "911 – Private Number. English-language 1999 cover of Judy Clay & William Bell (Baby, baby, baby / Please let me have your number / You can have my private number). maniadb lyrics; There It Is."
+        },
+        {
             "postId": 47739,
             "language": "eng",
             "why": "5 Seconds of Summer – Girls Talk Boys. Ghostbusters (2016) soundtrack cut; venue credits the English-language recording (Wikipedia)."
+        },
+        {
+            "postId": 47748,
+            "language": "eng",
+            "why": "98 Degrees – I Do (Cherish You). English-language 1999 single (All I am, all I'll be / I do cherish you for the rest of my life). Genius / Dork. Dump shortened the title to I Do; same 98° cut, not a different I Do."
         },
         {
             "postId": 47750,
@@ -1286,6 +1296,56 @@
             "why": "Engelbert Humperdinck – Les Bicyclettes de Belsize. English-language 1968 single despite the French title; Mireille Mathieu recorded a separate French version (Wikipedia; Genius lyrics)."
         },
         {
+            "postId": 49812,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Funny Familiar Forgotten Feelings. English-language 1967 Mickey Newbury cover (Last night quietly she walked through my mind / Funny, familiar, forgotten feelings). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49814,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Am I Easy to Forget. English-language 1967 cover of Am I That Easy to Forget (They say you've found somebody new / Am I that easy to forget). lyricdown. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49815,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – When I Say Goodnight. English-language 1968 A Man Without Love cut (When I say goodnight in your little room / That's the time I love you best of all). songlyrics / lyrhub; Gordon Mills."
+        },
+        {
+            "postId": 49816,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Mona Lisa. English-language cover of the Nat King Cole / Livingston–Evans standard (Mona Lisa, Mona Lisa, men have named you), not an Italian-language cut. Yours album match."
+        },
+        {
+            "postId": 49817,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Ten Guitars. English-language 1967 Gordon Mills song (I have a band of men and all they do is play for me / Dance, dance, dance to my ten guitars). Genius / KaraFun."
+        },
+        {
+            "postId": 49818,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Up Up and Away. English-language Jimmy Webb cover (Would you like to ride in my beautiful balloon). A Man Without Love; not a non-English cut."
+        },
+        {
+            "postId": 49819,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Misty Blue. English-language 1967 Bob Montgomery cover (Just the thought of you turns my whole world a misty blue). lyricdown. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49820,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – There Goes My Everything. English-language 1967 Dallas Frazier cover (There goes my reason for living / There goes my everything). lyrhub. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49824,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – The Way It Used to Be. English-language 1969 Cook/Greenaway adaptation of Italian Melodia (Lonely table just for one / So play the song the way it used to be), not the Isabella Iannetti original. Wikipedia; songlyrics."
+        },
+        {
+            "postId": 49825,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Help Me Make It Through the Night. English-language Kris Kristofferson cover (Take the ribbon from your hair / Help me make it through the night). Genius. MusicBrainz work had no language."
+        },
+        {
             "postId": 49832,
             "language": "mul",
             "artist": "Enrique Iglesias, Sean Paul, Descemer Bueno, Gente de Zona",
@@ -1390,6 +1450,11 @@
             "postId": 49948,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50000,
+            "language": "eng",
+            "why": "Five – Everybody Get Up. English-language 1998 debut-album single (Everybody get up / 1, 2, 3, 4, Five will make you get down now). Genius / official video lyrics."
         },
         {
             "postId": 50082,
@@ -2757,6 +2822,11 @@
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
         },
         {
+            "postId": 51848,
+            "language": "eng",
+            "why": "New Kids on the Block – You Got It (The Right Stuff). English-language 1988 Hangin' Tough hit (You got the right stuff, baby / Love the way you turn me on), not the Spanish Autentica cut. Wikipedia."
+        },
+        {
             "postId": 51853,
             "categories": [
                 "Eurovision"
@@ -2799,6 +2869,11 @@
             ],
             "language": "swe",
             "why": "Noll Disciplin – Idiot. Melodifestivalen 2010. English title, Swedish lyrics (Vad e det som händer här / Hon gör mig till en idiot). eurovisionworld Language: Swedish."
+        },
+        {
+            "postId": 51913,
+            "language": "eng",
+            "why": "O-Town – These Are the Days. English-language 2002 O2 single (These are the days when all that I can do is dream / Living in the in-between). Genius. MusicBrainz work had no language."
         },
         {
             "postId": 51915,
@@ -3035,6 +3110,41 @@
             "why": "Richard Sanderson – Reality. English-language La Boum theme (Dreams are my reality). muzikum Language: English; Jeff Jordan lyrics. Not a French-language cut."
         },
         {
+            "postId": 52407,
+            "language": "eng",
+            "why": "Rick Springfield – Affair of the Heart. English-language 1983 Living in Oz single (Heart in my mouth / You ought to know it's an affair of the heart). rickspringfield.us lyrics."
+        },
+        {
+            "postId": 52410,
+            "language": "eng",
+            "why": "Rick Springfield – I Get Excited. English-language 1982 Success Hasn't Spoiled Me Yet single. MusicBrainz work had no language; credited Springfield original, not a non-English cut."
+        },
+        {
+            "postId": 52414,
+            "language": "eng",
+            "why": "Rick Springfield – Love Somebody. English-language 1984 Hard to Hold soundtrack single. MusicBrainz work had no language; credited Springfield original."
+        },
+        {
+            "postId": 52415,
+            "language": "eng",
+            "why": "Rick Springfield – My Father's Chair. English-language 1985 Tao album cut (My father's chair still standing there / All alone since the long night). musicas.mus.br lyrics."
+        },
+        {
+            "postId": 52416,
+            "language": "eng",
+            "why": "Rick Springfield – Souls. English-language 1983 Living in Oz cut (It all started here, she was a girl from the Midwest / Two souls searching for each other). Vagalume."
+        },
+        {
+            "postId": 52418,
+            "language": "eng",
+            "why": "Rick Springfield – What Kind of Fool Am I. English-language 1982 Springfield original on Success Hasn't Spoiled Me Yet (Tell me, what kind of fool am I / To just let go like that), not the Anthony Newley / Leslie Bricusse Broadway song. Genius."
+        },
+        {
+            "postId": 52419,
+            "language": "eng",
+            "why": "Rick Springfield – Speak to Tge Sky. Venue typo for Speak to the Sky; English-language 1972 Beginnings single (Speak to the sky whenever things go wrong / When you're talkin' to the Lord). Genius."
+        },
+        {
             "postId": 52424,
             "language": "spa",
             "why": "Ricky Martin – María. Venue labeled (spanish); Spanish-language cut. MusicBrainz work had no language."
@@ -3068,6 +3178,41 @@
             "postId": 52513,
             "language": "eng",
             "why": "Robyn – Show Me Love. Same English-language recording as the other listing. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52519,
+            "language": "eng",
+            "why": "Rod Stewart – When I Need You. English-language Leo Sayer cover on If We Fall in Love Tonight (When I need you, I just close my eyes and I'm with you). MusicBrainz work had no language."
+        },
+        {
+            "postId": 52520,
+            "language": "eng",
+            "why": "Rod Stewart – So Far Away. English-language 1996 Carole King cover (So far away / Doesn't anybody stay in one place anymore); 1996 Promo Only first release, not a different standard. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52521,
+            "language": "eng",
+            "why": "Rod Stewart – I Don't Wanna Talk About It. English-language Crazy Horse cover (I can tell by your eyes that you've probably been crying forever / I don't want to talk about it). Dork / well-known Stewart hit."
+        },
+        {
+            "postId": 52522,
+            "language": "eng",
+            "why": "Rod Stewart – Tonight's the Night. English-language 1976 hit Tonight's the Night (Gonna Be Alright) (Stay away from my window / Tonight's the night, it's gonna be alright). A spoken French coda (Je t'aime) is not a French-language version."
+        },
+        {
+            "postId": 52523,
+            "language": "eng",
+            "why": "Rod Stewart – Faith of the Heart. English-language 1998 Diane Warren Patch Adams theme (It's been a long road getting from there to here / I've got faith of the heart). Wikipedia / letras."
+        },
+        {
+            "postId": 52526,
+            "language": "eng",
+            "why": "Rod Stewart – If We Fall in Love Tonight. English-language 1996 title-track single. MusicBrainz work had no language; credited Stewart pop ballad, not a non-English cut."
+        },
+        {
+            "postId": 52528,
+            "language": "eng",
+            "why": "Rod Stewart – You're in My Heart. English-language 1977 hit You're in My Heart (The Final Acclaim) (You're in my heart, you're in my soul / You'll be my breath should I grow old). Genius."
         },
         {
             "postId": 52531,
@@ -3468,6 +3613,11 @@
             "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue titled it One but credited Pharrell on both listings, so this is the same vocal cut as postId 53022, not the instrumental. Matcher used the instrumental work (zxx) and dropped Pharrell."
         },
         {
+            "postId": 53034,
+            "language": "eng",
+            "why": "Take That – How Deep Is Your Love. English-language 1996 Bee Gees cover from Nobody Else / Greatest Hits (I know your eyes in the morning sun / How deep is your love). Wikipedia; Bee Gees lyric. Not a non-English cut."
+        },
+        {
             "postId": 53040,
             "language": "eng",
             "why": "Takida – Handlake Village. English-language 2007 Bury the Lies track (It's been a long, long time / The store is not open). Genius / songlyrics. Title names Handsjöbyn; lyrics are English."
@@ -3685,6 +3835,41 @@
             "postId": 53393,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53429,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Perfect. English-language 2008 Australian single (Stay, forever who you are / In my dreams you were perfect). Genius; Somewhere in the Real World."
+        },
+        {
+            "postId": 53430,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Hazardous. English-language 2009 title-track single (Like poison that I just have to taste / Something this good has to be hazardous). Dork lyrics."
+        },
+        {
+            "postId": 53431,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Mr Mysterious. English-language 2010 Hazardous single feat. Seany B (Mr Mysterious has got me so serious / Now I'm delirious). streetdirectory lyrics."
+        },
+        {
+            "postId": 53432,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Gossip. English-language 2011 V-era single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53433,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Amazing. English-language 2011 V-era single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53434,
+            "language": "eng",
+            "why": "Vanessa Amorosi – This Is Who I Am. English-language 2009 Australian #1 (Well it's alright to be myself / This is who I am). Genius; Hazardous."
+        },
+        {
+            "postId": 53435,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Holiday. English-language 2010 Hazardous single. Wikipedia discography; Australian pop cut, not a non-English recording."
         },
         {
             "postId": 53444,
