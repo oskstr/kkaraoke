@@ -17,6 +17,11 @@
             "why": "A*Teens – Floorfiller. English-language single from Pop 'til You Drop! (Genius lyrics; MusicBrainz work had no language)."
         },
         {
+            "postId": 47756,
+            "language": "eng",
+            "why": "A1 – Caught in the Middle. British-Norwegian band; English-language 2002 Make It Good lead single (And now I'm caught in the middle / Even though I'm with someone new). Wikipedia; elyrics / LyricsFreak."
+        },
+        {
             "postId": 47759,
             "language": "swe",
             "why": "ABBA – Ring Ring. Dump matched the Swedish recording Ring Ring (Bara du slog en signal), not the English, German, or Spanish cuts (Wikipedia; canonical match recording title)."
@@ -297,6 +302,16 @@
             "why": "ATC – Around the World (La La La La La). English-language cover of Ruki Vverh! Pesenka (The kisses of the sun / It goes around the world). Wikipedia; not the Russian original."
         },
         {
+            "postId": 48074,
+            "language": "eng",
+            "why": "Atomic Kitten – The Tide Is High. English-language 2002 Blondie/Paragons cover (The tide is high but I'm holding on / I'm gonna be your number one). lyricdown; venue Tide Is High."
+        },
+        {
+            "postId": 48077,
+            "language": "eng",
+            "why": "Atomic Kitten – Whole Again. English-language 2001 UK #1 (If you see me walking down the street / You can make me whole again). Songfacts."
+        },
+        {
             "postId": 48102,
             "year": 2002,
             "language": "eng",
@@ -433,6 +448,11 @@
             "postId": 48435,
             "language": "eng",
             "why": "Blue Lagoon – Break My Stride. English-language 2004 dance cover of Matthew Wilder (Ain't nothin' gonna break my stride). Venue credits Blue Lagoon, not a non-English cut (elyrics / PetitLyrics)."
+        },
+        {
+            "postId": 48436,
+            "language": "eng",
+            "why": "Blue Lagoon – Now That We Found Love. English-language 2005 Club Lagoon dance cover of the O'Jays/Third World song (Now that we found love what are we gonna do with it). Gaana Language: English; azlyrics.biz / elyrics."
         },
         {
             "postId": 48486,
@@ -703,6 +723,11 @@
             ],
             "language": "eng",
             "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision. Sung in English (Wikipedia Language: English; Diggiloo). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48910,
+            "language": "eng",
+            "why": "The Cheeky Girls – Cheeky Song (Touch My Bum). Romanian twins; English-language 2002/03 novelty (Come and smile, don't be shy / Touch my bum, this is life). Genius / songlyrics. Venue Cheeky Song."
         },
         {
             "postId": 48931,
@@ -2432,9 +2457,34 @@
             "why": "Michael Learns to Rock – Paint My Love. English-language 1996/97 single (From my youngest years / Paint my love, you should paint my love). Dork / album Paint My Love. Not a Danish-language cut."
         },
         {
+            "postId": 51666,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Breaking My Heart. Danish band; English-language Nothing to Lose cut (There is no excuse my friend / For breaking my heart again). elyrics."
+        },
+        {
+            "postId": 51667,
+            "language": "eng",
+            "why": "Michael Learns to Rock – How Many Hours. English-language 1995 Played on Pepper track (Mothers giving birth to a little son / How many hours and how many days). bwgeci / Jascha Richter lyrics."
+        },
+        {
+            "postId": 51668,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Love Will Never Lie. English-language 1995 Played on Pepper cut (We will keep the faith between us / love will never lie). elyrics."
+        },
+        {
             "postId": 51669,
             "language": "eng",
             "why": "Michael Learns to Rock – Sleeping Child. English-language 1993 Colours single (The Milky Way upon the heavens / Oh, my sleeping child). Genius / KaraFun."
+        },
+        {
+            "postId": 51670,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Out of the Blue. English-language 1993 Colours single (You took me right out of the blue / Simply by showing that you love me too). Genius / elyrics."
+        },
+        {
+            "postId": 51671,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Crazy Dream. English-language 1991 debut-album cut (Why not forget your crazy dream about a love that can't exist). elyrics."
         },
         {
             "postId": 51672,
@@ -2461,6 +2511,11 @@
             "postId": 51680,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51686,
+            "language": "eng",
+            "why": "MIKA – Relax, Take It Easy. English-language 2006 Life in Cartoon Motion single (Relax, take it easy / For there is nothing that we can do). Genius / Songfacts."
         },
         {
             "postId": 51704,
@@ -2973,6 +3028,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52643,
+            "language": "eng",
+            "why": "Sash! feat. Tina Cousins – Mysterious Times. English-language 1998 eurodance single (These are mysterious times / Where we're moving around, dancing the rhythm of life). ilyrics Language: English."
+        },
+        {
             "postId": 52644,
             "language": "eng",
             "why": "Sator – I Wanna Go Home. English-language 1992 Headquake track (I've been away for 50 days now / I wanna go home). cover.info Language: English; songlyrics."
@@ -3426,6 +3486,16 @@
             "why": "Tove Lo feat. Hippie Sabotage – Stay High. Venue credit is the English Habits (Stay High) remix (I eat my dinner in my bathtub / Gotta stay high). Wikipedia / Genius. Not a Swedish-language cut."
         },
         {
+            "postId": 53349,
+            "language": "eng",
+            "why": "Trademark – Only Love. German vocal trio (MLTR lane); English-language 2000 title track (2 a.m. and the rain is falling / But only love can say, try again or walk away). elyrics; writers Dave Pickell / Ron Irving. Not a German-language cut. Same act as already-tagged Miss You Finally."
+        },
+        {
+            "postId": 53351,
+            "language": "eng",
+            "why": "Trademark – I'll Be There For You. English-language 1997 Another Time Another Place ballad (I'll be there for you to brighten up your eyes). maniadb lyrics; not the Rembrandts Friends theme. Same German trio as Miss You Finally / Only Love."
+        },
+        {
             "postId": 53354,
             "language": "nor",
             "why": "Sung in Norwegian. MusicBrainz work had no language."
@@ -3445,6 +3515,11 @@
             "postId": 53393,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53444,
+            "language": "eng",
+            "why": "Vengaboys – Kiss (When the Sun Don't Shine). Dutch eurodance; English-language 1999 single (I only kiss, kiss, kiss when the sun don't shine). songlyrics / muztext."
         },
         {
             "postId": 53455,
