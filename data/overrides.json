@@ -2,9 +2,39 @@
     "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file. Optional year/genres win when set; otherwise compose keeps resolver enrichment unless the override clears the performer or replaces a matched artist identity.",
     "overrides": [
         {
+            "postId": 47710,
+            "language": "eng",
+            "why": "911 – Private Number. English-language 1999 cover of Judy Clay & William Bell (Baby, baby, baby / Please let me have your number / You can have my private number). maniadb lyrics; There It Is."
+        },
+        {
+            "postId": 47739,
+            "language": "eng",
+            "why": "5 Seconds of Summer – Girls Talk Boys. Ghostbusters (2016) soundtrack cut; venue credits the English-language recording (Wikipedia)."
+        },
+        {
+            "postId": 47748,
+            "language": "eng",
+            "why": "98 Degrees – I Do (Cherish You). English-language 1999 single (All I am, all I'll be / I do cherish you for the rest of my life). Genius / Dork. Dump shortened the title to I Do; same 98° cut, not a different I Do."
+        },
+        {
             "postId": 47750,
             "from": "The Living Daylights",
             "why": "a-ha Bond theme; film was missing as from"
+        },
+        {
+            "postId": 47754,
+            "language": "eng",
+            "why": "A*Teens – Floorfiller. English-language single from Pop 'til You Drop! (Genius lyrics; MusicBrainz work had no language)."
+        },
+        {
+            "postId": 47756,
+            "language": "eng",
+            "why": "A1 – Caught in the Middle. British-Norwegian band; English-language 2002 Make It Good lead single (And now I'm caught in the middle / Even though I'm with someone new). Wikipedia; elyrics / LyricsFreak."
+        },
+        {
+            "postId": 47759,
+            "language": "swe",
+            "why": "ABBA – Ring Ring. Dump matched the Swedish recording Ring Ring (Bara du slog en signal), not the English, German, or Spanish cuts (Wikipedia; canonical match recording title)."
         },
         {
             "postId": 47775,
@@ -18,6 +48,19 @@
             "language": "eng"
         },
         {
+            "postId": 47811,
+            "language": "eng",
+            "why": "Ace of Base – Living in Danger. English-language 1994 single (Genius / album The Sign). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47840,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Afro-dite – Aqua Playa. Melodifestivalen 2003 (7th). Sung in English (eurovisionworld Language: English; lyrics I'm in a liquid mode)."
+        },
+        {
             "postId": 47841,
             "categories": [
                 "Melodifestivalen",
@@ -26,9 +69,50 @@
             "why": "Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 47843,
+            "language": "swe",
+            "why": "After Dark – La Dolce Vita. Melodifestivalen 2004; verses in Swedish with an Italian title/hook (eurovisionworld lyrics; sv.wikipedia). Not the Fellini film theme."
+        },
+        {
+            "postId": 47844,
+            "language": "eng",
+            "why": "Agnes – Right here right now. Idol 2005 winner's single Right Here, Right Now (My Heart Belongs to You); English lyrics (Genius / songlyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47845,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Agnes – Love Love Love. Melodifestivalen 2009 (8th). Sung in English (eurovisionworld Language: English; Wikipedia)."
+        },
+        {
+            "postId": 47848,
+            "language": "eng",
+            "why": "Agnes & Björn Skifs – When You Tell the World You're Mine. Official 2010 Crown Princess Victoria wedding song; English lyrics (Wikipedia). Not a Swedish-language cut."
+        },
+        {
             "postId": 47849,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47876,
+            "language": "eng",
+            "why": "Alcazar – This Is the World We Live In. English-language 2004 single interpolating The Dream Academy (Genius lyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47880,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Alcazar – Headlines. Melodifestivalen 2010 (Andra chansen). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47881,
+            "language": "eng",
+            "why": "Alesso feat. Roy English – Cool. English-language 2015 single (Trying to keep it cool / But I can't keep cool about it). Genius / official video lyrics."
         },
         {
             "postId": 47883,
@@ -49,9 +133,92 @@
             ]
         },
         {
+            "postId": 47944,
+            "language": "eng",
+            "why": "Amanda Fondell – All This Way. Idol 2011 winner's single; English lyrics (We made it through storms / we made it all this way)."
+        },
+        {
+            "postId": 47951,
+            "language": "eng",
+            "why": "Amy Diamond – What's in It for Me. English-language 2005 debut single (Genius lyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47955,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Amy Diamond – Thank You. Melodifestivalen 2008. Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47968,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Anders Ekborg – The Saviour. Melodifestivalen 2010. English verses; the Italian hook Il salvatore is the same kind of refrain as Lady Marmalade, not an Italian-language cut (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47969,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Andra generationen – Kebabpizza Slivovitza. Melodifestivalen 2008; Swedish lyrics (Vit duk, finporslin / Jag vill ha kebabpizza). eurovisionworld Language: Swedish."
+        },
+        {
+            "postId": 47970,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Andra generationen & Dogge Doggelito – Hippare hoppare. Melodifestivalen 2010. Verses in Swedish (Balkan reggaeton, det blir fest på en gång). One Serbo-Croatian shout (Ajde babo, igraj) is not a bilingual cut — same rule as Östen Maria's spoken Spanish line."
+        },
+        {
+            "postId": 47971,
+            "language": "mul",
+            "why": "Celine Dion & Andrea Bocelli – The Prayer. The catalog credits both singers, i.e. the bilingual English/Italian duet, not Dion's English-only or Bocelli's Italian-only Quest for Camelot solos (Wikipedia)."
+        },
+        {
+            "postId": 47972,
+            "language": "mul",
+            "why": "Sarah Brightman & Andrea Bocelli – Time to Say Goodbye. Venue title is the bilingual 1996 duet (English refrain + Italian verses), not Bocelli's all-Italian Con te partirò (Wikipedia; MusicBrainz work note)."
+        },
+        {
+            "postId": 47973,
+            "language": "mul",
+            "why": "Andreas Da Man – Balla Da-li. Cover of the dance track: English verses plus substantial Italian lines (tu balla con noi / questo va fuori…); not a Swedish Idol original (lyrics; Expressen)."
+        },
+        {
+            "postId": 47974,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Andreas Johnson – A Little Bit of Love. Melodifestivalen 2007 (2nd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47976,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Andreas Johnson – We Can Work It Out. Melodifestivalen 2010 (6th). English original, not the Beatles song (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47978,
+            "language": "eng",
+            "why": "Andreas Johnson – The Games We Play. English-language 1999 Liebling single (You say it's solid poetry / The games we play). MusicBrainz work had no language."
+        },
+        {
             "postId": 47979,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47980,
+            "language": "eng",
+            "why": "Andrés Esteche – Olé Olé. Melodifestivalen 2004 sung in English despite the Spanish title (eurovisionworld lyrics; Notpoolen språk Engelska)."
         },
         {
             "postId": 47988,
@@ -71,12 +238,18 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. Sung in English (Sweden's 2010 ESC entry; Wikipedia)."
         },
         {
             "postId": 47995,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47996,
+            "language": "swe",
+            "why": "Anna Book – ABC. Melodifestivalen 1986 school-themed schlager sung in Swedish, not the Jackson 5 song (eurovisionworld lyrics; sv.wikipedia ABC (Anna Book-låt))."
         },
         {
             "postId": 47998,
@@ -94,9 +267,29 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 48004,
+            "language": "eng",
+            "why": "Annie – Chewing Gum. Norwegian singer; the Anniemal single is English (Hey Annie, well look at you / You think you're chocolate when you're chewing gum). Wikipedia / Genius. Not the Simlish Sims 2 cut."
+        },
+        {
+            "postId": 48018,
+            "language": "eng",
+            "why": "Aqua – Cartoon Heroes. English-language 2000 single from Aquarius (lyricsdepot / Lyreka: We are the Cartoon Heroes / We are the ones who're gonna last forever). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48025,
+            "language": "fas",
+            "why": "Arash – BoroBoro. Persian-language 2004 hit (روزی بود عاشق تو بودم / برو برو دلم تورو نمیخواد), not the later German Ich bin weg (Boro Boro) (official video / Radio Javan lyrics)."
+        },
+        {
             "postId": 48037,
             "year": 2006,
             "why": "Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings."
+        },
+        {
+            "postId": 48038,
+            "language": "nor",
+            "why": "Are og Odin – Klapp klapp. Sung in Norwegian (Northern dialect: No e d sommer bare klapp klapp i hendern). Rockipedia / lyrics."
         },
         {
             "postId": 48057,
@@ -114,9 +307,25 @@
             "why": "Arvingarna – Eloise; Melodifestivalen/Eurovision 1993. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 48070,
+            "language": "eng",
+            "why": "ATC – Around the World (La La La La La). English-language cover of Ruki Vverh! Pesenka (The kisses of the sun / It goes around the world). Wikipedia; not the Russian original."
+        },
+        {
+            "postId": 48074,
+            "language": "eng",
+            "why": "Atomic Kitten – The Tide Is High. English-language 2002 Blondie/Paragons cover (The tide is high but I'm holding on / I'm gonna be your number one). lyricdown; venue Tide Is High."
+        },
+        {
+            "postId": 48077,
+            "language": "eng",
+            "why": "Atomic Kitten – Whole Again. English-language 2001 UK #1 (If you see me walking down the street / You can make me whole again). Songfacts."
+        },
+        {
             "postId": 48102,
             "year": 2002,
-            "why": "Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go)."
+            "language": "eng",
+            "why": "Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go). Sung in English."
         },
         {
             "postId": 48108,
@@ -127,10 +336,60 @@
             "why": "Confirmed outside the dump: My Story (2004) album track; Spotify/generasia. Dump lists it under 浜崎あゆみ with a non-matching combined_lookup romanization, so proposal matching cannot reach it."
         },
         {
+            "postId": 48132,
+            "language": "eng",
+            "why": "Backstreet Boys – Boys Will Be Boys. English-language 1996 international debut-album cut (You've got something so incredible in my eyes / Boys will be boys). Genius / Dork. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48134,
+            "language": "eng",
+            "why": "Backstreet Boys – Everytime I Close My Eyes. English-language 1996 international debut-album cut (Every time I close my eyes I see your face). Genius. MusicBrainz work had no language."
+        },
+        {
             "postId": 48136,
             "title": "Hey, Mr. DJ (Keep Playin' This Song)",
             "year": 1997,
             "why": "Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11."
+        },
+        {
+            "postId": 48139,
+            "language": "eng",
+            "why": "Backstreet Boys – I Want to Be With You. English-language 1996 international debut-album cut I Wanna Be With You (I wanna be with you / It's crazy but it's true). Vagalume / BSB fandom. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48142,
+            "language": "eng",
+            "why": "Backstreet Boys – Nobody But You. English-language 1996 international debut-album cut (Ain't nobody else but you / There is nobody who can make me cry). Fan lyric page. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48143,
+            "language": "eng",
+            "why": "Backstreet Boys – Quit Playing Games With My Heart. English-language 1996/97 hit (Even in my heart I see / You're not bein' true to me / Quit playin' games with my heart). lyricdown / muztext. Not a Spanish-language cut."
+        },
+        {
+            "postId": 48145,
+            "language": "eng",
+            "why": "Backstreet Boys – That's the Way I Like It. English-language 1997 Backstreet's Back original (Somebody told me that you're not my kind / That's the way I like it), not the KC and the Sunshine Band song of the same name. Genius / BSB fandom."
+        },
+        {
+            "postId": 48147,
+            "language": "eng",
+            "why": "Backstreet Boys – We've Got It Goin' On. English-language 1995 debut single (Everybody groove to the music / Jam on 'cause Backstreet's got it). Genius / AZLyrics. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48153,
+            "language": "eng",
+            "why": "Backstreet Boys – Let's Have a Party. English-language 1996 international debut-album cut (Let's have a party / Everybody, throw your hands up in the air). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48154,
+            "language": "eng",
+            "why": "Backstreet Boys – Like a Child. English-language 1997 Backstreet's Back cut (Then I might break down and cry / Just like a child). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48155,
+            "language": "eng",
+            "why": "Backstreet Boys – That's What She Said. English-language 1997 Backstreet's Back cut (Always forever, all things she said / Because that's what she said). Genius. MusicBrainz work had no language."
         },
         {
             "postId": 48165,
@@ -144,7 +403,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen. Sung in English (eurovisionworld Language: English; Notpoolen språk Engelska)."
         },
         {
             "postId": 48173,
@@ -168,10 +428,25 @@
             "why": "Donna Summer & Barbra Streisand. Year from Wikipedia (1979)."
         },
         {
+            "postId": 48221,
+            "language": "eng",
+            "why": "Basshunter – Every Morning. English-language 2009 Bass Generation single (Every morning, she makes me a cup of coffee), not a Swedish rewrite of Boten Anna (Genius; muzikum Language: English)."
+        },
+        {
+            "postId": 48222,
+            "language": "eng",
+            "why": "Basshunter – Now You're Gone. Venue filed the English 2008 rewrite (Now you're gone / I realize my love for you was strong), not the Swedish original Boten Anna (Genius; Wikipedia)."
+        },
+        {
             "postId": 48245,
             "title": "You're Going to Lose That Girl",
             "year": 1965,
             "why": "Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz."
+        },
+        {
+            "postId": 48294,
+            "language": "nor",
+            "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
         },
         {
             "postId": 48375,
@@ -179,11 +454,6 @@
             "categories": [
                 "Christmas"
             ]
-        },
-        {
-            "postId": 48294,
-            "language": "nor",
-            "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
         },
         {
             "postId": 48378,
@@ -225,9 +495,24 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 48392,
+            "language": "eng",
+            "why": "Black Jack – Corrine, Corrina. Swedish dansband cover of the English-language traditional (Corrina, Corrina / Girl where you been so long); SMDB credits trad. English lyrics, not a Swedish rewrite."
+        },
+        {
             "postId": 48413,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 48435,
+            "language": "eng",
+            "why": "Blue Lagoon – Break My Stride. English-language 2004 dance cover of Matthew Wilder (Ain't nothin' gonna break my stride). Venue credits Blue Lagoon, not a non-English cut (elyrics / PetitLyrics)."
+        },
+        {
+            "postId": 48436,
+            "language": "eng",
+            "why": "Blue Lagoon – Now That We Found Love. English-language 2005 Club Lagoon dance cover of the O'Jays/Third World song (Now that we found love what are we gonna do with it). Gaana Language: English; azlyrics.biz / elyrics."
         },
         {
             "postId": 48486,
@@ -238,6 +523,27 @@
             "postId": 48521,
             "year": 1964,
             "why": "Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962."
+        },
+        {
+            "postId": 48523,
+            "language": "eng",
+            "why": "BWO – Open Door. English-language 2005 Prototype single (Heaven's got an open door tonight). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48525,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "BWO – Lay Your Love on Me. Melodifestivalen 2008 (3rd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 48526,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "BWO – Temple of Love. Melodifestivalen 2006 (2nd). English-language single from Halcyon Days (Wikipedia)."
         },
         {
             "postId": 48545,
@@ -261,6 +567,21 @@
             ]
         },
         {
+            "postId": 48558,
+            "language": "eng",
+            "why": "Bosson – You. English-language 2006 Svensktoppen single (You, you make all my dreams come true). NostalgiListan / album Future's Gone Tomorrow."
+        },
+        {
+            "postId": 48559,
+            "language": "eng",
+            "why": "Bosson – Efharisto. Melodifestivalen 2004; English lyrics with the Greek word for thank you as the hook (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 48560,
+            "language": "eng",
+            "why": "Bosson – We Live. English-language 1999 single from The Right Time (We live and we die / I don't wanna be an ordinary man). eLyrics / Wikipedia."
+        },
+        {
             "postId": 48592,
             "year": 2002,
             "language": "swe",
@@ -271,7 +592,8 @@
         },
         {
             "postId": 48654,
-            "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent. Broadman Hymnal files the English hymn Face to Face with Christ, My Savior (Carrie E. Breck, 1898; Hymnary.org Language: English).",
             "artist": "",
             "sortAs": "Hymn",
             "title": "Face to Face",
@@ -291,13 +613,23 @@
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
             "year": 2016,
-            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
+            "language": "kor",
+            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick. Korean original 피 땀 눈물 from WINGS (2016), the international hit under this English title — not the later Japanese Chi, Ase, Namida (Wikipedia)."
+        },
+        {
+            "postId": 48717,
+            "language": "eng",
+            "why": "Bubbles – Hit the Floor. English-language 2003 Bless single (Tonight we set the groove / We're gonna hit the floor). Not a Swedish-language Bubbles cut such as Regnbågens Barn (songlyrics; Bubblegum Dancer)."
         },
         {
             "postId": 48718,
             "title": "T.K.O. (Knock You Out)",
             "year": 2003,
-            "why": "Bubbles; MusicBrainz/Discogs earliest dated releases 2003."
+            "why": "Bubbles – T.K.O. (Knock You Out). Melodifestivalen 2003 (10th). MusicBrainz/Discogs earliest dated releases 2003. Sung in English (Knock you out, down to the floor / This beat is gonna take you to a T.K.O).",
+            "language": "eng",
+            "categories": [
+                "Melodifestivalen"
+            ]
         },
         {
             "postId": 48720,
@@ -307,11 +639,47 @@
             "why": "Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision."
         },
         {
+            "postId": 48735,
+            "language": "eng",
+            "why": "Dick Van Dyke – Put On a Happy Face from Bye Bye Birdie. Venue credits the English-language Broadway/film performer."
+        },
+        {
+            "postId": 48737,
+            "language": "eng",
+            "why": "Liza Minnelli – Money, Money from Cabaret. Venue credits the English-language film performer."
+        },
+        {
+            "postId": 48738,
+            "language": "eng",
+            "why": "Liza Minnelli – Cabaret. Venue credits the English-language film performer."
+        },
+        {
+            "postId": 48739,
+            "language": "swe",
+            "why": "Karl-Erik (Cacka) Israelsson – Gamle Svarten. Swedish-language 1954 recording of Ole Faithful (Sven-Olof Sandberg text), not the English original (sv.wikipedia Gamle Svarten; textarkivet lyrics)."
+        },
+        {
             "postId": 48753,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen. Sung in English (YouTube/Mello performance; Bubblegum Dancer lyrics)."
+        },
+        {
+            "postId": 48755,
+            "language": "eng",
+            "why": "The Cardigans – My Favourite Game. English-language 1998 Gran Turismo single (I'm losing my favourite game). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 48756,
+            "language": "eng",
+            "why": "The Cardigans – Erase/Rewind. English-language 1999 Gran Turismo single (Erase and rewind / Cause I'll be changing my mind). Wikipedia / Genius."
+        },
+        {
+            "postId": 48758,
+            "language": "eng",
+            "why": "The Cardigans – Lovefool. English-language 1996 First Band on the Moon single (Love me love me say that you love me). Wikipedia / Genius. Not a Swedish-language cut."
         },
         {
             "postId": 48762,
@@ -357,7 +725,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen. Sung in English (Melodifestivalen 2005 jazz/soul entry)."
         },
         {
             "postId": 48810,
@@ -386,6 +755,11 @@
             ]
         },
         {
+            "postId": 48868,
+            "language": "eng",
+            "why": "Nino Rota – What Is a Youth from Zeffirelli's Romeo and Juliet. Eugene Walter's English lyrics as sung in the film by Glen Weston (Wikipedia soundtrack; SecondHandSongs Language English). Not an instrumental love-theme cut."
+        },
+        {
             "postId": 48893,
             "categories": [
                 "Melodifestivalen",
@@ -407,14 +781,51 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision. Sung in English (Wikipedia Language: English; Diggiloo). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48910,
+            "language": "eng",
+            "why": "The Cheeky Girls – Cheeky Song (Touch My Bum). Romanian twins; English-language 2002/03 novelty (Come and smile, don't be shy / Touch my bum, this is life). Genius / songlyrics. Venue Cheeky Song."
+        },
+        {
+            "postId": 48914,
+            "language": "eng",
+            "why": "Cher – The Shoop Shoop Song. English-language 1990/91 Betty Everett cover (Does he love me, I want to know / It's in his kiss). Wikipedia / cher-lyrics; Love Hurts / Mermaids."
+        },
+        {
+            "postId": 48917,
+            "language": "eng",
+            "why": "Cher – Body to Body. English-language Living Proof cut Body to Body, Heart to Heart (resolver full title). MusicBrainz work had no language; credited Cher pop recording, not a non-English cut."
+        },
+        {
+            "postId": 48923,
+            "language": "eng",
+            "why": "Cher – The Power. English-language 1998 Believe album track (A king is crying from his throne / The power touches me, the power sets us free), not Snap! The Power. MLDb / songlyrics."
+        },
+        {
+            "postId": 48924,
+            "language": "eng",
+            "why": "Cher – Runaway. English-language 1998 Believe album track. MusicBrainz work had no language; credited Cher recording on Believe, not a non-English cut."
+        },
+        {
+            "postId": 48927,
+            "language": "eng",
+            "why": "Cher – Song for the Lonely. English-language 2002 Living Proof single (This is a song for the lonely / Can you hear me tonight). Genius."
+        },
+        {
+            "postId": 48931,
+            "language": "eng",
+            "why": "Linda Eder – Anthem from Chess. English-language musical number (venue credits Eder, not a Swedish Chess cast)."
         },
         {
             "postId": 48942,
             "categories": [
                 "Irish traditional"
             ],
-            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
+            "language": "eng",
+            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. Sung in English (The Chieftains / Corrs Irish traditional)."
         },
         {
             "postId": 48946,
@@ -432,6 +843,11 @@
             ]
         },
         {
+            "postId": 48989,
+            "language": "eng",
+            "why": "Christian Walz – Wonderchild. English-language 2004 single from Paint By Numbers (Genius: Let me love you, let me be around / Ooh, wonderchild)."
+        },
+        {
             "postId": 48993,
             "title": "Dirrty",
             "year": 2002,
@@ -441,6 +857,11 @@
             "postId": 48996,
             "from": "Mulan",
             "why": "Christina Aguilera Reflection from Mulan; from was missing"
+        },
+        {
+            "postId": 49004,
+            "language": "eng",
+            "why": "Christina Aguilera, Lil' Kim, Mýa, P!nk – Lady Marmalade (Moulin Rouge). English verses; the French line is the same hook as the Labelle original, not a French-language cut (Genius)."
         },
         {
             "postId": 49013,
@@ -464,10 +885,76 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 49099,
+            "language": "eng",
+            "why": "Corona – The Rhythm of the Night (venue The Rythm Of The Night). English-language 1993 eurodance hit (This is the rhythm of the night / This is the rhythm of my life). Songfacts / Genius."
+        },
+        {
             "postId": 49158,
             "year": 1968,
             "title": "Walk on the Water",
             "why": "CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia)."
+        },
+        {
+            "postId": 49174,
+            "language": "eng",
+            "why": "The Creeps – Ooh I Like It. English-language 1990 Blue Tomato hit (Everything is cool and mellow / Ooh! I like it). songlyrics; Robert Jelinek lyrics."
+        },
+        {
+            "postId": 49188,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Crucified Barbara – Heaven or Hell. Melodifestivalen 2010 (Andra chansen). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 49195,
+            "language": "eng",
+            "why": "Culture Beat – Take Me Away. English-language 1996 eurodance single from Inside Out (Take me to a place where our love must be alone). German act, English lyrics; no German-language cut (Wikipedia; tekstowo; EIL: sung in English)."
+        },
+        {
+            "postId": 49207,
+            "language": "eng",
+            "why": "D'Sound – Ain't Giving Up. Norwegian acid-jazz trio; English-language 1998 Beauty Is a Blessing cut (Mother, mother where's the nice and warm / Ain't giving up just sleeping in). ilyrics Language: English; Rockipedia."
+        },
+        {
+            "postId": 49208,
+            "language": "eng",
+            "why": "Da Buzz – Dangerous. English-language 2004 title track (I can take it, I can make it, I'm dangerous). eLyrics / album Dangerous – The Album. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49210,
+            "language": "swe",
+            "why": "Dag Vag – Popitop. Swedish-language cover of Thore Skogman's song (Popoppitop, det är toppen i år). Venue credits Dag Vag, not Skogman (dagvag.se lyrics)."
+        },
+        {
+            "postId": 49220,
+            "language": "eng",
+            "why": "Daniel Lindström – Coming True. Idol 2004 winner's single; English lyrics (Genius: Tonight must be a magic night / But dreams are coming true)."
+        },
+        {
+            "postId": 49223,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Danny Saucedo – In the Club. Melodifestivalen 2011 (2nd). Sung in English (eurovisionworld Language: English; Wikipedia)."
+        },
+        {
+            "postId": 49228,
+            "language": "eng",
+            "why": "Darin – Step Up. English-language 2005 debut single (Genius: Girls, step up to the party). Duplicate catalog row."
+        },
+        {
+            "postId": 49230,
+            "language": "eng",
+            "why": "Darin – Nobody Knows. English-language 2012 Exit lead single (What's love, nobody knows). Wikipedia / eLyrics. Not a Swedish-language Darin cut."
+        },
+        {
+            "postId": 49233,
+            "language": "eng",
+            "why": "Darin – Step Up. English-language 2005 debut single (Genius: Girls, step up to the party). Duplicate catalog row."
         },
         {
             "postId": 49236,
@@ -475,6 +962,11 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49258,
+            "language": "swe",
+            "why": "David Shutrick – Container. English title, Swedish lyrics (I en blå container fann jag dej) from the 1992 album Finland (Genius/songtexte; sv.wikipedia). MusicBrainz work had no language."
         },
         {
             "postId": 49267,
@@ -487,6 +979,19 @@
             "postId": 49348,
             "year": 2002,
             "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+        },
+        {
+            "postId": 49364,
+            "language": "eng",
+            "why": "Dilba – I'm Sorry. English-language 1996 debut single (I painted a picture of you / I'm sorry, this illusion has caused you a lot of pain). sv.wikipedia / songlyrics."
+        },
+        {
+            "postId": 49365,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Dima Bilan – Believe. Eurovision 2008 winner (Russia). Sung in English (Wikipedia Language: English)."
         },
         {
             "postId": 49367,
@@ -504,6 +1009,26 @@
             "year": 1964,
             "language": "eng",
             "why": "Dionne Warwick – You'll Never Get to Heaven (If You Break My Heart). Venue filed the English title; matcher had picked the German-language MB recording. Force the English studio cut (1964)."
+        },
+        {
+            "postId": 49411,
+            "language": "eng",
+            "why": "Louis Prima – I Wan'na Be Like You from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub."
+        },
+        {
+            "postId": 49413,
+            "language": "eng",
+            "why": "Phil Harris – The Bare Necessities from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub."
+        },
+        {
+            "postId": 49415,
+            "language": "eng",
+            "why": "Angela Lansbury & Jerry Orbach – Be Our Guest from Beauty and the Beast. Venue credits the English-language film performers, not the Swedish dub."
+        },
+        {
+            "postId": 49418,
+            "language": "eng",
+            "why": "Julie Andrews – Supercalifragilisticexpialidocious from Mary Poppins. Venue credits the English-language film performer, not the Swedish dub."
         },
         {
             "postId": 49420,
@@ -524,9 +1049,62 @@
             "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
         },
         {
+            "postId": 49529,
+            "language": "eng",
+            "why": "Dreamhouse – Sha La La. Venue Dream House / Shalala is the English 1997 cover of The Walkers (There's a boy in my mind / My heart goes shalalala), not a Swedish-language version (Wikipedia; songlyrics)."
+        },
+        {
             "postId": 49536,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49545,
+            "language": "eng",
+            "why": "Duffy – Delayed Devotion. English-language 2008 Rockferry cut (Your words come much too late / For your delayed devotion). Genius. Welsh singer; not a Welsh-language cut."
+        },
+        {
+            "postId": 49546,
+            "language": "eng",
+            "why": "Duffy – Distant Dreamer. English-language 2008 Rockferry closer. MusicBrainz work had no language; same English-language album as Mercy / Warwick Avenue."
+        },
+        {
+            "postId": 49550,
+            "language": "eng",
+            "why": "Duffy – Serious. English-language 2008 Rockferry track (Bernard Butler session; Duffy: it was serious fun). Official Duffy News / album lyrics."
+        },
+        {
+            "postId": 49554,
+            "language": "eng",
+            "why": "Duffy – Syrup and Honey. English-language 2008 Rockferry cut. MusicBrainz work had no language; same English-language album as Mercy / Warwick Avenue."
+        },
+        {
+            "postId": 49555,
+            "language": "eng",
+            "why": "Duffy – I'm Scared. English-language 2008 Rockferry cut about loss (Duffy News: the cold silence… when somebody suddenly disappears). Not a Welsh-language cut."
+        },
+        {
+            "postId": 49571,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "E-Type feat. Nana Hedin – Paradise. Melodifestivalen 2004 (5th). Sung in English (eurovisionworld Language: English; lyrics It must be like paradise)."
+        },
+        {
+            "postId": 49573,
+            "language": "eng",
+            "why": "Eagle-Eye Cherry – Permanent Tears. English-language Desireless (1997) album track (On the day of her arrival / A girl with permanent tears). NotPoolen språk: Engelska; lyricsify."
+        },
+        {
+            "postId": 49575,
+            "language": "eng",
+            "why": "Eagle-Eye Cherry feat. Neneh Cherry – Long Way Around. English-language 2000 Living in the Present Future duet (People will always take the long way around)."
+        },
+        {
+            "postId": 49577,
+            "language": "eng",
+            "why": "Eagle-Eye Cherry – Feels So Right. English-language Living in the Present Future / Present Future cut (Too shy to follow through / Yes I do love you / Feels so right). lyricdown / lyricstrue."
         },
         {
             "postId": 49604,
@@ -534,11 +1112,21 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 49605,
+            "language": "swe",
+            "why": "Ebba Grön – Staten och Kapitalet. Swedish punk cover of Blå Tåget's Den ena handen vet vad den andra gör (sv.wikipedia; lyrics)."
+        },
+        {
             "postId": 49638,
             "why": "Credited Christmas song (Ed Sheeran, Elton John – Merry Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49648,
+            "language": "eng",
+            "why": "Eddy Grant – Electric Avenue. English-language 1982 single (Now in the street there is violence / We gonna rock down to Electric Avenue). Genius. MusicBrainz work had no language."
         },
         {
             "postId": 49655,
@@ -556,9 +1144,32 @@
             "why": "Édith Piaf – Non, je ne regrette rien. Venue filed No regrets (french): the French original, not the English translation. Matcher linked the recording from Édith Piaf Sings in English (work language eng, title No Regrets, year 1987). Same case as keeping Life in Technicolor ii / Oh, Pretty Woman instead of the other version's name. Year from Wikipedia (1960)."
         },
         {
+            "postId": 49659,
+            "language": "eng",
+            "why": "Edward Maya & Vika Jigulina – Stereo Love. English-language 2009 hit (When you gonna stop breaking my heart). Genius / Wikipedia. Not a Romanian-language cut."
+        },
+        {
             "postId": 49662,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49663,
+            "language": "eng",
+            "why": "Electric Boys – All Lips 'n' Hips. English-language 1989/1990 Funk-O-Metal Carpet Ride single (She's all lips and hips). lyricstranslate / eLyrics."
+        },
+        {
+            "postId": 49667,
+            "language": "eng",
+            "why": "Elin Lanto – I Won't Cry. English-language 2004 debut single (Genius: I won't cry / I'm telling you that I won't cry). MusicBrainz work had no language."
+        },
+        {
+            "postId": 49668,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Elin Lanto – Doctor Doctor. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics Doctor, doctor, give me medication)."
         },
         {
             "postId": 49669,
@@ -581,6 +1192,111 @@
             "why": "Elton John & Dua Lipa – Cold Heart (Pnau remix). Resolver dated 2024; single released 13 Aug 2021 (Wikipedia)."
         },
         {
+            "postId": 49724,
+            "language": "eng",
+            "why": "Elvis Presley – Return to Sender. English-language 1962 hit (Return to sender / Address unknown / No such number, no such zone). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49725,
+            "language": "eng",
+            "why": "Elvis Presley – It's Now or Never. English-language 1960 hit using the 'O Sole Mio melody (It's now or never / Come hold me tight); Aaron Schroeder / Wally Gold lyrics, not the Neapolitan original. Wikipedia / SecondHandSongs Language: English."
+        },
+        {
+            "postId": 49726,
+            "language": "eng",
+            "why": "Elvis Presley – Jailhouse Rock. English-language 1957 Leiber/Stoller hit (The warden threw a party in the county jail). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49727,
+            "language": "eng",
+            "why": "Elvis Presley – Suspicious Minds. English-language 1969 hit (We're caught in a trap / I can't walk out). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49729,
+            "language": "eng",
+            "why": "Elvis Presley – All Shook Up. English-language 1957 hit (A well I bless my soul / What's wrong with me / I'm all shook up). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49730,
+            "language": "eng",
+            "why": "Elvis Presley – Hound Dog. English-language 1956 Leiber/Stoller hit (You ain't nothin' but a hound dog / Cryin' all the time). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49731,
+            "language": "eng",
+            "why": "Elvis Presley – Heartbreak Hotel. English-language 1956 debut RCA hit (Well, since my baby left me / I found a new place to dwell). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49735,
+            "language": "eng",
+            "why": "Elvis Presley – Let Me Be Your Teddy Bear. English-language 1957 hit (Baby let me be your lovin' teddy bear). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49736,
+            "language": "eng",
+            "why": "Elvis Presley – Surrender. English-language 1961 Doc Pomus / Mort Shuman adaptation of Torna a Surriento (When we kiss my heart's on fire / So my darling please surrender), not the Neapolitan original. Wikipedia; elvispresley.com.au lyrics."
+        },
+        {
+            "postId": 49737,
+            "language": "eng",
+            "why": "Elvis Presley – Don't. English-language 1958 Leiber/Stoller ballad (Don't, don't, that's what you say / Each time that I hold you this way), not Don't Leave Me Now. Genius / Wikipedia."
+        },
+        {
+            "postId": 49738,
+            "language": "eng",
+            "why": "Elvis Presley – Too Much. English-language 1957 hit (Well you're runnin' and a-hidin' / Honey what do you say). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49739,
+            "language": "eng",
+            "why": "Elvis Presley – Guitar Man. English-language 1967 Jerry Reed cover (Well I quit my job down at the car wash / I gotta be a guitar man). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49741,
+            "language": "eng",
+            "why": "Elvis Presley – Stuck on You. English-language 1960 first post-army single (You can shake an apple off an apple tree / But you'll never shake me). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49743,
+            "language": "eng",
+            "why": "Elvis Presley – Crying in the Chapel. English-language 1965 gospel hit (You saw me crying in the chapel / The tears I shed were tears of joy). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49745,
+            "language": "eng",
+            "why": "Elvis Presley – She's Not You. English-language 1962 hit (She's not you / How could she be). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49750,
+            "language": "eng",
+            "why": "Elvis Presley – I Want You, I Need You, I Love You. English-language 1956 hit (Hold me close, hold me tight / I want you, I need you, I love you). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49751,
+            "language": "eng",
+            "why": "Elvis Presley – Little Sister. English-language 1961 hit (Little sister, don't you / Kiss me once or twice and then you say it's time to go). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49752,
+            "language": "eng",
+            "why": "Elvis Presley – Love Me Tender. English-language 1956 film title song (Love me tender, love me sweet / Never let me go). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49753,
+            "language": "eng",
+            "why": "Elvis Presley – The Impossible Dream. English-language live cut of the Man of La Mancha standard (To dream the impossible dream / To fight the unbeatable foe); Joe Darion lyrics, not a Spanish El sueño imposible cut. Wikipedia; elvis.net lyrics; Madison Square Garden 1972."
+        },
+        {
+            "postId": 49755,
+            "language": "eng",
+            "why": "Elvis Presley – Are You Lonesome Tonight. English-language 1960 hit (Are you lonesome tonight / Do you miss me tonight). Wikipedia. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49757,
+            "language": "eng",
+            "why": "Elvis Presley – Don't Be Cruel. English-language 1956 Otis Blackwell hit (You know I can be found / Sitting home all alone). Wikipedia. MusicBrainz work had no language."
+        },
+        {
             "postId": 49759,
             "why": "Credited Christmas song (Elvis Presley – Blue Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -593,14 +1309,16 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision. Sung in English (Melodifestivalen/Eurovision 2009 pop entry)."
         },
         {
             "postId": 49773,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen. Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 49781,
@@ -616,10 +1334,66 @@
         },
         {
             "postId": 49809,
-            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49810,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Les Bicyclettes de Belsize. English-language 1968 single despite the French title; Mireille Mathieu recorded a separate French version (Wikipedia; Genius lyrics)."
+        },
+        {
+            "postId": 49812,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Funny Familiar Forgotten Feelings. English-language 1967 Mickey Newbury cover (Last night quietly she walked through my mind / Funny, familiar, forgotten feelings). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49814,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Am I Easy to Forget. English-language 1967 cover of Am I That Easy to Forget (They say you've found somebody new / Am I that easy to forget). lyricdown. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49815,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – When I Say Goodnight. English-language 1968 A Man Without Love cut (When I say goodnight in your little room / That's the time I love you best of all). songlyrics / lyrhub; Gordon Mills."
+        },
+        {
+            "postId": 49816,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Mona Lisa. English-language cover of the Nat King Cole / Livingston–Evans standard (Mona Lisa, Mona Lisa, men have named you), not an Italian-language cut. Yours album match."
+        },
+        {
+            "postId": 49817,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Ten Guitars. English-language 1967 Gordon Mills song (I have a band of men and all they do is play for me / Dance, dance, dance to my ten guitars). Genius / KaraFun."
+        },
+        {
+            "postId": 49818,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Up Up and Away. English-language Jimmy Webb cover (Would you like to ride in my beautiful balloon). A Man Without Love; not a non-English cut."
+        },
+        {
+            "postId": 49819,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Misty Blue. English-language 1967 Bob Montgomery cover (Just the thought of you turns my whole world a misty blue). lyricdown. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49820,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – There Goes My Everything. English-language 1967 Dallas Frazier cover (There goes my reason for living / There goes my everything). lyrhub. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49824,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – The Way It Used to Be. English-language 1969 Cook/Greenaway adaptation of Italian Melodia (Lonely table just for one / So play the song the way it used to be), not the Isabella Iannetti original. Wikipedia; songlyrics."
+        },
+        {
+            "postId": 49825,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Help Me Make It Through the Night. English-language Kris Kristofferson cover (Take the ribbon from your hair / Help me make it through the night). Genius. MusicBrainz work had no language."
         },
         {
             "postId": 49832,
@@ -653,6 +1427,14 @@
             "why": "Eric Clapton – Swing Low, Sweet Chariot. Traditional spiritual/hymn with a credited rendition; mark categories Hymn."
         },
         {
+            "postId": 49854,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Eric Saade – Manboy. Melodifestivalen 2010 (3rd). Sung in English (eurovisionworld Language: English; Wikipedia)."
+        },
+        {
             "postId": 49855,
             "categories": [
                 "Melodifestivalen",
@@ -666,14 +1448,29 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 49857,
+            "language": "eng",
+            "why": "Erik Grönwall – Higher. Idol 2009 winner's single; Wikipedia: Swedish English-language single. MusicBrainz work had no language."
+        },
+        {
             "postId": 49858,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 49859,
+            "language": "eng",
+            "why": "Erik Segerstedt – I Can't Say I'm Sorry. English-language 2007 single from A Different Shade (Genius/songlyrics: Hey baby tell me how do you do / I can't say I'm sorry)."
+        },
+        {
             "postId": 49861,
             "language": "ita",
             "why": "Sung in Italian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49868,
+            "language": "eng",
+            "why": "Espen Lind – Unloved. Norwegian singer; English-language 2004/2005 April single and VG-lista #1 (I bet you don't know how it feels / what it's like to feel unloved). Genius / songlyrics."
         },
         {
             "postId": 49897,
@@ -705,6 +1502,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50000,
+            "language": "eng",
+            "why": "Five – Everybody Get Up. English-language 1998 debut-album single (Everybody get up / 1, 2, 3, 4, Five will make you get down now). Genius / official video lyrics."
+        },
+        {
             "postId": 50082,
             "year": 1978,
             "why": "Frank Marino & Mahogany Rush Live includes I'm a King Bee. Year from Discogs Live album (1978)."
@@ -714,10 +1516,19 @@
             "artist": "",
             "sortAs": "Irish traditional",
             "title": "Danny Boy",
-            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting.",
+            "language": "eng",
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting. Sung in English (Weatherly's lyrics to Londonderry Air).",
             "categories": [
                 "Irish traditional"
             ]
+        },
+        {
+            "postId": 50117,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Fredrik Kempe – Finally. Melodifestivalen 2004. Sung in English (eurovisionworld Language: English; lyrics Finally I know what true love means to me)."
         },
         {
             "postId": 50118,
@@ -743,7 +1554,8 @@
             "postId": 50122,
             "title": "The One That You Need",
             "year": 2002,
-            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen.",
+            "language": "eng",
+            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen. Venue filed the English Melodifestivalen title, not the Swedish version Aldrig igen (sv.wikipedia; eurovisionworld Language: English).",
             "categories": [
                 "Melodifestivalen"
             ]
@@ -774,7 +1586,8 @@
         },
         {
             "postId": 50184,
-            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
@@ -790,6 +1603,51 @@
             "postId": 50211,
             "language": "ita",
             "why": "Sung in Italian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50237,
+            "language": "eng",
+            "why": "Goo Goo Dolls – All Eyes on Me. English-language 1998 Dizzy Up the Girl album track. MusicBrainz work had no language; credited GGD recording."
+        },
+        {
+            "postId": 50239,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Black Balloon. English-language 1999 Dizzy Up the Girl single (Baby's black balloon makes her fly). Wikipedia / Dork lyrics."
+        },
+        {
+            "postId": 50240,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Broadway. English-language 2000 Dizzy Up the Girl single (Broadway is dark tonight / A little bit weaker than you used to be). Dork / official album lyrics."
+        },
+        {
+            "postId": 50243,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Give a Little Bit. English-language 2004 Supertramp cover on Let Love In (Give a little bit of your love to me). Wikipedia discography."
+        },
+        {
+            "postId": 50245,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Sympathy. English-language 2002/03 Gutterflower single. MusicBrainz work had no language; credited GGD recording."
+        },
+        {
+            "postId": 50247,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Before It's Too Late. English-language 2007 Transformers theme (I wandered through fiction to look for the truth). Wikipedia; Sam and Mikaela's Theme."
+        },
+        {
+            "postId": 50248,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Big Machine. English-language 2002 Gutterflower single. MusicBrainz work had no language; credited GGD recording."
+        },
+        {
+            "postId": 50253,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Dizzy. English-language 1998/99 Dizzy Up the Girl single. MusicBrainz work had no language; credited GGD recording."
+        },
+        {
+            "postId": 50256,
+            "language": "eng",
+            "why": "Goo Goo Dolls – Real. English-language 2008 Something for the Rest of Us-era single. MusicBrainz work had no language; credited GGD recording."
         },
         {
             "postId": 50291,
@@ -817,14 +1675,53 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50320,
+            "language": "eng",
+            "why": "Günther & The Sunshine Girls – Teeny Weeny String Bikini. English-language 2004 novelty (This is your night / Ooh la-la, teeny weeny string bikini). Genius / muzikum Language: English."
+        },
+        {
+            "postId": 50330,
+            "language": "eng",
+            "why": "Lin-Manuel Miranda – Alexander Hamilton from Hamilton. English-language original-cast number."
+        },
+        {
+            "postId": 50336,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Hanna & Lina (Hedlund) – Big Time Party. Melodifestivalen 2002 (9th). Sung in English (Welcome to a party where everyone's invited / This is a big time, ramalah, party). eurovisionworld Language: English."
+        },
+        {
             "postId": 50337,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50338,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Hanna Lindblad – Manipulated. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics You're manipulated)."
+        },
+        {
+            "postId": 50341,
+            "language": "swe",
+            "why": "Ann-Louise Hanson, Towa Carson & Siw Malmkvist – C'est la vie. Melodifestivalen 2004; French title, Swedish lyrics (sv.wikipedia: sångtexten helt på svenska; eurovisionworld Language: Swedish). Not Khaled's bilingual C'est la vie."
+        },
+        {
             "postId": 50351,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50355,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "H.E.A.T – 1000 Miles. Melodifestivalen 2009 (7th). Sung in English (eurovisionworld Language: English; Wikidata language English)."
         },
         {
             "postId": 50356,
@@ -845,6 +1742,16 @@
             "why": "Herreys – Diggi Loo Diggi Ley; Melodifestivalen/Eurovision 1984. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 50367,
+            "language": "eng",
+            "why": "Zac Efron & Vanessa Hudgens – Breaking Free from High School Musical. Venue credits the English-language film performers, not a Swedish dub."
+        },
+        {
+            "postId": 50368,
+            "language": "eng",
+            "why": "High School Musical 2 cast – What Time Is It? Venue credits the English-language film cast."
+        },
+        {
             "postId": 50369,
             "artist": "Ashley Tisdale, Lucas Grabeel",
             "sortAs": "Tisdale, Ashley",
@@ -861,7 +1768,8 @@
                     "name": "Lucas Grabeel"
                 }
             ],
-            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz)."
+            "language": "eng",
+            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz). Sung in English (High School Musical film performers)."
         },
         {
             "postId": 50370,
@@ -875,12 +1783,56 @@
                     "name": "The High School Musical Cast"
                 }
             ],
-            "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
+            "language": "eng",
+            "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. Sung in English (High School Musical film cast)."
+        },
+        {
+            "postId": 50371,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Highlights & MiSt – Come and Get Me Now. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics Come and get me now)."
+        },
+        {
+            "postId": 50372,
+            "language": "eng",
+            "why": "Hilary Duff – Wake Up. English-language 2005 Most Wanted / Dignity-era single. MusicBrainz work had no language; credited Duff pop recording."
+        },
+        {
+            "postId": 50377,
+            "language": "eng",
+            "why": "Hilary Duff – With Love. English-language 2007 Dignity single. MusicBrainz work had no language; credited Duff pop recording."
+        },
+        {
+            "postId": 50378,
+            "language": "eng",
+            "why": "Hilary Duff – Beat of My Heart. English-language 2005 Most Wanted single (To the beat of my heart / I'm thinking about letting it out). Genius."
+        },
+        {
+            "postId": 50379,
+            "language": "eng",
+            "why": "Hilary Duff – Someone's Watching Over Me. English-language 2004 Hilary Duff album cut. MusicBrainz work had no language; credited Duff recording."
+        },
+        {
+            "postId": 50380,
+            "language": "eng",
+            "why": "Hilary Duff – Fly. English-language 2004 Hilary Duff single. MusicBrainz work had no language; credited Duff pop recording."
         },
         {
             "postId": 50387,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50420,
+            "language": "eng",
+            "why": "Icona Pop – I Love It. English-language 2012 single (Wikipedia / Genius)."
+        },
+        {
+            "postId": 50421,
+            "language": "eng",
+            "why": "Idol Allstars 2010 – All I Need Is You. English-language Swedish Idol 2010 charity/all-stars single (In a time of shattered hopes and dreams / All I need is you). lirikcinta lyrics; JioSaavn album Idol Box tagged English. Andreas Carlsson."
         },
         {
             "postId": 50424,
@@ -900,6 +1852,11 @@
             "why": "Il Divo – Adagio. Vocal Italian setting of Albinoni/Giazotto (The Promise, 2008; Italian lyrics). MusicBrainz linked the recording to the instrumental classical work (zxx)."
         },
         {
+            "postId": 50432,
+            "language": "eng",
+            "why": "Imany – Don't Be So Shy (Filatov & Karas remix). French singer; the hit and original are English (Take off your clothes / Don't be so shy). Wikipedia / eLyrics. Not a French-language cut."
+        },
+        {
             "postId": 50434,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -912,7 +1869,8 @@
         },
         {
             "postId": 50466,
-            "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent. Sung in English (Irish traditional).",
             "artist": "",
             "sortAs": "Irish traditional",
             "title": "The Wild Rover",
@@ -975,6 +1933,31 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50569,
+            "language": "eng",
+            "why": "Janet Jackson – Everytime. English-language 1997 Velvet Rope cut Every Time. MusicBrainz work had no language; credited Janet recording, not a non-English cut."
+        },
+        {
+            "postId": 50570,
+            "language": "eng",
+            "why": "Janet Jackson – Again. English-language 1993 janet. single (I heard the news today / That you were going away). Wikipedia / well-known English hit."
+        },
+        {
+            "postId": 50571,
+            "language": "eng",
+            "why": "Janet Jackson – Any Time, Any Place. English-language 1993 janet. single. Wikipedia; MusicBrainz work had no language."
+        },
+        {
+            "postId": 50572,
+            "language": "eng",
+            "why": "Janet Jackson – That's the Way Love Goes. English-language 1993 janet. lead single. Wikipedia (You'll be so glad you came). MusicBrainz work had no language."
+        },
+        {
+            "postId": 50576,
+            "language": "eng",
+            "why": "Janet Jackson – Together Again. English-language 1997 Velvet Rope single (There are times when I look above and beyond). Wikipedia / well-known English hit."
+        },
+        {
             "postId": 50597,
             "year": 2002,
             "title": "No Hay Nada Más",
@@ -985,11 +1968,30 @@
             ]
         },
         {
+            "postId": 50599,
+            "language": "eng",
+            "why": "Jay Smith – Dreaming People. Idol 2010 winner's single; English lyrics (Genius: We're the dreaming people / The way we put our hopes)."
+        },
+        {
             "postId": 50616,
             "categories": [
                 "Eurovision"
             ],
-            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
+            "language": "eng",
+            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. Sung in English (Ireland's 2011 ESC entry)."
+        },
+        {
+            "postId": 50622,
+            "language": "eng",
+            "why": "Linda Eder & Colm Wilkinson – This Is the Moment from Jekyll & Hyde. English-language musical number."
+        },
+        {
+            "postId": 50634,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Jenny Silver – A Place to Stay. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics Now I just need a place to stay)."
         },
         {
             "postId": 50642,
@@ -1002,12 +2004,58 @@
             "why": "Jesse Hunter – Long Legged Hannah (From Butte, Montana). Year from Discogs single/album (1994)."
         },
         {
+            "postId": 50645,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Jessica Andersson – I Did It for Love. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics I did it all, I did it for love)."
+        },
+        {
+            "postId": 50649,
+            "language": "eng",
+            "why": "Jessica Simpson – Forever in Your Eyes. English-language 2001 Irresistible album cut. MusicBrainz work had no language; same English-language album as the title track."
+        },
+        {
+            "postId": 50650,
+            "language": "eng",
+            "why": "Jessica Simpson – I Think I'm in Love with You. English-language 2000 Sweet Kisses single. MusicBrainz work had no language; credited Simpson pop recording."
+        },
+        {
+            "postId": 50652,
+            "language": "eng",
+            "why": "Jessica Simpson – Irresistible. English-language 2001 title-track single (Everything about you is so irresistible / I can hardly breathe). Genius."
+        },
+        {
+            "postId": 50653,
+            "language": "eng",
+            "why": "Jessica Simpson – A Little Bit. English-language 2001 Irresistible album cut / single. MusicBrainz work had no language; same English-language album as the title track."
+        },
+        {
+            "postId": 50654,
+            "language": "eng",
+            "why": "Jessica Simpson – There You Were. English-language 2001 Irresistible duet cut. MusicBrainz work had no language; same English-language album as the title track."
+        },
+        {
+            "postId": 50667,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Jill Johnson – Crazy in Love. Melodifestivalen 2003 (4th). English lyrics, not Beyoncé's Crazy in Love (eurovisionworld Language: English; Wikipedia: first English-language Svensktoppen #1)."
+        },
+        {
             "postId": 50668,
             "categories": [
                 "Melodifestivalen",
                 "Eurovision"
             ],
             "why": "Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 50673,
+            "language": "eng",
+            "why": "Jim Stärk – Morning Song. Norwegian band; English-language Morning Songs cut (In the morning when the sun makes it shadows / I'd like to see the morning with you). muzikum Language: English; elyrics. Not a Norwegian-language version."
         },
         {
             "postId": 50691,
@@ -1020,9 +2068,27 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50703,
+            "language": "swe",
+            "why": "Joakim Hillson – Vacker utan spackel. Swedish-language 2000 single (Notpoolen språk Svenska; songtexte lyrics). MusicBrainz work had no language."
+        },
+        {
             "postId": 50704,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50716,
+            "language": "eng",
+            "why": "Johan Becker – Let Me Love You. English-language 2004 Fame Factory winner single (Let me love you from the bottom of my heart), Sverigetopplistan #3. Not Melodifestivalen (that was Sandra Dahlberg's Här stannar jag kvar, which he wrote). motolyrics / Wikipedia."
+        },
+        {
+            "postId": 50717,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Johannes Bah Kuhnke – Tonight. Melodifestivalen 2010 heat 3 (eliminated). Sung in English (I said something really cold / Tonight I'll make you feel the fire tonight). eurovisionworld Language: English."
         },
         {
             "postId": 50721,
@@ -1033,7 +2099,8 @@
         },
         {
             "postId": 50739,
-            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
@@ -1062,7 +2129,8 @@
             "categories": [
                 "Christmas"
             ],
-            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1)."
+            "language": "eng",
+            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1). Sung in English."
         },
         {
             "postId": 50790,
@@ -1386,6 +2454,16 @@
             "why": "The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963)."
         },
         {
+            "postId": 51074,
+            "language": "eng",
+            "why": "Kurt Nilsen – Rise to the Occasion. Norwegian Idol winner; English-language 2008 title track (Who's gonna rise to the occasion when there's no one around). elyrics / motolyrics."
+        },
+        {
+            "postId": 51079,
+            "language": "eng",
+            "why": "Kygo feat. Selena Gomez – It Ain't Me. English-language 2017 single (I had a dream we were sipping whiskey neat / It ain't me). Wikipedia / Genius."
+        },
+        {
             "postId": 51090,
             "language": "eng",
             "why": "Lady and the Tramp – Bella Notte. Venue labeled (english); English Disney cut. MusicBrainz work had no language."
@@ -1456,6 +2534,16 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51157,
+            "language": "eng",
+            "why": "Le Couple – Wishes. Japanese duo; Britt Savage's English lyrics (I looked in the sky and there I saw a star), not a Japanese-language cut (Utaten / JOYSOUND)."
+        },
+        {
+            "postId": 51177,
+            "language": "eng",
+            "why": "Leila K – Open Sesame. English-language 1992 eurodance single with dancehall slang (Abracadabra me say open sesame). muzikum Language: English. Not a Swedish-language cut."
+        },
+        {
             "postId": 51178,
             "categories": [
                 "Eurovision"
@@ -1498,9 +2586,30 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51258,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Linda Pritchard – You're Making Me Hot-Hot-Hot. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 51267,
+            "language": "eng",
+            "why": "Nathan Lane & Ernie Sabella – Hakuna Matata from The Lion King. Venue credits the English-language film performers, not the Swedish dub."
+        },
+        {
             "postId": 51294,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51301,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Liverpool – Love Is All. Melodifestivalen 2003 (Tittarnas val). Sung in English (She said there's so much beauty / Love is all, you can see the wonders of your heart). eurovisionworld Language: English."
         },
         {
             "postId": 51308,
@@ -1544,7 +2653,21 @@
                 "Hymn"
             ],
             "title": "When the Saints Go Marching In",
-            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn."
+            "language": "eng",
+            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn. Sung in English (Armstrong's English-language spiritual)."
+        },
+        {
+            "postId": 51342,
+            "language": "eng",
+            "why": "Louis Prima – I Wan'na Be Like You from The Jungle Book. Same English-language film cut as the other listing; not the Swedish dub."
+        },
+        {
+            "postId": 51347,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Lovestoned – Thursdays. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics Not a bunch of Thursdays in a row)."
         },
         {
             "postId": 51351,
@@ -1578,7 +2701,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen. Sung in English (Melodifestivalen 2006 pop entry)."
         },
         {
             "postId": 51431,
@@ -1620,6 +2744,19 @@
             "why": "Måns Zelmerlöw – Heroes; Melodifestivalen/Eurovision 2015. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51457,
+            "language": "eng",
+            "why": "Maria Arredondo – Mad Summer. Norwegian singer; English-language 2004 Not Going Under single (Hot in the streets / It's a mad, mad summer). Genius / songlyrics. Written by Espen Lind / Amund Bjørklund."
+        },
+        {
+            "postId": 51458,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Maria Haukaas Storeng – Hold On Be Strong. Eurovision 2008 (Norway, 5th). Sung in English (Wikipedia Language: English; Diggiloo)."
+        },
+        {
             "postId": 51479,
             "why": "Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -1635,11 +2772,20 @@
             "why": "Marie Bergman & Roger Pontare – Stjärnorna; Melodifestivalen/Eurovision 1994. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51506,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Marie Lindberg – Trying to Recall. Melodifestivalen 2007 (5th). Sung in English (eurovisionworld Language: English; lyrics Trying to recall)."
+        },
+        {
             "postId": 51513,
             "categories": [
                 "Hymn"
             ],
-            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
+            "language": "lat",
+            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. Lanza's well-known Schubert setting uses the Latin Ave Maria prayer text (gratia plena), not Schubert's original German Ellen's Gesang (oldielyrics; Wikipedia Ave Maria (Schubert))."
         },
         {
             "postId": 51517,
@@ -1691,6 +2837,51 @@
             "why": "Michael Bublé cover of Toy Story song; from was missing"
         },
         {
+            "postId": 51664,
+            "language": "eng",
+            "why": "Michael Learns to Rock – That's Why (You Go Away). Danish band; English-language 1995/96 Played on Pepper hit (Baby, won't you tell me why there is sadness in your eyes). LyricsFreak / Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51665,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Paint My Love. English-language 1996/97 single (From my youngest years / Paint my love, you should paint my love). Dork / album Paint My Love. Not a Danish-language cut."
+        },
+        {
+            "postId": 51666,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Breaking My Heart. Danish band; English-language Nothing to Lose cut (There is no excuse my friend / For breaking my heart again). elyrics."
+        },
+        {
+            "postId": 51667,
+            "language": "eng",
+            "why": "Michael Learns to Rock – How Many Hours. English-language 1995 Played on Pepper track (Mothers giving birth to a little son / How many hours and how many days). bwgeci / Jascha Richter lyrics."
+        },
+        {
+            "postId": 51668,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Love Will Never Lie. English-language 1995 Played on Pepper cut (We will keep the faith between us / love will never lie). elyrics."
+        },
+        {
+            "postId": 51669,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Sleeping Child. English-language 1993 Colours single (The Milky Way upon the heavens / Oh, my sleeping child). Genius / KaraFun."
+        },
+        {
+            "postId": 51670,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Out of the Blue. English-language 1993 Colours single (You took me right out of the blue / Simply by showing that you love me too). Genius / elyrics."
+        },
+        {
+            "postId": 51671,
+            "language": "eng",
+            "why": "Michael Learns to Rock – Crazy Dream. English-language 1991 debut-album cut (Why not forget your crazy dream about a love that can't exist). elyrics."
+        },
+        {
+            "postId": 51672,
+            "language": "eng",
+            "why": "Michael Learns to Rock – The Actor. English-language 1991 debut single (I'm not an actor, I'm not a star). Wikipedia; songlyrics. Norway #1."
+        },
+        {
             "postId": 51678,
             "language": "swe",
             "why": "Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song. Sung in Swedish.",
@@ -1712,6 +2903,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51686,
+            "language": "eng",
+            "why": "MIKA – Relax, Take It Easy. English-language 2006 Life in Cartoon Motion single (Relax, take it easy / For there is nothing that we can do). Genius / Songfacts."
+        },
+        {
             "postId": 51704,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -1722,11 +2918,62 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51725,
+            "language": "swe",
+            "why": "Molly Sandén – Hallelujah. Py Bäckman's Swedish text (Det finns en sång som säger allt), not Leonard Cohen's English original or Wiehe's other Swedish translation (sv.wikipedia Hallelujah (Leonard Cohen-låt))."
+        },
+        {
+            "postId": 51726,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Molly Sandén – Why Am I Crying. Melodifestivalen 2012. Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 51750,
+            "language": "eng",
+            "why": "Ewan McGregor & Alessandro Safina – Your Song from Moulin Rouge! English-language film performance of the Elton John song."
+        },
+        {
+            "postId": 51751,
+            "language": "eng",
+            "why": "Nicole Kidman, Ewan McGregor & Jamie Allen – Elephant Love Medley from Moulin Rouge! English-language film number."
+        },
+        {
             "postId": 51757,
             "categories": [
                 "Children's song"
             ],
             "why": "Mister Rogers – Won’t You Be My Neighbor?. Children's song; mark categories Children's song."
+        },
+        {
+            "postId": 51775,
+            "language": "eng",
+            "why": "Måns Zelmerlöw – Work of Art (Da Vinci). English-language 2007 Stand by For… single (She's another work of art / Da Vinci, yeah), not a Melodifestivalen entry (that was Cara Mia). songlyrics / Wikipedia."
+        },
+        {
+            "postId": 51776,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Måns Zelmerlöw – Hope & Glory. Melodifestivalen 2009 (4th). Sung in English (eurovisionworld Language: English; lyrics I'm still standing for hope and glory)."
+        },
+        {
+            "postId": 51778,
+            "language": "eng",
+            "why": "N Sync – Fallen. Venue typo for *NSYNC Falling on Celebrity (2001); English-language bonus/album cut ('Cause I'm falling, falling / Girl, I'm falling for you). songlyrics / allthelyrics lists the same English lyric under Fallen. Not a separate Fallen recording."
+        },
+        {
+            "postId": 51779,
+            "language": "eng",
+            "why": "*NSYNC – I Drive Myself Crazy. English-language 1998/99 single (I drive myself crazy thinking of you / Made a mistake when I let you go baby). Debut-album lyrics. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51782,
+            "language": "eng",
+            "why": "*NSYNC – I Want You Back. English-language 1996/97 original (You're all I ever wanted / You're all I ever needed / I want you back), not the Jackson 5 song of the same name. Debut-album / lyrhub lyrics."
         },
         {
             "postId": 51792,
@@ -1743,6 +2990,19 @@
             "title": "Rockin' in the Free World",
             "year": 1989,
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
+        },
+        {
+            "postId": 51848,
+            "language": "eng",
+            "why": "New Kids on the Block – You Got It (The Right Stuff). English-language 1988 Hangin' Tough hit (You got the right stuff, baby / Love the way you turn me on), not the Spanish Autentica cut. Wikipedia."
+        },
+        {
+            "postId": 51853,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "The New Seekers – Beg Steal or Borrow. Eurovision 1972 (United Kingdom, 2nd). Venue filed the English contest cut, not the German Oh, Ich Will Betteln, Ich Will Stehlen (Wikipedia Language: English)."
         },
         {
             "postId": 51857,
@@ -1773,6 +3033,19 @@
             "why": "Sung in Spanish. MusicBrainz work had no language."
         },
         {
+            "postId": 51899,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Noll Disciplin – Idiot. Melodifestivalen 2010. English title, Swedish lyrics (Vad e det som händer här / Hon gör mig till en idiot). eurovisionworld Language: Swedish."
+        },
+        {
+            "postId": 51913,
+            "language": "eng",
+            "why": "O-Town – These Are the Days. English-language 2002 O2 single (These are the days when all that I can do is dream / Living in the in-between). Genius. MusicBrainz work had no language."
+        },
+        {
             "postId": 51915,
             "language": "ron",
             "why": "O-Zone – Dragostea din tei. Sung in Romanian. MusicBrainz work had no language."
@@ -1782,6 +3055,42 @@
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
+        },
+        {
+            "postId": 51951,
+            "language": "eng",
+            "why": "Oh Laura – Release Me. English-language 2007 Saab-ad hit (I am the wilderness locked in a cage / Release me). Wikipedia / Genius In English."
+        },
+        {
+            "postId": 51955,
+            "language": "eng",
+            "why": "Ola – Rain. English-language 2006 cover of Anthony Callea (Falling like rain / Just not for me). Wikipedia / eLyrics. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51956,
+            "language": "eng",
+            "why": "Ola – Natalie. English-language 2007 cover of Tony Nilsson's song (Wikipedia: Swedish English language song; lyrics You really got me now). MusicBrainz work had no language."
+        },
+        {
+            "postId": 51957,
+            "language": "eng",
+            "why": "Ola – S.O.S. English-language 2007 single from Good Enough (Wikipedia; Genius: I'm sending you an S.O.S. / I'm drowning). Not a US namesake."
+        },
+        {
+            "postId": 51958,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Ola – Love in Stereo. Melodifestivalen 2008 (Andra chansen). Wikipedia: Swedish English language song."
+        },
+        {
+            "postId": 51959,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Ola – Unstoppable. Melodifestivalen 2010 (Unstoppable (The Return of Natalie)). Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 51960,
@@ -1794,6 +3103,11 @@
             "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
+            "postId": 51963,
+            "language": "eng",
+            "why": "Lionel Bart – Consider Yourself from Oliver! English-language musical number."
+        },
+        {
             "postId": 51965,
             "year": 1973,
             "title": "Take Me Home, Country Roads",
@@ -1804,7 +3118,8 @@
             "categories": [
                 "Eurovision"
             ],
-            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
+            "language": "eng",
+            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision. Sung in English (Denmark's 2000 ESC winner)."
         },
         {
             "postId": 51995,
@@ -1817,9 +3132,18 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52060,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Pauline – Sucker for Love. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics I'm a sucker for love)."
+        },
+        {
             "postId": 52064,
             "from": "Aladdin",
-            "why": "Peabo Bryson & Regina Belle Aladdin; from was missing"
+            "language": "eng",
+            "why": "Peabo Bryson & Regina Belle Aladdin; from was missing. Venue credits the English Aladdin performers, not the Swedish dub. Sung in English."
         },
         {
             "postId": 52088,
@@ -1832,13 +3156,27 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52114,
+            "language": "eng",
+            "why": "Peter Bjorn and John – Young Folks. English-language 2006 Writer's Block single (If I told you things I did before / We don't care about the young folks). Wikipedia / Genius."
+        },
+        {
+            "postId": 52118,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Petra Nielsen – Tango! Tango! Melodifestivalen 2004 (4th). Sung in English (eurovisionworld Language: English; lyrics Come on, let's tango, you and I)."
+        },
+        {
             "postId": 52123,
             "from": "Tarzan",
             "why": "Phil Collins Disney/Tarzan hit; from was missing"
         },
         {
             "postId": 52134,
-            "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent. Sung in English (traditional English-language birthday song).",
             "artist": "",
             "sortAs": "Birthday",
             "title": "Happy Birthday to You",
@@ -1860,10 +3198,37 @@
         },
         {
             "postId": 52185,
-            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 52196,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row."
+        },
+        {
+            "postId": 52197,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row."
+        },
+        {
+            "postId": 52206,
+            "language": "nor",
+            "why": "Postgirobygget – En solskinnsdag. Norwegian (solskinnsdag, not Swedish solskensdag); lyrics Jeg sitter nedpå berget… (karaoke-version In Norwegian; muzikum Language: Norwegian)."
+        },
+        {
+            "postId": 52207,
+            "language": "nor",
+            "why": "Postgirobygget – Idyll. Norwegian (Det var latter det var sang / Det var sjø og magi / en sol som farga himmelen rød). muzikum Language: Norwegian; eLyrics. Same Norwegian tag as En solskinnsdag."
         },
         {
             "postId": 52208,
@@ -1896,10 +3261,58 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52373,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Rednex – Mama Take Me Home. Melodifestivalen 2006 (6th). Sung in English (eurovisionworld Language: English; lyrics So mama, won't you take me home)."
+        },
+        {
             "postId": 52395,
             "title": "Hold On to the Nights",
             "year": 1988,
             "why": "Richard Marx; venue Hold on to the Night. Year from Wikipedia (1988 single)."
+        },
+        {
+            "postId": 52403,
+            "language": "eng",
+            "why": "Richard Sanderson – Reality. English-language La Boum theme (Dreams are my reality). muzikum Language: English; Jeff Jordan lyrics. Not a French-language cut."
+        },
+        {
+            "postId": 52407,
+            "language": "eng",
+            "why": "Rick Springfield – Affair of the Heart. English-language 1983 Living in Oz single (Heart in my mouth / You ought to know it's an affair of the heart). rickspringfield.us lyrics."
+        },
+        {
+            "postId": 52410,
+            "language": "eng",
+            "why": "Rick Springfield – I Get Excited. English-language 1982 Success Hasn't Spoiled Me Yet single. MusicBrainz work had no language; credited Springfield original, not a non-English cut."
+        },
+        {
+            "postId": 52414,
+            "language": "eng",
+            "why": "Rick Springfield – Love Somebody. English-language 1984 Hard to Hold soundtrack single. MusicBrainz work had no language; credited Springfield original."
+        },
+        {
+            "postId": 52415,
+            "language": "eng",
+            "why": "Rick Springfield – My Father's Chair. English-language 1985 Tao album cut (My father's chair still standing there / All alone since the long night). musicas.mus.br lyrics."
+        },
+        {
+            "postId": 52416,
+            "language": "eng",
+            "why": "Rick Springfield – Souls. English-language 1983 Living in Oz cut (It all started here, she was a girl from the Midwest / Two souls searching for each other). Vagalume."
+        },
+        {
+            "postId": 52418,
+            "language": "eng",
+            "why": "Rick Springfield – What Kind of Fool Am I. English-language 1982 Springfield original on Success Hasn't Spoiled Me Yet (Tell me, what kind of fool am I / To just let go like that), not the Anthony Newley / Leslie Bricusse Broadway song. Genius."
+        },
+        {
+            "postId": 52419,
+            "language": "eng",
+            "why": "Rick Springfield – Speak to Tge Sky. Venue typo for Speak to the Sky; English-language 1972 Beginnings single (Speak to the sky whenever things go wrong / When you're talkin' to the Lord). Genius."
         },
         {
             "postId": 52424,
@@ -1910,6 +3323,66 @@
             "postId": 52490,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52504,
+            "language": "eng",
+            "why": "Robyn – Handle Me. English-language 2005/2007 single from Robyn (You can't handle me). Wikipedia / eLyrics. Not a Swedish-language cut."
+        },
+        {
+            "postId": 52507,
+            "language": "eng",
+            "why": "Robyn & Kleerup – With Every Heartbeat. English-language 2007 single (And it hurts with every heartbeat). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 52508,
+            "language": "eng",
+            "why": "Robyn – Do You Know (What It Takes). English-language 1996 Robyn Is Here single (Do you know what it takes to love me). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 52509,
+            "language": "eng",
+            "why": "Robyn – Show Me Love. English-language 1997 international hit (not the Robin S. song). MusicBrainz work had no language."
+        },
+        {
+            "postId": 52513,
+            "language": "eng",
+            "why": "Robyn – Show Me Love. Same English-language recording as the other listing. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52519,
+            "language": "eng",
+            "why": "Rod Stewart – When I Need You. English-language Leo Sayer cover on If We Fall in Love Tonight (When I need you, I just close my eyes and I'm with you). MusicBrainz work had no language."
+        },
+        {
+            "postId": 52520,
+            "language": "eng",
+            "why": "Rod Stewart – So Far Away. English-language 1996 Carole King cover (So far away / Doesn't anybody stay in one place anymore); 1996 Promo Only first release, not a different standard. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52521,
+            "language": "eng",
+            "why": "Rod Stewart – I Don't Wanna Talk About It. English-language Crazy Horse cover (I can tell by your eyes that you've probably been crying forever / I don't want to talk about it). Dork / well-known Stewart hit."
+        },
+        {
+            "postId": 52522,
+            "language": "eng",
+            "why": "Rod Stewart – Tonight's the Night. English-language 1976 hit Tonight's the Night (Gonna Be Alright) (Stay away from my window / Tonight's the night, it's gonna be alright). A spoken French coda (Je t'aime) is not a French-language version."
+        },
+        {
+            "postId": 52523,
+            "language": "eng",
+            "why": "Rod Stewart – Faith of the Heart. English-language 1998 Diane Warren Patch Adams theme (It's been a long road getting from there to here / I've got faith of the heart). Wikipedia / letras."
+        },
+        {
+            "postId": 52526,
+            "language": "eng",
+            "why": "Rod Stewart – If We Fall in Love Tonight. English-language 1996 title-track single. MusicBrainz work had no language; credited Stewart pop ballad, not a non-English cut."
+        },
+        {
+            "postId": 52528,
+            "language": "eng",
+            "why": "Rod Stewart – You're in My Heart. English-language 1977 hit You're in My Heart (The Final Acclaim) (You're in my heart, you're in my soul / You'll be my breath should I grow old). Genius."
         },
         {
             "postId": 52531,
@@ -1933,10 +3406,38 @@
             ]
         },
         {
+            "postId": 52554,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Rongedal – Just a Minute. Melodifestivalen 2008 (4th). English-language Mello entry (sv.wikipedia Just a Minute (sång))."
+        },
+        {
+            "postId": 52555,
+            "language": "eng",
+            "why": "Room 5 feat. Oliver Cheatham – Make Luv. English-language 2003 UK #1 house single sampling Get Down Saturday Night (I like to party / Make love and listen to the music). Genius."
+        },
+        {
+            "postId": 52565,
+            "language": "eng",
+            "why": "Roxette – Fading Like a Flower (Every Time You Leave). English-language 1991 Joyride single (In a time where the sun descends alone / I feel I'm fading like a flower). Genius. MusicBrainz work had no language."
+        },
+        {
             "postId": 52579,
             "language": "eng",
             "title": "Oh, Pretty Woman",
             "why": "Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld)."
+        },
+        {
+            "postId": 52610,
+            "language": "eng",
+            "why": "Günther feat. Samantha Fox – Touch Me. English-language 2004 Pleasureman cover of Fox's Touch Me (I Want Your Body) with Fox on vocals (Touch me, I wanna feel your body). Wikipedia; generation.dance lyrics. Same English novelty lane as Teeny Weeny String Bikini."
+        },
+        {
+            "postId": 52618,
+            "language": "eng",
+            "why": "Sandra – (I'll Never Be) Maria Magdalena. English-language 1985 hit (I'll never be Maria Magdalena). The German name is a seven-syllable hook, not a German-language version (Wikipedia; muzikum Language: English)."
         },
         {
             "postId": 52619,
@@ -1958,11 +3459,27 @@
             "why": "Sanna Nielsen – Empty Room; Melodifestivalen 2008. Category Melodifestivalen."
         },
         {
+            "postId": 52623,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sebastian Karlsson – When the Night Comes Falling. Melodifestivalen 2007. Sung in English (eurovisionworld Language: English)."
+        },
+        {
             "postId": 52624,
             "categories": [
                 "Melodifestivalen"
             ],
             "why": "Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen."
+        },
+        {
+            "postId": 52625,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sanne Salomonsen – Higher Ground. Melodifestivalen 2005 (7th). Danish singer, English lyrics (We can turn this love around / Take you to a higher ground). NotPoolen språk: Engelska; Mellopedia; tekstowo."
         },
         {
             "postId": 52634,
@@ -1983,9 +3500,27 @@
             "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
         },
         {
+            "postId": 52639,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sarah Dawn Finer – I Remember Love. Melodifestivalen 2007 (4th). English-language Mello ballad (Mellopedia)."
+        },
+        {
             "postId": 52642,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52643,
+            "language": "eng",
+            "why": "Sash! feat. Tina Cousins – Mysterious Times. English-language 1998 eurodance single (These are mysterious times / Where we're moving around, dancing the rhythm of life). ilyrics Language: English."
+        },
+        {
+            "postId": 52644,
+            "language": "eng",
+            "why": "Sator – I Wanna Go Home. English-language 1992 Headquake track (I've been away for 50 days now / I wanna go home). cover.info Language: English; songlyrics."
         },
         {
             "postId": 52657,
@@ -2001,6 +3536,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52680,
+            "language": "eng",
+            "why": "Sebastian Karlsson – Do What You're Told. English-language 2006 Idol runner-up debut single (Do what you're told / Follow directions, obey the law). Wikipedia / songlyrics."
+        },
+        {
             "postId": 52681,
             "categories": [
                 "Melodifestivalen"
@@ -2008,9 +3548,27 @@
             "why": "Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen."
         },
         {
+            "postId": 52694,
+            "language": "eng",
+            "why": "September – Satellites. English-language 2005 single from In Orbit (Genius: Even an angel can end up falling / For satellites)."
+        },
+        {
             "postId": 52695,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52697,
+            "language": "eng",
+            "why": "September – Can't Get Over. English-language 2007 Dancing Shoes single (You know I can't get over). Wikipedia / Genius. Not a Swedish-language Petra Marklund cut."
+        },
+        {
+            "postId": 52698,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Sertab Erener – Everyway That I Can. Eurovision 2003 winner (Turkey). First Turkish ESC entry with no Turkish lyrics — sung in English (Wikipedia Language: English)."
         },
         {
             "postId": 52704,
@@ -2021,7 +3579,8 @@
             "postId": 52706,
             "year": 2000,
             "title": "It Wasn't Me",
-            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia)."
+            "language": "eng",
+            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). Sung in English."
         },
         {
             "postId": 52721,
@@ -2044,12 +3603,38 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52781,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sibel – That Is Where I'll Go. Melodifestivalen 2008 (7th). Sung in English (Wikipedia / Mellopedia)."
+        },
+        {
+            "postId": 52782,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sibel – Stop. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics To be honest – you're perfect)."
+        },
+        {
             "postId": 52784,
             "categories": [
                 "Melodifestivalen"
             ],
             "language": "swe",
             "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52834,
+            "language": "eng",
+            "why": "S.O.A.P. – This Is How We Party. Danish duo; English-language 1998 debut single (Genius: This is how we party / Fooling with your body). Duplicate catalog row."
+        },
+        {
+            "postId": 52835,
+            "language": "eng",
+            "why": "S.O.A.P. – This Is How We Party. Danish duo; English-language 1998 debut single (Genius: This is how we party / Fooling with your body). Duplicate catalog row."
         },
         {
             "postId": 52836,
@@ -2063,6 +3648,11 @@
             "postId": 52837,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52838,
+            "language": "swe",
+            "why": "Superduper Sofie – Sim salabim. English title/hook, Swedish lyrics (Varje natt smyger jag utanför huset / Du är min för evigt). Bubblegum Dancer Language: Swedish."
         },
         {
             "postId": 52844,
@@ -2081,6 +3671,16 @@
             ],
             "language": "swe",
             "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52853,
+            "language": "eng",
+            "why": "Julie Andrews – My Favorite Things from The Sound of Music. Venue credits the English-language film performer, not a Swedish-language cast."
+        },
+        {
+            "postId": 52854,
+            "language": "eng",
+            "why": "Julie Andrews – So Long, Farewell from The Sound of Music. Venue credits the English-language film performer."
         },
         {
             "postId": 52905,
@@ -2106,6 +3706,14 @@
             "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
         },
         {
+            "postId": 52962,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Style – Dover-Calais. Melodifestivalen 1986 (3rd). English place-name title, Swedish lyrics (Vi såg på varann då vi närmade oss land). Venue is the Swedish hit, not the later English-language single (Wikipedia Language: Swedish; eurovisionworld)."
+        },
+        {
             "postId": 53007,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -2124,6 +3732,21 @@
             "postId": 53014,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53019,
+            "language": "eng",
+            "why": "Swedish House Mafia feat. John Martin – Don't You Worry Child. English-language 2012 hit (Don't you worry, don't you worry child). Wikipedia / Genius."
+        },
+        {
+            "postId": 53020,
+            "language": "eng",
+            "why": "Swedish House Mafia – Save the World. English-language 2011 single with John Martin (Who's gonna save the world tonight). Wikipedia / Genius. Duplicate venue row of 53021."
+        },
+        {
+            "postId": 53021,
+            "language": "eng",
+            "why": "Swedish House Mafia feat. John Martin – Save the World. English-language 2011 single (Who's gonna save the world tonight). Wikipedia / Genius. Duplicate venue row of 53020."
         },
         {
             "postId": 53022,
@@ -2160,6 +3783,16 @@
             "why": "Swedish House Mafia & Pharrell – One (Your Name). Venue titled it One but credited Pharrell on both listings, so this is the same vocal cut as postId 53022, not the instrumental. Matcher used the instrumental work (zxx) and dropped Pharrell."
         },
         {
+            "postId": 53034,
+            "language": "eng",
+            "why": "Take That – How Deep Is Your Love. English-language 1996 Bee Gees cover from Nobody Else / Greatest Hits (I know your eyes in the morning sun / How deep is your love). Wikipedia; Bee Gees lyric. Not a non-English cut."
+        },
+        {
+            "postId": 53040,
+            "language": "eng",
+            "why": "Takida – Handlake Village. English-language 2007 Bury the Lies track (It's been a long, long time / The store is not open). Genius / songlyrics. Title names Handsjöbyn; lyrics are English."
+        },
+        {
             "postId": 53084,
             "categories": [
                 "Melodifestivalen"
@@ -2191,10 +3824,28 @@
             "why": "The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 53105,
+            "language": "eng",
+            "why": "The Attic – I Just Can't Help It. English-language 2000s Swedish dance single (I have this feeling / I just can't help it). eLyrics / Musixmatch. MusicBrainz work had no language."
+        },
+        {
             "postId": 53135,
             "year": 1967,
             "title": "The Crystal Ship",
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
+        },
+        {
+            "postId": 53156,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Moniker – Oh My God! Melodifestivalen 2011 (3rd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 53173,
+            "language": "eng",
+            "why": "The Sounds – Living in America. English-language 2002 debut single (We're not living in America, but we're not sorry). sv.wikipedia / eLyrics. Not a Swedish-language cut."
         },
         {
             "postId": 53210,
@@ -2222,10 +3873,20 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 53246,
+            "language": "swe",
+            "why": "Tingeling feat. Rolf Pihlman – Tingeling. Grotesco/Henrik Dorsin Swedish dansband parody from Melodifestivalen 2009, not the Disney fairy (sv.wikipedia Tingeling (sång); Swedish lyrics)."
+        },
+        {
             "postId": 53249,
             "year": 1999,
             "title": "No Scrubs",
             "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
+            "postId": 53280,
+            "language": "eng",
+            "why": "Tom Jones – Thunderball. English-language Bond theme; venue credits Jones, not a translated cut."
         },
         {
             "postId": 53296,
@@ -2300,7 +3961,8 @@
             "categories": [
                 "Eurovision"
             ],
-            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical).",
+            "language": "eng",
+            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical). Sung in English (Norway's 2012 ESC entry).",
             "from": ""
         },
         {
@@ -2309,9 +3971,29 @@
             "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
+            "postId": 53338,
+            "language": "eng",
+            "why": "Tove Lo feat. Hippie Sabotage – Stay High. Venue credit is the English Habits (Stay High) remix (I eat my dinner in my bathtub / Gotta stay high). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 53349,
+            "language": "eng",
+            "why": "Trademark – Only Love. German vocal trio (MLTR lane); English-language 2000 title track (2 a.m. and the rain is falling / But only love can say, try again or walk away). elyrics; writers Dave Pickell / Ron Irving. Not a German-language cut. Same act as already-tagged Miss You Finally."
+        },
+        {
+            "postId": 53351,
+            "language": "eng",
+            "why": "Trademark – I'll Be There For You. English-language 1997 Another Time Another Place ballad (I'll be there for you to brighten up your eyes). maniadb lyrics; not the Rembrandts Friends theme. Same German trio as Miss You Finally / Only Love."
+        },
+        {
             "postId": 53354,
             "language": "nor",
             "why": "Sung in Norwegian. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53355,
+            "language": "eng",
+            "why": "Trance Dance – You're Gonna Get It. English-language 1987/1988 single from Dancing in the Shadows (You can have it right here / You're gonna get it). Musikon style: Engelska; Dork lyrics."
         },
         {
             "postId": 53388,
@@ -2323,6 +4005,46 @@
             "postId": 53393,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53429,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Perfect. English-language 2008 Australian single (Stay, forever who you are / In my dreams you were perfect). Genius; Somewhere in the Real World."
+        },
+        {
+            "postId": 53430,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Hazardous. English-language 2009 title-track single (Like poison that I just have to taste / Something this good has to be hazardous). Dork lyrics."
+        },
+        {
+            "postId": 53431,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Mr Mysterious. English-language 2010 Hazardous single feat. Seany B (Mr Mysterious has got me so serious / Now I'm delirious). streetdirectory lyrics."
+        },
+        {
+            "postId": 53432,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Gossip. English-language 2011 V-era single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53433,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Amazing. English-language 2011 V-era single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53434,
+            "language": "eng",
+            "why": "Vanessa Amorosi – This Is Who I Am. English-language 2009 Australian #1 (Well it's alright to be myself / This is who I am). Genius; Hazardous."
+        },
+        {
+            "postId": 53435,
+            "language": "eng",
+            "why": "Vanessa Amorosi – Holiday. English-language 2010 Hazardous single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53444,
+            "language": "eng",
+            "why": "Vengaboys – Kiss (When the Sun Don't Shine). Dutch eurodance; English-language 1999 single (I only kiss, kiss, kiss when the sun don't shine). songlyrics / muztext."
         },
         {
             "postId": 53455,
@@ -2356,11 +4078,75 @@
             "why": "The Wallflowers – One Headlight. Resolver dated 2021; Bringing Down the Horse (Wikipedia, 21 May 1996)."
         },
         {
+            "postId": 53494,
+            "language": "eng",
+            "why": "Westlife – Miss You Nights. English-language 2002 Cliff Richard cover (I've had many times I can tell you / These miss you nights are the longest). Genius; Unbreakable: The Greatest Hits Vol. 1."
+        },
+        {
+            "postId": 53495,
+            "language": "eng",
+            "why": "Westlife – Hey Whatever. English-language 2003 Turnaround single (Hey whatever / Let your beauty come alive / Let your colour fill the sky). Genius / Dork. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53496,
+            "language": "eng",
+            "why": "Westlife – I Lay My Love on You. English-language 2000/01 Coast to Coast single (I lay my love on you, it's all I wanna do / Every time I breathe I feel brand new). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53497,
+            "language": "eng",
+            "why": "Westlife – If I Let You Go. English-language 1999 debut-album single (But if I let you go I will never know / What my life would be holding you close to me). Wikipedia song list; lyric pages. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53502,
+            "language": "eng",
+            "why": "Westlife – When You're Looking Like That. English-language 2001 Coast to Coast single (Am I supposed to leave you now / When you're looking like that). Genius. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53503,
+            "language": "eng",
+            "why": "Westlife – I'm Already There. English-language 2007 Lonestar cover (I'm already there / Take a look around / I'm the sunshine in your hair). Genius; Back Home."
+        },
+        {
+            "postId": 53529,
+            "language": "eng",
+            "why": "Whitney Houston – I Have Nothing. English-language 1992 Bodyguard single (Share my life, take me for what I am / I'll never change all my colors for you). Wikipedia / well-known English hit."
+        },
+        {
+            "postId": 53530,
+            "language": "eng",
+            "why": "Whitney Houston – One Moment in Time. English-language 1988 Seoul Olympics theme (Each day I live I want to be a day to give the best of me). Wikipedia."
+        },
+        {
             "postId": 53543,
             "categories": [
                 "Hymn"
             ],
-            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn."
+            "language": "eng",
+            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. Sung in English."
+        },
+        {
+            "postId": 53552,
+            "language": "eng",
+            "why": "Whitney Houston – Miracle. English-language 1990 I'm Your Baby Tonight album cut / single. MusicBrainz work had no language; credited Whitney recording."
+        },
+        {
+            "postId": 53555,
+            "language": "eng",
+            "why": "Whitney Houston – Joy. English-language 1996 Preacher's Wife gospel cut with Georgia Mass Choir (Oh joy in my soul / Go tell it on the mountain); Kirk Franklin. Official whitneyhouston.com lyrics. Not a non-English cut."
+        },
+        {
+            "postId": 53556,
+            "language": "eng",
+            "why": "Whitney Houston – Run To You. English-language 1992 Bodyguard single (I know that when you look at me / I wanna run to you). Official whitneyhouston.com / Songfacts. Resolver year hitchhiked a compilation; credited cut is the English Bodyguard recording."
+        },
+        {
+            "postId": 53560,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Wig Wam – In My Dreams. Eurovision 2005 (Norway, 9th). Sung in English (ESC language list)."
         },
         {
             "postId": 53563,
@@ -2373,12 +4159,22 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 53587,
+            "language": "eng",
+            "why": "Ylvis – The Fox. English-language 2013 novelty hit (Dog goes woof / What does the fox say), not a Norwegian-language cut (official lyrics)."
+        },
+        {
             "postId": 53622,
             "categories": [
                 "Melodifestivalen"
             ],
             "language": "swe",
             "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 53623,
+            "language": "swe",
+            "why": "Östen med Resten – Maria. Melodifestivalen 2003 sung in Swedish (eurovisionworld Language: Swedish; lyrics Till vår lilla by kom Maria). One spoken Spanish line (Yo te quiero) is not a Spanish-language version."
         }
     ]
 }
