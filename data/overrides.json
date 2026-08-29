@@ -38,6 +38,14 @@
             "why": "Ace of Base – Living in Danger. English-language 1994 single (Genius / album The Sign). MusicBrainz work had no language."
         },
         {
+            "postId": 47840,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Afro-dite – Aqua Playa. Melodifestivalen 2003 (7th). Sung in English (eurovisionworld Language: English; lyrics I'm in a liquid mode)."
+        },
+        {
             "postId": 47841,
             "categories": [
                 "Melodifestivalen",
@@ -51,6 +59,24 @@
             "why": "After Dark – La Dolce Vita. Melodifestivalen 2004; verses in Swedish with an Italian title/hook (eurovisionworld lyrics; sv.wikipedia). Not the Fellini film theme."
         },
         {
+            "postId": 47844,
+            "language": "eng",
+            "why": "Agnes – Right here right now. Idol 2005 winner's single Right Here, Right Now (My Heart Belongs to You); English lyrics (Genius / songlyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47845,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Agnes – Love Love Love. Melodifestivalen 2009 (8th). Sung in English (eurovisionworld Language: English; Wikipedia)."
+        },
+        {
+            "postId": 47848,
+            "language": "eng",
+            "why": "Agnes & Björn Skifs – When You Tell the World You're Mine. Official 2010 Crown Princess Victoria wedding song; English lyrics (Wikipedia). Not a Swedish-language cut."
+        },
+        {
             "postId": 47849,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -59,6 +85,14 @@
             "postId": 47876,
             "language": "eng",
             "why": "Alcazar – This Is the World We Live In. English-language 2004 single interpolating The Dream Academy (Genius lyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47880,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Alcazar – Headlines. Melodifestivalen 2010 (Andra chansen). Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 47883,
@@ -79,9 +113,46 @@
             ]
         },
         {
+            "postId": 47944,
+            "language": "eng",
+            "why": "Amanda Fondell – All This Way. Idol 2011 winner's single; English lyrics (We made it through storms / we made it all this way)."
+        },
+        {
             "postId": 47951,
             "language": "eng",
             "why": "Amy Diamond – What's in It for Me. English-language 2005 debut single (Genius lyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47955,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Amy Diamond – Thank You. Melodifestivalen 2008. Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47968,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Anders Ekborg – The Saviour. Melodifestivalen 2010. English verses; the Italian hook Il salvatore is the same kind of refrain as Lady Marmalade, not an Italian-language cut (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47969,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Andra generationen – Kebabpizza Slivovitza. Melodifestivalen 2008; Swedish lyrics (Vit duk, finporslin / Jag vill ha kebabpizza). eurovisionworld Language: Swedish."
+        },
+        {
+            "postId": 47970,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Andra generationen & Dogge Doggelito – Hippare hoppare. Melodifestivalen 2010. Verses in Swedish (Balkan reggaeton, det blir fest på en gång). One Serbo-Croatian shout (Ajde babo, igraj) is not a bilingual cut — same rule as Östen Maria's spoken Spanish line."
         },
         {
             "postId": 47971,
@@ -97,6 +168,27 @@
             "postId": 47973,
             "language": "mul",
             "why": "Andreas Da Man – Balla Da-li. Cover of the dance track: English verses plus substantial Italian lines (tu balla con noi / questo va fuori…); not a Swedish Idol original (lyrics; Expressen)."
+        },
+        {
+            "postId": 47974,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Andreas Johnson – A Little Bit of Love. Melodifestivalen 2007 (2nd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47976,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Andreas Johnson – We Can Work It Out. Melodifestivalen 2010 (6th). English original, not the Beatles song (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47978,
+            "language": "eng",
+            "why": "Andreas Johnson – The Games We Play. English-language 1999 Liebling single (You say it's solid poetry / The games we play). MusicBrainz work had no language."
         },
         {
             "postId": 47979,
@@ -155,9 +247,19 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 48025,
+            "language": "fas",
+            "why": "Arash – BoroBoro. Persian-language 2004 hit (روزی بود عاشق تو بودم / برو برو دلم تورو نمیخواد), not the later German Ich bin weg (Boro Boro) (official video / Radio Javan lyrics)."
+        },
+        {
             "postId": 48037,
             "year": 2006,
             "why": "Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings."
+        },
+        {
+            "postId": 48038,
+            "language": "nor",
+            "why": "Are og Odin – Klapp klapp. Sung in Norwegian (Northern dialect: No e d sommer bare klapp klapp i hendern). Rockipedia / lyrics."
         },
         {
             "postId": 48057,
@@ -288,6 +390,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 48392,
+            "language": "eng",
+            "why": "Black Jack – Corrine, Corrina. Swedish dansband cover of the English-language traditional (Corrina, Corrina / Girl where you been so long); SMDB credits trad. English lyrics, not a Swedish rewrite."
+        },
+        {
             "postId": 48413,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -301,6 +408,27 @@
             "postId": 48521,
             "year": 1964,
             "why": "Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962."
+        },
+        {
+            "postId": 48523,
+            "language": "eng",
+            "why": "BWO – Open Door. English-language 2005 Prototype single (Heaven's got an open door tonight). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48525,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "BWO – Lay Your Love on Me. Melodifestivalen 2008 (3rd). Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 48526,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "BWO – Temple of Love. Melodifestivalen 2006 (2nd). English-language single from Halcyon Days (Wikipedia)."
         },
         {
             "postId": 48545,
@@ -367,7 +495,11 @@
             "postId": 48718,
             "title": "T.K.O. (Knock You Out)",
             "year": 2003,
-            "why": "Bubbles; MusicBrainz/Discogs earliest dated releases 2003."
+            "why": "Bubbles – T.K.O. (Knock You Out). Melodifestivalen 2003 (10th). MusicBrainz/Discogs earliest dated releases 2003. Sung in English (Knock you out, down to the floor / This beat is gonna take you to a T.K.O).",
+            "language": "eng",
+            "categories": [
+                "Melodifestivalen"
+            ]
         },
         {
             "postId": 48720,
@@ -579,6 +711,19 @@
             "why": "CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia)."
         },
         {
+            "postId": 49210,
+            "language": "swe",
+            "why": "Dag Vag – Popitop. Swedish-language cover of Thore Skogman's song (Popoppitop, det är toppen i år). Venue credits Dag Vag, not Skogman (dagvag.se lyrics)."
+        },
+        {
+            "postId": 49223,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Danny Saucedo – In the Club. Melodifestivalen 2011 (2nd). Sung in English (eurovisionworld Language: English; Wikipedia)."
+        },
+        {
             "postId": 49236,
             "why": "Credited Christmas song (Darlene Love – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -601,6 +746,14 @@
             "postId": 49348,
             "year": 2002,
             "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+        },
+        {
+            "postId": 49365,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Dima Bilan – Believe. Eurovision 2008 winner (Russia). Sung in English (Wikipedia Language: English)."
         },
         {
             "postId": 49367,
@@ -1647,6 +1800,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51157,
+            "language": "eng",
+            "why": "Le Couple – Wishes. Japanese duo; Britt Savage's English lyrics (I looked in the sky and there I saw a star), not a Japanese-language cut (Utaten / JOYSOUND)."
+        },
+        {
             "postId": 51178,
             "categories": [
                 "Eurovision"
@@ -1687,6 +1845,14 @@
             "postId": 51257,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51258,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Linda Pritchard – You're Making Me Hot-Hot-Hot. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 51267,
@@ -1926,6 +2092,19 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51725,
+            "language": "swe",
+            "why": "Molly Sandén – Hallelujah. Py Bäckman's Swedish text (Det finns en sång som säger allt), not Leonard Cohen's English original or Wiehe's other Swedish translation (sv.wikipedia Hallelujah (Leonard Cohen-låt))."
+        },
+        {
+            "postId": 51726,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Molly Sandén – Why Am I Crying. Melodifestivalen 2012. Sung in English (eurovisionworld Language: English)."
+        },
+        {
             "postId": 51750,
             "language": "eng",
             "why": "Ewan McGregor & Alessandro Safina – Your Song from Moulin Rouge! English-language film performance of the Elton John song."
@@ -1957,6 +2136,14 @@
             "title": "Rockin' in the Free World",
             "year": 1989,
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
+        },
+        {
+            "postId": 51853,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "The New Seekers – Beg Steal or Borrow. Eurovision 1972 (United Kingdom, 2nd). Venue filed the English contest cut, not the German Oh, Ich Will Betteln, Ich Will Stehlen (Wikipedia Language: English)."
         },
         {
             "postId": 51857,
@@ -1996,6 +2183,14 @@
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
             "why": "Oasis track on Be Here Now. Year from Wikipedia album / MusicBrainz (1997)."
+        },
+        {
+            "postId": 51959,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Ola – Unstoppable. Melodifestivalen 2010 (Unstoppable (The Return of Natalie)). Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 51960,
@@ -2089,6 +2284,22 @@
             ]
         },
         {
+            "postId": 52196,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row."
+        },
+        {
+            "postId": 52197,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row."
+        },
+        {
             "postId": 52206,
             "language": "nor",
             "why": "Postgirobygget – En solskinnsdag. Norwegian (solskinnsdag, not Swedish solskensdag); lyrics Jeg sitter nedpå berget… (karaoke-version In Norwegian; muzikum Language: Norwegian)."
@@ -2171,6 +2382,14 @@
             ]
         },
         {
+            "postId": 52554,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Rongedal – Just a Minute. Melodifestivalen 2008 (4th). English-language Mello entry (sv.wikipedia Just a Minute (sång))."
+        },
+        {
             "postId": 52579,
             "language": "eng",
             "title": "Oh, Pretty Woman",
@@ -2221,6 +2440,14 @@
             "why": "Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
         },
         {
+            "postId": 52639,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sarah Dawn Finer – I Remember Love. Melodifestivalen 2007 (4th). English-language Mello ballad (Mellopedia)."
+        },
+        {
             "postId": 52642,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -2249,6 +2476,14 @@
             "postId": 52695,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52698,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Sertab Erener – Everyway That I Can. Eurovision 2003 winner (Turkey). First Turkish ESC entry with no Turkish lyrics — sung in English (Wikipedia Language: English)."
         },
         {
             "postId": 52704,
@@ -2283,6 +2518,22 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52781,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sibel – That Is Where I'll Go. Melodifestivalen 2008 (7th). Sung in English (Wikipedia / Mellopedia)."
+        },
+        {
+            "postId": 52782,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Sibel – Stop. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics To be honest – you're perfect)."
+        },
+        {
             "postId": 52784,
             "categories": [
                 "Melodifestivalen"
@@ -2302,6 +2553,11 @@
             "postId": 52837,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52838,
+            "language": "swe",
+            "why": "Superduper Sofie – Sim salabim. English title/hook, Swedish lyrics (Varje natt smyger jag utanför huset / Du är min för evigt). Bubblegum Dancer Language: Swedish."
         },
         {
             "postId": 52844,
@@ -2353,6 +2609,14 @@
                 "Birthday"
             ],
             "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
+        },
+        {
+            "postId": 52962,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "swe",
+            "why": "Style – Dover-Calais. Melodifestivalen 1986 (3rd). English place-name title, Swedish lyrics (Vi såg på varann då vi närmade oss land). Venue is the Swedish hit, not the later English-language single (Wikipedia Language: Swedish; eurovisionworld)."
         },
         {
             "postId": 53007,
@@ -2444,6 +2708,14 @@
             "year": 1967,
             "title": "The Crystal Ship",
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
+        },
+        {
+            "postId": 53156,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "The Moniker – Oh My God! Melodifestivalen 2011 (3rd). Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 53210,
@@ -2624,6 +2896,14 @@
             "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. Sung in English."
         },
         {
+            "postId": 53560,
+            "categories": [
+                "Eurovision"
+            ],
+            "language": "eng",
+            "why": "Wig Wam – In My Dreams. Eurovision 2005 (Norway, 9th). Sung in English (ESC language list)."
+        },
+        {
             "postId": 53563,
             "year": 1992,
             "why": "Will Smith – Fresh Prince of Bel-Air theme. Year from Wikipedia (1992 single; theme first heard 1990)."
@@ -2632,6 +2912,11 @@
             "postId": 53580,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 53587,
+            "language": "eng",
+            "why": "Ylvis – The Fox. English-language 2013 novelty hit (Dog goes woof / What does the fox say), not a Norwegian-language cut (official lyrics)."
         },
         {
             "postId": 53622,

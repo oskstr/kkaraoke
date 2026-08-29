@@ -1,6 +1,6 @@
 # Override review
 
-411 songs, written by `pnpm build:resolved` from `data/overrides.json` and
+451 songs, written by `pnpm build:resolved` from `data/overrides.json` and
 the venue scrape. Regenerable, so do not edit it — change the override instead.
 
 Each row is what the venue had, then what we show after the override. An empty artist
@@ -22,6 +22,7 @@ means omit a category label rather than invent a performer.
 | 431 | Peabo Bryson & Regina Bell | A whole new world | Peabo Bryson & Regina Bell | A whole new world |  | Peabo Bryson & Regina Belle Aladdin; from was missing. Venue credits the English Aladdin performers, not the Swedish dub. Sung in English. | 52064 |
 | 457 | Roy Orbison | Pretty woman | Roy Orbison | Oh, Pretty Woman |  | Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld). | 52579 |
 | 461 | Elton John | Can you feel the love tonight | Elton John | Can you feel the love tonight |  | Elton John Lion King; from was missing | 49686 |
+| 490 | Le Coupe | Wishes | Le Coupe | Wishes |  | Le Couple – Wishes. Japanese duo; Britt Savage's English lyrics (I looked in the sky and there I saw a star), not a Japanese-language cut (Utaten / JOYSOUND). | 51157 |
 | 491 | Century Oldies | What is youth | Century Oldies | What is youth |  | Nino Rota – What Is a Youth from Zeffirelli's Romeo and Juliet. Eugene Walter's English lyrics as sung in the film by Glen Weston (Wikipedia soundtrack; SecondHandSongs Language English). Not an instrumental love-theme cut. | 48868 |
 | 506 | Shaggy | It wasn't me | Shaggy | It Wasn't Me |  | Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). Sung in English. | 52706 |
 | 521 | Gina G | Ooh aah...just a little bit | Gina G | Ooh aah...just a little bit | Eurovision | Gina G – Ooh Aah… Just a Little Bit; Eurovision 1996 (United Kingdom). Category Eurovision. | 50208 |
@@ -32,6 +33,7 @@ means omit a category label rather than invent a performer.
 | 635 | Shanes | Vem får följa dig hem | Shanes | Vem får följa dig hem |  | Sung in Swedish. MusicBrainz work had no language. | 52721 |
 | 636 | Niklas Strömstedt | Flickor talar om kärleken | Niklas Strömstedt | Flickor talar om kärleken |  | Niklas Strömstedt – Flickor talar om kärleken. Year from Wikidata/MusicBrainz (1990). Sung in Swedish. | 51882 |
 | 639 | Michael Bolton | Go the distance | Michael Bolton | Go the distance |  |  | 51630 |
+| 652 | Sertab | Every way that l can | Sertab | Every way that l can | Eurovision | Sertab Erener – Everyway That I Can. Eurovision 2003 winner (Turkey). First Turkish ESC entry with no Turkish lyrics — sung in English (Wikipedia Language: English). | 52698 |
 | 653 | Jimmy Jansson | Godmorron världen | Jimmy Jansson | Godmorron världen |  | Sung in Swedish. MusicBrainz work had no language. | 50691 |
 | 660 | Miio feat. Ayo | Ska vi gå hem till dig | Miio feat. Ayo | Ska vi gå hem till dig |  | Sung in Swedish. MusicBrainz work had no language. | 51679 |
 | 661 | Honeypies | Stoppa mig | Honeypies | Stoppa mig |  | Sung in Swedish. MusicBrainz work had no language. | 50387 |
@@ -40,28 +42,34 @@ means omit a category label rather than invent a performer.
 | 664 | Nina & Kim | Bortom tid och rum (Universe of love) | Nina & Kim | Bortom tid och rum (Universe of love) |  | Sung in Swedish. MusicBrainz work had no language. | 51884 |
 | 667 | Jimmy Jansson | Flickan från det blå | Jimmy Jansson | Flickan från det blå |  | Sung in Swedish. MusicBrainz work had no language. | 50692 |
 | 670 | Vincent Hamilton | Jag vill ha en egen måne | Vincent Hamilton | Jag vill ha en egen måne |  | Sung in Swedish. MusicBrainz work had no language. | 53463 |
+| 673 | Sofie | Simsalabim | Sofie | Simsalabim |  | Superduper Sofie – Sim salabim. English title/hook, Swedish lyrics (Varje natt smyger jag utanför huset / Du är min för evigt). Bubblegum Dancer Language: Swedish. | 52838 |
 | 674 | Markoolio | Vilse i skogen | Markoolio | Vilse i skogen |  | Sung in Swedish. MusicBrainz work had no language. | 51517 |
 | 675 | Outlandish | Aicha | Outlandish | Aicha |  | Outlandish – Aïcha. English-language cover of Khaled's 1996 French original (Genius; only the last line keeps 'écoute-moi'). MusicBrainz work language is the French original. | 51995 |
 | 678 | Alcazar | This is the world we live in | Alcazar | This is the world we live in |  | Alcazar – This Is the World We Live In. English-language 2004 single interpolating The Dream Academy (Genius lyrics). MusicBrainz work had no language. | 47876 |
 | 681 | O-Zone | Dragostea din tei | O-Zone | Dragostea din tei |  | O-Zone – Dragostea din tei. Sung in Romanian. MusicBrainz work had no language. | 51915 |
 | 684 | Markoolio | In med bollen | Markoolio | In med bollen |  | Sung in Swedish. MusicBrainz work had no language. | 51519 |
 | 685 | Raymond & Maria | Ingen vill veta var du köpt din tröja | Raymond & Maria | Ingen vill veta var du köpt din tröja |  | Sung in Swedish. MusicBrainz work had no language. | 52355 |
+| 687 | Arash | Boro boro | Arash | Boro boro |  | Arash – BoroBoro. Persian-language 2004 hit (روزی بود عاشق تو بودم / برو برو دلم تورو نمیخواد), not the later German Ich bin weg (Boro Boro) (official video / Radio Javan lyrics). | 48025 |
 | 698 | Amy Diamond | What's in it for me | Amy Diamond | What's in it for me |  | Amy Diamond – What's in It for Me. English-language 2005 debut single (Genius lyrics). MusicBrainz work had no language. | 47951 |
 | 700 | Timbuktu | Alla vill till himmelen | Timbuktu | Alla vill till himmelen |  | Sung in Swedish. MusicBrainz work had no language. | 53230 |
+| 707 | Bodies Without Organs | Open door | Bodies Without Organs | Open door |  | BWO – Open Door. English-language 2005 Prototype single (Heaven's got an open door tonight). MusicBrainz work had no language. | 48523 |
 | 708 | Schnappi | Schnappi - das kleine krokodil | Schnappi | Schnappi - das kleine krokodil | Children's song | Schnappi – Schnappi, das kleine Krokodil. Sung in German. MusicBrainz work had no language. Children's song with a credited performer (same as Baby Shark); mark categories Children's song. | 52657 |
 | 716 | Lordi | Hard rock hallelujah | Lordi | Hard rock hallelujah | Eurovision | Lordi – Hard Rock Hallelujah; Eurovision 2006 (Finland). Category Eurovision. | 51314 |
 | 723 | Martin Stenmarck | 7 milakliv | Martin Stenmarck | 7 milakliv |  | Sung in Swedish. MusicBrainz work had no language. | 51545 |
 | 737 | Sonja Aldén | Här står jag | Sonja Aldén | Här står jag |  | Sung in Swedish. MusicBrainz work had no language. | 52844 |
+| 752 | Dima Bilan | Believe | Dima Bilan | Believe | Eurovision | Dima Bilan – Believe. Eurovision 2008 winner (Russia). Sung in English (Wikipedia Language: English). | 49365 |
 | 753 | Ebba Grön | 800 grader | Ebba Grön | 800 grader |  | Sung in Swedish. MusicBrainz work had no language. | 49604 |
 | 756 | Imperiet | Du ska va president | Imperiet | Du ska va president |  | Sung in Swedish. MusicBrainz work had no language. | 50434 |
 | 760 | Nationalteatern | Livet är en fest | Nationalteatern | Livet är en fest |  | Sung in Swedish. MusicBrainz work had no language. | 51805 |
 | 763 | Ebba Grön | Staten och kapitalet | Ebba Grön | Staten och kapitalet |  | Ebba Grön – Staten och Kapitalet. Swedish punk cover of Blå Tåget's Den ena handen vet vad den andra gör (sv.wikipedia; lyrics). | 49605 |
 | 765 | Benny Borg | Balladen om Morgan Kane | Benny Borg | Balladen om Morgan Kane |  | Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split. | 48294 |
 | 766 | Postgirobygget | En solskinnsdag | Postgirobygget | En solskinnsdag |  | Postgirobygget – En solskinnsdag. Norwegian (solskinnsdag, not Swedish solskensdag); lyrics Jeg sitter nedpå berget… (karaoke-version In Norwegian; muzikum Language: Norwegian). | 52206 |
+| 768 | Wig Wam | In my dreams | Wig Wam | In my dreams | Eurovision | Wig Wam – In My Dreams. Eurovision 2005 (Norway, 9th). Sung in English (ESC language list). | 53560 |
 | 773 | Ole Ivars | Spelmannsblod | Ole Ivars | Spelmannsblod |  | Sung in Norwegian. MusicBrainz work had no language. | 51960 |
 | 776 | Tor Endresen | Ingen er så nydelig som du | Tor Endresen | Ingen er så nydelig som du |  | Sung in Norwegian. MusicBrainz work had no language. | 53331 |
 | 778 | Dina | Bli hos meg (Just say goodbye) | Dina | Bli hos meg (Just say goodbye) |  | Sung in Norwegian. MusicBrainz work had no language. | 49367 |
 | 780 | Ole Ivars | Fem gule enker | Ole Ivars | Fem gule enker |  | Sung in Norwegian. MusicBrainz work had no language. | 51961 |
+| 782 | Are & Odin | Klapp klapp | Are & Odin | Klapp klapp |  | Are og Odin – Klapp klapp. Sung in Norwegian (Northern dialect: No e d sommer bare klapp klapp i hendern). Rockipedia / lyrics. | 48038 |
 | 789 | Tramteatret | Å livet svinger | Tramteatret | Å livet svinger |  | Sung in Norwegian. MusicBrainz work had no language. | 53354 |
 | 790 | Grönwalls | Du ringde från Flen | Grönwalls | Du ringde från Flen |  | Sung in Swedish. MusicBrainz work had no language. | 50291 |
 | 791 | Vikingarna | Du är min sommar Marie | Vikingarna | Du är min sommar Marie |  | Sung in Swedish. MusicBrainz work had no language. | 53455 |
@@ -72,27 +80,39 @@ means omit a category label rather than invent a performer.
 | 802 | Sven-Ingvars | Torparrock | Sven-Ingvars | Torparrock |  | Sung in Swedish. MusicBrainz work had no language. | 53014 |
 | 803 | Fame | Give me your love | Fame | Give me your love | Melodifestivalen, Eurovision | Fame – Give Me Your Love; Melodifestivalen/Eurovision 2003. Categories Melodifestivalen + Eurovision. | 49947 |
 | 807 | Sanna Nielsen | Hela världen för mig | Sanna Nielsen | Hela världen för mig | Melodifestivalen | Sanna Nielsen – Hela världen för mig; Melodifestivalen 2003. Category Melodifestivalen. | 52621 |
-| 810 | Bubbles | Tko | Bubbles | T.K.O. (Knock You Out) |  | Bubbles; MusicBrainz/Discogs earliest dated releases 2003. | 48718 |
+| 809 | Afrodite | Aqua playa | Afrodite | Aqua playa | Melodifestivalen | Afro-dite – Aqua Playa. Melodifestivalen 2003 (7th). Sung in English (eurovisionworld Language: English; lyrics I'm in a liquid mode). | 47840 |
+| 810 | Bubbles | Tko | Bubbles | T.K.O. (Knock You Out) | Melodifestivalen | Bubbles – T.K.O. (Knock You Out). Melodifestivalen 2003 (10th). MusicBrainz/Discogs earliest dated releases 2003. Sung in English (Knock you out, down to the floor / This beat is gonna take you to a T.K.O). | 48718 |
 | 811 | Barbados | Bye bye | Barbados | Bye bye | Melodifestivalen | Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen. Sung in English (eurovisionworld Language: English; Notpoolen språk Engelska). | 48171 |
 | 813 | Afrodite | Never let it go | Afrodite | Never let it go | Melodifestivalen, Eurovision | Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision. | 47841 |
 | 814 | Kikki, Bettan och Lotta | Vem e det du vill ha | Kikki, Bettan och Lotta | Vem e det du vill ha | Melodifestivalen | Kikki, Bettan & Lotta – Vem e' de' du vill ha; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish. | 51001 |
 | 815 | Andreas Da Man | Balla Da-Li | Andreas Da Man | Balla Da-Li |  | Andreas Da Man – Balla Da-li. Cover of the dance track: English verses plus substantial Italian lines (tu balla con noi / questo va fuori…); not a Swedish Idol original (lyrics; Expressen). | 47973 |
+| 820 | Agnes | Right here right now | Agnes | Right here right now |  | Agnes – Right here right now. Idol 2005 winner's single Right Here, Right Now (My Heart Belongs to You); English lyrics (Genius / songlyrics). MusicBrainz work had no language. | 47844 |
 | 900 | Caroline af Ugglas | Snälla snälla | Caroline af Ugglas | Snälla snälla |  | Sung in Swedish. MusicBrainz work had no language. | 48797 |
 | 901 | Emd | Baby goodbye | Emd | Baby goodbye | Melodifestivalen, Eurovision | E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision. Sung in English (Melodifestivalen/Eurovision 2009 pop entry). | 49768 |
+| 905 | Agnes | Love, love, love | Agnes | Love, love, love | Melodifestivalen | Agnes – Love Love Love. Melodifestivalen 2009 (8th). Sung in English (eurovisionworld Language: English; Wikipedia). | 47845 |
 | 906 | Emilia | You're my world | Emilia | You're my world | Melodifestivalen | Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen. Sung in English (eurovisionworld Language: English). | 49773 |
 | 907 | Sofia | Alla | Sofia | Alla | Melodifestivalen | Sofia – Alla; Melodifestivalen 2009. Category Melodifestivalen. Sung in Swedish. | 52836 |
 | 908 | Molly Sandén | Så vill stjärnorna | Molly Sandén | Så vill stjärnorna |  | Sung in Swedish. MusicBrainz work had no language. | 51724 |
 | 909 | Tingeling feat. Pihlman | Tingeling | Tingeling feat. Pihlman | Tingeling |  | Tingeling feat. Rolf Pihlman – Tingeling. Grotesco/Henrik Dorsin Swedish dansband parody from Melodifestivalen 2009, not the Disney fairy (sv.wikipedia Tingeling (sång); Swedish lyrics). | 53246 |
 | 910 | Charlotte Perrelli | Hero | Charlotte Perrelli | Hero | Melodifestivalen, Eurovision | Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision. Sung in English (Wikipedia Language: English; Diggiloo). MusicBrainz work had no language. | 48895 |
 | 911 | Sanna Nielsen | Empty room | Sanna Nielsen | Empty room | Melodifestivalen | Sanna Nielsen – Empty Room; Melodifestivalen 2008. Category Melodifestivalen. | 52622 |
+| 912 | Bodies Without Organs | Lay your love on me | Bodies Without Organs | Lay your love on me | Melodifestivalen | BWO – Lay Your Love on Me. Melodifestivalen 2008 (3rd). Sung in English (eurovisionworld Language: English). | 48525 |
+| 913 | Rongedal | Just a minute | Rongedal | Just a minute | Melodifestivalen | Rongedal – Just a Minute. Melodifestivalen 2008 (4th). English-language Mello entry (sv.wikipedia Just a Minute (sång)). | 52554 |
+| 916 | Sibel | That is where I'll go | Sibel | That is where I'll go | Melodifestivalen | Sibel – That Is Where I'll Go. Melodifestivalen 2008 (7th). Sung in English (Wikipedia / Mellopedia). | 52781 |
+| 917 | Amy Diamond | Thank you | Amy Diamond | Thank you | Melodifestivalen | Amy Diamond – Thank You. Melodifestivalen 2008. Sung in English (eurovisionworld Language: English). | 47955 |
 | 919 | Frida feat. Headline | Upp o hoppa | Frida feat. Headline | Upp o hoppa |  | Sung in Swedish. MusicBrainz work had no language. | 50120 |
+| 920 | Andra Generationen | Kebabpizza slivovitza | Andra Generationen | Kebabpizza slivovitza | Melodifestivalen | Andra generationen – Kebabpizza Slivovitza. Melodifestivalen 2008; Swedish lyrics (Vit duk, finporslin / Jag vill ha kebabpizza). eurovisionworld Language: Swedish. | 47969 |
 | 921 | Caracola | Smiling in love | Caracola | Smiling in love | Melodifestivalen | Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen. Sung in English (YouTube/Mello performance; Bubblegum Dancer lyrics). | 48753 |
 | 922 | Fronda | Ingen mår så bra som jag | Fronda | Ingen mår så bra som jag | Melodifestivalen | Fronda – Ingen mår så bra som jag; Melodifestivalen 2008. Category Melodifestivalen. Sung in Swedish. | 50124 |
 | 924 | The Ark | The worrying kind | The Ark | The worrying kind | Melodifestivalen, Eurovision | The Ark – The Worrying Kind; Melodifestivalen/Eurovision 2007. Categories Melodifestivalen + Eurovision. | 53104 |
+| 925 | Andreas Johnson | A little bit of love | Andreas Johnson | A little bit of love | Melodifestivalen | Andreas Johnson – A Little Bit of Love. Melodifestivalen 2007 (2nd). Sung in English (eurovisionworld Language: English). | 47974 |
+| 927 | Sarah Dawn Finer | I remember love | Sarah Dawn Finer | I remember love | Melodifestivalen | Sarah Dawn Finer – I Remember Love. Melodifestivalen 2007 (4th). English-language Mello ballad (Mellopedia). | 52639 |
 | 929 | Sonja Aldén | För att du finns | Sonja Aldén | För att du finns |  | Sung in Swedish. MusicBrainz work had no language. | 52845 |
 | 930 | Sebastian | Vågar du vågar jag | Sebastian | Vågar du vågar jag | Melodifestivalen | Sanna Nielsen – Vågar du, vågar jag; Melodifestivalen 2007. Category Melodifestivalen. | 52681 |
 | 932 | Anna Book | Samba sambero | Anna Book | Samba sambero |  | Sung in Swedish. MusicBrainz work had no language. | 47995 |
 | 933 | Tommy Nilsson | Jag tror på människan | Tommy Nilsson | Jag tror på människan |  | Sung in Swedish. MusicBrainz work had no language. | 53311 |
+| 935 | Bodies Without Organs | Temple of love | Bodies Without Organs | Temple of love | Melodifestivalen | BWO – Temple of Love. Melodifestivalen 2006 (2nd). English-language single from Halcyon Days (Wikipedia). | 48526 |
+| 937 | Poodles | Night of passion | Poodles | Night of passion | Melodifestivalen | The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row. | 52196 |
 | 938 | Magnus Bäcklund | The name of love | Magnus Bäcklund | The name of love | Melodifestivalen | Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen. Sung in English (Melodifestivalen 2006 pop entry). | 51430 |
 | 941 | Magnus Carlsson | Lev livet | Magnus Carlsson | Lev livet |  | Sung in Swedish. MusicBrainz work had no language. | 51431 |
 | 942 | Björn Kjellman | Älskar du livet | Björn Kjellman | Älskar du livet | Melodifestivalen | Björn Kjellman – Älskar du livet; Melodifestivalen 2006. Category Melodifestivalen. Sung in Swedish. | 48380 |
@@ -125,6 +145,7 @@ means omit a category label rather than invent a performer.
 | 982 | Marie Bergman & Roger Pontare | Stjärnorna | Marie Bergman & Roger Pontare | Stjärnorna | Melodifestivalen, Eurovision | Marie Bergman & Roger Pontare – Stjärnorna; Melodifestivalen/Eurovision 1994. Categories Melodifestivalen + Eurovision. | 51504 |
 | 984 | Lasse Holm & Monica Törnell | Är det det här du kallar kärlek | Lasse Holm & Monica Törnell | Är det det här du kallar kärlek | Melodifestivalen, Eurovision | Lasse Holm & Monica Törnell – Är det det här du kallar kärlek; Melodifestivalen/Eurovision 1986. Categories Melodifestivalen + Eurovision. | 51147 |
 | 985 | Nanne Grönwall | Avundsjuk | Nanne Grönwall | Avundsjuk |  | Sung in Swedish. MusicBrainz work had no language. | 51792 |
+| 987 | Style | Dover Calais | Style | Dover Calais | Melodifestivalen | Style – Dover-Calais. Melodifestivalen 1986 (3rd). English place-name title, Swedish lyrics (Vi såg på varann då vi närmade oss land). Venue is the Swedish hit, not the later English-language single (Wikipedia Language: Swedish; eurovisionworld). | 52962 |
 | 988 | Andreas Lundstedt | Driver dagg faller regn | Andreas Lundstedt | Driver dagg faller regn |  | Sung in Swedish. MusicBrainz work had no language. | 47979 |
 | 991 | Tommy Körberg | Judy, min vän | Tommy Körberg | Judy, min vän |  | Sung in Swedish. MusicBrainz work had no language. | 53310 |
 | 992 | Josefin Nilsson | Med hjärtats egna ord | Josefin Nilsson | Med hjärtats egna ord |  | Sung in Swedish. MusicBrainz work had no language. | 50793 |
@@ -213,6 +234,7 @@ means omit a category label rather than invent a performer.
 | 1590 | Östen med Resten | Hon kommer med solsken | Östen med Resten | Hon kommer med solsken | Melodifestivalen | Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish. | 53622 |
 | 1591 | Rolf Carlsson | Tidig är tiden | Rolf Carlsson | Tidig är tiden |  | Sung in Swedish. MusicBrainz work had no language. | 52533 |
 | 1612 | Andrea Bocelli & Celine Dion | The prayer | Andrea Bocelli & Celine Dion | The prayer |  | Celine Dion & Andrea Bocelli – The Prayer. The catalog credits both singers, i.e. the bilingual English/Italian duet, not Dion's English-only or Bocelli's Italian-only Quest for Camelot solos (Wikipedia). | 47971 |
+| 1728 | New Seekers | Beg, steal or borrow | New Seekers | Beg, steal or borrow | Eurovision | The New Seekers – Beg Steal or Borrow. Eurovision 1972 (United Kingdom, 2nd). Venue filed the English contest cut, not the German Oh, Ich Will Betteln, Ich Will Stehlen (Wikipedia Language: English). | 51853 |
 | 1783 | James Brown | Say it loud I'm black and I'm proud | James Brown | Say it loud I'm black and I'm proud |  | James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single). | 50539 |
 | 1793 | Bobby Vee | Venus in blue | Bobby Vee | Venus in blue |  | Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962. | 48521 |
 | 1820 | Whitney Houston | Jesus loves me | Whitney Houston | Jesus loves me | Hymn | Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. Sung in English. | 53543 |
@@ -261,13 +283,20 @@ means omit a category label rather than invent a performer.
 | 2460 | Kent | Ingenting | Kent | Ingenting |  | Sung in Swedish. MusicBrainz work had no language. | 50984 |
 | 2465 | Ted Gärdestad | För kärlekens skull | Ted Gärdestad | För kärlekens skull |  | Sung in Swedish. MusicBrainz work had no language. | 53088 |
 | 2468 | Magnus Uggla | Jag mår illa | Magnus Uggla | Jag mår illa |  | Sung in Swedish. MusicBrainz work had no language. | 51434 |
+| 2469 | Ola Svensson | Unstoppable | Ola Svensson | Unstoppable | Melodifestivalen | Ola – Unstoppable. Melodifestivalen 2010 (Unstoppable (The Return of Natalie)). Sung in English (eurovisionworld Language: English). | 51959 |
 | 2470 | Pernilla Wahlgren | Jag vill om du vågar | Pernilla Wahlgren | Jag vill om du vågar |  | Sung in Swedish. MusicBrainz work had no language. | 52088 |
 | 2472 | Timoteij | Kom (run) | Timoteij | Kom (run) |  | Sung in Swedish. MusicBrainz work had no language. | 53234 |
+| 2476 | Andreas Johnson | We can work it out | Andreas Johnson | We can work it out | Melodifestivalen | Andreas Johnson – We Can Work It Out. Melodifestivalen 2010 (6th). English original, not the Beatles song (eurovisionworld Language: English). | 47976 |
+| 2477 | Andra Generationen & Dogge Doggelito | Hippare hoppare | Andra Generationen & Dogge Doggelito | Hippare hoppare | Melodifestivalen | Andra generationen & Dogge Doggelito – Hippare hoppare. Melodifestivalen 2010. Verses in Swedish (Balkan reggaeton, det blir fest på en gång). One Serbo-Croatian shout (Ajde babo, igraj) is not a bilingual cut — same rule as Östen Maria's spoken Spanish line. | 47970 |
+| 2478 | Linda Pritchard | You're making me hot-hot-hot | Linda Pritchard | You're making me hot-hot-hot | Melodifestivalen | Linda Pritchard – You're Making Me Hot-Hot-Hot. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English). | 51258 |
 | 2479 | Erik Linder | Hur kan jag tro på kärleken | Erik Linder | Hur kan jag tro på kärleken |  | Sung in Swedish. MusicBrainz work had no language. | 49858 |
 | 2481 | Frispråkarn | Singel | Frispråkarn | Singel |  | Sung in Swedish. MusicBrainz work had no language. | 50123 |
+| 2484 | Sibel | Stop | Sibel | Stop | Melodifestivalen | Sibel – Stop. Melodifestivalen 2010. Sung in English (eurovisionworld Language: English; lyrics To be honest – you're perfect). | 52782 |
 | 2488 | Anna-Maria Espinosa | Innan alla ljusen brunnit ut | Anna-Maria Espinosa | Innan alla ljusen brunnit ut |  | Sung in Swedish. MusicBrainz work had no language. | 47998 |
 | 2490 | Kalle Moraeus & Orsa spelmän | Underbart | Kalle Moraeus & Orsa spelmän | Underbart |  | Sung in Swedish. MusicBrainz work had no language. | 50898 |
+| 2492 | Alcazar | Headlines | Alcazar | Headlines | Melodifestivalen | Alcazar – Headlines. Melodifestivalen 2010 (Andra chansen). Sung in English (eurovisionworld Language: English). | 47880 |
 | 2493 | Py Bäckman | Magisk stjärna | Py Bäckman | Magisk stjärna |  | Sung in Swedish. MusicBrainz work had no language. | 52261 |
+| 2496 | Anders Ekborg | The saviour | Anders Ekborg | The saviour | Melodifestivalen | Anders Ekborg – The Saviour. Melodifestivalen 2010. English verses; the Italian hook Il salvatore is the same kind of refrain as Lady Marmalade, not an Italian-language cut (eurovisionworld Language: English). | 47968 |
 | 2500 | Anna Bergendahl | This is my life | Anna Bergendahl | This is my life | Melodifestivalen, Eurovision | Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. Sung in English (Sweden's 2010 ESC entry; Wikipedia). | 47994 |
 | 2501 | Lion King | Hakuna matata | Lion King | Hakuna matata |  | Nathan Lane & Ernie Sabella – Hakuna Matata from The Lion King. Venue credits the English-language film performers, not the Swedish dub. | 51267 |
 | 2593 | Dionne Warwick | This girl is in love with you | Dionne Warwick | This girl is in love with you |  | Dionne Warwick – This Girl's in Love with You. Year from Discogs single (1969). | 49386 |
@@ -281,18 +310,22 @@ means omit a category label rather than invent a performer.
 | 3020 | A-teens | Floor filler | A-teens | Floor filler |  | A*Teens – Floorfiller. English-language single from Pop 'til You Drop! (Genius lyrics; MusicBrainz work had no language). | 47754 |
 | 3038 | Backstreet Boys | Hey Mr DJ (keep playing my song) | Backstreet Boys | Hey, Mr. DJ (Keep Playin' This Song) |  | Backstreet Boys album track; MusicBrainz earliest exact title 1997-08-11. | 48136 |
 | 3096 | Celine Dion | O holy night | Celine Dion | O holy night | Christmas | Celine Dion – O Holy Night. Credited Christmas hymn/carol; keep performer, mark categories Christmas. | 48858 |
+| 3151 | Agnes & Björn Skifs | When you tell the world you're mine | Agnes & Björn Skifs | When you tell the world you're mine |  | Agnes & Björn Skifs – When You Tell the World You're Mine. Official 2010 Crown Princess Victoria wedding song; English lyrics (Wikipedia). Not a Swedish-language cut. | 47848 |
 | 3192 | Louis Primer (The Jungle book) | I wanna be like you | Louis Primer (The Jungle book) | I wanna be like you |  | Louis Prima – I Wan'na Be Like You from The Jungle Book. Same English-language film cut as the other listing; not the Swedish dub. | 51342 |
 | 3216 | Celine Dion | Ne partez pas sans moi | Celine Dion | Ne partez pas sans moi | Eurovision | Céline Dion – Ne partez pas sans moi; Eurovision 1988 (Switzerland). Category Eurovision. | 48862 |
 | 3230 | Lena Meyer-Landrut | Satellite | Lena Meyer-Landrut | Satellite | Eurovision | Lena – Satellite; Eurovision 2010 (Germany). Category Eurovision. | 51178 |
 | 3240 | Eminem | Real Slim Shady | Eminem | The Real Slim Shady |  | Truncated dump title. Year from Wikipedia (2000 single from The Marshall Mathers LP). | 49781 |
 | 3255 | Eric Saade | Popular | Eric Saade | Popular | Melodifestivalen, Eurovision | Eric Saade – Popular; Melodifestivalen/Eurovision 2011. Categories Melodifestivalen + Eurovision. | 49855 |
+| 3256 | Danny Saucedo | In the club | Danny Saucedo | In the club | Melodifestivalen | Danny Saucedo – In the Club. Melodifestivalen 2011 (2nd). Sung in English (eurovisionworld Language: English; Wikipedia). | 49223 |
 | 3258 | Sanna Nielsen | I'm in love | Sanna Nielsen | I'm in love | Melodifestivalen | Sanna Nielsen – I'm in Love; Melodifestivalen 2011. Category Melodifestivalen. | 52624 |
+| 3259 | The Monkier | Oh my God! | The Monkier | Oh my God! | Melodifestivalen | The Moniker – Oh My God! Melodifestivalen 2011 (3rd). Sung in English (eurovisionworld Language: English). | 53156 |
 | 3260 | Simon Forsberg | Tid att andas | Simon Forsberg | Tid att andas | Melodifestivalen | Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish. | 52784 |
 | 3261 | Sara Varga | Spring för livet | Sara Varga | Spring för livet | Melodifestivalen | Sara Varga – Spring för livet; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish. | 52637 |
 | 3262 | Linda Bengtzing | E det fel på mig | Linda Bengtzing | E det fel på mig |  | Sung in Swedish. MusicBrainz work had no language. | 51257 |
 | 3264 | September | Mikrofonkåt | September | Mikrofonkåt |  | Sung in Swedish. MusicBrainz work had no language. | 52695 |
 | 3265 | Plura | Logiskt | Plura | Logiskt |  | Sung in Swedish. MusicBrainz work had no language. | 52181 |
 | 3268 | Elisa's | För det här är bara början | Elisa's | För det här är bara början |  | Sung in Swedish. MusicBrainz work had no language. | 49669 |
+| 3269 | Black Jack | Corrine Corrina | Black Jack | Corrine Corrina |  | Black Jack – Corrine, Corrina. Swedish dansband cover of the English-language traditional (Corrina, Corrina / Girl where you been so long); SMDB credits trad. English lyrics, not a Swedish rewrite. | 48392 |
 | 3274 | Lady Gaga | Alejandro | Lady Gaga | Alejandro |  | Lady Gaga – Alejandro. English song; MusicBrainz work lists eng+spa for Spanish names (Alejandro, Fernando, Roberto) and the one phrase 'en su bolsillo'. Not a Spanish verse. | 51107 |
 | 3275 | Mariah Carey | All I want for christmas is you | Mariah Carey | All I want for christmas is you | Christmas | Credited Christmas song (Mariah Carey – All I Want for Christmas Is You). Keep the performer; still mark category Christmas (docs rule 1). | 51479 |
 | 3297 | Killers | Don't shoot me santa | Killers | Don't shoot me santa | Christmas | Credited Christmas song (The Killers – Don’t Shoot Me Santa). Keep the performer; still mark category Christmas (docs rule 1). | 51013 |
@@ -323,6 +356,7 @@ means omit a category label rather than invent a performer.
 | 3506 | Shania Twain | The woman in me | Shania Twain | The woman in me |  | Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single). | 52731 |
 | 3539 | Tom Jones | Thunderball | Tom Jones | Thunderball |  | Tom Jones – Thunderball. English-language Bond theme; venue credits Jones, not a translated cut. | 53280 |
 | 3555 | Midsommarsång | Små grodorna | *(empty)* | Små grodorna | Midsummer, Children's song | Små grodorna. Traditional midsummer song that is also a children's song; categories Midsummer + Children's song. Sung in Swedish. | 51678 |
+| 3558 | Dag Vag | Popitop | Dag Vag | Popitop |  | Dag Vag – Popitop. Swedish-language cover of Thore Skogman's song (Popoppitop, det är toppen i år). Venue credits Dag Vag, not Skogman (dagvag.se lyrics). | 49210 |
 | 3583 | Coldplay | Life in technicolor | Coldplay | Life in Technicolor ii |  | Coldplay – Life in Technicolor ii. Venue filed Life in technicolor, which is the wordless album intro; a karaoke catalog is likelier to have the sung cut (Prospekt's March / 2009 single). Same case as Swedish House Mafia – One vs One (Your Name): do not keep the instrumental's title. | 49041 |
 | 3637 | Bye Bye Birdie | Put on a happy face | Bye Bye Birdie | Put on a happy face |  | Dick Van Dyke – Put On a Happy Face from Bye Bye Birdie. Venue credits the English-language Broadway/film performer. | 48735 |
 | 3638 | Caberet | The money song | Caberet | The money song |  | Liza Minnelli – Money, Money from Cabaret. Venue credits the English-language film performer. | 48737 |
@@ -346,6 +380,7 @@ means omit a category label rather than invent a performer.
 | 4202 | Jedward | Lipstick | Jedward | Lipstick | Eurovision | Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. Sung in English (Ireland's 2011 ESC entry). | 50616 |
 | 4285 | Justin Bieber | Mistletoe | Justin Bieber | Mistletoe | Christmas | Credited Christmas song (Justin Bieber – Mistletoe). Keep the performer; still mark category Christmas (docs rule 1). | 50864 |
 | 4287 | Helen Sjöholm | Sommaren du fick (Story of a heart) | Helen Sjöholm | Sommaren du fick (Story of a heart) |  | Sung in Swedish. MusicBrainz work had no language. | 50358 |
+| 4288 | Molly Sandén | Hallelujah | Molly Sandén | Hallelujah |  | Molly Sandén – Hallelujah. Py Bäckman's Swedish text (Det finns en sång som säger allt), not Leonard Cohen's English original or Wiehe's other Swedish translation (sv.wikipedia Hallelujah (Leonard Cohen-låt)). | 51725 |
 | 4290 | Metallica | Whiskey in the jar | Metallica | Whiskey in the jar | Irish traditional | Metallica – Whiskey in the Jar. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. | 51611 |
 | 4292 | Juanes & Colbie Caillat | Hoy me voy | Juanes, Colbie Caillat | Hoy me voy |  | Juanes & Colbie Caillat – Hoy me voy. Venue credited the bilingual duet (Spanish + English verses). Matcher kept Juanes's Spanish original and tagged spa. | 50833 |
 | 4293 | Juanes | La paga | Juanes | La paga |  | Sung in Spanish. MusicBrainz work had no language. | 50830 |
@@ -354,8 +389,11 @@ means omit a category label rather than invent a performer.
 | 4307 | Sean Banan | Sean den förste banan | Sean Banan | Sean den förste banan |  | Sung in Swedish. MusicBrainz work had no language. | 52674 |
 | 4309 | Sonja Aldén | I din himmel | Sonja Aldén | I din himmel | Melodifestivalen | Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. Sung in Swedish. | 52846 |
 | 4310 | Timoteij | Stormande hav | Timoteij | Stormande hav |  | Sung in Swedish. MusicBrainz work had no language. | 53235 |
+| 4311 | Molly Sandén | Why am I crying | Molly Sandén | Why am I crying | Melodifestivalen | Molly Sandén – Why Am I Crying. Melodifestivalen 2012. Sung in English (eurovisionworld Language: English). | 51726 |
+| 4316 | Amanda Fondell | Made it all this way | Amanda Fondell | Made it all this way |  | Amanda Fondell – All This Way. Idol 2011 winner's single; English lyrics (We made it through storms / we made it all this way). | 47944 |
 | 4319 | Melissa Horn | Jag saknar dig mindre och mindre | Melissa Horn | Jag saknar dig mindre och mindre |  | Sung in Swedish. MusicBrainz work had no language. | 51595 |
 | 4329 | Ainbusk Singers | Älska mig | Ainbusk Singers | Älska mig |  | Sung in Swedish. MusicBrainz work had no language. | 47849 |
+| 4343 | Andreas Johnson | The games we play | Andreas Johnson | The games we play |  | Andreas Johnson – The Games We Play. English-language 1999 Liebling single (You say it's solid poetry / The games we play). MusicBrainz work had no language. | 47978 |
 | 4344 | Ani Difranco | Little plastic castles | Ani DiFranco | Little Plastic Castle |  | Ani DiFranco – Little Plastic Castle. Resolver dated a 2022 collab rematch (2022) and wrong collaborators; album Little Plastic Castle (Wikipedia, 17 Feb 1998). | 47988 |
 | 4352 | Arctic Monkeys | You probably couldn't see | Arctic Monkeys | You probably couldn't see |  | Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings. | 48037 |
 | 4585 | Dolly Parton | Hard candy Christmas | Dolly Parton | Hard candy Christmas | Christmas | Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1). | 49471 |
@@ -375,6 +413,7 @@ means omit a category label rather than invent a performer.
 | 5119 | Enrique Iglesias Feat. Sean Paul | Bailando | Enrique Iglesias, Sean Paul, Descemer Bueno, Gente de Zona | Bailando |  | Enrique Iglesias feat. Sean Paul – Bailando. Venue credited Sean Paul, which is the Spanglish/English cut (English verses + Spanish chorus; Wikipedia). Matcher lead-scoped onto the Spanish-only recording (Descemer Bueno & Gente de Zona) and tagged spa. | 49832 |
 | 5148 | Icona Pop | I Love It | Icona Pop | I Love It |  | Icona Pop – I Love It. English-language 2012 single (Wikipedia / Genius). | 50420 |
 | 5256 | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Pogues & Kirsty Maccoll | Fairytale Of Newyork | Christmas | Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1). Sung in English. | 52185 |
+| 5323 | Ylvis | The Fox | Ylvis | The Fox |  | Ylvis – The Fox. English-language 2013 novelty hit (Dog goes woof / What does the fox say), not a Norwegian-language cut (official lyrics). | 53587 |
 | 5347 | Disney | I Wanna Be Like You | Disney | I Wanna Be Like You |  | Louis Prima – I Wan'na Be Like You from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub. | 49411 |
 | 5349 | Disney | The Bare Necessities | Disney | The Bare Necessities |  | Phil Harris – The Bare Necessities from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub. | 49413 |
 | 5391 | John Secada | Otro Dia Mas Sin Verte | John Secada | Otro Dia Mas Sin Verte |  | Sung in Spanish. MusicBrainz work had no language. | 50764 |
@@ -402,6 +441,7 @@ means omit a category label rather than invent a performer.
 | 5671 | Hanna Hedlund | Anropar försvunnen | Hanna Hedlund | Anropar försvunnen |  | Sung in Swedish. MusicBrainz work had no language. | 50337 |
 | 5673 | Joakim Hillson | Vacker utan spackel | Joakim Hillson | Vacker utan spackel |  | Joakim Hillson – Vacker utan spackel. Swedish-language 2000 single (Notpoolen språk Svenska; songtexte lyrics). MusicBrainz work had no language. | 50703 |
 | 5674 | Jill Johnsson | Kärleken är | Jill Johnsson | Kärleken är | Melodifestivalen, Eurovision | Jill Johnson – Kärleken är; Melodifestivalen/Eurovision 1998. Categories Melodifestivalen + Eurovision. | 50668 |
+| 5676 | Poodles | Night of passion | Poodles | Night of passion | Melodifestivalen | The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row. | 52197 |
 | 5685 | Drömhus | Stjärna på himmelen | Drömhus | Stjärna på himmelen |  | Sung in Swedish. MusicBrainz work had no language. | 49536 |
 | 5687 | Magnus Uggla | Varning på stan | Magnus Uggla | Varning på stan |  | Sung in Swedish. MusicBrainz work had no language. | 51436 |
 | 5719 | Eros Ramazotti | Piu Bella Cosa | Eros Ramazotti | Piu Bella Cosa |  | Sung in Italian. MusicBrainz work had no language. | 49861 |
