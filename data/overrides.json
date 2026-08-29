@@ -2,9 +2,24 @@
     "note": "Hand corrections. Overrides win over resolved.json. No script ever writes this file. Optional year/genres win when set; otherwise compose keeps resolver enrichment unless the override clears the performer or replaces a matched artist identity.",
     "overrides": [
         {
+            "postId": 47739,
+            "language": "eng",
+            "why": "5 Seconds of Summer – Girls Talk Boys. Ghostbusters (2016) soundtrack cut; venue credits the English-language recording (Wikipedia)."
+        },
+        {
             "postId": 47750,
             "from": "The Living Daylights",
             "why": "a-ha Bond theme; film was missing as from"
+        },
+        {
+            "postId": 47754,
+            "language": "eng",
+            "why": "A*Teens – Floorfiller. English-language single from Pop 'til You Drop! (Genius lyrics; MusicBrainz work had no language)."
+        },
+        {
+            "postId": 47759,
+            "language": "swe",
+            "why": "ABBA – Ring Ring. Dump matched the Swedish recording Ring Ring (Bara du slog en signal), not the English, German, or Spanish cuts (Wikipedia; canonical match recording title)."
         },
         {
             "postId": 47775,
@@ -18,6 +33,11 @@
             "language": "eng"
         },
         {
+            "postId": 47811,
+            "language": "eng",
+            "why": "Ace of Base – Living in Danger. English-language 1994 single (Genius / album The Sign). MusicBrainz work had no language."
+        },
+        {
             "postId": 47841,
             "categories": [
                 "Melodifestivalen",
@@ -26,9 +46,19 @@
             "why": "Afro-dite – Never Let It Go; Melodifestivalen/Eurovision 2002. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 47843,
+            "language": "swe",
+            "why": "After Dark – La Dolce Vita. Melodifestivalen 2004; verses in Swedish with an Italian title/hook (eurovisionworld lyrics; sv.wikipedia). Not the Fellini film theme."
+        },
+        {
             "postId": 47849,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47876,
+            "language": "eng",
+            "why": "Alcazar – This Is the World We Live In. English-language 2004 single interpolating The Dream Academy (Genius lyrics). MusicBrainz work had no language."
         },
         {
             "postId": 47883,
@@ -49,9 +79,34 @@
             ]
         },
         {
+            "postId": 47951,
+            "language": "eng",
+            "why": "Amy Diamond – What's in It for Me. English-language 2005 debut single (Genius lyrics). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47971,
+            "language": "mul",
+            "why": "Celine Dion & Andrea Bocelli – The Prayer. The catalog credits both singers, i.e. the bilingual English/Italian duet, not Dion's English-only or Bocelli's Italian-only Quest for Camelot solos (Wikipedia)."
+        },
+        {
+            "postId": 47972,
+            "language": "mul",
+            "why": "Sarah Brightman & Andrea Bocelli – Time to Say Goodbye. Venue title is the bilingual 1996 duet (English refrain + Italian verses), not Bocelli's all-Italian Con te partirò (Wikipedia; MusicBrainz work note)."
+        },
+        {
+            "postId": 47973,
+            "language": "mul",
+            "why": "Andreas Da Man – Balla Da-li. Cover of the dance track: English verses plus substantial Italian lines (tu balla con noi / questo va fuori…); not a Swedish Idol original (lyrics; Expressen)."
+        },
+        {
             "postId": 47979,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47980,
+            "language": "eng",
+            "why": "Andrés Esteche – Olé Olé. Melodifestivalen 2004 sung in English despite the Spanish title (eurovisionworld lyrics; Notpoolen språk Engelska)."
         },
         {
             "postId": 47988,
@@ -71,12 +126,18 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "Anna Bergendahl – This Is My Life; Melodifestivalen 2010 / Sweden at Eurovision 2010. Categories Melodifestivalen + Eurovision. Sung in English (Sweden's 2010 ESC entry; Wikipedia)."
         },
         {
             "postId": 47995,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 47996,
+            "language": "swe",
+            "why": "Anna Book – ABC. Melodifestivalen 1986 school-themed schlager sung in Swedish, not the Jackson 5 song (eurovisionworld lyrics; sv.wikipedia ABC (Anna Book-låt))."
         },
         {
             "postId": 47998,
@@ -116,7 +177,8 @@
         {
             "postId": 48102,
             "year": 2002,
-            "why": "Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go)."
+            "language": "eng",
+            "why": "Avril Lavigne – Sk8ter Boi. Year from Wikipedia (2002 single from Let Go). Sung in English."
         },
         {
             "postId": 48108,
@@ -144,7 +206,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Barbados – Bye Bye; Melodifestivalen 2003. Category Melodifestivalen. Sung in English (eurovisionworld Language: English; Notpoolen språk Engelska)."
         },
         {
             "postId": 48173,
@@ -174,16 +237,16 @@
             "why": "Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz."
         },
         {
+            "postId": 48294,
+            "language": "nor",
+            "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
+        },
+        {
             "postId": 48375,
             "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
                 "Christmas"
             ]
-        },
-        {
-            "postId": 48294,
-            "language": "nor",
-            "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
         },
         {
             "postId": 48378,
@@ -261,6 +324,11 @@
             ]
         },
         {
+            "postId": 48559,
+            "language": "eng",
+            "why": "Bosson – Efharisto. Melodifestivalen 2004; English lyrics with the Greek word for thank you as the hook (eurovisionworld Language: English)."
+        },
+        {
             "postId": 48592,
             "year": 2002,
             "language": "swe",
@@ -271,7 +339,8 @@
         },
         {
             "postId": 48654,
-            "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent. Broadman Hymnal files the English hymn Face to Face with Christ, My Savior (Carrie E. Breck, 1898; Hymnary.org Language: English).",
             "artist": "",
             "sortAs": "Hymn",
             "title": "Face to Face",
@@ -291,7 +360,8 @@
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
             "year": 2016,
-            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick."
+            "language": "kor",
+            "why": "Confirmed outside the dump: BTS 2016 hit (WINGS). Canonical dump has no matching row under BTS for this title, so the proposal cannot stick. Korean original 피 땀 눈물 from WINGS (2016), the international hit under this English title — not the later Japanese Chi, Ase, Namida (Wikipedia)."
         },
         {
             "postId": 48718,
@@ -307,11 +377,32 @@
             "why": "Bucks Fizz – Making Your Mind Up; Eurovision 1981 (United Kingdom). Category Eurovision."
         },
         {
+            "postId": 48735,
+            "language": "eng",
+            "why": "Dick Van Dyke – Put On a Happy Face from Bye Bye Birdie. Venue credits the English-language Broadway/film performer."
+        },
+        {
+            "postId": 48737,
+            "language": "eng",
+            "why": "Liza Minnelli – Money, Money from Cabaret. Venue credits the English-language film performer."
+        },
+        {
+            "postId": 48738,
+            "language": "eng",
+            "why": "Liza Minnelli – Cabaret. Venue credits the English-language film performer."
+        },
+        {
+            "postId": 48739,
+            "language": "swe",
+            "why": "Karl-Erik (Cacka) Israelsson – Gamle Svarten. Swedish-language 1954 recording of Ole Faithful (Sven-Olof Sandberg text), not the English original (sv.wikipedia Gamle Svarten; textarkivet lyrics)."
+        },
+        {
             "postId": 48753,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen. Sung in English (YouTube/Mello performance; Bubblegum Dancer lyrics)."
         },
         {
             "postId": 48762,
@@ -357,7 +448,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen. Sung in English (Melodifestivalen 2005 jazz/soul entry)."
         },
         {
             "postId": 48810,
@@ -386,6 +478,11 @@
             ]
         },
         {
+            "postId": 48868,
+            "language": "eng",
+            "why": "Nino Rota – What Is a Youth from Zeffirelli's Romeo and Juliet. Eugene Walter's English lyrics as sung in the film by Glen Weston (Wikipedia soundtrack; SecondHandSongs Language English). Not an instrumental love-theme cut."
+        },
+        {
             "postId": 48893,
             "categories": [
                 "Melodifestivalen",
@@ -407,14 +504,21 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision. Sung in English (Wikipedia Language: English; Diggiloo). MusicBrainz work had no language."
+        },
+        {
+            "postId": 48931,
+            "language": "eng",
+            "why": "Linda Eder – Anthem from Chess. English-language musical number (venue credits Eder, not a Swedish Chess cast)."
         },
         {
             "postId": 48942,
             "categories": [
                 "Irish traditional"
             ],
-            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional."
+            "language": "eng",
+            "why": "The Chieftains feat. The Corrs – I Know My Love. Irish traditional with a credited rendition (docs rule 2); keep artist, mark categories Irish traditional. Sung in English (The Chieftains / Corrs Irish traditional)."
         },
         {
             "postId": 48946,
@@ -441,6 +545,11 @@
             "postId": 48996,
             "from": "Mulan",
             "why": "Christina Aguilera Reflection from Mulan; from was missing"
+        },
+        {
+            "postId": 49004,
+            "language": "eng",
+            "why": "Christina Aguilera, Lil' Kim, Mýa, P!nk – Lady Marmalade (Moulin Rouge). English verses; the French line is the same hook as the Labelle original, not a French-language cut (Genius)."
         },
         {
             "postId": 49013,
@@ -477,6 +586,11 @@
             ]
         },
         {
+            "postId": 49258,
+            "language": "swe",
+            "why": "David Shutrick – Container. English title, Swedish lyrics (I en blå container fann jag dej) from the 1992 album Finland (Genius/songtexte; sv.wikipedia). MusicBrainz work had no language."
+        },
+        {
             "postId": 49267,
             "why": "Credited Christmas song (Dean Martin – Let It Snow! Let It Snow! Let It Snow!). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -506,6 +620,26 @@
             "why": "Dionne Warwick – You'll Never Get to Heaven (If You Break My Heart). Venue filed the English title; matcher had picked the German-language MB recording. Force the English studio cut (1964)."
         },
         {
+            "postId": 49411,
+            "language": "eng",
+            "why": "Louis Prima – I Wan'na Be Like You from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub."
+        },
+        {
+            "postId": 49413,
+            "language": "eng",
+            "why": "Phil Harris – The Bare Necessities from The Jungle Book. Venue credits the English-language film performer, not the Swedish dub."
+        },
+        {
+            "postId": 49415,
+            "language": "eng",
+            "why": "Angela Lansbury & Jerry Orbach – Be Our Guest from Beauty and the Beast. Venue credits the English-language film performers, not the Swedish dub."
+        },
+        {
+            "postId": 49418,
+            "language": "eng",
+            "why": "Julie Andrews – Supercalifragilisticexpialidocious from Mary Poppins. Venue credits the English-language film performer, not the Swedish dub."
+        },
+        {
             "postId": 49420,
             "year": 1995,
             "why": "Listen With Your Heart from Pocahontas soundtrack (Wikipedia soundtrack release 1995)."
@@ -532,6 +666,11 @@
             "postId": 49604,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49605,
+            "language": "swe",
+            "why": "Ebba Grön – Staten och Kapitalet. Swedish punk cover of Blå Tåget's Den ena handen vet vad den andra gör (sv.wikipedia; lyrics)."
         },
         {
             "postId": 49638,
@@ -593,14 +732,16 @@
                 "Melodifestivalen",
                 "Eurovision"
             ],
-            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision."
+            "language": "eng",
+            "why": "E.M.D. – Baby Goodbye; Melodifestivalen/Eurovision 2009. Categories Melodifestivalen + Eurovision. Sung in English (Melodifestivalen/Eurovision 2009 pop entry)."
         },
         {
             "postId": 49773,
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Emilia – You're My World; Melodifestivalen 2009. Category Melodifestivalen. Sung in English (eurovisionworld Language: English)."
         },
         {
             "postId": 49781,
@@ -616,10 +757,16 @@
         },
         {
             "postId": 49809,
-            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (Engelbert Humperdinck – Winter Wonderland). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 49810,
+            "language": "eng",
+            "why": "Engelbert Humperdinck – Les Bicyclettes de Belsize. English-language 1968 single despite the French title; Mireille Mathieu recorded a separate French version (Wikipedia; Genius lyrics)."
         },
         {
             "postId": 49832,
@@ -714,7 +861,8 @@
             "artist": "",
             "sortAs": "Irish traditional",
             "title": "Danny Boy",
-            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting.",
+            "language": "eng",
+            "why": "Traditional Irish song (Londonderry Air). Venue credited lyricist Fredric Weatherly; that is not a karaoke rendition artist, and inventing Elvis (or similar) is worse than omitting. Sung in English (Weatherly's lyrics to Londonderry Air).",
             "categories": [
                 "Irish traditional"
             ]
@@ -743,7 +891,8 @@
             "postId": 50122,
             "title": "The One That You Need",
             "year": 2002,
-            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen.",
+            "language": "eng",
+            "why": "Friends – The One That You Need; Melodifestivalen 2002. Category Melodifestivalen. Venue filed the English Melodifestivalen title, not the Swedish version Aldrig igen (sv.wikipedia; eurovisionworld Language: English).",
             "categories": [
                 "Melodifestivalen"
             ]
@@ -774,7 +923,8 @@
         },
         {
             "postId": 50184,
-            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (George Michael – Last Christmas). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
@@ -817,9 +967,19 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50330,
+            "language": "eng",
+            "why": "Lin-Manuel Miranda – Alexander Hamilton from Hamilton. English-language original-cast number."
+        },
+        {
             "postId": 50337,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50341,
+            "language": "swe",
+            "why": "Ann-Louise Hanson, Towa Carson & Siw Malmkvist – C'est la vie. Melodifestivalen 2004; French title, Swedish lyrics (sv.wikipedia: sångtexten helt på svenska; eurovisionworld Language: Swedish). Not Khaled's bilingual C'est la vie."
         },
         {
             "postId": 50351,
@@ -845,6 +1005,16 @@
             "why": "Herreys – Diggi Loo Diggi Ley; Melodifestivalen/Eurovision 1984. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 50367,
+            "language": "eng",
+            "why": "Zac Efron & Vanessa Hudgens – Breaking Free from High School Musical. Venue credits the English-language film performers, not a Swedish dub."
+        },
+        {
+            "postId": 50368,
+            "language": "eng",
+            "why": "High School Musical 2 cast – What Time Is It? Venue credits the English-language film cast."
+        },
+        {
             "postId": 50369,
             "artist": "Ashley Tisdale, Lucas Grabeel",
             "sortAs": "Tisdale, Ashley",
@@ -861,7 +1031,8 @@
                     "name": "Lucas Grabeel"
                 }
             ],
-            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz)."
+            "language": "eng",
+            "why": "HSM duet is Ashley Tisdale & Lucas Grabeel. Dump matched the [Disney] placeholder, which is not a performer. Year from their 2006 soundtrack release (MusicBrainz). Sung in English (High School Musical film performers)."
         },
         {
             "postId": 50370,
@@ -875,12 +1046,18 @@
                     "name": "The High School Musical Cast"
                 }
             ],
-            "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer."
+            "language": "eng",
+            "why": "Cast credit, same act as the catalog's other HSM rows. Dump attached the [Disney] placeholder id, which is not a performer. Sung in English (High School Musical film cast)."
         },
         {
             "postId": 50387,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50420,
+            "language": "eng",
+            "why": "Icona Pop – I Love It. English-language 2012 single (Wikipedia / Genius)."
         },
         {
             "postId": 50424,
@@ -912,7 +1089,8 @@
         },
         {
             "postId": 50466,
-            "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Irish traditional song'; no single performer to invent. Sung in English (Irish traditional).",
             "artist": "",
             "sortAs": "Irish traditional",
             "title": "The Wild Rover",
@@ -989,7 +1167,13 @@
             "categories": [
                 "Eurovision"
             ],
-            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision."
+            "language": "eng",
+            "why": "Jedward – Lipstick; Eurovision 2011 (Ireland). Category Eurovision. Sung in English (Ireland's 2011 ESC entry)."
+        },
+        {
+            "postId": 50622,
+            "language": "eng",
+            "why": "Linda Eder & Colm Wilkinson – This Is the Moment from Jekyll & Hyde. English-language musical number."
         },
         {
             "postId": 50642,
@@ -1020,6 +1204,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50703,
+            "language": "swe",
+            "why": "Joakim Hillson – Vacker utan spackel. Swedish-language 2000 single (Notpoolen språk Svenska; songtexte lyrics). MusicBrainz work had no language."
+        },
+        {
             "postId": 50704,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -1033,7 +1222,8 @@
         },
         {
             "postId": 50739,
-            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
@@ -1062,7 +1252,8 @@
             "categories": [
                 "Christmas"
             ],
-            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1)."
+            "language": "eng",
+            "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1). Sung in English."
         },
         {
             "postId": 50790,
@@ -1498,6 +1689,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51267,
+            "language": "eng",
+            "why": "Nathan Lane & Ernie Sabella – Hakuna Matata from The Lion King. Venue credits the English-language film performers, not the Swedish dub."
+        },
+        {
             "postId": 51294,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -1544,7 +1740,13 @@
                 "Hymn"
             ],
             "title": "When the Saints Go Marching In",
-            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn."
+            "language": "eng",
+            "why": "Louis Armstrong – When the Saints Go Marching In. Traditional spiritual/hymn with a credited rendition (docs rule 2); mark categories Hymn. Sung in English (Armstrong's English-language spiritual)."
+        },
+        {
+            "postId": 51342,
+            "language": "eng",
+            "why": "Louis Prima – I Wan'na Be Like You from The Jungle Book. Same English-language film cut as the other listing; not the Swedish dub."
         },
         {
             "postId": 51351,
@@ -1578,7 +1780,8 @@
             "categories": [
                 "Melodifestivalen"
             ],
-            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen."
+            "language": "eng",
+            "why": "Magnus Bäcklund – The Name of Love; Melodifestivalen 2006. Category Melodifestivalen. Sung in English (Melodifestivalen 2006 pop entry)."
         },
         {
             "postId": 51431,
@@ -1639,7 +1842,8 @@
             "categories": [
                 "Hymn"
             ],
-            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn."
+            "language": "lat",
+            "why": "Mario Lanza – Ave Maria. Sacred song/hymn with a credited performer; mark categories Hymn. Lanza's well-known Schubert setting uses the Latin Ave Maria prayer text (gratia plena), not Schubert's original German Ellen's Gesang (oldielyrics; Wikipedia Ave Maria (Schubert))."
         },
         {
             "postId": 51517,
@@ -1722,6 +1926,16 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51750,
+            "language": "eng",
+            "why": "Ewan McGregor & Alessandro Safina – Your Song from Moulin Rouge! English-language film performance of the Elton John song."
+        },
+        {
+            "postId": 51751,
+            "language": "eng",
+            "why": "Nicole Kidman, Ewan McGregor & Jamie Allen – Elephant Love Medley from Moulin Rouge! English-language film number."
+        },
+        {
             "postId": 51757,
             "categories": [
                 "Children's song"
@@ -1794,6 +2008,11 @@
             "why": "Sung in Norwegian. MusicBrainz work had no language."
         },
         {
+            "postId": 51963,
+            "language": "eng",
+            "why": "Lionel Bart – Consider Yourself from Oliver! English-language musical number."
+        },
+        {
             "postId": 51965,
             "year": 1973,
             "title": "Take Me Home, Country Roads",
@@ -1804,7 +2023,8 @@
             "categories": [
                 "Eurovision"
             ],
-            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision."
+            "language": "eng",
+            "why": "Olsen Brothers – Fly on the Wings of Love; Eurovision 2000 (Denmark). Category Eurovision. Sung in English (Denmark's 2000 ESC winner)."
         },
         {
             "postId": 51995,
@@ -1819,7 +2039,8 @@
         {
             "postId": 52064,
             "from": "Aladdin",
-            "why": "Peabo Bryson & Regina Belle Aladdin; from was missing"
+            "language": "eng",
+            "why": "Peabo Bryson & Regina Belle Aladdin; from was missing. Venue credits the English Aladdin performers, not the Swedish dub. Sung in English."
         },
         {
             "postId": 52088,
@@ -1838,7 +2059,8 @@
         },
         {
             "postId": 52134,
-            "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent",
+            "language": "eng",
+            "why": "Traditional / category material filed under 'Piano singalong'; no single performer to invent. Sung in English (traditional English-language birthday song).",
             "artist": "",
             "sortAs": "Birthday",
             "title": "Happy Birthday to You",
@@ -1860,10 +2082,16 @@
         },
         {
             "postId": 52185,
-            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1).",
+            "language": "eng",
+            "why": "Credited Christmas song (The Pogues, Kirsty MacColl – Fairytale of New York). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 52206,
+            "language": "nor",
+            "why": "Postgirobygget – En solskinnsdag. Norwegian (solskinnsdag, not Swedish solskensdag); lyrics Jeg sitter nedpå berget… (karaoke-version In Norwegian; muzikum Language: Norwegian)."
         },
         {
             "postId": 52208,
@@ -1910,6 +2138,16 @@
             "postId": 52490,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52509,
+            "language": "eng",
+            "why": "Robyn – Show Me Love. English-language 1997 international hit (not the Robin S. song). MusicBrainz work had no language."
+        },
+        {
+            "postId": 52513,
+            "language": "eng",
+            "why": "Robyn – Show Me Love. Same English-language recording as the other listing. MusicBrainz work had no language."
         },
         {
             "postId": 52531,
@@ -2021,7 +2259,8 @@
             "postId": 52706,
             "year": 2000,
             "title": "It Wasn't Me",
-            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia)."
+            "language": "eng",
+            "why": "Shaggy – It Wasn't Me. Resolver dated 2020; single/album Hot Shot 2000 (Wikipedia). Sung in English."
         },
         {
             "postId": 52721,
@@ -2081,6 +2320,16 @@
             ],
             "language": "swe",
             "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52853,
+            "language": "eng",
+            "why": "Julie Andrews – My Favorite Things from The Sound of Music. Venue credits the English-language film performer, not a Swedish-language cast."
+        },
+        {
+            "postId": 52854,
+            "language": "eng",
+            "why": "Julie Andrews – So Long, Farewell from The Sound of Music. Venue credits the English-language film performer."
         },
         {
             "postId": 52905,
@@ -2222,10 +2471,20 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 53246,
+            "language": "swe",
+            "why": "Tingeling feat. Rolf Pihlman – Tingeling. Grotesco/Henrik Dorsin Swedish dansband parody from Melodifestivalen 2009, not the Disney fairy (sv.wikipedia Tingeling (sång); Swedish lyrics)."
+        },
+        {
             "postId": 53249,
             "year": 1999,
             "title": "No Scrubs",
             "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
+            "postId": 53280,
+            "language": "eng",
+            "why": "Tom Jones – Thunderball. English-language Bond theme; venue credits Jones, not a translated cut."
         },
         {
             "postId": 53296,
@@ -2300,7 +2559,8 @@
             "categories": [
                 "Eurovision"
             ],
-            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical).",
+            "language": "eng",
+            "why": "Tooji – Stay; Eurovision 2012 (Norway). Category Eurovision (cleared from:Eurovision — contests are categories, not Film & musical). Sung in English (Norway's 2012 ESC entry).",
             "from": ""
         },
         {
@@ -2360,7 +2620,8 @@
             "categories": [
                 "Hymn"
             ],
-            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn."
+            "language": "eng",
+            "why": "Whitney Houston – Jesus Loves Me. Classic hymn; keep the credited performer and mark categories Hymn. Sung in English."
         },
         {
             "postId": 53563,
@@ -2379,6 +2640,11 @@
             ],
             "language": "swe",
             "why": "Östen med Resten – Hon kommer med solsken; Melodifestivalen 2002. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 53623,
+            "language": "swe",
+            "why": "Östen med Resten – Maria. Melodifestivalen 2003 sung in Swedish (eurovisionworld Language: Swedish; lyrics Till vår lilla by kom Maria). One spoken Spanish line (Yo te quiero) is not a Spanish-language version."
         }
     ]
 }

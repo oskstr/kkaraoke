@@ -30,6 +30,7 @@ export const LANGUAGE_LABELS: Record<string, string> = {
     nld: "Dutch",
     jpn: "Japanese",
     kor: "Korean",
+    lat: "Latin",
     mul: "Multiple",
     nap: "Neapolitan",
     pan: "Punjabi",
