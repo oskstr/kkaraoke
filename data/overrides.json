@@ -923,6 +923,11 @@
             "why": "Bob Marley – Iron Lion Zion. English-language posthumous 1992 single (I'm gonna be iron like a lion in Zion / I had to run like a fugitive). songlyrics / LyricsFreak."
         },
         {
+            "postId": 48507,
+            "language": "eng",
+            "why": "Bob Seger & the Silver Bullet Band – Sunspot Baby. English-language 1976 Night Moves album track. Wikipedia."
+        },
+        {
             "postId": 48511,
             "language": "eng",
             "why": "Bob Sinclar – Sound of Freedom. English-language 2007 dance single feat. Cutee B, Gary Pine & Dollarman (Everybody's free / This is the sound of freedom). songlyrics. Venue Bob Sinclair; dump artist-scoped that English vocal."
@@ -1478,6 +1483,11 @@
             "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision. Sung in Swedish."
         },
         {
+            "postId": 49023,
+            "language": "eng",
+            "why": "Clean Bandit, Mabel & 24kGoldn – Tick Tock. English-language 2020 single. Wikipedia. Venue omitted Mabel; dump matched the same English cut."
+        },
+        {
             "postId": 49025,
             "language": "eng",
             "why": "Cliff Richard – Lucky Lips. English-language 1963 UK hit cover of Ruth Brown. Wikipedia."
@@ -1520,6 +1530,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 49098,
+            "language": "eng",
+            "why": "The Cornelius Brothers & Sister Rose – Treat Her Like a Lady. English-language 1971 hit. Wikipedia."
+        },
+        {
             "postId": 49099,
             "language": "eng",
             "why": "Corona – The Rhythm of the Night (venue The Rythm Of The Night). English-language 1993 eurodance hit (This is the rhythm of the night / This is the rhythm of my life). Songfacts / Genius."
@@ -1544,6 +1559,11 @@
             "year": 1968,
             "title": "Walk on the Water",
             "why": "CCR – Walk on the Water. Resolver dated 2012; Creedence Clearwater Revival debut album July 1968 (Wikipedia)."
+        },
+        {
+            "postId": 49171,
+            "language": "eng",
+            "why": "Creedence Clearwater Revival – The Night Time Is the Right Time. English-language Green River cover of the Roosevelt Sykes / Ray Charles blues. Wikipedia."
         },
         {
             "postId": 49174,
@@ -1767,6 +1787,11 @@
             "why": "Dixie Chicks – Wide Open Spaces. English-language 1998 title-track single (She needs wide open spaces). Wikipedia."
         },
         {
+            "postId": 49467,
+            "language": "eng",
+            "why": "Dolly Parton – You're the Only One. English-language 1979 Great Balls of Fire single. Wikipedia."
+        },
+        {
             "postId": 49471,
             "why": "Credited Christmas song (Dolly Parton – Hard Candy Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -1848,6 +1873,16 @@
             "postId": 49532,
             "language": "eng",
             "why": "The Drifters – Under the Boardwalk. English-language 1964 hit (Oh when the sun beats down and burns the tar up on the roof). Wikipedia."
+        },
+        {
+            "postId": 49533,
+            "language": "eng",
+            "why": "Drowning Pool – Sinner. English-language 2001 Sinner album track. Wikipedia."
+        },
+        {
+            "postId": 49534,
+            "language": "eng",
+            "why": "Dru Hill feat. Redman – How Deep Is Your Love. English-language 1998 Rush Hour soundtrack single. Wikipedia. Not the Bee Gees song."
         },
         {
             "postId": 49536,
@@ -2021,6 +2056,11 @@
             "postId": 49709,
             "language": "eng",
             "why": "Elton John & LeAnn Rimes – Written in the Stars. English-language 1999 Aida single. Wikipedia."
+        },
+        {
+            "postId": 49710,
+            "language": "eng",
+            "why": "Elton John & RuPaul – Don't Go Breaking My Heart. English-language 1994 remix/cover of the John/Dee duet. Wikipedia."
         },
         {
             "postId": 49712,
@@ -2474,6 +2514,16 @@
             "why": "Flo Rida feat. Kesha – Right Round. English-language 2009 R.O.O.T.S. single interpolating Dead or Alive. Wikipedia."
         },
         {
+            "postId": 50026,
+            "language": "eng",
+            "why": "Flo Rida feat. Jason Derulo – Hello Friday. English-language 2016 single. Wikipedia."
+        },
+        {
+            "postId": 50027,
+            "language": "eng",
+            "why": "Flo Rida feat. Robin Thicke & Verdine White – I Don't Like It, I Love It. English-language 2015 My House single. Wikipedia."
+        },
+        {
             "postId": 50032,
             "language": "eng",
             "why": "Flogging Molly – The Worst Day Since Yesterday. English-language 2000 Swagger cut (It's the worst day since yesterday). Dump exact-matched Swagger."
@@ -2482,6 +2532,11 @@
             "postId": 50034,
             "language": "eng",
             "why": "Flogging Molly – The Seven Deadly Sins. English-language 2004 Within a Mile of Home cut. Dump exact-matched that album. English lyrics, not Irish-language."
+        },
+        {
+            "postId": 50071,
+            "language": "eng",
+            "why": "Fort Minor feat. Holly Brook – Where'd You Go. English-language 2006 The Rising Tied single. Wikipedia."
         },
         {
             "postId": 50076,
@@ -2617,6 +2672,11 @@
             "why": "Gary Jules – Mad World. English-language 2001 piano cover of Tears for Fears (All around me are familiar faces). Wikipedia. Donnie Darko soundtrack cut."
         },
         {
+            "postId": 50156,
+            "language": "eng",
+            "why": "Gary Moore & Phil Lynott – Out in the Fields. English-language 1985 single. Wikipedia."
+        },
+        {
             "postId": 50157,
             "language": "eng",
             "why": "Gary Puckett & the Union Gap – Young Girl. English-language 1968 hit (Young girl, get out of my mind). Wikipedia. Venue Gary Pucket."
@@ -2742,6 +2802,11 @@
             "why": "The Go-Go's – Our Lips Are Sealed. English-language 1981 Beauty and the Beat single. Wikipedia. Venue Goo Goo's."
         },
         {
+            "postId": 50268,
+            "language": "eng",
+            "why": "The Grass Roots – Midnight Confessions. English-language 1968 hit. Wikipedia."
+        },
+        {
             "postId": 50279,
             "language": "eng",
             "why": "Green Day – Jesus of Suburbia. English-language 2004 American Idiot suite (I'm the son of rage and love / The Jesus of Suburbia). Wikipedia. The Simpson's Theme row stays blank (instrumental)."
@@ -2844,6 +2909,11 @@
             "postId": 50358,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50365,
+            "language": "eng",
+            "why": "Hermes House Band – Country Roads. English-language cover of John Denver's Take Me Home, Country Roads. Wikipedia. Venue remix; same English lyric."
         },
         {
             "postId": 50366,
@@ -3334,6 +3404,11 @@
             "why": "Jimi Hendrix – All Along the Watchtower. English-language 1968 Electric Ladyland cover of Dylan (There must be some kind of way outta here). Wikipedia."
         },
         {
+            "postId": 50676,
+            "language": "eng",
+            "why": "Jimi Jamison – I'm Always Here (Baywatch theme). English-language 1993 TV-theme single. Wikipedia. Venue Jimi Jameson."
+        },
+        {
             "postId": 50677,
             "language": "eng",
             "why": "Jimmy Buffett – Margaritaville. English-language 1977 Changes in Latitudes single (Nibblin' on sponge cake / Watchin' the sun bake). Wikipedia. Dump matched a Margaritaville / Boat Drinks pairing; venue title is Margaritaville."
@@ -3392,6 +3467,11 @@
             "why": "Johannes Bah Kuhnke – Tonight. Melodifestivalen 2010 heat 3 (eliminated). Sung in English (I said something really cold / Tonight I'll make you feel the fire tonight). eurovisionworld Language: English."
         },
         {
+            "postId": 50718,
+            "language": "eng",
+            "why": "John Cafferty & the Beaver Brown Band – On the Dark Side. English-language 1983 Eddie and the Cruisers single. Wikipedia."
+        },
+        {
             "postId": 50721,
             "year": 1971,
             "title": "Take Me Home, Country Roads",
@@ -3413,6 +3493,11 @@
             "postId": 50732,
             "language": "eng",
             "why": "John Legend – Used to Love You. English-language John Legend cut (I used to love you / Not like I used to). songlyrics Used to Love U. Dump hitchhiked a later compilation; credited performer is Legend."
+        },
+        {
+            "postId": 50737,
+            "language": "eng",
+            "why": "John Legend feat. André 3000 – Green Light. English-language 2008 Evolver single. Wikipedia."
         },
         {
             "postId": 50739,
@@ -3746,6 +3831,11 @@
             ]
         },
         {
+            "postId": 50877,
+            "language": "eng",
+            "why": "Justin Bieber feat. Nicki Minaj – Beauty and a Beat. English-language 2012 Believe single. Wikipedia. Venue Beauty And The Beat."
+        },
+        {
             "postId": 50880,
             "language": "eng",
             "why": "Justin Timberlake – Like I Love You. English-language 2002 Justified lead single feat. Clipse (I wanna love you like I love you). Billboard / Justified."
@@ -3764,6 +3854,11 @@
             "postId": 50891,
             "language": "eng",
             "why": "Justin Timberlake – Chop Me Up. English-language 2006 FutureSex/LoveSounds cut feat. Timbaland & Three 6 Mafia. Dump matched that album recording."
+        },
+        {
+            "postId": 50893,
+            "language": "eng",
+            "why": "Ciara feat. Justin Timberlake – Love Sex Magic. English-language 2009 Fantasy Ride single. Wikipedia. Venue Justin Timberlake & Ciara."
         },
         {
             "postId": 50898,
@@ -3807,6 +3902,11 @@
             "postId": 50932,
             "language": "eng",
             "why": "KC and the Sunshine Band – Please Don't Go. English-language 1979 single (Baby, please don't go). Wikipedia. Not the KC/Double You later dance remakes as a different-language cut."
+        },
+        {
+            "postId": 50956,
+            "language": "eng",
+            "why": "Kelly Clarkson – I Do Not Hook Up. English-language 2009 All I Ever Wanted single. Wikipedia."
         },
         {
             "postId": 50974,
@@ -3899,6 +3999,11 @@
             "postId": 51056,
             "language": "eng",
             "why": "Kitty Wells – Searching (For Someone Like You). English-language 1956 country hit. Dump matched Searching on Twenty Great Hits."
+        },
+        {
+            "postId": 51059,
+            "language": "eng",
+            "why": "The Kooks – Naïve. English-language 2006 Inside In/Inside Out single. Wikipedia. Venue Naive."
         },
         {
             "postId": 51074,
@@ -4116,6 +4221,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51253,
+            "language": "eng",
+            "why": "Limp Bizkit – Nookie. English-language 1999 Significant Other single. Wikipedia."
+        },
+        {
             "postId": 51257,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -4232,6 +4342,11 @@
             "why": "Louis Prima – Just a Gigolo (Ain't Nobody). English-language Just a Gigolo / I Ain't Got Nobody medley (I'm just a gigolo / I ain't got nobody). Dump matched Just A Gigolo. English lyrics, not the German Schöner Gigolo original."
         },
         {
+            "postId": 51341,
+            "language": "eng",
+            "why": "Louis Prima – I've Got You Under My Skin. English-language Cole Porter standard; Prima's Vegas-era cut is sung in English. Wikipedia. Venue I got you under my skin."
+        },
+        {
             "postId": 51342,
             "language": "eng",
             "why": "Louis Prima – I Wan'na Be Like You from The Jungle Book. Same English-language film cut as the other listing; not the Swedish dub."
@@ -4320,6 +4435,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51438,
+            "language": "eng",
+            "why": "The Main Ingredient – Everybody Plays the Fool. English-language 1972 hit. Wikipedia."
+        },
+        {
             "postId": 51441,
             "year": 1965,
             "title": "California Dreamin'",
@@ -4335,6 +4455,11 @@
             "postId": 51444,
             "language": "eng",
             "why": "Manfred Mann – Davy's on the Road Again. English-language 1978 Manfred Mann's Earth Band hit. Dump matched that English recording."
+        },
+        {
+            "postId": 51445,
+            "language": "eng",
+            "why": "The Manhattans – Kiss and Say Goodbye. English-language 1976 hit. Wikipedia."
         },
         {
             "postId": 51455,
@@ -4447,6 +4572,11 @@
             "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51552,
+            "language": "eng",
+            "why": "Marvin Gaye & Tammi Terrell – Ain't Nothing Like the Real Thing. English-language 1968 Motown hit. Wikipedia. Venue Nothing like the real thing; dump matched an alternate take of the same English lyric."
+        },
+        {
             "postId": 51555,
             "language": "eng",
             "why": "Mary Hopkin – Those Were the Days. English-language 1968 hit (Those were the days my friend / We thought they'd never end). Wikipedia. Venue Mary Hopkins. Russian melody; this catalog cut is the English lyric."
@@ -4465,6 +4595,11 @@
             "postId": 51559,
             "language": "eng",
             "why": "Mary Mary – Shackles (Praise You). English-language 2000 Thankful single. Wikipedia. Venue Shackles."
+        },
+        {
+            "postId": 51563,
+            "language": "eng",
+            "why": "Matchbox Twenty – Back 2 Good. English-language 1998 Yourself or Someone Like You single. Wikipedia."
         },
         {
             "postId": 51566,
@@ -4633,6 +4768,11 @@
             "why": "Molly Sandén – Why Am I Crying. Melodifestivalen 2012. Sung in English (eurovisionworld Language: English)."
         },
         {
+            "postId": 51735,
+            "language": "eng",
+            "why": "Morrissey – The Last of the Famous International Playboys. English-language 1989 single. Wikipedia."
+        },
+        {
             "postId": 51750,
             "language": "eng",
             "why": "Ewan McGregor & Alessandro Safina – Your Song from Moulin Rouge! English-language film performance of the Elton John song."
@@ -4791,6 +4931,11 @@
             "why": "O-Zone – Dragostea din tei. Sung in Romanian. MusicBrainz work had no language."
         },
         {
+            "postId": 51917,
+            "language": "eng",
+            "why": "The O'Jays – Back Stabbers. English-language 1972 hit. Wikipedia."
+        },
+        {
             "postId": 51937,
             "title": "It's Gettin' Better (Man!!)",
             "year": 1997,
@@ -4903,6 +5048,11 @@
             "why": "Patty Smyth feat. Don Henley – Sometimes Love Just Ain't Enough. English-language 1992 single. Wikipedia. Venue Patti Smith & Don Henley; the Don Henley duet is Smyth, not Patti Smith."
         },
         {
+            "postId": 52039,
+            "language": "eng",
+            "why": "Paul Anka – Lonely Boy. English-language 1959 hit. Wikipedia."
+        },
+        {
             "postId": 52053,
             "language": "eng",
             "why": "Simon & Garfunkel – The Sound of Silence. English-language 1965/1966 hit (Hello darkness, my old friend). Wikipedia."
@@ -4922,9 +5072,19 @@
             "why": "Peabo Bryson & Regina Belle Aladdin; from was missing. Venue credits the English Aladdin performers, not the Swedish dub. Sung in English."
         },
         {
+            "postId": 52079,
+            "language": "eng",
+            "why": "Pearl Jam – Last Kiss. English-language 1999 cover of the Wayne Cochran / J. Frank Wilson hit. Wikipedia."
+        },
+        {
             "postId": 52088,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52098,
+            "language": "eng",
+            "why": "Pet Shop Boys – Domino Dancing. English-language 1988 Introspective single. Wikipedia."
         },
         {
             "postId": 52103,
@@ -5062,6 +5222,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52209,
+            "language": "eng",
+            "why": "Pras Michel feat. Ol' Dirty Bastard & Mýa – Ghetto Supastar (That Is What You Are). English-language 1998 Bulworth single. Wikipedia. Venue Ghetto superstar (duet)."
+        },
+        {
             "postId": 52221,
             "language": "eng",
             "why": "Primal Scream – Movin' On Up. English-language 1991 Screamadelica opener (My light shines on). Wikipedia. Venue Moving on up."
@@ -5140,6 +5305,11 @@
             "postId": 52299,
             "language": "eng",
             "why": "R. Kelly – Slow Wind. English-language TP.3 Reloaded cut. Dump matched TP.3 Reloaded. English lyrics, not a non-English cut."
+        },
+        {
+            "postId": 52334,
+            "language": "eng",
+            "why": "The Crusaders feat. Randy Crawford – Street Life. English-language 1979 hit. Wikipedia. Venue Randy Crawford."
         },
         {
             "postId": 52343,
@@ -5306,6 +5476,11 @@
             "why": "Robbie Williams – Millennium. Venue Millenium. English-language 1998 I've Been Expecting You single (Come and have a look / At the century before ya). Wikipedia."
         },
         {
+            "postId": 52488,
+            "language": "eng",
+            "why": "Robbie Williams & Gary Barlow – Shame. English-language 2010 In and Out of Consciousness single. Wikipedia."
+        },
+        {
             "postId": 52489,
             "language": "eng",
             "why": "Robbie Williams & Nicole Kidman – Somethin' Stupid. English-language 2001 Swing When You're Winning cover of the Sinatra duet. Wikipedia."
@@ -5439,6 +5614,11 @@
             "language": "eng",
             "title": "Oh, Pretty Woman",
             "why": "Roy Orbison – Oh, Pretty Woman. The 1964 Monument single, Billboard/UK #1, and the work's published name (Wikipedia). Pretty Woman is the everyday shortening (and what the Dutch translation work was called); it is not a different cut. Matcher had linked a Pretty Woman recording to that Dutch work (nld)."
+        },
+        {
+            "postId": 52584,
+            "language": "eng",
+            "why": "Rufus feat. Chaka Khan – Tell Me Something Good. English-language 1974 Rags to Rufus Stevie Wonder-written single. Wikipedia."
         },
         {
             "postId": 52600,
@@ -5718,6 +5898,11 @@
             "why": "The Smiths – Panic. English-language 1986 single (Hang the DJ, hang the DJ, hang the DJ). Wikipedia."
         },
         {
+            "postId": 52824,
+            "language": "eng",
+            "why": "Smokey Robinson – Cruisin'. English-language 1979 Where There's Smoke... single. Wikipedia."
+        },
+        {
             "postId": 52827,
             "language": "eng",
             "why": "Snoop Dogg feat. Pharrell – Drop It Like It's Hot. English-language 2004 R&G (Rhythm & Gangsta) single. Wikipedia. Venue Snoop Dog & Pharrell."
@@ -5779,6 +5964,11 @@
             "why": "Sonja Aldén – I din himmel; Melodifestivalen 2012. Category Melodifestivalen. Sung in Swedish."
         },
         {
+            "postId": 52850,
+            "language": "eng",
+            "why": "The S.O.S. Band – Take Your Time (Do It Right). English-language 1980 hit. Wikipedia. Venue Sos."
+        },
+        {
             "postId": 52853,
             "language": "eng",
             "why": "Julie Andrews – My Favorite Things from The Sound of Music. Venue credits the English-language film performer, not a Swedish-language cast."
@@ -5812,6 +6002,11 @@
             "why": "Stevie Wonder – Happy Birthday. Birthday song with a credited rendition (docs rule 2); keep artist, mark categories Birthday."
         },
         {
+            "postId": 52943,
+            "language": "eng",
+            "why": "Stevie Wonder – Uptight (Everything's Alright). English-language 1965 hit. Wikipedia. Dump matched an excerpt of the same English lyric."
+        },
+        {
             "postId": 52946,
             "language": "eng",
             "why": "Sting – Every Breath You Take. Venue credits Sting; the recording is The Police (Every breath you take / Every move you make). Wikipedia. Same English lyrics; dump matched Synchronicity."
@@ -5828,6 +6023,11 @@
             ],
             "language": "swe",
             "why": "Style – Dover-Calais. Melodifestivalen 1986 (3rd). English place-name title, Swedish lyrics (Vi såg på varann då vi närmade oss land). Venue is the Swedish hit, not the later English-language single (Wikipedia Language: Swedish; eurovisionworld)."
+        },
+        {
+            "postId": 52974,
+            "language": "eng",
+            "why": "Sublime – Santeria. English-language 1996 Sublime album track. Wikipedia."
         },
         {
             "postId": 52976,
@@ -6001,6 +6201,11 @@
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
         },
         {
+            "postId": 53141,
+            "language": "eng",
+            "why": "The Fray – Over My Head (Cable Car). English-language 2005 How to Save a Life single. Wikipedia."
+        },
+        {
             "postId": 53146,
             "language": "eng",
             "why": "The Isley Brothers – Tears. English-language 1996 Mission to Please single (I can't hold back these tears / Let me cry). LyricsFreak; JioSaavn Language: English."
@@ -6057,6 +6262,16 @@
             "postId": 53179,
             "language": "eng",
             "why": "The Weeknd – I Feel It Coming. English-language 2016 Starboy single feat. Daft Punk (I feel it coming / I feel it coming, babe). Wikipedia."
+        },
+        {
+            "postId": 53193,
+            "language": "eng",
+            "why": "The Who – We're Not Gonna Take It. English-language 1969 Tommy closer. Wikipedia. Venue Were ot going to take it. Not the Twisted Sister song."
+        },
+        {
+            "postId": 53201,
+            "language": "eng",
+            "why": "Third Eye Blind – Jumper. English-language 1998 Third Eye Blind single. Wikipedia."
         },
         {
             "postId": 53210,
@@ -6140,6 +6355,11 @@
             "why": "Toby Keith – American Soldier. English-language 2003 Shock'n Y'all single (I'm just trying to be a father / I'm an American soldier). Wikipedia / well-known English recording."
         },
         {
+            "postId": 53266,
+            "language": "eng",
+            "why": "Toby Keith feat. Willie Nelson – Beer for My Horses. English-language 2003 Unleashed single. Wikipedia."
+        },
+        {
             "postId": 53280,
             "language": "eng",
             "why": "Tom Jones – Thunderball. English-language Bond theme; venue credits Jones, not a translated cut."
@@ -6153,6 +6373,11 @@
             "postId": 53289,
             "language": "eng",
             "why": "Tom Petty – Mary Jane's Last Dance. English-language 1993 Greatest Hits single (She grew up in an Indiana town). Wikipedia. Dump matched a later Full Moon Fever appearance of the same English song."
+        },
+        {
+            "postId": 53290,
+            "language": "eng",
+            "why": "Tom Petty and the Heartbreakers – Don't Come Around Here No More. English-language 1985 Southern Accents single. Wikipedia."
         },
         {
             "postId": 53296,
@@ -6292,6 +6517,11 @@
             "why": "Trance Dance – You're Gonna Get It. English-language 1987/1988 single from Dancing in the Shadows (You can have it right here / You're gonna get it). Musikon style: Engelska; Dork lyrics."
         },
         {
+            "postId": 53362,
+            "language": "eng",
+            "why": "The Turtles – Happy Together. English-language 1967 hit. Wikipedia."
+        },
+        {
             "postId": 53388,
             "year": 1971,
             "language": "swe",
@@ -6346,6 +6576,11 @@
             "postId": 53435,
             "language": "eng",
             "why": "Vanessa Amorosi – Holiday. English-language 2010 Hazardous single. Wikipedia discography; Australian pop cut, not a non-English recording."
+        },
+        {
+            "postId": 53439,
+            "language": "eng",
+            "why": "Vanessa Williams – Goodbye. English-language 1991 The Comfort Zone album track (Do we really have to say goodbye). elyrics / Dork."
         },
         {
             "postId": 53444,
