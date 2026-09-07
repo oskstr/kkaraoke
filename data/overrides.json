@@ -449,6 +449,26 @@
             "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
         },
         {
+            "postId": 48298,
+            "language": "eng",
+            "why": "Bette Midler – The Gift of Love. English-language Billy Steinberg / Susanna Hoffs / Tom Kelly cut (Give me the gift of love / Look me in the eyes). Streetdirectory / muzikum Language: English."
+        },
+        {
+            "postId": 48300,
+            "language": "eng",
+            "why": "Bette Midler – Wind Beneath My Wings. English-language 1988 Beaches hit (Did you ever know that you're my hero / You are the wind beneath my wings). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 48303,
+            "language": "eng",
+            "why": "Bette Midler – Every Road Leads Back to You. English-language 1991 For the Boys soundtrack cut (Every road just seems to lead me back to you); Diane Warren. eLyrics / LyricsFreak."
+        },
+        {
+            "postId": 48306,
+            "language": "eng",
+            "why": "Bette Midler – Lullaby in Blue. English-language 1998 Bathhouse Betty cut about a child given up for adoption (The child I never knew / My lullaby in blue); Adam Cohen / Brock Walsh. eLyrics / Wikipedia."
+        },
+        {
             "postId": 48375,
             "why": "Credited Christmas song (Bing Crosby – White Christmas). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -515,9 +535,45 @@
             "why": "Blue Lagoon – Now That We Found Love. English-language 2005 Club Lagoon dance cover of the O'Jays/Third World song (Now that we found love what are we gonna do with it). Gaana Language: English; azlyrics.biz / elyrics."
         },
         {
+            "postId": 48484,
+            "language": "eng",
+            "why": "Bob Marley – One Love. English-language Exodus / Legend recording (One love, one heart / Let's get together and feel all right). Songfacts. Jamaican English, not a non-English cut."
+        },
+        {
             "postId": 48486,
             "year": 1976,
-            "why": "Bob Marley – Positive Vibration on Rastaman Vibration. Year from Wikipedia/Discogs (1976)."
+            "language": "eng",
+            "why": "Bob Marley – Positive Vibration. English-language 1976 Rastaman Vibration cut (If you get down and you quarrel everyday / Make way for the positive day). Lyricszoo. Year from Wikipedia/Discogs (1976). Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48489,
+            "language": "eng",
+            "why": "Bob Marley – Jammin'. English-language 1977 Exodus single Jamming (We're jamming / I wanna jam it with you / No bullet could stop us now). Wikipedia. Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48493,
+            "language": "eng",
+            "why": "Bob Marley – Is This Love. English-language 1978 Kaya single (I want to love you and treat you right / Is this love that I'm feelin'). Lyricszoo. Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48494,
+            "language": "eng",
+            "why": "Bob Marley – Redemption Song. English-language 1980 Uprising closer (Old pirates, yes, they rob I / Emancipate yourselves from mental slavery). Songfacts. Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48495,
+            "language": "eng",
+            "why": "Bob Marley – Sun Is Shining. English-language Soul Revolution / Legend cut (Sun is shining, the weather is sweet / Make you wanna move your dancing feet). Lyricszoo. Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48497,
+            "language": "eng",
+            "why": "Bob Marley – Natural Mystic. English-language 1977 Exodus opener (There's a natural mystic blowing through the air / Things are not the way they used to be). Genius. Jamaican English, not a non-English cut."
+        },
+        {
+            "postId": 48498,
+            "language": "eng",
+            "why": "Bob Marley – Iron Lion Zion. English-language posthumous 1992 single (I'm gonna be iron like a lion in Zion / I had to run like a fugitive). songlyrics / LyricsFreak."
         },
         {
             "postId": 48521,
@@ -785,6 +841,31 @@
             "why": "Charlotte Perrelli – Hero; Melodifestivalen/Eurovision 2008. Categories Melodifestivalen + Eurovision. Sung in English (Wikipedia Language: English; Diggiloo). MusicBrainz work had no language."
         },
         {
+            "postId": 48896,
+            "language": "eng",
+            "why": "Chas & Dave – Margate. English-language 1982 Job Lot rockney single (Down to Margate / You can keep the Costa Brava). Songfacts. Cockney English, not a non-English cut."
+        },
+        {
+            "postId": 48897,
+            "language": "eng",
+            "why": "Chas & Dave – Gertcha. English-language 1979 Double Bubble rockney single (Gertcha, cowson, gertcha). Songfacts. Cockney English, not a non-English cut."
+        },
+        {
+            "postId": 48898,
+            "language": "eng",
+            "why": "Chas & Dave – No Pleasing You. Venue shortens Ain't No Pleasing You; same English-language 1982 Mustn't Grumble single (Well I built my life around you / Oh darling, there ain't no pleasin' you). Songfacts / songlyrics."
+        },
+        {
+            "postId": 48899,
+            "language": "eng",
+            "why": "Chas & Dave – London Girls. English-language 1982 Job Lot cut (Give me a London girl every time / London girls are the best in the world). songlyrics / muztext."
+        },
+        {
+            "postId": 48900,
+            "language": "eng",
+            "why": "Chas & Dave – Rabbit. English-language 1980 rockney single (You've got more rabbit than Sainsbury's / You won't stop talking). Songfacts. Cockney English, not a non-English cut."
+        },
+        {
             "postId": 48910,
             "language": "eng",
             "why": "The Cheeky Girls – Cheeky Song (Touch My Bum). Romanian twins; English-language 2002/03 novelty (Come and smile, don't be shy / Touch my bum, this is life). Genius / songlyrics. Venue Cheeky Song."
@@ -888,6 +969,21 @@
             "postId": 49099,
             "language": "eng",
             "why": "Corona – The Rhythm of the Night (venue The Rythm Of The Night). English-language 1993 eurodance hit (This is the rhythm of the night / This is the rhythm of my life). Songfacts / Genius."
+        },
+        {
+            "postId": 49103,
+            "language": "eng",
+            "why": "Counting Crows – American Girls. English-language 2002 Hard Candy single (American girls are weather and noise / Playing the changes for all of the boys). Songfacts. Not Tom Petty American Girl."
+        },
+        {
+            "postId": 49105,
+            "language": "eng",
+            "why": "Counting Crows – Hard Candy. English-language 2002 title track (On certain Sundays in November / It's just the same hard candy you're remembering again). eLyrics."
+        },
+        {
+            "postId": 49112,
+            "language": "eng",
+            "why": "Counting Crows – Angels of the Silences. English-language 1996 Recovering the Satellites single (Little angels of the silences that climb into my bed / All my innocence is wasted on the dead and dreaming). The Lyric Archive."
         },
         {
             "postId": 49158,
@@ -1468,9 +1564,49 @@
             "why": "Sung in Italian. MusicBrainz work had no language."
         },
         {
+            "postId": 49864,
+            "language": "eng",
+            "why": "Eskimo Joe – Black Fingernails, Red Wine. English-language 2006 Australian rock single (Black fingernails, red wine / I wanna make you all mine). Genius / songlyrics."
+        },
+        {
+            "postId": 49865,
+            "language": "eng",
+            "why": "Eskimo Joe – Foreign Land. English-language 2009 Inshalla single (This is a foreign land / I smell the blood of an Australian). eLyrics."
+        },
+        {
+            "postId": 49866,
+            "language": "eng",
+            "why": "Eskimo Joe – Sarah. English-language 2006 Black Fingernails, Red Wine cut (Sarah / Won't you tell me your name / Emergency I think I'm falling apart). eLyrics / muztext Language: English."
+        },
+        {
+            "postId": 49867,
+            "language": "eng",
+            "why": "Eskimo Joe – Love Is a Drug. English-language 2011 Ghosts of the Past single (Love is a drug / But the drug won't take me higher). eLyrics / muztext Language: English."
+        },
+        {
             "postId": 49868,
             "language": "eng",
             "why": "Espen Lind – Unloved. Norwegian singer; English-language 2004/2005 April single and VG-lista #1 (I bet you don't know how it feels / what it's like to feel unloved). Genius / songlyrics."
+        },
+        {
+            "postId": 49887,
+            "language": "eng",
+            "why": "Eva Cassidy – Somewhere Over the Rainbow. English-language Wizard of Oz standard cover (Somewhere over the rainbow / Way up high). Credited Eva Cassidy recording, not a non-English cut."
+        },
+        {
+            "postId": 49888,
+            "language": "eng",
+            "why": "Eva Cassidy – People Get Ready. English-language Curtis Mayfield cover (People get ready / There's a train a-comin'). Credited Eva Cassidy recording, not a non-English cut."
+        },
+        {
+            "postId": 49893,
+            "language": "eng",
+            "why": "Eva Cassidy – What a Wonderful World. English-language Louis Armstrong standard cover (I see trees of green / Red roses too). Credited Eva Cassidy recording, not a non-English cut."
+        },
+        {
+            "postId": 49896,
+            "language": "eng",
+            "why": "Eva Cassidy – Fields of Gold. English-language Sting cover (You'll remember me when the west wind moves / Among the fields of barley). cancioneros / Play Like The Greats. Dump matched Michael Bolton feat. Eva Cassidy; venue credits Eva Cassidy. Same English lyrics either way."
         },
         {
             "postId": 49897,
@@ -2143,10 +2279,21 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50799,
+            "language": "eng",
+            "why": "Josh Groban – My Confession. English-language 2003 Closer cut (I have been blind, unwilling to see the true love you're giving / Hear my confession); Richard Page. LyricsFreak / muztext Language: English. Not an Italian or Spanish Groban cut."
+        },
+        {
+            "postId": 50801,
+            "language": "eng",
+            "why": "Josh Groban – When You Say You Love Me. English-language 2003 Closer cut (When you say you love me / The world goes still, so still inside); Mark Hammond / Robin Scoffield. Genius. Not Diana Ross When You Tell Me That You Love Me, and not Italian Per Te on the same album."
+        },
+        {
             "postId": 50802,
             "title": "You Are Loved (Don't Give Up)",
             "year": 2006,
-            "why": "Josh Groban; Wikipedia/MusicBrainz 2006 single from Awake."
+            "language": "eng",
+            "why": "Josh Groban – You Are Loved (Don't Give Up). English-language 2006 Awake single (Don't give up / It's just the weight of the world / Because you are loved). Genius / Wikipedia. Not an Italian or Spanish Groban cut. Title/year already corrected."
         },
         {
             "postId": 50828,
@@ -2571,6 +2718,26 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51229,
+            "language": "eng",
+            "why": "Lifehouse – Blind. English-language 2005 Lifehouse album cut (After all this time I never thought we'd be here / When my love for you is blind); Jason Wade. eLyrics. Dump matched the Lifehouse album recording."
+        },
+        {
+            "postId": 51230,
+            "language": "eng",
+            "why": "Lifehouse – Broken. English-language 2008 Who We Are single (I'm fallin' apart, I'm barely breathing / With a broken heart that's still beating). Wikipedia / Dork lyrics."
+        },
+        {
+            "postId": 51231,
+            "language": "eng",
+            "why": "Lifehouse – Halfway Gone. English-language 2009 Smoke & Mirrors single (I'm halfway gone and I'm on my way / 'Cause you're halfway in, but don't take too long). Dork / ilyrics."
+        },
+        {
+            "postId": 51233,
+            "language": "eng",
+            "why": "Lifehouse – Whatever It Takes. English-language 2007 Who We Are single (I'll do whatever it takes / To turn this around). Songfacts."
+        },
+        {
             "postId": 51241,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -2809,6 +2976,26 @@
                 "Eurovision"
             ],
             "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 51566,
+            "language": "eng",
+            "why": "Matt Monro – Love Is a Many Splendored Thing. English-language Sammy Fain / Paul Francis Webster standard (Love is a many-splendored thing / It's the April rose that only grows in the early spring). eLyrics / muztext Language: English."
+        },
+        {
+            "postId": 51567,
+            "language": "eng",
+            "why": "Matt Monro – More. English-language Norman Newell lyrics to the Mondo Cane theme (More than the greatest love the world has known), not Italian Ti guarderò nel cuore. cancioneros / Wikipedia."
+        },
+        {
+            "postId": 51568,
+            "language": "eng",
+            "why": "Matt Monro – The Impossible Dream. English-language Man of La Mancha standard (To dream the impossible dream / To fight the unbeatable foe); Joe Darion / Mitch Leigh. songlyrics / eLyrics. Not a Spanish-language cut."
+        },
+        {
+            "postId": 51571,
+            "language": "eng",
+            "why": "Matt Monro – Walk Away. English-language Don Black lyrics to Udo Jürgens' Warum nur, warum? (Walk away, please go / Before you throw your life away), not the German Eurovision original. Genius / Wikipedia."
         },
         {
             "postId": 51595,
