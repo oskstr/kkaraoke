@@ -12,6 +12,16 @@
             "why": "5 Seconds of Summer – Girls Talk Boys. Ghostbusters (2016) soundtrack cut; venue credits the English-language recording (Wikipedia)."
         },
         {
+            "postId": 47742,
+            "language": "eng",
+            "why": "50 Cent – Candy Shop. English-language 2005 The Massacre single feat. Olivia (I'll take you to the candy shop). Wikipedia."
+        },
+        {
+            "postId": 47744,
+            "language": "eng",
+            "why": "50 Cent feat. Nate Dogg – 21 Questions. English-language 2003 Get Rich or Die Tryin' single (Girl, it's easy to love me now). Wikipedia."
+        },
+        {
             "postId": 47748,
             "language": "eng",
             "why": "98 Degrees – I Do (Cherish You). English-language 1999 single (All I am, all I'll be / I do cherish you for the rest of my life). Genius / Dork. Dump shortened the title to I Do; same 98° cut, not a different I Do."
@@ -51,6 +61,11 @@
             "postId": 47811,
             "language": "eng",
             "why": "Ace of Base – Living in Danger. English-language 1994 single (Genius / album The Sign). MusicBrainz work had no language."
+        },
+        {
+            "postId": 47818,
+            "language": "eng",
+            "why": "Adam and the Ants – Kings of the Wild Frontier. English-language 1980 title-track single. Wikipedia."
         },
         {
             "postId": 47840,
@@ -133,6 +148,11 @@
             ]
         },
         {
+            "postId": 47903,
+            "language": "eng",
+            "why": "Alicia Bridges – I Love the Nightlife. English-language 1978 disco hit (I love the nightlife / I got to boogie). Wikipedia."
+        },
+        {
             "postId": 47904,
             "language": "eng",
             "why": "Alicia Keys – How Come You Don't Call Me Anymore. English-language 2001 Songs in A Minor Prince cover (How come you don't call me anymore). Spotify / Songs in A Minor. Not a non-English cut."
@@ -148,9 +168,24 @@
             "why": "Alicia Keys – Loving You. Venue title covers either her Songs in A Minor Minnie Riperton bonus (Loving you is easy 'cause you're beautiful) or original Lovin' U; both credited Alicia cuts are English. lyricdown / songlyrics."
         },
         {
+            "postId": 47936,
+            "language": "eng",
+            "why": "The Allman Brothers Band – Ain't Wastin' Time No More. English-language 1972 Eat a Peach opener. Dump matched that English recording."
+        },
+        {
             "postId": 47944,
             "language": "eng",
             "why": "Amanda Fondell – All This Way. Idol 2011 winner's single; English lyrics (We made it through storms / we made it all this way)."
+        },
+        {
+            "postId": 47946,
+            "language": "eng",
+            "why": "The Amboy Dukes – Journey to the Center of the Mind. English-language 1968 psychedelic hit. Dump matched that English recording."
+        },
+        {
+            "postId": 47947,
+            "language": "eng",
+            "why": "Amen Corner – (If Paradise Is) Half as Nice. English-language 1969 UK #1. Dump matched that English recording."
         },
         {
             "postId": 47951,
@@ -164,6 +199,11 @@
             ],
             "language": "eng",
             "why": "Amy Diamond – Thank You. Melodifestivalen 2008. Sung in English (eurovisionworld Language: English)."
+        },
+        {
+            "postId": 47964,
+            "language": "eng",
+            "why": "Amy Winehouse – Me & Mr Jones. English-language 2006 Back to Black cut. Dump exact-matched Back to Black."
         },
         {
             "postId": 47968,
@@ -236,6 +276,16 @@
             "why": "Andrés Esteche – Olé Olé. Melodifestivalen 2004 sung in English despite the Spanish title (eurovisionworld lyrics; Notpoolen språk Engelska)."
         },
         {
+            "postId": 47982,
+            "language": "eng",
+            "why": "Andy Kim – Rock Me Gently. English-language 1974 US #1 (Rock me gently / Rock me slowly). Wikipedia."
+        },
+        {
+            "postId": 47986,
+            "language": "eng",
+            "why": "The Angels – My Boyfriend's Back. English-language 1963 US #1 (My boyfriend's back and you're gonna be in trouble). Wikipedia."
+        },
+        {
             "postId": 47988,
             "year": 1998,
             "title": "Little Plastic Castle",
@@ -297,9 +347,20 @@
             "why": "Arash – BoroBoro. Persian-language 2004 hit (روزی بود عاشق تو بودم / برو برو دلم تورو نمیخواد), not the later German Ich bin weg (Boro Boro) (official video / Radio Javan lyrics)."
         },
         {
+            "postId": 48026,
+            "language": "eng",
+            "why": "The Archies – Sugar, Sugar. English-language 1969 US #1 (Sugar, ah honey honey / You are my candy girl). Wikipedia."
+        },
+        {
+            "postId": 48027,
+            "language": "eng",
+            "why": "Architechs – Body Groove. Venue Architects; UK garage 2000 hit Body Groove feat. Nana. English vocal. Karaoke books file it the same way. Dump matched Bodygroove."
+        },
+        {
             "postId": 48037,
             "year": 2006,
-            "why": "Truncated dump title of You Probably Couldn't See for the Lights but You Were Staring Straight at Me (Arctic Monkeys). Year from Whatever People Say I Am… (2006) / MusicBrainz dated recordings."
+            "language": "eng",
+            "why": "Arctic Monkeys – You Probably Couldn't See for the Lights but You Were Staring Straight at Me. Truncated dump title already corrected. English-language Whatever People Say I Am… (2006) cut. Wikipedia / dump."
         },
         {
             "postId": 48038,
@@ -307,11 +368,26 @@
             "why": "Are og Odin – Klapp klapp. Sung in Norwegian (Northern dialect: No e d sommer bare klapp klapp i hendern). Rockipedia / lyrics."
         },
         {
+            "postId": 48043,
+            "language": "eng",
+            "why": "Aretha Franklin – (You Make Me Feel Like) A Natural Woman. English-language 1967 King/Goffin/Wexler hit (Looking out on the morning rain). Wikipedia."
+        },
+        {
+            "postId": 48055,
+            "language": "eng",
+            "why": "Ariana Grande – Almost Is Never Enough. English-language 2013 Yours Truly / The Mortal Instruments cut feat. Nathan Sykes. Dump artist-scoped that English recording."
+        },
+        {
             "postId": 48057,
             "why": "Credited Christmas song (Ariana Grande – Santa Tell Me). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 48063,
+            "language": "eng",
+            "why": "Arrow – Hot Hot Hot. English-language 1982 soca hit (Feeling hot hot hot). Wikipedia."
         },
         {
             "postId": 48065,
@@ -364,6 +440,11 @@
             "postId": 48111,
             "language": "eng",
             "why": "The B-52's – Roam. English-language 1989 Cosmic Thing single (Roam if you want to / Roam around the world). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 48114,
+            "language": "eng",
+            "why": "Babyface – Every Time I Close My Eyes. English-language 1996 The Day single (Every time I close my eyes). Wikipedia."
         },
         {
             "postId": 48116,
@@ -475,7 +556,18 @@
             "postId": 48184,
             "title": "No More Tears (Enough Is Enough)",
             "year": 1979,
-            "why": "Donna Summer & Barbra Streisand. Year from Wikipedia (1979)."
+            "language": "eng",
+            "why": "Barbra Streisand & Donna Summer – No More Tears (Enough Is Enough). Title already corrected. English-language 1979 duet (It's raining, it's pouring / My lovelife is boring me to tears). Wikipedia."
+        },
+        {
+            "postId": 48185,
+            "language": "eng",
+            "why": "Barbra Streisand & Celine Dion – Tell Him. English-language 1997 Let's Talk About Love / Higher Ground duet. Wikipedia."
+        },
+        {
+            "postId": 48203,
+            "language": "eng",
+            "why": "Barry Mann – Who Put the Bomp. English-language 1961 novelty (Who put the bomp in the bomp bah bomp bah bomp). Wikipedia."
         },
         {
             "postId": 48221,
@@ -486,6 +578,11 @@
             "postId": 48222,
             "language": "eng",
             "why": "Basshunter – Now You're Gone. Venue filed the English 2008 rewrite (Now you're gone / I realize my love for you was strong), not the Swedish original Boten Anna (Genius; Wikipedia)."
+        },
+        {
+            "postId": 48231,
+            "language": "eng",
+            "why": "Beastie Boys – (You Gotta) Fight for Your Right (To Party!). Venue Fight for your right to party. English-language 1986 Licensed to Ill single. Wikipedia."
         },
         {
             "postId": 48245,
@@ -517,6 +614,11 @@
             "postId": 48288,
             "language": "eng",
             "why": "Bellamy Brothers – If I Said You Had a Beautiful Body. English-language 1979 country #1 (If I said you have a beautiful body / Would you hold it against me). Songfacts / Wikipedia."
+        },
+        {
+            "postId": 48292,
+            "language": "eng",
+            "why": "Ben E. King – Stand by Me. English-language 1961 standard (When the night has come / And the land is dark). Wikipedia."
         },
         {
             "postId": 48294,
@@ -554,6 +656,16 @@
             "why": "Beyoncé – Work It Out. English-language 2002 Austin Powers in Goldmember single (Work it out / Let me see you work it out). Dump exact-matched Dangerously in Love. Separate from the Destiny's Child catalog misfile of the same title."
         },
         {
+            "postId": 48325,
+            "language": "eng",
+            "why": "Beyoncé feat. Sean Paul – Baby Boy. English-language 2003 Dangerously in Love single (Baby boy, you stay on my mind). Wikipedia."
+        },
+        {
+            "postId": 48328,
+            "language": "eng",
+            "why": "Billie Piper – She Wants You. Venue Bill; dump matched She Wants You on Honey to the B. English-language 1998 UK hit. Wikipedia."
+        },
+        {
             "postId": 48329,
             "language": "eng",
             "why": "Bill Haley & His Comets – Rock Around the Clock Tonight. Venue wording of (We're Gonna) Rock Around the Clock (One, two, three o'clock, four o'clock rock). Wikipedia. Dump matched that English hit."
@@ -577,6 +689,11 @@
             "postId": 48344,
             "language": "eng",
             "why": "Billie Jo Spears – What I've Got in Mind. English-language Kenny O'Dell country cut (What I've got in mind is a small cafe out of the way / Making love to you). eLyrics."
+        },
+        {
+            "postId": 48357,
+            "language": "eng",
+            "why": "Billy Idol – Shock to the System. English-language 1993 Cyberpunk single. Dump exact-matched Cyberpunk."
         },
         {
             "postId": 48375,
@@ -695,6 +812,16 @@
             "why": "The Blues Brothers – Soul Man. English-language Sam & Dave cover (I'm a soul man). Credited Blues Brothers recording."
         },
         {
+            "postId": 48447,
+            "language": "eng",
+            "why": "Blues Traveler – Hook. English-language 1994 Four single (It doesn't matter what I say / So long as I sing with inflection). Wikipedia."
+        },
+        {
+            "postId": 48455,
+            "language": "eng",
+            "why": "Blur – Crazy Beat. English-language 2003 Think Tank single. Dump exact-matched Think Tank."
+        },
+        {
             "postId": 48465,
             "language": "eng",
             "why": "Bob Dylan – Blowin' in the Wind. English-language 1963 Freewheelin' standard (The answer, my friend, is blowin' in the wind). Wikipedia. Venue Blowing in the wind."
@@ -756,6 +883,11 @@
             "why": "Bob Sinclar – Together. English-language Soundz of Freedom cut feat. Steve Edwards (One day we'll be together / We'll never be apart). eLyrics / letras. Dump artist-scoped that English vocal."
         },
         {
+            "postId": 48514,
+            "language": "eng",
+            "why": "Bobby (Boris) Pickett – Monster Mash. English-language 1962 novelty (He did the mash / He did the monster mash). Wikipedia."
+        },
+        {
             "postId": 48516,
             "language": "eng",
             "why": "Bobby Darin – Mack the Knife. English-language 1959 hit (Oh, the shark, babe, has such teeth, dear). Blitzstein English lyric of Die Moritat, not the German original."
@@ -768,7 +900,8 @@
         {
             "postId": 48521,
             "year": 1964,
-            "why": "Bobby Vee cover of Venus in Blue Jeans on 30 Big Hits of the 60s (Discogs 1964). Jimmy Clanton original was 1962."
+            "language": "eng",
+            "why": "Bobby Vee – Venus in Blue Jeans. Venue Venus in blue. English-language 1962 Clanton song; Vee cover on 30 Big Hits of the 60s (Discogs 1964). Same English lyric."
         },
         {
             "postId": 48523,
@@ -865,6 +998,11 @@
             "why": "Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision."
         },
         {
+            "postId": 48666,
+            "language": "eng",
+            "why": "Bruce Springsteen – Rosalita (Come Out Tonight). English-language 1973 The Wild, the Innocent & the E Street Shuffle cut. Dump artist-scoped that English recording."
+        },
+        {
             "postId": 48692,
             "language": "eng",
             "why": "Bruno Mars – Uptown Funk. English-language 2014 hit; venue credits Bruno, recording is Mark Ronson feat. Bruno Mars (This hit, that ice cold / Michelle Pfeiffer, that white gold). Official / Genius. Dump matched a Bruno 24K Magic recording of the same English title; same lyrics, not a different-language cut."
@@ -903,6 +1041,11 @@
             ]
         },
         {
+            "postId": 48719,
+            "language": "eng",
+            "why": "The Buckinghams – Kind of a Drag. English-language 1967 US #1. Dump matched that English recording."
+        },
+        {
             "postId": 48720,
             "categories": [
                 "Eurovision"
@@ -938,6 +1081,11 @@
             "why": "Caracola – Smiling in Love; Melodifestivalen 2008. Category Melodifestivalen. Sung in English (YouTube/Mello performance; Bubblegum Dancer lyrics)."
         },
         {
+            "postId": 48754,
+            "language": "eng",
+            "why": "Cardi B feat. Megan Thee Stallion – WAP. English-language 2020 single. Dump artist-scoped that English recording."
+        },
+        {
             "postId": 48755,
             "language": "eng",
             "why": "The Cardigans – My Favourite Game. English-language 1998 Gran Turismo single (I'm losing my favourite game). Wikipedia / Genius. Not a Swedish-language cut."
@@ -951,6 +1099,11 @@
             "postId": 48758,
             "language": "eng",
             "why": "The Cardigans – Lovefool. English-language 1996 First Band on the Moon single (Love me love me say that you love me). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 48761,
+            "language": "eng",
+            "why": "Carl Douglas – Kung Fu Fighting. English-language 1974 hit (Everybody was kung fu fighting). Wikipedia."
         },
         {
             "postId": 48762,
@@ -1000,6 +1153,16 @@
             "why": "Caroline Wennergren – A Different Kind of Love; Melodifestivalen 2005. Category Melodifestivalen. Sung in English (Melodifestivalen 2005 jazz/soul entry)."
         },
         {
+            "postId": 48799,
+            "language": "eng",
+            "why": "The Carpenters – (They Long to Be) Close to You. English-language 1970 Bacharach/David hit (Why do birds suddenly appear). Wikipedia. Not the Cagnet Close to You row."
+        },
+        {
+            "postId": 48806,
+            "language": "eng",
+            "why": "Cartoons – Witch Doctor. English-language 1998 eurodance cover of Ross Bagdasarian. Wikipedia."
+        },
+        {
             "postId": 48810,
             "year": 1970,
             "why": "Cat Stevens – Wild World. Resolver dated a late reissue (2020); earliest release is Tea for the Tillerman (Wikipedia, 23 Nov 1970)."
@@ -1039,6 +1202,21 @@
             "postId": 48868,
             "language": "eng",
             "why": "Nino Rota – What Is a Youth from Zeffirelli's Romeo and Juliet. Eugene Walter's English lyrics as sung in the film by Glen Weston (Wikipedia soundtrack; SecondHandSongs Language English). Not an instrumental love-theme cut."
+        },
+        {
+            "postId": 48869,
+            "language": "eng",
+            "why": "Chad Kroeger feat. Josey Scott – Hero. English-language 2002 Spider-Man soundtrack single (And then a hero comes along). Wikipedia. This is the correctly credited row; the Nickelback Hero listing stays blank."
+        },
+        {
+            "postId": 48885,
+            "language": "eng",
+            "why": "Charles & Eddie – Would I Lie to You. English-language 1992 hit (Would I lie to you, baby). Wikipedia."
+        },
+        {
+            "postId": 48887,
+            "language": "eng",
+            "why": "The Charlie Daniels Band – Long Haired Country Boy. English-language 1975 Fire on the Mountain cut. Dump matched that English recording."
         },
         {
             "postId": 48893,
@@ -1096,6 +1274,11 @@
             "why": "The Cheeky Girls – Cheeky Song (Touch My Bum). Romanian twins; English-language 2002/03 novelty (Come and smile, don't be shy / Touch my bum, this is life). Genius / songlyrics. Venue Cheeky Song."
         },
         {
+            "postId": 48911,
+            "language": "eng",
+            "why": "The Cheeky Girls – Take Your Shoes Off. English-language 2004 novelty follow-up. Dump matched that English recording."
+        },
+        {
             "postId": 48914,
             "language": "eng",
             "why": "Cher – The Shoop Shoop Song. English-language 1990/91 Betty Everett cover (Does he love me, I want to know / It's in his kiss). Wikipedia / cher-lyrics; Love Hurts / Mermaids."
@@ -1140,6 +1323,11 @@
                 "Eurovision"
             ],
             "why": "Chips – Dag efter dag; Melodifestivalen/Eurovision 1982. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48947,
+            "language": "eng",
+            "why": "The Chordettes – Mr. Sandman. English-language 1954 hit (Mr. Sandman, bring me a dream). Wikipedia."
         },
         {
             "postId": 48966,
@@ -1200,11 +1388,26 @@
             "why": "Claes-Göran Hederström – Det börjar verka kärlek, banne mej; Melodifestivalen/Eurovision 1968. Categories Melodifestivalen + Eurovision. Sung in Swedish."
         },
         {
+            "postId": 49025,
+            "language": "eng",
+            "why": "Cliff Richard – Lucky Lips. English-language 1963 UK hit cover of Ruth Brown. Wikipedia."
+        },
+        {
+            "postId": 49031,
+            "language": "eng",
+            "why": "Colbie Caillat – Bubbly. Venue Colby Caillat. English-language 2007 Coco single (It starts in my toes). Wikipedia."
+        },
+        {
             "postId": 49041,
             "language": "eng",
             "title": "Life in Technicolor ii",
             "year": 2009,
             "why": "Coldplay – Life in Technicolor ii. Venue filed Life in technicolor, which is the wordless album intro; a karaoke catalog is likelier to have the sung cut (Prospekt's March / 2009 single). Same case as Swedish House Mafia – One vs One (Your Name): do not keep the instrumental's title."
+        },
+        {
+            "postId": 49068,
+            "language": "eng",
+            "why": "The Contours – Do You Love Me. English-language 1962 Motown hit (Do you love me / Now that I can dance). Wikipedia."
         },
         {
             "postId": 49087,
