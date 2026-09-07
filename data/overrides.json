@@ -1173,6 +1173,16 @@
             "why": "Karl-Erik (Cacka) Israelsson – Gamle Svarten. Swedish-language 1954 recording of Ole Faithful (Sven-Olof Sandberg text), not the English original (sv.wikipedia Gamle Svarten; textarkivet lyrics)."
         },
         {
+            "postId": 48741,
+            "language": "zxx",
+            "why": "Cagnet – Close to You (~Sena no Piano II~). Long Vacation soundtrack piano cue; instrumental (纯音乐). MusicBrainz work / bwgeci. Not the vocal Close to Me cut."
+        },
+        {
+            "postId": 48742,
+            "language": "eng",
+            "why": "Cagnet – Hear Me Cry. English-language Love Generation soundtrack vocal (You couldn't say / Needed someone new / Can you hear me cry). JOYSOUND marks 全英語詞; songlyrics."
+        },
+        {
             "postId": 48753,
             "categories": [
                 "Melodifestivalen"
@@ -3797,6 +3807,11 @@
             "why": "Joshua Radin – Brand New Day. English-language 2008 Simple Times cut. Wikipedia / dump exact-matched that recording."
         },
         {
+            "postId": 50822,
+            "language": "eng",
+            "why": "Journey – Remember Me. English-language 1998 Armageddon soundtrack cut (Say goodbye, close your eyes / Remember me). Dump exact-matched that recording on the Japanese compilation The Journey Continues. Wikipedia / MusicBrainz."
+        },
+        {
             "postId": 50826,
             "language": "eng",
             "why": "Joy Enriquez – Tell Me How You Feel. English-language 2000 debut single (Baby come on and tell me how you feel). Wikipedia / songlyrics. Venue and dump credit the English cut, not the Spanish Dime mi amor version."
@@ -4169,6 +4184,14 @@
             "postId": 50984,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 50986,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "mul",
+            "why": "Kerli feat. Locatellis – Let's Go; Melodifestivalen 2003. English verses (Let's go, feel the rhythm) plus a Spanish intro/bridge (Todo el mundo / Ven conmigo, te voy a mostrar). eurovisionworld Languages: English, Spanish. Category Melodifestivalen."
         },
         {
             "postId": 50999,
@@ -4590,6 +4613,11 @@
             "postId": 51336,
             "language": "eng",
             "why": "Louis Armstrong – Mame. English-language Jerry Herman Mame number (You coax the blues right out of the horn, Mame). Dump matched Louis in London."
+        },
+        {
+            "postId": 51338,
+            "language": "eng",
+            "why": "Louis Prima – The Closer to the Bone (The Sweeter Is the Meat). English-language swing (Closest to the bone / Sweeter is the meat / Last slice of Virginia ham). lyrics.me / muztext. Venue Closer to the bone; dump exact-matched that recording."
         },
         {
             "postId": 51339,
@@ -5590,6 +5618,11 @@
             "postId": 52209,
             "language": "eng",
             "why": "Pras Michel feat. Ol' Dirty Bastard & Mýa – Ghetto Supastar (That Is What You Are). English-language 1998 Bulworth single. Wikipedia. Venue Ghetto superstar (duet)."
+        },
+        {
+            "postId": 52220,
+            "language": "eng",
+            "why": "Primal Scream – Dolls (Sweet Rock and Roll). English-language 2006 Riot City Blues single (Don't want your diamonds / Don't want your gold / I want your love). Wikipedia / LyricsFreak. Venue Dolls; dump exact-matched that recording."
         },
         {
             "postId": 52221,
