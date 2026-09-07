@@ -1183,6 +1183,11 @@
             "why": "Cagnet – Hear Me Cry. English-language Love Generation soundtrack vocal (You couldn't say / Needed someone new / Can you hear me cry). JOYSOUND marks 全英語詞; songlyrics."
         },
         {
+            "postId": 48743,
+            "language": "eng",
+            "why": "Cagnet feat. Natalie – What Will I Do. Long Vacation English insert vocal by Natalie Burks (I'm not really sure of the words to say / If only you knew that I feel this way). KKBOX / Newton wiki 歌曲語言：英語. Dump billed bandmate Anna McMurphy; venue feat. Natalie is the Burks cut."
+        },
+        {
             "postId": 48753,
             "categories": [
                 "Melodifestivalen"
@@ -1332,6 +1337,11 @@
             "postId": 48885,
             "language": "eng",
             "why": "Charles & Eddie – Would I Lie to You. English-language 1992 hit (Would I lie to you, baby). Wikipedia."
+        },
+        {
+            "postId": 48886,
+            "language": "eng",
+            "why": "Charley Pride – Kiss an Angel Good Morning. English-language 1971 Heart Songs hit (You've got to kiss an angel good morning / And let her know you think about her when you're gone). Songfacts / ceder lyrics. Venue is Pride only, not the later Hallur Joensen feat. Pride cut."
         },
         {
             "postId": 48887,
@@ -1737,6 +1747,11 @@
             "postId": 49253,
             "language": "eng",
             "why": "David Guetta feat. Akon – Sexy Bitch. English-language 2009 One Love single (Damn you's a sexy bitch). Wikipedia."
+        },
+        {
+            "postId": 49255,
+            "language": "eng",
+            "why": "David Lee Roth – Just a Gigolo. English-language 1985 Crazy from the Heat medley Just a Gigolo/I Ain't Got Nobody (I'm just a gigolo and everywhere I go / People know the part I'm playing). Genius. Not the German Schöner Gigolo original."
         },
         {
             "postId": 49258,
@@ -3738,6 +3753,11 @@
             "why": "Johnnie Ray – Just Walking in the Rain. English-language 1956 hit. Wikipedia."
         },
         {
+            "postId": 50772,
+            "language": "eng",
+            "why": "Johnny Cash – Highwayman. Jimmy Webb song; venue Cash-only listing is the English 1985 Highwaymen cut Cash sings a verse on (I'll fly a starship across the universe divide). Wikipedia. Webb/Campbell/Highwaymen recordings are all English; no Cash solo language fork."
+        },
+        {
             "postId": 50775,
             "language": "eng",
             "why": "Johnny Duncan – Last Train to San Fernando. English-language 1957 UK skiffle hit (Last train to San Fernando / If you miss this one, you'll never get another one). Wikipedia."
@@ -4316,12 +4336,14 @@
         {
             "postId": 51117,
             "year": 2018,
-            "why": "Lady Gaga – I'll Never Love Again from A Star Is Born (Wikipedia 2018)."
+            "language": "eng",
+            "why": "Lady Gaga – I'll Never Love Again from A Star Is Born (2018). English-language film and extended cuts (Wish I could, I could have said goodbye / I'll never love again). Wikipedia. Dump matched an instrumental recording; the venue song is the vocal ballad."
         },
         {
             "postId": 51120,
             "year": 2018,
-            "why": "Same recording as postId 51117; Lady Gaga – I'll Never Love Again (Wikipedia 2018)."
+            "language": "eng",
+            "why": "Same vocal as postId 51117; Lady Gaga – I'll Never Love Again. English-language A Star Is Born ballad (I'll never love again). Wikipedia 2018."
         },
         {
             "postId": 51125,
@@ -5182,6 +5204,14 @@
             "why": "Nelly feat. Florida Georgia Line – Lil Bit. English-language 2021 Heartland single. Wikipedia."
         },
         {
+            "postId": 51841,
+            "categories": [
+                "Melodifestivalen"
+            ],
+            "language": "eng",
+            "why": "Neo – Human Frontier; Melodifestivalen 2010 (Andra chansen). Sung in English (Tonight I'll be like Armstrong / And I'm doing what seems impossible). Eurovisionworld / Mellopedia. Category Melodifestivalen."
+        },
+        {
             "postId": 51842,
             "language": "eng",
             "why": "N*E*R*D – Lapdance. English-language 2001 In Search Of... single. Dump exact-matched that album."
@@ -5703,6 +5733,11 @@
             "postId": 52299,
             "language": "eng",
             "why": "R. Kelly – Slow Wind. English-language TP.3 Reloaded cut. Dump matched TP.3 Reloaded. English lyrics, not a non-English cut."
+        },
+        {
+            "postId": 52301,
+            "language": "eng",
+            "why": "R. Kelly & T-Pain – I'm a Flirt. English-language 2007 Double Up remix (I'm a flirt / Soon as I see her walk up in the club). Wikipedia. Venue names Kelly & T-Pain (the remix also features T.I.); dump matched the Bow Wow feat. Kelly original. Both cuts are English."
         },
         {
             "postId": 52304,
