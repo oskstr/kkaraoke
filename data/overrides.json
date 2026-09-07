@@ -1051,6 +1051,21 @@
             "why": "Coldplay – Life in Technicolor ii. Venue filed Life in technicolor, which is the wordless album intro; a karaoke catalog is likelier to have the sung cut (Prospekt's March / 2009 single). Same case as Swedish House Mafia – One vs One (Your Name): do not keep the instrumental's title."
         },
         {
+            "postId": 49087,
+            "language": "eng",
+            "why": "Coolio – Gangsta's Paradise. English-language 1995 Stevie Wonder-sampling hit (As I walk through the valley of the shadow of death). Wikipedia. Interlude on the same artist stays blank."
+        },
+        {
+            "postId": 49089,
+            "language": "eng",
+            "why": "Coolio – C U When You Get There. English-language 1997 Gangsta's Paradise single (I'll see you when you get there). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 49090,
+            "language": "eng",
+            "why": "Coolio – 1234 (Sumping New). Venue spelling of 1, 2, 3, 4 (Sumpin' New); English-language 1996 single. Dump matched Dance Machine 10."
+        },
+        {
             "postId": 49096,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -1162,9 +1177,20 @@
             ]
         },
         {
+            "postId": 49338,
+            "language": "eng",
+            "why": "Destiny's Child – Independent Woman. Venue shortens Independent Women Part I; English-language 2000 Charlie's Angels single (All the honeys makin' money / Independent women). Wikipedia."
+        },
+        {
+            "postId": 49344,
+            "language": "eng",
+            "why": "Destiny's Child – Soldier. English-language 2004 Destiny Fulfilled single feat. T.I. & Lil Wayne (I need a soldier). Wikipedia."
+        },
+        {
             "postId": 49348,
             "year": 2002,
-            "why": "Work It Out is Beyoncé's 2002 Goldmember single (Wikipedia); venue filed it under Destiny's Child. Year 2002."
+            "language": "eng",
+            "why": "Destiny's Child – Work It Out. Venue filed Beyoncé's 2002 Goldmember single under Destiny's Child; English-language Austin Powers cut (Work it out). Wikipedia. Year 2002."
         },
         {
             "postId": 49364,
@@ -1233,6 +1259,36 @@
             "title": "MacArthur Park",
             "year": 1978,
             "why": "Donna Summer spelling McArthur→MacArthur. Year from Discogs/MusicBrainz (1978)."
+        },
+        {
+            "postId": 49521,
+            "language": "eng",
+            "why": "Drake – God's Plan. English-language 2018 Scary Hours / Scorpion single (God's plan / I only love my bed and my momma, I'm sorry). Songfacts / Genius."
+        },
+        {
+            "postId": 49522,
+            "language": "eng",
+            "why": "Drake – Headlines. English-language 2011 Take Care single (I be yelling out money over everything, money on my mind). Songfacts. Catalog has two identical venue rows; same English cut."
+        },
+        {
+            "postId": 49523,
+            "language": "eng",
+            "why": "Drake – Headlines. Duplicate venue row of the same English-language 2011 Take Care single. Same credited Drake recording as 49522."
+        },
+        {
+            "postId": 49525,
+            "language": "eng",
+            "why": "Drake – Forever. English-language 2009 More Than a Game cut (Drake / Wayne / Kanye / Eminem). Venue credits Drake; lyrics are English hip-hop, not a non-English cut."
+        },
+        {
+            "postId": 49526,
+            "language": "eng",
+            "why": "Drake – Don't Matter to Me. English-language 2018 Scorpion cut using a Michael Jackson vocal (It don't matter to me what you say). Billboard. Dump matched Drake feat. Michael Jackson."
+        },
+        {
+            "postId": 49527,
+            "language": "eng",
+            "why": "Drake – Fall for Your Type. English-language song Drake wrote; released as Jamie Foxx feat. Drake (I swear I always fall for your type). Wikipedia / eLyrics. Venue credits Drake; dump matched a Drake recording. Same English lyrics either way."
         },
         {
             "postId": 49529,
@@ -2419,6 +2475,21 @@
             "why": "John Denver – Take Me Home, Country Roads. Resolver dated 2019 with Max Q credit; single 12 Apr 1971 (Wikipedia)."
         },
         {
+            "postId": 50730,
+            "language": "eng",
+            "why": "John Legend – Everybody Knows. English-language 2008 Evolver original (Everybody knows that nobody really knows / How to make it work), not the Leonard Cohen song. Songfacts. Dump matched Evolver."
+        },
+        {
+            "postId": 50731,
+            "language": "eng",
+            "why": "John Legend – Another Again. English-language 2006 Once Again cut (It's another again / And again and again). ShowMeLyrics."
+        },
+        {
+            "postId": 50732,
+            "language": "eng",
+            "why": "John Legend – Used to Love You. English-language John Legend cut (I used to love you / Not like I used to). songlyrics Used to Love U. Dump hitchhiked a later compilation; credited performer is Legend."
+        },
+        {
             "postId": 50739,
             "language": "eng",
             "why": "Credited Christmas song (John Lennon & Yoko Ono – Happy Xmas (War is Over)). Keep the performer; still mark category Christmas (docs rule 1). Sung in English.",
@@ -2760,6 +2831,26 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50904,
+            "language": "eng",
+            "why": "Kanye West – Celebration. English-language 2005 Late Registration album cut. Dump matched Late Registration. English hip-hop, not a non-English cut."
+        },
+        {
+            "postId": 50905,
+            "language": "eng",
+            "why": "Kanye West – Gold Digger. English-language 2005 Late Registration single (Now I ain't sayin' she a gold digger). Lyricszoo / Wikipedia."
+        },
+        {
+            "postId": 50909,
+            "language": "eng",
+            "why": "Kanye West – Touch the Sky. English-language 2006 Late Registration single feat. Lupe Fiasco (Before the day I die, I'mma touch the sky). Lyricszoo."
+        },
+        {
+            "postId": 50911,
+            "language": "eng",
+            "why": "Kanye West – Homecoming. English-language 2007 Graduation single feat. Chris Martin (I'm coming home again / Do you think about me now and then). lyricdown. English, not a non-English cut."
+        },
+        {
             "postId": 50983,
             "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -2841,9 +2932,19 @@
             "why": "Lady and the Tramp – Bella Notte. Venue labeled (english); English Disney cut. MusicBrainz work had no language."
         },
         {
+            "postId": 51097,
+            "language": "eng",
+            "why": "Lady Gaga – Shallow. English-language 2018 A Star Is Born duet with Bradley Cooper (We're far from the shallow now). Billboard. I'll Never Love Again rows stay blank (instrumental matches)."
+        },
+        {
             "postId": 51099,
             "language": "eng",
             "why": "Lady Gaga – Bad Romance. English song; MusicBrainz work lists eng+fra for the short French bridge ('Je veux ton amour et je veux ta revanche'), a translation of the English chorus. Same rule as That's Amore: a few lines in another language is not a bilingual recording."
+        },
+        {
+            "postId": 51100,
+            "language": "eng",
+            "why": "Lady Gaga – Eh Eh (Nothing Else I Can Say). English-language 2009 The Fame single (Eh, eh, nothing else I can say). Wikipedia."
         },
         {
             "postId": 51107,
@@ -2941,6 +3042,26 @@
             "postId": 51185,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 51191,
+            "language": "eng",
+            "why": "Lenny Kravitz – I Belong to You. English-language 1998 5 single. Wikipedia. Credited Kravitz recording."
+        },
+        {
+            "postId": 51192,
+            "language": "eng",
+            "why": "Lenny Kravitz – Rock and Roll Is Dead. English-language 1995 Circus single. Dump matched Circus. English rock, not a non-English cut."
+        },
+        {
+            "postId": 51197,
+            "language": "eng",
+            "why": "Lenny Kravitz – Black Velveteen. English-language 1998 5 album cut. Dump matched 5."
+        },
+        {
+            "postId": 51200,
+            "language": "eng",
+            "why": "Lenny Kravitz – Can't Get You Off My Mind. English-language 1995 Circus cut. Dump matched Circus."
         },
         {
             "postId": 51229,
@@ -3164,6 +3285,16 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 51490,
+            "language": "eng",
+            "why": "Mariah Carey – Angels Cry. English-language 2009 Memoirs of an Imperfect Angel cut (and later Ne-Yo remix). Dump matched Memoirs. Lollipop stays blank (resolver matched MIKA)."
+        },
+        {
+            "postId": 51492,
+            "language": "eng",
+            "why": "Mariah Carey – Thank God I Found You. English-language 1999 Rainbow single feat. Joe & 98 Degrees (Thank God I found you). Wikipedia."
         },
         {
             "postId": 51504,
@@ -3666,6 +3797,46 @@
             "postId": 52261,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 52289,
+            "language": "eng",
+            "why": "R. Kelly – Bad Man. English-language I Wish-era R&B cut. Dump matched I Wish. English lyrics, not a non-English cut."
+        },
+        {
+            "postId": 52290,
+            "language": "mul",
+            "why": "R. Kelly – Burning Up. Venue title for Burn It Up (TP.3 Reloaded, 2005) feat. Wisin & Yandel. English verses plus substantial Spanish/reggaeton (Calor, sudor / Bailando reggaeton). Wikipedia / eLyrics. Not English-only."
+        },
+        {
+            "postId": 52291,
+            "language": "eng",
+            "why": "R. Kelly – Gotham City. English-language 1997 Batman & Robin soundtrack single (A city of justice, a city of love / Gotham City). Lyricsdepot."
+        },
+        {
+            "postId": 52292,
+            "language": "eng",
+            "why": "R. Kelly – Pregnant. English-language Untitled cut feat. Tyrese, Robin Thicke & The-Dream. Dump matched that recording."
+        },
+        {
+            "postId": 52295,
+            "language": "eng",
+            "why": "R. Kelly – Down Low (Nobody Has to Know). English-language 1995 single (We can keep it on the down low / Nobody has to know). eLyrics."
+        },
+        {
+            "postId": 52297,
+            "language": "eng",
+            "why": "R. Kelly – When a Woman Loves. English-language 2010 Love Letter cut (When a woman loves / She loves for real). eLyrics."
+        },
+        {
+            "postId": 52298,
+            "language": "eng",
+            "why": "R. Kelly – Love Letter. English-language 2010 title track. Dump matched Love Letter. English R&B, not a non-English cut."
+        },
+        {
+            "postId": 52299,
+            "language": "eng",
+            "why": "R. Kelly – Slow Wind. English-language TP.3 Reloaded cut. Dump matched TP.3 Reloaded. English lyrics, not a non-English cut."
         },
         {
             "postId": 52343,
