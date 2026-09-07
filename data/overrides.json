@@ -755,6 +755,21 @@
             "why": "Brotherhood of Man – Save Your Kisses for Me; Eurovision 1976 (United Kingdom). Category Eurovision."
         },
         {
+            "postId": 48692,
+            "language": "eng",
+            "why": "Bruno Mars – Uptown Funk. English-language 2014 hit; venue credits Bruno, recording is Mark Ronson feat. Bruno Mars (This hit, that ice cold / Michelle Pfeiffer, that white gold). Official / Genius. Dump matched a Bruno 24K Magic recording of the same English title; same lyrics, not a different-language cut."
+        },
+        {
+            "postId": 48696,
+            "language": "eng",
+            "why": "Bruno Mars – It Will Rain. English-language 2011 Twilight: Breaking Dawn soundtrack single (If you ever leave me baby / Leave some morphine at my door). Genius / Wikipedia."
+        },
+        {
+            "postId": 48697,
+            "language": "eng",
+            "why": "Bruno Mars – Just the Way You Are (Amazing). English-language 2010 Doo-Wops & Hooligans lead single Just the Way You Are (When I see your face / There's not a thing that I would change). Dump stripped the Amazing annotation; same English hit, not Billy Joel's Just the Way You Are."
+        },
+        {
             "postId": 48716,
             "artist": "BTS",
             "title": "Blood Sweat & Tears",
@@ -1005,6 +1020,21 @@
                 "Eurovision"
             ],
             "why": "Chips – Dag efter dag; Melodifestivalen/Eurovision 1982. Categories Melodifestivalen + Eurovision."
+        },
+        {
+            "postId": 48966,
+            "language": "eng",
+            "why": "Chris Isaak – Life Will Go On. English-language Always Got Tonight (2002) cut (Broken skies, heartaches that flowers won't mend / Dry your eyes, face the dawn / Life will go on). eLyrics / muztext; dump exact-matched that album."
+        },
+        {
+            "postId": 48967,
+            "language": "eng",
+            "why": "Chris Isaak – One Day. English-language Always Got Tonight (2002) cut (Don't tell me that you love me / Give me one day in your life). Lyric Advisor; dump exact-matched that album. Not another artist's One Day."
+        },
+        {
+            "postId": 48969,
+            "language": "eng",
+            "why": "Chris Isaak – American Boy. English-language Always Got Tonight (2002) cut and The Chris Isaak Show theme (I'm the original American boy / Love you baby, with all my heart). songlyrics / Lyric Advisor. Not Estelle's American Boy."
         },
         {
             "postId": 48977,
@@ -2300,6 +2330,21 @@
             "why": "James Brown Say It Loud – I'm Black and I'm Proud. Year from Wikipedia (1968 single)."
         },
         {
+            "postId": 50542,
+            "language": "eng",
+            "why": "James Morrison – One Last Chance. English-language Undiscovered (2006) cut (I've got one last chance to get myself together / I can't lose no more time, it's now or never). Genius. Dump exact-matched that album."
+        },
+        {
+            "postId": 50543,
+            "language": "eng",
+            "why": "James Morrison – This Boy. English-language Undiscovered (2006) cut (This boy wants to play, there's no time left today / I'm still here, but it hasn't been easy). Dork / lyrics.camp. Dump exact-matched that album."
+        },
+        {
+            "postId": 50544,
+            "language": "eng",
+            "why": "James Morrison – Under The Influence. English-language Undiscovered (2006) opener (Whatever I do I'm under the influence of you). Genius / letras. Not You Give Me Something; some lyric sites paste that hit under this title."
+        },
+        {
             "postId": 50567,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -2333,6 +2378,21 @@
             "postId": 50576,
             "language": "eng",
             "why": "Janet Jackson – Together Again. English-language 1997 Velvet Rope single (There are times when I look above and beyond). Wikipedia / well-known English hit."
+        },
+        {
+            "postId": 50589,
+            "language": "eng",
+            "why": "Jason Mraz – The Remedy (I Won't Worry). English-language 2002 Waiting for My Rocket to Come single (Well I won't worry my life away). Genius. Dump matched a later live The Remedy; same English song."
+        },
+        {
+            "postId": 50590,
+            "language": "eng",
+            "why": "Jason Mraz – You and I Both. English-language Waiting for My Rocket to Come cut (You and I both loved what you and I spoke of). Genius. Dump exact-matched that album."
+        },
+        {
+            "postId": 50595,
+            "language": "eng",
+            "why": "Jason Mraz – Curbside Prophet. English-language Waiting for My Rocket to Come cut (I'm just a curbside prophet with my hand in my pocket / And I'm waiting for my rocket to come). Genius."
         },
         {
             "postId": 50597,
@@ -3331,6 +3391,21 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51527,
+            "language": "eng",
+            "why": "Maroon 5 – Must Get Out. English-language Songs About Jane cut (This city's made us crazy and we must get out). Genius. Dump exact-matched that album."
+        },
+        {
+            "postId": 51534,
+            "language": "eng",
+            "why": "Maroon 5 – Give a Little More. English-language Hands All Over (2010) single (Then I give a little more / I'm not falling in love with you / 'Til I get a little more from you). letras. Dump exact-matched that album."
+        },
+        {
+            "postId": 51541,
+            "language": "eng",
+            "why": "Maroon 5 – Middle Ground. English-language 2023 single (Am I crazy to think that we could make it out / Am I crazier to believe there's a middle ground). Official video / Songfacts / KKBOX."
+        },
+        {
             "postId": 51545,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -3772,6 +3847,21 @@
             ],
             "language": "eng",
             "why": "The Poodles – Night of Passion. Melodifestivalen 2006 (4th). Sung in English (eurovisionworld Language: English). Duplicate catalog row."
+        },
+        {
+            "postId": 52202,
+            "language": "eng",
+            "why": "Post Malone – Better Now. English-language 2018 beerbongs & bentleys single (You probably think that you are better now, better now). Genius. Dump exact-matched that album."
+        },
+        {
+            "postId": 52203,
+            "language": "eng",
+            "why": "Post Malone – Stay. English-language beerbongs & bentleys (2018) cut (I'm here, but don't count on me to stay). KKBOX / letras. Venue credits Post Malone; dump matched that album. Not Zedd & Alessia Cara Stay, Rihanna Stay, or other Stay titles."
+        },
+        {
+            "postId": 52204,
+            "language": "eng",
+            "why": "Post Malone – White Iverson. English-language 2015 debut single (Saucin', saucin', I'm saucin' on you). Genius / Wikipedia."
         },
         {
             "postId": 52206,
@@ -4900,6 +4990,21 @@
             "postId": 53587,
             "language": "eng",
             "why": "Ylvis – The Fox. English-language 2013 novelty hit (Dog goes woof / What does the fox say), not a Norwegian-language cut (official lyrics)."
+        },
+        {
+            "postId": 53596,
+            "language": "eng",
+            "why": "Zac Brown Band – Highway 20 Ride. English-language The Foundation (2008) single (I count the days and the miles back home to you / On that Highway 20 ride). AZ Lyrics / All The Lyrics. Dump exact-matched that album."
+        },
+        {
+            "postId": 53597,
+            "language": "eng",
+            "why": "Zac Brown Band – Homegrown. English-language Jekyll + Hyde (2015) single (I got everything I need and nothing that I don't / Homegrown). lyricsify / karaoke lyric sheet. Dump exact-matched that album."
+        },
+        {
+            "postId": 53598,
+            "language": "eng",
+            "why": "Zac Brown Band – Knee Deep. English-language You Get What You Give cut feat. Jimmy Buffett (Gonna put the world away for a minute / Pretend I have no worries). Genius. Venue credits the band; dump artist-scoped that English recording."
         },
         {
             "postId": 53622,
