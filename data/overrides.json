@@ -807,6 +807,16 @@
             ]
         },
         {
+            "postId": 48640,
+            "language": "eng",
+            "why": "Britney Spears – Crazy. Venue short title of (You Drive Me) Crazy; English-language 1999 ...Baby One More Time single (You drive me crazy / I just can't sleep). Wikipedia / Songfacts."
+        },
+        {
+            "postId": 48650,
+            "language": "eng",
+            "why": "Britney Spears – Do Somethin'. English-language 2005 Greatest Hits: My Prerogative single (You better do somethin'). Dump matched Do Somethin' on Circus as a later appearance; same English song."
+        },
+        {
             "postId": 48654,
             "language": "eng",
             "why": "Traditional / category material filed under 'Broadman Hymnal'; no single performer to invent. Broadman Hymnal files the English hymn Face to Face with Christ, My Savior (Carrie E. Breck, 1898; Hymnary.org Language: English).",
@@ -1132,7 +1142,13 @@
             "postId": 48993,
             "title": "Dirrty",
             "year": 2002,
-            "why": "Venue/dump title Dirty; song is Dirrty (Christina Aguilera feat. Redman). Year from Wikipedia/Wikidata (2002 single from Stripped)."
+            "language": "eng",
+            "why": "Christina Aguilera – Dirrty. Venue/dump title Dirty already corrected. English-language 2002 Stripped single feat. Redman (Dirrty, filthy, nasty / You nasty boy). Wikipedia."
+        },
+        {
+            "postId": 48995,
+            "language": "eng",
+            "why": "Christina Aguilera – Come On Over. Venue short title of Come On Over Baby (All I Want Is You). English-language 2000 Christina Aguilera single. Wikipedia."
         },
         {
             "postId": 48996,
@@ -1870,6 +1886,16 @@
             "why": "Espen Lind – Unloved. Norwegian singer; English-language 2004/2005 April single and VG-lista #1 (I bet you don't know how it feels / what it's like to feel unloved). Genius / songlyrics."
         },
         {
+            "postId": 49871,
+            "language": "eng",
+            "why": "Eternal – What'cha Gonna Do. English-language 1997 Don't You Love Me-era / Before the Rain cut (What'cha gonna do). Dump exact-matched that English recording."
+        },
+        {
+            "postId": 49872,
+            "language": "eng",
+            "why": "Eternal – I Am Blessed. English-language 1995 Power of a Woman single (I am blessed / Every time I look into my baby's eyes). Wikipedia / paroles-lyrics."
+        },
+        {
             "postId": 49887,
             "language": "eng",
             "why": "Eva Cassidy – Somewhere Over the Rainbow. English-language Wizard of Oz standard cover (Somewhere over the rainbow / Way up high). Credited Eva Cassidy recording, not a non-English cut."
@@ -1893,6 +1919,16 @@
             "postId": 49897,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
+        },
+        {
+            "postId": 49914,
+            "language": "eng",
+            "why": "Evermore – Hey Boys and Girls (Truth of the World Part 2). English-language 2009 New Zealand/Australian single. Dump exact-matched Truth of the World: Welcome to the Show."
+        },
+        {
+            "postId": 49917,
+            "language": "eng",
+            "why": "Evermore – Can You Hear Me. English-language Truth of the World: Welcome to the Show cut. Dump exact-matched that album."
         },
         {
             "postId": 49918,
@@ -1938,6 +1974,16 @@
             "postId": 50009,
             "language": "eng",
             "why": "Fleetwood Mac – Rhiannon. English-language 1975 Fleetwood Mac single (Rhiannon rings like a bell through the night). Wikipedia. Welsh name; English lyrics."
+        },
+        {
+            "postId": 50032,
+            "language": "eng",
+            "why": "Flogging Molly – The Worst Day Since Yesterday. English-language 2000 Swagger cut (It's the worst day since yesterday). Dump exact-matched Swagger."
+        },
+        {
+            "postId": 50034,
+            "language": "eng",
+            "why": "Flogging Molly – The Seven Deadly Sins. English-language 2004 Within a Mile of Home cut. Dump exact-matched that album. English lyrics, not Irish-language."
         },
         {
             "postId": 50082,
@@ -2318,6 +2364,16 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 50392,
+            "language": "eng",
+            "why": "Hootie & the Blowfish – Let Her Cry. English-language 1994 Cracked Rear View single (Let her cry / If the tears fall down like rain). Wikipedia. Dump exact-matched that album."
+        },
+        {
+            "postId": 50396,
+            "language": "eng",
+            "why": "Hootie & the Blowfish – I Will Wait. English-language 1998 Musical Chairs cut (I will wait for you / Through the lies and all). Official hootie.com lyrics. Not Mumford & Sons I Will Wait."
+        },
+        {
             "postId": 50420,
             "language": "eng",
             "why": "Icona Pop – I Love It. English-language 2012 single (Wikipedia / Genius)."
@@ -2471,6 +2527,16 @@
             "why": "James Morrison – Under The Influence. English-language Undiscovered (2006) opener (Whatever I do I'm under the influence of you). Genius / letras. Not You Give Me Something; some lyric sites paste that hit under this title."
         },
         {
+            "postId": 50552,
+            "language": "eng",
+            "why": "Jamiroquai – 7 Days in Sunny June. English-language 2005 Dynamite / High Times single. Dump matched the English singles compilation recording."
+        },
+        {
+            "postId": 50559,
+            "language": "eng",
+            "why": "Jamiroquai – Half the Man. English-language The Return of the Space Cowboy cut. Dump exact-matched that album."
+        },
+        {
             "postId": 50567,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -2547,6 +2613,16 @@
             "postId": 50622,
             "language": "eng",
             "why": "Linda Eder & Colm Wilkinson – This Is the Moment from Jekyll & Hyde. English-language musical number."
+        },
+        {
+            "postId": 50627,
+            "language": "eng",
+            "why": "Jennifer Lopez – All I Have. English-language 2002 This Is Me… Then single feat. LL Cool J (All I have / All I have). Wikipedia. Dump artist-scoped that cut."
+        },
+        {
+            "postId": 50629,
+            "language": "eng",
+            "why": "Jennifer Lopez – Hold You Down. English-language 2005 Rebirth single feat. Fat Joe. Dump artist-scoped that English recording."
         },
         {
             "postId": 50634,
@@ -2709,6 +2785,16 @@
             ],
             "language": "eng",
             "why": "Credited Christmas song (Johnny Mathis – When a Child Is Born). Keep the performer; still mark category Christmas (docs rule 1). Sung in English."
+        },
+        {
+            "postId": 50786,
+            "language": "eng",
+            "why": "JoJo – Not That Kinda Girl. English-language 2005 debut-album single (I'm not that kinda girl). Wikipedia / songlyrics. Dump near-matched Not That Kinda Girl on JoJo."
+        },
+        {
+            "postId": 50787,
+            "language": "eng",
+            "why": "JoJo – Anything. English-language 2007 The High Road single. Dump exact-matched that album."
         },
         {
             "postId": 50790,
@@ -3037,6 +3123,16 @@
             "why": "Kanye West – Homecoming. English-language 2007 Graduation single feat. Chris Martin (I'm coming home again / Do you think about me now and then). lyricdown. English, not a non-English cut."
         },
         {
+            "postId": 50930,
+            "language": "eng",
+            "why": "KC and the Sunshine Band – That's the Way I Like It. English-language 1975 disco hit (That's the way, uh-huh uh-huh, I like it). Wikipedia. Dump matched a later '91 mix of the same English song."
+        },
+        {
+            "postId": 50932,
+            "language": "eng",
+            "why": "KC and the Sunshine Band – Please Don't Go. English-language 1979 single (Baby, please don't go). Wikipedia. Not the KC/Double You later dance remakes as a different-language cut."
+        },
+        {
             "postId": 50983,
             "why": "Credited Christmas song (Kenny Rogers, Dolly Parton – I Believe in Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -3298,6 +3394,16 @@
             "why": "Nathan Lane & Ernie Sabella – Hakuna Matata from The Lion King. Venue credits the English-language film performers, not the Swedish dub."
         },
         {
+            "postId": 51291,
+            "language": "eng",
+            "why": "Lisa Loeb & Nine Stories – Do You Sleep. English-language 1995 Tails cut. Dump exact-matched Tails."
+        },
+        {
+            "postId": 51292,
+            "language": "eng",
+            "why": "Lisa Loeb & Nine Stories – Stay (I Missed You). English-language 1994 Reality Bites hit (You say I only hear what I want to / You say I talk so all the time, so). Wikipedia. Dump matched Stay on Tails."
+        },
+        {
             "postId": 51294,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -3397,6 +3503,16 @@
                 }
             ],
             "why": "Luis Fonsi, Daddy Yankee, Justin Bieber – Despacito. Venue credited the bilingual remix (Spanish + English verse). Matcher dropped Bieber (Spanish-only recording) and left language blank."
+        },
+        {
+            "postId": 51393,
+            "language": "eng",
+            "why": "Madonna – Secret. Venue Secrets; dump matched Secret on Bedtime Stories. English-language 1994 single (Happiness lies in your own hand). Wikipedia."
+        },
+        {
+            "postId": 51420,
+            "language": "eng",
+            "why": "Madonna – The Power of Good-Bye. English-language 1998 Ray of Light single (There's nothing left to lose / There's no more heart to break). Wikipedia."
         },
         {
             "postId": 51427,
@@ -3545,6 +3661,16 @@
             "why": "Martin Stenmarck – Las Vegas; Melodifestivalen/Eurovision 2005. Categories Melodifestivalen + Eurovision."
         },
         {
+            "postId": 51556,
+            "language": "eng",
+            "why": "Mary J. Blige – Rainy Dayz. English-language 2002 No More Drama single feat. Ja Rule. Dump matched that English recording."
+        },
+        {
+            "postId": 51558,
+            "language": "eng",
+            "why": "Mary J. Blige – MJB da MVP. English-language 2006 The Breakthrough cut. Dump exact-matched that album."
+        },
+        {
             "postId": 51566,
             "language": "eng",
             "why": "Matt Monro – Love Is a Many Splendored Thing. English-language Sammy Fain / Paul Francis Webster standard (Love is a many-splendored thing / It's the April rose that only grows in the early spring). eLyrics / muztext Language: English."
@@ -3667,6 +3793,16 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 51714,
+            "language": "eng",
+            "why": "Missy Elliott – The Rain (Supa Dupa Fly). English-language 1997 debut single The Rain (Supa Dupa Fly). Dump matched The Rain on Supa Dupa Fly."
+        },
+        {
+            "postId": 51715,
+            "language": "eng",
+            "why": "Missy Elliott – Lose Control. English-language 2005 The Cookbook single feat. Ciara & Fatman Scoop (I just wanna lose control). Wikipedia."
+        },
+        {
             "postId": 51724,
             "language": "swe",
             "why": "Sung in Swedish. MusicBrainz work had no language."
@@ -3744,6 +3880,16 @@
             "title": "Rockin' in the Free World",
             "year": 1989,
             "why": "Neil Young; venue Rocking…. Year from Wikipedia/Discogs (1989 single from Freedom)."
+        },
+        {
+            "postId": 51842,
+            "language": "eng",
+            "why": "N*E*R*D – Lapdance. English-language 2001 In Search Of... single. Dump exact-matched that album."
+        },
+        {
+            "postId": 51844,
+            "language": "eng",
+            "why": "N*E*R*D – Maybe. English-language 2004 Fly or Die single. Dump exact-matched that album."
         },
         {
             "postId": 51848,
@@ -4512,9 +4658,19 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52723,
+            "language": "eng",
+            "why": "Shania Twain – Thank You Baby. English-language 2003 Up! single Thank You Baby! (For Makin' Someday Come So Soon). Wikipedia. Not a French/international-language exclusive as a different lyric."
+        },
+        {
             "postId": 52731,
             "year": 1995,
             "why": "Shania Twain – The Woman in Me (Needs the Man in You). Year from Wikipedia (1995 single)."
+        },
+        {
+            "postId": 52735,
+            "language": "eng",
+            "why": "Shania Twain – I'm Holding On to Love. Venue short title of I'm Holdin' On to Love (To Save My Life). English-language Come On Over single. Wikipedia."
         },
         {
             "postId": 52767,
@@ -4559,6 +4715,26 @@
             ],
             "language": "swe",
             "why": "Simon Forsberg – Tid att andas; Melodifestivalen 2011. Category Melodifestivalen. Sung in Swedish."
+        },
+        {
+            "postId": 52816,
+            "language": "eng",
+            "why": "Smash Mouth – Hang On. English-language 2003 Get the Picture? cut (Hang on, hang on, hang on). Dork lyrics. Dump exact-matched that album."
+        },
+        {
+            "postId": 52817,
+            "language": "eng",
+            "why": "Smash Mouth – You Are My Number One. English-language Get the Picture? cut feat. Ranking Roger (You are my number one). Dork lyrics. Dump artist-scoped that English recording."
+        },
+        {
+            "postId": 52828,
+            "language": "eng",
+            "why": "Snoop Dogg – What's My Name. English-language 1993 Doggystyle debut single Who Am I? (What's My Name?). Wikipedia. Dump artist-scoped Snoop Doggy Dogg."
+        },
+        {
+            "postId": 52830,
+            "language": "eng",
+            "why": "Snoop Dogg – Gin & Juice. English-language 1994 Doggystyle single (With my mind on my money and my money on my mind). Wikipedia."
         },
         {
             "postId": 52834,
@@ -4779,6 +4955,16 @@
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
         },
         {
+            "postId": 53146,
+            "language": "eng",
+            "why": "The Isley Brothers – Tears. English-language 1996 Mission to Please single (I can't hold back these tears / Let me cry). LyricsFreak; JioSaavn Language: English."
+        },
+        {
+            "postId": 53148,
+            "language": "eng",
+            "why": "The Isley Brothers – Contagious. English-language 2001 Eternal single feat. R. Kelly & Chanté Moore (You're contagious / Touch me, baby). Songfacts / Wikipedia."
+        },
+        {
             "postId": 53150,
             "language": "eng",
             "why": "The Judds – Guardian Angels. English-language 1990 River of Time single (They're my guardian angels / And I know they can see every step I take). MLDb / cancioneros."
@@ -4891,6 +5077,16 @@
             "postId": 53280,
             "language": "eng",
             "why": "Tom Jones – Thunderball. English-language Bond theme; venue credits Jones, not a translated cut."
+        },
+        {
+            "postId": 53286,
+            "language": "eng",
+            "why": "Tom Petty – Don't Do Me Like That. English-language 1979 Damn the Torpedoes single by Tom Petty and the Heartbreakers. Dump artist-scoped that English recording."
+        },
+        {
+            "postId": 53289,
+            "language": "eng",
+            "why": "Tom Petty – Mary Jane's Last Dance. English-language 1993 Greatest Hits single (She grew up in an Indiana town). Wikipedia. Dump matched a later Full Moon Fever appearance of the same English song."
         },
         {
             "postId": 53296,
