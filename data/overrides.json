@@ -444,6 +444,21 @@
             "why": "Venue/dump misspelling Loose→Lose. Year from Wikipedia Help! (1965) / MusicBrainz."
         },
         {
+            "postId": 48286,
+            "language": "eng",
+            "why": "Bellamy Brothers – Let Your Love Flow. English-language 1976 pop/country hit (There's a reason for the sunshiny day / Let your love flow). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 48287,
+            "language": "eng",
+            "why": "Bellamy Brothers – Redneck Girl. English-language country single (Redneck girl likes to cruise in daddy's pickup truck / I pray that someday I will find me a redneck girl). eLyrics."
+        },
+        {
+            "postId": 48288,
+            "language": "eng",
+            "why": "Bellamy Brothers – If I Said You Had a Beautiful Body. English-language 1979 country #1 (If I said you have a beautiful body / Would you hold it against me). Songfacts / Wikipedia."
+        },
+        {
             "postId": 48294,
             "language": "nor",
             "why": "Benny Borg – Balladen om Morgan Kane. Sung in Norwegian. MusicBrainz work language is nob (Bokmål); the catalog has one Norwegian browse, not a Bokmål/Nynorsk split."
@@ -467,6 +482,21 @@
             "postId": 48306,
             "language": "eng",
             "why": "Bette Midler – Lullaby in Blue. English-language 1998 Bathhouse Betty cut about a child given up for adoption (The child I never knew / My lullaby in blue); Adam Cohen / Brock Walsh. eLyrics / Wikipedia."
+        },
+        {
+            "postId": 48342,
+            "language": "eng",
+            "why": "Billie Jo Spears – Blanket on the Ground. English-language 1975 country hit (Come and lay down by my side till the early morning light). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 48343,
+            "language": "eng",
+            "why": "Billie Jo Spears – Which Way You Goin' Billy? English-language 1970 Country Girl cover of The Poppy Family (Which way you goin' Billy, can I go too). songlyrics. Same English lyrics as the Canadian original."
+        },
+        {
+            "postId": 48344,
+            "language": "eng",
+            "why": "Billie Jo Spears – What I've Got in Mind. English-language Kenny O'Dell country cut (What I've got in mind is a small cafe out of the way / Making love to you). eLyrics."
         },
         {
             "postId": 48375,
@@ -1516,6 +1546,21 @@
             "why": "Enrique Iglesias feat. Sean Paul – Bailando. Venue credited Sean Paul, which is the Spanglish/English cut (English verses + Spanish chorus; Wikipedia). Matcher lead-scoped onto the Spanish-only recording (Descemer Bueno & Gente de Zona) and tagged spa."
         },
         {
+            "postId": 49842,
+            "language": "eng",
+            "why": "Eric Clapton – Tears in Heaven. English-language 1992 Rush / Unplugged recording (Would you know my name / If I saw you in heaven). Songfacts / Lyricszoo."
+        },
+        {
+            "postId": 49847,
+            "language": "eng",
+            "why": "Eric Clapton – Layla. English-language Derek and the Dominos / later Clapton vocal (What'll you do when you get lonely / Layla, you've got me on my knees). The Lyric Archive. Electric and Unplugged cuts are both English."
+        },
+        {
+            "postId": 49848,
+            "language": "eng",
+            "why": "Eric Clapton – My Father's Eyes. English-language 1998 Pilgrim single (When will all my hopes arise / How will I know him when I look in my father's eyes). songlyrics. Dump matched an acoustic false start; same English song."
+        },
+        {
             "postId": 49852,
             "categories": [
                 "Hymn"
@@ -1727,6 +1772,46 @@
             "categories": [
                 "Christmas"
             ]
+        },
+        {
+            "postId": 50190,
+            "language": "eng",
+            "why": "George Strait – Am I Blue. English-language 1987 Ocean Front Property western-swing original by David Chamberlain (Am I blue, yes I'm blue / It started the day I lost you), not the 1929 Ethel Waters standard Am I Blue?. Wikipedia / songlyrics. Dump matched Ocean Front Property."
+        },
+        {
+            "postId": 50192,
+            "language": "eng",
+            "why": "George Strait – I Cross My Heart. English-language 1992 Pure Country single (I cross my heart and promise to / Give all I've got to give). Official video / lyricdown."
+        },
+        {
+            "postId": 50194,
+            "language": "eng",
+            "why": "George Strait – Twang. English-language 2009 title-track single (I need a little twang / A little hillbilly bending on some guitar strings). Genius / Wikipedia."
+        },
+        {
+            "postId": 50195,
+            "language": "eng",
+            "why": "George Strait – I Gotta Get to You. English-language 2010 Twang single (I gotta get to you 'cause you sure been gettin' to me). oldielyrics. Dump shortens to Gotta Get to You; same Strait cut."
+        },
+        {
+            "postId": 50196,
+            "language": "eng",
+            "why": "George Strait – The Big One. Venue shortens The Big One; English-language 1994 Lead On single (This is the big one / I'm fallin' in love). lyricdown / Lyricsify."
+        },
+        {
+            "postId": 50198,
+            "language": "eng",
+            "why": "George Strait – She Let Herself Go. English-language 2005 Somewhere Down in Texas single (When he said he didn't love her no more / She let herself go). lyricdown / Country FanCast."
+        },
+        {
+            "postId": 50199,
+            "language": "eng",
+            "why": "George Strait – Go On. English-language 2000 self-titled-album single (Go on, go on / What else can you do but go on). songlyrics."
+        },
+        {
+            "postId": 50202,
+            "language": "eng",
+            "why": "George Strait – King of the Mountain. English-language 1996 Blue Clear Sky cut (I thought I was king of the mountain / But I was only a fool on the hill). oldielyrics."
         },
         {
             "postId": 50208,
@@ -2599,6 +2684,26 @@
             "postId": 51022,
             "year": 1963,
             "why": "The Kingsmen – Louie Louie. Year from Wikipedia/Discogs (1963)."
+        },
+        {
+            "postId": 51023,
+            "language": "eng",
+            "why": "The Kinks – You Really Got Me. English-language 1964 hit (Girl, you really got me now / You got me so I don't know what I'm doing). Official audio / Wikipedia."
+        },
+        {
+            "postId": 51031,
+            "language": "eng",
+            "why": "The Kinks – Dead End Street. English-language 1966 single (There's a crack up in the ceiling / And the kitchen sink is leaking). Well-known English Kinks recording."
+        },
+        {
+            "postId": 51035,
+            "language": "eng",
+            "why": "The Kinks – Set Me Free. English-language 1965 single (Set me free, little girl), not Sweet or other Set Me Free titles. Credited Kinks recording."
+        },
+        {
+            "postId": 51036,
+            "language": "eng",
+            "why": "The Kinks – Sunny Afternoon. English-language 1966 #1 (The taxman's taken all my dough / And left me in my stately home). Wikipedia / well-known English recording."
         },
         {
             "postId": 51074,
@@ -3586,6 +3691,21 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52537,
+            "language": "eng",
+            "why": "The Rolling Stones – Satisfaction. Venue shortens (I Can't Get No) Satisfaction; English-language 1965 hit (I can't get no satisfaction). Wikipedia."
+        },
+        {
+            "postId": 52538,
+            "language": "eng",
+            "why": "The Rolling Stones – It's Only Rock and Roll. English-language 1974 single (I know it's only rock 'n' roll but I like it). Songfacts."
+        },
+        {
+            "postId": 52542,
+            "language": "eng",
+            "why": "The Rolling Stones – Start Me Up. English-language 1981 Tattoo You single (If you start me up / I'll never stop). Songfacts."
+        },
+        {
             "postId": 52553,
             "why": "Credited Christmas song (The Ronettes – I Saw Mommy Kissing Santa Claus). Keep the performer; still mark category Christmas (docs rule 1).",
             "categories": [
@@ -4022,6 +4142,26 @@
             "why": "The Doors – The Crystal Ship. Resolver dated 2021; debut album / Light My Fire B-side 1967 (Wikipedia)."
         },
         {
+            "postId": 53150,
+            "language": "eng",
+            "why": "The Judds – Guardian Angels. English-language 1990 River of Time single (They're my guardian angels / And I know they can see every step I take). MLDb / cancioneros."
+        },
+        {
+            "postId": 53151,
+            "language": "eng",
+            "why": "The Judds – A Girl's Night Out. Venue spelling of Girls Night Out; English-language 1985 Why Not Me #1 (It's a girl's night out / Honey, there ain't no doubt). songlyrics / Wikipedia."
+        },
+        {
+            "postId": 53152,
+            "language": "eng",
+            "why": "The Judds – Change of Heart. English-language Naomi Judd country cut (I've had a change of heart / I see what I put you through), not Cyndi Lauper Change of Heart. Songfacts."
+        },
+        {
+            "postId": 53153,
+            "language": "eng",
+            "why": "The Judds – River of Time. English-language 1989 title track (Flow on, river of time / Wash away the pain and heal my mind). karaoke-lyrics."
+        },
+        {
             "postId": 53156,
             "categories": [
                 "Melodifestivalen"
@@ -4069,6 +4209,36 @@
             "year": 1999,
             "title": "No Scrubs",
             "why": "TLC – No Scrubs. Resolver dated a 2013 reissue spelling No Scrub; single 2 Feb 1999 (Wikipedia)."
+        },
+        {
+            "postId": 53251,
+            "language": "eng",
+            "why": "Toby Keith – Lost You Anyway. English-language 2009 That Don't Make Me a Bad Guy single (I would have lost you anyway); Keith / Bobby Pinson. The Boot."
+        },
+        {
+            "postId": 53255,
+            "language": "eng",
+            "why": "Toby Keith – Getcha Some. English-language 1998 How Do You Like Me Now?! single (Gotta getcha some love / Gotta getcha some money). lyrics.me / songlyrics."
+        },
+        {
+            "postId": 53256,
+            "language": "eng",
+            "why": "Toby Keith – I Love This Bar. English-language 2003 Shock'n Y'all single (We got winners, we got losers / I love this bar). Wikipedia / well-known English recording."
+        },
+        {
+            "postId": 53258,
+            "language": "eng",
+            "why": "Toby Keith – Rock You Baby. English-language 2002 Unleashed cut (I'm gonna rock you baby to sleep / I'm gonna make you crazy over me). CowboyLyrics."
+        },
+        {
+            "postId": 53262,
+            "language": "eng",
+            "why": "Toby Keith – You Shouldn't Kiss Me Like This. English-language 2000 How Do You Like Me Now?! single (You shouldn't kiss me like this / Unless you mean it like that). Well-known English recording."
+        },
+        {
+            "postId": 53263,
+            "language": "eng",
+            "why": "Toby Keith – American Soldier. English-language 2003 Shock'n Y'all single (I'm just trying to be a father / I'm an American soldier). Wikipedia / well-known English recording."
         },
         {
             "postId": 53280,
@@ -4161,6 +4331,26 @@
             "postId": 53338,
             "language": "eng",
             "why": "Tove Lo feat. Hippie Sabotage – Stay High. Venue credit is the English Habits (Stay High) remix (I eat my dinner in my bathtub / Gotta stay high). Wikipedia / Genius. Not a Swedish-language cut."
+        },
+        {
+            "postId": 53339,
+            "language": "eng",
+            "why": "Trace Adkins – Don't Lie. English-language 1999 More... single (Don't lie, don't try to fool me / Cause girl I know what's goin' on); Chet Biggers / Frank Rogers. eLyrics / Wikipedia."
+        },
+        {
+            "postId": 53341,
+            "language": "eng",
+            "why": "Trace Adkins – Muddy Water. English-language 2008 X country-gospel single (Monty Criswell / Rick Huckaby). Wikipedia. Credited Trace Adkins recording."
+        },
+        {
+            "postId": 53343,
+            "language": "eng",
+            "why": "Trace Adkins – You're Gonna Miss This. English-language 2008 country #1 (You're gonna miss this / You're gonna want this back). Genius / Wikipedia."
+        },
+        {
+            "postId": 53344,
+            "language": "eng",
+            "why": "Trace Adkins – I'm Gonna Love You Anyway. English-language 1999 More... single (Don't worry, darling, that's okay / 'Cause I'm gonna love you anyway); Stacy Dean Campbell / Dean Miller. eLyrics / Wikipedia."
         },
         {
             "postId": 53349,
