@@ -183,6 +183,11 @@
             "why": "Alicia Keys – Loving You. Venue title covers either her Songs in A Minor Minnie Riperton bonus (Loving you is easy 'cause you're beautiful) or original Lovin' U; both credited Alicia cuts are English. lyricdown / songlyrics."
         },
         {
+            "postId": 47934,
+            "language": "eng",
+            "why": "All-4-One feat. Sammi Cheng – I Cross My Heart. English-language 1998 duet (Holding you here in my arms / I cross my heart / Pledge to you all my love). pythonke / englisher lyrics. Venue All-4-one; dump already credited the Sammi Cheng cut."
+        },
+        {
             "postId": 47936,
             "language": "eng",
             "why": "The Allman Brothers Band – Ain't Wastin' Time No More. English-language 1972 Eat a Peach opener. Dump matched that English recording."
@@ -1324,6 +1329,11 @@
             ]
         },
         {
+            "postId": 48867,
+            "language": "eng",
+            "why": "Johnny Nash – The Voice of Love. English-language 1959 cut (The voice of love will call to you / You can be sure that she's sincere). ilyrics Language: English. Venue Century Oldies; proposal already named Nash."
+        },
+        {
             "postId": 48868,
             "language": "eng",
             "why": "Nino Rota – What Is a Youth from Zeffirelli's Romeo and Juliet. Eugene Walter's English lyrics as sung in the film by Glen Weston (Wikipedia soundtrack; SecondHandSongs Language English). Not an instrumental love-theme cut."
@@ -1568,6 +1578,11 @@
             "title": "Life in Technicolor ii",
             "year": 2009,
             "why": "Coldplay – Life in Technicolor ii. Venue filed Life in technicolor, which is the wordless album intro; a karaoke catalog is likelier to have the sung cut (Prospekt's March / 2009 single). Same case as Swedish House Mafia – One vs One (Your Name): do not keep the instrumental's title."
+        },
+        {
+            "postId": 49060,
+            "language": "eng",
+            "why": "Common – GO! English-language 2005 Be album cut. Venue Common & John Mayer; proposal already named Common (John Mayer is not on this recording)."
         },
         {
             "postId": 49066,
@@ -2704,6 +2719,11 @@
             "why": "Freddie & the Dreamers – I Understand. English-language 1964 cover of the June/Pat Best standard. Wikipedia."
         },
         {
+            "postId": 50113,
+            "language": "eng",
+            "why": "Freddie Bell and the Bell Boys – Giddy Up a Ding Dong. English-language 1956 rock and roll hit. Wikipedia. Venue title The Bell boys; proposal already named this recording."
+        },
+        {
             "postId": 50116,
             "artist": "",
             "sortAs": "Irish traditional",
@@ -3466,6 +3486,11 @@
             "postId": 50600,
             "language": "eng",
             "why": "Jay-Z – I Just Wanna Love U (Give It 2 Me). English-language 2000 The Dynasty single (I just wanna love you). Wikipedia. Venue I just wanna love you."
+        },
+        {
+            "postId": 50610,
+            "language": "eng",
+            "why": "Jay-Z – I Know. English-language 2007 American Gangster cut. Wikipedia. Venue Jay Z feat Pharrell; proposal already named the Jay-Z-only album track."
         },
         {
             "postId": 50613,
@@ -4705,6 +4730,11 @@
             "why": "Lupe Fiasco feat. Matthew Santos – Superstar. English-language 2007 The Cool single. Wikipedia."
         },
         {
+            "postId": 51363,
+            "language": "eng",
+            "why": "Nas feat. Lauryn Hill – If I Ruled the World (Imagine That). English-language 1996 It Was Written single. Wikipedia. Venue Luther Vandross; proposal already named the Nas hit."
+        },
+        {
             "postId": 51366,
             "language": "eng",
             "why": "Luther Vandross – Power of Love. English-language 1991 Power of Love single / album cut. Dump matched that English recording. If I Ruled the World stays blank (dump matched Nas)."
@@ -4811,6 +4841,11 @@
             "postId": 51459,
             "language": "eng",
             "why": "Maria McKee – Show Me Heaven. English-language 1990 Days of Thunder single. Wikipedia. Dump credited soundtrack writers with McKee; same English vocal."
+        },
+        {
+            "postId": 51472,
+            "language": "eng",
+            "why": "MIKA – Lollipop. English-language 2007 Life in Cartoon Motion single (I told ya from the start just a sucker for your love, lollipop). Wikipedia. Venue Mariah Carey; proposal already named MIKA."
         },
         {
             "postId": 51479,
@@ -5411,6 +5446,11 @@
             "why": "Sung in Swedish. MusicBrainz work had no language."
         },
         {
+            "postId": 52028,
+            "language": "eng",
+            "why": "Dave Dee, Dozy, Beaky, Mick & Tich – Here's a Heart. English-language 1960s beat recording. Venue Past Oldies; proposal already named this act."
+        },
+        {
             "postId": 52030,
             "language": "eng",
             "why": "Pat Boone – Don't Forbid Me. English-language 1957 US #1 (Don't forbid me / To come back home). Dump exact-matched the 1955–61 EP collection."
@@ -5811,6 +5851,11 @@
             "postId": 52391,
             "language": "eng",
             "why": "Restless Heart – Hometown Boy. English-language 1994 Matters of the Heart cut (I'm a hometown boy / Got a small town girl). songlyrics. Dump exact-matched that album."
+        },
+        {
+            "postId": 52392,
+            "language": "eng",
+            "why": "Rex Smith – You Take My Breath Away. English-language 1979 Sooner or Later hit (You take my breath away), not Berlin's Top Gun song. Wikipedia. Venue omitted You; proposal already restored the title."
         },
         {
             "postId": 52394,
@@ -6485,6 +6530,21 @@
             "postId": 52854,
             "language": "eng",
             "why": "Julie Andrews – So Long, Farewell from The Sound of Music. Venue credits the English-language film performer."
+        },
+        {
+            "postId": 52875,
+            "language": "eng",
+            "why": "Geri Halliwell – Look at Me. English-language 1999 Schizophonic single (Look at me, you can take it all because this face is free). Wikipedia. Venue Spice Girls; proposal already named the Halliwell solo. Sibling Geri solos already have eng from MusicBrainz; this work did not."
+        },
+        {
+            "postId": 52880,
+            "language": "eng",
+            "why": "Tin Tin Out feat. Emma Bunton – What I Am. English-language 1999 Edie Brickell cover (I'm not aware of too many things). Wikipedia. Venue Spice Girls; proposal already named Tin Tin Out & Emma Bunton."
+        },
+        {
+            "postId": 52881,
+            "language": "eng",
+            "why": "Melanie B feat. Missy Elliott – I Want You Back. English-language 1998 Hot single. Wikipedia. Venue Spice Girls; proposal already named Melanie B with Missy Elliott."
         },
         {
             "postId": 52885,
